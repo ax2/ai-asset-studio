@@ -1,0 +1,710 @@
+"use strict";
+
+const $ = (sel, root = document) => root.querySelector(sel);
+const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+const ESC = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
+const esc = (v) => String(v == null ? "" : v).replace(/[&<>"']/g, (c) => ESC[c]);
+
+const S = {
+  cfg: {}, styles: [], pricing: null, stats: null, assets: [],
+  view: "gallery", styleId: "", assetId: null, drawerAsset: null,
+  modalCb: null, versions: [],
+};
+
+const VIEW_META = {
+  gallery: ["资产画廊", "查看、筛选、复现与管理所有美术资产"],
+  styles: ["风格配方", "编辑分块提示词、变量槽位与负面词"],
+  batch: ["批量生成", "先 Dry run 验证配方，再切换真实生成"],
+  export: ["导出与同步", "导出素材包、同步精选资产、检查元数据"],
+  cost: ["成本看板", "额度、用量与参考单价"],
+  help: ["使用说明", "零依赖本地运行，密钥只从环境变量读取"],
+};
+
+async function api(path, opts = {}) {
+  const init = { method: opts.method || "GET", headers: {} };
+  if (opts.body !== undefined) {
+    init.headers["Content-Type"] = "application/json";
+    init.body = JSON.stringify(opts.body);
+  }
+  const res = await fetch(path, init);
+  let data = {};
+  try { data = await res.json(); } catch (_) { /* non-JSON response */ }
+  if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
+  return data;
+}
+
+let toastTimer = null;
+function toast(msg, kind = "") {
+  const el = $("#toast");
+  el.textContent = msg;
+  el.className = "toast show " + kind;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { el.className = "toast " + kind; }, 3000);
+}
+
+function confirmModal(title, body, cb) {
+  $("#mTitle").textContent = title;
+  $("#mBody").innerHTML = body;
+  S.modalCb = cb;
+  $("#modal").classList.remove("hidden");
+}
+
+function currentStyle() {
+  return S.styles.find((s) => s.id === S.styleId) || S.styles[0] || { blocks: [], slots: {} };
+}
+
+function priceOf(model, quality) {
+  const table = (S.pricing && S.pricing.image) || {};
+  const row = table[model] || table["gpt-image-1.5"] || { low: 0.009 };
+  return Number(row[quality] != null ? row[quality] : row.low);
+}
+
+function estimateOf(model, quality, count, batch) {
+  return (priceOf(model, quality) * (batch ? 0.5 : 1) * Math.max(0, Number(count) || 0)).toFixed(4);
+}
+
+function buildPrompt(style, overrides, slots, extra) {
+  const ov = overrides || {};
+  const sl = slots || {};
+  const parts = [];
+  for (const b of style.blocks || []) {
+    const raw = ov[b.key] !== undefined ? ov[b.key] : (b.en || "");
+    const t = String(raw || "").trim().replace(/\.+$/, "");
+    if (t) parts.push(t);
+  }
+  const slotLines = [];
+  for (const key of ["subject", "asset_kind", "mood", "concept"]) {
+    const v = String(sl[key] || "").trim().replace(/\.+$/, "");
+    if (v) slotLines.push(key + ": " + v);
+  }
+  if (slotLines.length) parts.push(slotLines.join("; "));
+  const ex = String(extra || "").trim().replace(/\.+$/, "");
+  if (ex) parts.push(ex);
+  let prompt = parts.join(", ");
+  if (style.negative) prompt += ". Avoid: " + style.negative;
+  return prompt;
+}
+
+function firstSlots(style) {
+  const out = {};
+  for (const key of ["subject", "asset_kind", "mood", "concept"]) {
+    const values = (style.slots || {})[key] || [];
+    if (values.length) out[key] = values[0];
+  }
+  return out;
+}
+
+function renderEval(container, style, prompt) {
+  const rules = style.eval_rules || [];
+  const low = String(prompt || "").toLowerCase();
+  const hits = rules.filter((r) => low.includes(String(r.needle || "").toLowerCase()));
+  const pct = rules.length ? Math.round(100 * hits.length / rules.length) : 100;
+  container.innerHTML =
+    `<div class="eval-bar"><div style="width:${pct}%"></div></div>` +
+    `<div class="muted small">配方完整度 ${hits.length}/${rules.length}（${pct}%）</div>` +
+    rules.map((r) => {
+      const ok = low.includes(String(r.needle || "").toLowerCase());
+      return `<div class="eval-row"><span class="eval-mark ${ok ? "" : "miss"}">${ok ? "✓" : "×"}</span>${esc(r.zh || r.key)}</div>`;
+    }).join("");
+}
+
+function fillStyleSelects() {
+  const opts = S.styles.map((s) => `<option value="${esc(s.id)}">${esc(s.name)}${s.status === "queued" ? "（排队中）" : ""}</option>`).join("");
+  $("#fStyle").innerHTML = `<option value="">全部风格</option>` + opts;
+  $("#bStyle").innerHTML = opts;
+  $("#eSyncStyle").innerHTML = `<option value="">全部风格</option>` + opts;
+  if (S.styleId) {
+    $("#bStyle").value = S.styleId;
+  }
+}
+
+function renderStatus() {
+  const keyOk = !!S.cfg.api_key_set;
+  $("#dotKey").className = "dot " + (keyOk ? "ok" : "warn");
+  $("#txtKey").textContent = keyOk ? "密钥已设置" : "未设密钥（仅 Dry run）";
+  const diskOk = !!S.cfg.asset_root_writable;
+  $("#dotDisk").className = "dot " + (diskOk ? "ok" : "bad");
+  $("#txtDisk").textContent = diskOk ? "资产盘可写" : "资产盘不可写";
+  const used = S.stats ? S.stats.real_cost_usd : 0;
+  $("#budgetChip").textContent = `本月 $${used} / $${S.cfg.monthly_budget_usd}`;
+}
+
+async function loadAssets() {
+  const p = new URLSearchParams({
+    q: $("#fQ").value.trim(),
+    style: $("#fStyle").value,
+    status: $("#fStatus").value,
+    min_rating: $("#fRating").value,
+    sort: $("#fSort").value,
+    favorite: $("#fFav").checked ? "1" : "",
+  });
+  const data = await api("/api/assets?" + p.toString());
+  S.assets = data.assets || [];
+  renderGallery();
+}
+
+function badge(text, cls) {
+  return `<span class="badge ${cls || ""}">${esc(text)}</span>`;
+}
+
+function renderGallery() {
+  const keepers = S.assets.filter((a) => a.status === "keeper").length;
+  const demos = S.assets.filter((a) => a.demo).length;
+  $("#gallerySummary").textContent = `共 ${S.assets.length} 项 · 精选 ${keepers} · 演示图 ${demos}`;
+  const grid = $("#grid");
+  if (!S.assets.length) {
+    grid.innerHTML = `<div class="empty">还没有资产。到「批量生成」用 Dry run 跑 30 张，先把流程走通。</div>`;
+    return;
+  }
+  grid.innerHTML = S.assets.map((a) => {
+    const tags = [];
+    if (a.demo) tags.push(badge("演示", "demo"));
+    if (a.status === "keeper") tags.push(badge("精选", "keeper"));
+    if (a.status === "rejected") tags.push(badge("已淘汰", "rejected"));
+    if (a.favorite) tags.push(badge("收藏", "fav"));
+    if (a.rating) tags.push(badge("★".repeat(a.rating), ""));
+    (a.tags || []).slice(0, 3).forEach((t) => tags.push(badge(t, "")));
+    return `<div class="card" data-action="open-asset" data-id="${esc(a.id)}">
+      <img class="card-img" src="/media/${esc(a.file)}" loading="lazy" alt="">
+      <div class="card-body">
+        <div class="card-title">${esc(a.style_name || a.style_id)}</div>
+        <div class="card-meta"><span>${esc(a.model)} / ${esc(a.quality)}</span><span>${a.demo ? "Dry run" : "$" + a.cost_usd}</span></div>
+        <div class="badges">${tags.join("")}</div>
+      </div>
+    </div>`;
+  }).join("");
+}
+
+function switchView(name) {
+  if (!VIEW_META[name]) return;
+  S.view = name;
+  $$(".view").forEach((el) => el.classList.add("hidden"));
+  $("#view-" + name).classList.remove("hidden");
+  $$(".nav-item").forEach((b) => b.classList.toggle("active", b.dataset.view === name));
+  $("#viewTitle").textContent = VIEW_META[name][0];
+  $("#viewSubtitle").textContent = VIEW_META[name][1];
+  if (name === "styles") renderStyles();
+  if (name === "cost") renderCost();
+  if (name === "batch") { refreshBatchEstimate(); }
+  if (name === "export") { loadHealth(); loadExports(); renderSyncInfo(); }
+}
+
+function renderStyles() {
+  $("#styleList").innerHTML = S.styles.map((s) => `
+    <div class="style-card ${s.id === S.styleId ? "sel" : ""}" data-action="pick-style" data-id="${esc(s.id)}">
+      <div class="row">
+        <span class="style-name">${esc(s.name)}</span>
+        <span class="pill ${esc(s.status || "")}">${esc(s.status || "")}</span>
+      </div>
+      <div class="style-desc">${esc(s.description || "")}</div>
+      <div class="swatches">${(s.palette || []).map((c) => `<span class="swatch" style="background:${esc(c)}"></span>`).join("")}</div>
+    </div>`).join("") || `<div class="empty">没有风格配方</div>`;
+
+  const style = currentStyle();
+  $("#editingStyle").textContent = style.name || "";
+  const blocks = (style.blocks || []).map((b) => `
+    <div class="block" data-key="${esc(b.key)}">
+      <div class="block-head"><span>${esc(b.zh || b.key)}</span><span class="key">${esc(b.key)}</span></div>
+      <textarea class="textarea" data-block="${esc(b.key)}">${esc(b.en || "")}</textarea>
+    </div>`).join("");
+  $("#styleEditor").innerHTML = `
+    <div class="info-box">${esc(style.notes || "")}</div>
+    <div class="section-label">提示词分块（按顺序拼接，留空即禁用该块）</div>
+    <div id="styleBlocks">${blocks}</div>
+    <button class="btn ghost" data-action="add-block">+ 增加分块</button>
+    <div class="section-label">负面词</div>
+    <textarea class="textarea" id="sNegative">${esc(style.negative || "")}</textarea>
+    <div class="section-label">实时拼接预览</div>
+    <div class="prompt-preview" id="sPreview"></div>
+    <div class="mt" id="sEval"></div>
+    <div class="btn-row">
+      <button class="btn primary" data-action="save-style">保存配方</button>
+      <button class="btn" data-action="set-active">设为当前风格</button>
+      <button class="btn ghost" data-action="save-style-version">存提示词版本</button>
+    </div>`;
+  updateStylePreview();
+}
+
+function collectStyleBlocks() {
+  return $$("#styleBlocks .block").map((box) => ({
+    key: box.dataset.key,
+    zh: ($(".block-head span", box) || {}).textContent || box.dataset.key,
+    en: $("textarea", box).value,
+    locked: false,
+  }));
+}
+
+function updateStylePreview() {
+  const style = currentStyle();
+  const draft = Object.assign({}, style, {
+    blocks: collectStyleBlocks(),
+    negative: $("#sNegative") ? $("#sNegative").value : style.negative,
+  });
+  const prompt = buildPrompt(draft, {}, firstSlots(draft), "");
+  const el = $("#sPreview");
+  if (el) el.textContent = prompt;
+  if ($("#sEval")) renderEval($("#sEval"), draft, prompt);
+}
+
+async function saveStyle() {
+  const style = currentStyle();
+  const payload = {
+    blocks: collectStyleBlocks(),
+    negative: $("#sNegative").value,
+    description: style.description,
+    notes: style.notes,
+    status: style.status,
+  };
+  await api("/api/styles/" + encodeURIComponent(style.id), { method: "PUT", body: payload });
+  const fresh = await api("/api/styles");
+  S.styles = fresh.styles;
+  toast("配方已保存", "ok");
+  renderStyles();
+}
+
+async function setActive(id) {
+  for (const s of S.styles) {
+    const status = s.id === id ? "active" : "queued";
+    if (s.status !== status) {
+      await api("/api/styles/" + encodeURIComponent(s.id), { method: "PUT", body: { status } });
+    }
+  }
+  const fresh = await api("/api/styles");
+  S.styles = fresh.styles;
+  S.styleId = id;
+  fillStyleSelects();
+  $("#bStyle").value = id;
+  toast("已切换当前风格", "ok");
+  renderStyles();
+  refreshBatchEstimate();
+}
+
+function modelOptions() {
+  const table = (S.pricing && S.pricing.image) || {};
+  return Object.keys(table).map((m) => `<option value="${esc(m)}">${esc(m)}</option>`).join("");
+}
+
+async function initBatch() {
+  $("#bModel").innerHTML = modelOptions();
+  $("#bModel").value = S.cfg.default_model || "gpt-image-1.5";
+  refreshBatchEstimate();
+}
+
+function refreshBatchEstimate() {
+  if (!S.pricing) return;
+  const style = S.styles.find((s) => s.id === $("#bStyle").value) || currentStyle();
+  const model = $("#bModel").value || S.cfg.default_model;
+  const qualities = (S.pricing.image[model] || { low: 0, medium: 0, high: 0 });
+  const currentQ = $("#bQuality").value;
+  $("#bQuality").innerHTML = Object.keys(qualities)
+    .map((q) => `<option value="${esc(q)}">${esc(q)} · $${qualities[q]}/张</option>`).join("");
+  $("#bQuality").value = qualities[currentQ] !== undefined ? currentQ : (style.model || {}).quality || "low";
+
+  const quality = $("#bQuality").value;
+  const count = $("#bCount").value;
+  const batch = $("#bBatch").checked;
+  const cost = estimateOf(model, quality, count, batch);
+  const dry = $("#bDry").checked;
+  $("#bEstimate").innerHTML =
+    `<div class="num">$${cost}</div><div class="cap">${esc(count)} 张 × ${esc(model)} / ${esc(quality)}` +
+    `${batch ? " · Batch 半价估算" : ""} · ${dry ? "Dry run 不产生实际费用" : "真实生成"}</div>`;
+
+  const draft = Object.assign({}, style);
+  const prompt = buildPrompt(draft, {}, firstSlots(draft), $("#bExtra").value);
+  $("#bPreview").textContent = prompt;
+  renderEval($("#bEval"), draft, prompt);
+  $("#bHint").textContent = dry
+    ? "Dry run 会在本地生成演示图（SVG），可完整走通画廊、编辑、复现和导出，不调用 API。"
+    : "真实生成会调用 OpenAI API。系统会检查单次上限与月度预算，超限直接拒绝。";
+}
+
+async function runBatch() {
+  const body = {
+    style_id: $("#bStyle").value,
+    model: $("#bModel").value,
+    quality: $("#bQuality").value,
+    count: Number($("#bCount").value),
+    extra: $("#bExtra").value,
+    dry_run: $("#bDry").checked,
+    batch_estimate: $("#bBatch").checked,
+  };
+  const cost = estimateOf(body.model, body.quality, body.count, body.batch_estimate);
+  const go = async () => {
+    const res = await api("/api/generate", { method: "POST", body });
+    toast(`已生成 ${res.count} 张${res.dry_run ? "演示图" : "图片"}`, "ok");
+    await refreshAll();
+    switchView("gallery");
+  };
+  if (body.dry_run) await go();
+  else confirmModal("确认真实生成", `将调用 API 生成 <b>${body.count}</b> 张，预估 <b>$${cost}</b>。`, go);
+}
+
+async function refreshAll() {
+  const [cfg, stats, styles] = await Promise.all([
+    api("/api/config"), api("/api/stats"), api("/api/styles"),
+  ]);
+  S.cfg = cfg; S.stats = stats; S.styles = styles.styles;
+  renderStatus();
+  await loadAssets();
+  renderCost();
+}
+
+function renderCost() {
+  if (!S.stats) return;
+  const st = S.stats;
+  const cards = [
+    ["月度额度", "$" + st.budget_usd, ""],
+    ["已用（真实调用）", "$" + st.real_cost_usd, "teal"],
+    ["剩余", "$" + st.remaining_usd, ""],
+    ["资产总数", st.total, ""],
+    ["精选", st.keepers, ""],
+    ["演示图", st.demos, ""],
+  ];
+  $("#costCards").innerHTML = cards.map(([l, v, c]) =>
+    `<div class="stat-card"><div class="label">${esc(l)}</div><div class="value ${c}">${esc(v)}</div></div>`).join("");
+
+  const row = (k, v) => `<div class="kv"><span>${esc(k)}</span><span>${esc(v)}</span></div>`;
+  $("#costBreakdown").innerHTML =
+    `<div class="section-label">按风格</div>` +
+    Object.entries(st.by_style || {}).map(([k, v]) => row(k, v + " 张")).join("") +
+    `<div class="section-label mt">按模型</div>` +
+    Object.entries(st.by_model || {}).map(([k, v]) => row(k, v + " 张")).join("") +
+    `<div class="section-label mt">按月份花费</div>` +
+    Object.entries(st.by_month || {}).map(([k, v]) => row(k, "$" + v)).join("");
+
+  const table = (S.pricing && S.pricing.image) || {};
+  $("#priceTable").innerHTML = `<table><tr><th>模型</th><th>low</th><th>medium</th><th>high</th></tr>` +
+    Object.entries(table).map(([m, q]) =>
+      `<tr><td>${esc(m)}</td><td>$${q.low}</td><td>$${q.medium}</td><td>$${q.high}</td></tr>`).join("") +
+    `</table><div class="hint">单价来自 OpenAI 图像生成定价页（2026-11 核对）。Batch 半价只用于估算，实际以账单为准。</div>`;
+}
+
+function renderSyncInfo() {
+  const ok = S.cfg.asset_root_writable;
+  $("#syncInfo").innerHTML = ok
+    ? `资产根目录 <b>${esc(S.cfg.asset_root)}</b> 可写。精选资产会按批次文件夹整体复制过去，再由 Google Drive 同步到云端。`
+    : `资产根目录 <b>${esc(S.cfg.asset_root)}</b> 当前不可写。资产仍安全存放在本地 data/，同步会明确报错。`;
+}
+
+async function loadHealth() {
+  const data = await api("/api/health");
+  const box = $("#healthBox");
+  if (!box) return;
+  box.innerHTML = `<div class="info-box">已检查 ${data.checked} 项，${data.healthy ? "未发现问题" : `发现 ${data.issues.length} 处提示`}</div>` +
+    (data.issues || []).map((i) =>
+      `<div class="list-row"><span>${esc(i.id)}</span><span class="muted">${esc(i.issue)}</span></div>`).join("");
+}
+
+async function loadExports() {
+  const data = await api("/api/exports");
+  $("#exportList").innerHTML = (data.exports || []).map((f) =>
+    `<div class="list-row"><a href="/media/export/${encodeURIComponent(f.name)}" style="color:var(--blue)">${esc(f.name)}</a><span class="muted">${(f.size / 1024).toFixed(1)} KB</span></div>`).join("")
+    || `<div class="muted small">还没有导出记录</div>`;
+}
+
+async function doExport() {
+  const scope = $("#eScope").value;
+  const body = { name: $("#eName").value.trim() || undefined };
+  if (scope === "keeper") body.status = "keeper";
+  if (scope === "fav") body.favorite = true;
+  if (scope === "all") {
+    body.q = $("#fQ").value.trim();
+    body.style_id = $("#fStyle").value;
+    body.status = $("#fStatus").value;
+    body.min_rating = Number($("#fRating").value);
+    body.sort = $("#fSort").value;
+    body.favorite = $("#fFav").checked;
+  }
+  const res = await api("/api/export", { method: "POST", body });
+  toast(res.count ? `已导出 ${res.count} 张：${res.filename}` : "没有可导出的资产", res.count ? "ok" : "");
+  await loadExports();
+}
+
+async function doSync() {
+  const style = $("#eSyncStyle") ? $("#eSyncStyle").value : "";
+  const includeDemo = $("#eIncludeDemo") ? $("#eIncludeDemo").checked : false;
+  const res = await api("/api/sync", { method: "POST", body: {
+    style_id: style || undefined, include_demo: includeDemo,
+  } });
+  if (!res.ok) { toast(res.reason || "同步失败", "err"); return; }
+  toast(res.copied ? `已同步 ${res.copied} 张到 ${res.batch}` : (res.reason || "没有可同步的精选资产"),
+        res.copied ? "ok" : "");
+  S.cfg = await api("/api/config");
+  renderStatus();
+  renderSyncInfo();
+}
+
+async function openAsset(id) {
+  const a = await api("/api/assets/" + encodeURIComponent(id));
+  S.drawerAsset = a;
+  S.assetId = a.id;
+  $("#drawer").classList.remove("hidden");
+  $("#dTitle").textContent = a.style_name || a.id;
+  $("#dId").textContent = a.id;
+  renderDrawer(a);
+  await loadVersions(a.style_id);
+}
+
+function collectDrawerBlocks() {
+  const out = {};
+  $$("[data-dblock]", $("#drawerBody")).forEach((t) => { out[t.dataset.dblock] = t.value; });
+  return out;
+}
+
+function renderDrawer(a) {
+  const style = S.styles.find((s) => s.id === a.style_id) || { blocks: [] };
+  const ov = a.blocks || {};
+  const blocksHtml = (style.blocks || []).map((b) => {
+    const val = ov[b.key] !== undefined ? ov[b.key] : b.en;
+    return `<div class="block"><div class="block-head"><span>${esc(b.zh || b.key)}</span><span class="key">${esc(b.key)}</span></div>
+      <textarea class="textarea" data-dblock="${esc(b.key)}">${esc(val)}</textarea></div>`;
+  }).join("");
+
+  const table = (S.pricing && S.pricing.image) || {};
+  const modelOpts = Object.keys(table).map((m) =>
+    `<option value="${esc(m)}" ${m === a.model ? "selected" : ""}>${esc(m)}</option>`).join("");
+  const qOpts = Object.keys(table[a.model] || { low: 0, medium: 0, high: 0 }).map((q) =>
+    `<option value="${esc(q)}" ${q === a.quality ? "selected" : ""}>${esc(q)}</option>`).join("");
+  const stars = [1, 2, 3, 4, 5].map((n) =>
+    `<button class="star ${n <= (a.rating || 0) ? "on" : ""}" data-action="rate" data-n="${n}">★</button>`).join("");
+  const statusBadge = a.status === "keeper" ? badge("精选", "keeper")
+    : a.status === "rejected" ? badge("已淘汰", "rejected") : badge("待筛选", "");
+
+  $("#drawerBody").innerHTML = `
+    <img class="drawer-img" src="/media/${esc(a.file)}" alt="">
+    <div class="badges" style="margin-top:10px">${a.demo ? badge("演示 · 未调用 API", "demo") : ""}${statusBadge}${a.favorite ? badge("收藏", "fav") : ""}</div>
+
+    <div class="section-label">元信息</div>
+    <div class="kv"><span>风格</span><span>${esc(a.style_id)}</span></div>
+    <div class="kv"><span>模型 / 质量 / 尺寸</span><span>${esc(a.model)} / ${esc(a.quality)} / ${esc(a.size)}</span></div>
+    <div class="kv"><span>成本</span><span>${a.demo ? "Dry run" : "$" + a.cost_usd}</span></div>
+    <div class="kv"><span>来源 / 版本</span><span>${esc(a.source || "generate")} / v${a.prompt_version || 1}</span></div>
+    <div class="kv"><span>来源元数据</span><span>${esc(a.metadata || "unknown")}</span></div>
+    <div class="kv"><span>创建时间</span><span>${esc(a.created_at)}</span></div>
+
+    <div class="section-label">提示词分块</div>
+    <div id="dBlocks">${blocksHtml || `<div class="muted small">该风格没有分块配置</div>`}</div>
+    <button class="btn ghost" data-action="rebuild-prompt">按分块重建最终提示词</button>
+
+    <div class="section-label">最终提示词（可直接改）</div>
+    <textarea class="textarea" id="dPrompt" style="min-height:150px">${esc(a.prompt || "")}</textarea>
+
+    <div class="section-label">复现参数</div>
+    <div class="form">
+      <label>模型<select class="select" id="dModel">${modelOpts}</select></label>
+      <label>质量档<select class="select" id="dQuality">${qOpts}</select></label>
+      <label class="check"><input type="checkbox" id="dDry" checked> Dry run（不调用 API）</label>
+      <label class="check"><input type="checkbox" id="dBatch"> 按 Batch 半价估算</label>
+    </div>
+    <div class="btn-row">
+      <button class="btn primary" data-action="reproduce">复现生成</button>
+      <button class="btn" data-action="save-asset">保存修改</button>
+      <button class="btn ghost" data-action="save-version">存为版本</button>
+    </div>
+
+    <div class="section-label">管理</div>
+    <div class="stars">${stars}</div>
+    <div class="form mt">
+      <label>标签（逗号分隔）<input class="input" id="dTags" value="${esc((a.tags || []).join(", "))}"></label>
+      <label>备注<textarea class="textarea" id="dNote" style="min-height:54px">${esc(a.note || "")}</textarea></label>
+      <label class="check"><input type="checkbox" id="dFav" ${a.favorite ? "checked" : ""}> 收藏</label>
+    </div>
+    <div class="btn-row">
+      <button class="btn" data-action="keep">标为精选</button>
+      <button class="btn ghost" data-action="reject">淘汰</button>
+      <button class="btn ghost" data-action="restore">恢复待筛选</button>
+    </div>
+
+    <div class="section-label">提示词版本历史</div>
+    <div id="dVersions" class="list"><div class="muted small">加载中</div></div>`;
+}
+
+async function loadVersions(styleId) {
+  const data = await api("/api/versions?style=" + encodeURIComponent(styleId));
+  S.versions = data.versions || [];
+  const box = $("#dVersions");
+  if (!box) return;
+  box.innerHTML = S.versions.slice(0, 12).map((v, i) =>
+    `<div class="list-row"><span>${esc(v.created_at)}<br><span class="muted small">${esc(v.note || "saved")}</span></span>
+     <button class="btn ghost" data-action="apply-version" data-i="${i}">应用</button></div>`).join("")
+    || `<div class="muted small">还没有版本记录</div>`;
+}
+
+async function patchAsset(patch) {
+  const a = S.drawerAsset;
+  if (!a) return;
+  await api("/api/assets/" + encodeURIComponent(a.id), { method: "PATCH", body: patch });
+  await loadAssets();
+  await openAsset(a.id);
+}
+
+async function saveAssetEdits() {
+  const tags = $("#dTags").value.split(/[,，]/).map((s) => s.trim()).filter(Boolean);
+  await patchAsset({
+    prompt: $("#dPrompt").value,
+    blocks: collectDrawerBlocks(),
+    rating: S.drawerAsset.rating || 0,
+    tags,
+    note: $("#dNote").value,
+    favorite: $("#dFav").checked,
+  });
+  toast("资产信息已保存", "ok");
+}
+
+async function saveVersion(note) {
+  const a = S.drawerAsset;
+  await api("/api/styles/" + encodeURIComponent(a.style_id) + "/version", {
+    method: "POST",
+    body: {
+      asset_id: a.id, prompt: $("#dPrompt").value,
+      blocks: collectDrawerBlocks(), note: note || "from asset editor",
+    },
+  });
+  toast("提示词版本已保存", "ok");
+  await loadVersions(a.style_id);
+}
+
+async function reproduce() {
+  const a = S.drawerAsset;
+  const model = $("#dModel").value;
+  const quality = $("#dQuality").value;
+  const dry = $("#dDry").checked;
+  const batch = $("#dBatch").checked;
+  const cost = estimateOf(model, quality, 1, batch);
+  const go = async () => {
+    const res = await api("/api/assets/" + encodeURIComponent(a.id) + "/reproduce", {
+      method: "POST",
+      body: {
+        prompt: $("#dPrompt").value.trim(), blocks: collectDrawerBlocks(),
+        model, quality, dry_run: dry, batch_estimate: batch,
+      },
+    });
+    toast(res.demo ? "已生成演示图" : "已生成新图", "ok");
+    await refreshAll();
+    await openAsset(res.asset.id);
+  };
+  if (dry) await go();
+  else confirmModal("确认真实生成", `将调用 API，预估 <b>$${cost}</b>。`, go);
+}
+
+async function boot() {
+  try {
+    const [cfg, styles, pricing, stats] = await Promise.all([
+      api("/api/config"), api("/api/styles"), api("/api/pricing"), api("/api/stats"),
+    ]);
+    S.cfg = cfg; S.styles = styles.styles || []; S.pricing = pricing; S.stats = stats;
+    S.styleId = (S.styles.find((s) => s.status === "active") || S.styles[0] || {}).id || "";
+    fillStyleSelects();
+    renderStatus();
+    renderCost();
+    await initBatch();
+    await loadAssets();
+    await loadExports();
+    switchView("gallery");
+  } catch (err) {
+    toast("初始化失败：" + err.message, "err");
+  }
+}
+
+document.addEventListener("click", async (e) => {
+  const nav = e.target.closest("[data-view]");
+  if (nav) { switchView(nav.dataset.view); return; }
+
+  const el = e.target.closest("[data-action]");
+  if (!el) return;
+  const act = el.dataset.action;
+  try {
+    switch (act) {
+      case "refresh": await loadAssets(); break;
+      case "goto-batch": switchView("batch"); break;
+      case "open-asset": await openAsset(el.dataset.id); break;
+      case "close-drawer": $("#drawer").classList.add("hidden"); S.drawerAsset = null; break;
+      case "modal-cancel": $("#modal").classList.add("hidden"); S.modalCb = null; break;
+      case "modal-ok": {
+        const cb = S.modalCb;
+        $("#modal").classList.add("hidden"); S.modalCb = null;
+        if (cb) await cb();
+        break;
+      }
+      case "sync": switchView("export"); await doSync(); break;
+      case "run-batch": await runBatch(); break;
+      case "do-export": await doExport(); break;
+      case "do-sync": await doSync(); break;
+      case "refresh-health": await loadHealth(); break;
+      case "pick-style": S.styleId = el.dataset.id; renderStyles(); break;
+      case "add-block": {
+        const n = $$("#styleBlocks .block").length + 1;
+        const box = document.createElement("div");
+        box.className = "block";
+        box.dataset.key = "custom_" + n;
+        box.innerHTML = `<div class="block-head"><span>自定义 ${n}</span><span class="key">custom_${n}</span></div><textarea class="textarea" data-block="custom_${n}"></textarea>`;
+        $("#styleBlocks").appendChild(box);
+        updateStylePreview();
+        break;
+      }
+      case "save-style": await saveStyle(); break;
+      case "set-active": await setActive(S.styleId); break;
+      case "save-style-version": {
+        const style = currentStyle();
+        const draft = Object.assign({}, style, { blocks: collectStyleBlocks(), negative: $("#sNegative").value });
+        await api("/api/styles/" + encodeURIComponent(style.id) + "/version", {
+          method: "POST", body: { prompt: buildPrompt(draft, {}, firstSlots(draft), ""), blocks: {}, note: "style editor" },
+        });
+        toast("提示词版本已保存", "ok");
+        break;
+      }
+      case "rebuild-prompt": {
+        const a = S.drawerAsset;
+        const style = S.styles.find((s) => s.id === a.style_id) || { blocks: [] };
+        const draft = Object.assign({}, style, { blocks: (style.blocks || []).map((b) => ({ ...b, en: collectDrawerBlocks()[b.key] || "" })) });
+        $("#dPrompt").value = buildPrompt(draft, {}, a.slots || {}, a.extra || "");
+        toast("已按分块重建提示词", "ok");
+        break;
+      }
+      case "reproduce": await reproduce(); break;
+      case "save-asset": await saveAssetEdits(); break;
+      case "save-version": await saveVersion(); break;
+      case "rate": {
+        const n = Number(el.dataset.n);
+        await patchAsset({ rating: n === S.drawerAsset.rating ? 0 : n });
+        break;
+      }
+      case "keep": await patchAsset({ status: "keeper" }); toast("已标为精选", "ok"); break;
+      case "reject": await patchAsset({ status: "rejected" }); toast("已淘汰", "ok"); break;
+      case "restore": await patchAsset({ status: "raw" }); toast("已恢复", "ok"); break;
+      case "apply-version": {
+        const v = S.versions[Number(el.dataset.i)];
+        if (v && $("#dPrompt")) { $("#dPrompt").value = v.prompt; toast("已应用该版本（记得保存）", "ok"); }
+        break;
+      }
+      default: break;
+    }
+  } catch (err) {
+    toast(err.message, "err");
+  }
+});
+
+let searchTimer = null;
+document.addEventListener("input", (e) => {
+  if (e.target.id === "fQ") {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(loadAssets, 260);
+  }
+  if (e.target.closest("#styleEditor")) updateStylePreview();
+});
+
+document.addEventListener("change", (e) => {
+  const id = e.target.id;
+  if (["fStyle", "fStatus", "fRating", "fSort", "fFav"].includes(id)) loadAssets();
+  if (["bStyle", "bModel", "bQuality", "bCount", "bExtra", "bDry", "bBatch"].includes(id)) {
+    if (id === "bModel" || id === "bStyle") {
+      const style = S.styles.find((s) => s.id === $("#bStyle").value);
+      if (style && id === "bStyle") {
+        $("#bModel").value = (style.model || {}).default || S.cfg.default_model;
+      }
+    }
+    refreshBatchEstimate();
+  }
+});
+
+boot();

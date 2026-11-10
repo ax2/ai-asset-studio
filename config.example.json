@@ -1,0 +1,14 @@
+{
+  "asset_root": "D:/gdrive.photo/ai-assets",
+  "local_root": "data",
+  "host": "127.0.0.1",
+  "port": 8777,
+  "monthly_budget_usd": 100,
+  "image_budget_usd": 60,
+  "default_model": "gpt-image-1.5",
+  "default_quality": "low",
+  "default_size": "1024x1024",
+  "batch_discount": 0.5,
+  "api_key_env": "OPENAI_API_KEY",
+  "sync_include_demo": false
+}

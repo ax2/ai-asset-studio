@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+config.json
+config.local.json
+.env
+*.env
+data/
+!data/.gitkeep
+*.log
+.DS_Store
+Thumbs.db
+*.key
+*_secret*
+*.pem

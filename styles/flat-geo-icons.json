@@ -1,0 +1,98 @@
+{
+  "id": "flat-geo-icons",
+  "name": "扁平几何图标",
+  "order": 2,
+  "status": "queued",
+  "description": "有限色板、粗几何、严格栅格。一致性可以用规则量化，最适合搭建自动打分与评测集，也是成套图标素材包里最好卖的一类。第一套跑通后启用。",
+  "palette": ["#E2574C", "#E8B33C", "#3E8FA8", "#3A4048", "#F4F1E8"],
+  "model": {
+    "default": "gpt-image-1.5",
+    "quality": "low",
+    "size": "1024x1024"
+  },
+  "blocks": [
+    {
+      "key": "core",
+      "zh": "基调",
+      "en": "flat vector icon, bold geometric shapes, swiss international style, single concept",
+      "locked": false
+    },
+    {
+      "key": "palette",
+      "zh": "色彩",
+      "en": "strict four-color palette of brick red, mustard yellow, lake blue and charcoal on off-white, no additional colors",
+      "locked": false
+    },
+    {
+      "key": "shape",
+      "zh": "造型",
+      "en": "only circles, squares and rounded rectangles, uniform stroke weight, no outlines, no gradients",
+      "locked": false
+    },
+    {
+      "key": "layout",
+      "zh": "版式",
+      "en": "centered on a strict square grid, generous even padding, perfect optical balance, single focal point",
+      "locked": false
+    },
+    {
+      "key": "surface",
+      "zh": "表面",
+      "en": "perfectly flat solid fills, matte, no shadow, no texture, no bevel, no 3D depth",
+      "locked": false
+    },
+    {
+      "key": "background",
+      "zh": "背景",
+      "en": "clean uniform off-white background, full bleed, nothing else in frame",
+      "locked": false
+    }
+  ],
+  "slots": {
+    "subject": [
+      "a coffee cup",
+      "a paper plane",
+      "a growing sprout",
+      "a padlock",
+      "a cloud with a sync arrow",
+      "a book with a bookmark",
+      "a compass",
+      "a lightbulb"
+    ],
+    "concept": [
+      "growth",
+      "security",
+      "synchronization",
+      "learning",
+      "navigation"
+    ],
+    "asset_kind": [
+      "single standalone icon",
+      "a set of four aligned icons on one sheet",
+      "an app icon tile",
+      "a minimal pattern tile, seamless"
+    ]
+  },
+  "negative": "photorealism, gradient, drop shadow, texture, 3D render, isometric, sketch, handwriting, text, letters, watermark, logo, human face, celebrity, cluttered composition",
+  "asset_kinds": [
+    { "key": "icon", "zh": "单枚图标" },
+    { "key": "icon_sheet", "zh": "四宫格图标" },
+    { "key": "app_tile", "zh": "应用图标" },
+    { "key": "pattern", "zh": "无缝图案" },
+    { "key": "cover", "zh": "封面模板" }
+  ],
+  "eval_rules": [
+    { "key": "flat", "zh": "声明扁平", "needle": "flat" },
+    { "key": "palette", "zh": "限定色板", "needle": "palette" },
+    { "key": "shapes", "zh": "限定形状", "needle": "circles" },
+    { "key": "grid", "zh": "限定栅格", "needle": "grid" },
+    { "key": "nogradient", "zh": "排除渐变", "needle": "no gradients" },
+    { "key": "background", "zh": "纯净背景", "needle": "background" },
+    { "key": "avoid", "zh": "含负面词", "needle": "avoid" }
+  ],
+  "budget": {
+    "monthly_usd": 60,
+    "per_run_cap_usd": 2
+  },
+  "notes": "这一套的重点是可量化：eval_rules 用来给最终提示词打完整度分，配合批量生成做一致性评测。等风格 1 稳定后再切换为 active。"
+}

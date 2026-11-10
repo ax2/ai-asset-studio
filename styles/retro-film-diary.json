@@ -1,0 +1,95 @@
+{
+  "id": "retro-film-diary",
+  "name": "复古胶片日记",
+  "order": 1,
+  "status": "active",
+  "description": "褪色暖调、颗粒漏光、日期戳与手写体。情绪向内容转化高，资产的几何与质感成分最容易被提示词锁死，适合作为第一套跑通的配方。",
+  "palette": ["#D98E4A", "#E8D9BE", "#6B4A32", "#B5543A", "#3A2E26"],
+  "model": {
+    "default": "gpt-image-1.5",
+    "quality": "low",
+    "size": "1024x1024"
+  },
+  "blocks": [
+    {
+      "key": "core",
+      "zh": "基调",
+      "en": "faded warm analog film photograph, 1990s disposable camera look, quiet everyday moment",
+      "locked": false
+    },
+    {
+      "key": "palette",
+      "zh": "色彩",
+      "en": "muted amber, faded cream, dusty brown, a touch of brick red, low saturation, warm color cast",
+      "locked": false
+    },
+    {
+      "key": "texture",
+      "zh": "质感",
+      "en": "fine film grain, one subtle light leak in the corner, faint dust and hairline scratches, soft halation",
+      "locked": false
+    },
+    {
+      "key": "light",
+      "zh": "光线",
+      "en": "warm late-afternoon window light, gentle bloom, slightly lifted shadows",
+      "locked": false
+    },
+    {
+      "key": "composition",
+      "zh": "构图",
+      "en": "centered subject with generous negative space, slight tilt, clean border around the frame",
+      "locked": false
+    },
+    {
+      "key": "typography",
+      "zh": "文字",
+      "en": "small orange date stamp in the corner, delicate handwritten caption, no readable body text",
+      "locked": false
+    }
+  ],
+  "slots": {
+    "subject": [
+      "an empty wooden desk by the window",
+      "a folded handwritten letter with a dried flower",
+      "a glass bottle holding wildflowers",
+      "an old film camera resting on a chair",
+      "a rainy street seen through a window",
+      "a half-finished cup of tea and an open book"
+    ],
+    "mood": [
+      "quiet solitude",
+      "warm nostalgia",
+      "slow sunday afternoon",
+      "bittersweet memory"
+    ],
+    "asset_kind": [
+      "empty 35mm film frame border with sprocket holes, clean center",
+      "small date-stamp sticker, isolated on plain background",
+      "soft light-leak overlay, isolated on plain background",
+      "handwritten caption label plate, isolated on plain background",
+      "film grain and scratch texture tile, seamless"
+    ]
+  },
+  "negative": "sharp digital clarity, HDR, oversaturated colors, modern UI, watermark, logo, realistic human face, celebrity, text-heavy layout, 3D render, plastic look",
+  "asset_kinds": [
+    { "key": "frame", "zh": "胶片边框" },
+    { "key": "date_stamp", "zh": "日期贴纸" },
+    { "key": "light_leak", "zh": "漏光叠层" },
+    { "key": "caption_plate", "zh": "手写字板" },
+    { "key": "grain_tile", "zh": "颗粒纹理" },
+    { "key": "cover", "zh": "封面模板" }
+  ],
+  "eval_rules": [
+    { "key": "grain", "zh": "含颗粒质感", "needle": "grain" },
+    { "key": "warm", "zh": "含暖调约束", "needle": "warm" },
+    { "key": "palette", "zh": "含固定色板", "needle": "amber" },
+    { "key": "space", "zh": "含留白构图", "needle": "negative space" },
+    { "key": "avoid", "zh": "含负面词", "needle": "avoid" }
+  ],
+  "budget": {
+    "monthly_usd": 60,
+    "per_run_cap_usd": 2
+  },
+  "notes": "提示词里的中文只用于界面显示，实际拼接全部使用 en 字段。先跑 30 张 Low 档挑 10 张定基调，再放量。"
+}

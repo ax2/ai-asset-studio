@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 资产工作台</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div>
+        <div class="brand-title">AI 资产工作台</div>
+        <div class="brand-sub">ai-asset-studio</div>
+      </div>
+    </div>
+    <nav class="nav" id="nav">
+      <button class="nav-item active" data-view="gallery">资产画廊</button>
+      <button class="nav-item" data-view="styles">风格配方</button>
+      <button class="nav-item" data-view="batch">批量生成</button>
+      <button class="nav-item" data-view="export">导出与同步</button>
+      <button class="nav-item" data-view="cost">成本看板</button>
+      <button class="nav-item" data-view="help">使用说明</button>
+    </nav>
+    <div class="side-foot">
+      <div class="status-line"><span class="dot" id="dotKey"></span><span id="txtKey">检查中</span></div>
+      <div class="status-line"><span class="dot" id="dotDisk"></span><span id="txtDisk">检查中</span></div>
+      <div class="side-note">仅监听 127.0.0.1<br>密钥只从环境变量读取</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h1 id="viewTitle">资产画廊</h1>
+        <div class="subtitle" id="viewSubtitle">查看、筛选、复现与管理所有美术资产</div>
+      </div>
+      <div class="top-actions">
+        <span class="chip" id="budgetChip">预算加载中</span>
+        <button class="btn ghost" data-action="sync">同步到资产盘</button>
+      </div>
+    </header>
+
+    <section class="view" id="view-gallery">
+      <div class="toolbar">
+        <input class="input" id="fQ" placeholder="搜索提示词、标签、编号">
+        <select class="select" id="fStyle"><option value="">全部风格</option></select>
+        <select class="select" id="fStatus">
+          <option value="">全部状态</option>
+          <option value="raw">待筛选</option>
+          <option value="keeper">精选</option>
+          <option value="rejected">已淘汰</option>
+        </select>
+        <select class="select" id="fRating">
+          <option value="0">全部评分</option>
+          <option value="3">3 星以上</option>
+          <option value="4">4 星以上</option>
+          <option value="5">5 星</option>
+        </select>
+        <select class="select" id="fSort">
+          <option value="newest">最新优先</option>
+          <option value="oldest">最早优先</option>
+          <option value="rating">评分优先</option>
+          <option value="cost">成本优先</option>
+        </select>
+        <label class="check"><input type="checkbox" id="fFav"> 仅收藏</label>
+        <button class="btn" data-action="refresh">刷新</button>
+        <button class="btn primary" data-action="goto-batch">批量生成</button>
+      </div>
+      <div class="summary" id="gallerySummary"></div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section class="view hidden" id="view-styles">
+      <div class="two-col">
+        <div class="panel">
+          <div class="panel-title">风格列表</div>
+          <div id="styleList"></div>
+        </div>
+        <div class="panel">
+          <div class="panel-title">配方编辑器 <span class="muted" id="editingStyle"></span></div>
+          <div id="styleEditor"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view hidden" id="view-batch">
+      <div class="two-col">
+        <div class="panel">
+          <div class="panel-title">生成参数</div>
+          <div class="form">
+            <label>风格<select class="select" id="bStyle"></select></label>
+            <label>模型<select class="select" id="bModel"></select></label>
+            <label>质量档<select class="select" id="bQuality"></select></label>
+            <label>数量（单次上限 50）<input class="input" id="bCount" type="number" value="30" min="1" max="50"></label>
+            <label>附加提示词（可选）<input class="input" id="bExtra" placeholder="追加到每条提示词末尾"></label>
+            <label class="check"><input type="checkbox" id="bDry" checked> Dry run（不调用 API，生成演示图）</label>
+            <label class="check"><input type="checkbox" id="bBatch"> 按 Batch 半价估算（仅影响估算）</label>
+          </div>
+          <div class="estimate" id="bEstimate"></div>
+          <button class="btn primary wide" data-action="run-batch">开始生成</button>
+          <div class="hint" id="bHint"></div>
+        </div>
+        <div class="panel">
+          <div class="panel-title">配方预览</div>
+          <div class="prompt-preview" id="bPreview"></div>
+          <div class="panel-title mt">规则完整度</div>
+          <div id="bEval"></div>
+          <div class="hint mt">提示词由配方里的分块按顺序拼接，加上槽位变量和负面词。编辑分块请到「风格配方」页。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view hidden" id="view-export">
+      <div class="two-col">
+        <div class="panel">
+          <div class="panel-title">导出素材包</div>
+          <div class="form">
+            <label>范围
+              <select class="select" id="eScope">
+                <option value="keeper">仅精选资产</option>
+                <option value="all">当前画廊筛选结果</option>
+                <option value="fav">仅收藏资产</option>
+              </select>
+            </label>
+            <label>包名<input class="input" id="eName" placeholder="留空自动命名"></label>
+          </div>
+          <button class="btn primary wide" data-action="do-export">导出 ZIP</button>
+          <div class="hint">ZIP 内含图片、manifest.json 与 prompts.txt，图片保持原始文件、不剥离元数据。</div>
+          <div class="panel-title mt">已导出的包</div>
+          <div id="exportList" class="list"></div>
+        </div>
+        <div class="panel">
+          <div class="panel-title">同步到资产盘</div>
+          <div id="syncInfo" class="info-box"></div>
+          <label class="mt">限定风格<select class="select" id="eSyncStyle"><option value="">全部风格</option></select></label>
+          <label class="check mt"><input type="checkbox" id="eIncludeDemo"> 包含演示图（仅用于测试同步）</label>
+          <button class="btn wide mt" data-action="do-sync">同步精选资产</button>
+          <div class="hint">只同步标为「精选」的资产，按批次文件夹整体复制，避免云盘同步大量小文件时冲突。演示图默认不同步。</div>
+          <div class="panel-title mt">元数据完整性</div>
+          <div id="healthBox"></div>
+          <button class="btn ghost wide mt" data-action="refresh-health">重新检查</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="view hidden" id="view-cost">
+      <div class="cards" id="costCards"></div>
+      <div class="two-col mt">
+        <div class="panel">
+          <div class="panel-title">按风格 / 模型分布</div>
+          <div id="costBreakdown"></div>
+        </div>
+        <div class="panel">
+          <div class="panel-title">参考单价（每 1024×1024 图）</div>
+          <div id="priceTable"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view hidden" id="view-help">
+      <div class="panel help">
+        <div class="panel-title">快速上手</div>
+        <ol>
+          <li>先到「批量生成」用 <b>Dry run</b> 跑 30 张，系统会在本地生成演示图，不花一分钱，可以把画廊、筛选、提示词编辑、复现、导出全部走通。</li>
+          <li>确认配方稳定后，在系统环境变量里设置 <code>OPENAI_API_KEY</code>，重启服务，取消 Dry run 才会真正调用 API。密钥绝不写入任何文件。</li>
+          <li>在画廊点开一张图，可直接改提示词、保存版本、一键复现、打分、加标签、标为精选。</li>
+          <li>精选资产可导出 ZIP 素材包，或一键同步到资产盘（<code>D:/gdrive.photo/ai-assets</code>，即 H: 对应的本地目录，会由 Google Drive 自动同步到云端）。</li>
+        </ol>
+        <div class="panel-title mt">目录</div>
+        <pre>styles/            风格配方（可提交到仓库）
+data/raw/           本地暂存的生成图
+data/keepers/       精选标记（索引在 data/meta.jsonl）
+data/export/        导出的 ZIP
+web/                管理界面
+studio/             后端模块
+server.py           本地服务入口
+tools/generate.py   命令行入口</pre>
+        <div class="panel-title mt">顺序</div>
+        <p>风格 1「复古胶片日记」是 active，风格 4「扁平几何图标」是 queued。第一套跑顺后到「风格配方」页把 4 切成 active 即可。</p>
+        <div class="panel-title mt">合规提醒</div>
+        <p>把成品发布到平台时，按平台要求勾选「含 AI 生成内容」。图片自带的 C2PA 来源元数据不要剥离；本系统会在「元数据完整性」里检查。不要生成在世艺术家风格、公众人物或真实人脸的写实形象。</p>
+        <div class="panel-title mt">关于资产盘</div>
+        <p>资产根目录是 <code>D:/gdrive.photo/ai-assets</code>：这是 H: 镜像盘对应的本地目录，写入后会由 Google Drive 自动同步。直接写这个本地目录比写 H: 虚拟盘稳定，也避免几千张小文件与同步客户端打架。若同步客户端没运行，写入仍然成功，只是云端稍后才会更新。</p>
+      </div>
+    </section>
+  </main>
+
+  <aside class="drawer hidden" id="drawer">
+    <div class="drawer-head">
+      <div>
+        <div class="drawer-title" id="dTitle">资产详情</div>
+        <div class="muted small" id="dId"></div>
+      </div>
+      <button class="icon-btn" data-action="close-drawer">×</button>
+    </div>
+    <div class="drawer-body" id="drawerBody"></div>
+  </aside>
+
+  <div class="modal hidden" id="modal">
+    <div class="modal-card">
+      <div class="modal-title" id="mTitle">确认</div>
+      <div class="modal-body" id="mBody"></div>
+      <div class="modal-actions">
+        <button class="btn ghost" data-action="modal-cancel">取消</button>
+        <button class="btn primary" data-action="modal-ok">确定</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>
