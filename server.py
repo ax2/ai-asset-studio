@@ -272,6 +272,14 @@ class Handler(BaseHTTPRequestHandler):
                     {"key": "sheet", "label": "一次生成四视图设定图后切分（省、一致性最好）"},
                     {"key": "separate", "label": "逐视图生成（可用参考图保风格，4 倍成本）"},
                 ],
+                "styles": [
+                    {"id": s.get("id"), "name": s.get("name"),
+                     "model": (s.get("model") or {}).get("default"),
+                     "quality": (s.get("model") or {}).get("quality"),
+                     "size": (s.get("model") or {}).get("size")}
+                    for s in imaging.load_styles(CFG)
+                    if s.get("status") == "tool"
+                ],
                 "default_cell": int(CFG.get("sprite_cell") or 128),
                 "default_model": CFG.get("default_model"),
                 "edit_model": CFG.get("edit_model"),
@@ -298,11 +306,14 @@ class Handler(BaseHTTPRequestHandler):
             if not card:
                 return self._err(404, "character not found")
             view = p.get("view", "")
+            style_id = str(p.get("style") or "character-turnaround")
             return self._json(200, {
                 "anchor": card.get("anchor") or "",
                 "anchor_version": card.get("anchor_version"),
-                "prompt": (turnaround.build_prompt(CFG, card, view)
-                           if view else turnaround.build_single_prompt(CFG, card, p.get("extra", ""))),
+                "style_id": style_id,
+                "prompt": (turnaround.build_prompt(CFG, card, view, style_id)
+                           if view else turnaround.build_single_prompt(
+                               CFG, card, p.get("extra", ""), style_id)),
             })
         if (method == "POST" and len(seg) == 3 and seg[0] == "characters"
                 and seg[2] == "reproduce"):
@@ -334,7 +345,9 @@ class Handler(BaseHTTPRequestHandler):
                 CFG, character_id=cid, extra=str(b.get("extra") or ""),
                 ref_asset_id=str(b.get("ref_asset_id") or ""), dry_run=dry,
                 model=b.get("model") or None, quality=b.get("quality") or None,
-                size=b.get("size") or None)
+                size=b.get("size") or None,
+                style_id=str(b.get("style_id") or "character-turnaround"),
+                label=str(b.get("label") or ""))
         except ValueError as exc:
             return self._err(400, str(exc))
         return self._json(200, res)
@@ -349,7 +362,8 @@ class Handler(BaseHTTPRequestHandler):
                 CFG, character_id=cid, mode=str(b.get("mode") or "sheet"),
                 ref_asset_id=str(b.get("ref_asset_id") or ""), dry_run=dry,
                 model=b.get("model") or None, quality=b.get("quality") or None,
-                size=b.get("size") or None, name=str(b.get("name") or ""))
+                size=b.get("size") or None, name=str(b.get("name") or ""),
+                style_id=str(b.get("style_id") or "character-turnaround"))
         except ValueError as exc:
             return self._err(400, str(exc))
         return self._json(200, {"ok": True, "pack": res})

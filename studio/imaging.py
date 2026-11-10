@@ -185,7 +185,7 @@ def call_openai(cfg: dict, prompt: str, model: str, quality: str,
     )
     opener = _opener(cfg)
     try:
-        with opener.open(req, timeout=240) as resp:
+        with opener.open(req, timeout=600) as resp:
             body = json.loads(resp.read().decode("utf-8"))
     except urllib.error.HTTPError as exc:
         detail = exc.read().decode("utf-8", "replace")[:600]
@@ -196,6 +196,8 @@ def call_openai(cfg: dict, prompt: str, model: str, quality: str,
     except urllib.error.URLError as exc:
         raise RuntimeError(
             f"无法连接 OpenAI API：{exc.reason}。请检查 config.json 里的 api_proxy。") from None
+    except OSError as exc:
+        raise RuntimeError(f"图像生成请求超时或连接中断：{exc}。可重跑批量脚本，已完成的图会自动跳过。") from None
 
     try:
         item = body["data"][0]
@@ -296,7 +298,7 @@ def call_openai_edit(cfg: dict, prompt: str, images: list[bytes], *,
         method="POST")
     opener = _opener(cfg)
     try:
-        with opener.open(req, timeout=300) as resp:
+        with opener.open(req, timeout=600) as resp:
             payload = json.loads(resp.read().decode("utf-8"))
     except urllib.error.HTTPError as exc:
         detail = exc.read().decode("utf-8", "replace")[:500]
@@ -305,6 +307,8 @@ def call_openai_edit(cfg: dict, prompt: str, images: list[bytes], *,
         raise RuntimeError(f"参考图生成失败 HTTP {exc.code}: {detail}") from None
     except urllib.error.URLError as exc:
         raise RuntimeError(f"无法连接参考图接口：{exc.reason}。检查 api_proxy。") from None
+    except OSError as exc:
+        raise RuntimeError(f"参考图生成超时或连接中断：{exc}") from None
     try:
         item = payload["data"][0]
     except (KeyError, IndexError, TypeError):

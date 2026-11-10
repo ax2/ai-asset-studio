@@ -1,0 +1,54 @@
+{
+  "id": "sanguo-hero",
+  "name": "三国英雄立绘",
+  "order": 4,
+  "status": "tool",
+  "description": "高细节三国题材游戏角色美术：半写实工笔 + 游戏概念设定，繁复甲胄与织物纹理，统一正交全身构图。配合角色锚点使用。",
+  "palette": ["#8C2F2A", "#C9A227", "#1F2A38", "#E7DFC9", "#2F4A3C", "#6B4A2F"],
+  "model": {
+    "default": "gpt-image-2",
+    "quality": "high",
+    "size": "1024x1536"
+  },
+  "blocks": [
+    {
+      "key": "genre",
+      "zh": "题材",
+      "en": "premium Three Kingdoms historical-fantasy game character concept art, full-body hero portrait, authentic late Han dynasty Chinese arms, armour and court dress"
+    },
+    {
+      "key": "detail",
+      "zh": "精细度",
+      "en": "highly detailed painterly digital illustration, intricate hand-painted textures, fine brushwork on silk brocade, engraved metal lamellar armour plates, weathered leather straps, individually drawn chain links and tassels, crisp material separation, subtle rim light, sharp edges, no blurry areas"
+    },
+    {
+      "key": "composition",
+      "zh": "构图",
+      "en": "one single full-body figure in a calm heroic three-quarter stance, centered, orthographic, head to toe fully visible, plain uniform warm parchment background, soft even studio lighting, no ground shadow, no props, no scenery"
+    },
+    {
+      "key": "consistency",
+      "zh": "一致性",
+      "en": "the exact same face, facial hair, hairstyle, armour, weapon, accessories, body proportions and colour palette in every image of this character"
+    },
+    {
+      "key": "palette",
+      "zh": "色彩",
+      "en": "restricted historical pigment palette of vermilion red, aged gold, ink black, jade green, off-white silk and dark bronze, muted and harmonious"
+    }
+  ],
+  "slots": {
+    "pose": ["standing calmly with hands at sides", "standing with one hand resting on the weapon", "standing in a relaxed guard stance"],
+    "mood": ["dignified and composed", "stern and battle-hardened", "serene and calculating"]
+  },
+  "negative": "photograph, photorealism, 3D render, plastic look, celebrity likeness, modern clothing, anime chibi, low detail, flat vector, text, letters, watermark, logo, border, frame, panel, split line, cropped body, extra limbs, extra characters, cluttered background, different outfit, different hairstyle, inconsistent weapon",
+  "asset_kinds": ["character-portrait", "turnaround", "view-front", "view-three-quarter", "view-side", "view-back"],
+  "eval_rules": [
+    {"key": "detail", "needle": "highly detailed", "zh": "高细节绘制"},
+    {"key": "fullbody", "needle": "full-body", "zh": "全身构图"},
+    {"key": "consistency", "needle": "exact same", "zh": "跨图一致性"},
+    {"key": "plainbg", "needle": "plain uniform", "zh": "纯色背景"}
+  ],
+  "budget": {"per_run_cap_usd": 5},
+  "notes": "工具配方：由「角色与游戏资产」工作台或 batches/sanguo-heroes.json 批量脚本调用。角色锚点由角色卡自动拼在提示词最前面，不要删改。"
+}

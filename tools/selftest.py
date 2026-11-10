@@ -17,7 +17,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from studio import characters, config, png, sprites, store, turnaround  # noqa: E402
+from studio import (characters, config, imaging, png, sprites,  # noqa: E402
+                    store, turnaround)
 
 CREATED_PACKS: list[str] = []
 CREATED_CARDS: list[str] = []
@@ -95,6 +96,61 @@ def main() -> None:
         check("sprite engine exports", all((proot / f).is_file() for f in
               ("sheet.array.json", "godot/SpriteFrames.tres",
                "unity/UnitySpriteSlicer.cs", "unity/slices.json", "preview.html", "README.txt")))
+
+    # Separate-mode resume: an interrupted 4-view pack must be finished without
+    # regenerating (and re-paying for) the views that already exist. Runs in a
+    # throwaway library with a mocked API, so it costs $0 and touches no assets.
+    import tempfile
+    from unittest.mock import patch
+    with tempfile.TemporaryDirectory(prefix="ai-studio-resume-") as td:
+        tmp = Path(td)
+        for sub in ("raw", "packs", "thumbs", "export"):
+            (tmp / sub).mkdir()
+        tcfg = dict(cfg)
+        tcfg["local"] = tmp
+        store.ensure(tcfg)
+        tcard = characters.put_card(tcfg, characters.blank_card("断点续跑测试"))
+        tiny = png.encode(png.make(16, 16, 4))
+        calls = {"n": 0}
+
+        def fake_generate(*_a, **_kw):
+            calls["n"] += 1
+            return tiny, "png"
+
+        def fake_edit(*_a, **_kw):
+            calls["n"] += 1
+            return tiny
+
+        with patch.object(imaging, "call_openai", side_effect=fake_generate), \
+             patch.object(imaging, "call_openai_edit", side_effect=fake_edit):
+            first = turnaround.build(tcfg, character_id=tcard["id"],
+                                     mode="separate", dry_run=False,
+                                     name="resume-first", size="1024x1024")
+            check("separate first run generates 4 views",
+                  calls["n"] == 4 and len(first["views"]) == 4)
+            prior = {}
+            trows, _ = store.query_page(tcfg, character_id=tcard["id"], limit=100)
+            for r in trows:
+                kind = str(r.get("asset_kind") or "")
+                if r.get("source") == "turnaround-view" and kind.startswith("view-"):
+                    prior[kind[5:]] = r
+            check("all 4 views indexed before resume", len(prior) == 4)
+            calls["n"] = 0
+            second = turnaround.build(tcfg, character_id=tcard["id"],
+                                      mode="separate", dry_run=False,
+                                      name="resume-second", size="1024x1024",
+                                      reuse_views=prior)
+            check("resume makes zero API calls", calls["n"] == 0)
+            check("resume reuses all views",
+                  all(v.get("reused") for v in second["views"]))
+            check("resume pack is still complete",
+                  len(second["views"]) == 4 and
+                  (Path(second["dir"]) / "turnaround.png").is_file())
+        # ``with sqlite3.Connection`` commits but does not close the handle.
+        # Release the throwaway DB before Windows tries to remove the temp dir.
+        import gc
+        del first, second, prior, trows, tcard, tiny
+        gc.collect()
 
     # Pack index consistency: GUI links must resolve to the DB record.
     for p in characters.list_packs(cfg):

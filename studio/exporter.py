@@ -14,12 +14,26 @@ from pathlib import Path
 from . import config, imaging, store
 
 
-def export_zip(cfg: dict, rows: list, name: str | None = None) -> dict:
+def export_zip(cfg: dict, rows: list, name: str | None = None,
+               extra_files: dict | None = None) -> dict:
+    """Bundle images + a full reproducibility manifest.
+
+    extra_files maps arcname -> str content, used for character cards, the
+    style bible and the batch recipe so a pack can be regenerated later
+    without access to the original database.
+    """
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
     safe = "".join(c for c in (name or f"asset-pack-{stamp}")
                    if c.isalnum() or c in "-_")[:60] or f"asset-pack-{stamp}"
     out = cfg["local"] / "export" / f"{safe}.zip"
     out.parent.mkdir(parents=True, exist_ok=True)
+
+    # Everything needed to reproduce an image, not just its prompt.
+    META_KEYS = ("id", "filename", "style_id", "style_name", "label",
+                 "prompt", "model", "quality", "size", "cost_usd",
+                 "character_id", "anchor_version", "parent_id", "source",
+                 "asset_kind", "note", "rating", "tags", "favorite",
+                 "status", "demo", "metadata", "created_at")
 
     manifest, lines, copied = [], [], 0
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as zf:
@@ -28,16 +42,16 @@ def export_zip(cfg: dict, rows: list, name: str | None = None) -> dict:
             if not src.is_file():
                 continue
             zf.write(src, arcname=f"images/{row.get('filename') or src.name}")
-            manifest.append({k: row.get(k) for k in
-                             ("id", "filename", "style_id", "prompt", "model",
-                              "quality", "size", "rating", "tags", "demo",
-                              "metadata", "created_at")})
+            manifest.append({k: row.get(k) for k in META_KEYS})
             lines.append(f"[{row.get('id')}] {row.get('style_id')}\n{row.get('prompt')}\n")
             copied += 1
         zf.writestr("manifest.json",
                     json.dumps({"generated_at": store.now(), "count": copied,
                                 "assets": manifest}, ensure_ascii=False, indent=2))
         zf.writestr("prompts.txt", "\n".join(lines))
+        for arcname, content in (extra_files or {}).items():
+            zf.writestr(arcname, content if isinstance(content, str)
+                        else json.dumps(content, ensure_ascii=False, indent=2))
     return {"ok": True, "path": str(out), "count": copied, "filename": out.name}
 
 

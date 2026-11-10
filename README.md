@@ -76,6 +76,21 @@ README.txt                各引擎导入说明
 
 支持动作：`idle` 待机、`walk` 行走、`run` 奔跑、`jump` 跳跃、`attack` 攻击、`hurt` 受击。每段帧数、格子尺寸、每行帧数、fps、抠色容差都可调。RPG Maker 的四个方向目前由镜像与位移近似，正式素材请用多视角功能生成后再替换。
 
+### 画风配方与可复现批量
+
+角色提示词由「风格配方 + 角色锚点」拼成，配方可在工作台的「画风配方」下拉框切换。`styles/character-turnaround.json` 是扁平矢量设定图，`styles/sanguo-hero.json` 是高细节三国工笔立绘（默认 `gpt-image-2 / high / 1024x1536`）。新增自己的画风只需复制一份 JSON 并把 `status` 设为 `tool`。
+
+`batches/sanguo-heroes.json` + `tools/generate_sanguo.py` 是一份完整的可复现批量示例：小说摘录 → 文本模型提取 + 人工校订 → 6 张角色卡（带锚点）→ 6 张高细节立绘 + 四视图设定图 → 导出 ZIP。
+
+```bash
+python tools/generate_sanguo.py --list            # 看计划与预估成本
+python tools/generate_sanguo.py                   # 全量生成
+python tools/generate_sanguo.py --only 关羽        # 只跑一个角色
+python tools/generate_sanguo.py --skip-extract    # 原样复跑，已生成的图自动跳过、不重复计费
+```
+
+脚本是幂等的：按 `character_id` + 资产类型查重，中断后直接重跑即可续上。导出的 ZIP 内含 `images/`、`manifest.json`（每张图的 prompt / model / quality / size / `character_id` / `anchor_version` / cost / 来源元数据）、`character-cards.json`（逐字复用的锚点与版本）、`style-bible.json`（画风）、`recipe.json`（本次全部参数与复现命令）、`prompts.txt`、`README.txt`。API 原图的 C2PA 来源元数据不剥离，切分出来的派生图标为 `derived`。
+
 ## 主要 API
 
 ```

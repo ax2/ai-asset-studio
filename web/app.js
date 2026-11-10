@@ -957,9 +957,13 @@ function fillCharacterSelects() {
 
 function buildGameUI() {
   const m = G.meta || {};
+  const keepStyle = $("#gStyle").value;
   const keepMode = $("#gTurnMode").value;
   const keepModel = $("#gModel").value;
   const keepCell = $("#gCell").value;
+  $("#gStyle").innerHTML = (m.styles || []).map((s) =>
+    `<option value="${esc(s.id)}">${esc(s.name)} · ${esc(s.id)}</option>`).join("");
+  $("#gStyle").value = keepStyle || "character-turnaround";
   $("#gTurnMode").innerHTML = (m.turnaround_modes || []).map((x) =>
     `<option value="${esc(x.key)}">${esc(x.label)}</option>`).join("");
   if (keepMode) $("#gTurnMode").value = keepMode;
@@ -1181,7 +1185,9 @@ async function gamePromptPreview(silent) {
     if (!silent) toast("请先保存角色卡", "err");
     return;
   }
-  const res = await api("/api/characters/" + encodeURIComponent(cid) + "/prompt");
+  const styleId = $("#gStyle").value || "character-turnaround";
+  const res = await api("/api/characters/" + encodeURIComponent(cid) +
+    "/prompt?style=" + encodeURIComponent(styleId));
   if (box) box.textContent = res.prompt || "";
   if (!silent) toast(`当前锚点 v${res.anchor_version}，已展开完整提示词`, "ok");
 }
@@ -1215,6 +1221,7 @@ async function gameTurnaround() {
     mode: $("#gTurnMode").value, dry_run: $("#gDry").checked,
     ref_asset_id: $("#gRefAsset").value, model: $("#gModel").value,
     quality: $("#gQuality").value, name: $("#gPackName").value.trim(),
+    style_id: $("#gStyle").value || "character-turnaround",
   };
   const unit = priceOf(body.model, body.quality);
   const n = body.mode === "separate" ? 4 : 1;
@@ -1239,6 +1246,7 @@ async function gameReproduce() {
     dry_run: $("#gDry").checked, extra: $("#gExtra").value.trim(),
     ref_asset_id: $("#gRefAsset").value, model: $("#gModel").value,
     quality: $("#gQuality").value,
+    style_id: $("#gStyle").value || "character-turnaround",
   };
   const unit = priceOf(body.model, body.quality);
   const go = async () => {
@@ -1462,6 +1470,13 @@ document.addEventListener("change", async (e) => {
   }
   if (id === "fCharacter") { await loadAssets(true); return; }
   if (id === "gCardSelect") { await selectGameCard(e.target.value); return; }
+  if (id === "gStyle") {
+    const st = (G.meta.styles || []).find((x) => x.id === e.target.value);
+    if (st && st.model) { $("#gModel").value = st.model; refreshGameQuality(); }
+    if (st && st.quality) $("#gQuality").value = st.quality;
+    refreshGameEstimate();
+    return;
+  }
   if (id === "gModel") { refreshGameQuality(); return; }
   if (["gQuality", "gTurnMode", "gDry"].includes(id)) { refreshGameEstimate(); return; }
   if (id === "setKeyShow") $("#setKey").type = e.target.checked ? "text" : "password";

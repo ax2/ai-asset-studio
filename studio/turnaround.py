@@ -18,7 +18,7 @@ import zipfile
 from datetime import datetime
 from pathlib import Path
 
-from . import characters, config, imaging, png, pricing, store
+from . import characters, config, imaging, png, pricing, store, thumbs
 
 STYLE_ID = "character-turnaround"
 VIEWS = [
@@ -30,16 +30,22 @@ VIEWS = [
 _DEMO_COLORS = [(58, 92, 122), (72, 110, 96), (122, 92, 72), (88, 80, 112)]
 
 
-def _blocks(cfg: dict) -> tuple[str, str]:
-    style = imaging.load_style(cfg, STYLE_ID) or {}
+def _blocks(cfg: dict, style_id: str = STYLE_ID) -> tuple[str, str]:
+    style = imaging.load_style(cfg, style_id) or {}
     text = ". ".join(str(b.get("en") or "").strip().rstrip(".")
                      for b in style.get("blocks", []) if b.get("en"))
     negative = str(style.get("negative") or "").strip()
     return text, negative
 
 
-def build_prompt(cfg: dict, card: dict, view_key: str = "") -> str:
-    text, negative = _blocks(cfg)
+def style_name(cfg: dict, style_id: str) -> str:
+    style = imaging.load_style(cfg, style_id) or {}
+    return str(style.get("name") or style_id)
+
+
+def build_prompt(cfg: dict, card: dict, view_key: str = "",
+                 style_id: str = STYLE_ID) -> str:
+    text, negative = _blocks(cfg, style_id)
     anchor = str(card.get("anchor") or "").strip() or characters.build_anchor(card)
     if view_key:
         extra = next((v[2] for v in VIEWS if v[0] == view_key), "")
@@ -58,9 +64,10 @@ def build_prompt(cfg: dict, card: dict, view_key: str = "") -> str:
     return prompt
 
 
-def build_single_prompt(cfg: dict, card: dict, extra: str = "") -> str:
+def build_single_prompt(cfg: dict, card: dict, extra: str = "",
+                        style_id: str = STYLE_ID) -> str:
     """Prompt for one reproducible character image (not a multi-view sheet)."""
-    text, negative = _blocks(cfg)
+    text, negative = _blocks(cfg, style_id)
     anchor = str(card.get("anchor") or "").strip() or characters.build_anchor(card)
     parts = [anchor, text,
              "SINGLE CHARACTER IMAGE: exactly one full-body character, centered, "
@@ -76,7 +83,8 @@ def build_single_prompt(cfg: dict, card: dict, extra: str = "") -> str:
 def reproduce(cfg: dict, *, character_id: str, extra: str = "",
               ref_asset_id: str = "", dry_run: bool = True,
               model: str | None = None, quality: str | None = None,
-              size: str | None = None) -> dict:
+              size: str | None = None, style_id: str = STYLE_ID,
+              label: str = "") -> dict:
     """Regenerate one image of an existing character with its frozen anchor.
 
     With a reference asset the call goes through /images/edits and
@@ -87,13 +95,13 @@ def reproduce(cfg: dict, *, character_id: str, extra: str = "",
     card = characters.get_card(cfg, character_id)
     if not card:
         raise ValueError("角色不存在，请先保存角色卡。")
-    prompt = build_single_prompt(cfg, card, extra)
+    prompt = build_single_prompt(cfg, card, extra, style_id)
     model = model or str(cfg.get("default_model") or "gpt-image-1.5")
     quality = quality or str(cfg.get("default_quality") or "low")
     size = size or str(cfg.get("default_size") or "1024x1024")
     if dry_run or not config.has_key(cfg):
         res = imaging.generate(
-            cfg, style_id=STYLE_ID, prompt=prompt, model=model,
+            cfg, style_id=style_id, prompt=prompt, model=model,
             quality=quality, size=size, dry_run=True, source="character-reproduce",
             asset_kind="character", character_id=card["id"],
             anchor_version=int(card.get("anchor_version") or 1),
@@ -128,9 +136,9 @@ def reproduce(cfg: dict, *, character_id: str, extra: str = "",
     if degraded:
         note += "。" + degraded
     rec = _write_asset(cfg, data, card=card, kind="character",
-                       label=f"{card['name']} · 复现", prompt=prompt,
+                       label=label or f"{card['name']} · 复现", prompt=prompt,
                        model=model, quality=quality, size=size, cost=unit,
-                       source="character-reproduce", note=note)
+                       source="character-reproduce", note=note, style_id=style_id)
     return {"asset": rec, "prompt": prompt, "estimate_usd": unit,
             "demo": False, "reference_used": used_edit, "degraded": degraded}
 
@@ -138,7 +146,8 @@ def reproduce(cfg: dict, *, character_id: str, extra: str = "",
 def _write_asset(cfg: dict, data: bytes, *, card: dict, kind: str, label: str,
                  prompt: str, model: str, quality: str, size: str,
                  cost: float, source: str, note: str = "",
-                 metadata: str = "", parent_id: str = "") -> dict:
+                 metadata: str = "", parent_id: str = "",
+                 style_id: str = STYLE_ID) -> dict:
     aid = store.new_id()
     day = store.now()[:10].replace("-", "")
     folder = cfg["local"] / "raw" / day
@@ -146,9 +155,13 @@ def _write_asset(cfg: dict, data: bytes, *, card: dict, kind: str, label: str,
     filename = aid + ".png"
     path = folder / filename
     path.write_bytes(data)
+    try:
+        thumbs.ensure(cfg, f"raw/{day}/{filename}")
+    except Exception:
+        pass  # thumbnails are an optimisation, never fail an asset write
     rec = {
         "id": aid, "file": f"raw/{day}/{filename}", "filename": filename,
-        "style_id": STYLE_ID, "style_name": "人物多视角设定图",
+        "style_id": style_id, "style_name": style_name(cfg, style_id),
         "label": label, "asset_kind": kind, "prompt": prompt,
         "model": model, "quality": quality, "size": size,
         "cost_usd": round(float(cost), 4), "demo": False, "source": source,
@@ -199,7 +212,8 @@ h2{font-size:13px;font-weight:500;margin:22px 0 8px}
 
 def _finish(cfg: dict, root: Path, pack_id: str, card: dict, *,
             mode: str, model: str, views: list, images: dict,
-            demo: bool, note: str, safe: str, master: bytes = b"") -> dict:
+            demo: bool, note: str, safe: str, master: bytes = b"",
+            style_id: str = STYLE_ID) -> dict:
     (root / "views").mkdir(exist_ok=True)
     for key, data in images.items():
         (root / "views" / (key + ".png")).write_bytes(data)
@@ -215,7 +229,8 @@ def _finish(cfg: dict, root: Path, pack_id: str, card: dict, *,
     meta = {
         "character": {"id": card.get("id"), "name": card.get("name"),
                       "anchor_version": card.get("anchor_version")},
-        "mode": mode, "model": model, "demo": demo, "note": note,
+        "mode": mode, "model": model, "style_id": style_id, "demo": demo,
+        "note": note,
         "generated_at": datetime.now().astimezone().isoformat(timespec="seconds"),
         "views": views, "anchor": card.get("anchor") or "",
     }
@@ -246,7 +261,7 @@ def _finish(cfg: dict, root: Path, pack_id: str, card: dict, *,
     data = {
         "id": pack_id, "character_id": card.get("id"),
         "character_name": card.get("name"), "mode": mode, "model": model,
-        "demo": demo, "note": note, "views": views,
+        "style_id": style_id, "demo": demo, "note": note, "views": views,
         "preview": f"/pack/{pack_id}/preview.html",
         "turnaround": f"/pack/{pack_id}/turnaround.png",
         "download": f"/api/packs/{pack_id}/zip",
@@ -256,7 +271,8 @@ def _finish(cfg: dict, root: Path, pack_id: str, card: dict, *,
     return data
 
 
-def _demo(cfg: dict, card: dict, name: str, reason: str) -> dict:
+def _demo(cfg: dict, card: dict, name: str, reason: str,
+          style_id: str = STYLE_ID) -> dict:
     pack_id = characters.new_id("turn")
     safe = "".join(c for c in (name or card.get("name") or "turnaround")
                    if c.isalnum() or c in "-_")[:40] or "turnaround"
@@ -279,15 +295,24 @@ def _demo(cfg: dict, card: dict, name: str, reason: str) -> dict:
                     img.rows[y][x * 4:(x + 1) * 4] = bytes((r, g, b, 255))
         images[key] = png.encode(img)
         views.append({"key": key, "zh": zh, "file": f"views/{key}.png",
-                      "prompt": build_prompt(cfg, card, key), "asset_id": ""})
+                      "prompt": build_prompt(cfg, card, key, style_id), "asset_id": ""})
     return _finish(cfg, root, pack_id, card, mode="demo", model="local",
-                   views=views, images=images, demo=True, note=reason, safe=safe)
+                   views=views, images=images, demo=True, note=reason,
+                   safe=safe, style_id=style_id)
 
 
 def build(cfg: dict, *, character_id: str, mode: str = "sheet",
           ref_asset_id: str = "", dry_run: bool = True,
           model: str | None = None, quality: str | None = None,
-          size: str | None = None, name: str = "") -> dict:
+          size: str | None = None, name: str = "",
+          style_id: str = STYLE_ID,
+          reuse_views: dict | None = None) -> dict:
+    """Build a view pack.
+
+    ``reuse_views`` maps a view key to an already-indexed asset record from a
+    previous, interrupted run; those views are read from disk instead of being
+    generated again, so resuming a separate-mode pack never double-charges.
+    """
     card = characters.get_card(cfg, character_id)
     if not card:
         raise ValueError("角色不存在，请先在角色工作台保存角色卡。")
@@ -295,7 +320,8 @@ def build(cfg: dict, *, character_id: str, mode: str = "sheet",
                    if c.isalnum() or c in "-_")[:40] or "turnaround"
     if dry_run or not config.has_key(cfg):
         return _demo(cfg, card, name or safe,
-                     "未配置 API key 或选择了演示模式：只产出布局占位，未调用 API、未写入资产库。")
+                     "未配置 API key 或选择了演示模式：只产出布局占位，未调用 API、未写入资产库。",
+                     style_id)
 
     model = model or str(cfg.get("default_model") or "gpt-image-1.5")
     quality = quality or str(cfg.get("default_quality") or "low")
@@ -308,12 +334,13 @@ def build(cfg: dict, *, character_id: str, mode: str = "sheet",
     root.mkdir(parents=True)
 
     if mode == "sheet":
-        prompt = build_prompt(cfg, card)
+        prompt = build_prompt(cfg, card, style_id=style_id)
         data, _ext = imaging.call_openai(cfg, prompt, model, quality, size)
         master = _write_asset(cfg, data, card=card, kind="turnaround",
                               label=f"{card['name']} · 四视图设定图",
                               prompt=prompt, model=model, quality=quality,
-                              size=size, cost=unit, source="turnaround")
+                              size=size, cost=unit, source="turnaround",
+                              style_id=style_id)
         img = png.decode(data)
         images, views = {}, []
         if img is None:
@@ -322,14 +349,15 @@ def build(cfg: dict, *, character_id: str, mode: str = "sheet",
             cells = png.split_grid(img, 4, 1)
             for (key, zh, _p), cell in zip(VIEWS, cells):
                 images[key] = png.encode(cell)
-                p = build_prompt(cfg, card, key)
+                p = build_prompt(cfg, card, key, style_id=style_id)
                 rec = _write_asset(cfg, images[key], card=card,
                                    kind="view-" + key, label=f"{card['name']} · {zh}",
                                    prompt=p, model=model, quality=quality,
                                    size=f"{cell.width}x{cell.height}", cost=0,
                                    source="turnaround-split",
                                    note="由四视图设定图等分切出，成本记在原图上。",
-                                   metadata="derived", parent_id=master["id"])
+                                   metadata="derived", parent_id=master["id"],
+                                   style_id=style_id)
                 views.append({"key": key, "zh": zh, "file": f"views/{key}.png",
                               "prompt": p, "asset_id": rec["id"]})
             note = ("一次生成四视图设定图后等分切分；成本 $%.4f 只记在原图资产上。"
@@ -343,9 +371,20 @@ def build(cfg: dict, *, character_id: str, mode: str = "sheet",
                 p = cfg["local"] / str(ref.get("file") or "")
                 if p.is_file() and p.suffix.lower() == ".png":
                     ref_bytes = [p.read_bytes()]
-        images, views, fallbacks = {}, [], []
+        images, views, fallbacks, reused = {}, [], [], []
         for key, zh, _p in VIEWS:
-            prompt = build_prompt(cfg, card, key)
+            prompt = build_prompt(cfg, card, key, style_id=style_id)
+            prior = (reuse_views or {}).get(key)
+            if prior:
+                prior_path = cfg["local"] / str(prior.get("file") or "")
+                if prior_path.is_file() and prior_path.suffix.lower() == ".png":
+                    images[key] = prior_path.read_bytes()
+                    views.append({"key": key, "zh": zh, "file": f"views/{key}.png",
+                                  "prompt": prompt, "asset_id": prior["id"],
+                                  "reference_used": "参考图" in str(prior.get("note") or ""),
+                                  "reused": True})
+                    reused.append(zh)
+                    continue
             used_edit = False
             if ref_bytes:
                 try:
@@ -363,15 +402,19 @@ def build(cfg: dict, *, character_id: str, mode: str = "sheet",
                                label=f"{card['name']} · {zh}", prompt=prompt,
                                model=model, quality=quality, size=size,
                                cost=unit, source="turnaround-view",
-                               note=("参考图模式" if used_edit else "锚点模式"))
+                               note=("参考图模式" if used_edit else "锚点模式"),
+                               style_id=style_id)
             views.append({"key": key, "zh": zh, "file": f"views/{key}.png",
                           "prompt": prompt, "asset_id": rec["id"],
                           "reference_used": used_edit})
-        note = ("逐视图生成，%s；单张 $%.4f，共 $%.4f。"
+        fresh = len(VIEWS) - len(reused)
+        note = ("逐视图生成，%s；本轮新生成 %d 张 × $%.4f = $%.4f。"
                 % ("已使用参考图（input_fidelity=high）" if ref_bytes else "仅用角色锚点",
-                   unit, unit * len(VIEWS)))
+                   fresh, unit, unit * fresh))
+        if reused:
+            note += " 复用上次中断前已完成的视图（未重复计费）：" + "、".join(reused)
         if fallbacks:
             note += " 降级记录：" + "；".join(fallbacks)[:300]
     return _finish(cfg, root, pack_id, card, mode=mode, model=model,
                    views=views, images=images, demo=False, note=note, safe=safe,
-                   master=data if mode == "sheet" else b"")
+                   master=data if mode == "sheet" else b"", style_id=style_id)
