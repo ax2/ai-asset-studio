@@ -15,3 +15,8 @@ Thumbs.db
 *.key
 *_secret*
 *.pem
+# SQLite index / WAL sidecars and encrypted credentials must never be committed
+*.db
+*.db-wal
+*.db-shm
+credentials*.bin

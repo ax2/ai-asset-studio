@@ -9,7 +9,9 @@ const S = {
   cfg: {}, styles: [], pricing: null, stats: null, assets: [],
   view: "gallery", styleId: "", assetId: null, drawerAsset: null,
   modalCb: null, versions: [],
+  assetsTotal: 0, assetsOffset: 0, assetsHasMore: false, assetsLoading: false,
 };
+const PAGE_SIZE = 60;
 
 const VIEW_META = {
   gallery: ["资产画廊", "查看、筛选、复现与管理所有美术资产"],
@@ -18,7 +20,7 @@ const VIEW_META = {
   export: ["导出与同步", "导出素材包、同步精选资产、检查元数据"],
   cost: ["成本看板", "额度、用量与参考单价"],
   settings: ["连接设置", "会话密钥、代理与端点自检"],
-  help: ["使用说明", "零依赖本地运行，密钥不写入磁盘"],
+  help: ["使用说明", "零依赖本地运行，SQLite 索引 + 加密凭据 + 缩略图"],
 };
 
 async function api(path, opts = {}) {
@@ -122,9 +124,12 @@ function fillStyleSelects() {
 function renderStatus() {
   const keyOk = !!S.cfg.api_key_set;
   $("#dotKey").className = "dot " + (keyOk ? "ok" : "warn");
-  $("#txtKey").textContent = keyOk
-    ? (S.cfg.api_key_source === "session" ? "会话密钥（仅内存）" : "环境变量密钥")
-    : "未设密钥（仅 Dry run）";
+  const srcLabel = {
+    session: "会话密钥（仅内存）",
+    disk: "本机密钥（已记住）",
+    env: "环境变量密钥",
+  }[S.cfg.api_key_source] || "密钥已设置";
+  $("#txtKey").textContent = keyOk ? srcLabel : "未设密钥（仅 Dry run）";
   const diskOk = !!S.cfg.asset_root_writable;
   $("#dotDisk").className = "dot " + (diskOk ? "ok" : "bad");
   $("#txtDisk").textContent = diskOk ? "资产盘可写" : "资产盘不可写";
@@ -134,6 +139,7 @@ function renderStatus() {
 
 const KEY_SOURCE_LABEL = {
   session: "会话密钥（仅内存，重启失效）",
+  disk: "本机加密保存的密钥（重启自动生效）",
   env: "环境变量 OPENAI_API_KEY",
   none: "未设置",
 };
@@ -141,7 +147,9 @@ const KEY_SOURCE_LABEL = {
 function renderSettings() {
   const src = S.cfg.api_key_source || "none";
   $("#keyState").innerHTML =
-    `<div class="kv"><span>当前密钥</span><span>${S.cfg.api_key_set ? esc(KEY_SOURCE_LABEL[src] || src) : "未设置"}</span></div>` +
+    `<div class="kv"><span>当前生效密钥</span><span>${S.cfg.api_key_set ? esc(KEY_SOURCE_LABEL[src] || src) : "未设置"}</span></div>` +
+    `<div class="kv"><span>本机记住的密钥</span><span>${S.cfg.api_key_persisted ? esc(S.cfg.api_key_hint || "已保存") : "无"}</span></div>` +
+    `<div class="kv" title="${esc(S.cfg.credential_path || "")}"><span>凭据文件</span><span>${S.cfg.api_key_persisted ? esc(S.cfg.credential_cipher) + " 加密 · 仓库外" : "未创建"}</span></div>` +
     `<div class="kv"><span>代理 api_proxy</span><span>${esc(S.cfg.api_proxy || "(系统默认)")}</span></div>` +
     `<div class="kv"><span>API base</span><span>${esc(S.cfg.api_base || "https://api.openai.com/v1")}</span></div>`;
   $("#setProxy").value = S.cfg.api_proxy || "";
@@ -150,7 +158,8 @@ function renderSettings() {
     `<div class="kv"><span>监听地址</span><span>${esc(S.cfg.host)}:${esc(S.cfg.port)}</span></div>` +
     `<div class="kv"><span>默认模型</span><span>${esc(S.cfg.default_model)} / ${esc(S.cfg.default_quality)}</span></div>` +
     `<div class="kv"><span>资产盘</span><span>${esc(S.cfg.asset_root)}</span></div>` +
-    `<div class="kv"><span>资产盘可写</span><span>${S.cfg.asset_root_writable ? "是" : "否"}</span></div>`;
+    `<div class="kv"><span>资产盘可写</span><span>${S.cfg.asset_root_writable ? "是" : "否"}</span></div>` +
+    `<div class="kv"><span>资产索引</span><span>${esc((S.stats || {}).storage || "sqlite")} · 每页 ${PAGE_SIZE} 张 · 缩略图缓存</span></div>`;
 }
 
 function clearKeyInput() {
@@ -166,13 +175,34 @@ async function saveSessionKey() {
     toast("API key 看起来不完整，未保存", "err");
     return;
   }
-  const res = await api("/api/key", { method: "POST", body: { api_key: value } });
+  const res = await api("/api/key", {
+    method: "POST",
+    body: { api_key: value, persist: $("#setKeyPersist").checked },
+  });
   clearKeyInput();
   S.cfg = await api("/api/config");
   renderStatus();
   renderSettings();
   $("#keyCheck").innerHTML = `<span style="color:var(--teal)">${esc(res.message)}</span>`;
-  toast("会话密钥已载入内存", "ok");
+  toast(res.persisted ? "密钥已加密保存到本机" : "会话密钥已载入内存", "ok");
+}
+
+async function persistCurrentKey() {
+  const res = await api("/api/key/persist", { method: "POST", body: {} });
+  S.cfg = await api("/api/config");
+  renderStatus();
+  renderSettings();
+  $("#keyCheck").innerHTML = `<span style="color:var(--teal)">${esc(res.message)} 脱敏标识：${esc((res.credentials || {}).hint || "")}</span>`;
+  toast("密钥已加密保存到本机", "ok");
+}
+
+async function clearPersistedKey() {
+  const res = await api("/api/key/persist", { method: "DELETE" });
+  S.cfg = await api("/api/config");
+  renderStatus();
+  renderSettings();
+  $("#keyCheck").textContent = res.message;
+  toast("已删除本机记住的密钥", "ok");
 }
 
 async function clearSessionKey() {
@@ -181,7 +211,7 @@ async function clearSessionKey() {
   S.cfg = await api("/api/config");
   renderStatus();
   renderSettings();
-  $("#keyCheck").textContent = "会话密钥已清除。若环境变量里仍有 OPENAI_API_KEY，会继续生效。";
+  $("#keyCheck").textContent = "会话密钥已清除。若本机记住了密钥或环境变量仍有值，会继续生效。";
   toast("会话密钥已清除", "ok");
 }
 
@@ -207,7 +237,10 @@ async function applySettings() {
   toast("已应用到当前进程（重启后恢复 config.json 的值）", "ok");
 }
 
-async function loadAssets() {
+async function loadAssets(reset = true) {
+  if (S.assetsLoading) return;
+  if (reset) { S.assetsOffset = 0; S.assets = []; }
+  S.assetsLoading = true;
   const p = new URLSearchParams({
     q: $("#fQ").value.trim(),
     style: $("#fStyle").value,
@@ -215,10 +248,20 @@ async function loadAssets() {
     min_rating: $("#fRating").value,
     sort: $("#fSort").value,
     favorite: $("#fFav").checked ? "1" : "",
+    limit: String(PAGE_SIZE),
+    offset: String(S.assetsOffset),
   });
-  const data = await api("/api/assets?" + p.toString());
-  S.assets = data.assets || [];
-  renderGallery();
+  try {
+    const data = await api("/api/assets?" + p.toString());
+    const batch = data.assets || [];
+    S.assets = reset ? batch : S.assets.concat(batch);
+    S.assetsTotal = Number(data.total || 0);
+    S.assetsHasMore = !!data.has_more;
+    S.assetsOffset += batch.length;
+    renderGallery();
+  } finally {
+    S.assetsLoading = false;
+  }
 }
 
 function badge(text, cls) {
@@ -228,10 +271,13 @@ function badge(text, cls) {
 function renderGallery() {
   const keepers = S.assets.filter((a) => a.status === "keeper").length;
   const demos = S.assets.filter((a) => a.demo).length;
-  $("#gallerySummary").textContent = `共 ${S.assets.length} 项 · 精选 ${keepers} · 演示图 ${demos}`;
+  $("#gallerySummary").textContent =
+    `共 ${S.assetsTotal} 项 · 已加载 ${S.assets.length} 张 · 本页精选 ${keepers} · 演示图 ${demos}`;
   const grid = $("#grid");
+  const more = $("#loadMore");
   if (!S.assets.length) {
     grid.innerHTML = `<div class="empty">还没有资产。到「批量生成」用 Dry run 跑 30 张，先把流程走通。</div>`;
+    more.innerHTML = "";
     return;
   }
   grid.innerHTML = S.assets.map((a) => {
@@ -243,7 +289,7 @@ function renderGallery() {
     if (a.rating) tags.push(badge("★".repeat(a.rating), ""));
     (a.tags || []).slice(0, 3).forEach((t) => tags.push(badge(t, "")));
     return `<div class="card" data-action="open-asset" data-id="${esc(a.id)}">
-      <img class="card-img" src="/media/${esc(a.file)}" loading="lazy" alt="">
+      <img class="card-img" src="/thumb/${esc(a.file)}" data-fallback="${esc(a.file)}" loading="lazy" alt="">
       <div class="card-body">
         <div class="card-title">${esc(a.label || a.style_name || a.style_id)}</div>
         <div class="card-meta"><span>${esc(a.asset_kind || a.quality)}</span><span>${a.demo ? "Dry run" : (a.source === "imagegen" ? "内部生成" : "$" + a.cost_usd)}</span></div>
@@ -251,6 +297,9 @@ function renderGallery() {
       </div>
     </div>`;
   }).join("");
+  more.innerHTML = S.assetsHasMore
+    ? `<button class="btn" data-action="load-more">加载更多（还有 ${Math.max(0, S.assetsTotal - S.assets.length)} 张）</button>`
+    : (S.assets.length > PAGE_SIZE ? `<span>已全部加载（${S.assets.length} 张）</span>` : "");
 }
 
 function switchView(name) {
@@ -461,7 +510,7 @@ function fmtDuration(sec) {
 async function pollRun() {
   let data;
   try {
-    data = await api("/api/assets?limit=120&sort=newest");
+    data = await api("/api/assets?limit=200&sort=newest");
   } catch (_) { return; }   // server busy generating: retry on next tick
   renderRun(inferRun(data.assets));
 }
@@ -520,7 +569,10 @@ function renderRun(batch) {
     + `${running ? "生成中" : "生成完成"} ${done}${total ? "/" + total : " 张"}`;
 
   if (done !== lastSeenRunCount) {
-    if (lastSeenRunCount >= 0 && S.view === "gallery") loadAssets();
+    // Only auto-refresh while the user is still on the first page, so deep
+    // scrolling through a large library is never interrupted by new assets.
+    if (lastSeenRunCount >= 0 && S.view === "gallery"
+        && S.assetsOffset <= PAGE_SIZE) loadAssets(true);
     lastSeenRunCount = done;
   }
 }
@@ -855,7 +907,8 @@ document.addEventListener("click", async (e) => {
   const act = el.dataset.action;
   try {
     switch (act) {
-      case "refresh": await loadAssets(); break;
+      case "refresh": await loadAssets(true); break;
+      case "load-more": await loadAssets(false); break;
       case "goto-batch": switchView("batch"); break;
       case "open-asset": await openAsset(el.dataset.id); break;
       case "close-drawer": $("#drawer").classList.add("hidden"); S.drawerAsset = null; break;
@@ -872,6 +925,8 @@ document.addEventListener("click", async (e) => {
       case "do-sync": await doSync(); break;
       case "refresh-health": await loadHealth(); break;
       case "save-session-key": await saveSessionKey(); break;
+      case "persist-key": await persistCurrentKey(); break;
+      case "clear-persisted-key": await clearPersistedKey(); break;
       case "clear-session-key": await clearSessionKey(); break;
       case "check-key": await checkKey(); break;
       case "apply-settings": await applySettings(); break;
@@ -952,4 +1007,26 @@ document.addEventListener("change", (e) => {
   }
 });
 
+// If a thumbnail cannot be produced (unsupported PNG variant, SVG demo, etc.),
+// fall back to the original image without breaking the card.
+document.addEventListener("error", (e) => {
+  const img = e.target;
+  if (img && img.tagName === "IMG" && img.dataset.fallback) {
+    const rel = img.dataset.fallback;
+    delete img.dataset.fallback;
+    img.src = "/media/" + rel;
+  }
+}, true);
+
+function setupInfiniteScroll() {
+  const el = $("#loadMore");
+  if (!el || typeof IntersectionObserver === "undefined") return;
+  new IntersectionObserver((entries) => {
+    if (!entries[0].isIntersecting) return;
+    if (S.view !== "gallery" || !S.assetsHasMore || S.assetsLoading) return;
+    loadAssets(false);
+  }, { rootMargin: "240px" }).observe(el);
+}
+
 boot();
+setupInfiniteScroll();

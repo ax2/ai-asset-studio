@@ -67,14 +67,15 @@ def sync(cfg: dict, style_id: str | None = None,
         }
 
     allow_demo = bool(cfg.get("sync_include_demo")) if include_demo is None else bool(include_demo)
-    all_rows = store.load(cfg)
-    rows = [r for r in all_rows
-            if r.get("status") == "keeper"
-            and (not r.get("demo") or allow_demo)
-            and (not style_id or r.get("style_id") == style_id)]
+    rows, demo_kept = [], 0
+    for r in store.iter_all(cfg):
+        if r.get("status") == "keeper" and r.get("demo"):
+            demo_kept += 1
+        if (r.get("status") == "keeper"
+                and (not r.get("demo") or allow_demo)
+                and (not style_id or r.get("style_id") == style_id)):
+            rows.append(r)
     if not rows:
-        demo_kept = sum(1 for r in all_rows
-                        if r.get("status") == "keeper" and r.get("demo"))
         reason = "没有可同步的精选资产。先在画廊里把资产标为精选。"
         if demo_kept and not allow_demo:
             reason = (f"有 {demo_kept} 张精选演示图，但演示图默认不同步。"
@@ -102,18 +103,20 @@ def sync(cfg: dict, style_id: str | None = None,
 
 
 def health(cfg: dict) -> dict:
-    rows = store.load(cfg)
-    issues = []
-    for row in rows:
+    issues, checked = [], 0
+    for row in store.iter_all(cfg):
+        checked += 1
         if row.get("demo"):
             continue
         src = cfg["local"] / str(row.get("file", ""))
         if not src.is_file():
-            issues.append({"id": row.get("id"), "issue": "图片文件缺失"})
+            if len(issues) < 50:
+                issues.append({"id": row.get("id"), "issue": "图片文件缺失"})
         elif row.get("metadata") in ("none", "unreadable"):
-            issues.append({"id": row.get("id"), "issue": "缺少来源元数据（疑似被剥离）"})
-        if not (row.get("prompt") or "").strip():
+            if len(issues) < 50:
+                issues.append({"id": row.get("id"), "issue": "缺少来源元数据（疑似被剥离）"})
+        if not (row.get("prompt") or "").strip() and len(issues) < 50:
             issues.append({"id": row.get("id"), "issue": "提示词为空"})
-    return {"checked": len(rows), "issues": issues[:50],
+    return {"checked": checked, "issues": issues[:50],
             "healthy": len(issues) == 0,
             "asset_root_writable": config.asset_root_writable(cfg)}

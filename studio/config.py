@@ -1,9 +1,12 @@
-"""Configuration. Secrets live in the environment or process memory, never on disk."""
+"""Configuration. Secrets live in memory, in an encrypted user-scoped file, or
+in the environment - never in the repository."""
 from __future__ import annotations
 
 import json
 import os
 from pathlib import Path
+
+from . import credentials
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -65,8 +68,12 @@ def load() -> dict:
     cfg["web_dir"] = ROOT / "web"
     cfg["asset_root_path"] = Path(str(cfg["asset_root"]))
 
-    for sub in ("raw", "keepers", "export"):
+    for sub in ("raw", "keepers", "export", "thumbs"):
         (cfg["local"] / sub).mkdir(parents=True, exist_ok=True)
+
+    # Local import avoids a cycle: store receives cfg but never imports config.
+    from . import store
+    store.ensure(cfg)
     return cfg
 
 
@@ -76,13 +83,22 @@ def public(cfg: dict) -> dict:
     out["api_key_set"] = has_key(cfg)
     out["api_key_source"] = key_source(cfg)
     out["asset_root_writable"] = asset_root_writable(cfg)
+    cred = credentials.info()
+    out["api_key_persisted"] = cred["persisted"]
+    out["api_key_hint"] = cred["hint"]
+    out["credential_path"] = cred["path"]
+    out["credential_cipher"] = cred["cipher"]
+    out["credential_saved_at"] = cred["saved_at"]
     return out
 
 
-def set_session_key(value: str) -> None:
-    """Keep the key in memory only: never on disk, never in git, never in a log."""
+def set_session_key(value: str, persist: bool = False) -> dict:
+    """Keep the key in memory; optionally seal it to the user's credential file."""
     global _SESSION_KEY
     _SESSION_KEY = str(value or "").strip()
+    if persist and _SESSION_KEY:
+        credentials.save(_SESSION_KEY)
+    return credentials.info()
 
 
 def clear_session_key() -> None:
@@ -90,9 +106,23 @@ def clear_session_key() -> None:
     _SESSION_KEY = ""
 
 
+def persist_current_key(cfg: dict) -> dict:
+    """Persist whichever key is currently active without exposing it again."""
+    key = api_key(cfg)
+    if not key:
+        raise ValueError("当前没有可用的 API key，请先粘贴会话密钥或设置环境变量。")
+    return credentials.save(key)
+
+
+def clear_persisted_key() -> dict:
+    return credentials.clear()
+
+
 def key_source(cfg: dict) -> str:
     if _SESSION_KEY:
         return "session"
+    if credentials.load():
+        return "disk"
     name = str(cfg.get("api_key_env") or "OPENAI_API_KEY")
     return "env" if os.environ.get(name, "").strip() else "none"
 
@@ -100,6 +130,9 @@ def key_source(cfg: dict) -> str:
 def api_key(cfg: dict) -> str:
     if _SESSION_KEY:
         return _SESSION_KEY
+    persisted = credentials.load()
+    if persisted:
+        return persisted
     name = str(cfg.get("api_key_env") or "OPENAI_API_KEY")
     return os.environ.get(name, "").strip()
 

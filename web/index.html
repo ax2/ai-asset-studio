@@ -28,7 +28,7 @@
     <div class="side-foot">
       <div class="status-line"><span class="dot" id="dotKey"></span><span id="txtKey">检查中</span></div>
       <div class="status-line"><span class="dot" id="dotDisk"></span><span id="txtDisk">检查中</span></div>
-      <div class="side-note">仅监听 127.0.0.1<br>密钥不写入磁盘</div>
+      <div class="side-note">仅监听 127.0.0.1<br>密钥加密存于用户目录</div>
     </div>
   </aside>
 
@@ -73,6 +73,7 @@
       </div>
       <div class="summary" id="gallerySummary"></div>
       <div class="grid" id="grid"></div>
+      <div class="load-more" id="loadMore"></div>
     </section>
 
     <section class="view hidden" id="view-styles">
@@ -181,14 +182,19 @@
                      spellcheck="false" placeholder="sk-...（只存在服务进程内存里）">
             </label>
             <label class="check"><input type="checkbox" id="setKeyShow"> 显示输入内容</label>
+            <label class="check"><input type="checkbox" id="setKeyPersist" checked> 记住到本机（加密保存，重启服务后自动生效）</label>
           </div>
           <div class="btn-row mt">
-            <button class="btn primary" data-action="save-session-key">保存到内存</button>
+            <button class="btn primary" data-action="save-session-key">保存密钥</button>
             <button class="btn" data-action="check-key">验证连接</button>
-            <button class="btn ghost" data-action="clear-session-key">清除</button>
+            <button class="btn ghost" data-action="clear-session-key">清除会话密钥</button>
+          </div>
+          <div class="btn-row mt">
+            <button class="btn" data-action="persist-key">记住当前密钥</button>
+            <button class="btn ghost" data-action="clear-persisted-key">删除本机已记住的密钥</button>
           </div>
           <div class="hint" id="keyCheck">「验证连接」只请求只读的 /v1/models，不产生任何费用。</div>
-          <div class="hint">密钥只保存在本机 127.0.0.1 服务进程的内存里：不写 config.json、不写日志、不进 git，重启服务即失效。也可以改用环境变量 <code>OPENAI_API_KEY</code>，会话密钥优先级更高。</div>
+          <div class="hint">勾选「记住到本机」后，密钥用 Windows DPAPI 加密保存在 <code>%APPDATA%\ai-asset-studio\credentials.bin</code>，与当前 Windows 账号绑定，换账号或换机器都解不开。文件在仓库之外，不会被提交；接口只返回脱敏片段。优先级：会话密钥 &gt; 本机记住的密钥 &gt; 环境变量 <code>OPENAI_API_KEY</code>。</div>
         </div>
         <div class="panel">
           <div class="panel-title">网络与端点（仅本次运行生效）</div>
@@ -214,7 +220,7 @@
         <div class="panel-title">快速上手</div>
         <ol>
           <li>先到「批量生成」用 <b>Dry run</b> 跑 30 张，系统会在本地生成演示图，不花一分钱，可以把画廊、筛选、提示词编辑、复现、导出全部走通。</li>
-          <li>确认配方稳定后，到「连接设置」粘贴 API key 并点「验证连接」。密钥只保存在服务进程内存里，不写任何文件；也可以改用环境变量 <code>OPENAI_API_KEY</code>。取消 Dry run 才会真正调用 API。</li>
+          <li>确认配方稳定后，到「连接设置」粘贴 API key、勾选「记住到本机」并点「验证连接」。密钥会加密保存在仓库外的用户目录，重启后自动生效；也可以改用环境变量 <code>OPENAI_API_KEY</code>。取消 Dry run 才会真正调用 API。</li>
           <li>在画廊点开一张图，可直接改提示词、保存版本、一键复现、打分、加标签、标为精选。</li>
           <li>精选资产可导出 ZIP 素材包，或一键同步到资产盘（<code>D:/gdrive.photo/ai-assets</code>，即 H: 对应的本地目录，会由 Google Drive 自动同步到云端）。</li>
         </ol>
@@ -232,7 +238,7 @@ tools/generate.py   命令行入口</pre>
         <div class="panel-title mt">合规提醒</div>
         <p>把成品发布到平台时，按平台要求勾选「含 AI 生成内容」。图片自带的 C2PA 来源元数据不要剥离；本系统会在「元数据完整性」里检查。不要生成在世艺术家风格、公众人物或真实人脸的写实形象。</p>
         <div class="panel-title mt">关于网络与代理</div>
-        <p>本机需要通过代理访问 OpenAI API 时，在 <code>config.json</code> 里设置 <code>api_proxy</code>（例如 <code>http://127.0.0.1:1080</code>），服务重启后生效；也可以在「连接设置」页临时改代理，立即生效但重启后失效。<code>api_base</code> 用于兼容网关或中转端点。密钥不写入任何文件：优先用界面上的会话密钥，其次读环境变量 <code>OPENAI_API_KEY</code>。</p>
+        <p>本机需要通过代理访问 OpenAI API 时，在 <code>config.json</code> 里设置 <code>api_proxy</code>（例如 <code>http://127.0.0.1:1080</code>），服务重启后生效；也可以在「连接设置」页临时改代理，立即生效但重启后失效。<code>api_base</code> 用于兼容网关或中转端点。密钥不写入仓库：默认加密保存到用户目录（重启自动生效），也可以只用会话内存密钥，或读环境变量 <code>OPENAI_API_KEY</code>。</p>
         <div class="panel-title mt">关于资产盘</div>
         <p>资产根目录是 <code>D:/gdrive.photo/ai-assets</code>：这是 H: 镜像盘对应的本地目录，写入后会由 Google Drive 自动同步。直接写这个本地目录比写 H: 虚拟盘稳定，也避免几千张小文件与同步客户端打架。若同步客户端没运行，写入仍然成功，只是云端稍后才会更新。</p>
       </div>

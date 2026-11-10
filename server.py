@@ -14,10 +14,11 @@ from urllib.parse import parse_qs, unquote, urlparse
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 
-from studio import config, exporter, imaging, pricing, store  # noqa: E402
+from studio import config, exporter, imaging, pricing, store, thumbs  # noqa: E402
 
 CFG: dict = {}
 MAX_BODY = 2 * 1024 * 1024
+PAGE_SIZE = 60
 NO_KEY_MSG = "尚未设置 API key。到「连接设置」粘贴会话密钥，或设置环境变量 OPENAI_API_KEY。"
 
 MIME = {
@@ -103,6 +104,8 @@ class Handler(BaseHTTPRequestHandler):
         try:
             if path.startswith("/api/"):
                 self._api(method, path, params)
+            elif path.startswith("/thumb/"):
+                self._thumb(path[len("/thumb/"):])
             elif path.startswith("/media/"):
                 self._media(path[len("/media/"):])
             else:
@@ -117,17 +120,40 @@ class Handler(BaseHTTPRequestHandler):
         if method == "GET" and seg == ["config"]:
             return self._json(200, config.public(CFG))
 
-        # Session key: process memory only. Never written to disk, never logged,
-        # never returned to the browser, gone when the server restarts.
+        # Key precedence: session memory > encrypted disk > environment variable.
+        # The key itself is never returned by any endpoint, only a masked hint.
         if method == "POST" and seg == ["key"]:
-            value = str((self._body() or {}).get("api_key") or "").strip()
+            b = self._body() or {}
+            value = str(b.get("api_key") or "").strip()
             if len(value) < 20:
                 return self._err(400, "API key 看起来不完整（少于 20 字符），未保存。")
-            config.set_session_key(value)
+            saved_now = bool(b.get("persist"))
+            try:
+                cred = config.set_session_key(value, persist=saved_now)
+            except OSError as exc:
+                return self._err(500, f"密钥已载入内存，但写入本机凭据失败：{exc}")
             return self._json(200, {
                 "ok": True,
                 "source": config.key_source(CFG),
-                "message": "会话密钥已载入内存：不写文件、不进 git，重启服务后自动失效。",
+                "persisted": cred["persisted"],
+                "credentials": cred,
+                "message": ("密钥已加密保存到本机，重启服务后自动生效。"
+                            if saved_now else "会话密钥已载入内存，重启服务后失效。"),
+            })
+        if method == "POST" and seg == ["key", "persist"]:
+            try:
+                cred = config.persist_current_key(CFG)
+            except ValueError as exc:
+                return self._err(400, str(exc))
+            return self._json(200, {
+                "ok": True, "credentials": cred,
+                "message": "当前密钥已加密保存到本机，重启服务后自动生效。",
+            })
+        if method == "DELETE" and seg == ["key", "persist"]:
+            cred = config.clear_persisted_key()
+            return self._json(200, {
+                "ok": True, "source": config.key_source(CFG), "credentials": cred,
+                "message": "已删除本机保存的密钥；内存中的会话密钥仍可用到重启。",
             })
         if method == "DELETE" and seg == ["key"]:
             config.clear_session_key()
@@ -165,12 +191,21 @@ class Handler(BaseHTTPRequestHandler):
         if method == "GET" and seg == ["versions"]:
             return self._json(200, {"versions": store.versions(CFG, p.get("style"))})
         if method == "GET" and seg == ["assets"]:
-            rows = store.query(
+            try:
+                limit = int(p.get("limit") or PAGE_SIZE)
+                offset = int(p.get("offset") or 0)
+            except ValueError:
+                limit, offset = PAGE_SIZE, 0
+            rows, total = store.query_page(
                 CFG, q=p.get("q", ""), style=p.get("style", ""), tag=p.get("tag", ""),
                 status=p.get("status", ""), favorite=p.get("favorite") == "1",
                 min_rating=int(p.get("min_rating") or 0),
-                sort=p.get("sort", "newest"), limit=int(p.get("limit") or 500))
-            return self._json(200, {"assets": rows, "count": len(rows)})
+                sort=p.get("sort", "newest"), limit=limit, offset=offset)
+            return self._json(200, {
+                "assets": rows, "count": len(rows), "total": total,
+                "offset": offset, "limit": limit,
+                "has_more": offset + len(rows) < total,
+            })
         if method == "GET" and len(seg) == 2 and seg[0] == "assets":
             row = store.get(CFG, seg[1])
             return self._json(200, row) if row else self._err(404, "asset not found")
@@ -269,14 +304,15 @@ class Handler(BaseHTTPRequestHandler):
 
     def _export_pack(self):
         b = self._body()
-        rows = store.query(
+        # Stream from SQLite - no 500-row ceiling, works with very large packs.
+        rows = store.iter_matching(
             CFG, q=b.get("q", ""), style=b.get("style_id", ""),
             status=b.get("status", ""), tag=b.get("tag", ""),
             favorite=bool(b.get("favorite")), min_rating=int(b.get("min_rating") or 0),
-            sort=b.get("sort", "newest"), limit=int(b.get("limit") or 500))
+            sort=b.get("sort", "newest"))
         if b.get("ids"):
             wanted = set(b["ids"])
-            rows = [r for r in rows if r.get("id") in wanted]
+            rows = (r for r in rows if r.get("id") in wanted)
         return self._json(200, exporter.export_zip(CFG, rows, b.get("name")))
 
     def _media(self, rel: str):
@@ -286,6 +322,17 @@ class Handler(BaseHTTPRequestHandler):
             return self._err(404, "not found")
         ctype = MIME.get(target.suffix.lower()) or mimetypes.guess_type(target.name)[0]
         return self._send(200, target.read_bytes(), ctype or "application/octet-stream")
+
+    def _thumb(self, rel: str):
+        """Serve a small cached PNG; fall back to the original if unsupported."""
+        base = CFG["local"].resolve()
+        target = (base / rel).resolve()
+        if not target.is_relative_to(base) or not target.is_file():
+            return self._err(404, "not found")
+        cached = thumbs.ensure(CFG, rel)
+        if cached and cached.is_file():
+            return self._send(200, cached.read_bytes(), "image/png")
+        return self._media(rel)
 
     def _static(self, path: str):
         if path == "/favicon.ico":
@@ -317,8 +364,10 @@ def main():
     ThreadingHTTPServer.daemon_threads = True
     server = ThreadingHTTPServer((host, port), Handler)
     print("ai-asset-studio ready: http://%s:%d" % (host, port))
-    print("API key: %s | source: %s (dry-run works without it)" %
-          ("set" if config.has_key(CFG) else "NOT set", config.key_source(CFG)))
+    print("API key: %s | source: %s | persisted on disk: %s" %
+          ("set" if config.has_key(CFG) else "NOT set",
+           config.key_source(CFG),
+           "yes" if config.public(CFG)["api_key_persisted"] else "no"))
     print("API proxy: %s" % (CFG.get("api_proxy") or "(system default)"))
     print("Asset root: %s | writable: %s" %
           (CFG["asset_root_path"], config.asset_root_writable(CFG)))

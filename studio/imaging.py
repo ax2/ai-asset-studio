@@ -13,7 +13,7 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
-from . import config, pricing, store
+from . import config, pricing, store, thumbs
 
 API_URL = "https://api.openai.com/v1/images/generations"
 
@@ -285,6 +285,11 @@ def generate(cfg: dict, *, style_id: str, prompt: str | None = None,
     folder.mkdir(parents=True, exist_ok=True)
     filename = f"{asset_id}.{ext}"
     (folder / filename).write_bytes(data)
+    if ext == "png":
+        try:
+            thumbs.ensure(cfg, f"raw/{day}/{filename}")
+        except Exception:
+            pass  # a thumbnail is only an optimisation; never fail the asset
 
     record = {
         "id": asset_id,

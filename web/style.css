@@ -125,6 +125,8 @@ button { cursor: pointer; }
 .card-body { padding: 9px 11px 11px; }
 .card-title { font-size: 12px; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .card-meta { font-size: 11px; color: var(--faint); display: flex; justify-content: space-between; gap: 6px; }
+.load-more { text-align: center; padding: 24px 0 8px; color: var(--faint); font-size: 12px; }
+.load-more .btn { min-width: 220px; }
 .badges { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 7px; }
 .badge {
   font-size: 10px; padding: 1px 7px; border-radius: 10px;
