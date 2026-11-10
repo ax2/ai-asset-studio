@@ -19,6 +19,7 @@ DEFAULTS = {
     "default_size": "1024x1024",
     "batch_discount": 0.5,
     "api_key_env": "OPENAI_API_KEY",
+    "api_base": "https://api.openai.com/v1",
     "sync_include_demo": False,
 }
 
@@ -32,7 +33,7 @@ ENV_OVERRIDES = {
 _PUBLIC_KEYS = (
     "asset_root", "local_root", "host", "port", "monthly_budget_usd",
     "image_budget_usd", "default_model", "default_quality", "default_size",
-    "batch_discount", "api_key_env", "sync_include_demo",
+    "batch_discount", "api_key_env", "api_base", "sync_include_demo",
 )
 
 

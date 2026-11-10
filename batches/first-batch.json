@@ -1,0 +1,79 @@
+{
+  "id": "first-batch-2026-11-10",
+  "generator": "workbuddy-imagegen",
+  "size": "1024x1024",
+  "quality": "high",
+  "note": "首批真实资产。由内置图像生成产出，不消耗 OpenAI API 额度。所有图片右下角带平台「AI生成 / WORKBUDDY」显式标识，按 AIGC 标识要求保留。",
+  "items": [
+    {
+      "file_prefix": "An_empty_35mm_analog_film_fram",
+      "style_id": "retro-film-diary",
+      "asset_kind": "frame",
+      "label": "35mm 胶片边框",
+      "prompt": "An empty 35mm analog film frame border with sprocket holes, isolated flat lay on a plain off-white background. Faded amber and warm cream color cast, dusty brown edges, fine film grain, faint hairline scratches, one subtle warm light leak in the upper corner, soft halation. Clean empty center with generous negative space, no subject, no people, no readable text, no logo. Vintage 1990s disposable camera aesthetic, flat graphic asset, evenly lit, centered composition."
+    },
+    {
+      "file_prefix": "Vintage_orange_date_stamp_labe",
+      "style_id": "retro-film-diary",
+      "asset_kind": "date_stamp",
+      "label": "日期戳贴纸",
+      "prompt": "Vintage orange date stamp label plate, a small rounded rectangle sticker in faded brick orange, blank center with no text, isolated on a plain off-white background, flat lay. Muted amber and cream palette, fine film grain, faint paper texture, soft warm light, low saturation, 1990s analog film ephemera. Centered, generous negative space, no people, no letters, no numbers, no watermark, no logo."
+    },
+    {
+      "file_prefix": "Warm_orange_light_leak_overlay",
+      "style_id": "retro-film-diary",
+      "asset_kind": "light_leak",
+      "label": "漏光叠层",
+      "prompt": "Warm orange light leak overlay streak on a pure black background, a soft horizontal band of amber and faded coral glow with film grain and subtle halation, fading to black at both edges. Analog 35mm film light leak texture, no objects, no shapes, no text, no people, no logo. Evenly distributed, suitable as a screen blend overlay layer."
+    },
+    {
+      "file_prefix": "Blank_cream_paper_caption_labe",
+      "style_id": "retro-film-diary",
+      "asset_kind": "caption_plate",
+      "label": "手写字板",
+      "prompt": "Blank cream paper caption label plate with slightly torn deckle edges and a small strip of translucent washi tape at the top, isolated on a plain off-white background, flat lay. Faded amber edges, dusty brown ink stain, fine film grain, soft warm window light, 1990s scrapbook ephemera. Empty center with no writing, no letters, no numbers, no people, no logo."
+    },
+    {
+      "file_prefix": "Film_diary_album_cover_layout",
+      "style_id": "retro-film-diary",
+      "asset_kind": "cover",
+      "label": "日记封面",
+      "prompt": "Film diary album cover layout, a single faded amber photograph corner taped onto cream paper with a blank handwritten caption area below and a tiny orange date stamp, generous negative space, flat lay top view. Muted amber, faded cream, dusty brown, low saturation, fine film grain, subtle light leak, 1990s disposable camera nostalgia. No readable text, no people, no faces, no logo."
+    },
+    {
+      "file_prefix": "Single_flat_vector_icon_of_a_c",
+      "style_id": "flat-geo-icons",
+      "asset_kind": "icon",
+      "label": "单枚几何图标",
+      "prompt": "Single flat vector icon of a coffee cup, built only from bold circles squares and rounded rectangles, strict four color palette of brick red mustard yellow lake blue and charcoal on a uniform off-white background. Perfectly flat solid fills, no outlines, no gradients, no shadow, no texture, no 3D depth, centered on a strict square grid, generous even padding, swiss international style, one focal point. No text, no letters, no logo, no watermark."
+    },
+    {
+      "file_prefix": "Four_aligned_flat_vector_icons",
+      "style_id": "flat-geo-icons",
+      "asset_kind": "icon_sheet",
+      "label": "四宫格图标",
+      "prompt": "Four aligned flat vector icons on one sheet, arranged in a neat two by two grid: a paper plane, a growing sprout, a padlock, and a lightbulb. Built only from bold circles squares and rounded rectangles, strict four color palette of brick red mustard yellow lake blue and charcoal on a uniform off-white background. Perfectly flat solid fills, no outlines, no gradients, no shadow, no 3D depth, even padding, swiss international style. No text, no letters, no logo, no watermark."
+    },
+    {
+      "file_prefix": "Square_flat_geometric_app_icon",
+      "style_id": "flat-geo-icons",
+      "asset_kind": "app_tile",
+      "label": "应用图标方块",
+      "prompt": "Square flat geometric app icon tile, a single bold rounded square containing a simple compass symbol made only from circles and rectangles, strict four color palette of brick red mustard yellow lake blue and charcoal, uniform off-white outer background. Perfectly flat solid fills, no outlines, no gradients, no shadow, no texture, no 3D depth, centered on a strict grid, swiss international style. No text, no letters, no logo, no watermark."
+    },
+    {
+      "file_prefix": "Seamless_minimal_geometric_pat",
+      "style_id": "flat-geo-icons",
+      "asset_kind": "pattern",
+      "label": "无缝几何图案",
+      "prompt": "Seamless minimal geometric pattern tile, repeating circles squares and rounded rectangles evenly spaced on a uniform off-white background, strict four color palette of brick red mustard yellow lake blue and charcoal. Perfectly flat solid fills, no outlines, no gradients, no shadow, no 3D depth, precise grid alignment, swiss international style, edges tile cleanly. No text, no letters, no logo, no watermark."
+    },
+    {
+      "file_prefix": "Swiss_style_minimal_poster_cov",
+      "style_id": "flat-geo-icons",
+      "asset_kind": "cover",
+      "label": "极简瑞士风封面",
+      "prompt": "Swiss style minimal poster cover, a bold asymmetric composition of overlapping circles squares and rounded rectangles in a strict four color palette of brick red mustard yellow lake blue and charcoal on a uniform off-white background, with a large clean empty area reserved for a title. Perfectly flat solid fills, no outlines, no gradients, no shadow, no texture, no 3D depth, precise grid, generous negative space. No text, no letters, no logo, no watermark, no people."
+    }
+  ]
+}

@@ -157,7 +157,7 @@ function renderGallery() {
     return;
   }
   grid.innerHTML = S.assets.map((a) => {
-    const tags = [];
+    const tags = [badge(a.style_name || a.style_id, "")];
     if (a.demo) tags.push(badge("演示", "demo"));
     if (a.status === "keeper") tags.push(badge("精选", "keeper"));
     if (a.status === "rejected") tags.push(badge("已淘汰", "rejected"));
@@ -167,8 +167,8 @@ function renderGallery() {
     return `<div class="card" data-action="open-asset" data-id="${esc(a.id)}">
       <img class="card-img" src="/media/${esc(a.file)}" loading="lazy" alt="">
       <div class="card-body">
-        <div class="card-title">${esc(a.style_name || a.style_id)}</div>
-        <div class="card-meta"><span>${esc(a.model)} / ${esc(a.quality)}</span><span>${a.demo ? "Dry run" : "$" + a.cost_usd}</span></div>
+        <div class="card-title">${esc(a.label || a.style_name || a.style_id)}</div>
+        <div class="card-meta"><span>${esc(a.asset_kind || a.quality)}</span><span>${a.demo ? "Dry run" : (a.source === "imagegen" ? "内部生成" : "$" + a.cost_usd)}</span></div>
         <div class="badges">${tags.join("")}</div>
       </div>
     </div>`;
@@ -439,7 +439,7 @@ async function openAsset(id) {
   S.drawerAsset = a;
   S.assetId = a.id;
   $("#drawer").classList.remove("hidden");
-  $("#dTitle").textContent = a.style_name || a.id;
+  $("#dTitle").textContent = a.label || a.style_name || a.id;
   $("#dId").textContent = a.id;
   renderDrawer(a);
   await loadVersions(a.style_id);

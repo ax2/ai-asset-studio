@@ -17,6 +17,12 @@ from . import config, pricing, store
 API_URL = "https://api.openai.com/v1/images/generations"
 
 
+def endpoint(cfg: dict) -> str:
+    """Configurable so a proxy or compatible gateway can be used later."""
+    base = str(cfg.get("api_base") or "https://api.openai.com/v1").rstrip("/")
+    return base + "/images/generations"
+
+
 def load_styles(cfg: dict) -> list:
     out = []
     for path in sorted(cfg["styles_dir"].glob("*.json")):
@@ -137,7 +143,7 @@ def call_openai(cfg: dict, prompt: str, model: str, quality: str,
         "n": 1,
     }
     req = urllib.request.Request(
-        API_URL,
+        endpoint(cfg),
         data=json.dumps(payload).encode("utf-8"),
         headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
         method="POST",

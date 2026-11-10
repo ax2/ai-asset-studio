@@ -10,5 +10,6 @@
   "default_size": "1024x1024",
   "batch_discount": 0.5,
   "api_key_env": "OPENAI_API_KEY",
+  "api_base": "https://api.openai.com/v1",
   "sync_include_demo": false
 }
