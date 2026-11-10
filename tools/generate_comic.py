@@ -313,6 +313,8 @@ def main() -> None:
     ap.add_argument("--force", action="store_true", help="忽略已有资产重新生成（会重复计费）")
     ap.add_argument("--export-only", action="store_true", help="不调用 API，只重新打包")
     ap.add_argument("--skip-panels", action="store_true", help="只生成角色与场景")
+    ap.add_argument("--redo-panels", action="store_true",
+                    help="删除本批已有分镜后重新生成（补齐此前缺失的人物参考图）")
     ap.add_argument("--max-cost", type=float, default=0.0, help="覆盖单次成本上限（美元）")
     args = ap.parse_args()
 
@@ -392,6 +394,18 @@ def main() -> None:
         # 3. Six comic panels.
         if not args.skip_panels:
             scene_map = {s["id"]: s for s in plan["scenes"]}
+            if args.redo_panels:
+                removed = 0
+                for r in list(store.iter_all(cfg)):
+                    if (r.get("batch_id") != plan["id"]
+                            or r.get("asset_kind") != "comic-panel"):
+                        continue
+                    (cfg["local"] / str(r.get("file") or "")).unlink(missing_ok=True)
+                    with store.connect(cfg) as con:
+                        con.execute("DELETE FROM assets WHERE id=?", (r["id"],))
+                        con.execute("DELETE FROM asset_tags WHERE asset_id=?", (r["id"],))
+                    removed += 1
+                log(f"--redo-panels：移除 {removed} 张旧分镜，本轮全部重新生成")
             for p in plan["panels"]:
                 existing = None if args.force else find(
                     cfg, plan["id"], asset_kind="comic-panel", panel_no=p["no"])
@@ -434,6 +448,8 @@ def main() -> None:
         "why_not_in_romance": plan["why_not_in_romance"],
         "pricing_note": "gpt-image-2.6-sunburst 的官方单价未由 /v1/models 公开，"
                         "成本按上一代同档估算值记账，见 studio/pricing.py 的 ESTIMATED_MODELS。",
+        "cost_note": "total_cost_usd 只统计最终入库资产；若曾用 --redo-panels 重做分镜，"
+                     "被替换的旧图已产生额外 API 费用，未计入此处。",
         "regenerate_command": "python tools/generate_comic.py",
         "reproduce_note": "角色卡 anchor 逐字置于提示词最前，分镜走 /images/edits 并"
                           "以该角色立绘作参考图；场景卡保存了完整 prompt 与环境描述。",
