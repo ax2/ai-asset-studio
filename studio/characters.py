@@ -2,7 +2,7 @@
 
 A "character anchor" is a fixed, versioned block of text that is prepended
 verbatim to every generation for that character. Combined with a reference
-image sent to /images/edits (input_fidelity=high), it is what keeps a character
+image sent to /images/edits, it is what keeps a character
 recognisable across views, poses and animation frames.
 
 Novel extraction prefers an LLM when a key is available, and always falls back

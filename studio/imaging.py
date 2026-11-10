@@ -272,9 +272,12 @@ def call_openai_edit(cfg: dict, prompt: str, images: list[bytes], *,
                      input_fidelity: str = "high") -> bytes:
     """Generate an image guided by reference images of an existing character.
 
-    input_fidelity="high" is the API's own lever for matching facial features
-    and art style; together with a fixed character anchor it is the strongest
-    consistency mechanism available. GPT Image models always return b64_json.
+    ``input_fidelity`` is the API's lever for matching facial features and art
+    style on models that support it. Several optional knobs (input_fidelity,
+    background, output_format) are rejected with HTTP 400 by newer models such
+    as gpt-image-2; on such an error we drop exactly the parameter the API
+    names and retry. The reference image still guides the edit. GPT Image
+    models always return b64_json.
     """
     key = config.api_key(cfg)
     if not key:
@@ -291,24 +294,36 @@ def call_openai_edit(cfg: dict, prompt: str, images: list[bytes], *,
     }
     files = [("image", f"reference_{i}.png", data)
              for i, data in enumerate(images[:16])]
-    body, ctype = _multipart(fields, files)
-    req = urllib.request.Request(
-        edit_endpoint(cfg), data=body,
-        headers={"Authorization": f"Bearer {key}", "Content-Type": ctype},
-        method="POST")
     opener = _opener(cfg)
-    try:
-        with opener.open(req, timeout=600) as resp:
-            payload = json.loads(resp.read().decode("utf-8"))
-    except urllib.error.HTTPError as exc:
-        detail = exc.read().decode("utf-8", "replace")[:500]
-        if exc.code == 401:
-            raise RuntimeError("HTTP 401: API key 无效或已撤销。") from None
-        raise RuntimeError(f"参考图生成失败 HTTP {exc.code}: {detail}") from None
-    except urllib.error.URLError as exc:
-        raise RuntimeError(f"无法连接参考图接口：{exc.reason}。检查 api_proxy。") from None
-    except OSError as exc:
-        raise RuntimeError(f"参考图生成超时或连接中断：{exc}") from None
+    payload = None
+    current = dict(fields)
+    optional = ("input_fidelity", "background", "output_format")
+    for _attempt in range(len(optional) + 1):
+        body, ctype = _multipart(current, files)
+        req = urllib.request.Request(
+            edit_endpoint(cfg), data=body,
+            headers={"Authorization": f"Bearer {key}", "Content-Type": ctype},
+            method="POST")
+        try:
+            with opener.open(req, timeout=600) as resp:
+                payload = json.loads(resp.read().decode("utf-8"))
+            break
+        except urllib.error.HTTPError as exc:
+            detail = exc.read().decode("utf-8", "replace")[:500]
+            drop = next((k for k in optional
+                         if k in current and k in detail), "")
+            if exc.code == 400 and drop:
+                current.pop(drop)  # model rejects this knob; retry without it
+                continue
+            if exc.code == 401:
+                raise RuntimeError("HTTP 401: API key 无效或已撤销。") from None
+            raise RuntimeError(f"参考图生成失败 HTTP {exc.code}: {detail}") from None
+        except urllib.error.URLError as exc:
+            raise RuntimeError(f"无法连接参考图接口：{exc.reason}。检查 api_proxy。") from None
+        except OSError as exc:
+            raise RuntimeError(f"参考图生成超时或连接中断：{exc}") from None
+    if payload is None:
+        raise RuntimeError("参考图接口未返回响应")
     try:
         item = payload["data"][0]
     except (KeyError, IndexError, TypeError):

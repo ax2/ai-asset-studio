@@ -46,7 +46,7 @@ python server.py                           # http://127.0.0.1:8777
 - 粘贴小说正文，有 key 时走 `chat/completions` 结构化提取，失败或无 key 自动降级为本地启发式（中文姓氏 + 动作词识别人名，词典抽取外貌特征）。
 - 每条特征保留**原文证据**和 `explicit / inferred / missing` 置信度，必须人工核对后再保存。
 - 保存后生成固定、带版本号的 **Character Anchor**：一段逐字复用的英文人物设定 + 一致性规则 + 构图规则。改 profile 自动重建锚点并 bump `anchor_version`；手工编辑锚点则保留手工文本。版本变了说明设定改过，旧图与新图不要混用。
-- 指定一张已有 PNG 作为参考图后，复现和逐视图生成走 `/v1/images/edits` 并设 `input_fidelity: high`，这是保持人物长相与画风最有效的手段。
+- 指定一张已有 PNG 作为参考图后，复现和逐视图生成走 `/v1/images/edits`，这是保持人物长相与画风最有效的手段。支持 `input_fidelity: high` 的模型会自动带上；`gpt-image-2` 等新模型不支持该参数（也不支持 `background: transparent`），系统会按 API 报错逐个去掉后重试，参考图仍然生效。
 
 ### 人物多视角包
 

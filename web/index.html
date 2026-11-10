@@ -190,7 +190,7 @@
             <div id="gTurnResult" class="mt"></div>
             <div class="panel-title mt">提示词预览</div>
             <div class="prompt-preview" id="gPromptPreview"></div>
-            <div class="hint">sheet 模式一次生成四视图设定图再等分切图，最省且内部一致性最好；separate 模式逐视图生成，配合参考图 input_fidelity=high 保人物风格，成本约 4 倍。两种模式都把角色锚点逐字放在提示词最前面。</div>
+            <div class="hint">sheet 模式一次生成四视图设定图再等分切图，最省且内部一致性最好；separate 模式逐视图生成，配合参考图保人物风格，成本约 4 倍。两种模式都把角色锚点逐字放在提示词最前面。</div>
           </div>
 
           <div class="panel mt">
@@ -344,7 +344,7 @@
           <li>做游戏角色时到「角色与游戏资产」：粘贴小说提取人物特征 → 核对并保存角色卡（生成带版本的锚点）→ 生成四视图设定图或精灵动画切图包。</li>
         </ol>
         <div class="panel-title mt">角色一致性与动画切图</div>
-        <p><b>角色锚点</b>是一段固定的、带版本号的英文人物设定，每次生成逐字放在提示词最前面。改外貌字段会自动重建锚点并升级版本；直接编辑锚点则保留手工文本。版本变了说明设定改过，旧图和新图不要混用。勾选参考图后，复现和逐视图生成会走 <code>/images/edits</code> 并设 <code>input_fidelity=high</code>，这是目前保持人物长相与画风最有效的手段。</p>
+        <p><b>角色锚点</b>是一段固定的、带版本号的英文人物设定，每次生成逐字放在提示词最前面。改外貌字段会自动重建锚点并升级版本；直接编辑锚点则保留手工文本。版本变了说明设定改过，旧图和新图不要混用。勾选参考图后，复现和逐视图生成会走 <code>/images/edits</code>，这是目前保持人物长相与画风最有效的手段；支持时自动加 <code>input_fidelity=high</code>，模型不支持的参数（如 <code>background: transparent</code>）会按 API 报错自动省略。</p>
         <p><b>多视角</b>的 sheet 模式一次生成四格设定图再等分切图，只花 1 张的钱、内部一致性最好；separate 模式逐视图生成，4 张成本，但可逐张换姿势、配参考图。两种都把正面 / 3-4 侧 / 正侧面 / 背面四张独立 PNG 打进包里。</p>
         <p><b>精灵动画</b>不调用 API：从同一张基准 PNG 做确定性的位移、挤压、摆动、镜像变换，帧天然对齐。输出 sheet.png、逐帧 PNG、Aseprite/Phaser JSON、Godot 4 <code>.tres</code>、Unity 自动切片脚本、RPG Maker 行走图和可播放的 preview.html。四角自动抠背景；边缘残留就调容差，或改用 <code>none</code> 保留原背景。</p>
         <div class="panel-title mt">目录</div>

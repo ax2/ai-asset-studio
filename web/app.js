@@ -1255,7 +1255,7 @@ async function gameReproduce() {
     const a = res.asset || {};
     $("#gTurnResult").innerHTML = `<div class="result-box ${a.demo ? "warn" : ""}">
       <div><b>角色复现图已生成</b> · ${esc(a.id || "")}</div>
-      <div>${res.reference_used ? "使用了参考图（input_fidelity=high）" : "仅使用角色锚点"}${res.degraded ? " · " + esc(res.degraded) : ""}</div>
+      <div>${res.reference_used ? "使用了参考图（/images/edits）" : "仅使用角色锚点"}${res.degraded ? " · " + esc(res.degraded) : ""}</div>
       <div class="btn-row"><a class="btn ghost" href="/media/${esc(a.file || "")}" target="_blank" rel="noopener">查看图片</a></div>
     </div>`;
     toast(a.demo ? "已生成 Dry run 占位图" : "角色复现图已生成", "ok");

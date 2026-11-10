@@ -133,7 +133,7 @@ def portrait(cfg: dict, spec: dict, card: dict, plan: dict,
         "note": ("三国英雄首批立绘。复现：角色卡 anchor 逐字置于提示词最前，"
                  "style_id=sanguo-hero，model=" + plan["model"] +
                  "，quality=" + plan["quality"] + "，size=" + size +
-                 "；把本图作为 /images/edits 参考图（input_fidelity=high）可延续风格。"),
+                 "；把本图作为 /images/edits 参考图可延续风格（模型支持时自动加 input_fidelity=high）。"),
     })
     return store.get(cfg, rec["id"]), size
 
@@ -278,8 +278,8 @@ def main() -> None:
         "regenerate_command": "python tools/generate_sanguo.py --skip-extract",
         "reproduce_note": ("逐字复用 character-cards.json 的 anchor，配合 sanguo-hero.json "
                            "的 blocks/negative 与上方 model/quality/size；"
-                           "把该角色的一张立绘作为 /images/edits 参考图并设 "
-                           "input_fidelity=high 可延续人物长相与画风。"),
+                           "把该角色的一张立绘作为 /images/edits 参考图可延续人物长相与画风；"
+                           "支持 input_fidelity 的模型会自动设为 high，不支持的模型自动省略该参数。"),
         "asset_count": len(rows),
         "total_cost_usd": round(sum(float(r.get("cost_usd") or 0) for r in rows), 4),
     }
@@ -303,7 +303,7 @@ def main() -> None:
             "----------------------\n"
             "1. 打开工作台 http://127.0.0.1:8777 →「角色与游戏资产」，角色卡已入库。\n"
             "2. 点「复现单张角色图」：系统自动把 anchor 放在提示词最前面，\n"
-            "   并把该角色立绘作为 /images/edits 参考图（input_fidelity=high）。\n"
+            "   并把该角色立绘作为 /images/edits 参考图（不支持 input_fidelity 的模型会自动省略）。\n"
             "3. 点「生成四视图包」可出正面 / 3-4 侧 / 正侧面 / 背面。\n"
             "4. 命令行原样重跑：python tools/generate_sanguo.py --skip-extract\n"
             "   （已生成的图会自动跳过，不会重复计费）\n\n"

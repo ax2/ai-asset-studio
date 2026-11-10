@@ -4,7 +4,7 @@ Two modes:
   sheet     - one API call producing a 4-panel model sheet, then split into
               four independent PNGs (cheap, strongest internal consistency)
   separate  - one call per view, optionally guided by a reference image via
-              /images/edits with input_fidelity=high (best style retention)
+              /images/edits (best style retention)
 
 Every output carries the exact character anchor and its version, so the same
 character can be regenerated later with an identical recipe.
@@ -87,10 +87,10 @@ def reproduce(cfg: dict, *, character_id: str, extra: str = "",
               label: str = "") -> dict:
     """Regenerate one image of an existing character with its frozen anchor.
 
-    With a reference asset the call goes through /images/edits and
-    input_fidelity=high, which is the strongest available style-retention
-    lever. Any edit failure degrades to plain text-to-image instead of
-    aborting the whole run.
+    With a reference asset the call goes through /images/edits; models that
+    support input_fidelity use it for stronger style retention, newer models
+    simply use the reference image. Any edit failure degrades to plain
+    text-to-image instead of aborting the whole run.
     """
     card = characters.get_card(cfg, character_id)
     if not card:
@@ -132,7 +132,7 @@ def reproduce(cfg: dict, *, character_id: str, extra: str = "",
         data, _ext = imaging.call_openai(cfg, prompt, model, quality, size)
 
     note = ("锚点 v%d 复现；%s" % (int(card.get("anchor_version") or 1),
-                                "参考图 input_fidelity=high" if used_edit else "纯锚点"))
+                                "参考图编辑 /images/edits" if used_edit else "纯锚点"))
     if degraded:
         note += "。" + degraded
     rec = _write_asset(cfg, data, card=card, kind="character",
@@ -249,7 +249,7 @@ def _finish(cfg: dict, root: Path, pack_id: str, card: dict, *,
          "preview.html     双击查看并排效果\n\n"
          "复现方法\n--------\n"
          "把 character-card.json 的 anchor 字段逐字放进新生成的提示词最前面，\n"
-         "并把该角色的一张已有图片作为 /images/edits 参考图（input_fidelity=high）。\n"
+         "并把该角色的一张已有图片作为 /images/edits 参考图；模型不支持的参数会自动省略。\n"
          "锚点版本变化意味着外貌设定被改过，旧图与新图不应混用。\n\n"
          "说明\n----\n%s\n") % (card.get("name"), card.get("anchor_version") or 1,
                             mode, note), encoding="utf-8")
@@ -372,6 +372,7 @@ def build(cfg: dict, *, character_id: str, mode: str = "sheet",
                 if p.is_file() and p.suffix.lower() == ".png":
                     ref_bytes = [p.read_bytes()]
         images, views, fallbacks, reused = {}, [], [], []
+        edit_count = 0
         for key, zh, _p in VIEWS:
             prompt = build_prompt(cfg, card, key, style_id=style_id)
             prior = (reuse_views or {}).get(key)
@@ -392,6 +393,7 @@ def build(cfg: dict, *, character_id: str, mode: str = "sheet",
                                                     model=cfg.get("edit_model") or model,
                                                     quality=quality, size=size)
                     used_edit = True
+                    edit_count += 1
                 except (RuntimeError, OSError, ValueError) as exc:
                     fallbacks.append(f"{zh}: {exc}")
                     data, _ext = imaging.call_openai(cfg, prompt, model, quality, size)
@@ -408,9 +410,16 @@ def build(cfg: dict, *, character_id: str, mode: str = "sheet",
                           "prompt": prompt, "asset_id": rec["id"],
                           "reference_used": used_edit})
         fresh = len(VIEWS) - len(reused)
+        if not fresh:
+            ref_desc = "全部复用已有视图"
+        elif edit_count == fresh:
+            ref_desc = "全部使用参考图编辑（/images/edits）"
+        elif edit_count:
+            ref_desc = f"{edit_count}/{fresh} 张使用参考图，其余降级为锚点模式"
+        else:
+            ref_desc = "参考图未生效，全部使用角色锚点"
         note = ("逐视图生成，%s；本轮新生成 %d 张 × $%.4f = $%.4f。"
-                % ("已使用参考图（input_fidelity=high）" if ref_bytes else "仅用角色锚点",
-                   fresh, unit, unit * fresh))
+                % (ref_desc, fresh, unit, unit * fresh))
         if reused:
             note += " 复用上次中断前已完成的视图（未重复计费）：" + "、".join(reused)
         if fallbacks:

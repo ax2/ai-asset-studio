@@ -152,6 +152,51 @@ def main() -> None:
         del first, second, prior, trows, tcard, tiny
         gc.collect()
 
+    # gpt-image-2 rejects input_fidelity with HTTP 400. The edit call must
+    # retry once without that field instead of giving up on reference images.
+    import io
+    import urllib.error
+    from unittest.mock import patch
+
+    class FakeResponse:
+        def __init__(self, body):
+            self.body = body
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *_a):
+            return False
+
+        def read(self):
+            return self.body
+
+    sent = []
+    errors = [
+        b'{"error":{"param":"input_fidelity","message":"does not support the '
+        b'\'input_fidelity\' parameter"}}',
+        b'{"error":{"param":"background","message":"Transparent background '
+        b'is not supported for this model."}}',
+    ]
+
+    class FakeOpener:
+        def open(self, req, timeout=0):
+            sent.append(req.data or b"")
+            if len(sent) <= len(errors):
+                raise urllib.error.HTTPError(
+                    "https://api.openai.com/v1/images/edits", 400, "Bad Request", {},
+                    io.BytesIO(errors[len(sent) - 1]))
+            return FakeResponse(b'{"data":[{"b64_json":"AAAA"}]}')
+
+    with patch.object(imaging, "_opener", return_value=FakeOpener()):
+        out = imaging.call_openai_edit(cfg, "test", [png.encode(png.make(8, 8, 4))],
+                                       model="gpt-image-2")
+    check("edit drops unsupported params one by one",
+          len(sent) == 3
+          and b"input_fidelity" in sent[0] and b"input_fidelity" not in sent[1]
+          and b"background" in sent[1] and b"background" not in sent[2]
+          and out == b"\x00\x00\x00")
+
     # Pack index consistency: GUI links must resolve to the DB record.
     for p in characters.list_packs(cfg):
         check("pack indexed " + p["id"][:16], characters.get_pack(cfg, p["id"]) is not None)
