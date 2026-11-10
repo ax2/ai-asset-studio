@@ -22,12 +22,13 @@
       <button class="nav-item" data-view="batch">批量生成</button>
       <button class="nav-item" data-view="export">导出与同步</button>
       <button class="nav-item" data-view="cost">成本看板</button>
+      <button class="nav-item" data-view="settings">连接设置</button>
       <button class="nav-item" data-view="help">使用说明</button>
     </nav>
     <div class="side-foot">
       <div class="status-line"><span class="dot" id="dotKey"></span><span id="txtKey">检查中</span></div>
       <div class="status-line"><span class="dot" id="dotDisk"></span><span id="txtDisk">检查中</span></div>
-      <div class="side-note">仅监听 127.0.0.1<br>密钥只从环境变量读取</div>
+      <div class="side-note">仅监听 127.0.0.1<br>密钥不写入磁盘</div>
     </div>
   </aside>
 
@@ -160,12 +161,51 @@
       </div>
     </section>
 
+    <section class="view hidden" id="view-settings">
+      <div class="two-col">
+        <div class="panel">
+          <div class="panel-title">API 会话密钥</div>
+          <div class="info-box" id="keyState"></div>
+          <div class="form mt">
+            <label>粘贴 API key
+              <input class="input" id="setKey" type="password" autocomplete="new-password"
+                     spellcheck="false" placeholder="sk-...（只存在服务进程内存里）">
+            </label>
+            <label class="check"><input type="checkbox" id="setKeyShow"> 显示输入内容</label>
+          </div>
+          <div class="btn-row mt">
+            <button class="btn primary" data-action="save-session-key">保存到内存</button>
+            <button class="btn" data-action="check-key">验证连接</button>
+            <button class="btn ghost" data-action="clear-session-key">清除</button>
+          </div>
+          <div class="hint" id="keyCheck">「验证连接」只请求只读的 /v1/models，不产生任何费用。</div>
+          <div class="hint">密钥只保存在本机 127.0.0.1 服务进程的内存里：不写 config.json、不写日志、不进 git，重启服务即失效。也可以改用环境变量 <code>OPENAI_API_KEY</code>，会话密钥优先级更高。</div>
+        </div>
+        <div class="panel">
+          <div class="panel-title">网络与端点（仅本次运行生效）</div>
+          <div class="form">
+            <label>代理 api_proxy
+              <input class="input" id="setProxy" placeholder="http://127.0.0.1:1080" spellcheck="false">
+            </label>
+            <label>API base
+              <input class="input" id="setBase" placeholder="https://api.openai.com/v1" spellcheck="false">
+            </label>
+          </div>
+          <button class="btn wide mt" data-action="apply-settings">应用到当前进程</button>
+          <div class="hint">这里修改不会写入 config.json，重启服务会恢复文件里的值；要长期生效请编辑 config.json。代理留空表示使用系统默认网络（或 AI_STUDIO_API_PROXY 环境变量）。本机代理通常是 <code>http://127.0.0.1:1080</code> 这种 HTTP 代理，不是 https:// 也不是 socks5://。</div>
+          <div class="panel-title mt">当前状态</div>
+          <div id="settingsInfo" class="info-box"></div>
+          <div class="hint mt">生成图片时服务会用同一个代理去请求 /images/generations，并下载返回的图片。真实生成前请先在「批量生成」页确认预估成本。</div>
+        </div>
+      </div>
+    </section>
+
     <section class="view hidden" id="view-help">
       <div class="panel help">
         <div class="panel-title">快速上手</div>
         <ol>
           <li>先到「批量生成」用 <b>Dry run</b> 跑 30 张，系统会在本地生成演示图，不花一分钱，可以把画廊、筛选、提示词编辑、复现、导出全部走通。</li>
-          <li>确认配方稳定后，在系统环境变量里设置 <code>OPENAI_API_KEY</code>，重启服务，取消 Dry run 才会真正调用 API。密钥绝不写入任何文件。</li>
+          <li>确认配方稳定后，到「连接设置」粘贴 API key 并点「验证连接」。密钥只保存在服务进程内存里，不写任何文件；也可以改用环境变量 <code>OPENAI_API_KEY</code>。取消 Dry run 才会真正调用 API。</li>
           <li>在画廊点开一张图，可直接改提示词、保存版本、一键复现、打分、加标签、标为精选。</li>
           <li>精选资产可导出 ZIP 素材包，或一键同步到资产盘（<code>D:/gdrive.photo/ai-assets</code>，即 H: 对应的本地目录，会由 Google Drive 自动同步到云端）。</li>
         </ol>
@@ -182,6 +222,8 @@ tools/generate.py   命令行入口</pre>
         <p>风格 1「复古胶片日记」是 active，风格 4「扁平几何图标」是 queued。第一套跑顺后到「风格配方」页把 4 切成 active 即可。</p>
         <div class="panel-title mt">合规提醒</div>
         <p>把成品发布到平台时，按平台要求勾选「含 AI 生成内容」。图片自带的 C2PA 来源元数据不要剥离；本系统会在「元数据完整性」里检查。不要生成在世艺术家风格、公众人物或真实人脸的写实形象。</p>
+        <div class="panel-title mt">关于网络与代理</div>
+        <p>本机需要通过代理访问 OpenAI API 时，在 <code>config.json</code> 里设置 <code>api_proxy</code>（例如 <code>http://127.0.0.1:1080</code>），服务重启后生效；也可以在「连接设置」页临时改代理，立即生效但重启后失效。<code>api_base</code> 用于兼容网关或中转端点。密钥不写入任何文件：优先用界面上的会话密钥，其次读环境变量 <code>OPENAI_API_KEY</code>。</p>
         <div class="panel-title mt">关于资产盘</div>
         <p>资产根目录是 <code>D:/gdrive.photo/ai-assets</code>：这是 H: 镜像盘对应的本地目录，写入后会由 Google Drive 自动同步。直接写这个本地目录比写 H: 虚拟盘稳定，也避免几千张小文件与同步客户端打架。若同步客户端没运行，写入仍然成功，只是云端稍后才会更新。</p>
       </div>

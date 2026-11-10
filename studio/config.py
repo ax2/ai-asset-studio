@@ -1,4 +1,4 @@
-"""Configuration. The API key lives only in an environment variable, never on disk."""
+"""Configuration. Secrets live in the environment or process memory, never on disk."""
 from __future__ import annotations
 
 import json
@@ -6,6 +6,8 @@ import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+
+_SESSION_KEY: str = ""
 
 DEFAULTS = {
     "asset_root": "D:/gdrive.photo/ai-assets",
@@ -20,6 +22,7 @@ DEFAULTS = {
     "batch_discount": 0.5,
     "api_key_env": "OPENAI_API_KEY",
     "api_base": "https://api.openai.com/v1",
+    "api_proxy": "",
     "sync_include_demo": False,
 }
 
@@ -28,12 +31,14 @@ ENV_OVERRIDES = {
     "AI_STUDIO_HOST": ("host", str),
     "AI_STUDIO_PORT": ("port", int),
     "AI_STUDIO_MONTHLY_BUDGET": ("monthly_budget_usd", float),
+    "AI_STUDIO_API_PROXY": ("api_proxy", str),
+    "AI_STUDIO_API_BASE": ("api_base", str),
 }
 
 _PUBLIC_KEYS = (
     "asset_root", "local_root", "host", "port", "monthly_budget_usd",
     "image_budget_usd", "default_model", "default_quality", "default_size",
-    "batch_discount", "api_key_env", "api_base", "sync_include_demo",
+    "batch_discount", "api_key_env", "api_base", "api_proxy", "sync_include_demo",
 )
 
 
@@ -69,17 +74,62 @@ def public(cfg: dict) -> dict:
     """Safe subset for the browser - never contains credentials or Path objects."""
     out = {k: cfg.get(k) for k in _PUBLIC_KEYS}
     out["api_key_set"] = has_key(cfg)
+    out["api_key_source"] = key_source(cfg)
     out["asset_root_writable"] = asset_root_writable(cfg)
     return out
 
 
+def set_session_key(value: str) -> None:
+    """Keep the key in memory only: never on disk, never in git, never in a log."""
+    global _SESSION_KEY
+    _SESSION_KEY = str(value or "").strip()
+
+
+def clear_session_key() -> None:
+    global _SESSION_KEY
+    _SESSION_KEY = ""
+
+
+def key_source(cfg: dict) -> str:
+    if _SESSION_KEY:
+        return "session"
+    name = str(cfg.get("api_key_env") or "OPENAI_API_KEY")
+    return "env" if os.environ.get(name, "").strip() else "none"
+
+
 def api_key(cfg: dict) -> str:
+    if _SESSION_KEY:
+        return _SESSION_KEY
     name = str(cfg.get("api_key_env") or "OPENAI_API_KEY")
     return os.environ.get(name, "").strip()
 
 
 def has_key(cfg: dict) -> bool:
     return bool(api_key(cfg))
+
+
+_RUNTIME_KEYS = ("api_proxy", "api_base")
+
+
+def apply_runtime(cfg: dict, patch: dict) -> list:
+    """Change non-secret network settings for the current process only.
+
+    Nothing is written to config.json, so a restart restores the file's values.
+    The API key deliberately cannot be set this way.
+    """
+    changed = []
+    for key in _RUNTIME_KEYS:
+        if key not in patch:
+            continue
+        value = str(patch[key] or "").strip()
+        if key == "api_proxy" and value and not value.startswith(
+                ("http://", "https://", "socks5://", "socks5h://")):
+            raise ValueError("api_proxy 必须以 http:// / https:// / socks5:// 开头")
+        if key == "api_base" and value and not value.startswith(("http://", "https://")):
+            raise ValueError("api_base 必须是 http(s):// 开头的完整地址")
+        cfg[key] = value.rstrip("/") if key == "api_base" else value
+        changed.append(key)
+    return changed
 
 
 _PROBE_CACHE: dict[str, bool] = {}

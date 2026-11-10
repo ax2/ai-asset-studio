@@ -18,6 +18,7 @@ from studio import config, exporter, imaging, pricing, store  # noqa: E402
 
 CFG: dict = {}
 MAX_BODY = 2 * 1024 * 1024
+NO_KEY_MSG = "尚未设置 API key。到「连接设置」粘贴会话密钥，或设置环境变量 OPENAI_API_KEY。"
 
 MIME = {
     ".html": "text/html; charset=utf-8",
@@ -80,6 +81,9 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         self._dispatch("GET")
 
+    def do_HEAD(self):
+        self._dispatch("HEAD")
+
     def do_POST(self):
         self._dispatch("POST")
 
@@ -88,6 +92,9 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_PATCH(self):
         self._dispatch("PATCH")
+
+    def do_DELETE(self):
+        self._dispatch("DELETE")
 
     def _dispatch(self, method: str):
         parsed = urlparse(self.path)
@@ -109,6 +116,33 @@ class Handler(BaseHTTPRequestHandler):
 
         if method == "GET" and seg == ["config"]:
             return self._json(200, config.public(CFG))
+
+        # Session key: process memory only. Never written to disk, never logged,
+        # never returned to the browser, gone when the server restarts.
+        if method == "POST" and seg == ["key"]:
+            value = str((self._body() or {}).get("api_key") or "").strip()
+            if len(value) < 20:
+                return self._err(400, "API key 看起来不完整（少于 20 字符），未保存。")
+            config.set_session_key(value)
+            return self._json(200, {
+                "ok": True,
+                "source": config.key_source(CFG),
+                "message": "会话密钥已载入内存：不写文件、不进 git，重启服务后自动失效。",
+            })
+        if method == "DELETE" and seg == ["key"]:
+            config.clear_session_key()
+            return self._json(200, {"ok": True, "source": config.key_source(CFG)})
+        if method == "POST" and seg == ["key", "check"]:
+            return self._json(200, imaging.check_connection(CFG))
+        if method == "POST" and seg == ["settings"]:
+            try:
+                changed = config.apply_runtime(CFG, self._body() or {})
+            except ValueError as exc:
+                return self._err(400, str(exc))
+            return self._json(200, {
+                "ok": True, "changed": changed, "config": config.public(CFG),
+            })
+
         if method == "GET" and seg == ["pricing"]:
             return self._json(200, pricing.price_table())
         if method == "GET" and seg == ["stats"]:
@@ -170,6 +204,8 @@ class Handler(BaseHTTPRequestHandler):
         if not original:
             return self._err(404, "asset not found")
         b = self._body()
+        if not bool(b.get("dry_run", True)) and not config.has_key(CFG):
+            return self._err(400, NO_KEY_MSG)
         prompt = (b.get("prompt") or "").strip() or original.get("prompt", "")
         edited = prompt != original.get("prompt", "")
         if edited:
@@ -201,6 +237,8 @@ class Handler(BaseHTTPRequestHandler):
         model = b.get("model") or style.get("model", {}).get("default") or CFG["default_model"]
         quality = b.get("quality") or style.get("model", {}).get("quality") or CFG["default_quality"]
         dry = bool(b.get("dry_run", True))
+        if not dry and not config.has_key(CFG):
+            return self._err(400, NO_KEY_MSG)
         batch_est = bool(b.get("batch_estimate"))
         est = pricing.estimate(model, quality, count, batch=batch_est)
         cap = float((style.get("budget") or {}).get("per_run_cap_usd") or 2)
@@ -250,6 +288,8 @@ class Handler(BaseHTTPRequestHandler):
         return self._send(200, target.read_bytes(), ctype or "application/octet-stream")
 
     def _static(self, path: str):
+        if path == "/favicon.ico":
+            return self._send(204, b"", "image/x-icon")
         name = "index.html" if path in ("/", "") else path.lstrip("/")
         base = CFG["web_dir"].resolve()
         target = (base / name).resolve()
@@ -277,8 +317,9 @@ def main():
     ThreadingHTTPServer.daemon_threads = True
     server = ThreadingHTTPServer((host, port), Handler)
     print("ai-asset-studio ready: http://%s:%d" % (host, port))
-    print("API key: %s (dry-run works without it)" %
-          ("set" if config.has_key(CFG) else "NOT set"))
+    print("API key: %s | source: %s (dry-run works without it)" %
+          ("set" if config.has_key(CFG) else "NOT set", config.key_source(CFG)))
+    print("API proxy: %s" % (CFG.get("api_proxy") or "(system default)"))
     print("Asset root: %s | writable: %s" %
           (CFG["asset_root_path"], config.asset_root_writable(CFG)))
     print("Press Ctrl+C to stop.")

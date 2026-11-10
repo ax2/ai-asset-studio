@@ -8,6 +8,7 @@ from __future__ import annotations
 import base64
 import html
 import json
+import os
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -18,9 +19,20 @@ API_URL = "https://api.openai.com/v1/images/generations"
 
 
 def endpoint(cfg: dict) -> str:
-    """Configurable so a proxy or compatible gateway can be used later."""
+    """Configurable so a compatible gateway can be used later."""
     base = str(cfg.get("api_base") or "https://api.openai.com/v1").rstrip("/")
     return base + "/images/generations"
+
+
+def _opener(cfg: dict):
+    """Route API calls through an explicitly configured proxy when provided."""
+    proxy = str(cfg.get("api_proxy") or "").strip()
+    if not proxy:
+        proxy = os.environ.get("AI_STUDIO_API_PROXY", "").strip()
+    if proxy:
+        handler = urllib.request.ProxyHandler({"http": proxy, "https": proxy})
+        return urllib.request.build_opener(handler)
+    return urllib.request.build_opener()
 
 
 def load_styles(cfg: dict) -> list:
@@ -134,7 +146,7 @@ def call_openai(cfg: dict, prompt: str, model: str, quality: str,
     key = config.api_key(cfg)
     if not key:
         raise RuntimeError(
-            "OPENAI_API_KEY is not set. Set it in the environment before a real run.")
+            "尚未设置 API key。到「连接设置」粘贴会话密钥，或设置环境变量 OPENAI_API_KEY。")
     payload = {
         "model": model,
         "prompt": prompt,
@@ -148,14 +160,19 @@ def call_openai(cfg: dict, prompt: str, model: str, quality: str,
         headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
         method="POST",
     )
+    opener = _opener(cfg)
     try:
-        with urllib.request.urlopen(req, timeout=240) as resp:
+        with opener.open(req, timeout=240) as resp:
             body = json.loads(resp.read().decode("utf-8"))
     except urllib.error.HTTPError as exc:
         detail = exc.read().decode("utf-8", "replace")[:600]
+        if exc.code == 401:
+            raise RuntimeError(
+                "HTTP 401: API key 无效或已撤销，请到「连接设置」更新会话密钥。") from None
         raise RuntimeError(f"OpenAI API returned HTTP {exc.code}: {detail}") from None
     except urllib.error.URLError as exc:
-        raise RuntimeError(f"Could not reach the OpenAI API: {exc.reason}") from None
+        raise RuntimeError(
+            f"无法连接 OpenAI API：{exc.reason}。请检查 config.json 里的 api_proxy。") from None
 
     try:
         item = body["data"][0]
@@ -166,11 +183,62 @@ def call_openai(cfg: dict, prompt: str, model: str, quality: str,
         return base64.b64decode(item["b64_json"]), "png"
     if item.get("url"):
         try:
-            with urllib.request.urlopen(item["url"], timeout=120) as resp:
+            with opener.open(item["url"], timeout=120) as resp:
                 return resp.read(), "png"
         except urllib.error.URLError as exc:
             raise RuntimeError(f"Could not download generated image: {exc.reason}") from None
     raise RuntimeError("API response had neither b64_json nor url")
+
+
+def check_connection(cfg: dict) -> dict:
+    """Read-only probe: GET /models through the configured proxy.
+
+    Never spends money and never echoes the key back in any field.
+    """
+    key = config.api_key(cfg)
+    base = str(cfg.get("api_base") or "https://api.openai.com/v1").rstrip("/")
+    proxy = str(cfg.get("api_proxy") or os.environ.get("AI_STUDIO_API_PROXY", "") or "").strip()
+    out = {
+        "ok": False,
+        "http_status": 0,
+        "endpoint": base + "/models",
+        "proxy": proxy or "(system default)",
+        "key_source": config.key_source(cfg),
+        "model_count": 0,
+        "message": "",
+    }
+    if not key:
+        out["message"] = "尚未设置 API key。在「连接设置」里粘贴会话密钥，或设置环境变量 OPENAI_API_KEY。"
+        return out
+
+    req = urllib.request.Request(
+        out["endpoint"],
+        headers={"Authorization": f"Bearer {key}"},
+        method="GET",
+    )
+    try:
+        with _opener(cfg).open(req, timeout=25) as resp:
+            payload = json.loads(resp.read().decode("utf-8", "replace"))
+        out["http_status"] = 200
+        out["ok"] = True
+        out["model_count"] = len(payload.get("data") or [])
+        out["message"] = "连接正常，API key 有效，可以取消 Dry run 生成真实图片。"
+    except urllib.error.HTTPError as exc:
+        out["http_status"] = exc.code
+        detail = exc.read().decode("utf-8", "replace")[:400]
+        if exc.code == 401:
+            out["message"] = "HTTP 401：API key 无效或已撤销，请更新后重试。"
+        elif exc.code == 403:
+            out["message"] = f"HTTP 403：该 key 无权限或地区受限。{detail}"
+        elif exc.code == 429:
+            out["message"] = "HTTP 429：额度用尽或触发限流，请稍后再试。"
+        else:
+            out["message"] = f"HTTP {exc.code}：{detail}"
+    except urllib.error.URLError as exc:
+        out["message"] = f"网络不通：{exc.reason}。检查代理软件是否运行、代理地址是否正确。"
+    except (ValueError, OSError) as exc:
+        out["message"] = f"连接异常：{exc}"
+    return out
 
 
 def check_metadata(path: Path) -> str:

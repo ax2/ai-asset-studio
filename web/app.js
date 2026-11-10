@@ -17,7 +17,8 @@ const VIEW_META = {
   batch: ["批量生成", "先 Dry run 验证配方，再切换真实生成"],
   export: ["导出与同步", "导出素材包、同步精选资产、检查元数据"],
   cost: ["成本看板", "额度、用量与参考单价"],
-  help: ["使用说明", "零依赖本地运行，密钥只从环境变量读取"],
+  settings: ["连接设置", "会话密钥、代理与端点自检"],
+  help: ["使用说明", "零依赖本地运行，密钥不写入磁盘"],
 };
 
 async function api(path, opts = {}) {
@@ -121,12 +122,89 @@ function fillStyleSelects() {
 function renderStatus() {
   const keyOk = !!S.cfg.api_key_set;
   $("#dotKey").className = "dot " + (keyOk ? "ok" : "warn");
-  $("#txtKey").textContent = keyOk ? "密钥已设置" : "未设密钥（仅 Dry run）";
+  $("#txtKey").textContent = keyOk
+    ? (S.cfg.api_key_source === "session" ? "会话密钥（仅内存）" : "环境变量密钥")
+    : "未设密钥（仅 Dry run）";
   const diskOk = !!S.cfg.asset_root_writable;
   $("#dotDisk").className = "dot " + (diskOk ? "ok" : "bad");
   $("#txtDisk").textContent = diskOk ? "资产盘可写" : "资产盘不可写";
   const used = S.stats ? S.stats.real_cost_usd : 0;
   $("#budgetChip").textContent = `本月 $${used} / $${S.cfg.monthly_budget_usd}`;
+}
+
+const KEY_SOURCE_LABEL = {
+  session: "会话密钥（仅内存，重启失效）",
+  env: "环境变量 OPENAI_API_KEY",
+  none: "未设置",
+};
+
+function renderSettings() {
+  const src = S.cfg.api_key_source || "none";
+  $("#keyState").innerHTML =
+    `<div class="kv"><span>当前密钥</span><span>${S.cfg.api_key_set ? esc(KEY_SOURCE_LABEL[src] || src) : "未设置"}</span></div>` +
+    `<div class="kv"><span>代理 api_proxy</span><span>${esc(S.cfg.api_proxy || "(系统默认)")}</span></div>` +
+    `<div class="kv"><span>API base</span><span>${esc(S.cfg.api_base || "https://api.openai.com/v1")}</span></div>`;
+  $("#setProxy").value = S.cfg.api_proxy || "";
+  $("#setBase").value = S.cfg.api_base || "";
+  $("#settingsInfo").innerHTML =
+    `<div class="kv"><span>监听地址</span><span>${esc(S.cfg.host)}:${esc(S.cfg.port)}</span></div>` +
+    `<div class="kv"><span>默认模型</span><span>${esc(S.cfg.default_model)} / ${esc(S.cfg.default_quality)}</span></div>` +
+    `<div class="kv"><span>资产盘</span><span>${esc(S.cfg.asset_root)}</span></div>` +
+    `<div class="kv"><span>资产盘可写</span><span>${S.cfg.asset_root_writable ? "是" : "否"}</span></div>`;
+}
+
+function clearKeyInput() {
+  const input = $("#setKey");
+  input.value = "";
+  input.type = "password";
+  $("#setKeyShow").checked = false;
+}
+
+async function saveSessionKey() {
+  const value = $("#setKey").value.trim();
+  if (value.length < 20) {
+    toast("API key 看起来不完整，未保存", "err");
+    return;
+  }
+  const res = await api("/api/key", { method: "POST", body: { api_key: value } });
+  clearKeyInput();
+  S.cfg = await api("/api/config");
+  renderStatus();
+  renderSettings();
+  $("#keyCheck").innerHTML = `<span style="color:var(--teal)">${esc(res.message)}</span>`;
+  toast("会话密钥已载入内存", "ok");
+}
+
+async function clearSessionKey() {
+  await api("/api/key", { method: "DELETE" });
+  clearKeyInput();
+  S.cfg = await api("/api/config");
+  renderStatus();
+  renderSettings();
+  $("#keyCheck").textContent = "会话密钥已清除。若环境变量里仍有 OPENAI_API_KEY，会继续生效。";
+  toast("会话密钥已清除", "ok");
+}
+
+async function checkKey() {
+  const box = $("#keyCheck");
+  box.textContent = "正在通过代理检查 /v1/models …";
+  const res = await api("/api/key/check", { method: "POST", body: {} });
+  const color = res.ok ? "var(--teal)" : "var(--red)";
+  box.innerHTML =
+    `<span style="color:${color}">${esc(res.message)}</span>` +
+    `<div class="mt">HTTP ${esc(res.http_status)} · 代理 ${esc(res.proxy)} · 密钥来源 ${esc(res.key_source)}` +
+    `${res.model_count ? " · 可见模型 " + esc(res.model_count) : ""}</div>`;
+  toast(res.ok ? "连接正常" : "连接检查未通过", res.ok ? "ok" : "err");
+}
+
+async function applySettings() {
+  const res = await api("/api/settings", {
+    method: "POST",
+    body: { api_proxy: $("#setProxy").value.trim(), api_base: $("#setBase").value.trim() },
+  });
+  S.cfg = res.config;
+  renderSettings();
+  toast("已应用到当前进程（重启后恢复 config.json 的值）", "ok");
 }
 
 async function loadAssets() {
@@ -187,6 +265,7 @@ function switchView(name) {
   if (name === "cost") renderCost();
   if (name === "batch") { refreshBatchEstimate(); }
   if (name === "export") { loadHealth(); loadExports(); renderSyncInfo(); }
+  if (name === "settings") { renderSettings(); }
 }
 
 function renderStyles() {
@@ -631,6 +710,10 @@ document.addEventListener("click", async (e) => {
       case "do-export": await doExport(); break;
       case "do-sync": await doSync(); break;
       case "refresh-health": await loadHealth(); break;
+      case "save-session-key": await saveSessionKey(); break;
+      case "clear-session-key": await clearSessionKey(); break;
+      case "check-key": await checkKey(); break;
+      case "apply-settings": await applySettings(); break;
       case "pick-style": S.styleId = el.dataset.id; renderStyles(); break;
       case "add-block": {
         const n = $$("#styleBlocks .block").length + 1;
@@ -695,6 +778,7 @@ document.addEventListener("input", (e) => {
 
 document.addEventListener("change", (e) => {
   const id = e.target.id;
+  if (id === "setKeyShow") $("#setKey").type = e.target.checked ? "text" : "password";
   if (["fStyle", "fStatus", "fRating", "fSort", "fFav"].includes(id)) loadAssets();
   if (["bStyle", "bModel", "bQuality", "bCount", "bExtra", "bDry", "bBatch"].includes(id)) {
     if (id === "bModel" || id === "bStyle") {
