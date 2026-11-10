@@ -244,6 +244,12 @@ th { color: var(--faint); font-weight: 400; }
 .toast.ok { border-color: var(--teal-dim); color: var(--teal); }
 .toast.err { border-color: #7A3B3B; color: var(--red); }
 
+.hint.warn-hint {
+  background: #3A2C1C; border: 1px solid #7A632B; border-radius: 8px;
+  color: #E8C98E; padding: 10px 12px;
+}
+.hint.warn-hint strong { color: var(--amber); }
+
 /* ---- Character & game-asset pipeline ---- */
 .two-col.game-col { grid-template-columns: minmax(360px, 1fr) minmax(420px, 1.12fr); }
 .profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }

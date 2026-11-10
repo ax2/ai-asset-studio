@@ -12,6 +12,7 @@
   "edit_model": "gpt-image-1.5",
   "sprite_cell": 128,
   "batch_discount": 0.5,
+  "api_key": "",
   "api_key_env": "OPENAI_API_KEY",
   "api_base": "https://api.openai.com/v1",
   "api_proxy": "",

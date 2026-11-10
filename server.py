@@ -21,7 +21,8 @@ from studio import (characters, config, exporter, imaging, pricing, sprites,  # 
 CFG: dict = {}
 MAX_BODY = 2 * 1024 * 1024
 PAGE_SIZE = 60
-NO_KEY_MSG = "尚未设置 API key。到「连接设置」粘贴会话密钥，或设置环境变量 OPENAI_API_KEY。"
+NO_KEY_MSG = ("尚未设置 API key。到「连接设置」粘贴密钥并写入 config.json 或记住到本机，"
+              "也可以设置环境变量 OPENAI_API_KEY。")
 
 MIME = {
     ".html": "text/html; charset=utf-8",
@@ -162,6 +163,27 @@ class Handler(BaseHTTPRequestHandler):
         if method == "DELETE" and seg == ["key"]:
             config.clear_session_key()
             return self._json(200, {"ok": True, "source": config.key_source(CFG)})
+        if method == "POST" and seg == ["key", "file"]:
+            b = self._body() or {}
+            value = str(b.get("api_key") or "").strip()
+            try:
+                res = config.write_file_key(value)
+            except ValueError as exc:
+                return self._err(400, str(exc))
+            CFG["api_key"] = value          # make it live without a restart
+            return self._json(200, dict(res, source=config.key_source(CFG),
+                                        config=config.public(CFG),
+                                        message=("已明文写入 config.json，重启服务后自动生效。"
+                                                 if res["git_ignored"] else
+                                                 "已写入，但警告：当前 .gitignore 未排除 config.json！")))
+        if method == "DELETE" and seg == ["key", "file"]:
+            res = config.clear_file_key()
+            CFG.pop("api_key", None)
+            return self._json(200, dict(res, source=config.key_source(CFG),
+                                        config=config.public(CFG),
+                                        message=("已删除 config.json 里的明文密钥。"
+                                                 if res["removed"] else
+                                                 "config.json 里本来就没有明文密钥。")))
         if method == "POST" and seg == ["key", "check"]:
             return self._json(200, imaging.check_connection(CFG))
         if method == "POST" and seg == ["settings"]:

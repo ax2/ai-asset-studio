@@ -303,7 +303,15 @@
             <button class="btn ghost" data-action="clear-persisted-key">删除本机已记住的密钥</button>
           </div>
           <div class="hint" id="keyCheck">「验证连接」只请求只读的 /v1/models，不产生任何费用。</div>
-          <div class="hint">勾选「记住到本机」后，密钥用 Windows DPAPI 加密保存在 <code>%APPDATA%\ai-asset-studio\credentials.bin</code>，与当前 Windows 账号绑定，换账号或换机器都解不开。文件在仓库之外，不会被提交；接口只返回脱敏片段。优先级：会话密钥 &gt; 本机记住的密钥 &gt; 环境变量 <code>OPENAI_API_KEY</code>。</div>
+          <div class="hint">勾选「记住到本机」后，密钥用 Windows DPAPI 加密保存在 <code>%APPDATA%\ai-asset-studio\credentials.bin</code>，与当前 Windows 账号绑定，换账号或换机器都解不开。文件在仓库之外，不会被提交；接口只返回脱敏片段。优先级：会话密钥 &gt; 本机记住的密钥 &gt; <code>config.json</code> 明文 &gt; 环境变量 <code>OPENAI_API_KEY</code>。</div>
+
+          <div class="panel-title mt">明文写入项目 config.json</div>
+          <div class="info-box" id="fileKeyState"></div>
+          <div class="btn-row">
+            <button class="btn" data-action="save-file-key">把上方输入框的密钥明文写入 config.json</button>
+            <button class="btn ghost" data-action="clear-file-key">删除 config.json 里的明文密钥</button>
+          </div>
+          <div class="hint warn-hint">⚠ 这是<strong>明文</strong>保存：任何能读取该目录的程序、备份软件、云同步或截屏工具都能看到密钥；一旦误提交到公开仓库必须立刻撤销重建。仅在你确认 <code>config.json</code> 已被 <code>.gitignore</code> 排除时使用。更安全的做法是勾选上面的「记住到本机」（DPAPI 加密）。不要把密钥写进被提交到仓库的 <code>config.example.json</code>。</div>
         </div>
         <div class="panel">
           <div class="panel-title">网络与端点（仅本次运行生效）</div>
@@ -329,7 +337,7 @@
         <div class="panel-title">快速上手</div>
         <ol>
           <li>先到「批量生成」用 <b>Dry run</b> 跑 30 张，系统会在本地生成演示图，不花一分钱，可以把画廊、筛选、提示词编辑、复现、导出全部走通。</li>
-          <li>确认配方稳定后，到「连接设置」粘贴 API key、勾选「记住到本机」并点「验证连接」。密钥会加密保存在仓库外的用户目录，重启后自动生效；也可以改用环境变量 <code>OPENAI_API_KEY</code>。取消 Dry run 才会真正调用 API。</li>
+          <li>确认配方稳定后，到「连接设置」粘贴 API key。想明文落地就点「明文写入 config.json」（重启自动生效，但该文件是明文，务必确认 .gitignore 已排除）；更推荐勾选「记住到本机」用 DPAPI 加密保存。也可以直接设环境变量 <code>OPENAI_API_KEY</code>。取消 Dry run 才会真正调用 API。</li>
           <li>在画廊点开一张图，可直接改提示词、保存版本、一键复现、打分、加标签、标为精选。</li>
           <li>精选资产可导出 ZIP 素材包，或一键同步到资产盘（<code>D:/gdrive.photo/ai-assets</code>，即 H: 对应的本地目录，会由 Google Drive 自动同步到云端）。</li>
           <li>做游戏角色时到「角色与游戏资产」：粘贴小说提取人物特征 → 核对并保存角色卡（生成带版本的锚点）→ 生成四视图设定图或精灵动画切图包。</li>
@@ -354,7 +362,7 @@ tools/generate.py   命令行入口</pre>
         <div class="panel-title mt">合规提醒</div>
         <p>把成品发布到平台时，按平台要求勾选「含 AI 生成内容」。图片自带的 C2PA 来源元数据不要剥离；本系统会在「元数据完整性」里检查。不要生成在世艺术家风格、公众人物或真实人脸的写实形象。</p>
         <div class="panel-title mt">关于网络与代理</div>
-        <p>本机需要通过代理访问 OpenAI API 时，在 <code>config.json</code> 里设置 <code>api_proxy</code>（例如 <code>http://127.0.0.1:1080</code>），服务重启后生效；也可以在「连接设置」页临时改代理，立即生效但重启后失效。<code>api_base</code> 用于兼容网关或中转端点。密钥不写入仓库：默认加密保存到用户目录（重启自动生效），也可以只用会话内存密钥，或读环境变量 <code>OPENAI_API_KEY</code>。</p>
+        <p>本机需要通过代理访问 OpenAI API 时，在 <code>config.json</code> 里设置 <code>api_proxy</code>（例如 <code>http://127.0.0.1:1080</code>），服务重启后生效；也可以在「连接设置」页临时改代理，立即生效但重启后失效。<code>api_base</code> 用于兼容网关或中转端点。密钥可以明文写在被 <code>.gitignore</code> 排除的 <code>config.json</code> 的 <code>api_key</code> 字段（不加密，注意风险），也可以加密保存到用户目录（重启自动生效）、只用会话内存密钥，或读环境变量 <code>OPENAI_API_KEY</code>。生效优先级：会话内存 &gt; DPAPI 用户目录 &gt; <code>config.json</code> 明文 &gt; 环境变量。<strong>不要把密钥写进会被提交的 <code>config.example.json</code></strong>。</p>
         <div class="panel-title mt">关于资产盘</div>
         <p>资产根目录是 <code>D:/gdrive.photo/ai-assets</code>：这是 H: 镜像盘对应的本地目录，写入后会由 Google Drive 自动同步。直接写这个本地目录比写 H: 虚拟盘稳定，也避免几千张小文件与同步客户端打架。若同步客户端没运行，写入仍然成功，只是云端稍后才会更新。</p>
       </div>

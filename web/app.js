@@ -131,6 +131,7 @@ function renderStatus() {
   const srcLabel = {
     session: "会话密钥（仅内存）",
     disk: "本机密钥（已记住）",
+    file: "config.json 明文密钥",
     env: "环境变量密钥",
   }[S.cfg.api_key_source] || "密钥已设置";
   $("#txtKey").textContent = keyOk ? srcLabel : "未设密钥（仅 Dry run）";
@@ -144,6 +145,7 @@ function renderStatus() {
 const KEY_SOURCE_LABEL = {
   session: "会话密钥（仅内存，重启失效）",
   disk: "本机加密保存的密钥（重启自动生效）",
+  file: "config.json 里的明文密钥（重启自动生效）",
   env: "环境变量 OPENAI_API_KEY",
   none: "未设置",
 };
@@ -158,6 +160,12 @@ function renderSettings() {
     `<div class="kv"><span>API base</span><span>${esc(S.cfg.api_base || "https://api.openai.com/v1")}</span></div>`;
   $("#setProxy").value = S.cfg.api_proxy || "";
   $("#setBase").value = S.cfg.api_base || "";
+  const ignored = !!S.cfg.config_git_ignored;
+  $("#fileKeyState").innerHTML =
+    `<div class="kv"><span>config.json 明文密钥</span><span>${S.cfg.api_key_in_file ? esc(S.cfg.api_key_file_hint || "已写入") : "无"}</span></div>` +
+    `<div class="kv" title="${esc(S.cfg.config_path || "")}"><span>文件位置</span><span>项目根目录 config.json</span></div>` +
+    `<div class="kv"><span>已被 .gitignore 排除</span><span style="color:${ignored ? "var(--teal)" : "var(--red)"}">${ignored ? "是（不会提交）" : "否（危险：可能被提交！）"}</span></div>` +
+    `<div class="kv"><span>当前生效来源</span><span>${esc(KEY_SOURCE_LABEL[S.cfg.api_key_source] || S.cfg.api_key_source || "未设置")}</span></div>`;
   $("#settingsInfo").innerHTML =
     `<div class="kv"><span>监听地址</span><span>${esc(S.cfg.host)}:${esc(S.cfg.port)}</span></div>` +
     `<div class="kv"><span>默认模型</span><span>${esc(S.cfg.default_model)} / ${esc(S.cfg.default_quality)}</span></div>` +
@@ -215,8 +223,42 @@ async function clearSessionKey() {
   S.cfg = await api("/api/config");
   renderStatus();
   renderSettings();
-  $("#keyCheck").textContent = "会话密钥已清除。若本机记住了密钥或环境变量仍有值，会继续生效。";
+  $("#keyCheck").textContent = "会话密钥已清除。若本机记住了密钥、config.json 里有明文密钥，或环境变量仍有值，会继续生效。";
   toast("会话密钥已清除", "ok");
+}
+
+async function saveFileKey() {
+  const value = $("#setKey").value.trim();
+  if (value.length < 20) {
+    toast("请先在上方输入框粘贴完整 API key", "err");
+    return;
+  }
+  if (!S.cfg.config_git_ignored) {
+    confirmModal("警告：config.json 未被忽略",
+      `当前 <code>.gitignore</code> 没有排除 <code>config.json</code>，明文密钥可能被提交到公开仓库。<br><br>仍要继续写入吗？`,
+      () => writeFileKey(value));
+    return;
+  }
+  await writeFileKey(value);
+}
+
+async function writeFileKey(value) {
+  const res = await api("/api/key/file", { method: "POST", body: { api_key: value } });
+  clearKeyInput();
+  S.cfg = res.config;
+  renderStatus();
+  renderSettings();
+  $("#keyCheck").innerHTML = `<span style="color:var(--teal)">${esc(res.message)} 脱敏标识：${esc(res.hint || "")}</span>`;
+  toast("已明文写入 config.json", "ok");
+}
+
+async function clearFileKey() {
+  const res = await api("/api/key/file", { method: "DELETE" });
+  S.cfg = res.config;
+  renderStatus();
+  renderSettings();
+  $("#keyCheck").textContent = res.message + " 其它配置（如代理）保持不变。";
+  toast("已删除 config.json 里的明文密钥", "ok");
 }
 
 async function checkKey() {
@@ -1346,6 +1388,8 @@ document.addEventListener("click", async (e) => {
       case "save-session-key": await saveSessionKey(); break;
       case "persist-key": await persistCurrentKey(); break;
       case "clear-persisted-key": await clearPersistedKey(); break;
+      case "save-file-key": await saveFileKey(); break;
+      case "clear-file-key": await clearFileKey(); break;
       case "clear-session-key": await clearSessionKey(); break;
       case "check-key": await checkKey(); break;
       case "apply-settings": await applySettings(); break;

@@ -93,6 +93,12 @@ def public(cfg: dict) -> dict:
     out["credential_path"] = cred["path"]
     out["credential_cipher"] = cred["cipher"]
     out["credential_saved_at"] = cred["saved_at"]
+    # Only ever expose a masked hint for the plaintext config.json key.
+    fk = read_file_key(cfg)
+    out["api_key_in_file"] = bool(fk)
+    out["api_key_file_hint"] = _hint(fk) if fk else ""
+    out["config_path"] = str(config_path())
+    out["config_git_ignored"] = config_git_ignored()
     return out
 
 
@@ -122,11 +128,82 @@ def clear_persisted_key() -> dict:
     return credentials.clear()
 
 
+# ---------------------------------------------------------------------------
+# Plaintext key in the project-local config.json (gitignored, never committed)
+# ---------------------------------------------------------------------------
+def config_path() -> Path:
+    return ROOT / "config.json"
+
+
+def read_file_key(cfg: dict) -> str:
+    """The optional plaintext `api_key` field of config.json."""
+    return str(cfg.get("api_key") or "").strip()
+
+
+def _hint(key: str) -> str:
+    if len(key) <= 8:
+        return "***"
+    return key[:3] + "…" + key[-4:]
+
+
+def config_git_ignored() -> bool:
+    """Confirm the plaintext file really is excluded before we write to it."""
+    try:
+        lines = (ROOT / ".gitignore").read_text(encoding="utf-8").splitlines()
+    except OSError:
+        return False
+    return any(line.strip() == "config.json" for line in lines)
+
+
+def _read_config_doc() -> dict:
+    path = config_path()
+    if not path.exists():
+        return {}
+    try:
+        doc = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        raise ValueError(f"config.json 不是合法 JSON，未做任何改动：{exc}") from exc
+    if not isinstance(doc, dict):
+        raise ValueError("config.json 顶层必须是对象，未做任何改动。")
+    return doc
+
+
+def write_file_key(key: str) -> dict:
+    """Write the key in plaintext into config.json, preserving all other keys."""
+    value = str(key or "").strip()
+    if len(value) < 20:
+        raise ValueError("API key 看起来不完整（少于 20 字符），未写入。")
+    doc = _read_config_doc()
+    doc["api_key"] = value
+    config_path().write_text(
+        json.dumps(doc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return {"ok": True, "path": str(config_path()), "hint": _hint(value),
+            "git_ignored": config_git_ignored()}
+
+
+def clear_file_key() -> dict:
+    """Remove only the api_key field; never touches proxy or other settings."""
+    path = config_path()
+    removed = False
+    if path.exists():
+        doc = _read_config_doc()
+        if "api_key" in doc:
+            doc.pop("api_key")
+            path.write_text(
+                json.dumps(doc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            removed = True
+    return {"ok": True, "removed": removed, "path": str(path)}
+
+
 def key_source(cfg: dict) -> str:
+    # Explicit beats implicit: a key the user just pasted, then DPAPI, then the
+    # plaintext file they deliberately edited, and finally an ambient env var.
     if _SESSION_KEY:
         return "session"
     if credentials.load():
         return "disk"
+    if read_file_key(cfg):
+        return "file"
     name = str(cfg.get("api_key_env") or "OPENAI_API_KEY")
     return "env" if os.environ.get(name, "").strip() else "none"
 
@@ -137,6 +214,9 @@ def api_key(cfg: dict) -> str:
     persisted = credentials.load()
     if persisted:
         return persisted
+    file_key = read_file_key(cfg)
+    if file_key:
+        return file_key
     name = str(cfg.get("api_key_env") or "OPENAI_API_KEY")
     return os.environ.get(name, "").strip()
 

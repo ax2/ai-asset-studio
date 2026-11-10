@@ -37,6 +37,8 @@ def check(label: str, ok: bool, detail: str = "") -> None:
 
 def main() -> None:
     cfg = config.load()
+    check("config.json is gitignored", config.config_git_ignored())
+    check("public config never leaks a key", "api_key" not in config.public(cfg))
 
     # PNG codec: RGB frames must be promoted to RGBA when packed into a sheet,
     # otherwise every channel shifts and alpha ends up 0.

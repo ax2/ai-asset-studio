@@ -20,7 +20,8 @@ python server.py                           # http://127.0.0.1:8777
 ## 密钥与网络
 
 - 在「连接设置」粘贴 API key，勾选「记住到本机」会用 Windows DPAPI 加密写入 `%APPDATA%\ai-asset-studio\credentials.bin`，与当前 Windows 账号绑定，重启自动生效。该文件在仓库之外，`.gitignore` 也不会收录。
-- 优先级：会话内存密钥 > 本机加密密钥 > 环境变量 `OPENAI_API_KEY`。任何接口都不回显密钥本体，只返回脱敏片段。
+- **明文写入 `config.json`**：连接设置页点「明文写入 config.json」，或直接编辑项目根目录的 `config.json` 加 `"api_key": "sk-..."`。该文件已被 `.gitignore` 排除，重启服务自动生效，不依赖界面粘贴。⚠️ 明文就是明文：任何能读取该目录的程序、备份/云同步工具都能看到；误提交到公开仓库必须立刻撤销并重建密钥。界面会实时显示 `.gitignore` 是否真的排除了它。**不要把密钥写进被提交的 `config.example.json`**，那只是空模板。
+- 生效优先级（显式优先）：会话内存密钥 > 本机 DPAPI 加密密钥 > `config.json` 明文 > 环境变量 `OPENAI_API_KEY`。任何接口都不回显密钥本体，只返回脱敏片段；日志也不打印。
 - 「验证连接」只请求只读的 `GET /v1/models`，不产生费用。
 - 需要代理时在 `config.json` 里写 `"api_proxy": "http://127.0.0.1:1080"`（HTTP 代理，不是 `https://` 也不是 `socks5://`），或在连接设置页临时改，仅当前进程生效。
 - `api_base` 可指向兼容网关。
@@ -83,6 +84,7 @@ GET    /api/assets?limit=&offset=&character_id=      分页资产
 PATCH  /api/assets/<id>                             改评分 / 标签 / 状态
 POST   /api/generate  /api/export  /api/sync
 POST   /api/key  /api/key/check  /api/key/persist  /api/settings
+POST/DELETE /api/key/file                         明文写入 / 删除 config.json 密钥
 GET    /api/game/meta                                角色表单元数据
 POST   /api/characters/extract                      小说特征提取
 GET/POST/DELETE /api/characters[/<id>]              角色卡
