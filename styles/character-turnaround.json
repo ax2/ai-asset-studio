@@ -1,0 +1,43 @@
+{
+  "id": "character-turnaround",
+  "name": "人物多视角设定图",
+  "order": 3,
+  "status": "tool",
+  "description": "游戏角色设定图：同一角色的正面 / 3-4 侧 / 正侧面 / 背面。配合角色锚点与参考图保证风格一致。",
+  "palette": ["#F1EFE8", "#D3D1C7", "#888780", "#444441", "#20232A"],
+  "model": {
+    "default": "gpt-image-1.5",
+    "quality": "low",
+    "size": "1536x1024"
+  },
+  "blocks": [
+    {
+      "key": "core",
+      "zh": "核心构图",
+      "en": "game character concept sheet, clean orthographic full-body figure, centered in each panel, identical scale, plain uniform background, even flat lighting"
+    },
+    {
+      "key": "style",
+      "zh": "绘制风格",
+      "en": "consistent cel-shaded vector illustration, crisp clean outlines, flat color fills, no gradient, no drop shadow"
+    },
+    {
+      "key": "consistency",
+      "zh": "一致性",
+      "en": "identical facial features, identical hairstyle, identical outfit, identical accessories and identical color palette in every panel"
+    }
+  ],
+  "slots": {
+    "view": ["front view", "three-quarter view", "side profile", "back view"]
+  },
+  "negative": "photorealism, 3D render, celebrity, realistic human face, text, letters, watermark, logo, panel border, frame, split line, cropped body, different clothing, different hairstyle, cluttered background",
+  "asset_kinds": ["turnaround", "view-front", "view-three-quarter", "view-side", "view-back"],
+  "eval_rules": [
+    {"key": "orthographic", "needle": "orthographic", "zh": "正交视角"},
+    {"key": "fullbody", "needle": "full-body", "zh": "全身构图"},
+    {"key": "consistency", "needle": "identical", "zh": "跨视角一致性"},
+    {"key": "plainbg", "needle": "plain uniform background", "zh": "纯色背景"}
+  ],
+  "budget": {"per_run_cap_usd": 2},
+  "notes": "工具配方：由「角色工作台」调用，不建议在普通批量生成里直接用。锚点由角色卡自动拼在提示词最前面。"
+}

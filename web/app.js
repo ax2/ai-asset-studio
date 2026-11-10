@@ -13,10 +13,14 @@ const S = {
 };
 const PAGE_SIZE = 60;
 
+// Character / game-asset pipeline state, kept separate from the gallery state.
+const G = { meta: null, cards: [], extracted: [], card: null, assets: [], packs: [] };
+
 const VIEW_META = {
   gallery: ["资产画廊", "查看、筛选、复现与管理所有美术资产"],
   styles: ["风格配方", "编辑分块提示词、变量槽位与负面词"],
   batch: ["批量生成", "先 Dry run 验证配方，再切换真实生成"],
+  game: ["角色与游戏资产", "小说提取角色、锚点复现、多视角与精灵动画切图"],
   export: ["导出与同步", "导出素材包、同步精选资产、检查元数据"],
   cost: ["成本看板", "额度、用量与参考单价"],
   settings: ["连接设置", "会话密钥、代理与端点自检"],
@@ -248,6 +252,7 @@ async function loadAssets(reset = true) {
     min_rating: $("#fRating").value,
     sort: $("#fSort").value,
     favorite: $("#fFav").checked ? "1" : "",
+    character_id: $("#fCharacter") ? $("#fCharacter").value : "",
     limit: String(PAGE_SIZE),
     offset: String(S.assetsOffset),
   });
@@ -287,6 +292,10 @@ function renderGallery() {
     if (a.status === "rejected") tags.push(badge("已淘汰", "rejected"));
     if (a.favorite) tags.push(badge("收藏", "fav"));
     if (a.rating) tags.push(badge("★".repeat(a.rating), ""));
+    if (a.character_id) {
+      const c = (G.cards || []).find((x) => x.id === a.character_id);
+      tags.push(badge((c ? c.name : "角色") + " v" + (a.anchor_version || 1), "keeper"));
+    }
     (a.tags || []).slice(0, 3).forEach((t) => tags.push(badge(t, "")));
     return `<div class="card" data-action="open-asset" data-id="${esc(a.id)}">
       <img class="card-img" src="/thumb/${esc(a.file)}" data-fallback="${esc(a.file)}" loading="lazy" alt="">
@@ -313,6 +322,7 @@ function switchView(name) {
   if (name === "styles") renderStyles();
   if (name === "cost") renderCost();
   if (name === "batch") { refreshBatchEstimate(); }
+  if (name === "game") { initGame().catch((e) => toast("游戏资产页加载失败：" + e.message, "err")); }
   if (name === "export") { loadHealth(); loadExports(); renderSyncInfo(); }
   if (name === "settings") { renderSettings(); }
 }
@@ -877,6 +887,403 @@ async function reproduce() {
   else confirmModal("确认真实生成", `将调用 API，预估 <b>$${cost}</b>。`, go);
 }
 
+// ---- Character & game-asset pipeline ------------------------------------
+const GAME_WIDE_FIELDS = ["outfit", "marks", "art_style", "negative"];
+
+function blankGameCard() {
+  return {
+    id: "", name: "", aliases: [], source: "", profile: {}, evidence: {},
+    confidence: {}, anchor: "", anchor_version: 0, anchor_history: [],
+    ref_asset_id: "", mode: "manual",
+  };
+}
+
+function gameFieldLabel(key) {
+  const f = ((G.meta || {}).profile_fields || []).find((x) => x.key === key);
+  return f ? f.label : key;
+}
+
+function fillCharacterSelects() {
+  const sel = $("#fCharacter");
+  if (!sel) return;
+  const keep = sel.value;
+  sel.innerHTML = `<option value="">全部角色</option>` +
+    (G.cards || []).map((c) =>
+      `<option value="${esc(c.id)}">${esc(c.name)} · v${esc(c.anchor_version || 1)}</option>`).join("");
+  if (keep) sel.value = keep;
+}
+
+function buildGameUI() {
+  const m = G.meta || {};
+  const keepMode = $("#gTurnMode").value;
+  const keepModel = $("#gModel").value;
+  const keepCell = $("#gCell").value;
+  $("#gTurnMode").innerHTML = (m.turnaround_modes || []).map((x) =>
+    `<option value="${esc(x.key)}">${esc(x.label)}</option>`).join("");
+  if (keepMode) $("#gTurnMode").value = keepMode;
+  $("#gModel").innerHTML = modelOptions();
+  $("#gModel").value = keepModel || m.default_model || S.cfg.default_model || "gpt-image-1.5";
+  $("#gCell").value = keepCell || m.default_cell || 128;
+  refreshGameQuality();
+  $("#gProfileFields").innerHTML = (m.profile_fields || []).map((f) =>
+    `<label class="${GAME_WIDE_FIELDS.includes(f.key) ? "wide" : ""}">
+       <span>${esc(f.label)} <span class="conf" data-conf="${esc(f.key)}"></span></span>
+       <input class="input" data-field="${esc(f.key)}" placeholder="留空则忽略">
+     </label>`).join("");
+  $("#gActions").innerHTML = (m.actions || []).map((a, i) =>
+    `<label class="opt ${i < 2 ? "on" : ""}"><input type="checkbox" value="${esc(a.key)}"
+       data-opt="action" ${i < 2 ? "checked" : ""}>${esc(a.label)}</label>`).join("");
+  $("#gEngines").innerHTML = (m.engines || []).map((e) =>
+    `<label class="opt on"><input type="checkbox" value="${esc(e)}"
+       data-opt="engine" checked>${esc(e)}</label>`).join("");
+  $("#gAnchor").placeholder = "留空保存时按上面的特征自动生成锚点；直接编辑则保留手工文本。";
+}
+
+function refreshGameQuality() {
+  const model = $("#gModel").value;
+  const table = (S.pricing && S.pricing.image) || {};
+  const qualities = table[model] || { low: 0, medium: 0, high: 0 };
+  const keep = $("#gQuality").value;
+  $("#gQuality").innerHTML = Object.keys(qualities).map((q) =>
+    `<option value="${esc(q)}">${esc(q)} · $${qualities[q]}/张</option>`).join("");
+  $("#gQuality").value = qualities[keep] !== undefined
+    ? keep : (G.meta || {}).default_quality || "low";
+  refreshGameEstimate();
+}
+
+function refreshGameEstimate() {
+  const model = $("#gModel").value || (G.meta || {}).default_model;
+  const quality = $("#gQuality").value || "low";
+  const mode = $("#gTurnMode").value || "sheet";
+  const n = mode === "separate" ? 4 : 1;
+  const unit = priceOf(model, quality);
+  const dry = $("#gDry") ? $("#gDry").checked : true;
+  $("#gEstimate").innerHTML =
+    `<div class="num">$${(unit * n).toFixed(4)}</div>` +
+    `<div class="cap">${n} 张 × ${esc(model)} / ${esc(quality)} · ${esc(mode)} 模式` +
+    `${dry ? " · Dry run 不产生费用" : " · 真实生成"}</div>` +
+    `<div class="cap mt">复现单张约 $${unit.toFixed(4)}；精灵切图完全在本地处理，不调用 API、不花钱。</div>`;
+}
+
+async function prepareGame() {
+  const [meta, cards, assets] = await Promise.all([
+    api("/api/game/meta"), api("/api/characters"),
+    api("/api/assets?limit=500&sort=newest"),
+  ]);
+  G.meta = meta;
+  G.cards = cards.characters || [];
+  G.assets = assets.assets || [];
+  fillCharacterSelects();
+  buildGameUI();
+}
+
+async function refreshGameAssets() {
+  const res = await api("/api/assets?limit=500&sort=newest");
+  G.assets = res.assets || [];
+  fillGameAssetSelects();
+}
+
+function fillGameAssetSelects() {
+  const pngs = (G.assets || []).filter((a) => /\.png$/i.test(a.file || ""));
+  const opts = pngs.map((a) =>
+    `<option value="${esc(a.id)}">${esc(a.label || a.asset_kind || a.id)}` +
+    ` · ${esc(a.style_id)} · ${esc(a.id.slice(0, 15))}</option>`).join("");
+  $("#gSpriteAsset").innerHTML = opts || `<option value="">（还没有 PNG 资产）</option>`;
+  const keep = $("#gRefAsset").value;
+  $("#gRefAsset").innerHTML = `<option value="">不使用参考图（仅靠锚点）</option>` + opts;
+  if (keep) $("#gRefAsset").value = keep;
+}
+
+async function loadGameCharacters(selectId) {
+  const res = await api("/api/characters");
+  G.cards = res.characters || [];
+  fillCharacterSelects();
+  $("#gCardSelect").innerHTML = `<option value="">（新建角色）</option>` +
+    G.cards.map((c) =>
+      `<option value="${esc(c.id)}">${esc(c.name)} · 锚点 v${esc(c.anchor_version || 1)}</option>`).join("");
+  let id = selectId || $("#gCardSelect").value ||
+    (G.card && G.card.id) || (G.cards[0] && G.cards[0].id) || "";
+  if (id && !G.cards.some((c) => c.id === id)) id = "";
+  $("#gCardSelect").value = id;
+  if (id) await selectGameCard(id);
+  else { G.card = blankGameCard(); renderGameCard(); }
+}
+
+function renderGameCard() {
+  const c = G.card || blankGameCard();
+  $("#gName").value = c.name || "";
+  $$("[data-field]", $("#gProfileFields")).forEach((inp) => {
+    inp.value = (c.profile || {})[inp.dataset.field] || "";
+  });
+  $$("[data-conf]", $("#gProfileFields")).forEach((el) => {
+    const level = (c.confidence || {})[el.dataset.conf] || "";
+    el.textContent = level === "inferred" ? "推断" : level === "missing" ? "缺失" : "";
+    el.className = "conf " + (level === "inferred" ? "inferred" : "");
+  });
+  $("#gAnchor").value = c.anchor || "";
+  $("#gRefAsset").value = c.ref_asset_id || "";
+  $("#gCardBadge").textContent = c.id
+    ? `锚点 v${c.anchor_version || 1} · ${c.id}` : "未保存的新角色";
+  const evidence = Object.entries(c.evidence || {}).slice(0, 4)
+    .map(([k, v]) => `${esc(gameFieldLabel(k))}：${esc(v)}`).join("<br>");
+  $("#gCardInfo").innerHTML =
+    `<div class="kv"><span>锚点版本</span><span>v${esc(c.anchor_version || 1)}</span></div>` +
+    `<div class="kv"><span>历史版本</span><span>${esc((c.anchor_history || []).length)} 个</span></div>` +
+    `<div class="kv"><span>来源</span><span>${esc(c.mode || "manual")}</span></div>` +
+    (evidence ? `<div class="section-label">原文证据（自动提取，请核对）</div><div>${evidence}</div>` : "");
+}
+
+function collectGameCard() {
+  const c = JSON.parse(JSON.stringify(G.card || blankGameCard()));
+  c.profile = c.profile || {};
+  c.name = $("#gName").value.trim();
+  $$("[data-field]", $("#gProfileFields")).forEach((inp) => {
+    c.profile[inp.dataset.field] = inp.value.trim();
+  });
+  c.anchor = $("#gAnchor").value.trim();
+  c.ref_asset_id = $("#gRefAsset").value;
+  return c;
+}
+
+async function selectGameCard(id) {
+  if (!id) { G.card = blankGameCard(); renderGameCard(); return; }
+  G.card = await api("/api/characters/" + encodeURIComponent(id));
+  renderGameCard();
+  await gamePromptPreview(true);
+}
+
+async function saveGameCard() {
+  const card = collectGameCard();
+  if (!card.name) { toast("请先填写角色名", "err"); return; }
+  const saved = await api("/api/characters", { method: "POST", body: card });
+  toast(`已保存 ${saved.name} · 锚点 v${saved.anchor_version}`, "ok");
+  await loadGameCharacters(saved.id);
+  await refreshAll();
+}
+
+function newGameCard() {
+  G.card = blankGameCard();
+  $("#gCardSelect").value = "";
+  renderGameCard();
+  toast("已切换到空白角色卡", "");
+}
+
+function deleteGameCard() {
+  const c = G.card || {};
+  if (!c.id) { toast("这是未保存的空白角色，无需删除", ""); return; }
+  confirmModal("删除角色卡", `确定删除 <b>${esc(c.name)}</b> 的角色卡吗？已生成的图片和资产包不会被删除，但会失去角色关联。`,
+    async () => {
+      await api("/api/characters/" + encodeURIComponent(c.id), { method: "DELETE" });
+      G.card = blankGameCard();
+      await loadGameCharacters("");
+      toast("角色卡已删除", "ok");
+    });
+}
+
+async function gameExtract() {
+  const text = $("#gNovel").value.trim();
+  if (text.length < 20) { toast("请粘贴至少一段小说正文（20 字以上）", "err"); return; }
+  const btn = document.querySelector('[data-action="g-extract"]');
+  btn.disabled = true; btn.textContent = "提取中…";
+  try {
+    const res = await api("/api/characters/extract", {
+      method: "POST", body: { text, mode: $("#gExtractMode").value },
+    });
+    G.extracted = res.characters || [];
+    $("#gExtractNote").textContent = res.note || "";
+    renderExtractResults();
+    toast(`识别到 ${G.extracted.length} 个角色（${res.mode}）`, "ok");
+  } finally {
+    btn.disabled = false; btn.textContent = "提取人物特征";
+  }
+}
+
+function renderExtractResults() {
+  $("#gExtractResults").innerHTML = G.extracted.map((c, i) => {
+    const traits = Object.entries(c.profile || {})
+      .filter(([k, v]) => v && !["art_style", "negative"].includes(k))
+      .slice(0, 6)
+      .map(([k, v]) => `${esc(gameFieldLabel(k))}：${esc(v)}`).join("<br>");
+    return `<div class="extract-card">
+      <div class="head"><span class="name">${esc(c.name)}</span>
+        <button class="btn ghost" data-action="g-load-extract" data-i="${i}">载入到角色卡</button></div>
+      <div class="traits">${traits || "未提取到明确外貌特征，请在角色卡里手工补全。"}</div>
+    </div>`;
+  }).join("") || `<div class="muted small">没有识别到人物。可以点「新建空白角色」手工填写。</div>`;
+}
+
+function loadExtract(i) {
+  const ex = G.extracted[Number(i)];
+  if (!ex) return;
+  const existing = (G.cards || []).find((c) => c.name === ex.name);
+  const base = existing ? JSON.parse(JSON.stringify(existing)) : blankGameCard();
+  base.name = ex.name;
+  base.profile = Object.assign({}, base.profile, ex.profile || {});
+  base.evidence = Object.assign({}, base.evidence, ex.evidence || {});
+  base.confidence = Object.assign({}, base.confidence, ex.confidence || {});
+  base.source = ex.source || "";
+  base.mode = ex.mode || "manual";
+  base.anchor = "";             // let the server rebuild it from the profile
+  G.card = base;
+  $("#gCardSelect").value = base.id || "";
+  renderGameCard();
+  toast(existing ? "已合并到同名角色卡，保存后会升级锚点版本" : "已载入，核对后点「保存角色卡」", "ok");
+  $("#gCardSelect").scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+async function gamePromptPreview(silent) {
+  const cid = (G.card || {}).id;
+  const box = $("#gPromptPreview");
+  if (!cid) {
+    if (box) box.textContent = "先保存角色卡，才能预览带锚点的完整提示词。";
+    if (!silent) toast("请先保存角色卡", "err");
+    return;
+  }
+  const res = await api("/api/characters/" + encodeURIComponent(cid) + "/prompt");
+  if (box) box.textContent = res.prompt || "";
+  if (!silent) toast(`当前锚点 v${res.anchor_version}，已展开完整提示词`, "ok");
+}
+
+function requireGameCard() {
+  if ((G.card || {}).id) return G.card.id;
+  toast("请先选择并保存一张角色卡", "err");
+  return "";
+}
+
+function renderGamePackResult(pack, el) {
+  if (!pack) return;
+  const d = pack;
+  const detail = d.frames
+    ? `${d.frames} 帧 · ${d.cell}×${d.cell} · ${d.fps} fps · sheet ${esc((d.sheet_size || []).join("×"))}`
+    : `${(d.views || []).length} 个视图 · ${esc(d.mode || "")}`;
+  el.innerHTML = `<div class="result-box ${d.demo ? "warn" : ""}">
+    <div><b>${esc(d.character_name || d.name || d.id)}</b> · <span class="small">${esc(d.id)}</span></div>
+    <div>${detail}</div>
+    <div>${esc(d.note || "")}</div>
+    <div class="btn-row">
+      <a class="btn ghost" href="${esc(d.preview || "#")}" target="_blank" rel="noopener">打开预览</a>
+      <a class="btn ghost" href="${esc(d.download || "#")}">下载 ZIP</a>
+    </div></div>`;
+}
+
+async function gameTurnaround() {
+  const cid = requireGameCard();
+  if (!cid) return;
+  const body = {
+    mode: $("#gTurnMode").value, dry_run: $("#gDry").checked,
+    ref_asset_id: $("#gRefAsset").value, model: $("#gModel").value,
+    quality: $("#gQuality").value, name: $("#gPackName").value.trim(),
+  };
+  const unit = priceOf(body.model, body.quality);
+  const n = body.mode === "separate" ? 4 : 1;
+  const go = async () => {
+    const res = await api("/api/characters/" + encodeURIComponent(cid) + "/turnaround",
+      { method: "POST", body });
+    renderGamePackResult(res.pack, $("#gTurnResult"));
+    toast(res.pack.demo ? "已产出演示四视图包（未调用 API）" : "四视图包已生成", "ok");
+    await loadGamePacks();
+    await refreshAll();
+  };
+  if (body.dry_run) await go();
+  else confirmModal("确认真实生成",
+    `将调用 API 生成 <b>${n}</b> 张图，预估 <b>$${(unit * n).toFixed(4)}</b>。<br><br>生成期间页面会等待响应，请勿重复点击。`,
+    go);
+}
+
+async function gameReproduce() {
+  const cid = requireGameCard();
+  if (!cid) return;
+  const body = {
+    dry_run: $("#gDry").checked, extra: $("#gExtra").value.trim(),
+    ref_asset_id: $("#gRefAsset").value, model: $("#gModel").value,
+    quality: $("#gQuality").value,
+  };
+  const unit = priceOf(body.model, body.quality);
+  const go = async () => {
+    const res = await api("/api/characters/" + encodeURIComponent(cid) + "/reproduce",
+      { method: "POST", body });
+    const a = res.asset || {};
+    $("#gTurnResult").innerHTML = `<div class="result-box ${a.demo ? "warn" : ""}">
+      <div><b>角色复现图已生成</b> · ${esc(a.id || "")}</div>
+      <div>${res.reference_used ? "使用了参考图（input_fidelity=high）" : "仅使用角色锚点"}${res.degraded ? " · " + esc(res.degraded) : ""}</div>
+      <div class="btn-row"><a class="btn ghost" href="/media/${esc(a.file || "")}" target="_blank" rel="noopener">查看图片</a></div>
+    </div>`;
+    toast(a.demo ? "已生成 Dry run 占位图" : "角色复现图已生成", "ok");
+    await refreshAll();
+  };
+  if (body.dry_run) await go();
+  else confirmModal("确认真实生成",
+    `将调用 API 生成 1 张，预估 <b>$${unit.toFixed(4)}</b>。`, go);
+}
+
+async function gameSprite() {
+  const assetId = $("#gSpriteAsset").value;
+  if (!assetId) { toast("请先选择一张 PNG 基准图", "err"); return; }
+  const body = {
+    asset_id: assetId,
+    actions: $$('#gActions input:checked').map((i) => i.value),
+    engines: $$('#gEngines input:checked').map((i) => i.value),
+    frames_per_action: Number($("#gFrames").value),
+    cell: Number($("#gCell").value), cols: Number($("#gCols").value),
+    fps: Number($("#gFps").value), bg: $("#gBg").value,
+    tolerance: Number($("#gTol").value), name: $("#gPackName").value.trim(),
+  };
+  if (!body.actions.length) { toast("至少选一个动作", "err"); return; }
+  const btn = document.querySelector('[data-action="g-sprite"]');
+  btn.disabled = true; btn.textContent = "正在切帧…";
+  try {
+    const res = await api("/api/sprites", { method: "POST", body });
+    renderGamePackResult(res.pack, $("#gSpriteResult"));
+    toast(`已生成 ${res.pack.frames} 帧精灵动画包`, "ok");
+    await loadGamePacks();
+  } finally {
+    btn.disabled = false; btn.textContent = "生成精灵动画包";
+  }
+}
+
+async function loadGamePacks() {
+  const res = await api("/api/packs");
+  G.packs = res.packs || [];
+  renderGamePacks();
+}
+
+function renderGamePacks() {
+  $("#gPacks").innerHTML = G.packs.map((p) => {
+    const d = p.data || {};
+    const img = d.sheet || d.turnaround || "";
+    const detail = d.frames
+      ? `${d.frames} 帧 · ${d.cell}px · ${(d.actions || []).join("/")}`
+      : `${(d.views || []).length} 视图 · ${esc(d.mode || "")}`;
+    return `<div class="pack-row">
+      ${img ? `<img class="pack-thumb" src="${esc(img)}" alt="">` : `<div class="pack-thumb"></div>`}
+      <div class="pack-info">
+        <div class="pack-name">${esc(p.name || p.id)} <span class="muted small">${esc(p.kind)}</span></div>
+        <div class="pack-meta">${esc(p.created_at)} · ${d.demo ? "演示包" : "真实生成"} · ${esc(detail)}</div>
+      </div>
+      <div class="pack-actions">
+        <a class="btn ghost" href="${esc(d.preview || "#")}" target="_blank" rel="noopener">预览</a>
+        <a class="btn ghost" href="${esc(d.download || "#")}">下载</a>
+        <button class="btn ghost" data-action="g-delete-pack" data-id="${esc(p.id)}">删除</button>
+      </div></div>`;
+  }).join("") || `<div class="muted small">还没有资产包。先用 Dry run 生成一个演示包看看结构。</div>`;
+}
+
+function deleteGamePack(pid) {
+  confirmModal("删除资产包", `确定删除 <b>${esc(pid)}</b> 吗？包目录、逐帧 PNG 和 ZIP 都会一并删除，无法恢复。`,
+    async () => {
+      await api("/api/packs/" + encodeURIComponent(pid), { method: "DELETE" });
+      await loadGamePacks();
+      toast("资产包已删除", "ok");
+    });
+}
+
+async function initGame() {
+  if (!G.meta) await prepareGame();
+  buildGameUI();
+  await Promise.all([loadGameCharacters(), refreshGameAssets(), loadGamePacks()]);
+  refreshGameEstimate();
+}
+
 async function boot() {
   try {
     const [cfg, styles, pricing, stats] = await Promise.all([
@@ -888,6 +1295,7 @@ async function boot() {
     renderStatus();
     renderCost();
     await initBatch();
+    await prepareGame();
     await loadAssets();
     await loadExports();
     switchView("gallery");
@@ -921,6 +1329,17 @@ document.addEventListener("click", async (e) => {
       }
       case "sync": switchView("export"); await doSync(); break;
       case "run-batch": await runBatch(); break;
+      case "g-extract": await gameExtract(); break;
+      case "g-load-extract": loadExtract(el.dataset.i); break;
+      case "g-save-card": await saveGameCard(); break;
+      case "g-new-card": newGameCard(); break;
+      case "g-delete-card": deleteGameCard(); break;
+      case "g-turnaround": await gameTurnaround(); break;
+      case "g-reproduce": await gameReproduce(); break;
+      case "g-prompt": await gamePromptPreview(false); break;
+      case "g-sprite": await gameSprite(); break;
+      case "g-refresh-packs": await loadGamePacks(); break;
+      case "g-delete-pack": deleteGamePack(el.dataset.id); break;
       case "do-export": await doExport(); break;
       case "do-sync": await doSync(); break;
       case "refresh-health": await loadHealth(); break;
@@ -992,8 +1411,15 @@ document.addEventListener("input", (e) => {
   if (e.target.closest("#styleEditor")) updateStylePreview();
 });
 
-document.addEventListener("change", (e) => {
+document.addEventListener("change", async (e) => {
   const id = e.target.id;
+  if (e.target.dataset && e.target.dataset.opt) {
+    e.target.closest(".opt").classList.toggle("on", e.target.checked);
+  }
+  if (id === "fCharacter") { await loadAssets(true); return; }
+  if (id === "gCardSelect") { await selectGameCard(e.target.value); return; }
+  if (id === "gModel") { refreshGameQuality(); return; }
+  if (["gQuality", "gTurnMode", "gDry"].includes(id)) { refreshGameEstimate(); return; }
   if (id === "setKeyShow") $("#setKey").type = e.target.checked ? "text" : "password";
   if (["fStyle", "fStatus", "fRating", "fSort", "fFav"].includes(id)) loadAssets();
   if (["bStyle", "bModel", "bQuality", "bCount", "bExtra", "bDry", "bBatch"].includes(id)) {

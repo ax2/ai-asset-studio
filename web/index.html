@@ -20,6 +20,7 @@
       <button class="nav-item active" data-view="gallery">资产画廊</button>
       <button class="nav-item" data-view="styles">风格配方</button>
       <button class="nav-item" data-view="batch">批量生成</button>
+      <button class="nav-item" data-view="game">角色与游戏资产</button>
       <button class="nav-item" data-view="export">导出与同步</button>
       <button class="nav-item" data-view="cost">成本看板</button>
       <button class="nav-item" data-view="settings">连接设置</button>
@@ -49,6 +50,7 @@
       <div class="toolbar">
         <input class="input" id="fQ" placeholder="搜索提示词、标签、编号">
         <select class="select" id="fStyle"><option value="">全部风格</option></select>
+        <select class="select" id="fCharacter"><option value="">全部角色</option></select>
         <select class="select" id="fStatus">
           <option value="">全部状态</option>
           <option value="raw">待筛选</option>
@@ -120,6 +122,113 @@
           <div class="panel-title mt">规则完整度</div>
           <div id="bEval"></div>
           <div class="hint mt">提示词由配方里的分块按顺序拼接，加上槽位变量和负面词。编辑分块请到「风格配方」页。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view hidden" id="view-game">
+      <div class="two-col game-col">
+        <div>
+          <div class="panel">
+            <div class="panel-title">1 · 从小说提取人物特征</div>
+            <textarea class="textarea" id="gNovel" style="min-height:130px"
+              placeholder="粘贴小说正文。有 API key 时用文本模型精提，否则用本地启发式；每条特征都带原文证据，可人工核对。"></textarea>
+            <div class="form mt">
+              <label>提取方式
+                <select class="select" id="gExtractMode">
+                  <option value="auto">自动（有 key 用模型，失败降级）</option>
+                  <option value="llm">强制文本模型</option>
+                  <option value="local">强制本地启发式（不花钱）</option>
+                </select>
+              </label>
+            </div>
+            <button class="btn wide mt" data-action="g-extract">提取人物特征</button>
+            <div class="hint" id="gExtractNote">提取结果不会自动入库，点「载入到角色卡」核对后再保存。</div>
+            <div id="gExtractResults" class="list mt"></div>
+          </div>
+
+          <div class="panel mt">
+            <div class="panel-title">2 · 角色卡与锚点 <span class="muted small" id="gCardBadge"></span></div>
+            <div class="form">
+              <label>已保存的角色<select class="select" id="gCardSelect"></select></label>
+              <label>角色名<input class="input" id="gName" placeholder="例如：林晚"></label>
+              <label>风格参考图（复现 / 逐视图生成时用 /images/edits）
+                <select class="select" id="gRefAsset"></select>
+              </label>
+            </div>
+            <div class="section-label">外貌特征（留空就不写进锚点）</div>
+            <div id="gProfileFields" class="profile-grid"></div>
+            <div class="section-label">角色锚点 <span class="muted small">复现时逐字复用</span></div>
+            <textarea class="textarea" id="gAnchor" style="min-height:150px"></textarea>
+            <div class="hint">改上面的特征会自动重建锚点并升级版本；直接改锚点则保留你的手工文本。版本变了说明外貌设定改过，旧图与新图不要混用。</div>
+            <div class="btn-row mt">
+              <button class="btn primary" data-action="g-save-card">保存角色卡</button>
+              <button class="btn" data-action="g-new-card">新建空白角色</button>
+              <button class="btn ghost" data-action="g-delete-card">删除角色</button>
+            </div>
+            <div class="info-box mt" id="gCardInfo"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="panel">
+            <div class="panel-title">3 · 人物多视角设定图 / 角色复现</div>
+            <div class="form">
+              <label>多视角模式<select class="select" id="gTurnMode"></select></label>
+              <label>模型<select class="select" id="gModel"></select></label>
+              <label>质量档<select class="select" id="gQuality"></select></label>
+              <label>附加提示词（可选）<input class="input" id="gExtra" placeholder="例如：双手自然下垂，表情平静"></label>
+              <label class="check"><input type="checkbox" id="gDry" checked> Dry run（不调用 API，只产出布局占位 / 演示图）</label>
+            </div>
+            <div class="estimate" id="gEstimate"></div>
+            <div class="btn-row">
+              <button class="btn primary" data-action="g-turnaround">生成四视图包</button>
+              <button class="btn" data-action="g-reproduce">复现单张角色图</button>
+              <button class="btn ghost" data-action="g-prompt">预览提示词</button>
+            </div>
+            <div id="gTurnResult" class="mt"></div>
+            <div class="panel-title mt">提示词预览</div>
+            <div class="prompt-preview" id="gPromptPreview"></div>
+            <div class="hint">sheet 模式一次生成四视图设定图再等分切图，最省且内部一致性最好；separate 模式逐视图生成，配合参考图 input_fidelity=high 保人物风格，成本约 4 倍。两种模式都把角色锚点逐字放在提示词最前面。</div>
+          </div>
+
+          <div class="panel mt">
+            <div class="panel-title">4 · 精灵动画切图（可直接进游戏引擎）</div>
+            <div class="form">
+              <label>基准图资产<select class="select" id="gSpriteAsset"></select></label>
+              <div class="field-row">
+                <label>每帧边长<input class="input" id="gCell" type="number" value="128" min="32" max="512"></label>
+                <label>每动作帧数<input class="input" id="gFrames" type="number" value="8" min="2" max="24"></label>
+              </div>
+              <div class="field-row">
+                <label>每行帧数<input class="input" id="gCols" type="number" value="8" min="1" max="16"></label>
+                <label>帧率 fps<input class="input" id="gFps" type="number" value="8" min="1" max="30"></label>
+              </div>
+              <label>背景处理
+                <select class="select" id="gBg">
+                  <option value="auto">自动按四角颜色抠背景</option>
+                  <option value="none">不抠图，保留原背景</option>
+                  <option value="#ffffff">指定白色背景抠色</option>
+                  <option value="#000000">指定黑色背景抠色</option>
+                </select>
+              </label>
+              <label>抠色容差<input class="input" id="gTol" type="number" value="40" min="0" max="200"></label>
+              <label>包名（可选）<input class="input" id="gPackName" placeholder="留空按资产名命名"></label>
+            </div>
+            <div class="section-label">动作（至少选一个）</div>
+            <div id="gActions" class="chip-row"></div>
+            <div class="section-label">导出目标</div>
+            <div id="gEngines" class="chip-row"></div>
+            <button class="btn primary wide mt" data-action="g-sprite">生成精灵动画包</button>
+            <div id="gSpriteResult" class="mt"></div>
+            <div class="hint">从同一张基准图做确定性的位移 / 挤压 / 摆动 / 镜像变换，帧天然对齐——这是让 AI「画 8 帧」做不到的。输出 sheet.png、逐帧 PNG、Aseprite / Phaser JSON、Godot .tres、Unity 自动切片脚本、RPG Maker 行走图与可播放预览。</div>
+          </div>
+
+          <div class="panel mt">
+            <div class="panel-title">5 · 已生成的资产包</div>
+            <div class="btn-row"><button class="btn ghost" data-action="g-refresh-packs">刷新列表</button></div>
+            <div id="gPacks" class="list mt"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -223,14 +332,21 @@
           <li>确认配方稳定后，到「连接设置」粘贴 API key、勾选「记住到本机」并点「验证连接」。密钥会加密保存在仓库外的用户目录，重启后自动生效；也可以改用环境变量 <code>OPENAI_API_KEY</code>。取消 Dry run 才会真正调用 API。</li>
           <li>在画廊点开一张图，可直接改提示词、保存版本、一键复现、打分、加标签、标为精选。</li>
           <li>精选资产可导出 ZIP 素材包，或一键同步到资产盘（<code>D:/gdrive.photo/ai-assets</code>，即 H: 对应的本地目录，会由 Google Drive 自动同步到云端）。</li>
+          <li>做游戏角色时到「角色与游戏资产」：粘贴小说提取人物特征 → 核对并保存角色卡（生成带版本的锚点）→ 生成四视图设定图或精灵动画切图包。</li>
         </ol>
+        <div class="panel-title mt">角色一致性与动画切图</div>
+        <p><b>角色锚点</b>是一段固定的、带版本号的英文人物设定，每次生成逐字放在提示词最前面。改外貌字段会自动重建锚点并升级版本；直接编辑锚点则保留手工文本。版本变了说明设定改过，旧图和新图不要混用。勾选参考图后，复现和逐视图生成会走 <code>/images/edits</code> 并设 <code>input_fidelity=high</code>，这是目前保持人物长相与画风最有效的手段。</p>
+        <p><b>多视角</b>的 sheet 模式一次生成四格设定图再等分切图，只花 1 张的钱、内部一致性最好；separate 模式逐视图生成，4 张成本，但可逐张换姿势、配参考图。两种都把正面 / 3-4 侧 / 正侧面 / 背面四张独立 PNG 打进包里。</p>
+        <p><b>精灵动画</b>不调用 API：从同一张基准 PNG 做确定性的位移、挤压、摆动、镜像变换，帧天然对齐。输出 sheet.png、逐帧 PNG、Aseprite/Phaser JSON、Godot 4 <code>.tres</code>、Unity 自动切片脚本、RPG Maker 行走图和可播放的 preview.html。四角自动抠背景；边缘残留就调容差，或改用 <code>none</code> 保留原背景。</p>
         <div class="panel-title mt">目录</div>
-        <pre>styles/            风格配方（可提交到仓库）
+        <pre>styles/            风格配方（人物多视角是 character-turnaround.json）
 data/raw/           本地暂存的生成图
-data/keepers/       精选标记（索引在 data/meta.jsonl）
-data/export/        导出的 ZIP
+data/assets.db      SQLite 资产索引（含角色卡与资产包记录）
+data/thumbs/        缩略图缓存
+data/packs/         多视角包与精灵动画包（目录 + ZIP）
+data/export/        导出的素材包 ZIP
 web/                管理界面
-studio/             后端模块
+studio/             后端模块（characters / turnaround / sprites / png）
 server.py           本地服务入口
 tools/generate.py   命令行入口</pre>
         <div class="panel-title mt">顺序</div>

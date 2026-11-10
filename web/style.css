@@ -244,6 +244,55 @@ th { color: var(--faint); font-weight: 400; }
 .toast.ok { border-color: var(--teal-dim); color: var(--teal); }
 .toast.err { border-color: #7A3B3B; color: var(--red); }
 
+/* ---- Character & game-asset pipeline ---- */
+.two-col.game-col { grid-template-columns: minmax(360px, 1fr) minmax(420px, 1.12fr); }
+.profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.profile-grid label { display: flex; flex-direction: column; gap: 4px; font-size: 11px; color: var(--muted); }
+.profile-grid label.wide { grid-column: 1 / -1; }
+.profile-grid input { width: 100%; }
+.profile-grid .conf { font-size: 10px; color: var(--faint); }
+.profile-grid .conf.inferred { color: var(--amber); }
+.chip-row { display: flex; flex-wrap: wrap; gap: 7px; }
+.opt {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 11px;
+  color: var(--muted); background: var(--panel-2); border: 1px solid var(--line);
+  border-radius: 14px; padding: 5px 10px; cursor: pointer; user-select: none;
+}
+.opt input { accent-color: var(--teal); margin: 0; }
+.opt.on { border-color: var(--teal-dim); color: var(--teal); }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.field-row label { display: flex; flex-direction: column; gap: 6px; color: var(--muted); font-size: 12px; }
+.pack-row {
+  display: flex; gap: 11px; align-items: center; padding: 10px;
+  background: var(--panel-2); border: 1px solid var(--line); border-radius: 9px;
+}
+.pack-thumb {
+  width: 68px; height: 68px; object-fit: contain; flex: 0 0 68px;
+  background: #2B303A; border-radius: 6px; border: 1px solid var(--line);
+}
+.pack-info { flex: 1; min-width: 0; }
+.pack-name { font-size: 12px; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pack-meta { font-size: 11px; color: var(--faint); margin-top: 4px; line-height: 1.6; }
+.pack-actions { display: flex; flex-direction: column; gap: 5px; }
+.pack-actions a, .pack-actions button { font-size: 11px; text-decoration: none; text-align: center; }
+.result-box {
+  background: var(--panel-2); border: 1px solid var(--teal-dim); border-radius: 9px;
+  padding: 12px; font-size: 12px; line-height: 1.8; color: var(--muted);
+}
+.result-box.warn { border-color: #7A632B; color: var(--amber); }
+.result-box a { color: var(--blue); }
+.extract-card {
+  background: var(--panel-2); border: 1px solid var(--line); border-radius: 9px;
+  padding: 11px 12px; font-size: 12px;
+}
+.extract-card .head { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.extract-card .name { color: var(--text); font-size: 13px; }
+.extract-card .traits { color: var(--faint); font-size: 11px; line-height: 1.8; margin-top: 7px; }
+@media (max-width: 980px) {
+  .two-col.game-col { grid-template-columns: 1fr; }
+  .profile-grid { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 980px) {
   .two-col { grid-template-columns: 1fr; }
   .sidebar { width: 170px; flex-basis: 170px; }

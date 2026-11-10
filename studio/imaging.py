@@ -11,6 +11,7 @@ import json
 import os
 import urllib.error
 import urllib.request
+import uuid
 from pathlib import Path
 
 from . import config, pricing, store, thumbs
@@ -22,6 +23,28 @@ def endpoint(cfg: dict) -> str:
     """Configurable so a compatible gateway can be used later."""
     base = str(cfg.get("api_base") or "https://api.openai.com/v1").rstrip("/")
     return base + "/images/generations"
+
+
+def edit_endpoint(cfg: dict) -> str:
+    base = str(cfg.get("api_base") or "https://api.openai.com/v1").rstrip("/")
+    return base + "/images/edits"
+
+
+def _multipart(fields: dict, files: list) -> tuple[bytes, str]:
+    """Build multipart/form-data without third-party packages."""
+    boundary = "----aiAssetStudio" + uuid.uuid4().hex
+    out = []
+    for key, value in fields.items():
+        out.append(("--%s\r\nContent-Disposition: form-data; name=\"%s\"\r\n\r\n%s\r\n"
+                    % (boundary, key, value)).encode("utf-8"))
+    for name, filename, data in files:
+        out.append(("--%s\r\nContent-Disposition: form-data; name=\"%s\"; "
+                    "filename=\"%s\"\r\nContent-Type: image/png\r\n\r\n"
+                    % (boundary, name, filename)).encode("utf-8"))
+        out.append(data)
+        out.append(b"\r\n")
+    out.append(("--%s--\r\n" % boundary).encode("utf-8"))
+    return b"".join(out), "multipart/form-data; boundary=" + boundary
 
 
 def _opener(cfg: dict):
@@ -241,6 +264,59 @@ def check_connection(cfg: dict) -> dict:
     return out
 
 
+def call_openai_edit(cfg: dict, prompt: str, images: list[bytes], *,
+                     model: str | None = None, quality: str | None = None,
+                     size: str | None = None, background: str = "transparent",
+                     input_fidelity: str = "high") -> bytes:
+    """Generate an image guided by reference images of an existing character.
+
+    input_fidelity="high" is the API's own lever for matching facial features
+    and art style; together with a fixed character anchor it is the strongest
+    consistency mechanism available. GPT Image models always return b64_json.
+    """
+    key = config.api_key(cfg)
+    if not key:
+        raise RuntimeError("尚未设置 API key，无法使用参考图生成。")
+    if not images:
+        raise ValueError("参考图生成至少需要一张图片。")
+    model = model or str(cfg.get("edit_model") or cfg["default_model"])
+    quality = quality or str(cfg.get("default_quality") or "low")
+    size = size or str(cfg.get("default_size") or "1024x1024")
+    fields = {
+        "model": model, "prompt": prompt, "n": "1", "size": size,
+        "quality": quality, "background": background,
+        "output_format": "png", "input_fidelity": input_fidelity,
+    }
+    files = [("image", f"reference_{i}.png", data)
+             for i, data in enumerate(images[:16])]
+    body, ctype = _multipart(fields, files)
+    req = urllib.request.Request(
+        edit_endpoint(cfg), data=body,
+        headers={"Authorization": f"Bearer {key}", "Content-Type": ctype},
+        method="POST")
+    opener = _opener(cfg)
+    try:
+        with opener.open(req, timeout=300) as resp:
+            payload = json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", "replace")[:500]
+        if exc.code == 401:
+            raise RuntimeError("HTTP 401: API key 无效或已撤销。") from None
+        raise RuntimeError(f"参考图生成失败 HTTP {exc.code}: {detail}") from None
+    except urllib.error.URLError as exc:
+        raise RuntimeError(f"无法连接参考图接口：{exc.reason}。检查 api_proxy。") from None
+    try:
+        item = payload["data"][0]
+    except (KeyError, IndexError, TypeError):
+        raise RuntimeError("参考图接口返回中没有图片数据") from None
+    if item.get("b64_json"):
+        return base64.b64decode(item["b64_json"])
+    if item.get("url"):
+        with opener.open(item["url"], timeout=120) as resp:
+            return resp.read()
+    raise RuntimeError("参考图接口既没有 b64_json 也没有 url")
+
+
 def check_metadata(path: Path) -> str:
     if path.suffix.lower() == ".svg":
         return "demo"
@@ -262,7 +338,8 @@ def generate(cfg: dict, *, style_id: str, prompt: str | None = None,
              quality: str | None = None, size: str | None = None,
              dry_run: bool = True, batch_estimate: bool = False,
              source: str = "generate", parent_id: str | None = None,
-             asset_kind: str = "", note: str = "") -> dict:
+             asset_kind: str = "", note: str = "", character_id: str = "",
+             anchor_version: int = 0) -> dict:
     style = load_style(cfg, style_id)
     if not style:
         raise RuntimeError(f"unknown style: {style_id}")
@@ -316,6 +393,8 @@ def generate(cfg: dict, *, style_id: str, prompt: str | None = None,
         "favorite": False,
         "status": "raw",
         "note": note,
+        "character_id": character_id,
+        "anchor_version": anchor_version,
         "metadata": check_metadata(folder / filename),
         "created_at": store.now(),
     }

@@ -33,6 +33,7 @@ CREATE TABLE IF NOT EXISTS assets (
   cost_usd    REAL NOT NULL DEFAULT 0,
   model       TEXT NOT NULL DEFAULT '',
   file        TEXT NOT NULL DEFAULT '',
+  character_id TEXT NOT NULL DEFAULT '',
   search      TEXT NOT NULL DEFAULT '',
   data        TEXT NOT NULL
 );
@@ -56,6 +57,23 @@ CREATE TABLE IF NOT EXISTS prompt_versions (
 );
 CREATE INDEX IF NOT EXISTS idx_versions_style ON prompt_versions(style_id, created_at DESC);
 CREATE TABLE IF NOT EXISTS meta (k TEXT PRIMARY KEY, v TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS characters (
+  id         TEXT PRIMARY KEY,
+  name       TEXT NOT NULL DEFAULT '',
+  created_at TEXT NOT NULL DEFAULT '',
+  updated_at TEXT NOT NULL DEFAULT '',
+  data       TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_characters_name ON characters(name);
+CREATE TABLE IF NOT EXISTS packs (
+  id         TEXT PRIMARY KEY,
+  kind       TEXT NOT NULL DEFAULT '',
+  name       TEXT NOT NULL DEFAULT '',
+  created_at TEXT NOT NULL DEFAULT '',
+  path       TEXT NOT NULL DEFAULT '',
+  data       TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_packs_created ON packs(created_at DESC);
 """
 
 _ORDER = {
@@ -68,6 +86,7 @@ _ORDER = {
 _ALLOWED_PATCH = {
     "rating", "tags", "favorite", "note", "status", "prompt", "blocks",
     "slots", "style_id", "asset_kind", "prompt_version", "label",
+    "character_id", "anchor_version",
 }
 
 
@@ -88,6 +107,11 @@ def _connect(cfg: dict) -> sqlite3.Connection:
     con.row_factory = sqlite3.Row
     con.execute("PRAGMA busy_timeout=20000")
     return con
+
+
+def connect(cfg: dict) -> sqlite3.Connection:
+    """Public connection helper for sibling modules (characters, sprites, ...)."""
+    return _connect(cfg)
 
 
 def _int(value) -> int:
@@ -134,13 +158,14 @@ def _upsert(con: sqlite3.Connection, record: dict) -> None:
     payload = json.dumps(record, ensure_ascii=False)
     con.execute(
         "INSERT OR REPLACE INTO assets "
-        "(id,created_at,style_id,status,rating,favorite,demo,cost_usd,model,file,search,data) "
-        "VALUES(?,?,?,?,?,?,?,?,?,?,?,?)",
+        "(id,created_at,style_id,status,rating,favorite,demo,cost_usd,model,file,character_id,search,data) "
+        "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)",
         (rid, str(record.get("created_at") or ""), str(record.get("style_id") or ""),
          str(record.get("status") or "raw"), _int(record.get("rating")),
          1 if record.get("favorite") else 0, 1 if record.get("demo") else 0,
          _float(record.get("cost_usd")), str(record.get("model") or ""),
-         str(record.get("file") or ""), _search_text(record), payload))
+         str(record.get("file") or ""), str(record.get("character_id") or ""),
+         _search_text(record), payload))
     con.execute("DELETE FROM asset_tags WHERE asset_id=?", (rid,))
     tags = [str(t).strip() for t in (record.get("tags") or []) if str(t).strip()]
     if tags:
@@ -161,6 +186,11 @@ def ensure(cfg: dict) -> dict:
         try:
             con.execute("PRAGMA journal_mode=WAL")
             con.executescript(_SCHEMA)
+            # Databases created by earlier versions need the new column.
+            cols = {r[1] for r in con.execute("PRAGMA table_info(assets)")}
+            if "character_id" not in cols:
+                con.execute("ALTER TABLE assets ADD COLUMN character_id TEXT NOT NULL DEFAULT ''")
+            con.execute("CREATE INDEX IF NOT EXISTS idx_assets_char ON assets(character_id)")
             done = con.execute("SELECT v FROM meta WHERE k='jsonl_migrated'").fetchone()
             n_assets = n_versions = 0
             if done is None:
@@ -231,7 +261,8 @@ def update(cfg: dict, asset_id: str, patch: dict):
     return record
 
 
-def _where(q="", style="", tag="", status="", favorite=False, min_rating=0):
+def _where(q="", style="", tag="", status="", favorite=False, min_rating=0,
+           character_id=""):
     clauses, args = [], []
     if style:
         clauses.append("style_id=?")
@@ -239,6 +270,9 @@ def _where(q="", style="", tag="", status="", favorite=False, min_rating=0):
     if status:
         clauses.append("status=?")
         args.append(status)
+    if character_id:
+        clauses.append("character_id=?")
+        args.append(character_id)
     if favorite:
         clauses.append("favorite=1")
     if min_rating:
@@ -256,9 +290,9 @@ def _where(q="", style="", tag="", status="", favorite=False, min_rating=0):
 
 
 def query_page(cfg: dict, *, q="", style="", tag="", status="", favorite=False,
-               min_rating=0, sort="newest", limit=60, offset=0) -> tuple[list, int]:
+               min_rating=0, character_id="", sort="newest", limit=60, offset=0) -> tuple[list, int]:
     """Return (rows, total). Filtering, counting and ordering all happen in SQL."""
-    where, args = _where(q, style, tag, status, favorite, min_rating)
+    where, args = _where(q, style, tag, status, favorite, min_rating, character_id)
     order = _ORDER.get(sort, _ORDER["newest"])
     limit = max(1, min(int(limit or 60), 2000))
     offset = max(0, int(offset or 0))

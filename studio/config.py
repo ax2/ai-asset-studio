@@ -22,6 +22,9 @@ DEFAULTS = {
     "default_model": "gpt-image-1.5",
     "default_quality": "low",
     "default_size": "1024x1024",
+    "text_model": "gpt-5.4-mini",
+    "edit_model": "gpt-image-1.5",
+    "sprite_cell": 128,
     "batch_discount": 0.5,
     "api_key_env": "OPENAI_API_KEY",
     "api_base": "https://api.openai.com/v1",
@@ -41,6 +44,7 @@ ENV_OVERRIDES = {
 _PUBLIC_KEYS = (
     "asset_root", "local_root", "host", "port", "monthly_budget_usd",
     "image_budget_usd", "default_model", "default_quality", "default_size",
+    "text_model", "edit_model", "sprite_cell",
     "batch_discount", "api_key_env", "api_base", "api_proxy", "sync_include_demo",
 )
 
@@ -68,7 +72,7 @@ def load() -> dict:
     cfg["web_dir"] = ROOT / "web"
     cfg["asset_root_path"] = Path(str(cfg["asset_root"]))
 
-    for sub in ("raw", "keepers", "export", "thumbs"):
+    for sub in ("raw", "keepers", "export", "thumbs", "packs"):
         (cfg["local"] / sub).mkdir(parents=True, exist_ok=True)
 
     # Local import avoids a cycle: store receives cfg but never imports config.

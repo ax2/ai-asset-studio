@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 import mimetypes
+import shutil
 import sys
 import traceback
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -14,7 +15,8 @@ from urllib.parse import parse_qs, unquote, urlparse
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 
-from studio import config, exporter, imaging, pricing, store, thumbs  # noqa: E402
+from studio import (characters, config, exporter, imaging, pricing, sprites,  # noqa: E402
+                    store, thumbs, turnaround)
 
 CFG: dict = {}
 MAX_BODY = 2 * 1024 * 1024
@@ -108,6 +110,8 @@ class Handler(BaseHTTPRequestHandler):
                 self._thumb(path[len("/thumb/"):])
             elif path.startswith("/media/"):
                 self._media(path[len("/media/"):])
+            elif path.startswith("/pack/"):
+                self._pack_file(path[len("/pack/"):])
             else:
                 self._static(path)
         except Exception as exc:
@@ -200,6 +204,7 @@ class Handler(BaseHTTPRequestHandler):
                 CFG, q=p.get("q", ""), style=p.get("style", ""), tag=p.get("tag", ""),
                 status=p.get("status", ""), favorite=p.get("favorite") == "1",
                 min_rating=int(p.get("min_rating") or 0),
+                character_id=p.get("character_id", ""),
                 sort=p.get("sort", "newest"), limit=limit, offset=offset)
             return self._json(200, {
                 "assets": rows, "count": len(rows), "total": total,
@@ -232,7 +237,169 @@ class Handler(BaseHTTPRequestHandler):
             files = [{"name": f.name, "size": f.stat().st_size}
                      for f in sorted(folder.glob("*.zip"), reverse=True)]
             return self._json(200, {"exports": files[:30]})
+
+        # ---- Game asset pipeline: characters, turnarounds, sprites, packs ----
+        if method == "GET" and seg == ["game", "meta"]:
+            return self._json(200, {
+                "profile_fields": [{"key": k, "label": v}
+                                   for k, v in characters.PROFILE_FIELDS],
+                "actions": [{"key": k, "label": v} for k, v in sprites.ACTIONS.items()],
+                "engines": sprites.ENGINES,
+                "views": [{"key": k, "label": v} for k, v, _ in turnaround.VIEWS],
+                "turnaround_modes": [
+                    {"key": "sheet", "label": "一次生成四视图设定图后切分（省、一致性最好）"},
+                    {"key": "separate", "label": "逐视图生成（可用参考图保风格，4 倍成本）"},
+                ],
+                "default_cell": int(CFG.get("sprite_cell") or 128),
+                "default_model": CFG.get("default_model"),
+                "edit_model": CFG.get("edit_model"),
+                "default_quality": CFG.get("default_quality"),
+                "has_key": config.has_key(CFG),
+            })
+
+        if method == "GET" and seg == ["characters"]:
+            return self._json(200, {"characters": characters.list_cards(CFG)})
+        if method == "POST" and seg == ["characters", "extract"]:
+            b = self._body()
+            return self._json(200, characters.extract(
+                CFG, str(b.get("text") or ""), str(b.get("mode") or "auto")))
+        if method == "POST" and seg == ["characters"]:
+            return self._json(200, characters.put_card(CFG, self._body() or {}))
+        if method == "GET" and len(seg) == 2 and seg[0] == "characters":
+            card = characters.get_card(CFG, seg[1])
+            return self._json(200, card) if card else self._err(404, "character not found")
+        if method == "DELETE" and len(seg) == 2 and seg[0] == "characters":
+            ok = characters.delete_card(CFG, seg[1])
+            return self._json(200, {"ok": ok}) if ok else self._err(404, "character not found")
+        if method == "GET" and len(seg) == 3 and seg[0] == "characters" and seg[2] == "prompt":
+            card = characters.get_card(CFG, seg[1])
+            if not card:
+                return self._err(404, "character not found")
+            view = p.get("view", "")
+            return self._json(200, {
+                "anchor": card.get("anchor") or "",
+                "anchor_version": card.get("anchor_version"),
+                "prompt": (turnaround.build_prompt(CFG, card, view)
+                           if view else turnaround.build_single_prompt(CFG, card, p.get("extra", ""))),
+            })
+        if (method == "POST" and len(seg) == 3 and seg[0] == "characters"
+                and seg[2] == "reproduce"):
+            return self._character_reproduce(seg[1])
+        if (method == "POST" and len(seg) == 3 and seg[0] == "characters"
+                and seg[2] == "turnaround"):
+            return self._turnaround(seg[1])
+
+        if method == "POST" and seg == ["sprites"]:
+            return self._sprite_pack()
+        if method == "GET" and seg == ["packs"]:
+            return self._json(200, {"packs": characters.list_packs(CFG, p.get("kind", ""))})
+        if method == "GET" and len(seg) == 3 and seg[0] == "packs" and seg[2] == "zip":
+            return self._pack_zip(seg[1])
+        if method == "GET" and len(seg) == 2 and seg[0] == "packs":
+            pack = characters.get_pack(CFG, seg[1])
+            return self._json(200, pack) if pack else self._err(404, "pack not found")
+        if method == "DELETE" and len(seg) == 2 and seg[0] == "packs":
+            return self._delete_pack(seg[1])
         return self._err(404, "unknown endpoint")
+
+    def _character_reproduce(self, cid: str):
+        b = self._body()
+        dry = bool(b.get("dry_run", True))
+        if not dry and not config.has_key(CFG):
+            return self._err(400, NO_KEY_MSG)
+        try:
+            res = turnaround.reproduce(
+                CFG, character_id=cid, extra=str(b.get("extra") or ""),
+                ref_asset_id=str(b.get("ref_asset_id") or ""), dry_run=dry,
+                model=b.get("model") or None, quality=b.get("quality") or None,
+                size=b.get("size") or None)
+        except ValueError as exc:
+            return self._err(400, str(exc))
+        return self._json(200, res)
+
+    def _turnaround(self, cid: str):
+        b = self._body()
+        dry = bool(b.get("dry_run", True))
+        if not dry and not config.has_key(CFG):
+            return self._err(400, NO_KEY_MSG)
+        try:
+            res = turnaround.build(
+                CFG, character_id=cid, mode=str(b.get("mode") or "sheet"),
+                ref_asset_id=str(b.get("ref_asset_id") or ""), dry_run=dry,
+                model=b.get("model") or None, quality=b.get("quality") or None,
+                size=b.get("size") or None, name=str(b.get("name") or ""))
+        except ValueError as exc:
+            return self._err(400, str(exc))
+        return self._json(200, {"ok": True, "pack": res})
+
+    def _sprite_pack(self):
+        b = self._body()
+        asset = store.get(CFG, str(b.get("asset_id") or ""))
+        if not asset:
+            return self._err(404, "asset not found")
+        try:
+            res = sprites.build(
+                CFG, asset=asset, actions=b.get("actions"),
+                frames_per_action=int(b.get("frames_per_action") or 8),
+                cell=int(b.get("cell") or CFG.get("sprite_cell") or 128),
+                cols=int(b.get("cols") or 8), fps=int(b.get("fps") or 8),
+                bg=str(b.get("bg") or "auto"),
+                tolerance=int(b.get("tolerance") or 40),
+                engines=b.get("engines"), name=str(b.get("name") or ""))
+        except (ValueError, TypeError) as exc:
+            return self._err(400, str(exc))
+        return self._json(200, {"ok": True, "pack": res})
+
+    def _pack_zip(self, pid: str):
+        pack = characters.get_pack(CFG, pid)
+        if not pack:
+            return self._err(404, "pack not found")
+        path = Path(str(pack.get("path") or ""))
+        base = (CFG["local"] / "packs").resolve()
+        if not path.is_file() or not path.resolve().is_relative_to(base):
+            return self._err(404, "pack zip missing")
+        return self._download(path.read_bytes(), path.name, "application/zip")
+
+    def _delete_pack(self, pid: str):
+        pack = characters.get_pack(CFG, pid)
+        if not pack:
+            return self._err(404, "pack not found")
+        base = (CFG["local"] / "packs").resolve()
+        for raw in (pack.get("path"), (pack.get("data") or {}).get("dir"),
+                    (pack.get("data") or {}).get("zip")):
+            if not raw:
+                continue
+            target = Path(str(raw)).resolve()
+            if not target.is_relative_to(base) or target == base:
+                continue
+            if target.is_dir():
+                shutil.rmtree(target, ignore_errors=True)
+            elif target.is_file():
+                target.unlink(missing_ok=True)
+        with store.connect(CFG) as con:
+            con.execute("DELETE FROM packs WHERE id=?", (pid,))
+        return self._json(200, {"ok": True, "deleted": pid})
+
+    def _download(self, body: bytes, filename: str, ctype: str):
+        safe = "".join(c for c in filename if c.isalnum() or c in ".-_") or "pack.zip"
+        self.send_response(200)
+        self.send_header("Content-Type", ctype)
+        self.send_header("Content-Length", str(len(body)))
+        self.send_header("Content-Disposition", f'attachment; filename="{safe}"')
+        self.send_header("Cache-Control", "no-store")
+        self.send_header("X-Content-Type-Options", "nosniff")
+        self.end_headers()
+        if self.command != "HEAD":
+            self.wfile.write(body)
+
+    def _pack_file(self, rel: str):
+        """Serve files inside one generated pack (preview.html, sheet.png, views/)."""
+        base = (CFG["local"] / "packs").resolve()
+        target = (base / rel).resolve()
+        if not target.is_relative_to(base) or not target.is_file():
+            return self._err(404, "not found")
+        ctype = MIME.get(target.suffix.lower()) or mimetypes.guess_type(target.name)[0]
+        return self._send(200, target.read_bytes(), ctype or "application/octet-stream")
 
     def _reproduce(self, asset_id: str):
         original = store.get(CFG, asset_id)
