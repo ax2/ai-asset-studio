@@ -33,7 +33,11 @@ def export_zip(cfg: dict, rows: list, name: str | None = None,
                  "prompt", "model", "quality", "size", "cost_usd",
                  "character_id", "anchor_version", "parent_id", "source",
                  "asset_kind", "note", "rating", "tags", "favorite",
-                 "status", "demo", "metadata", "created_at")
+                 "status", "demo", "metadata", "created_at",
+                 # comic / scene batches
+                 "batch_id", "scene_id", "panel_no", "comic_caption",
+                 "comic_dialogue", "comic_characters", "composition",
+                 "reference_used", "degraded")
 
     manifest, lines, copied = [], [], 0
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as zf:
@@ -42,7 +46,7 @@ def export_zip(cfg: dict, rows: list, name: str | None = None,
             if not src.is_file():
                 continue
             zf.write(src, arcname=f"images/{row.get('filename') or src.name}")
-            manifest.append({k: row.get(k) for k in META_KEYS})
+            manifest.append({k: row[k] for k in META_KEYS if k in row})
             lines.append(f"[{row.get('id')}] {row.get('style_id')}\n{row.get('prompt')}\n")
             copied += 1
         zf.writestr("manifest.json",

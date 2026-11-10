@@ -197,6 +197,30 @@ def main() -> None:
           and b"background" in sent[1] and b"background" not in sent[2]
           and out == b"\x00\x00\x00")
 
+    # Scene cards are first-class reproducible assets.
+    from studio import scenes as scn
+    test_scene = {"id": "__selftest_scene__", "name": "自检庭院",
+                  "description": "空庭院", "prompt_extra": "empty courtyard",
+                  "time_of_day": "morning", "mood": "quiet",
+                  "batch_id": "__selftest__"}
+    scn.put(cfg, test_scene)
+    got = scn.get(cfg, "__selftest_scene__")
+    check("scene card roundtrip", got is not None and got["name"] == "自检庭院")
+    check("scene card timestamped", bool(got and got.get("created_at")))
+    sp = scn.build_prompt(cfg, test_scene, style_id="sanguo-comic",
+                          visual_rules="warm parchment")
+    check("scene prompt forbids text and people",
+          "no text" in sp and "no people" in sp)
+    anchor = "CHARACTER ANCHOR verbatim."
+    pp = scn.panel_prompt(
+        cfg, {"no": 1, "visual": "a boy stands", "composition": "wide",
+              "characters": ["曹冲"]}, test_scene,
+        style_id="sanguo-comic", visual_rules="warm parchment", anchors=[anchor])
+    check("panel prompt keeps anchor verbatim", anchor in pp)
+    check("panel prompt is single-frame", "SINGLE COMIC PANEL" in pp)
+    scn.delete(cfg, "__selftest_scene__")
+    check("scene card cleaned up", scn.get(cfg, "__selftest_scene__") is None)
+
     # Pack index consistency: GUI links must resolve to the DB record.
     for p in characters.list_packs(cfg):
         check("pack indexed " + p["id"][:16], characters.get_pack(cfg, p["id"]) is not None)

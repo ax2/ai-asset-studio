@@ -7,6 +7,7 @@ cost dashboard and the pre-flight estimate never disagree.
 from __future__ import annotations
 
 IMAGE_PRICES = {
+    "gpt-image-2.6-sunburst": {"low": 0.006, "medium": 0.053, "high": 0.211},
     "gpt-image-2": {"low": 0.006, "medium": 0.053, "high": 0.211},
     "gpt-image-1.5": {"low": 0.009, "medium": 0.034, "high": 0.133},
     "gpt-image-1": {"low": 0.011, "medium": 0.042, "high": 0.167},
@@ -14,10 +15,17 @@ IMAGE_PRICES = {
 }
 
 TEXT_PRICES = {
+    "gpt-6.1-sol": {"input": 1.25, "output": 10.00},
     "gpt-5.4-nano": {"input": 0.20, "output": 1.25},
     "gpt-5.4-mini": {"input": 0.75, "output": 4.50},
     "gpt-5.4": {"input": 2.50, "output": 15.00},
 }
+
+# /v1/models does not publish list prices. These entries are conservative
+# placeholders pegged to the previous generation's same tier, NOT official
+# prices. Update this table if an official price is published: both the cost
+# dashboard and the pre-flight estimate read from here.
+ESTIMATED_MODELS = ("gpt-image-2.6-sunburst", "gpt-6.1-sol")
 
 
 def models() -> list:
@@ -41,4 +49,5 @@ def estimate(model: str, quality: str, count: int, batch: bool = False) -> float
 
 
 def price_table() -> dict:
-    return {"image": IMAGE_PRICES, "text": TEXT_PRICES, "batch_discount": 0.5}
+    return {"image": IMAGE_PRICES, "text": TEXT_PRICES,
+            "batch_discount": 0.5, "estimated_models": list(ESTIMATED_MODELS)}

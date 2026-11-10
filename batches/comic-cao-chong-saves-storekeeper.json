@@ -1,0 +1,271 @@
+{
+  "id": "comic-cao-chong-saves-storekeeper",
+  "title": "鼠啮马鞍",
+  "subtitle": "曹冲用一件破衣，替库吏解开了死结。",
+  "story_source": "《三国志》卷二十《魏书·武文世王公传·邓哀王冲传》载：“太祖马鞍在库，而为鼠所啮。库吏惧必死，议欲面缚首罪，犹惧不免。冲谓曰：‘待三日中，然后自归。’冲于是以刀穿单衣，如鼠啮者，谬为失意，貌有愁色。太祖问之，冲对曰：‘世俗以为鼠啮衣者，其主不吉。今单衣见啮，是以忧戚。’太祖曰：‘此妄言耳，无所苦也。’俄而库吏以啮鞍闻，太祖笑曰：‘儿衣在侧，尚啮，况鞍县柱乎？’一无所问。”",
+  "why_not_in_romance": "选用候选三“曹冲智救库吏”。通行毛宗岗评改一百二十回本《三国演义》未叙写此事：其中没有曹冲划破单衣、借鼠啮衣服的不祥俗说引出曹操宽解、继而使库吏免受追究的情节。本脚本直接依据《三国志·邓哀王冲传》，不是对演义既有场面的改名或改写；此处的未收录判断以该通行本为范围，不泛指所有三国题材改编。",
+  "synopsis": "曹操存放在库中的马鞍被老鼠咬坏，库吏惧怕获罪。曹冲让他暂缓自陈，暗中划破自己的单衣，假称鼠啮衣服令人不吉。曹操劝儿子不必忧虑。待库吏禀报坏鞍，曹操想到儿衣也遭鼠啮，笑而不究。",
+  "characters": [
+    {
+      "name": "曹操",
+      "slug": "cao-cao",
+      "existing": true,
+      "role": "曹冲之父，掌军政的汉末权臣",
+      "profile": {
+        "age": "成年，沿用已有曹操资产，不另设年龄外观",
+        "gender": "男",
+        "role": "父亲与最终裁断者",
+        "era": "东汉建安年间，建安十三年以前",
+        "face": "严格沿用已有曹操资产的面部结构",
+        "eyes": "严格沿用已有曹操资产",
+        "skin": "严格沿用已有曹操资产",
+        "build": "严格沿用已有曹操资产的体型比例",
+        "hair": "严格沿用已有曹操资产的发式与须髯",
+        "marks": "不新增伤疤、纹身或其他识别标记",
+        "outfit": "完整复用已有资产：玄色蟒纹深衣，暗金四爪蟒纹满绣，交领缘饰朱红，外披黑貂大氅，貂毛根根分明，腰束玉带镶鎏金兽首",
+        "accessories": "沿用已有玉带及鎏金兽首，不新增冠饰或佩饰",
+        "weapon": "不新增武器，已有资产武器若不入镜则不展示",
+        "palette": "玄黑、墨青、暗金、朱红、玉白",
+        "temperament": "威严而有判断力，面对儿子时流露温和，最终以笑意收束",
+        "art_style": "Reuse the existing Cao Cao character asset without redesign; premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, orthographic full-body character treatment.",
+        "negative": "不得改造已有外貌、服装、发型或武器；no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Reuse the existing Cao Cao asset exactly, standing in a relaxed but authoritative full-body pose, one hand slightly raised in reassurance, unchanged face, hairstyle, clothing and equipment, warm parchment background; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "已有资产",
+        "曹操",
+        "父子",
+        "宽宥"
+      ],
+      "character_id": "char-20261110-144930-66b9cc"
+    },
+    {
+      "name": "曹冲",
+      "slug": "cao-chong",
+      "existing": false,
+      "role": "曹操之子，以机敏与仁心救助库吏",
+      "profile": {
+        "age": "约十岁，具体事发年龄史料未载，此为绘画设定",
+        "gender": "男",
+        "role": "故事主角，设计解围办法的少年",
+        "era": "东汉建安年间，建安十三年以前",
+        "face": "清秀圆润的少年脸，额头饱满，下颌柔和，尚无须髯",
+        "eyes": "深褐色眼睛，目光明亮，观察时专注，佯忧时微垂",
+        "skin": "自然浅暖肤色",
+        "build": "纤细匀称的儿童体型，明显矮于两名成年人",
+        "hair": "乌黑头发束成简洁童髻，以素色布带固定，无华丽冠饰",
+        "marks": "无伤疤、无纹身，以童髻和清秀圆脸作为稳定识别特征",
+        "outfit": "浅米色交领长衣，内衬素白，腰束浅褐布带，下着灰褐裤与深褐布履；服装全篇不更换，第三格仅将原本完整的左袖下缘划出几处不规则小孔，之后保留同样破损",
+        "accessories": "素色束发带与浅褐布腰带，无玉佩、无印章",
+        "weapon": "无随身武器；第三格短暂使用一柄无纹样的小刀作为割布工具，用后收起",
+        "palette": "米白、浅褐、灰褐、墨黑",
+        "temperament": "聪敏、沉着、体恤弱者；佯装忧愁时克制，不作滑稽夸张表演",
+        "art_style": "Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, warm parchment background, even lighting, fine textile texture, orthographic full-body character treatment.",
+        "negative": "避免成人体型、豪华王冠、现代童装、夸张萌系比例与服装漂移；no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Orthographic full-body view of a slender Chinese boy about ten years old, round youthful face, dark brown eyes, black hair in a simple child topknot secured with a plain cloth ribbon, pale beige cross-collar robe, white inner layer, light brown cloth belt, gray-brown trousers and dark brown cloth shoes, both hands gently gathering the intact left sleeve, attentive compassionate expression, warm parchment background, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "新建角色",
+        "曹冲",
+        "少年",
+        "仁心",
+        "机智"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "库吏",
+      "slug": "ku-li",
+      "existing": false,
+      "role": "保管曹操马鞍的无名库吏",
+      "profile": {
+        "age": "约三十五岁，绘画设定",
+        "gender": "男",
+        "role": "面临追责、最终获免的库房管理者",
+        "era": "东汉建安年间，建安十三年以前",
+        "face": "偏瘦长脸，颧骨略显，唇边与下颌留短须",
+        "eyes": "深褐色眼睛，眼角略下垂，受惊时目光不安",
+        "skin": "略显风霜的暖麦色",
+        "build": "中等身高，清瘦，习惯微微躬身",
+        "hair": "黑发束髻，以深褐色素布巾包束",
+        "marks": "右眉尾有一道天然疏缺，全篇保持一致",
+        "outfit": "灰褐色粗麻交领短袍，深灰内衬，深褐窄布腰带，灰褐长裤，旧黑布履；衣缘略有磨损但整洁",
+        "accessories": "腰侧悬一串无铭文的简单铜钥匙",
+        "weapon": "无",
+        "palette": "灰褐、深灰、深褐、暗铜",
+        "temperament": "谨慎卑微，先是惶恐，后因获免而释然",
+        "art_style": "Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, warm parchment background, even lighting, fine coarse-linen texture, orthographic full-body character treatment.",
+        "negative": "不添加姓名牌、官印、甲胄、华服或现代钥匙；no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Orthographic full-body view of a lean Chinese male storekeeper about thirty-five years old, narrow face, short moustache and chin stubble, slight natural gap at the outer right eyebrow, black hair wrapped in a dark brown cloth headwrap, gray-brown coarse-linen cross-collar short robe, dark gray inner layer, narrow dark brown cloth belt, gray-brown trousers, worn black cloth shoes, a small set of plain bronze keys at his waist, shoulders slightly bowed and hands clasped anxiously, warm parchment background, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "新建角色",
+        "无名库吏",
+        "小人物",
+        "获免"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "府中鞍具库",
+      "description": "独立无人物场景概念图。汉末府邸的木构库房，夯土墙、粗木立柱、木架与草席清晰可见。一副皮革马鞍悬于柱侧木钩，皮边留有细小啮痕。侧窗透入柔和日光；无匾额、题签、账册文字或其他可读标识。",
+      "prompt_extra": "Standalone environment concept art, empty late Eastern Han household equipment storeroom, no people, no human silhouettes, rammed-earth walls, rough timber pillars, wooden racks and woven reed mats, one leather horse saddle hanging from a peg on a pillar with subtle rodent damage along its edge, soft daylight entering through a small wooden lattice window, subdued ochre and gray-brown historical pigment palette, spacious readable staging, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, even ambient lighting, no modern objects; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "白昼",
+      "mood": "静谧中暗藏危机"
+    },
+    {
+      "id": "scene-02",
+      "name": "府中内堂",
+      "description": "独立无人物场景概念图。素朴的汉式木构内堂，低案、坐席、素面屏风与敞开的格窗构成前中后景。案面留空，便于后续安排衣袖与道具。右侧为入堂通道，左侧留出曹操席位；不放置书法、印章或有字器物。",
+      "prompt_extra": "Standalone environment concept art, empty late Eastern Han domestic audience room, no people, no human silhouettes, low wooden table with an empty surface, woven sitting mats, plain undecorated folding screen, timber columns and open lattice windows, entrance passage on the right and a principal seating position on the left, warm restrained daylight with even ambient illumination, muted parchment, timber brown and pale gray palette, clear continuous architecture suitable for repeated camera angles, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "白昼",
+      "mood": "由肃静转为温和"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "马鞍遭鼠啮，库吏惧怕获罪。",
+      "dialogue": [
+        {
+          "speaker": "库吏",
+          "line": "这可如何向曹公交代……"
+        }
+      ],
+      "visual": "Medium shot inside the established timber storeroom. The same lean storekeeper in a gray-brown coarse-linen robe and dark brown headwrap stands beside the pillar, lifting the damaged edge of the hanging leather saddle with trembling fingers. His narrow face, short facial hair and natural gap at the outer right eyebrow remain clearly identifiable. Show small irregular rodent bites in the saddle leather, not catastrophic destruction. His shoulders are drawn inward with fear. No other people. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, even soft daylight, fine leather and coarse-linen texture; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "库吏"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "曹冲听罢，请他暂缓自陈。",
+      "dialogue": [
+        {
+          "speaker": "曹冲",
+          "line": "待三日中，然后自归。"
+        }
+      ],
+      "visual": "Medium two-person shot in the same storeroom, with the damaged saddle still hanging from the same pillar in the background. Cao Chong, a slender boy about ten with a round youthful face, black child topknot, plain cloth ribbon and intact pale beige cross-collar robe, gently raises one open hand to reassure the anxious storekeeper. The storekeeper bends slightly to listen, hands held close to his chest. Clearly preserve the child's smaller stature and both established character designs. The boy appears thoughtful rather than mischievous. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, even daylight and fine textile texture; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹冲",
+        "库吏"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "他暗用小刀，把单衣割出啮痕。",
+      "dialogue": [],
+      "visual": "Close shot in the established domestic audience room while it is temporarily unoccupied by adults. Cao Chong keeps his pale beige robe on and lays the loose lower edge of his left sleeve flat on the low table, safely away from his skin. With a small plain utility knife in his right hand, he carefully makes several tiny irregular holes resembling mouse bites. Show his focused youthful face, simple black topknot and consistent light brown belt. Emphasize fabric damage only, no injury, no blood. The sleeve holes must remain identical in all later appearances. No other people. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, even window light, fine cloth fibres; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹冲"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "见到父亲，他故意满面忧色。",
+      "dialogue": [
+        {
+          "speaker": "曹操",
+          "line": "为何这般忧愁？"
+        },
+        {
+          "speaker": "曹冲",
+          "line": "俗说衣被鼠啮，主人不吉。孩儿因此担忧。"
+        }
+      ],
+      "visual": "Medium two-person shot in the same domestic audience room. Cao Cao sits at the principal place on the left, using the existing character asset exactly: unchanged face, hairstyle and facial hair, black python-pattern deep robe with dark-gold four-clawed python embroidery, vermilion collar trim, black sable mantle and jade belt with a gilt beast-head fitting. Cao Chong stands to the right in his unchanged pale beige robe, holding up the left sleeve with the same small irregular holes established previously. The boy lowers his eyes and feigns restrained anxiety. Cao Cao leans slightly forward with paternal concern. The utility knife is no longer visible. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, even lighting, fine fur and textile texture; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹操",
+        "曹冲"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "曹操不信凶兆，温言宽解。",
+      "dialogue": [
+        {
+          "speaker": "曹操",
+          "line": "此妄言耳，无所苦也。"
+        }
+      ],
+      "visual": "Close two-person composition in the same audience room, focusing on Cao Cao's reassuring expression and open hand, with Cao Chong listening at his side and the damaged left sleeve visible near the lower foreground. Reuse Cao Cao's existing face, hairstyle, beard, black and dark-gold embroidered robe, vermilion collar, black sable mantle and jade belt without redesign. Cao Chong retains the same round child face, simple topknot, pale beige robe and exact sleeve holes. The boy's expression subtly relaxes without an exaggerated wink or triumphant grin. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, even warm daylight, fine fur and textile detail; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹操",
+        "曹冲"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "库吏据实禀报，曹操笑而不究。",
+      "dialogue": [
+        {
+          "speaker": "库吏",
+          "line": "库中马鞍遭鼠啮坏，特来请罪。"
+        },
+        {
+          "speaker": "曹操",
+          "line": "儿衣在侧，尚啮，况鞍县柱乎？"
+        }
+      ],
+      "visual": "Wide concluding shot of the same audience room containing exactly three people. Cao Cao remains seated on the left in his completely unchanged existing asset costume, smiling and raising an open hand in dismissal of blame. The same lean storekeeper kneels formally near the right-side entrance, presenting the damaged leather saddle with its recognizable bite marks; his tense shoulders begin to relax. Cao Chong stands quietly beside his father in the same pale beige robe, his left sleeve retaining the established small holes, watching with restrained relief rather than self-congratulation. Keep the low table, plain screen and window positions consistent with earlier panels. No guards, attendants or background crowds. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, even warm daylight, fine leather, fur and textile textures; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹操",
+        "曹冲",
+        "库吏"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, even lighting, fine armour where applicable and fine textile, leather and fur texture. Use warm parchment or plain uniform backgrounds and orthographic full-body treatment for character sheets only; comic panels use the established narrative environments and specified camera compositions. Reuse the existing Cao Cao asset exactly without changing his face, hairstyle, facial hair, clothing, accessories or weapons. Maintain identical designs for Cao Chong and the storekeeper throughout. Cao Chong's left sleeve is intact in panels 1 and 2 where visible, receives small holes in panel 3, and retains the same holes thereafter; this is damage to the same garment, not a costume change. Scene concept images must contain no people or human silhouettes. Every panel is one continuous standalone image, never a collage. All narration and dialogue are supplied separately for later HTML overlay; render no speech balloons or written props. No modern objects, no additional characters, no injury or blood; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架包括鼠啮马鞍、库吏惧罪、曹冲请其稍待、以刀穿单衣、佯称忧惧不吉、曹操宽解、库吏报告后不被追究。史料没有交代事发地点、曹冲具体年龄、库吏姓名及容貌，故府内两处空间、约十岁的形象、人物动作与运镜均属可视化设定。分镜没有擅自断言恰过三日，保留原文劝告而以先后关系衔接。第二、第五、第六格曹操的关键对白采用原文，其余对白为据原意写成的现代易读表达。库吏持鞍请罪、曹冲在场见证结局、用左袖模拟啮痕均为不改变因果的文学化补足；不将这些细节声称为史载。曹操完整复用既有游戏资产，其蟒纹服装属于指定的历史幻想美术表达，不作为汉代服制复原依据；剧情中不使用其后来的魏王身份。全篇仅三名人物、两处场景，所有文字均由后期HTML叠加。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "_generation": {
+    "written_at": "2026-11-10T16:17:02+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 1801,
+      "completion_tokens": 6679,
+      "total_tokens": 8480,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 1798,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1536,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "raw_chars": 16037,
+    "finish_reason": "stop",
+    "prompt_sha256": "7ec2456f6cac0ff737d6e40e651380e36652cb61fe6e3ad72ed69aa3723cc22e",
+    "prompt_chars": 2761
+  }
+}

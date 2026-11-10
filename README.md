@@ -108,21 +108,40 @@ POST   /api/characters/<id>/reproduce                锚点复现单张
 POST   /api/characters/<id>/turnaround               四视图包
 POST   /api/sprites                                  精灵动画包
 GET    /api/packs  /api/packs/<id>/zip  DELETE /api/packs/<id>
+GET    /api/scenes  /api/comic                        场景卡与连环画批次
 GET    /pack/<id>/<file>                             包内预览与图片
 ```
+
+## 连环画批量（GPT-6.1 Sol 写剧本 + gpt-image-2.6-sunburst 出图）
+
+- `tools/write_comic.py` 用文本模型 `gpt-6.1-sol` 选一个《三国演义》未收录、见于《三国志》等史料的三国故事，产出 6 格分镜脚本 `batches/comic-*.json`：旁白、对白、画面描述、新人物设定、场景定义，并记录模型 usage 与 prompt 摘要便于追溯。
+- `tools/generate_comic.py` 幂等生成：新人物立绘 → 无人物场景概念图 → 6 格分镜。**画面一律不含文字**，旁白与对白由 `comic.html` 排版叠加，避免模型写错字。
+- 人物：已有角色（如曹操）复用角色卡 anchor 与已有立绘，作为 `/images/edits` 参考图延续长相与画风；资产库里没有的角色自动建 17 字段角色卡、生成立绘并设为该角色的参考图。
+- 场景：`studio/scenes.py` + SQLite `scenes` 表。场景卡保存完整 prompt、环境描述、模型参数与资产编号，独立入库、可复用于其它故事；`GET /api/scenes`、`GET /api/comic` 可查询。
+- 画风 `styles/sanguo-comic.json` 沿用 `sanguo-hero` 的高细节历史颜料风格，模型 `gpt-image-2.6-sunburst / high`，分镜与场景 `1536x1024`、立绘 `1024x1536`。
+- 导出 ZIP 含 `images/`、`comic.html`、`script.json`、`manifest.json`（含 scene_id / panel_no / 对白）、`character-cards.json`、`scene-cards.json`、`style-bible.json`、`recipe.json`、`README.txt`；同步到资产盘，并在工作台 `http://127.0.0.1:8777/pack/<批次id>/comic.html` 可直接阅读。
+
+```bash
+python tools/write_comic.py                 # 用文本模型创作剧本
+python tools/generate_comic.py --list      # 打印计划与预估成本
+python tools/generate_comic.py             # 全量生成（幂等，中断可重跑）
+python tools/generate_comic.py --export-only
+```
+
+注意：`gpt-image-2.6-sunburst` 的官方单价未由 `/v1/models` 公开，`studio/pricing.py` 的 `ESTIMATED_MODELS` 按上一代同档估算记账；收到正式账单后应更新该表。
 
 ## 目录
 
 ```
-styles/          风格配方（含 character-turnaround.json）
-studio/          config / store(SQLite) / imaging / characters / turnaround / sprites / png / thumbs / credentials / exporter / pricing
+styles/          风格配方（含 character-turnaround / sanguo-hero / sanguo-comic）
+studio/          config / store(SQLite) / imaging / text / characters / scenes / turnaround / sprites / png / thumbs / credentials / exporter / pricing
 web/             单页管理界面
-tools/           命令行生成、批量导入、缩略图预热
+tools/           命令行生成、剧本创作、连环画批量、批量导入、缩略图预热
 data/            本地数据（被 .gitignore 排除）
-  assets.db      SQLite 索引
+  assets.db      SQLite 索引（含 characters / packs / scenes 表）
   raw/           生成原图
   thumbs/        缩略图缓存
-  packs/         多视角包与精灵包（目录 + ZIP）
+  packs/         多视角包、精灵包与连环画阅读页（目录 + ZIP）
   export/        导出的素材包
 server.py        本地 HTTP 服务
 ```

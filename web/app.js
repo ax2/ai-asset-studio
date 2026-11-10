@@ -21,6 +21,7 @@ const VIEW_META = {
   styles: ["风格配方", "编辑分块提示词、变量槽位与负面词"],
   batch: ["批量生成", "先 Dry run 验证配方，再切换真实生成"],
   game: ["角色与游戏资产", "小说提取角色、锚点复现、多视角与精灵动画切图"],
+  comic: ["连环画", "史料故事分镜、人物与场景资产、可阅读的连环画页面"],
   export: ["导出与同步", "导出素材包、同步精选资产、检查元数据"],
   cost: ["成本看板", "额度、用量与参考单价"],
   settings: ["连接设置", "会话密钥、代理与端点自检"],
@@ -365,6 +366,7 @@ function switchView(name) {
   if (name === "cost") renderCost();
   if (name === "batch") { refreshBatchEstimate(); }
   if (name === "game") { initGame().catch((e) => toast("游戏资产页加载失败：" + e.message, "err")); }
+  if (name === "comic") { initComic().catch((e) => toast("连环画页加载失败：" + e.message, "err")); }
   if (name === "export") { loadHealth(); loadExports(); renderSyncInfo(); }
   if (name === "settings") { renderSettings(); }
 }
@@ -1327,6 +1329,32 @@ function deleteGamePack(pid) {
     });
 }
 
+async function initComic() {
+  const [c, s] = await Promise.all([api("/api/comic"), api("/api/scenes")]);
+  renderComic(c.comics || [], s.scenes || []);
+}
+
+function renderComic(comics, sceneCards) {
+  $("#comicList").innerHTML = comics.map((c) => `
+    <div class="pack-row">
+      <div class="row"><b>${esc(c.title || c.id)}</b><span class="pill">${esc(c.id || "")}</span></div>
+      <div class="hint">${esc(c.subtitle || "")}</div>
+      <div class="hint">史料：${esc((c.story_source || "").slice(0, 120))}</div>
+      <div class="hint">演义未收录：${esc((c.why_not_in_romance || "").slice(0, 120))}</div>
+      <div class="hint">文本 ${esc(c.text_model || "")} · 图像 ${esc(c.image_model || "")} · ${c.panels} 格 / ${c.scenes} 场景 / ${c.assets} 资产</div>
+      <div class="btn-row mt">${c.html
+        ? `<a class="btn" href="${esc(c.html)}" target="_blank" rel="noopener">打开连环画</a>`
+        : `<span class="hint">尚未生成，运行 tools/generate_comic.py</span>`}</div>
+    </div>`).join("") || `<div class="empty">还没有连环画批次，先运行 tools/write_comic.py</div>`;
+
+  $("#comicScenes").innerHTML = sceneCards.map((s) => `
+    <div class="pack-row">
+      <div class="row"><b>${esc(s.name || s.id)}</b><span class="pill">${esc(s.batch_id || "")}</span></div>
+      <div class="hint">${esc((s.description || "").slice(0, 120))}</div>
+      <div class="hint">${esc(s.model || "")} / ${esc(s.quality || "")} / ${esc(s.size || "")} · 资产 ${esc(s.asset_id || "未生成")}</div>
+    </div>`).join("") || `<div class="empty">还没有场景卡</div>`;
+}
+
 async function initGame() {
   if (!G.meta) await prepareGame();
   buildGameUI();
@@ -1389,6 +1417,7 @@ document.addEventListener("click", async (e) => {
       case "g-prompt": await gamePromptPreview(false); break;
       case "g-sprite": await gameSprite(); break;
       case "g-refresh-packs": await loadGamePacks(); break;
+      case "comic-refresh": await initComic(); break;
       case "g-delete-pack": deleteGamePack(el.dataset.id); break;
       case "do-export": await doExport(); break;
       case "do-sync": await doSync(); break;

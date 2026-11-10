@@ -15,8 +15,8 @@ from urllib.parse import parse_qs, unquote, urlparse
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 
-from studio import (characters, config, exporter, imaging, pricing, sprites,  # noqa: E402
-                    store, thumbs, turnaround)
+from studio import (characters, config, exporter, imaging, pricing, scenes,  # noqa: E402
+                    sprites, store, thumbs, turnaround)
 
 CFG: dict = {}
 MAX_BODY = 2 * 1024 * 1024
@@ -333,6 +333,38 @@ class Handler(BaseHTTPRequestHandler):
             return self._json(200, pack) if pack else self._err(404, "pack not found")
         if method == "DELETE" and len(seg) == 2 and seg[0] == "packs":
             return self._delete_pack(seg[1])
+
+        # ---- Comic batches: scene cards and readable comic overview ----
+        if method == "GET" and seg == ["scenes"]:
+            rows = scenes.list_cards(CFG)
+            batch = str(p.get("batch") or "")
+            if batch:
+                rows = [s for s in rows if s.get("batch_id") == batch]
+            return self._json(200, {"scenes": rows})
+        if method == "GET" and seg == ["comic"]:
+            out = []
+            for f in sorted((ROOT / "batches").glob("comic-*.json")):
+                try:
+                    d = json.loads(f.read_text(encoding="utf-8"))
+                except (OSError, ValueError):
+                    continue
+                count = sum(1 for r in store.iter_all(CFG)
+                            if r.get("batch_id") == d.get("id") and not r.get("demo"))
+                page = CFG["local"] / "packs" / str(d.get("id") or "") / "comic.html"
+                out.append({
+                    "id": d.get("id"), "title": d.get("title"),
+                    "subtitle": d.get("subtitle"),
+                    "story_source": d.get("story_source"),
+                    "why_not_in_romance": d.get("why_not_in_romance"),
+                    "synopsis": d.get("synopsis"),
+                    "text_model": d.get("text_model"),
+                    "image_model": d.get("image_model"),
+                    "panels": len(d.get("panels") or []),
+                    "scenes": len(d.get("scenes") or []),
+                    "assets": count,
+                    "html": f"/pack/{d.get('id')}/comic.html" if page.is_file() else "",
+                })
+            return self._json(200, {"comics": out})
         return self._err(404, "unknown endpoint")
 
     def _character_reproduce(self, cid: str):

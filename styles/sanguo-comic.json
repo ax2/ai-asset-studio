@@ -1,0 +1,39 @@
+{
+  "id": "sanguo-comic",
+  "name": "三国连环画 · 分镜与场景",
+  "status": "tool",
+  "description": "沿用「三国英雄立绘」的高细节画风，用于单格分镜与无人物场景概念图。画面一律不含文字，旁白与对白由 HTML 排版叠加，避免模型写错字。",
+  "model": {
+    "default": "gpt-image-2.6-sunburst",
+    "quality": "high",
+    "size": "1536x1024"
+  },
+  "blocks": [
+    {
+      "key": "genre",
+      "en": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration"
+    },
+    {
+      "key": "palette",
+      "en": "authentic historical pigment palette of mineral azurite, malachite green, cinnabar red, ochre, ink black and warm parchment, muted and harmonious"
+    },
+    {
+      "key": "lighting",
+      "en": "soft even daylight with gentle ambient occlusion, no harsh modern cinematic rim light, no neon glow"
+    },
+    {
+      "key": "texture",
+      "en": "finely rendered lamellar armour, woven silk, coarse linen, aged leather, rough timber and rammed earth with visible material grain"
+    },
+    {
+      "key": "composition",
+      "en": "clear readable staging with a single focal action, orthographic-leaning perspective, full figures whenever standing, warm parchment or plain uniform background"
+    }
+  ],
+  "negative": "photograph, photorealism, 3D render, plastic look, cel shading, anime, chibi, modern clothing, modern architecture, low detail, flat vector, text, letters, chinese characters, captions, subtitles, speech balloons, watermark, logo, signature, seal, border, frame, panel, split line, multi-panel layout, comic grid, cropped body, extra limbs, extra characters, inconsistent outfit, inconsistent hairstyle, inconsistent weapon, cluttered background",
+  "asset_kinds": ["character-portrait", "scene", "comic-panel"],
+  "budget": {
+    "per_run_cap_usd": 8.0
+  },
+  "notes": "由 tools/write_comic.py 用 gpt-6.1-sol 生成剧本，tools/generate_comic.py 用 gpt-image-2.6-sunburst 出图。人物沿用角色卡 anchor 与已有立绘作参考图；场景概念图不含人物，单独入库可复用。"
+}

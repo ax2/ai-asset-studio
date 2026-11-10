@@ -21,6 +21,7 @@
       <button class="nav-item" data-view="styles">风格配方</button>
       <button class="nav-item" data-view="batch">批量生成</button>
       <button class="nav-item" data-view="game">角色与游戏资产</button>
+      <button class="nav-item" data-view="comic">连环画</button>
       <button class="nav-item" data-view="export">导出与同步</button>
       <button class="nav-item" data-view="cost">成本看板</button>
       <button class="nav-item" data-view="settings">连接设置</button>
@@ -230,6 +231,22 @@
             <div class="btn-row"><button class="btn ghost" data-action="g-refresh-packs">刷新列表</button></div>
             <div id="gPacks" class="list mt"></div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view hidden" id="view-comic">
+      <div class="two-col">
+        <div class="panel">
+          <div class="panel-title">连环画批次</div>
+          <div class="hint">文本模型选故事、写分镜，图像模型出图。画面一律不含文字，旁白与对白由阅读页排版叠加。</div>
+          <div class="btn-row mt"><button class="btn ghost" data-action="comic-refresh">刷新列表</button></div>
+          <div id="comicList" class="list mt"></div>
+        </div>
+        <div class="panel">
+          <div class="panel-title">场景资产卡</div>
+          <div class="hint">场景是独立资产：完整 prompt、环境描述、模型参数与图片编号都会保存，可复用于其它故事。</div>
+          <div id="comicScenes" class="list mt"></div>
         </div>
       </div>
     </section>

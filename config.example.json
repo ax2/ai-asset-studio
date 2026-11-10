@@ -8,7 +8,7 @@
   "default_model": "gpt-image-1.5",
   "default_quality": "low",
   "default_size": "1024x1024",
-  "text_model": "gpt-5.4-mini",
+  "text_model": "gpt-6.1-sol",
   "edit_model": "gpt-image-1.5",
   "sprite_cell": 128,
   "batch_discount": 0.5,

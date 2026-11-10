@@ -74,6 +74,13 @@ CREATE TABLE IF NOT EXISTS packs (
   data       TEXT NOT NULL
 );
 CREATE INDEX IF NOT EXISTS idx_packs_created ON packs(created_at DESC);
+CREATE TABLE IF NOT EXISTS scenes (
+  id         TEXT PRIMARY KEY,
+  name       TEXT NOT NULL DEFAULT '',
+  created_at TEXT NOT NULL DEFAULT '',
+  data       TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_scenes_created ON scenes(created_at DESC);
 """
 
 _ORDER = {
