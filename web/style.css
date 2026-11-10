@@ -141,6 +141,18 @@ button { cursor: pointer; }
 .panel-title { font-size: 13px; font-weight: 500; margin-bottom: 14px; }
 .hint { color: var(--faint); font-size: 11px; line-height: 1.7; margin-top: 12px; }
 .panel code { font-family: ui-monospace, Consolas, monospace; font-size: 11px; color: var(--teal); }
+#runChip { cursor: pointer; display: inline-flex; align-items: center; gap: 7px; }
+#runChip:hover { border-color: var(--teal); color: var(--text); }
+.run-box { margin-top: 16px; background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px; padding: 14px; }
+.run-head { display: flex; justify-content: space-between; gap: 10px; font-size: 12px; margin-bottom: 10px; }
+.run-head .done { color: var(--teal); }
+.run-head .err { color: var(--red); }
+.run-box .eval-bar { background: #101216; margin: 0; }
+#runBar.indeterminate { width: 34%; animation: runSlide 1.3s ease-in-out infinite; }
+@keyframes runSlide { 0% { margin-left: 0; } 50% { margin-left: 62%; } 100% { margin-left: 0; } }
+.run-stats { font-size: 11px; color: var(--faint); line-height: 1.8; margin-top: 9px; }
+.run-thumbs { display: flex; gap: 6px; margin-top: 10px; }
+.run-thumbs img { width: 48px; height: 48px; object-fit: cover; border-radius: 5px; border: 1px solid var(--line); background: #101216; }
 .info-box { background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px; padding: 12px; font-size: 12px; color: var(--muted); line-height: 1.7; }
 .list { display: flex; flex-direction: column; gap: 7px; }
 .list-row { display: flex; justify-content: space-between; gap: 10px; padding: 8px 10px; background: var(--panel-2); border-radius: 7px; font-size: 12px; }

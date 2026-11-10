@@ -397,7 +397,145 @@ function refreshBatchEstimate() {
     : "真实生成会调用 OpenAI API。系统会检查单次上限与月度预算，超限直接拒绝。";
 }
 
+// ---- Live generation progress -------------------------------------------
+// The server writes each asset to meta.jsonl the moment that image is ready,
+// so polling /api/assets gives us real progress without restarting the server
+// (and without losing the in-memory API key). Refreshing the page is safe.
+const RUN_KEY = "ai-studio-run-v1";
+const RUN = { total: 0, startedMs: 0, finishedAt: 0, error: "" };
+let runFetchInFlight = false;
+let runTimer = null;
+let lastSeenRunCount = -1;
+
+function saveRunMeta() {
+  try {
+    if (!RUN.total) localStorage.removeItem(RUN_KEY);
+    else localStorage.setItem(RUN_KEY, JSON.stringify({
+      total: RUN.total, startedMs: RUN.startedMs,
+      finishedAt: RUN.finishedAt, error: RUN.error,
+    }));
+  } catch (_) { /* storage unavailable */ }
+}
+
+function loadRunMeta() {
+  try {
+    const d = JSON.parse(localStorage.getItem(RUN_KEY) || "null");
+    if (!d || !d.total) return;
+    RUN.total = Number(d.total) || 0;
+    RUN.startedMs = Number(d.startedMs) || 0;
+    RUN.finishedAt = 0;         // a reload means no live fetch to rely on
+    RUN.error = "";
+  } catch (_) { /* ignore */ }
+}
+
+function setRunButton(busy) {
+  const btn = document.querySelector('[data-action="run-batch"]');
+  if (!btn) return;
+  btn.disabled = busy;
+  btn.textContent = busy ? "生成中…（看下方进度）" : "开始生成";
+}
+
+function inferRun(assets) {
+  const gen = (assets || [])
+    .filter((a) => (a.source === "generate" || a.source === "reproduce")
+      && Number.isFinite(Date.parse(a.created_at)))
+    .sort((x, y) => Date.parse(x.created_at) - Date.parse(y.created_at));
+  if (!gen.length) return null;
+  // Assets less than 150s apart belong to the same batch.
+  let start = gen.length - 1;
+  while (start > 0 && Date.parse(gen[start].created_at)
+         - Date.parse(gen[start - 1].created_at) <= 150000) start--;
+  const rows = gen.slice(start);
+  return {
+    rows,
+    first: Date.parse(rows[0].created_at),
+    last: Date.parse(rows[rows.length - 1].created_at),
+  };
+}
+
+function fmtDuration(sec) {
+  if (!Number.isFinite(sec) || sec < 0) sec = 0;
+  return sec < 60 ? Math.round(sec) + " 秒" : (sec / 60).toFixed(1) + " 分钟";
+}
+
+async function pollRun() {
+  let data;
+  try {
+    data = await api("/api/assets?limit=120&sort=newest");
+  } catch (_) { return; }   // server busy generating: retry on next tick
+  renderRun(inferRun(data.assets));
+}
+
+function renderRun(batch) {
+  const chip = $("#runChip");
+  const box = $("#runBox");
+  if (!batch) { chip.classList.add("hidden"); box.classList.add("hidden"); return; }
+
+  const now = Date.now();
+  const idleSec = Math.max(0, (now - batch.last) / 1000);
+  const done = batch.rows.length;
+  const hasTotal = RUN.total > 0 && RUN.startedMs > 0
+    && batch.first >= RUN.startedMs - 15000;
+  const total = hasTotal ? RUN.total : 0;
+  const explicitlyFinished = RUN.finishedAt > 0 && RUN.finishedAt >= batch.last - 5000;
+  const running = !explicitlyFinished && (runFetchInFlight || idleSec < 90);
+  const stale = !running && idleSec > 600;
+
+  if (stale) { chip.classList.add("hidden"); box.classList.add("hidden"); return; }
+  chip.classList.remove("hidden");
+  box.classList.remove("hidden");
+
+  const state = RUN.error && explicitlyFinished ? "生成失败"
+    : (explicitlyFinished ? "已完成" : (running ? "生成中" : "本批已结束"));
+  const cls = (RUN.error && explicitlyFinished) ? "err" : (running ? "" : "done");
+  $("#runState").innerHTML = `<span class="${cls}">${running ? "● " : ""}${esc(state)}</span>`;
+  $("#runCount").textContent = total ? `${done} / ${total} 张` : `${done} 张`;
+
+  const bar = $("#runBar");
+  if (total) {
+    bar.className = "";
+    bar.style.width = Math.min(100, Math.round(100 * done / total)) + "%";
+  } else {
+    bar.className = running ? "indeterminate" : "";
+    bar.style.width = running ? "" : "100%";
+  }
+
+  const cost = batch.rows.reduce((s, a) => s + (Number(a.cost_usd) || 0), 0);
+  const avg = done > 1 ? (batch.last - batch.first) / 1000 / (done - 1) : 0;
+  const remain = total && running && avg ? Math.max(0, total - done) * avg : 0;
+  const first = batch.rows[0];
+  const lines = [
+    `风格 ${esc(first.style_name || first.style_id)} · ${esc(first.model || "")} / ${esc(first.quality || "")}`,
+    `已计入成本 $${cost.toFixed(4)} · 最近一张 ${fmtDuration(idleSec)}前`,
+  ];
+  if (avg) lines.push(`平均 ${fmtDuration(avg)}/张${remain ? " · 预计还需 " + fmtDuration(remain) : ""}`);
+  if (!total && running) lines.push("本批总数未记录（页面曾刷新），进度按已落盘图片实时统计。");
+  if (!total && !running) lines.push("本批总数未记录；下一批开始会记住总张数并显示百分比进度。");
+  if (RUN.error) lines.push(`错误：${esc(RUN.error)}`);
+  $("#runStats").innerHTML = lines.join("<br>");
+  $("#runThumbs").innerHTML = batch.rows.slice(-5).reverse()
+    .map((a) => `<img src="/media/${esc(a.file)}" alt="" title="${esc(a.id)}">`).join("");
+
+  chip.innerHTML = `<span class="dot ${running ? "ok" : ""}"></span>`
+    + `${running ? "生成中" : "生成完成"} ${done}${total ? "/" + total : " 张"}`;
+
+  if (done !== lastSeenRunCount) {
+    if (lastSeenRunCount >= 0 && S.view === "gallery") loadAssets();
+    lastSeenRunCount = done;
+  }
+}
+
+function startRunPolling() {
+  clearInterval(runTimer);
+  pollRun();
+  runTimer = setInterval(pollRun, 3000);
+}
+
 async function runBatch() {
+  if (runFetchInFlight) {
+    toast("已有一批正在生成，等它结束再启动新的一批", "err");
+    return;
+  }
   const body = {
     style_id: $("#bStyle").value,
     model: $("#bModel").value,
@@ -409,13 +547,34 @@ async function runBatch() {
   };
   const cost = estimateOf(body.model, body.quality, body.count, body.batch_estimate);
   const go = async () => {
-    const res = await api("/api/generate", { method: "POST", body });
-    toast(`已生成 ${res.count} 张${res.dry_run ? "演示图" : "图片"}`, "ok");
-    await refreshAll();
-    switchView("gallery");
+    runFetchInFlight = true;
+    RUN.total = body.count;
+    RUN.startedMs = Date.now();
+    RUN.finishedAt = 0;
+    RUN.error = "";
+    saveRunMeta();
+    setRunButton(true);
+    pollRun();
+    try {
+      const res = await api("/api/generate", { method: "POST", body });
+      toast(`已生成 ${res.count} 张${res.dry_run ? "演示图" : "图片"}`, "ok");
+      await refreshAll();
+      await loadAssets();
+    } catch (err) {
+      RUN.error = err.message;
+      toast(err.message, "err");
+    } finally {
+      runFetchInFlight = false;
+      RUN.finishedAt = Date.now();
+      saveRunMeta();
+      setRunButton(false);
+      await pollRun();
+    }
   };
   if (body.dry_run) await go();
-  else confirmModal("确认真实生成", `将调用 API 生成 <b>${body.count}</b> 张，预估 <b>$${cost}</b>。`, go);
+  else confirmModal("确认真实生成",
+    `将调用 API 生成 <b>${body.count}</b> 张，预估 <b>$${cost}</b>。<br><br>每张约十几到几十秒，期间下方进度面板会实时更新，请勿重复点击。`,
+    go);
 }
 
 async function refreshAll() {
@@ -680,6 +839,8 @@ async function boot() {
     await loadAssets();
     await loadExports();
     switchView("gallery");
+    loadRunMeta();
+    startRunPolling();
   } catch (err) {
     toast("初始化失败：" + err.message, "err");
   }

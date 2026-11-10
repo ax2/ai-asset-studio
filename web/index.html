@@ -39,6 +39,7 @@
         <div class="subtitle" id="viewSubtitle">查看、筛选、复现与管理所有美术资产</div>
       </div>
       <div class="top-actions">
+        <span class="chip hidden" id="runChip" data-action="goto-batch" title="点击查看生成进度"></span>
         <span class="chip" id="budgetChip">预算加载中</span>
         <button class="btn ghost" data-action="sync">同步到资产盘</button>
       </div>
@@ -102,6 +103,14 @@
           </div>
           <div class="estimate" id="bEstimate"></div>
           <button class="btn primary wide" data-action="run-batch">开始生成</button>
+          <div class="run-box hidden" id="runBox">
+            <div class="run-head"><span id="runState">检查生成状态…</span><span class="muted small" id="runCount"></span></div>
+            <div class="eval-bar"><div id="runBar"></div></div>
+            <div class="run-stats" id="runStats"></div>
+            <div class="run-thumbs" id="runThumbs"></div>
+            <button class="btn ghost wide mt" data-view="gallery">查看资产画廊</button>
+            <div class="hint">进度按资产库里新增的图片实时统计（每 3 秒刷新）。真实生成每张约十几到几十秒，页面短时间「没反应」是正常的；刷新页面不会中断服务端正在跑的生成。</div>
+          </div>
           <div class="hint" id="bHint"></div>
         </div>
         <div class="panel">
