@@ -1,0 +1,232 @@
+{
+  "id": "comic-s01-cai-yong-greets-wang-can",
+  "title": "蔡邕倒屣迎少年",
+  "subtitle": "一双倒穿的鞋，让满堂宾客重新打量少年。",
+  "story_source": "《三国志·魏书·王粲传》：“时邕才学显著，贵重朝廷，常车骑填巷，宾客盈坐。闻粲在门，倒屣迎之。粲至，年既幼弱，容状短小，一坐尽惊。邕曰：‘此王公孙也，有异才，吾不如也。吾家书籍文章，尽当与之。’”",
+  "why_not_in_romance": "通行毛本《三国演义》第九回写蔡邕因董卓之死叹息而获罪，却未写他在长安倒穿鞋迎接王粲、向满座宾客称许少年才学的故事。本集据《三国志·魏书·王粲传》展开，不将这一史传记载误作《三国演义》情节。",
+  "synopsis": "少年王粲到长安拜访蔡邕。蔡邕听闻他已到门前，顾不上穿好鞋便急忙出迎。身形短小的少年随他入堂，令满座宾客惊讶。蔡邕公开称许王粲才学，甚至说自家书籍文章都应交给他，以识才之举打破了众人以貌取人的眼光。",
+  "characters": [
+    {
+      "name": "蔡邕",
+      "slug": "cai-yong",
+      "existing": false,
+      "role": "东汉名儒、左中郎将，赏识王粲的前辈",
+      "profile": {
+        "age": "约六十岁",
+        "gender": "男",
+        "role": "东汉名儒、左中郎将",
+        "era": "东汉末年，献帝初平年间",
+        "face": "长方脸，额头开阔，颧骨清晰，鼻梁挺直，面颊略瘦，留灰黑相间的长须",
+        "eyes": "深褐眼睛，眼尾有细纹，目光温厚而敏锐",
+        "skin": "暖米色肤色，带自然老年肌理",
+        "build": "中等偏高，清瘦，肩背端正",
+        "hair": "灰黑长发整齐束髻，戴朴素黑色进贤冠，鬓角斑白",
+        "marks": "右眉尾有一道自然断眉，长须中央有一缕明显银白",
+        "outfit": "深青色交领宽袖长袍，内衬米白，领缘与袖缘为墨黑色，腰束深褐布带；穿深褐色低帮布履，全篇衣装不变",
+        "accessories": "腰侧悬一枚无纹素玉佩，不佩印章",
+        "weapon": "无",
+        "palette": "深青、墨黑、米白、深褐、灰白",
+        "temperament": "学养深厚，不拘礼节，爱才时热切坦率",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "No armor, no weapons, no imperial regalia, no costume changes, no hairstyle changes, no printed fabric symbols, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body standing character reference, slightly leaning forward with a welcoming open hand, the other hand resting near the waist, both shoes correctly worn for the neutral reference, plain empty background.",
+      "tags": [
+        "三国",
+        "东汉",
+        "名儒",
+        "识才",
+        "蔡邕"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "王粲",
+      "slug": "wang-can",
+      "existing": false,
+      "role": "来到长安求见蔡邕的少年才士",
+      "profile": {
+        "age": "约十七岁",
+        "gender": "男",
+        "role": "少年士人，王畅之孙",
+        "era": "东汉末年，献帝初平年间",
+        "face": "脸形窄小，下颌略尖，鼻梁不高，五官朴实，保留少年稚气，不作英武美男子处理",
+        "eyes": "深褐眼睛，目光清亮专注，神情略显拘谨",
+        "skin": "浅黄偏暖肤色，略带旅途风尘",
+        "build": "身形短小清瘦，明显矮于蔡邕",
+        "hair": "乌黑长发束成紧凑发髻，以深灰布巾固定，无散发",
+        "marks": "无胡须，左侧面颊有一颗很淡的小痣",
+        "outfit": "浅赭色粗绢交领长衣，内衬素白，深灰窄布腰带，灰褐长裤，旧深褐布履；衣摆有轻微尘痕，全篇衣装不变",
+        "accessories": "腰侧固定一个小型灰褐布囊，无珠玉装饰",
+        "weapon": "无",
+        "palette": "浅赭、素白、深灰、灰褐、深褐",
+        "temperament": "谦谨内敛，聪敏沉静，受礼遇时惊讶而不失分寸",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "No beard, no tall heroic build, no luxurious robe, no armor, no weapons, no costume changes, no hairstyle changes, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body standing character reference, modest upright posture, hands joined in a respectful greeting, compact youthful proportions, plain empty background.",
+      "tags": [
+        "三国",
+        "东汉",
+        "少年",
+        "文士",
+        "王粲"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "长安蔡宅门前",
+      "description": "独立无人环境概念图。长安宅院的素木门楼与灰瓦院墙，门扉半开，石阶接夯土道路，门内可见一小段庭院。没有匾额、门联或任何文字装饰。",
+      "prompt_extra": "Standalone uninhabited environment concept art of an Eastern Han scholarly residence entrance in Chang'an, plain timber gateway, gray roof tiles, rammed-earth walls, two shallow stone steps, open wooden door leaves and a glimpse of a modest courtyard, no signboards, no decorative seals, no people, no silhouettes, no animals, soft late-morning daylight, clear readable spatial layout with open foreground; premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and stone texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "上午",
+      "mood": "清静庄重，留有迎客的期待"
+    },
+    {
+      "id": "scene-02",
+      "name": "蔡宅会客书堂",
+      "description": "独立无人环境概念图。木柱支撑的会客书堂，低案与席垫分列两侧，后方木架放闭合简卷及素面卷束，侧面敞门通向庭院。席位只表现会客陈设，不绘制任何人物。",
+      "prompt_extra": "Standalone uninhabited environment concept art of an Eastern Han scholar's reception hall, timber pillars, low wooden tables and woven sitting mats arranged along both sides, rear shelves holding closed bamboo-slip bundles and plain tied scrolls with no exposed writing, open side doorway connecting to the courtyard, no tall chairs, no signboards, no seals, no people, no silhouettes, no portraits, late-morning daylight from the doorway, uncluttered central aisle; premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and woven textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "上午",
+      "mood": "文雅肃静，由礼仪井然转为惊喜热切"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "少年王粲来到长安，登门拜访蔡邕。",
+      "dialogue": [
+        {
+          "speaker": "王粲",
+          "line": "晚辈王粲，前来拜见蔡公。"
+        }
+      ],
+      "visual": "Wide view of Wang Can alone before the open gateway of scene-01, his small slender youthful figure contrasted with the substantial timber entrance. He wears his fixed light-ochre robe, dark-gray hair cloth and dusty dark-brown cloth shoes, holding a respectful clasped-hands greeting toward the doorway. Show only Wang Can, no gatekeeper, no guests, no background figures. Preserve his exact character profile and the established environment. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "王粲"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-02",
+      "caption": "堂中宾客满座，蔡邕闻名便起。",
+      "dialogue": [
+        {
+          "speaker": "蔡邕",
+          "line": "王粲来了？"
+        }
+      ],
+      "visual": "Medium view focused exclusively on Cai Yong inside scene-02 at the instant he rises eagerly from his sitting mat, one hand lifting his unchanged deep-teal robe hem, his face suddenly bright with recognition. His shoes are beside the edge of the mat. Frame tightly around his place and the side doorway; all other reception seating and all guests remain outside the crop. Do not depict any attendant, guest, silhouette or reflection. Keep his black scholar's crown, gray-black beard with the central silver strand and fixed costume consistent. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "蔡邕"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "他顾不上穿正鞋，急忙出迎。",
+      "dialogue": [],
+      "visual": "Low close-up of Cai Yong's lower robe and feet at the open side doorway of scene-02. In his haste, his same dark-brown low cloth shoes have been slipped on backward, with their heel ends facing forward and his heels not properly seated; make the reversed footwear the unmistakable visual focal point. One foot is already moving toward the threshold while his hand gathers the deep-teal robe hem above his ankles. Only Cai Yong is present, with no additional limbs or people. This is a temporary way of wearing his original shoes, not a footwear redesign. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "蔡邕"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-01",
+      "caption": "名重朝廷的长者，竟亲自迎到门前。",
+      "dialogue": [
+        {
+          "speaker": "蔡邕",
+          "line": "快请进！"
+        },
+        {
+          "speaker": "王粲",
+          "line": "劳蔡公亲迎，晚辈不敢当。"
+        }
+      ],
+      "visual": "Medium full-figure two-shot at the established gateway of scene-01. Cai Yong approaches from inside with delighted urgency and extends an open welcoming hand toward Wang Can. His original dark-brown shoes remain visibly worn backward. Wang Can, notably shorter and younger, returns a modest clasped-hands bow with a surprised expression. Preserve both exact character designs, costumes and hairstyles. Only these two people appear; the doorway and courtyard contain no other figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "蔡邕",
+        "王粲"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "少年身形短小，满座见礼遇皆惊。",
+      "dialogue": [
+        {
+          "speaker": "蔡邕",
+          "line": "此王公孙也，有异才，吾不如也。"
+        }
+      ],
+      "visual": "Medium two-shot in the central aisle of scene-02, framing only Cai Yong and Wang Can. Cai Yong stands beside the shorter youth, turning his head toward listeners entirely outside the frame while presenting Wang Can with a respectful open palm. His expression is earnest admiration rather than theatrical boasting. Wang Can stands quietly with joined hands, surprised and modest. Keep all guests strictly off-camera: no faces, backs, hands, silhouettes or reflections belonging to any third person. Crop above the feet, retaining both fixed costumes and hairstyles. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "蔡邕",
+        "王粲"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "一句托付，让众人不敢再轻看少年。",
+      "dialogue": [
+        {
+          "speaker": "蔡邕",
+          "line": "吾家书籍文章，尽当与之。"
+        }
+      ],
+      "visual": "Intimate medium two-shot in scene-02 with the established shelves behind the two scholars. Cai Yong gestures toward his collection of closed bamboo-slip bundles and plain tied scrolls, then looks warmly at Wang Can. Wang Can bows with joined hands, visibly moved by the elder's trust. No books are being physically handed over; this is a declaration of intended entrustment, not an enacted transfer. Only Cai Yong and Wang Can are visible, all guests remain outside the frame. Preserve both fixed costumes and hairstyles, crop above the feet, and show no readable surfaces on any book or scroll. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "蔡邕",
+        "王粲"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture where applicable, even lighting. Depict Eastern Han civilian scholarship, not military spectacle; neither character wears armour or carries a weapon. Maintain exact character-card faces, body proportions, hairstyles, accessories and clothing throughout. Wang Can is a short, slender adolescent, visibly younger and shorter than Cai Yong. Cai Yong's backward-worn shoes are a temporary action using the same footwear, not a costume change. Use only the two defined locations. Scene concept images must contain no people. Each story image contains only the characters listed for that panel, never more than two; all guests and any implied messenger stay entirely off-camera, without visible body parts, silhouettes or reflections. All books and scrolls remain closed or present blank surfaces. No inscriptions, seals, calligraphy, signage, speech balloons, graphic overlays or embedded typography. Narration and dialogue are supplied separately for HTML layout. Render each panel as a single continuous image; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为王粲赴长安、蔡邕闻其在门而倒屣相迎、少年容状短小令一坐惊异，以及蔡邕称其有异才并表示书籍文章尽当与之。王粲按少年时期表现，约十七岁，不设定精确到访日期。第一、二、四格对白及具体动作衔接为文学化补写；第五、六格蔡邕对白据传文。满座宾客确有史料依据，但为遵守人物数量与每格最多两人的限制，一律置于画外，由旁白及蔡邕的视线交代。宾客先轻视后改观属于对一坐尽惊的戏剧化阐释，并非史料明载的心理过程。末格只表现托付意向，不擅自增写藏书已经全部赠出的事实。倒屣以倒穿原有布履作视觉转译，不将其机械地考定为某一种鞋制。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-10",
+  "episode": 1,
+  "_generation": {
+    "written_at": "2026-11-11T09:26:04+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 1903,
+      "completion_tokens": 4517,
+      "total_tokens": 6420,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 1900,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 449,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "raw_chars": 13290,
+    "finish_reason": "stop",
+    "prompt_sha256": "b765da9bd300601d200f47923ab4ee05468fe4cccf3d007037dd583841cc6b4a",
+    "prompt_chars": 2884
+  }
+}

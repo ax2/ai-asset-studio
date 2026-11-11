@@ -103,10 +103,26 @@ def find(cfg: dict, batch_id: str, **match) -> dict | None:
 
 # ---------------------------------------------------------------- character cards
 
-def ensure_cards(cfg: dict, plan: dict) -> dict[str, dict]:
+def ensure_cards(cfg: dict, plan: dict, *, create: bool = True) -> dict[str, dict]:
+    """Resolve character cards.
+
+    Series runs pre-create every card in one pass, then launch several worker
+    processes with create=False so they cannot race on the same card row.
+    """
     out = {}
     for spec in plan["characters"]:
         name = spec["name"]
+        if not create:
+            card = (characters.get_card(cfg, spec["character_id"])
+                    if spec.get("character_id") else None)
+            if card is None:
+                card = next((c for c in characters.list_cards(cfg)
+                             if c["name"] == name), None)
+            if not card:
+                raise ValueError(
+                    f"角色卡尚未预建：{name}（先运行 generate_comic_series.py --prepare-only）")
+            out[name] = card
+            continue
         if spec.get("existing") and spec.get("character_id"):
             card = characters.get_card(cfg, spec["character_id"])
             if not card:
@@ -274,6 +290,8 @@ def comic_html(plan: dict, rows: list[dict]) -> str:
         ".caption{font-size:19px;line-height:1.7;margin:0 0 12px}",
         ".line{margin:7px 0;font-size:15px;line-height:1.65;color:#4b3a28}",
         ".line b{color:#8b3a24;margin-right:8px}",
+        ".back{text-align:center;margin-top:26px;font-size:13px}",
+        ".back a{color:#8b3a24;text-decoration:none;border-bottom:1px solid #b08b57}",
         "footer{text-align:center;margin-top:50px;font-size:12px;color:#8b7457;"
         "line-height:1.9}",
         "@media print{body{background:#fff}.panel{box-shadow:none;break-inside:avoid}}",
@@ -284,6 +302,11 @@ def comic_html(plan: dict, rows: list[dict]) -> str:
         f"<div class='source'>{html.escape(plan['story_source'])}</div>",
         "</header>",
     ]
+    if plan.get("series_id"):
+        parts.append(
+            "<div class='back'><a href='../%s/index.html'>← 返回「%s」系列目录</a></div>"
+            % (html.escape(str(plan["series_id"])),
+               html.escape(str(plan.get("series_title") or "三国史料小故事"))))
     for p in sorted(plan["panels"], key=lambda x: x["no"]):
         rec = by_panel.get(p["no"])
         src = ("images/" + rec["filename"]) if rec else ""
@@ -319,6 +342,8 @@ def main() -> None:
                     help="删除本批已有分镜后重新生成（补齐此前缺失的人物参考图）")
     ap.add_argument("--redo-degraded-panels", action="store_true",
                     help="只删除并重新生成降级为纯文本的分镜（reference_used=False）")
+    ap.add_argument("--cards-ready", action="store_true",
+                    help="角色卡已由系列总控预建，本进程只读不写（并发安全）")
     ap.add_argument("--max-cost", type=float, default=0.0, help="覆盖单次成本上限（美元）")
     args = ap.parse_args()
 
@@ -353,7 +378,7 @@ def main() -> None:
     portraits: dict[str, dict] = {}
 
     if not args.export_only:
-        cards = ensure_cards(cfg, plan)
+        cards = ensure_cards(cfg, plan, create=not args.cards_ready)
 
         # 1. New character portraits (existing characters reuse their own art).
         for spec in plan["characters"]:
@@ -365,8 +390,11 @@ def main() -> None:
                 portraits[name] = existing
                 log(f"立绘已存在，跳过：{name}")
                 continue
-            if spec.get("existing") and card.get("ref_asset_id"):
+            # The series controller generates shared portraits once, up front.
+            # Any card that already points at a real portrait must not pay again.
+            if not args.force and card.get("ref_asset_id"):
                 portraits[name] = store.get(cfg, card["ref_asset_id"]) or {}
+                log(f"复用全系列共享立绘，跳过：{name}")
                 continue
             t0 = time.time()
             log(f"生成新人物立绘：{name} …")

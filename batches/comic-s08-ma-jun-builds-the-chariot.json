@@ -1,0 +1,224 @@
+{
+  "id": "comic-s08-ma-jun-builds-the-chariot",
+  "title": "马钧复造指南车",
+  "subtitle": "古书中的巧器，能否在眼前重现？",
+  "story_source": "《三国志·魏书·杜夔传》裴松之注引傅玄《马先生传》：“于是二子遂共白明帝，诏先生作之，而指南车成。”其中“二子”指参与争论的高堂隆、秦朗，“先生”指马钧，明帝为曹叡。",
+  "why_not_in_romance": "通行毛本《三国演义》写木牛流马及其仿制，却未写马钧与高堂隆、秦朗争论古代指南车能否制造，继而奉曹叡之命制成指南车的事件；两种机械不可混为一事。",
+  "synopsis": "高堂隆等人怀疑古书记载的指南车，马钧却认为能够复造。争论经高堂隆、秦朗奏闻魏明帝曹叡，马钧奉诏试制。他从木料与轮轴间反复求索，终于制成指南车，让车上木人在车身转向时仍保持指南，以实物回答质疑。",
+  "characters": [
+    {
+      "name": "马钧",
+      "slug": "ma-jun",
+      "existing": false,
+      "role": "曹魏巧匠，奉诏复造指南车",
+      "profile": {
+        "age": "约四十岁，属本集视觉设定",
+        "gender": "男",
+        "role": "曹魏机械巧匠马钧，字德衡",
+        "era": "三国曹魏明帝时期",
+        "face": "长方脸，颧骨略显，下颌结实，短须整齐",
+        "eyes": "深褐眼睛，目光沉静，观察器物时专注",
+        "skin": "暖麦色，手掌略粗糙",
+        "build": "中等身量，肩背结实，动作稳健",
+        "hair": "黑发束成紧实发髻，以深灰布巾包束，全篇不变",
+        "marks": "无醒目疤痕或纹身，指腹有长期劳作形成的薄茧",
+        "outfit": "灰青色粗绢交领窄袖长袍，深褐布带，炭灰长裤，黑色布履；袖口与衣摆保持相同形制，全篇不换装",
+        "accessories": "腰侧悬一只小型素面工具皮囊，无文字与印记",
+        "weapon": "无武器",
+        "palette": "灰青、深褐、炭灰、木色、暖麦色",
+        "temperament": "寡言笃定，不逞口舌，以制作验证判断",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "No modern clothing, no ornate fantasy armour, no hairstyle changes, no costume changes, no weapon, no written symbols."
+      },
+      "pose": "Full-length standing character portrait, shoulders relaxed, one hand holding a plain wooden measuring rod, the other resting beside a small tool pouch, quietly attentive expression, unobstructed silhouette.",
+      "tags": [
+        "三国",
+        "曹魏",
+        "马钧",
+        "巧匠",
+        "指南车"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "高堂隆",
+      "slug": "gaotang-long",
+      "existing": false,
+      "role": "曹魏官员，参与指南车争论",
+      "profile": {
+        "age": "约五十岁，属本集视觉设定",
+        "gender": "男",
+        "role": "曹魏官员高堂隆，指南车争论的参与者",
+        "era": "三国曹魏明帝时期",
+        "face": "清瘦长脸，眉骨清晰，留修整齐整的黑灰短须",
+        "eyes": "深褐眼睛，审视时微微收窄",
+        "skin": "浅暖肤色，眼角有细纹",
+        "build": "身形修长，站姿端正",
+        "hair": "黑灰头发束髻，戴朴素黑色文官冠，全篇不变",
+        "marks": "无疤痕、纹身或夸张面部标记",
+        "outfit": "深栗褐色交领宽袖官袍，内衬米白，墨黑缘边，深色革带，黑色布履；全篇不换装",
+        "accessories": "腰悬小型素玉佩，无铭文，无印章",
+        "weapon": "无武器",
+        "palette": "栗褐、墨黑、米白、暗玉色",
+        "temperament": "重视典籍与论辩，起初怀疑，见实物后认真审视",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "No imperial crown, no extravagant armour, no hairstyle changes, no costume changes, no weapon, no written symbols."
+      },
+      "pose": "Full-length standing character portrait, upright scholarly posture, one hand slightly raised in measured debate, the other concealed naturally within a broad sleeve, reserved questioning expression.",
+      "tags": [
+        "三国",
+        "曹魏",
+        "高堂隆",
+        "官员",
+        "论辩"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "魏宫议事偏厅",
+      "description": "空无一人的曹魏宫廷偏厅。深色木柱、素面屏风与低案构成简洁议事空间，侧窗引入柔和日光。案上只放闭合的素面卷轴，不出现文字、印章、人物或人物画像。",
+      "prompt_extra": "Independent environment concept art of an empty Cao Wei palace side chamber, dark timber columns, plain folding screen, low wooden tables, closed unmarked silk scrolls, soft daylight through lattice windows, restrained historical pigment palette, spacious central floor for a two-person discussion, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, fine armour and textile texture, even lighting, no people, no human figures, no portraits, no writing, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "肃静、克制、略有争辩张力"
+    },
+    {
+      "id": "scene-02",
+      "name": "官营作坊试车庭",
+      "description": "空无一人的官营作坊庭院，后方为敞开的木构工棚，左侧固定工作台，右侧留出宽阔夯土地面试车。木料、轮坯与工具整齐摆放，同一处石阶和木柱可供各格保持空间连续。环境概念图不放车辆、木人或任何人物。",
+      "prompt_extra": "Independent environment concept art of an empty Cao Wei government workshop courtyard, open timber shed at the rear, fixed workbench on the left, broad level rammed-earth testing ground on the right, stacked timber, wheel blanks and simple woodworking tools, a distinctive low stone step and square timber post as continuity anchors, soft daylight, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no people, no figurines, no vehicles, no writing, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "朴实、专注、适于试制与验证"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "古书记载的指南车，真能造出来吗？",
+      "dialogue": [
+        {
+          "speaker": "高堂隆",
+          "line": "古有指南车？恐怕只是虚言。"
+        }
+      ],
+      "visual": "Inside scene-01, Gaotang Long stands beside a low table with a closed unmarked scroll, raising one hand in skeptical discussion. Ma Jun faces him calmly across the open floor. Exactly two people, both matching their character profiles, unchanged clothing and hairstyles. Medium two-shot emphasizing the contrast between a questioning gesture and quiet attention. No emperor, attendants or background figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no writing, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "高堂隆",
+        "马钧"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "马钧不信古代巧器只能留在书中。",
+      "dialogue": [
+        {
+          "speaker": "马钧",
+          "line": "可以造。何不试一试？"
+        }
+      ],
+      "visual": "Inside scene-01, closer view of Ma Jun making a restrained open-handed gesture toward a plain wooden wheel blank on the low table, speaking with quiet conviction. Gaotang Long appears at the opposite edge in three-quarter view, listening with a doubtful expression. Exactly two people with unchanged character designs, no costume or hairstyle changes. The wheel blank is an illustrative prop, not an exposed reconstruction of the mechanism. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no writing, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "马钧",
+        "高堂隆"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-01",
+      "caption": "高堂隆、秦朗奏闻，明帝诏命试造。",
+      "dialogue": [],
+      "visual": "Inside scene-01, Ma Jun stands alone in the open center of the chamber, holding a closed plain silk scroll respectfully in both hands at waist level, head slightly lowered as he accepts the responsibility of an imperial commission. The scroll is completely unmarked and bears no seal. No emperor, messenger, Qin Lang or other person is visible. Preserve Ma Jun's exact established outfit and hairstyle. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no writing, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "马钧"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "奉诏之后，马钧埋首木料轮轴之间。",
+      "dialogue": [],
+      "visual": "Inside scene-02 at the fixed left-hand workbench, Ma Jun works alone, carefully fitting a wooden axle beside a broad wooden wheel. An unfinished low two-wheeled carriage stands nearby, its central wooden housing closed and its internal transmission unseen. A small unfinished unpainted wooden pointer figurine lies flat on the bench as an obvious inanimate component, not a person. Show coherent woodworking tools and timber shavings without speculative gear diagrams. Preserve Ma Jun's exact outfit and hairstyle. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no writing, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "马钧"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "车成初试，木人举臂指向南方。",
+      "dialogue": [
+        {
+          "speaker": "马钧",
+          "line": "先看木人所指，再看车身转向。"
+        }
+      ],
+      "visual": "Inside scene-02, wide view of the completed south-pointing carriage on the testing ground. Ma Jun stands at its long wooden drawbar, preparing to turn the carriage; Gaotang Long watches from a safe distance. Exactly two people. The vehicle has two large wooden wheels, a low rectangular body with a closed central housing, and one small unpainted carved wooden pointer mounted on top, clearly an inanimate mechanical ornament with a rigid extended arm. The carriage initially faces camera-left, while the pointer arm points toward the fixed rear-right timber post, establishing the southward reference for the next panel. Keep the camera viewpoint, stone step and timber post consistent with panel six. No compass, magnet, arrows or diagrams. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no writing, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "马钧",
+        "高堂隆"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "车身已转，木人所指未改。",
+      "dialogue": [
+        {
+          "speaker": "高堂隆",
+          "line": "车已转向，木人仍指着原处！"
+        }
+      ],
+      "visual": "Inside scene-02, use the same camera viewpoint and fixed courtyard landmarks as panel five. The same completed wooden carriage has now turned a quarter turn so its drawbar faces the foreground, but its small unpainted mechanical pointer figurine still extends its rigid arm toward the same rear-right timber post. The carriage body visibly changes orientation while the pointer maintains its world-space direction. Ma Jun holds the drawbar with a composed expression; Gaotang Long leans forward slightly, studying the result with restrained surprise. Exactly two people, unchanged outfits and hairstyles. Include subtle curved wheel tracks in the earth, but no motion arrows, ghost images or duplicate vehicles. Keep the transmission enclosed. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no writing, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "马钧",
+        "高堂隆"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting throughout. Preserve both character profiles exactly, with no changes to faces, costumes, hairstyles or accessories. Show no more than two people per panel and no background crowds, attendants or human portraits. Only scene-01 and scene-02 may be used. Environment concept images must be completely uninhabited. The small wooden pointer is visibly an inanimate vehicle component, never a living third character. Maintain the same completed carriage design across panels five and six, with an enclosed mechanism; do not claim a historically verified internal gear arrangement. Preserve a fixed camera and fixed landmarks between these two panels so the carriage turns while the pointer retains its direction. Do not depict magnetic compasses, supernatural effects, modern machinery, wooden oxen or flowing horses. All narration and dialogue are external HTML overlays only. No writing, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为马钧与高堂隆、秦朗争论指南车能否制造，二人奏闻魏明帝曹叡，马钧奉诏制成。为满足人物与出图限制，仅马钧、高堂隆出镜；秦朗与曹叡只在史料说明和旁白中出现，不增设立绘。对白、接诏姿势、作坊劳动、试车动作及高堂隆现场观看的反应均为连环画文学化组织，不当作史料逐字记载。人物年龄、容貌和具体服色为视觉设定。指南车外形与木人造型为示意性复原，所引史料不足以确定马钧所用内部传动结构，因此不绘制确定性齿轮方案；连续两格仅以固定环境参照表现车转而指向不变，不暗示磁力自动寻南。此事不是木牛流马或其仿制故事。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-10",
+  "episode": 8,
+  "_generation": {
+    "written_at": "2026-11-11T09:38:05+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 1963,
+      "completion_tokens": 4220,
+      "total_tokens": 6183,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 1960,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 381,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "raw_chars": 12813,
+    "finish_reason": "stop",
+    "prompt_sha256": "a433f8ef5fb3d2648cea73196d0e705138629b014c043d35869be12cb882cb36",
+    "prompt_chars": 2954
+  }
+}

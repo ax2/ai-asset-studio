@@ -1,0 +1,220 @@
+{
+  "id": "comic-s02-tian-yu-returns-home",
+  "title": "田豫辞归养母",
+  "subtitle": "一场为奉养老母而起的含泪惜别",
+  "story_source": "《三国志·魏书·田豫传》：“刘备之奔公孙瓒也，豫时年少，自托于备，备甚奇之。及备为豫州刺史，豫以母老求归。备涕泣与别，曰：‘恨不与君共成大事也。’”",
+  "why_not_in_romance": "通行毛本《三国演义》没有写田豫少年依附刘备、因母亲年老请求归乡，以及刘备流泪惜别这一段；不能与小说中刘备辞别田楷等情节混同。本集依据《三国志·魏书·田豫传》，不是对《三国演义》现有回目的改写。",
+  "synopsis": "田豫年少时依附刘备，深受器重。及刘备任豫州刺史，田豫因母亲年老，请求归家奉养。刘备惜其才，却不愿阻其孝心，含泪与他告别，感叹未能携手共成大事。田豫拜别上路，留下知遇与亲恩之间的一段余情。",
+  "characters": [
+    {
+      "name": "刘备",
+      "slug": "liu-bei",
+      "existing": true,
+      "role": "此时为豫州刺史，器重田豫的旧主",
+      "profile": {
+        "age": "成年；故事处于任豫州刺史时期，视觉年龄沿用资产库，不另行改造",
+        "gender": "男",
+        "role": "豫州刺史；本集表现其惜才与惜别",
+        "era": "东汉末年",
+        "face": "严格沿用资产库刘备的面部设计",
+        "eyes": "严格沿用资产库刘备的眼部设计",
+        "skin": "严格沿用资产库刘备的肤色",
+        "build": "严格沿用资产库刘备的体态与比例",
+        "hair": "严格沿用资产库刘备的发型与冠饰，不作更换",
+        "marks": "沿用资产库既有识别特征，不新增疤痕或标记",
+        "outfit": "素白与月白交领深衣，宽袖，衣缘绣暗银云雷纹，玄色腰带配玉具剑佩，外罩浅灰鹤纹大氅，丝质光泽与细密织纹",
+        "accessories": "沿用资产库玄色腰带与玉具剑佩，不新增帝王冠冕",
+        "weapon": "沿用资产库既有佩剑，全篇不出鞘、不更换",
+        "palette": "素白、月白、暗银、玄黑、少量朱红点缀",
+        "temperament": "温厚克制，珍惜人才；惜别时真情流露",
+        "art_style": "沿用三国英雄立绘既有角色资产，不重画立绘",
+        "negative": "不得重造五官、改变发型、更换服装或武器；不得添加皇帝仪仗、文字或印章"
+      },
+      "pose": "Reuse the existing Liu Bei character asset without redesign; a restrained standing farewell gesture, one hand slightly extended, original costume, hairstyle and sheathed weapon unchanged; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "tags": [
+        "三国",
+        "已有角色",
+        "刘备",
+        "惜才",
+        "送别"
+      ],
+      "character_id": "char-20261110-144930-807358"
+    },
+    {
+      "name": "田豫",
+      "slug": "tian-yu",
+      "existing": false,
+      "role": "年少依附刘备、请求归乡奉养老母的青年",
+      "profile": {
+        "age": "二十余岁青年；初依附刘备时年少",
+        "gender": "男",
+        "role": "刘备器重的年轻追随者，尚未表现为后来的曹魏名将",
+        "era": "东汉末年，刘备任豫州刺史时期",
+        "face": "清瘦的长椭圆脸，颧骨略显，鼻梁端正，下颌收束，无须",
+        "eyes": "深褐色眼睛，眼形略长，目光清明沉静",
+        "skin": "自然浅麦色，略带行旅风霜感",
+        "build": "中等身高，身形修长结实，肩背挺直，不作夸张肌肉",
+        "hair": "墨黑长发整齐束髻，以深褐布巾固定，无垂散长发",
+        "marks": "左眉末端一颗很淡的小痣，无疤痕、无刺青",
+        "outfit": "灰青色粗绢交领长袍，内衬米白，深褐窄布腰带，深灰长裤，黑褐布履；衣料朴素整洁，全篇不更换",
+        "accessories": "腰侧固定一只无纹饰的小型褐色布囊，无玉饰、无印绶",
+        "weapon": "不携武器",
+        "palette": "灰青、米白、深褐、深灰、墨黑",
+        "temperament": "恭谨沉稳，重恩亦重孝，辞别时不卑不亢",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不得使用晚年将领形象；不得添加胡须、华贵铠甲、披风、武器或冠冕；不得改变服装、发型与识别特征；无文字、印章及水印"
+      },
+      "pose": "Full-body three-quarter standing character portrait, hands respectfully clasped before the chest, straight back and a composed youthful expression; fixed gray-blue robe, dark brown cloth belt, black hair in a cloth-bound topknot, small plain brown waist pouch, no weapon; premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "tags": [
+        "三国",
+        "田豫",
+        "青年",
+        "孝亲",
+        "辞归"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "豫州治所内堂",
+      "description": "用于叙事的东汉官署内堂概念环境，不指认具体建筑遗址。木柱、灰泥墙、低案与席垫陈设简朴，侧窗透入柔光；无人物、无匾额、无可见文字与印章。",
+      "prompt_extra": "Standalone empty environment concept art of a modest late Eastern Han administrative reception hall, timber pillars, pale earthen plaster walls, a plain low wooden desk and woven floor mats, soft daylight through a wooden lattice window, balanced spatial depth, no people, no human silhouettes, no portraits, no signage, no seals; premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "白日",
+      "mood": "清静、朴素、克制"
+    },
+    {
+      "id": "scene-02",
+      "name": "城外归途",
+      "description": "用于表现惜别的城外土路概念环境。近处为路旁疏柳与草地，土路向远处低丘延伸，画面一侧露出朴素夯土城墙；无人物、无车马、无旗帜与题字。",
+      "prompt_extra": "Standalone empty environment concept art of an unpaved road outside a late Eastern Han town, sparse willows and muted grasses, a plain rammed-earth wall at one edge, low distant hills and an open receding road, gentle afternoon daylight, clear foreground space for later character placement, no people, no human silhouettes, no animals, no vehicles, no flags, no signage, no seals; premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "午后",
+      "mood": "疏朗、惜别、余韵悠长"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "田豫年少依附刘备，深受器重。",
+      "dialogue": [],
+      "visual": "Inside scene-01, Liu Bei and Tian Yu sit facing each other across the plain low desk, Tian Yu speaking with a modest open-hand gesture while Liu Bei listens attentively with visible appreciation. Show exactly these two characters. Reuse Liu Bei's existing asset without any change to face, hairstyle, costume or sheathed weapon; Tian Yu wears his fixed gray-blue robe and cloth-bound topknot, no weapon. This is a quiet conversation without documents, attendants or invented official insignia. Medium-wide eye-level view, soft even daylight, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, no seals; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "刘备",
+        "田豫"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "及刘备任豫州刺史，田豫求归。",
+      "dialogue": [
+        {
+          "speaker": "田豫",
+          "line": "家母年老，愿归乡奉养，恳请允准。"
+        }
+      ],
+      "visual": "Inside scene-01, Tian Yu stands before the seated Liu Bei and makes a deep respectful clasped-hands bow, his expression earnest rather than fearful. Liu Bei looks up toward him, his attentive expression beginning to change. Exactly two characters, with both faces visible in three-quarter view. Keep Liu Bei identical to the existing asset and Tian Yu identical to his character profile, all clothing, hairstyles and weapons unchanged. Medium eye-level composition emphasizing the request, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no seals; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "刘备",
+        "田豫"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-01",
+      "caption": "惜其才，也不忍阻其孝心。",
+      "dialogue": [
+        {
+          "speaker": "刘备",
+          "line": "既为奉母，便归去吧。"
+        }
+      ],
+      "visual": "Close view of Liu Bei alone inside scene-01, recognizable timber pillar and softly lit plaster wall behind him. His gaze is lowered for a brief moment, lips slightly parted, eyes moist with restrained sadness as he grants the request. One hand opens gently in assent at the lower edge of the image. Only Liu Bei appears; Tian Yu remains entirely outside the frame. Preserve the existing Liu Bei face, hairstyle, white and moon-white robes, pale gray crane-pattern cloak and original accessories exactly. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no seals; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "刘备"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "临别，刘备含泪相送。",
+      "dialogue": [],
+      "visual": "On the roadside of scene-02, Liu Bei and Tian Yu stand facing each other beneath sparse willow branches, the empty road extending toward distant low hills. Liu Bei gently holds Tian Yu's forearm with one hand, reluctant to part; a small tear is visible on his cheek. Tian Yu inclines his head respectfully, moved but composed. Exactly two people, no escorts, horses or background figures. Preserve both character designs, garments, hairstyles and accessories exactly; Liu Bei's original sword remains sheathed and Tian Yu is unarmed. Medium two-shot, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no seals; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "刘备",
+        "田豫"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "一语惜别，尽是不舍。",
+      "dialogue": [
+        {
+          "speaker": "刘备",
+          "line": "恨不与君共成大事也。"
+        }
+      ],
+      "visual": "Close two-character farewell composition within scene-02, Liu Bei in three-quarter foreground with a tear tracing his cheek, looking directly at Tian Yu with sincere regret. Tian Yu is visible at the opposite edge in a clear side view, listening with lowered eyes and respectfully clasped hands. Keep the distant road and willow foliage softly recognizable behind them. Exactly two characters, no imagined memories or additional figures. Match Liu Bei's existing asset and Tian Yu's fixed profile without changing clothing, hair or weapons. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no seals; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "刘备",
+        "田豫"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "田豫踏上归途，刘备伫立相望。",
+      "dialogue": [],
+      "visual": "Wide concluding view of scene-02, Tian Yu walking away along the unpaved road in the middle distance, seen from behind with his fixed gray-blue robe, cloth-bound topknot and small waist pouch unchanged. Liu Bei stands still in the near foreground at one side, watching him depart, his pale gray crane-pattern cloak and original sheathed sword unchanged. Exactly two characters, each shown only once, no mother, attendants, horses or other distant silhouettes. Use the long empty stretch of road between them to convey separation without melodramatic weather. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no seals; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "刘备",
+        "田豫"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting throughout. Reuse the existing Liu Bei asset exactly; do not redesign his appearance or generate a replacement character portrait. Keep Tian Yu's face, youthful clean-shaven appearance, hairstyle, fixed costume, waist pouch and unarmed status consistent. Liu Bei's asset title does not imply imperial status in this episode; show no imperial crown, throne or imperial procession. Use only scene-01 and scene-02 for all narrative images. Scene concept images must be empty environments without people or silhouettes. Each panel contains only its listed characters, with no more than two people, no background crowds, no portraits and no duplicated figures. Never depict Tian Yu's mother, even in a memory or inset. Do not introduce extra locations, montage inserts or costume changes. No visible writing on objects, no calligraphy, no seals or seal impressions, no speech bubbles, no graphic frames; narration and dialogue are reserved for external HTML layout; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+  "notes": "史料骨架为田豫年少依附刘备、受到器重、刘备任豫州刺史时田豫因母老求归，以及刘备涕泣惜别并说出“恨不与君共成大事也”。第五格对白直接取自史料；第二、三格对白为依据情境所作的文学化拟写，不冒充原文。治所交谈、城外送别、握臂与步行离去均为连环画的场景和动作补足，史料未交代具体地点、送行方式与动作。未虚构母亲患病、家书催归或刘备阻挠。人物仅用刘备、田豫两人；刘备完整沿用既有资产，其资产称号不代表本集时点的历史身份。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-10",
+  "episode": 2,
+  "_generation": {
+    "written_at": "2026-11-11T09:28:09+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 1939,
+      "completion_tokens": 4223,
+      "total_tokens": 6162,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 1936,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 251,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "raw_chars": 12720,
+    "finish_reason": "stop",
+    "prompt_sha256": "4bbe83dc209491a2f07b6af45f8fe4909192eaa185932889ff25fc5e32f133e5",
+    "prompt_chars": 2938
+  }
+}

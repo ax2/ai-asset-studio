@@ -132,6 +132,27 @@ python tools/generate_comic.py --redo-panels           # 重做全部 6 格（�
 
 注意：`gpt-image-2.6-sunburst` 的官方单价未由 `/v1/models` 公开，`studio/pricing.py` 的 `ESTIMATED_MODELS` 按上一代同档估算记账；收到正式账单后应更新该表。
 
+## 十集系列批量（共享人物资产库）
+
+`tools/write_comic_series.py` 用 `gpt-6.1-sol` 一次规划 10 个《三国演义》未收录的史料小故事（选题缓存在 `batches/series-*-plan.json`，可用 `--replan` 重选），再逐集写出完整剧本 `batches/comic-sNN-*.json`；每集 2 个场景、6 格分镜、每格最多 2 个人物。
+
+`tools/generate_comic_series.py` 是总控：
+
+1. **先共享、后并发**：所有角色卡只建一次，缺立绘的人物统一生成一张全系列共用立绘（线程池），之后才启动各集进程。这样跨集复用同一人物（如曹丕同时出现在第 4、5 集）不会有依赖或重复计费。
+2. 各集用独立进程跑 `generate_comic.py --plan <剧本> --cards-ready`（角色卡只读，SQLite WAL + busy_timeout 保证并发写安全），每集自己导出 ZIP、`comic.html`、场景卡并同步到资产盘。全程幂等，中断重跑自动跳过已入库的图。
+3. 最后生成系列 `index.html`（10 集卡片、缩略图、史料依据、成本、阅读/下载入口）与 `series-manifest.json`，连同 10 个素材包 ZIP 一起写入 `D:\gdrive.photo\ai-assets\all\sanguo-tales-10\` 和工作台 `data/packs/sanguo-tales-10/`。
+
+```bash
+python tools/write_comic_series.py --show          # 只看 10 集选题
+python tools/generate_comic_series.py --list       # 打印计划与预估成本
+python tools/generate_comic_series.py --prepare-only --skip-portraits  # 只建角色卡（零花费）
+python tools/generate_comic_series.py --workers 4 --fix-degraded
+python tools/generate_comic_series.py --index-only # 只重建索引并同步
+python tools/generate_comic_series.py --episodes 1,2,3
+```
+
+`--fix-degraded` 会在全部生成完后自动补跑「降级为纯文本」或缺失的分镜；单集也可 `python tools/generate_comic.py --plan batches/comic-sNN-*.json --redo-degraded-panels`。阅读页在工作台 `http://127.0.0.1:8777/pack/sanguo-tales-10/index.html`。
+
 ## 目录
 
 ```

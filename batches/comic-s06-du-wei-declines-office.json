@@ -1,0 +1,207 @@
+{
+  "id": "comic-s06-du-wei-declines-office",
+  "title": "杜微不闻荣禄",
+  "subtitle": "一封书信陈国事，一席谏职重其志",
+  "story_source": "《三国志·蜀书·杜微传》：“微自乞老病求归，亮又与书答曰……”传中记杜微自托耳聋，辞避征召；诸葛亮将其迎来，以书信说明心意，后来授以谏议大夫，使其不必参与具体政务，以顺从其志趣。省略号表示原文节略，后文为史事概述。",
+  "why_not_in_romance": "通行毛本《三国演义》没有杜微以耳疾辞避征召、诸葛亮用书信说明心意并为其安排谏议大夫的故事。本集依据《三国志·蜀书·杜微传》，不套用小说中诸葛亮招揽其他人才的情节。",
+  "synopsis": "杜微自称耳疾，辞避征召，被迎至官署后仍以年老多病请求归乡。诸葛亮没有以高官厚禄相诱，而以书信申明国事与相待之意，最终授杜微谏议大夫，不使其承担繁杂政务，尊重他的年岁与志趣。",
+  "characters": [
+    {
+      "name": "诸葛亮",
+      "slug": "zhuge-liang",
+      "existing": true,
+      "role": "蜀汉丞相，以书信向杜微说明心意",
+      "profile": {
+        "age": "成年中年，沿用既有角色卡的年龄观感",
+        "gender": "男",
+        "role": "蜀汉丞相",
+        "era": "三国蜀汉",
+        "face": "严格沿用资产库诸葛亮角色卡，不重新设计",
+        "eyes": "严格沿用资产库诸葛亮角色卡",
+        "skin": "严格沿用资产库诸葛亮角色卡",
+        "build": "严格沿用资产库诸葛亮角色卡",
+        "hair": "严格沿用资产库诸葛亮角色卡，不更换发型",
+        "marks": "沿用既有角色卡，不新增外貌标记",
+        "outfit": "月白交领宽袍，外披白鹤羽纹鹤氅，衣缘绣细密银线八卦暗纹，腰束素色丝绦，层层薄纱与丝质褶皱；全篇保持不变",
+        "accessories": "沿用既有角色卡配饰，不新增冠饰或佩饰",
+        "weapon": "本集不展示武器，不改变既有武器设定",
+        "palette": "月白、素白、淡银、浅青、墨黑",
+        "temperament": "沉静诚恳，礼重年长士人，不以威势迫人",
+        "art_style": "沿用资产库既有立绘及三国英雄立绘风格，不重新生成角色外貌",
+        "negative": "禁止重造面貌，禁止更换服装、发型或武器，禁止增加与既有角色卡不符的配饰"
+      },
+      "pose": "Reuse the existing Zhuge Liang character asset without redesign; seated upright beside a low writing desk, extending an open hand with restrained courtesy.",
+      "tags": [
+        "三国",
+        "蜀汉",
+        "既有资产",
+        "诸葛亮"
+      ],
+      "character_id": "char-20261110-144930-ece773"
+    },
+    {
+      "name": "杜微",
+      "slug": "du-wei",
+      "existing": false,
+      "role": "以耳疾辞避征召的年长士人，后任谏议大夫",
+      "profile": {
+        "age": "约六十至七十岁，属美术年龄设定，非史载确数",
+        "gender": "男",
+        "role": "蜀地年长士人，后任蜀汉谏议大夫",
+        "era": "汉末三国，蜀汉",
+        "face": "清瘦长脸，颧骨略显，额头与鼻唇两侧有自然皱纹，灰白短须",
+        "eyes": "深褐眼眸，目光清醒内敛，眼角略下垂",
+        "skin": "偏暖的浅褐肤色，有自然老年斑与细纹",
+        "build": "清瘦，背略微佝偻，坐姿端正而不强撑",
+        "hair": "灰白头发束成整齐发髻，以素褐布巾固定，全篇不变",
+        "marks": "额间细纹、灰白短须；耳部外观正常，不将耳疾画成外伤",
+        "outfit": "灰褐色粗绢交领长袍，米灰内衬，深褐布腰带，深灰裤，旧黑布履；衣料洗旧而洁净，全篇不更换",
+        "accessories": "仅用素褐布巾和布腰带，无玉佩、金饰或官印",
+        "weapon": "无",
+        "palette": "灰褐、米灰、深褐、墨黑、灰白",
+        "temperament": "寡言自持，淡于荣禄，辞让而不卑怯",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "无夸张耳伤，无滑稽失聪表演，无华贵官服，无金饰，无武器，无现代助听器，无现代眼镜，全篇不改变服装与发型"
+      },
+      "pose": "Full-body standing portrait of an elderly scholar with a slightly stooped back, hands respectfully folded inside his sleeves, quiet and self-possessed, wearing the fixed plain gray-brown robe and brown cloth head wrap.",
+      "tags": [
+        "三国",
+        "蜀汉",
+        "杜微",
+        "年长士人",
+        "新建角色"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "杜微乡居",
+      "description": "不含人物的蜀地朴素居室。木柱、夯土墙、竹帘、低案与草席构成清简空间，窗外可见竹影。案上仅有素面陶盏，不出现书写内容或装饰文字。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a modest rural scholar's room in Shu, timber posts, rammed-earth walls, bamboo blinds, low wooden table, woven floor mat, plain ceramic cup, soft bamboo shadows beyond an open window, balanced wide composition, even daylight, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture; no people, no human silhouettes, no calligraphy, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "上午",
+      "mood": "清简、安静、疏于荣禄"
+    },
+    {
+      "id": "scene-02",
+      "name": "丞相府静室",
+      "description": "不含人物的丞相府内室。木柱与素墙之间设两席、低案和置笔陶皿，侧窗透入柔光。案上可放素面纸卷；无匾额、旗帜、印章及任何可见文字。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a restrained Shu Han chancellor's study, timber pillars, plain plaster walls, two woven sitting mats facing a low writing desk, ceramic brush rest, blank paper rolls, soft side-window daylight, dignified but unostentatious arrangement, consistent readable room layout, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture, even lighting; no people, no human silhouettes, no plaques, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "白日",
+      "mood": "肃静、诚恳、相互尊重"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "杜微自称耳疾，辞避征召。",
+      "dialogue": [],
+      "visual": "Inside scene-01, Du Wei sits alone on the woven mat beside the low table, his head slightly lowered and both hands folded firmly inside his sleeves, conveying quiet withdrawal rather than theatrical deafness. Keep his established gray-brown robe, brown cloth head wrap, gray-white hair and short beard unchanged. Show the modest room and bamboo shadows clearly; no visitors or background figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no calligraphy, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "杜微"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-02",
+      "caption": "杜微被迎来，诸葛亮以礼相待。",
+      "dialogue": [],
+      "visual": "Inside scene-02, Zhuge Liang courteously indicates the guest mat with an open hand while Du Wei stands near the low desk with his hands folded in his sleeves. Use only these two characters. Reuse Zhuge Liang's existing face, hairstyle, moon-white robe and white crane-feather-pattern cloak without redesign; keep Du Wei's established appearance and plain clothing unchanged. Their balanced positions communicate respectful reception without coercive guards. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no calligraphy, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "诸葛亮",
+        "杜微"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "他仍以老病为由，求归故里。",
+      "dialogue": [
+        {
+          "speaker": "杜微",
+          "line": "年老多病，愿归乡里。"
+        }
+      ],
+      "visual": "Inside scene-02, a close view of Du Wei seated on the guest mat, leaning forward in a restrained formal bow with his hands joined inside his sleeves, his lined face earnest and resolute. Keep his gray-brown robe, brown head wrap, gray-white hair and short beard consistent. Frame only Du Wei against the same plain wall and a small edge of the low desk; no additional figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no calligraphy, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "杜微"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "诸葛亮再作书，陈明国事与心意。",
+      "dialogue": [],
+      "visual": "Inside scene-02, Zhuge Liang sits alone at the low desk, preparing a written reply with a brush held just above a sheet of paper. The paper is angled away and its visible surface remains entirely blank, with no ink strokes or symbols. His expression is thoughtful and sincere. Reuse his existing appearance, hairstyle, moon-white layered robe and white crane-feather-pattern cloak exactly. Show the familiar ceramic brush rest and side-window light. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no calligraphy, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "诸葛亮"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "不以荣禄相诱，只愿借重其德。",
+      "dialogue": [],
+      "visual": "Inside scene-02, Du Wei studies a paper letter held in both hands while Zhuge Liang sits quietly across the low desk without pressing him. Show only the blank reverse of the letter to the viewer, with the written side completely hidden. Du Wei remains reserved and attentive rather than suddenly enthusiastic. Preserve both established character designs and unchanged outfits. Keep the same room layout and soft side-window light. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no calligraphy, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "杜微",
+        "诸葛亮"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "授谏议大夫，不烦政务，以从其志。",
+      "dialogue": [],
+      "visual": "Inside scene-02, a calm concluding view of Du Wei and Zhuge Liang seated at equal visual height across the low desk. Zhuge Liang offers a restrained respectful gesture, while Du Wei sits with relaxed shoulders and his hands resting inside his sleeves. A folded blank-backed letter rests on the desk. Convey an accommodation of the elder scholar's wishes, not a triumphant recruitment or lavish reward. Keep both character designs, hairstyles and clothing unchanged; no ceremonial official robe, gifts, extra people or new setting. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no calligraphy, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "杜微",
+        "诸葛亮"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, and even lighting throughout. Reuse the existing Zhuge Liang asset without redesigning his face, hairstyle, clothing, accessories or weapons. Keep Du Wei's new character design and plain clothing identical in every appearance. Use only scene-01 and scene-02, with no more than two named characters in any panel and no background crowds. Both scene concept images must be entirely unoccupied. All visible paper surfaces must be blank; hide any implied written side from the camera. Do not depict seals, seal impressions, calligraphy, plaques, decorative glyphs, modern objects, speech balloons or graphic overlays. Narration and dialogue are reserved for external HTML layout. Every image is a single uninterrupted illustration; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为杜微自托耳聋辞召、被迎来后以老病求归、诸葛亮以书信答复并授谏议大夫以从其志。不把自称耳疾改写成已经证实的医学诊断，也不表现其听力恢复。第三格对白为依据史意拟写，并非原文引语；室内陈设、手势、书信传阅及两人相对而坐属于连环画的场面化处理，不主张是史书记载的现场细节。最后一格表现任职安排与礼重，不虚构杜微感激涕零或主动投效的表态。诸葛亮仅复用既有资产；杜微外貌与年龄范围为美术设定。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-10",
+  "episode": 6,
+  "_generation": {
+    "written_at": "2026-11-11T09:35:24+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 1974,
+      "completion_tokens": 3985,
+      "total_tokens": 5959,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 1971,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 330,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "raw_chars": 11492,
+    "finish_reason": "stop",
+    "prompt_sha256": "946d59e7d5947997c2fbcf869cece29195999c6114740da8bda4a23806d42468",
+    "prompt_chars": 2972
+  }
+}

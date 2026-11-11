@@ -1,0 +1,198 @@
+{
+  "id": "sanguo-tales-10",
+  "title": "三国史料小故事 · 十部连环画",
+  "planned_at": "2026-11-11T09:40:59+08:00",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "constraint": "《三国演义》未收录、见于史料的汉末三国小故事",
+  "plan_usage": {
+    "prompt_tokens": 2581,
+    "completion_tokens": 5220,
+    "total_tokens": 7801,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 2578,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2910,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "episodes": [
+    {
+      "no": 1,
+      "id": "comic-s01-cai-yong-greets-wang-can",
+      "title": "蔡邕倒屣迎少年",
+      "file": "comic-s01-cai-yong-greets-wang-can.json",
+      "source": "《三国志·魏书·王粲传》：“时邕才学显著，贵重朝廷，常车骑填巷，宾客盈坐。闻粲在门，倒屣迎之。粲至，年既幼弱，容状短小，一坐尽惊。邕曰：‘此王公孙也，有异才，吾不如也。吾家书籍文章，尽当与之。’”",
+      "why_not_in_romance": "通行毛本《三国演义》第九回写蔡邕因董卓之死叹息而获罪，却未写他在长安倒穿鞋迎接王粲、向满座宾客称许少年才学的故事。本集据《三国志·魏书·王粲传》展开，不将这一史传记载误作《三国演义》情节。",
+      "characters": [
+        "蔡邕",
+        "王粲"
+      ],
+      "scenes": [
+        "长安蔡宅门前",
+        "蔡宅会客书堂"
+      ],
+      "reused_script": false
+    },
+    {
+      "no": 2,
+      "id": "comic-s02-tian-yu-returns-home",
+      "title": "田豫辞归养母",
+      "file": "comic-s02-tian-yu-returns-home.json",
+      "source": "《三国志·魏书·田豫传》：“刘备之奔公孙瓒也，豫时年少，自托于备，备甚奇之。及备为豫州刺史，豫以母老求归。备涕泣与别，曰：‘恨不与君共成大事也。’”",
+      "why_not_in_romance": "通行毛本《三国演义》没有写田豫少年依附刘备、因母亲年老请求归乡，以及刘备流泪惜别这一段；不能与小说中刘备辞别田楷等情节混同。本集依据《三国志·魏书·田豫传》，不是对《三国演义》现有回目的改写。",
+      "characters": [
+        "刘备",
+        "田豫"
+      ],
+      "scenes": [
+        "豫州治所内堂",
+        "城外归途"
+      ],
+      "reused_script": false
+    },
+    {
+      "no": 3,
+      "id": "comic-s03-sun-deng-tests-the-pellet",
+      "title": "孙登验丸释疑",
+      "file": "comic-s03-sun-deng-tests-the-pellet.json",
+      "source": "《三国志·吴书·孙登传》：“使求过丸，比之非类，乃释之。”",
+      "why_not_in_romance": "通行毛本《三国演义》涉及孙登的太子身份与早逝，却没有写弹丸飞过身旁、侍从拘来持弹者、孙登比较弹丸后释放嫌疑人的事件。",
+      "characters": [
+        "孙登",
+        "持弹者"
+      ],
+      "scenes": [
+        "郊外土道",
+        "路旁无匾木亭"
+      ],
+      "reused_script": false
+    },
+    {
+      "no": 4,
+      "id": "comic-s04-xin-pi-grasps-the-robe",
+      "title": "辛毗牵衣直谏",
+      "file": "comic-s04-xin-pi-grasps-the-robe.json",
+      "source": "《三国志·魏书·辛毗传》记载：曹丕欲迁徙冀州士家十万户，以充实河南，辛毗与朝臣进谏。原文摘录：“帝不答，起入内；毗随而引其裾。”又载：“帝遂奋衣不还，良久乃出，曰：‘佐治，卿持我何太急邪？’”最终“帝遂徙其半”。",
+      "why_not_in_romance": "辛毗虽在通行毛本《三国演义》中参与军政活动，但小说未叙曹丕欲迁徙冀州士家十万户、辛毗牵住衣裾追谏并促成减半的事件。本集取材于《三国志·魏书·辛毗传》，不是对《三国演义》既有情节的改编。",
+      "characters": [
+        "曹丕",
+        "辛毗"
+      ],
+      "scenes": [
+        "宫中议事殿",
+        "内殿门前廊道"
+      ],
+      "reused_script": false
+    },
+    {
+      "no": 5,
+      "id": "comic-s05-donkey-calls-for-wang-can",
+      "title": "一场驴鸣送故人",
+      "file": "comic-s05-donkey-calls-for-wang-can.json",
+      "source": "《世说新语·伤逝》记王粲身后，曹丕临丧，对同游宾客说：“王好驴鸣，可各作一声以送之。”在场宾客遂各作驴鸣，以送故人。原文中的“文帝”为曹丕后来的帝号，不表示此时他已经称帝。",
+      "why_not_in_romance": "通行毛本《三国演义》未写王粲葬后曹丕临丧、请宾客模仿驴叫送别的场面；这是《世说新语》保存的悼亡轶事，不是小说中人物吟诗或宴饮的改写。",
+      "characters": [
+        "曹丕",
+        "吊唁宾客"
+      ],
+      "scenes": [
+        "丧舍门前",
+        "王粲丧舍内堂"
+      ],
+      "reused_script": false
+    },
+    {
+      "no": 6,
+      "id": "comic-s06-du-wei-declines-office",
+      "title": "杜微不闻荣禄",
+      "file": "comic-s06-du-wei-declines-office.json",
+      "source": "《三国志·蜀书·杜微传》：“微自乞老病求归，亮又与书答曰……”传中记杜微自托耳聋，辞避征召；诸葛亮将其迎来，以书信说明心意，后来授以谏议大夫，使其不必参与具体政务，以顺从其志趣。省略号表示原文节略，后文为史事概述。",
+      "why_not_in_romance": "通行毛本《三国演义》没有杜微以耳疾辞避征召、诸葛亮用书信说明心意并为其安排谏议大夫的故事。本集依据《三国志·蜀书·杜微传》，不套用小说中诸葛亮招揽其他人才的情节。",
+      "characters": [
+        "诸葛亮",
+        "杜微"
+      ],
+      "scenes": [
+        "杜微乡居",
+        "丞相府静室"
+      ],
+      "reused_script": false
+    },
+    {
+      "no": 7,
+      "id": "comic-s07-hu-wei-visits-his-father",
+      "title": "胡威千里省父",
+      "file": "comic-s07-hu-wei-visits-his-father.json",
+      "source": "《三国志·魏书·胡质传》裴松之注引《晋阳秋》：“临辞，赐绢一匹，为道路粮。”故事记胡威家贫，自驱驴单行，前往荆州探望父亲胡质；临别受绢，先问来处，得知是父亲俸禄之余，才收下辞归。",
+      "why_not_in_romance": "通行毛本《三国演义》没有胡威徒步赶驴探望父亲、临别追问一匹绢的来源这一故事。其核心是胡质父子的清慎家风，并非小说中的武将战事。",
+      "characters": [
+        "胡威",
+        "胡质"
+      ],
+      "scenes": [
+        "荆州道旁",
+        "刺史署内素堂"
+      ],
+      "reused_script": false
+    },
+    {
+      "no": 8,
+      "id": "comic-s08-ma-jun-builds-the-chariot",
+      "title": "马钧复造指南车",
+      "file": "comic-s08-ma-jun-builds-the-chariot.json",
+      "source": "《三国志·魏书·杜夔传》裴松之注引傅玄《马先生传》：“于是二子遂共白明帝，诏先生作之，而指南车成。”其中“二子”指参与争论的高堂隆、秦朗，“先生”指马钧，明帝为曹叡。",
+      "why_not_in_romance": "通行毛本《三国演义》写木牛流马及其仿制，却未写马钧与高堂隆、秦朗争论古代指南车能否制造，继而奉曹叡之命制成指南车的事件；两种机械不可混为一事。",
+      "characters": [
+        "马钧",
+        "高堂隆"
+      ],
+      "scenes": [
+        "魏宫议事偏厅",
+        "官营作坊试车庭"
+      ],
+      "reused_script": false
+    },
+    {
+      "no": 9,
+      "id": "comic-s09-fei-yi-finishes-the-game",
+      "title": "费祎临军不废棋",
+      "file": "comic-s09-fei-yi-finishes-the-game.json",
+      "source": "《三国志·蜀书·费祎传》裴松之注引《祎别传》：“敏求共围棋，于时羽檄交驰，人马擐甲。”又载：“祎与敏留意对戏，色无厌倦。”来敏事后说明：“向聊观试君耳！君信可人，必能办贼者也。”故事背景为蜀汉延熙七年（244年），曹爽率魏军进攻汉中，费祎将出军御敌之时。",
+      "why_not_in_romance": "通行毛本《三国演义》写过费祎参与蜀汉政事及其遇刺，却没有写兴势之役出军前，来敏故意邀他下棋、借紧急军务检验其定力的插曲。本集取材于《三国志》裴注所引《祎别传》，不是《三国演义》的既有情节。",
+      "characters": [
+        "费祎",
+        "来敏"
+      ],
+      "scenes": [
+        "出军前的府署前庭",
+        "府署内的对弈议事室"
+      ],
+      "reused_script": false
+    },
+    {
+      "no": 10,
+      "id": "comic-s10-zhuge-ke-adds-the-donkey",
+      "title": "诸葛恪得驴",
+      "file": "comic-s10-zhuge-ke-adds-the-donkey.json",
+      "source": "《三国志·吴书·诸葛恪传》裴松之注引《江表传》：恪父瑾面长似驴，孙权大会群臣，使人牵一驴入，长检其面，题曰『诸葛子瑜』；恪跪曰『乞请笔益两字』，因听与笔，恪续其下曰『之驴』，举坐欢笑，乃以驴赐恪。",
+      "why_not_in_romance": "通行毛宗岗评改一百二十回本《三国演义》写诸葛瑾多次出使、诸葛恪在东吴后期专权，却没有写孙权在宴会上以驴戏谑诸葛瑾面长、少年诸葛恪添『之驴』二字解围这一《江表传》轶事。",
+      "characters": [
+        "孙权",
+        "诸葛恪"
+      ],
+      "scenes": [
+        "江东宴堂主位",
+        "江东宴堂侧廊"
+      ],
+      "reused_script": false
+    }
+  ]
+}

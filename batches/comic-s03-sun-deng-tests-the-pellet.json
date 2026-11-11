@@ -1,0 +1,211 @@
+{
+  "id": "comic-s03-sun-deng-tests-the-pellet",
+  "title": "孙登验丸释疑",
+  "subtitle": "不凭疑似定罪，只把弹丸验明",
+  "story_source": "《三国志·吴书·孙登传》：“使求过丸，比之非类，乃释之。”",
+  "why_not_in_romance": "通行毛本《三国演义》涉及孙登的太子身份与早逝，却没有写弹丸飞过身旁、侍从拘来持弹者、孙登比较弹丸后释放嫌疑人的事件。",
+  "synopsis": "孙登骑马出行，一枚弹丸从身旁飞过。侍从拘来一个携带弹弓的人，准备拷打。孙登及时制止，命人寻找飞过的弹丸，与此人所携弹丸比较。两者并非同类，孙登随即放人，不让疑似变成罪名。",
+  "characters": [
+    {
+      "name": "孙登",
+      "slug": "sun-deng",
+      "existing": false,
+      "role": "孙权之子，本集验丸释疑的主人公",
+      "profile": {
+        "age": "青年形象，约二十岁；仅为美术设定，不据此断定事件年份",
+        "gender": "男",
+        "role": "吴国宗室青年，出行时制止拷打并核验弹丸",
+        "era": "汉末三国，孙吴",
+        "face": "清秀长脸，轮廓端正，下颌柔和，无须",
+        "eyes": "深褐眼睛，目光沉静专注",
+        "skin": "自然浅肤色",
+        "build": "身形修长，肩背端正",
+        "hair": "黑发束髻，戴朴素深褐小冠，无垂散长发",
+        "marks": "无明显疤痕，无刺青",
+        "outfit": "固定青灰色交领长袍，米白内领，深褐革带，灰褐长裤，黑褐皮靴；全篇不更换",
+        "accessories": "腰侧一枚无铭素玉佩",
+        "weapon": "无，不佩刀剑",
+        "palette": "青灰、米白、深褐、黑褐、素玉白",
+        "temperament": "温和克制，重实证，不以威势逼人",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "no modern clothing, no imperial crown, no ornate fantasy armour, no facial hair, no costume changes, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body standing character portrait, one open palm raised in a calm restraining gesture, the other hand relaxed near the belt, wearing the fixed blue-gray robe and dark brown small crown, plain neutral background; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "tags": [
+        "三国",
+        "孙吴",
+        "孙登",
+        "验丸释疑"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "持弹者",
+      "slug": "chi-dan-zhe",
+      "existing": false,
+      "role": "携带弹弓而被怀疑、最终获释的无名男子",
+      "profile": {
+        "age": "约二十五至三十岁，美术设定",
+        "gender": "男",
+        "role": "被侍从拘来的持弹弓者，史料未载姓名",
+        "era": "汉末三国，孙吴",
+        "face": "略方的瘦脸，颧骨稍显，下巴有短胡茬",
+        "eyes": "深褐眼睛，受拘时紧张，获释后放松",
+        "skin": "日晒麦色",
+        "build": "中等身高，精瘦结实",
+        "hair": "黑发束髻，固定裹旧灰褐布巾",
+        "marks": "无明显伤疤，无刺青",
+        "outfit": "固定土褐色粗麻交领短衣，深灰内领，旧褐布腰带，灰褐长裤，磨旧草履；全篇不更换",
+        "accessories": "腰挂无纹旧布弹丸袋",
+        "weapon": "一张小型竹木弹弓，为带弹兜的弓形射丸器，不是现代Y形橡皮筋弹弓",
+        "palette": "土褐、灰褐、深灰、竹黄",
+        "temperament": "朴实谨慎，蒙疑时惶恐，获释后感激",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "no modern slingshot, no rubber bands, no metal firearm, no armour, no luxurious clothing, no costume changes, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body standing character portrait, shoulders slightly drawn inward, holding a small curved bamboo pellet bow with a double-string pellet cradle lowered safely at his side, wearing the fixed earth-brown hemp clothes and gray-brown headcloth, plain neutral background; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "tags": [
+        "三国",
+        "孙吴",
+        "无名人物",
+        "持弹者"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "郊外土道",
+      "description": "空无人物的江南郊外土道，路旁芦草低伏，浅沟与疏树相伴，远处可见同一座无匾木亭。环境图不出现人物、马匹或其他动物。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a rural earthen road in the lower Yangtze region during the Three Kingdoms era, low reeds, a shallow roadside ditch, scattered trees, a small unmarked timber shelter visible in the distance, soft late-morning daylight, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine material texture, even lighting, no people, no animals, no signs, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "上午",
+      "mood": "清静中暗藏突发之变"
+    },
+    {
+      "id": "scene-02",
+      "name": "路旁无匾木亭",
+      "description": "空无人物的简朴路亭，素木立柱、灰瓦顶、夯土地面，亭内一张矮木案和一条长凳，亭外接郊外土道。无牌匾、题刻、旗帜或印章。",
+      "prompt_extra": "Standalone unoccupied environment concept art of the same small roadside timber shelter, plain wooden pillars, gray roof tiles, packed-earth floor, one low wooden table and one simple bench, rural road and reeds beyond the open entrance, soft late-morning daylight, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine material texture, even lighting, no people, no animals, no plaques, no inscriptions, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "上午",
+      "mood": "肃静、克制，便于近距离查验"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "孙登骑马出行，忽有弹丸掠过身旁。",
+      "dialogue": [],
+      "visual": "Wide view on the established rural earthen road. Sun Deng, the only human visible, rides a plain brown horse with period-appropriate tack. Preserve his clean-shaven youthful face, black topknot under a dark brown small crown, fixed blue-gray cross-collar robe, ivory inner collar, dark brown belt and dark boots. One tiny clay pellet passes just beside his shoulder, with a subtle painterly motion blur and no impact or injury. He turns his eyes toward it without panic. Reeds and the distant unmarked shelter establish continuity. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no additional humans, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "孙登"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-02",
+      "caption": "侍从拘来持弹者，正欲拷问。",
+      "dialogue": [],
+      "visual": "Medium view inside the established plain timber shelter. Only the pellet-bow carrier is visible, seated tensely on the wooden bench with his wrists loosely bound before him. Preserve his lean angular face, short stubble, sun-browned skin, gray-brown headcloth, earth-brown hemp short robe, gray-brown trousers and worn straw sandals. His small curved bamboo pellet bow, using a double-string pellet cradle rather than a modern Y-shaped slingshot, and his opened cloth pellet pouch lie on the low table. A plain unused wooden rod rests nearby as a restrained indication of threatened interrogation; no blows, wounds or blood. All attendants remain entirely outside the frame, with no visible hands or silhouettes. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "持弹者"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "孙登止住拷问，命人寻回飞丸。",
+      "dialogue": [
+        {
+          "speaker": "孙登",
+          "line": "且慢！先找回方才飞过的弹丸。"
+        }
+      ],
+      "visual": "Medium view within the same timber shelter. Sun Deng stands beside the low table, lifting one open palm toward the off-screen attendants to stop the threatened interrogation. The bound pellet-bow carrier remains seated at the side, looking up in surprised hope. Show only these two humans, no extra limbs from unseen people. Preserve Sun Deng's fixed blue-gray robe, ivory inner collar, dark brown belt, small crown and clean-shaven face, and preserve the carrier's fixed earth-brown hemp clothing and gray-brown headcloth. The unused rod remains untouched on the bench; the bamboo pellet bow and pouch stay on the table. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "孙登",
+        "持弹者"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "飞丸寻回，与所携弹丸并非同类。",
+      "dialogue": [],
+      "visual": "Close view of Sun Deng carefully comparing pellets over the low wooden table in the same shelter. Only Sun Deng is visible, with his calm clean-shaven face and fixed blue-gray sleeves in frame. His open palm holds the recovered pale rough-textured pellet; beside it on an unmarked cloth are several smaller dark smooth pellets from the carrier's opened pouch, visibly different in size, color and texture. The bamboo pellet bow lies to one side. Present both groups clearly within a single natural perspective, without diagrams, labels, inset images or magnified overlays. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no additional hands or people, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "孙登"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "弹丸不合，孙登当即命人释放。",
+      "dialogue": [
+        {
+          "speaker": "孙登",
+          "line": "两样弹丸并不相同，放他走。"
+        }
+      ],
+      "visual": "Medium view in the same roadside shelter. Sun Deng makes a calm open-handed gesture toward the exit, his expression firm but gentle. The pellet-bow carrier stands opposite him with his wrists now free, hands relaxed and relief visible on his face. A loosened cord lies on the bench, indicating release without showing any attendant. The compared pellets remain separated on the cloth atop the low table. Preserve both established character designs, hairstyles, clothing colors and accessories exactly. Only these two humans appear. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "孙登",
+        "持弹者"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-01",
+      "caption": "一场疑案，因验物而得解。",
+      "dialogue": [],
+      "visual": "Wide concluding view on the same rural road beside the unmarked shelter. The freed pellet-bow carrier walks away in the foreground, turning slightly to give Sun Deng a grateful bow, his restored small bamboo pellet bow lowered safely at his side and his plain pellet pouch at his waist. Sun Deng stands farther back near the shelter, acknowledging him with a restrained nod. Keep their fixed faces, hairstyles, blue-gray and earth-brown costumes, and accessories unchanged. Soft late-morning light and quiet reeds restore the calm of the opening. Only these two humans are visible; no horse or attendants are needed in this composition. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "孙登",
+        "持弹者"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting. Preserve the two character profiles exactly across all panels: no changes to faces, hairstyles, outfits, accessories or weapon designs. Use only the two established scene environments. Each panel contains at most two visible human characters, including background figures; attendants must remain entirely off-screen, without visible hands, shadows or silhouettes. Scene concept images must contain no humans or animals. Depict the pellet weapon as a historical curved bamboo or wooden pellet bow with a double-string cradle, never as a modern rubber-band slingshot or firearm. Keep all action non-graphic. Do not depict the suspected man firing the passing pellet, and do not invent or reveal an actual shooter. Render the compared pellets as visibly different physical objects without labels or diagrams. All narration and dialogue are external HTML overlays, never embedded in the artwork. No signs, seals, inscriptions, speech balloons or decorative frames; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+  "notes": "史料骨架为骑马遇弹、拘来持弹者、欲加拷问、孙登制止、寻丸比较、非类即释。仅以所引《孙登传》为依据，不混入《三国演义》情节。路亭、矮案、绳索、木杖、弹丸颜色与大小差异、具体对白及致谢动作均为连环画的可视化扩写；“非类”只明确弹丸不同，不据此确定其实际材质。史料未载持弹者姓名，故保留泛称。侍从的拘人与寻丸等行动由旁白及前后状态交代，不新增可见人物。人物年龄、衣色与容貌均为统一美术设定，不作为史实断言；结尾不虚构真正发弹者。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-10",
+  "episode": 3,
+  "_generation": {
+    "written_at": "2026-11-11T09:29:18+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 1907,
+      "completion_tokens": 4187,
+      "total_tokens": 6094,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 1904,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 412,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "raw_chars": 13091,
+    "finish_reason": "stop",
+    "prompt_sha256": "2120d118f66369765a6930b35a727d84313023a0cc8edd531a608b7752274c52",
+    "prompt_chars": 2893
+  }
+}

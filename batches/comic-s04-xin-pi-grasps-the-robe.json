@@ -1,0 +1,231 @@
+{
+  "id": "comic-s04-xin-pi-grasps-the-robe",
+  "title": "辛毗牵衣直谏",
+  "subtitle": "一牵衣裾，争下五万户的去留",
+  "story_source": "《三国志·魏书·辛毗传》记载：曹丕欲迁徙冀州士家十万户，以充实河南，辛毗与朝臣进谏。原文摘录：“帝不答，起入内；毗随而引其裾。”又载：“帝遂奋衣不还，良久乃出，曰：‘佐治，卿持我何太急邪？’”最终“帝遂徙其半”。",
+  "why_not_in_romance": "辛毗虽在通行毛本《三国演义》中参与军政活动，但小说未叙曹丕欲迁徙冀州士家十万户、辛毗牵住衣裾追谏并促成减半的事件。本集取材于《三国志·魏书·辛毗传》，不是对《三国演义》既有情节的改编。",
+  "synopsis": "曹丕欲将冀州士家十万户迁往河南。辛毗力陈民生困苦，曹丕不答，起身入内。辛毗追上牵住衣裾，皇帝拂衣离去。良久，曹丕出来责问，辛毗仍直陈迁徙既失民心，又难供粮。曹丕终于将迁徙户数减半。",
+  "characters": [
+    {
+      "name": "曹丕",
+      "slug": "cao-pi",
+      "existing": false,
+      "role": "曹魏皇帝，迁徙政令的决策者",
+      "profile": {
+        "age": "三十余岁",
+        "gender": "男",
+        "role": "曹魏皇帝",
+        "era": "三国时期，曹魏初年",
+        "face": "长而清瘦的面庞，鼻梁挺直，薄唇，修整齐整的短髭与短颔须",
+        "eyes": "狭长深褐眼，目光锐利而克制",
+        "skin": "浅麦色肤色",
+        "build": "身形修长，肩背端正，体态不显粗壮",
+        "hair": "黑发全部束起，固定于素黑高冠之内，无散发",
+        "marks": "无明显伤疤或面部装饰",
+        "outfit": "玄黑色交领宽袖丝质深衣，衣缘饰窄幅暗金几何织纹，内衬深赭色，长衣下摆垂至足面；黑色布履；全篇不更换服装",
+        "accessories": "素黑高冠，黑色腰带配素白玉带饰，不佩印章",
+        "weapon": "无，不佩剑",
+        "palette": "玄黑、深赭、暗金、素白",
+        "temperament": "威严自持，不悦时动作骤然，听取直言后仍能调整决策",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不使用曹操角色外貌，不穿明清龙袍，不戴冕旒，不披毛皮，不添加武器、文字、印章或现代物品"
+      },
+      "pose": "Full-body standing character reference, upright restrained imperial posture, one hand resting near the belt and the other relaxed inside a broad sleeve, both feet visible, plain empty background; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "tags": [
+        "三国",
+        "曹魏",
+        "皇帝",
+        "曹丕"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "辛毗",
+      "slug": "xin-pi",
+      "existing": false,
+      "role": "曹魏侍中，牵衣直谏的臣子",
+      "profile": {
+        "age": "约五十至六十岁，具体年龄为形象设定",
+        "gender": "男",
+        "role": "曹魏侍中，字佐治",
+        "era": "三国时期，曹魏初年",
+        "face": "清瘦方脸，颧骨略高，额头有细纹，留修整的灰黑短髭与中短颔须",
+        "eyes": "深褐眼，眼窝略深，目光沉着坚定",
+        "skin": "略显风霜的麦色肤色",
+        "build": "中等身量，体形清瘦，站姿挺直",
+        "hair": "灰黑头发整齐束起，戴低式黑色进贤冠，无散发",
+        "marks": "眼角与额头可见自然年岁纹，无伤疤",
+        "outfit": "深褐色交领宽袖长袍，内衬靛青色，衣缘为朴素黑色窄边，下摆及踝，穿旧而整洁的黑色布履；全篇不更换服装",
+        "accessories": "低式黑色进贤冠，深灰色布腰带，无醒目珠玉，不佩印章",
+        "weapon": "无",
+        "palette": "深褐、靛青、墨黑、深灰、灰白",
+        "temperament": "刚正恳切，敢于犯颜，进谏时坚定但不作威胁姿态",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不塑造成武将，不穿铠甲，不持兵器，不披散头发，不添加文字、印章或现代物品"
+      },
+      "pose": "Full-body standing character reference, straight-backed elderly court official, hands respectfully gathered before his chest, firm attentive expression, both feet visible, plain empty background; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "tags": [
+        "三国",
+        "曹魏",
+        "侍中",
+        "直谏"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "宫中议事殿",
+      "description": "无人独立环境概念图。曹魏宫廷小型议事殿，深色木柱、灰色砖地、低矮御榻与素面木案，侧窗透入均匀日光。后方通向内殿的入口与第二场景相接。案上无文书、印章，墙面无题字。",
+      "prompt_extra": "Standalone environment concept art of an empty early Cao Wei palace audience chamber, dark timber columns, grey brick floor, a low imperial seat and plain low wooden table, an opening toward the inner palace at the rear, soft balanced daylight from side lattice windows, historically grounded restrained architecture, no people, no silhouettes, no portraits, no documents, no seals, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "白昼",
+      "mood": "肃静、庄重、隐含压力"
+    },
+    {
+      "id": "scene-02",
+      "name": "内殿门前廊道",
+      "description": "无人独立环境概念图。议事殿后方的短廊，灰砖地面延续前殿，深色木柱与内殿门框形成纵深，门内悬素色帷幕。廊道宽敞，足以呈现追随牵衣与门前等候，不设侍卫、人物雕像或题字。",
+      "prompt_extra": "Standalone environment concept art of an empty short corridor connecting an early Cao Wei audience chamber to private inner rooms, continuous grey brick floor, dark wooden columns, a substantial timber doorway with a plain muted curtain beyond it, clear open walking space, balanced indirect daylight, restrained depth and uncluttered architecture, no people, no silhouettes, no statues, no written plaques, no seals, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "白昼",
+      "mood": "紧绷、寂静、转折将至"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "曹丕欲徙冀州士家十万户。",
+      "dialogue": [
+        {
+          "speaker": "曹丕",
+          "line": "朕欲迁冀州士家十万户，以实河南。"
+        }
+      ],
+      "visual": "Wide view inside scene-01, Cao Pi seated upright on the low imperial seat at the rear right, Xin Pi standing respectfully at the left foreground facing him. Cao Pi makes a restrained declarative hand gesture while Xin Pi listens with growing concern. Use their exact character-card faces, crowns, hairstyles and unchanged clothing; the tabletop is empty. Exactly two people, no attendants, no seals. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "曹丕",
+        "辛毗"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "辛毗力陈民困，曹丕默然起身。",
+      "dialogue": [
+        {
+          "speaker": "辛毗",
+          "line": "百姓已苦，骤迁十万户，途中与到地后的粮食从何而来？"
+        }
+      ],
+      "visual": "Medium view inside scene-01, Xin Pi in the foreground earnestly remonstrating with respectfully gathered hands and a firm anxious expression. Cao Pi has risen from the low seat and turns toward the rear doorway without answering, lips closed and gaze averted. Both figures remain spatially separate, no contact yet. Preserve exact character-card appearance, crowns and clothing. Exactly two people, no attendants, no documents, no seals. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "辛毗",
+        "曹丕"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "帝入内，辛毗追上牵住衣裾。",
+      "dialogue": [],
+      "visual": "Medium side view in scene-02 at the inner doorway, Cao Pi moving toward the curtain on the right while Xin Pi follows one step behind on the left. Xin Pi bends slightly and firmly catches a small fold of the trailing lower back hem of Cao Pi's black outer robe with his right hand, clearly grasping the robe skirt below the waist, not a sleeve, belt or arm. The fabric pulls taut without tearing; Cao Pi stops and turns his head in displeasure. Preserve exact character-card faces, crowns, hairstyles and unchanged clothing. Exactly two people, no attendants, no seals. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "曹丕",
+        "辛毗"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "曹丕拂衣入内，辛毗留候良久。",
+      "dialogue": [],
+      "visual": "Medium view of scene-02 after Cao Pi has disappeared into the private rooms. Xin Pi stands alone beside the closed plain curtain, empty right hand lowered after releasing the robe, shoulders straight and expression composed but concerned. Leave substantial quiet space around him to convey a long wait. Do not show Cao Pi, a shadow of him, or any additional person. Preserve Xin Pi's exact character-card face, crown, hairstyle and unchanged dark brown robe. No seals. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "辛毗"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "良久帝出，辛毗仍以民生相争。",
+      "dialogue": [
+        {
+          "speaker": "曹丕",
+          "line": "佐治，卿持我何太急邪？"
+        },
+        {
+          "speaker": "辛毗",
+          "line": "今迁徙既失民心，又无以供食，臣怎敢不争？"
+        }
+      ],
+      "visual": "Medium two-person view in scene-02, Cao Pi has emerged from the inner doorway and faces Xin Pi, brows drawn in restrained irritation, one hand held slightly outward in a questioning gesture. Xin Pi faces him squarely with respectfully gathered hands, steady eyes and an earnest unflinching expression. Their hands do not touch; the imperial robe hangs freely and remains undamaged. Preserve exact character-card faces, crowns, hairstyles and unchanged clothing. Exactly two people, no attendants, no seals. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "曹丕",
+        "辛毗"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-01",
+      "caption": "曹丕终于让步，迁徙户数减半。",
+      "dialogue": [
+        {
+          "speaker": "曹丕",
+          "line": "所徙士家，减为五万户。"
+        },
+        {
+          "speaker": "辛毗",
+          "line": "臣代受免迁之户，谢陛下。"
+        }
+      ],
+      "visual": "Medium view back inside scene-01 after both men have returned to the audience chamber. Cao Pi stands beside the low seat, expression thoughtful and no longer angry, making a small measured downward hand gesture to announce a reduced order. Xin Pi bows respectfully with gathered hands, relief restrained rather than triumphant. The empty low table and familiar dark columns establish continuity. Preserve exact character-card faces, crowns, hairstyles and unchanged clothing; no written decree or numerical symbols. Exactly two people, no attendants, no seals. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "曹丕",
+        "辛毗"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting. Maintain identical character-card facial features, ages, crowns, hairstyles, garments, accessories and palettes across every image; neither character carries a weapon. Use only the two specified environments. Environment concept images must be completely unpopulated. Each story image contains only the characters listed for that panel, never more than two people; no crowds, servants, guards, portraits or human silhouettes. Depict the pivotal grasp on the lower trailing robe skirt, not the sleeve, and never tear the garment. Architecture and furniture should evoke early Cao Wei rather than Ming or Qing courts. No visible writing, numbers, seals, stamped marks, calligraphy, interface elements or decorative pseudo-characters. All narration and dialogue are external HTML overlays, never part of the generated image; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+  "notes": "史料骨架为欲迁冀州士家十万户、辛毗进谏、曹丕入内、辛毗牵裾、皇帝拂衣离去、良久复出责问、最终减半。士家指军士之家，本集不泛化为任意十万户民户。第五格曹丕问话采用原文，其余对白为据史意改写；最后明确为五万户，是依十万户减半换算。末格谢恩、两人回到议事殿、具体殿廊陈设及人物容貌均属连环画表现性补写，不冒称史书记载。牵衣表现为牵住下摆，不改成抓袖、拉臂或殿上武力冲突。未呈现史料中的其他朝臣，以满足每格最多两人的要求。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-10",
+  "episode": 4,
+  "_generation": {
+    "written_at": "2026-11-11T09:30:34+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 1936,
+      "completion_tokens": 4513,
+      "total_tokens": 6449,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 1933,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 464,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "raw_chars": 12743,
+    "finish_reason": "stop",
+    "prompt_sha256": "7d1cf7a212eeb77feeb0c05c36968e6af7195641d887ae5d5ff67d0cfd04e5cf",
+    "prompt_chars": 2899
+  }
+}

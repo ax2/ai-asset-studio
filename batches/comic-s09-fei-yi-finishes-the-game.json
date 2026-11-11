@@ -1,0 +1,223 @@
+{
+  "id": "comic-s09-fei-yi-finishes-the-game",
+  "title": "费祎临军不废棋",
+  "subtitle": "羽檄交驰之际，一局围棋试出临事定力",
+  "story_source": "《三国志·蜀书·费祎传》裴松之注引《祎别传》：“敏求共围棋，于时羽檄交驰，人马擐甲。”又载：“祎与敏留意对戏，色无厌倦。”来敏事后说明：“向聊观试君耳！君信可人，必能办贼者也。”故事背景为蜀汉延熙七年（244年），曹爽率魏军进攻汉中，费祎将出军御敌之时。",
+  "why_not_in_romance": "通行毛本《三国演义》写过费祎参与蜀汉政事及其遇刺，却没有写兴势之役出军前，来敏故意邀他下棋、借紧急军务检验其定力的插曲。本集取材于《三国志》裴注所引《祎别传》，不是《三国演义》的既有情节。",
+  "synopsis": "魏军压境，费祎即将出军，军中文书往来不绝，出征器具已备。来敏却登门邀他对弈。费祎并无厌倦焦躁，仍从容下完一局。来敏这才坦言，自己有意试探他的临事定力，并由此认定他能够担当御敌重任。",
+  "characters": [
+    {
+      "name": "费祎",
+      "slug": "fei-yi",
+      "existing": false,
+      "role": "蜀汉大将军，临行受邀对弈的统军者",
+      "profile": {
+        "age": "中年，约四十余岁至五十岁",
+        "gender": "男",
+        "role": "蜀汉大将军，兼具文臣气度与统军职责",
+        "era": "三国蜀汉，延熙七年前后",
+        "face": "清瘦长脸，颧骨平缓，鼻梁端正，下颌线清晰，留整齐短须",
+        "eyes": "细长深褐眼，目光沉静专注，不刻意作凌厉状",
+        "skin": "暖米色肤色，略有风尘感",
+        "build": "中等身量，体态清健，肩背端正",
+        "hair": "黑发整齐束髻，鬓角少量灰发，始终戴同一顶低矮黑色进贤冠",
+        "marks": "两颊略瘦，短须修整齐整，无疤痕或夸张标记",
+        "outfit": "固定穿黛青色交领宽袖长袍，灰白内领，深褐革带，下着深灰裤与黑色布履；衣缘仅饰低对比暗纹，六格不换装",
+        "accessories": "固定佩素玉小佩与深褐革带，不佩印章，不增添其他饰物",
+        "weapon": "无；本集不持武器",
+        "palette": "黛青、灰白、深褐、墨黑、温润玉白",
+        "temperament": "谦和沉稳，临事专注，从容而不怠慢",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不要帝王冠冕、龙蟒纹、现代服装、夸张重甲、羽扇或诸葛亮式鹤氅；不要改变固定发式与衣着"
+      },
+      "pose": "Full-body standing character portrait, upright relaxed posture, hands loosely gathered before the waist, composed attentive expression, fixed dark teal scholar-official robe and low black court cap, plain background; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "tags": [
+        "三国",
+        "蜀汉",
+        "费祎",
+        "大将军",
+        "沉稳"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "来敏",
+      "slug": "lai-min",
+      "existing": false,
+      "role": "蜀汉老臣，以邀棋试探费祎定力",
+      "profile": {
+        "age": "约八十岁",
+        "gender": "男",
+        "role": "蜀汉老臣，熟悉礼学的年长士人",
+        "era": "三国蜀汉，延熙七年前后",
+        "face": "修长而略显清癯的老年面容，额纹明显，颧骨突出，蓄疏朗白须",
+        "eyes": "深褐眼，眼尾下垂而目光敏锐，带审察意味",
+        "skin": "浅褐暖肤色，面部有自然老年斑与细纹",
+        "build": "身材清瘦，背部稍弯，仍能稳步行走",
+        "hair": "银白头发束成整齐发髻，固定戴深灰色布帻",
+        "marks": "长而疏的白须及深刻额纹，无人为伤疤",
+        "outfit": "固定穿浅赭色交领宽袖长袍，米白内领，灰褐布带，下着灰褐裤与深褐布履；衣料朴素整洁，六格不换装",
+        "accessories": "无额外佩饰，不持手杖，不携印章",
+        "weapon": "无",
+        "palette": "浅赭、米白、灰褐、深灰、银白",
+        "temperament": "老练审慎，言辞直率，先观察后释然",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不要仙人造型、道士法器、羽扇、华贵冠冕、现代眼镜或夸张驼背；不要改变固定发式与衣着"
+      },
+      "pose": "Full-body standing character portrait, elderly scholar with a slight forward lean, one hand resting inside the opposite sleeve, perceptive reserved expression, fixed pale ochre robe and dark gray cloth headwrap, plain background; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "tags": [
+        "三国",
+        "蜀汉",
+        "来敏",
+        "老臣",
+        "试棋"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "出军前的府署前庭",
+      "description": "无人环境概念图。蜀汉府署前庭，夯土院地、木柱回廊与敞开的院门相接。廊下整齐放置待用甲胄、行囊和马具，案上有系羽的封缄文书筒，均无可见文字或印记。远处道路通向院外，体现出军准备已毕。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a Shu Han headquarters courtyard before departure, rammed-earth ground, timber colonnade, open wooden gate, neatly arranged period lamellar armour on simple racks, packed travel bundles and horse tack, feather-attached closed dispatch cases on a plain side table, all surfaces unmarked, no people, no human silhouettes, no animals, no readable documents, no seals or emblems, soft morning daylight with even illumination, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "清晨至上午",
+      "mood": "紧迫、整肃、蓄势待发"
+    },
+    {
+      "id": "scene-02",
+      "name": "府署内的对弈议事室",
+      "description": "无人环境概念图。与前庭相通的简朴木构议事室，中央为低矮围棋案与两张坐席，棋盘仅有正常交叉线，不带文字、数字或坐标。侧案放置无字封缄文书筒，门外可见同一前庭的一角，室内陈设节制。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a modest Shu Han timber council room connected directly to the courtyard, central low wooden Go table with an unlabelled nineteen-by-nineteen intersection grid and two bowls of black and white stones, two woven sitting mats, side desk holding closed unmarked dispatch cases, open doorway showing a small portion of the same courtyard, no people, no human silhouettes, no animals, no writing, no seals, no wall scrolls, soft morning daylight and even lighting, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "清晨至上午",
+      "mood": "安静、克制，与外间军情形成反差"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "魏军压境，费祎即将出军。",
+      "dialogue": [],
+      "visual": "Wide establishing view of the established headquarters courtyard. Fei Yi is the only person present, wearing his fixed dark teal robe, gray-white inner collar, dark brown belt, jade pendant and low black court cap. He stands beside a table of closed feather-attached dispatch cases, calmly checking departure preparations. Packed baggage, horse tack and empty lamellar armour racks imply an army ready to move without showing any soldiers. Open gate in the background, all props unmarked, no seals. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "费祎"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-02",
+      "caption": "来敏登门，却先邀他对弈。",
+      "dialogue": [
+        {
+          "speaker": "来敏",
+          "line": "临行之前，可愿与老夫下一局？"
+        },
+        {
+          "speaker": "费祎",
+          "line": "请坐。"
+        }
+      ],
+      "visual": "Medium two-character view inside the established council room. Elderly Lai Min, in his fixed pale ochre robe and dark gray headwrap with sparse white beard, gently gestures toward the low Go table. Fei Yi, in his unchanged dark teal robe and low black court cap, receives the invitation with a small courteous nod. Two empty sitting mats and bowls of stones are clearly visible. The open doorway connects to the same courtyard. No attendants or background figures, no written surfaces or seals. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "费祎",
+        "来敏"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "羽檄交驰，他仍专注棋局。",
+      "dialogue": [],
+      "visual": "Medium oblique view across the low Go table in the same council room. Fei Yi and Lai Min sit opposite each other on woven mats, both in their fixed character-card clothing and hairstyles. A developing game of black and white stones occupies the unlabelled board. Fei Yi studies the position with relaxed shoulders while Lai Min watches his expression rather than the stones. In the foreground, several closed feather-attached dispatch cases lie on the side desk, suggesting urgent military traffic without displaying writing or additional people. No seals. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "费祎",
+        "来敏"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "一局将终，神色不见厌倦。",
+      "dialogue": [],
+      "visual": "Close view of Fei Yi alone at the same Go table, his fixed dark teal sleeve framing a hand gently setting down a black stone in a late-game position. Show his composed face, neat short beard, low black court cap and unwavering concentration. The opponent is entirely outside the image, with no other hands or silhouettes visible. The cropped wooden board has only its normal playing grid, no coordinates, no labels and no decorative border. Do not imply victory or defeat. Softly blurred dispatch cases remain in the background. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "费祎"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "棋罢，来敏才道出用意。",
+      "dialogue": [
+        {
+          "speaker": "来敏",
+          "line": "方才不过试试您罢了！您果然是能担当大事、办得了敌军的人。"
+        }
+      ],
+      "visual": "Medium two-character view in the same council room immediately after the game. The late-game Go position remains undisturbed. Lai Min has withdrawn his hands from the board and now looks directly at Fei Yi with open approval, his guarded expression softened. Fei Yi listens quietly without triumph or irritation. Preserve Lai Min's pale ochre robe, white beard and dark gray headwrap, and Fei Yi's dark teal robe and black court cap exactly. No extra people, no score sheets, no trophies, no writing or seals. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "费祎",
+        "来敏"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-01",
+      "caption": "费祎辞别出军，步履依旧从容。",
+      "dialogue": [
+        {
+          "speaker": "费祎",
+          "line": "军务在身，就此告辞。"
+        }
+      ],
+      "visual": "Wide concluding view of the exact courtyard established earlier. Fei Yi, still in his unchanged dark teal robe, low black court cap, dark belt and jade pendant, walks steadily toward the open gate with a closed feather-attached dispatch case held low in one hand. Lai Min stands beneath the timber colonnade behind him, offering a restrained farewell gesture with an approving expression. Packed departure equipment and empty armour racks remain in place. Only these two people are visible, no soldiers, no silhouettes, no horses, no writing or seals. Use calm body language rather than a triumphant battle pose. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "费祎",
+        "来敏"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Maintain the premium Three Kingdoms historical-fantasy game concept art style throughout: highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting. Use only the two established environments and the two named characters. Preserve each character's face, age, hairstyle, headwear, clothing, accessories and palette in every appearance; no costume changes and no added weapons. Each image may show no more than two people, including background figures; prohibit crowds, attendants, human silhouettes and reflected extra people. Scene concept images must be entirely unoccupied. Convey military urgency through prepared equipment and closed feather-attached dispatch cases rather than extra soldiers. All documents must remain closed and unmarked. No calligraphy, numbers, seals, seal impressions, emblems, banners with symbols, wall inscriptions or UI elements. The Go board may retain its normal playable intersection grid, but it must have no labels or coordinates; this grid is an in-world game object, never a comic layout divider. Captions and dialogue are metadata for later HTML overlay and must never be rendered into the artwork. Every panel is one continuous image; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+  "notes": "史料骨架为费祎出军前，来敏来访邀棋；军情紧急而费祎留意对戏、色无厌倦；来敏随后坦言试探并加以称许。下完一局依本集梗概呈现，不增写棋局胜负、用时或具体棋谱。邀棋措辞、费祎答语、院落陈设和辞别动作属于连环画衔接性扩写，并非史料逐字记载。史料所述人马擐甲，以待用甲胄、马具和行囊转译为视觉线索，以遵守每格人物上限；不据此声称军中没有士卒。费祎、来敏的具体容貌与服色为统一美术设定，不视为考据定论。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-10",
+  "episode": 9,
+  "_generation": {
+    "written_at": "2026-11-11T09:39:36+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 1970,
+      "completion_tokens": 4651,
+      "total_tokens": 6621,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 1967,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 471,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "raw_chars": 13354,
+    "finish_reason": "stop",
+    "prompt_sha256": "78693640a2dde4789b57678d21e51a47a16f1ab2f7efb89b5b52ebdcec64f5cb",
+    "prompt_chars": 2943
+  }
+}

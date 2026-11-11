@@ -1,0 +1,234 @@
+{
+  "id": "comic-s10-zhuge-ke-adds-the-donkey",
+  "title": "诸葛恪得驴",
+  "subtitle": "只添两个字，替父解围又得驴",
+  "story_source": "《三国志·吴书·诸葛恪传》裴松之注引《江表传》：恪父瑾面长似驴，孙权大会群臣，使人牵一驴入，长检其面，题曰『诸葛子瑜』；恪跪曰『乞请笔益两字』，因听与笔，恪续其下曰『之驴』，举坐欢笑，乃以驴赐恪。",
+  "why_not_in_romance": "通行毛宗岗评改一百二十回本《三国演义》写诸葛瑾多次出使、诸葛恪在东吴后期专权，却没有写孙权在宴会上以驴戏谑诸葛瑾面长、少年诸葛恪添『之驴』二字解围这一《江表传》轶事。",
+  "synopsis": "孙权宴集群臣，命人牵来一头驴，在驴脸前的长木牌上题『诸葛子瑜』，借此打趣诸葛瑾面长。少年诸葛恪跪请添字，续上『之驴』，将戏称变成父亲名下的牲畜。满座欢笑，孙权便把驴赐给了他。",
+  "characters": [
+    {
+      "name": "孙权",
+      "slug": "sun-quan",
+      "existing": false,
+      "role": "江东之主，宴会的主持者",
+      "profile": {
+        "age": "成年，约三十岁上下的视觉设定，不据此断定轶事年份",
+        "gender": "男",
+        "role": "统领江东的孙氏之主，尚不使用皇帝礼服",
+        "era": "汉末江东",
+        "face": "方颐宽额，鼻梁挺直，短须略带紫褐色",
+        "eyes": "灰绿色眼睛，目光锐利而带笑",
+        "skin": "暖米色肤色",
+        "build": "身形高健，肩背宽阔",
+        "hair": "深褐长发整齐束髻，戴黑色进贤冠",
+        "marks": "紫褐短须与灰绿色眼睛为固定识别特征",
+        "outfit": "暗赭红交领宽袖锦袍，领缘与袖缘为深褐色，暗金细云纹低调织入衣料，内着米白中衣，腰束黑褐革带，足穿黑色布履；全篇不更换",
+        "accessories": "腰间一枚素玉佩，无冠冕垂旒，无印章",
+        "weapon": "无，不佩兵器",
+        "palette": "暗赭红、深褐、暗金、米白、玉白",
+        "temperament": "威仪中带诙谐，欣赏机敏，笑意爽朗",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不使用帝王冕旒，不穿明清龙袍，不增加武器，不改变服装与发式，不出现文字或印章"
+      },
+      "pose": "Full-body standing reference pose, one hand relaxed near the waist and the other lightly raised in an amused conversational gesture, clear view of the complete fixed costume.",
+      "tags": [
+        "三国",
+        "江东",
+        "孙权",
+        "宴会"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "诸葛恪",
+      "slug": "zhuge-ke",
+      "existing": false,
+      "role": "诸葛瑾之子，以添字替父解围的少年",
+      "profile": {
+        "age": "少年，约十三至十五岁的视觉设定，史料未在此事中明载年龄",
+        "gender": "男",
+        "role": "随父进入江东宴席的聪敏少年",
+        "era": "汉末江东",
+        "face": "少年椭圆脸，额头饱满，下颌清秀，鼻梁端正",
+        "eyes": "深褐色眼睛，明亮机警，眼尾微扬",
+        "skin": "自然浅米色肤色",
+        "build": "身量未足，清瘦匀称，举止稳当",
+        "hair": "乌黑长发束成小髻，用素青布巾固定，不戴成年冠",
+        "marks": "无胡须，无伤疤，以明亮目光和镇定神情为识别特征",
+        "outfit": "浅青灰交领长衣，素白中衣，深青色窄缘，腰束灰褐布带，下穿灰褐裤与深褐布履；全篇不更换",
+        "accessories": "无贵重佩饰，题字时临时使用一支竹管毛笔",
+        "weapon": "无",
+        "palette": "浅青灰、素白、深青、灰褐、墨黑",
+        "temperament": "聪敏镇定，礼数周全，机锋含蓄而不骄矜",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不画成成年权臣，不加胡须，不戴成年冠，不增加武器，不改变服装与发式，不出现文字或印章"
+      },
+      "pose": "Full-body standing reference pose, hands respectfully gathered before the waist, youthful upright posture and a restrained confident smile, clear view of the complete fixed costume.",
+      "tags": [
+        "三国",
+        "诸葛恪",
+        "少年",
+        "机智解围"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "江东宴堂主位",
+      "description": "空无一人的汉末江东宴堂主位区。木柱承梁，后方为素面屏风，低矮漆案上陈设青铜酒器与陶盘，前方留出宽阔席地。没有文字、人物或动物。",
+      "prompt_extra": "Empty late Eastern Han banquet hall in Jiangdong, host seating area with timber columns, a plain folding screen, low dark lacquer tables, bronze wine vessels and ceramic dishes, woven floor mats and a broad open foreground, soft daylight and balanced warm interior illumination, no people, no animals, no human silhouettes, no inscriptions or seals, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "庄重而有宴饮暖意"
+    },
+    {
+      "id": "scene-02",
+      "name": "江东宴堂侧廊",
+      "description": "空无一人的同一宴堂侧廊。木柱、素面帷幔与席地延续主位区的建筑色调，通向庭院的门洞透入柔和日光，近处设无字素木小案与笔砚。没有人物或动物。",
+      "prompt_extra": "Empty side aisle of the same late Eastern Han Jiangdong banquet hall, matching timber columns and plain fabric curtains, woven floor mats, an open doorway admitting soft courtyard daylight, a small plain wooden stand holding an inkstone and a bamboo-handled brush, generous clear floor space, no people, no animals, no human silhouettes, no inscriptions or seals, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "明净疏朗，便于聚焦动作"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "孙权大会群臣，忽起戏谑之意。",
+      "dialogue": [
+        {
+          "speaker": "孙权",
+          "line": "牵一头驴来。"
+        }
+      ],
+      "visual": "Medium view of Sun Quan alone at the host's low banquet table, wearing his fixed dark russet robe and black court cap, his grey-green eyes bright with amusement as he gestures toward the empty entrance outside the frame. Show the plain screen, bronze wine vessel and woven mat; all other guests and attendants remain completely outside the image, with no extra figures or hands. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孙权"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "长牌题作父亲的字，借驴取笑面长。",
+      "dialogue": [
+        {
+          "speaker": "孙权",
+          "line": "就在牌上题作“诸葛子瑜”。"
+        }
+      ],
+      "visual": "Medium view of Sun Quan beside a calm small grey donkey in the open foreground of the host seating area. A narrow pale wooden tablet hangs vertically against the front of the donkey's long face on a simple cord harness, leaving its eyes and nostrils unobstructed. Sun Quan points toward the tablet with a playful smile. The entire tablet surface must remain completely blank, with no brush marks or symbolic writing; its narrative wording is supplied only by external dialogue. The donkey is an ordinary animal prop, not an anthropomorphic character. No attendants, guests or other people visible. Preserve Sun Quan's fixed face, hair and costume. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孙权"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-01",
+      "caption": "诸葛恪上前跪请，神色不慌。",
+      "dialogue": [
+        {
+          "speaker": "诸葛恪",
+          "line": "乞请笔益两字。"
+        },
+        {
+          "speaker": "孙权",
+          "line": "准你添。"
+        }
+      ],
+      "visual": "Medium two-person composition: young Zhuge Ke kneels formally on the woven mat with his hands raised respectfully, looking calmly toward Sun Quan seated beside the low host table. Sun Quan leans forward slightly with an intrigued smile and makes a permissive open-hand gesture. Zhuge Ke wears his fixed pale blue-grey robe, dark teal edging and simple cloth-bound hair knot; Sun Quan retains his fixed russet robe and black cap. The donkey and all other people are outside the frame. No writing surfaces in focus. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "诸葛恪",
+        "孙权"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "添上“之驴”，戏称便成了归属。",
+      "dialogue": [
+        {
+          "speaker": "诸葛恪",
+          "line": "添“之驴”二字，便是“诸葛子瑜之驴”。"
+        }
+      ],
+      "visual": "Close view in the hall side aisle: young Zhuge Ke beside the same calm grey donkey, delicately steadying the lower edge of the long wooden face tablet with one hand while holding a bamboo brush poised just above its lower portion with the other. His expression is focused and quietly confident. Keep the tablet entirely blank and the brush tip slightly above the surface, representing the instant before contact; do not render ink strokes, characters or writing-like marks. The intended addition exists only in external dialogue. The donkey's cord harness, wooden tablet and grey coat match the previous appearance. Zhuge Ke's face, hair and costume remain unchanged. No other people or disembodied hands. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "诸葛恪"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-01",
+      "caption": "满座欢笑，孙权也赞他机敏。",
+      "dialogue": [
+        {
+          "speaker": "孙权",
+          "line": "好！这头驴便赐给你了。"
+        }
+      ],
+      "visual": "Medium two-person reaction at the host seating area: Sun Quan laughs openly and extends one hand in a generous granting gesture; young Zhuge Ke stands before him with hands respectfully gathered and a restrained relieved smile. Preserve both character designs and every costume detail. Suggest the larger banquet solely through empty low tables receding at the edge of the composition; the laughing guests remain entirely offscreen, with no crowd silhouettes, reflections or extra hands. The donkey remains outside the frame. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孙权",
+        "诸葛恪"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "两字替父解围，又赢来一头驴。",
+      "dialogue": [
+        {
+          "speaker": "诸葛恪",
+          "line": "谢赐。"
+        }
+      ],
+      "visual": "Wide concluding view of the same hall side aisle: young Zhuge Ke gently leads the same grey donkey toward the sunlit courtyard doorway, turning his head slightly back with a modest grateful smile. He holds a loose plain lead rope, while the narrow wooden tablet still hangs securely against the donkey's face, its entire visible surface completely blank. His pale blue-grey robe, dark teal trim, cloth belt, shoes and cloth-bound hair knot remain identical. Match the previous donkey's size, coat and harness. Only one human figure is visible; no father, host, attendants or guests appear in the doorway or background. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "诸葛恪"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting throughout. Maintain exactly two human character designs: Sun Quan and young Zhuge Ke. Keep each face, hairstyle, costume, accessories and palette identical across all panels. Never depict Zhuge Jin, attendants, banquet guests, background silhouettes, extra hands or reflected people. Depict the donkey as a consistent ordinary grey animal prop, never as a speaking or anthropomorphic character. Use only the two supplied environments, both belonging to the same banquet hall. All wooden tablet surfaces must remain entirely blank, even during the implied writing action; the phrases and their transformation are conveyed exclusively through HTML-rendered captions and dialogue outside the generated artwork. Do not use pseudo-calligraphy, ink strokes resembling writing, seals, logos or decorative written symbols. Environment concept images must contain no people or animals. Generate each panel as a separate borderless single image, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架保留大会群臣、以驴戏谑诸葛瑾、诸葛恪跪请添两字、续成『诸葛子瑜之驴』、举坐欢笑及孙权赐驴六个环节。原文中的『长检』按本任务所给释义处理为驴面前的长木牌。诸葛瑾及群臣只在叙事中被提及，不作为出镜角色；牵驴入席和递笔过程省略，不另造侍者。除『乞请笔益两字』及题牌用语外，对白为串联情节的文学化拟写。具体衣饰、少年视觉年龄、宴堂陈设和侧廊动线属于美术设定，不据此断定事件年份。所有题牌内容仅由旁白和对白表达，并交由HTML排版，原始画面中的木牌始终无字；第四格以落笔前瞬间代替实际字迹，避免违背画面禁字要求。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-10",
+  "episode": 10,
+  "_generation": {
+    "written_at": "2026-11-11T09:40:59+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 2098,
+      "completion_tokens": 4300,
+      "total_tokens": 6398,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 2095,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 300,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "raw_chars": 12848,
+    "finish_reason": "stop",
+    "prompt_sha256": "43e2559ce98c79e54d26a48e1a2de22fded816808964f328d446b46269c89dfe",
+    "prompt_chars": 3042
+  }
+}

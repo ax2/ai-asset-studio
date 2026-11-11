@@ -1,0 +1,213 @@
+{
+  "id": "comic-s05-donkey-calls-for-wang-can",
+  "title": "一场驴鸣送故人",
+  "subtitle": "不循常礼的一声长鸣，送别最懂它的故人",
+  "story_source": "《世说新语·伤逝》记王粲身后，曹丕临丧，对同游宾客说：“王好驴鸣，可各作一声以送之。”在场宾客遂各作驴鸣，以送故人。原文中的“文帝”为曹丕后来的帝号，不表示此时他已经称帝。",
+  "why_not_in_romance": "通行毛本《三国演义》未写王粲葬后曹丕临丧、请宾客模仿驴叫送别的场面；这是《世说新语》保存的悼亡轶事，不是小说中人物吟诗或宴饮的改写。",
+  "synopsis": "王粲去世，曹丕前来吊丧。肃静的灵前，他想起亡友喜欢听驴鸣，便请同来的宾客各学一声。起初略显迟疑的宾客，终于以参差的叫声回应。古怪的声音没有冲淡哀伤，反而让故人的喜好成为最真挚的告别。",
+  "characters": [
+    {
+      "name": "曹丕",
+      "slug": "cao-pi",
+      "existing": false,
+      "role": "前来吊唁王粲的故友，提议以驴鸣送别",
+      "profile": {
+        "age": "约三十岁；外观年龄沿用全系列已有曹丕角色卡",
+        "gender": "男",
+        "role": "曹操之子、王粲故友；本集不使用皇帝身份造型",
+        "era": "东汉末年，建安二十二年前后",
+        "face": "严格沿用全系列已有曹丕角色卡，不重新设计",
+        "eyes": "严格沿用全系列已有曹丕角色卡，不重新设计",
+        "skin": "严格沿用全系列已有曹丕角色卡，不重新设计",
+        "build": "严格沿用全系列已有曹丕角色卡，不重新设计",
+        "hair": "严格沿用全系列已有曹丕角色卡，不更换发型",
+        "marks": "严格沿用全系列已有曹丕角色卡，不新增特征",
+        "outfit": "完整沿用全系列已有曹丕角色卡服装，不另换丧服或帝王服饰",
+        "accessories": "严格沿用全系列已有曹丕角色卡，不增添冠冕及其他饰物",
+        "weapon": "沿用已有角色卡设定，不增删或更换武器，不作持械动作",
+        "palette": "严格沿用全系列已有曹丕角色卡配色",
+        "temperament": "克制沉静，追念故友时流露真挚哀伤",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不得重造外貌，不换服装、发型或武器，不加帝王冠冕，不作滑稽夸张表情"
+      },
+      "pose": "Use the existing Cao Pi character asset unchanged; stand with restrained mourning posture, hands gathered naturally before the body, head slightly lowered, preserving the original costume, hairstyle and equipment.",
+      "tags": [
+        "三国",
+        "曹魏",
+        "已有角色",
+        "故友",
+        "临丧"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "吊唁宾客",
+      "slug": "diao-yan-bin-ke",
+      "existing": false,
+      "role": "同游宾客的合并代表，回应曹丕提议的吊唁者",
+      "profile": {
+        "age": "约四十岁",
+        "gender": "男",
+        "role": "士人宾客，作为史料中同游宾客的无名代表",
+        "era": "东汉末年，建安二十二年前后",
+        "face": "长方脸，颧骨略显，下颌留短须，面容清瘦",
+        "eyes": "深褐色细长眼，眼尾微垂，神情审慎",
+        "skin": "自然浅麦色",
+        "build": "中等身高，体形清瘦，肩背略收",
+        "hair": "黑发夹少量灰发，束成整齐发髻，覆深灰布帻",
+        "marks": "右眉尾有一小段自然稀疏，不设伤疤",
+        "outfit": "灰褐色素麻交领长衣，内衬灰白中衣，深褐窄布腰带，深灰长裤，黑色布履；六格服装不变",
+        "accessories": "仅有深灰布帻与素布腰带，无玉佩、无华饰",
+        "weapon": "无",
+        "palette": "灰褐、灰白、深灰、深褐、墨黑",
+        "temperament": "拘谨守礼，最初迟疑，随后以认真而悲伤的态度回应",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "无铠甲，无华丽冠饰，无武器，无现代物品，不做喜剧鬼脸，不出现驴耳或动物化身体"
+      },
+      "pose": "Full-body standing reference, hands loosely gathered inside the sleeves, shoulders gently lowered, sober expression, plain late Eastern Han scholar clothing, neutral empty background.",
+      "tags": [
+        "三国",
+        "新建角色",
+        "无名宾客",
+        "士人",
+        "吊唁"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "丧舍门前",
+      "description": "无人物独立环境概念图。汉末宅院的素木门与短廊，门内可见低垂的素色帷幔，石阶微湿，庭中疏叶零落。不设匾额、题字或装饰印记。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a late Eastern Han residential mourning entrance, plain timber doorway, short covered corridor, blank pale mourning drapery, slightly damp stone steps, sparse fallen leaves, quiet overcast daylight, balanced wide composition, no people, no human silhouettes, no portraits, no signboards, no seals, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "阴天上午",
+      "mood": "清冷、肃静、未言先哀"
+    },
+    {
+      "id": "scene-02",
+      "name": "王粲丧舍内堂",
+      "description": "无人物独立环境概念图。素色帷幔围起的汉末内堂，后方安置闭合木棺，前方置低矮素木几案和朴素陶灯。左侧为通往门廊的入口，席位留空，不设牌位文字、画像或人形陈设。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a late Eastern Han mourning hall, closed plain wooden coffin at the rear behind pale fabric curtains, low undecorated wooden offering table, simple earthenware lamps, empty woven mats, entrance on the left connecting to a timber corridor, soft diffuse daylight with subdued lamp glow, consistent restrained architecture, no people, no bodies visible, no human silhouettes, no portraits, no inscribed tablets, no seals, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "阴天上午",
+      "mood": "肃穆、沉静，容纳真挚而不寻常的告别"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "王粲去世，曹丕前来吊丧。",
+      "dialogue": [],
+      "visual": "At the mourning entrance of scene-01, Cao Pi alone pauses at the damp stone steps, facing the open doorway and its pale curtains, his lowered head conveying restrained grief. Use the existing Cao Pi asset exactly, preserving his face, costume, hairstyle and equipment. Frame him within the quiet timber architecture, with no attendants or other figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no seals; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹丕"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-02",
+      "caption": "灵前无语，只有衣袖轻响。",
+      "dialogue": [],
+      "visual": "Inside scene-02, Cao Pi stands on the left before the closed coffin, with the single mourning guest slightly behind him on the right. Both hold a quiet respectful posture, leaving a broad area of empty space between them and the curtained coffin. Exactly two visible people, no portrait or visible deceased body. Preserve the existing Cao Pi asset unchanged and the guest's fixed grey-brown clothing. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no seals; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹丕",
+        "吊唁宾客"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "他想起故人生前的喜好。",
+      "dialogue": [
+        {
+          "speaker": "曹丕",
+          "line": "王好驴鸣，可各作一声以送之。"
+        }
+      ],
+      "visual": "Close view of Cao Pi in scene-02, turning his face slightly toward the guest outside the frame as he quietly makes an unusual request. His eyes remain sorrowful, one hand makes a small open gesture without changing or removing any existing accessories. Pale curtains and the edge of the closed coffin remain softly visible behind him. Only Cao Pi is visible, no imagined flashback, no donkey, no portrait. Preserve his established character design exactly. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no seals; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹丕"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "宾客一怔，曹丕仍望着灵前。",
+      "dialogue": [],
+      "visual": "In scene-02, show Cao Pi on the left in quiet profile facing the closed coffin, and the mourning guest on the right looking briefly toward him with restrained surprise. The guest's lips are slightly parted and his hands remain gathered in his sleeves, showing hesitation rather than comedy. Exactly two people, no other mourners, no change of clothing or hairstyles, no exaggerated facial distortion. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no seals; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹丕",
+        "吊唁宾客"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "参差的驴鸣，终于响了起来。",
+      "dialogue": [
+        {
+          "speaker": "吊唁宾客",
+          "line": "啊——呃啊——"
+        }
+      ],
+      "visual": "Close view of the single mourning guest in scene-02 earnestly imitating a donkey call, mouth naturally open mid-breath, throat slightly extended, eyes moist and solemn. Keep his grey-brown robe, dark grey headcloth, short beard and facial features consistent. Pale mourning curtains blur behind him. Convey sincere remembrance rather than ridicule, with no animal transformation, no donkey, no visual sound effects, no speech balloons, and no other visible people. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no seals; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "吊唁宾客"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "声声古怪，却都是送别。",
+      "dialogue": [],
+      "visual": "Wide concluding view of scene-02, with Cao Pi and the single mourning guest standing side by side at a respectful distance from the closed coffin, their heads gently bowed after the calls. The low offering table and pale curtains create quiet depth, with ample empty floor in the foreground. Their grief is softened by shared remembrance, not laughter. Exactly two visible people, no deceased body, no portrait, no additional figures. Preserve both character designs, costumes, hairstyles and equipment unchanged. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no seals; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹丕",
+        "吊唁宾客"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting. Maintain late Eastern Han architectural and material cues without introducing imperial regalia for Cao Pi. Reuse the established Cao Pi character asset exactly; never redesign his appearance or change his costume, hairstyle or weapons. Keep the new mourning guest fully consistent across all panels. Every panel contains at most two visible people and uses only scene-01 or scene-02. Scene concept images must be completely unoccupied. Wang Can is deceased and never appears as a body, portrait, ghost or flashback figure. Show no actual donkey, animal transformation, caricature, extra mourners, written tablets, inscribed objects, seals, speech balloons or graphic sound effects. Keep all narration and dialogue exclusively in their JSON fields for later HTML overlay; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为王粲去世、曹丕临丧、提及王粲喜好驴鸣并请众人各作一声、宾客以驴鸣送别。第三格对白保留题给原文。门前停步、宾客迟疑、衣袖声、末格低首及拟声写法均为连环画的文学化处理，不冒充史料细节。无名吊唁宾客是同游宾客的合并视觉代表；第五格旁白概括众人相继作声，画面仅聚焦一人，不将史料中的宾客群体改成实际只有一人。王粲不出镜，避免新增遗像或追忆造型。沿用题给的演义未收录说明，但分镜不据此补画葬礼先后过程。曹丕作为全系列已规划角色复用，完整提供十七项 profile 字段，其中外貌、服饰与装备均引用已有角色卡，不重新设计。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-10",
+  "episode": 5,
+  "_generation": {
+    "written_at": "2026-11-11T09:32:56+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 1979,
+      "completion_tokens": 4063,
+      "total_tokens": 6042,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 1976,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 340,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "raw_chars": 11916,
+    "finish_reason": "stop",
+    "prompt_sha256": "b304280d533625e5e14c67334077e079d8a1adcfa6c543b9aacb1e68999e5b97",
+    "prompt_chars": 2963
+  }
+}
