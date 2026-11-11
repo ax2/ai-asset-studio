@@ -1331,13 +1331,22 @@ function deleteGamePack(pid) {
 
 async function initComic() {
   const [c, s] = await Promise.all([api("/api/comic"), api("/api/scenes")]);
-  renderComic(c.comics || [], s.scenes || []);
+  renderComic(c.comics || [], s.scenes || [], c.series || []);
 }
 
-function renderComic(comics, sceneCards) {
+function renderComic(comics, sceneCards, series) {
+  $("#comicSeries").innerHTML = (series || []).map((t) => `
+    <div class="pack-row">
+      <div class="row"><b>${esc(t.title || t.id)}</b><span class="pill">${t.episodes} 集</span></div>
+      <div class="hint">${esc(t.constraint || "")}</div>
+      <div class="hint">文本 ${esc(t.text_model || "")} · 图像 ${esc(t.image_model || "")} · 已入库 ${t.assets} 张资产</div>
+      <div class="btn-row mt">${t.html
+        ? `<a class="btn" href="${esc(t.html)}" target="_blank" rel="noopener">打开系列目录</a>`
+        : `<span class="hint">索引尚未生成，运行 tools/generate_comic_series.py</span>`}</div>
+    </div>`).join("");
   $("#comicList").innerHTML = comics.map((c) => `
     <div class="pack-row">
-      <div class="row"><b>${esc(c.title || c.id)}</b><span class="pill">${esc(c.id || "")}</span></div>
+      <div class="row"><b>${esc(c.title || c.id)}</b>${c.episode ? `<span class="pill">第 ${c.episode} 集</span>` : ""}<span class="pill">${esc(c.id || "")}</span></div>
       <div class="hint">${esc(c.subtitle || "")}</div>
       <div class="hint">史料：${esc((c.story_source || "").slice(0, 120))}</div>
       <div class="hint">演义未收录：${esc((c.why_not_in_romance || "").slice(0, 120))}</div>

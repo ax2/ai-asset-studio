@@ -342,14 +342,17 @@ class Handler(BaseHTTPRequestHandler):
                 rows = [s for s in rows if s.get("batch_id") == batch]
             return self._json(200, {"scenes": rows})
         if method == "GET" and seg == ["comic"]:
+            counts = {}
+            for r in store.iter_all(CFG):
+                if not r.get("demo"):
+                    key = str(r.get("batch_id") or "")
+                    counts[key] = counts.get(key, 0) + 1
             out = []
             for f in sorted((ROOT / "batches").glob("comic-*.json")):
                 try:
                     d = json.loads(f.read_text(encoding="utf-8"))
                 except (OSError, ValueError):
                     continue
-                count = sum(1 for r in store.iter_all(CFG)
-                            if r.get("batch_id") == d.get("id") and not r.get("demo"))
                 page = CFG["local"] / "packs" / str(d.get("id") or "") / "comic.html"
                 out.append({
                     "id": d.get("id"), "title": d.get("title"),
@@ -359,12 +362,33 @@ class Handler(BaseHTTPRequestHandler):
                     "synopsis": d.get("synopsis"),
                     "text_model": d.get("text_model"),
                     "image_model": d.get("image_model"),
+                    "series_id": d.get("series_id") or "",
+                    "episode": d.get("episode") or 0,
                     "panels": len(d.get("panels") or []),
                     "scenes": len(d.get("scenes") or []),
-                    "assets": count,
+                    "assets": counts.get(str(d.get("id") or ""), 0),
                     "html": f"/pack/{d.get('id')}/comic.html" if page.is_file() else "",
                 })
-            return self._json(200, {"comics": out})
+            series = []
+            for f in sorted((ROOT / "batches").glob("series-*.json")):
+                try:
+                    sm = json.loads(f.read_text(encoding="utf-8"))
+                except (OSError, ValueError):
+                    continue
+                if not isinstance(sm.get("episodes"), list):
+                    continue
+                eps = sm["episodes"]
+                index = CFG["local"] / "packs" / str(sm.get("id") or "") / "index.html"
+                series.append({
+                    "id": sm.get("id"), "title": sm.get("title"),
+                    "constraint": sm.get("constraint"),
+                    "text_model": sm.get("text_model"),
+                    "image_model": sm.get("image_model"),
+                    "episodes": len(eps),
+                    "assets": sum(counts.get(str(e.get("id") or ""), 0) for e in eps),
+                    "html": f"/pack/{sm.get('id')}/index.html" if index.is_file() else "",
+                })
+            return self._json(200, {"comics": out, "series": series})
         return self._err(404, "unknown endpoint")
 
     def _character_reproduce(self, cid: str):
