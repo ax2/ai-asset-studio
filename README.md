@@ -231,6 +231,21 @@ python tools/redo_character.py --character 诸葛亮
 
 `python tools/revise_wangmei.py --dry-run` 可只预览新规则。教训：**人数上限写在 `panel["characters"]`（参考图数量，≤2）没问题，但写进 `visual_rules` 变成「画面里不许有其他人」，就会把该有的群众场面一起禁掉**。
 
+### 只重做某几格
+
+局部瑕疵（手部畸形、左右手画反、道具错误）不必重拍整集。先在剧本里改对应格的 `visual`（必要时在 `visual_rules` 补通用约束），再执行：
+
+```bash
+python tools/redo_panels.py --plan batches/comic-xxx.json --panels 4,5 \
+    --series batches/series-xxx.json --dry-run   # 预览
+python tools/redo_panels.py --plan batches/comic-xxx.json --panels 4,5 \
+    --series batches/series-xxx.json
+```
+
+脚本把指定格的旧图**移动**到 `data/raw/_superseded/` 并从索引移除，然后跑 `generate_comic.py --plan ... --cards-ready`：其余格、场景概念图、人物立绘都会被幂等查找跳过，**两格的修复只花两张图的钱**。最后重建系列索引并校验 6 格齐全、全部带参考图、0 降级。
+
+已用此法修过「孙权庱亭射虎」第 4/5 格的手：在两格 `visual` 里写明「双手各 5 指、拇指压在戟杆前、手腕与前臂顺直、禁止镜像/换手/反掌」，并把最容易画崩的**张开手掌改成半握**（另一手改为握缰的握拳），同时在 `visual_rules` 加一条全集通用的手部解剖约束。
+
 ## 目录
 
 ```
