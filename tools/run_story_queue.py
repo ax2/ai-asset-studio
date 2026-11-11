@@ -122,12 +122,26 @@ def _kill_tree(pid: int) -> None:
             pass
 
 
-def run(cmd: list[str], what: str, watchdog: int = 0) -> int:
-    """Echo a child command's output; kill its whole tree if output goes silent.
+def _newest_activity(watch_globs) -> float:
+    """Newest mtime across episode logs (workers write there, not to stdout)."""
+    t = 0.0
+    for base, pattern in watch_globs:
+        for p in base.glob(pattern):
+            try:
+                t = max(t, p.stat().st_mtime)
+            except OSError:
+                pass
+    return t
+
+
+def run(cmd: list[str], what: str, watchdog: int = 0,
+        watch_globs=()) -> int:
+    """Echo a child command's output; kill its whole tree if work goes silent.
 
     A suspended laptop / half-open proxy connection can leave a worker blocked
-    indefinitely while the parent keeps waiting. Monitoring the child's stdout
-    covers every phase (portraits, episodes, export), not just episode workers.
+    indefinitely while the parent keeps waiting. The series controller only
+    prints when an episode *finishes*, which can legitimately take 20+ minutes,
+    so silence is measured against both its stdout and the per-episode logs.
     """
     log("执行：" + " ".join(cmd))
     if not watchdog:
@@ -147,9 +161,9 @@ def run(cmd: list[str], what: str, watchdog: int = 0) -> int:
     killed = False
     while proc.poll() is None:
         time.sleep(10)
-        silent = time.time() - last[0]
+        silent = time.time() - max(last[0], _newest_activity(watch_globs))
         if silent > watchdog:
-            log(f"!! {what} 输出静默 {silent:.0f}s > {watchdog}s，"
+            log(f"!! {what} 无任何产出活动 {silent:.0f}s > {watchdog}s，"
                 "判定僵死，终止进程树")
             _kill_tree(proc.pid)
             try:
@@ -235,7 +249,9 @@ def run_batch(q: dict, b: dict, workers: int, skip_scripts: bool,
     bad: list[str] = []
     for attempt in range(1, max(1, attempts) + 1):
         log(f"----- 第 {attempt}/{max(1, attempts)} 次资产生成尝试 -----")
-        rc = run(gen_cmd, "生成资产", watchdog=child_watchdog)
+        rc = run(gen_cmd, "生成资产", watchdog=child_watchdog,
+                 watch_globs=[(ROOT / "data" / "series-logs",
+                               f"s*-comic-{sid}-*.log")])
         complete, got, expected, bad = completeness(sid)
         log(f"完整性校验：{got}/{expected} 格合格 · "
             f"{'全部齐备' if complete else '缺口 ' + ', '.join(bad)}")
