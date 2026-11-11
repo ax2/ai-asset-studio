@@ -20,8 +20,11 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
+import threading
+import time
 from datetime import datetime
 from pathlib import Path
 
@@ -107,15 +110,104 @@ def status(q: dict) -> None:
     }, ensure_ascii=False, indent=2))
 
 
-def run(cmd: list[str], what: str) -> int:
+def _kill_tree(pid: int) -> None:
+    if os.name == "nt":
+        subprocess.run(["taskkill", "/PID", str(pid), "/T", "/F"],
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    else:
+        import signal
+        try:
+            os.killpg(os.getpgid(pid), signal.SIGKILL)
+        except OSError:
+            pass
+
+
+def run(cmd: list[str], what: str, watchdog: int = 0) -> int:
+    """Echo a child command's output; kill its whole tree if output goes silent.
+
+    A suspended laptop / half-open proxy connection can leave a worker blocked
+    indefinitely while the parent keeps waiting. Monitoring the child's stdout
+    covers every phase (portraits, episodes, export), not just episode workers.
+    """
     log("执行：" + " ".join(cmd))
-    rc = subprocess.run(cmd, cwd=str(ROOT)).returncode
+    if not watchdog:
+        return subprocess.run(cmd, cwd=str(ROOT)).returncode
+    proc = subprocess.Popen(cmd, cwd=str(ROOT), stdout=subprocess.PIPE,
+                            stderr=subprocess.STDOUT, text=True,
+                            encoding="utf-8", errors="replace", bufsize=1)
+    last = [time.time()]
+
+    def pump() -> None:
+        for line in proc.stdout:
+            if line.strip():
+                last[0] = time.time()
+                print(line.rstrip(), flush=True)
+
+    threading.Thread(target=pump, daemon=True).start()
+    killed = False
+    while proc.poll() is None:
+        time.sleep(10)
+        silent = time.time() - last[0]
+        if silent > watchdog:
+            log(f"!! {what} 输出静默 {silent:.0f}s > {watchdog}s，"
+                "判定僵死，终止进程树")
+            _kill_tree(proc.pid)
+            try:
+                proc.wait(timeout=30)
+            except subprocess.TimeoutExpired:
+                pass
+            killed = True
+            break
+    rc = -99 if killed else (proc.returncode or 0)
     if rc:
         log(f"!! {what} 返回 rc={rc}")
     return rc
 
 
-def run_batch(q: dict, b: dict, workers: int, skip_scripts: bool) -> bool:
+def scripts_ready(sid: str) -> bool:
+    """Resume-safe: skip the (paid) text-model phase if all 10 scripts exist."""
+    sf = ROOT / "batches" / f"series-{sid}.json"
+    if not sf.is_file():
+        return False
+    try:
+        sm = json.loads(sf.read_text(encoding="utf-8"))
+    except ValueError:
+        return False
+    eps = sm.get("episodes") or []
+    return bool(eps) and all(
+        (ROOT / "batches" / str(ep.get("file") or "")).is_file()
+        for ep in eps)
+
+
+def completeness(sid: str) -> tuple[bool, int, int, list[str]]:
+    """Verify every episode has all its panels with character references."""
+    from studio import config, store
+    cfg = config.load()
+    sm = json.loads((ROOT / "batches" / f"series-{sid}.json").read_text(
+        encoding="utf-8"))
+    by: dict[str, list[dict]] = {}
+    for r in store.iter_all(cfg):
+        if r.get("asset_kind") == "comic-panel" and not r.get("demo"):
+            by.setdefault(str(r.get("batch_id")), []).append(r)
+    got, expected, bad = 0, 0, []
+    for ep in sm.get("episodes") or []:
+        pf = ROOT / "batches" / str(ep.get("file") or "")
+        try:
+            n = len(json.loads(pf.read_text(encoding="utf-8"))["panels"])
+        except (OSError, ValueError, KeyError):
+            n = 6
+        expected += n
+        panels = by.get(str(ep.get("id")), [])
+        ok = sum(1 for r in panels
+                 if r.get("reference_used") and not r.get("degraded"))
+        got += ok
+        if ok < n:
+            bad.append(f"{ep['no']}({ok}/{n})")
+    return not bad, got, expected, bad
+
+
+def run_batch(q: dict, b: dict, workers: int, skip_scripts: bool,
+              attempts: int = 3, child_watchdog: int = 1200) -> bool:
     sid = b["id"]
     no = int(b["no"])
     b["status"] = "running"
@@ -124,19 +216,36 @@ def run_batch(q: dict, b: dict, workers: int, skip_scripts: bool) -> bool:
     log(f"===== 第 {no}/{q['total_batches']} 批 {sid} 开始 · "
         f"{len(b['tale_nos'])} 集 =====")
 
-    if not skip_scripts:
+    ready = scripts_ready(sid)
+    if not skip_scripts and not ready:
         rc = run([sys.executable, "-u", "tools/write_comic_from_bank.py",
                   "--queue", "--batch", str(no), "--workers", "3"], "写剧本")
         if rc:
             b["status"], b["error"] = "failed", "剧本生成失败"
             save(q)
             return False
+    else:
+        log("剧本已齐备，跳过写作阶段" if ready else "--skip-scripts：跳过写作阶段")
+
     series_file = f"batches/series-{sid}.json"
-    rc = run([sys.executable, "-u", "tools/generate_comic_series.py",
-              "--series", series_file, "--workers", str(workers),
-              "--fix-degraded"], "生成资产")
-    if rc:
-        b["status"], b["error"] = "failed", f"资产生成 rc={rc}"
+    gen_cmd = [sys.executable, "-u", "tools/generate_comic_series.py",
+               "--series", series_file, "--workers", str(workers),
+               "--fix-degraded", "--watchdog", "600"]
+    complete = False
+    bad: list[str] = []
+    for attempt in range(1, max(1, attempts) + 1):
+        log(f"----- 第 {attempt}/{max(1, attempts)} 次资产生成尝试 -----")
+        rc = run(gen_cmd, "生成资产", watchdog=child_watchdog)
+        complete, got, expected, bad = completeness(sid)
+        log(f"完整性校验：{got}/{expected} 格合格 · "
+            f"{'全部齐备' if complete else '缺口 ' + ', '.join(bad)}")
+        if complete and rc == 0:
+            break
+        if attempt < attempts:
+            log("重跑将跳过已入库图片，只补缺口（不会重复计费）")
+    if not (complete and rc == 0):
+        b["status"] = "failed"
+        b["error"] = f"资产生成 rc={rc}；分镜缺口 {', '.join(bad) or '无'}"
         save(q)
         return False
 
@@ -184,8 +293,12 @@ def main() -> None:
     ap.add_argument("--batch", type=int, default=0, help="跑指定批次")
     ap.add_argument("--all", action="store_true", help="依次跑完全部批次")
     ap.add_argument("--workers", type=int, default=3, help="图像生成并发数")
+    ap.add_argument("--attempts", type=int, default=3,
+                    help="单批最多尝试次数（每次跳过已入库图片）")
+    ap.add_argument("--child-watchdog", type=int, default=1200,
+                    help="子进程输出静默超过该秒数即终止整棵进程树，0 关闭")
     ap.add_argument("--skip-scripts", action="store_true",
-                    help="剧本已存在时跳过写作阶段")
+                    help="强制跳过写作阶段（默认会在剧本齐备时自动跳过）")
     args = ap.parse_args()
 
     if args.prepare or not QUEUE.is_file():
@@ -220,7 +333,8 @@ def main() -> None:
         return
 
     for b in todo:
-        ok = run_batch(q, b, args.workers, args.skip_scripts)
+        ok = run_batch(q, b, args.workers, args.skip_scripts,
+                       args.attempts, args.child_watchdog)
         if not ok:
             log(f"第 {b['no']} 批失败，停止队列。修正后可用 "
                 f"--batch {b['no']} 单独重试。")

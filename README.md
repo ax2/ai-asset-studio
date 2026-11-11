@@ -195,11 +195,22 @@ python tools/run_story_queue.py --status           # 进度、花费、下一批
 python tools/run_story_queue.py --run-next         # 跑下一个未完成批次
 python tools/run_story_queue.py --batch 3          # 单独重试第 3 批
 python tools/run_story_queue.py --all --workers 3  # 依次跑完全部批次
+
+# 中断后重启（自动跳过已写剧本与已入库图片，不会重复计费）
+python tools/run_story_queue.py --all --workers 3 --attempts 3 --child-watchdog 1200
 ```
 
 注意：`gpt-image-2.6-sunburst` 单价为估算值，队列里 `budget_spent_usd` 是估算累计，不是账单；`--status` 可随时查看并叫停。
 
-长跑稳定性：`generate_comic_series.py --watchdog 900`（默认开启）会在单集日志静默超过 900 秒时判定为本地代理长连接半开，自动终止该 worker 并把这一集留给 `--fix-degraded` 补跑，避免一个僵死进程拖住整批；`--watchdog 0` 可关闭。已入库的图片永远不会被重复计费。
+### 长跑稳定性（三层防护）
+
+1. **单集看门狗**：`generate_comic_series.py --watchdog 600`（队列自动传入）会在某一集日志静默 600 秒时判定本地代理长连接半开，终止该 worker，把这一集留给 `--fix-degraded` 补跑；`--watchdog 0` 可关闭。
+2. **子进程看门狗**：`run_story_queue.py --child-watchdog 1200` 监控系列总控的 stdout，静默 20 分钟即 `taskkill /T /F` 整棵进程树并重试本批。笔记本休眠、整机挂起导致所有 worker 同时僵死时，这一层能兜住（单集看门狗对「父进程一起冻结」无能为力）。
+3. **完整性校验 + 重试**：每批生成后逐集核对分镜数量与 `reference_used` / `degraded` 标记，只有 10 集全部 6 格合格且子进程 rc=0 才标记 `done`；否则最多重试 `--attempts` 次，每次只补缺口，绝不重复计费。失败会写 `error` 字段并停下队列，不会假装完成。
+
+剧本阶段也是断点安全的：只要 `series-*.json` 指向的 10 个剧本文件都在，就自动跳过文本模型阶段，无需手动加 `--skip-scripts`。
+
+**人工恢复流程**：若队列长时间无输出，`python tools/run_story_queue.py --status` 看状态；确认僵死后终止 `run_story_queue` / `generate_comic_series` / `generate_comic` 进程树，再用上面「中断后重启」命令重跑即可。已入库图片全部跳过。
 
 ## 目录
 
