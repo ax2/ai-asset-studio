@@ -278,8 +278,8 @@ def series_html(sm: dict, plans, stats: dict) -> str:
         parts.append("<div class='body'>")
         parts.append(f"<h2>{html.escape(plan['title'])}</h2>")
         parts.append(f"<p class='src'>{html.escape(plan['story_source'][:150])}</p>")
-        parts.append(f"<p class='why'>演义未收录："
-                     f"{html.escape(plan['why_not_in_romance'][:120])}</p>")
+        parts.append(f"<p class='why'>史料与演义归属："
+                     f"{html.escape(plan['why_not_in_romance'][:150])}</p>")
         parts.append(f"<div class='meta'>{len(s['panels'])} 格分镜 · "
                      f"{s['scenes']} 场景 · {s['portraits']} 本集新增立绘 · "
                      f"{len(s['rows'])} 张资产 · "
@@ -344,9 +344,9 @@ def sync_series(cfg: dict, sm: dict, plans, stats: dict) -> dict:
         "zips/                 每集完整素材包（图片 + 剧本 + 卡片 + recipe + comic.html）\n"
         "../comic-sNN-*/       每集解压后的目录，含可直接双击阅读的 comic.html\n\n"
         "复现\n----\n"
-        "python tools/write_comic_series.py            # 重写剧本\n"
-        "python tools/generate_comic_series.py        # 幂等生成全系列\n"
-        "python tools/generate_comic.py --plan batches/comic-sNN-xxx.json  # 单独重跑一集\n\n"
+        f"python tools/write_comic_from_bank.py --queue --batch <批次号>   # 重写本批剧本\n"
+        f"python tools/generate_comic_series.py --series batches/series-{sid}.json\n"
+        "python tools/generate_comic.py --plan batches/<剧本>.json       # 单独重跑一集\n"
         "画面不含任何文字；旁白与对白由 comic.html 排版叠加。人物立绘与场景卡为\n"
         "全系列共享的可复现资产，锚点版本变化意味着人物设定改过，勿混用新旧图。\n"
     )

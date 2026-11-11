@@ -37,6 +37,8 @@ from studio import config  # noqa: E402
 
 RAW_DIR = ROOT / "data" / "story-collect"
 OUT_JSON = ROOT / "batches" / "story-bank.json"
+REVIEW_FILE = ROOT / "batches" / "story-reviews.json"
+USED_TITLES: set[str] = set()
 OUT_DIR = ROOT / "data" / "packs" / "story-bank"
 BATCH_KEYS = ("wei", "shu", "wu", "shishuo", "houhanshu", "artisans",
               "romance", "mixed")
@@ -201,6 +203,48 @@ def used_stories() -> list[dict]:
     return out
 
 
+def load_reviews() -> dict:
+    """Title-keyed review records from tools/review_stories.py.
+
+    Keying by title (not the display number) keeps reviews attached even when
+    a rebuild re-numbers the bank after new episodes are produced.
+    """
+    if not REVIEW_FILE.is_file():
+        return {}
+    try:
+        raw = json.loads(REVIEW_FILE.read_text(encoding="utf-8")).get("reviews") or {}
+    except (ValueError, OSError):
+        return {}
+    return {str(v.get("title") or k): v for k, v in raw.items()
+            if isinstance(v, dict)}
+
+
+def apply_review(row: dict, reviews: dict) -> dict:
+    r = reviews.get(row["title"])
+    if not r:
+        row["reviewed"] = False
+        row["quote_status"] = ("unverified"
+                               if row.get("quote") in ("", "原文待核")
+                               else "attested")
+        return row
+    row["reviewed"] = True
+    if str(r.get("source") or "").strip():
+        row["source"] = str(r["source"]).strip()
+    if str(r.get("quote") or "").strip():
+        row["quote"] = str(r["quote"]).strip()
+    row["quote_status"] = (str(r.get("quote_status") or "").strip()
+                           or ("unverified" if row["quote"] in ("", "原文待核")
+                               else "attested"))
+    if r.get("romance_check") in GROUP_LABELS:
+        row["romance_check"] = r["romance_check"]
+    if str(r.get("romance_note") or "").strip():
+        row["romance_note"] = str(r["romance_note"]).strip()
+    if r.get("confidence") in ("high", "medium", "low"):
+        row["confidence"] = r["confidence"]
+    row["verification"] = str(r.get("verification") or "").strip()
+    return row
+
+
 def toc_index() -> tuple[list[str], dict]:
     f = ROOT / "batches" / "romance-toc.json"
     if not f.is_file():
@@ -228,29 +272,42 @@ def classify(row: dict) -> dict:
         row["romance_check"], row["romance_note"] = verdict
         row["verdict_source"] = "manual"
     else:
-        row["verdict_source"] = "model" if row["origin"] == "model" else "curated"
+        row["verdict_source"] = ("review" if row.get("reviewed")
+                                 else ("model" if row["origin"] == "model"
+                                       else "curated"))
     rc = row["romance_check"]
     if rc not in GROUP_LABELS:
         row["romance_check"] = rc = "uncertain"
     row["romance_group"] = GROUP_LABELS[rc]
+    row["data_complete"] = bool(
+        row.get("source") and row.get("quote") not in ("", "原文待核")
+        and row.get("romance_note") and row.get("visual_hook")
+        and row.get("characters") and row.get("region") and row.get("mood"))
 
     used_key = USED_ALIASES.get(row["title"])
+    if not used_key and row["title"] in USED_TITLES:
+        used_key = row["title"]
     if used_key:
-        row["status"], row["used_as"] = "used", used_key
-        row["grade"] = "U"
+        row["status"], row["used_as"], row["grade"] = "used", used_key, "U"
         return row
 
-    weak = (not row["source"]
-            or row["quote"] in ("", "原文待核")
-            or row["confidence"] == "low"
-            or rc == "uncertain")
+    # A reviewed entry is usable even when its Romance attribution stays
+    # "uncertain": the user explicitly allows Romance-attested tales, and an
+    # honest "cannot determine" note is itself complete documentation.
+    if row.get("reviewed"):
+        weak = not (row.get("source") and row.get("quote"))
+    else:
+        weak = (not row["source"]
+                or row["quote"] in ("", "原文待核")
+                or row["confidence"] == "low"
+                or rc == "uncertain")
     if weak:
         row["status"], row["grade"] = "needs_review", "R"
     else:
         row["status"] = "candidate"
         if row["origin"] == "curated":
             row["grade"] = "A"
-        elif row["confidence"] == "high":
+        elif row.get("reviewed") or row["confidence"] == "high":
             row["grade"] = "B"
         else:
             row["grade"] = "C"
@@ -376,7 +433,8 @@ const DATA=__DATA__, LABELS=__LABELS__, STATS=__STATS__;
 const $=s=>document.querySelector(s);
 const esc=v=>String(v==null?'':v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const statDefs=[['total','总条目'],['candidate','可用候选'],['needs_review','待复核'],
- ['used','已拍成连环画'],['grade_a','A 级·人工核验'],['not_in_romance','演义未载'],
+ ['used','已拍成连环画'],['reviewed','已复核'],['data_complete','资料完整'],
+ ['grade_a','A 级·人工核验'],['not_in_romance','演义未载'],
  ['in_romance','演义亦载/提及']];
 $('#stats').innerHTML=statDefs.map(([k,l])=>`<div class="stat"><b>${STATS[k]||0}</b><span>${l}</span></div>`).join('');
 [...new Set(DATA.map(d=>d.batch))].sort().forEach(b=>{
@@ -402,6 +460,8 @@ function render(){
       <span class="chip g">${esc(d.grade)} 级</span>
       <span class="chip ${d.status==='used'?'used':d.status==='needs_review'?'review':''}">${d.status==='used'?'已拍':d.status==='needs_review'?'待复核':'可用'}</span>
       <span class="chip">${esc(d.romance_group)}</span>
+      ${d.reviewed?'<span class="chip">已复核</span>':''}
+      ${d.data_complete?'<span class="chip">资料完整</span>':''}
       <span class="chip">${esc(LABELS[d.batch]||d.batch)}</span>
       ${d.region?`<span class="chip">${esc(d.region)}</span>`:''}
       ${d.mood?`<span class="chip">${esc(d.mood)}</span>`:''}
@@ -410,6 +470,7 @@ function render(){
     ${d.quote&&d.quote!=='原文待核'?`<div class="quote">${esc(d.quote)}</div>`:''}
     <div class="syn">${esc(d.synopsis)}</div>
     <div class="row"><b>演义：</b>${esc(d.romance_note||'—')}</div>
+    ${d.verification?`<div class="row"><b>复核：</b>${esc(d.verification)}</div>`:''}
     ${(d.toc_hits||[]).length?`<div class="row"><b>相关回目：</b>${esc((d.toc_hits||[]).join('、'))}</div>`:''}
     ${(d.characters||[]).length?`<div class="row"><b>人物：</b>${esc((d.characters||[]).join('、'))}</div>`:''}
     ${d.visual_hook?`<div class="row"><b>画面：</b>${esc(d.visual_hook)}</div>`:''}
@@ -431,14 +492,19 @@ def sync(bank: dict, html: str) -> Path:
     (dest / "story-bank.json").write_text(
         json.dumps(bank, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (dest / "index.html").write_text(html, encoding="utf-8")
+    if REVIEW_FILE.is_file():
+        (dest / "story-reviews.json").write_text(
+            REVIEW_FILE.read_text(encoding="utf-8"), encoding="utf-8")
     (dest / "README.txt").write_text(
         "三国小故事候选库\n"
         "================\n"
         f"生成时间：{bank['built_at']}\n"
         f"总条目 {bank['stats']['total']} · 可用候选 {bank['stats']['candidate']} · "
-        f"待复核 {bank['stats']['needs_review']} · 已拍 {bank['stats']['used']}\n\n"
-        "index.html  可离线打开、搜索、筛选、打印的故事库（数据已内嵌）\n"
-        "story-bank.json  唯一数据源，字段含出处、原文摘录、演义归属判定、回目提示、状态与等级\n\n"
+        f"待复核 {bank['stats']['needs_review']} · 已拍 {bank['stats']['used']} · "
+        f"已复核 {bank['stats']['reviewed']} · 资料完整 {bank['stats']['data_complete']}\n\n"
+        "index.html          可离线打开、搜索、筛选、打印的故事库（数据已内嵌）\n"
+        "story-bank.json     唯一数据源：出处、原文摘录、演义归属、回目提示、状态与等级\n"
+        "story-reviews.json  文本模型复核记录（出处/原文/演义归属逐条留痕）\n\n"
         "口径：用户已放宽约束，《三国演义》写过的故事同样收录，"
         "只是用 romance_group 标注为「演义亦载 / 仅被提及 / 有相似回目」。\n"
         "A 级为 tools/write_comic_series.py 中人工核验过的基线；"
@@ -453,11 +519,14 @@ def main() -> None:
     ap.add_argument("--show", action="store_true", help="只打印统计")
     args = ap.parse_args()
 
+    global USED_TITLES
     curated = parse_curated()
     raw, batch_meta = load_raw()
     chapters, toc_meta = toc_index()
     used = used_stories()
-    rows = [classify(r) for r in (curated + raw)]
+    USED_TITLES = {u["title"] for u in used}
+    reviews = load_reviews()
+    rows = [classify(apply_review(r, reviews)) for r in (curated + raw)]
     stories, dropped = merge(rows, chapters)
 
     counts = Counter(r["status"] for r in stories)
@@ -475,6 +544,8 @@ def main() -> None:
                        + groups["有相似回目"]),
         "curated": batches["curated"],
         "model": len(stories) - batches["curated"],
+        "reviewed": sum(1 for r in stories if r.get("reviewed")),
+        "data_complete": sum(1 for r in stories if r.get("data_complete")),
         "raw_model_rows": len(raw),
         "duplicates_dropped": len(dropped),
         "by_batch": dict(sorted(batches.items())),
@@ -490,6 +561,11 @@ def main() -> None:
             "curated": "tools/write_comic_series.py 中 24 条人工核验候选",
             "model_batches": batch_meta,
             "romance_toc": toc_meta,
+            "reviews": {
+                "file": "batches/story-reviews.json",
+                "count": len(reviews),
+                "note": "文本模型对人工基线与待考条目的出处/原文/演义归属复核",
+            },
         },
         "romance_toc_note": ("回目命中仅作参考，不代表该故事被正面叙写；"
                              "确定归属见每条 romance_check / romance_note，"
