@@ -1,0 +1,211 @@
+{
+  "id": "comic-sanguo-tales-q02-e07-tale-017",
+  "title": "叔母劝谧向学",
+  "subtitle": "一番含泪劝诫，唤醒田间读书人",
+  "story_source": "《晋书》卷五十一·皇甫谧传；原文：谧乃感激，就乡人席坦受书，勤力不怠。",
+  "why_not_in_romance": "通行毛本未叙皇甫谧受叔母任氏劝诫、从席坦读书的早年故事，此条取自本传。【演义归属：演义未载】",
+  "synopsis": "皇甫谧年近二十，仍贪玩不学。他采果归家，叔母任氏却含泪劝他珍惜光阴、勤学修身。皇甫谧深受触动，遂从乡人席坦受书。家境贫寒，他便亲自耕作，劳作之余展卷苦读，从此勤力不怠。",
+  "characters": [
+    {
+      "name": "皇甫谧",
+      "slug": "huangfu-mi",
+      "existing": false,
+      "role": "受叔母劝诫而发愤向学的青年",
+      "profile": {
+        "age": "二十岁左右",
+        "gender": "男",
+        "role": "贫家青年，后从乡人席坦受书",
+        "era": "三国曹魏时期",
+        "face": "偏长的青年面庞，下颌清瘦，鼻梁平直，无须",
+        "eyes": "深褐色眼睛，眼尾平直，神情由散漫转为专注",
+        "skin": "常在乡野活动形成的浅麦色肤色",
+        "build": "身形修长偏瘦，四肢结实",
+        "hair": "黑发束成朴素高髻，以深褐布巾固定，全篇不变",
+        "marks": "左眉尾有一处自然断眉，无伤疤与刺青",
+        "outfit": "固定穿灰米色粗麻交领窄袖及膝袍，米白内领，深褐布腰带，灰褐长裤，旧深褐布履；六格不换装",
+        "accessories": "腰侧固定悬一只无纹小布囊；果实、书卷与农具均为分镜道具",
+        "weapon": "无武器",
+        "palette": "灰米、米白、深褐、灰褐、浅麦色",
+        "temperament": "起初率性贪玩，受劝后知愧自省，求学坚忍",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不要胡须、冠冕、铠甲、华贵衣饰、现代物品；不得更换服装、发型；不得出现文字、印章或标识"
+      },
+      "pose": "Full-body standing character portrait, a slender young man with a plain cloth-bound topknot, hands resting naturally before his waist, restrained thoughtful expression, unobstructed costume silhouette, no weapon.",
+      "tags": [
+        "三国",
+        "曹魏",
+        "皇甫谧",
+        "青年",
+        "向学"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "任氏",
+      "slug": "ren-shi",
+      "existing": false,
+      "role": "抚育皇甫谧、劝其向学的叔母",
+      "profile": {
+        "age": "四十五岁左右，属于视觉设定",
+        "gender": "女",
+        "role": "皇甫谧的叔母与养育者",
+        "era": "三国曹魏时期",
+        "face": "略方的鹅蛋脸，颧骨微显，嘴角与额头有浅细纹",
+        "eyes": "深褐色眼睛，眼窝稍深，目光慈爱而严肃",
+        "skin": "暖褐色肤色，双手有操持家务留下的粗糙感",
+        "build": "中等身量，体态清瘦，肩背端正",
+        "hair": "黑发夹少量灰丝，脑后低髻，以深灰布巾包束，全篇不变",
+        "marks": "眼下有轻微疲惫细纹，无首饰性面饰",
+        "outfit": "固定穿褐灰色粗麻交领长襦，米灰内领，深灰长裙，灰褐布腰带，深褐布履；六格不换装",
+        "accessories": "仅用朴素木簪固定发髻，无金银首饰",
+        "weapon": "无武器",
+        "palette": "褐灰、米灰、深灰、灰褐、深褐",
+        "temperament": "勤俭慈厚，忧心晚辈，劝诫恳切而不失尊严",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不要宫装、珠翠、浓妆、华贵绣纹、现代物品；不得更换服装、发型；不得出现文字、印章或标识"
+      },
+      "pose": "Full-body standing character portrait, a middle-aged rural woman with a low cloth-wrapped bun, hands gently folded at her waist, upright shoulders, compassionate but firm expression, unobstructed costume silhouette.",
+      "tags": [
+        "三国",
+        "曹魏",
+        "任氏",
+        "叔母",
+        "劝学"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "贫家草堂",
+      "description": "无人环境概念图。夯土墙、茅草屋顶、木门与小窗构成简朴居室；室内设低木案、草席、陶罐和素面书卷，门旁留有放置果实的浅竹篮。无人物、画像或可辨识文字。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a humble rural home in the Cao Wei period, rammed-earth walls, exposed timber rafters beneath a thatched roof, a low wooden desk, woven floor mats, plain pottery jars, a shallow bamboo basket near the doorway, blank unmarked rolled manuscripts, soft daylight through a small window, clear spatial continuity between doorway and desk, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no people, no human silhouettes, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "白昼",
+      "mood": "清贫朴素，由忧切转为温暖"
+    },
+    {
+      "id": "scene-02",
+      "name": "村外田垄",
+      "description": "无人环境概念图。村外一片狭长农田，土路沿田垄通向远处，近旁有低矮果树与草坡，田边可放木柄铁锄和书卷。远景仅有低丘与稀疏树木，不设其他院落或人物。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a modest rural field in the Cao Wei period, narrow cultivated furrows, a dirt path receding beside the field, a small fruit tree and grassy bank at the near edge, a plain wooden-handled iron hoe resting on bare soil, distant low hills and sparse trees, open uncluttered composition with a readable field edge for seated study, gentle daylight, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no people, no human silhouettes, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "白昼",
+      "mood": "乡野疏朗，清苦而有生机"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-02",
+      "caption": "皇甫谧年近二十，仍贪玩不学。",
+      "dialogue": [],
+      "visual": "At the fruit-tree edge of the established rural field, Huangfu Mi lounges casually on the grassy bank, lightly tossing a small wild fruit above one open palm, several gathered fruits beside his knee. His attention is entirely on amusement rather than work. Show only Huangfu Mi, with his exact established face, plain cloth-bound topknot and unchanged gray-beige hemp outfit. The empty furrows extend behind him. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "皇甫谧"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "他采果归家，叔母却含泪劝诫。",
+      "dialogue": [
+        {
+          "speaker": "任氏",
+          "line": "你已长大，岂能只知嬉游，不肯向学？"
+        }
+      ],
+      "visual": "Inside the established humble home, Huangfu Mi kneels near the doorway offering several wild fruits with both hands. Opposite him, his aunt Ren Shi sits beside the low desk, one hand held near her chest, visible tears gathering beneath her earnest eyes as she admonishes him. Contrast his fading casual smile with her restrained sorrow. Only these two people are visible. Preserve both character profiles, hairstyles and fixed clothing exactly; unmarked manuscript rolls remain closed on the desk. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "皇甫谧",
+        "任氏"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-01",
+      "caption": "见叔母落泪，他惭愧低头。",
+      "dialogue": [
+        {
+          "speaker": "皇甫谧",
+          "line": "叔母，我愿求师读书，不再虚度光阴。"
+        }
+      ],
+      "visual": "An intimate view in the same humble room: Huangfu Mi bows his head deeply, his empty hands respectfully joined before him, shame giving way to resolve. The offered fruits now rest in the shallow basket at the doorway. Ren Shi faces him in three-quarter profile, a tear still on her cheek, her tense hands beginning to relax. Show exactly two people, preserving their established faces, fixed hairstyles and unchanged clothing. Keep the low desk and earthen wall softly visible for spatial continuity. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "皇甫谧",
+        "任氏"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "他从乡人席坦受书，立志勤学。",
+      "dialogue": [],
+      "visual": "On the established dirt path beside the same rural field, Huangfu Mi returns alone carrying a small bundle of plain rolled manuscripts carefully against his chest. His posture is upright and purposeful, his eyes lowered thoughtfully toward the rolls. Suggest the aftermath of receiving instruction without depicting a teacher, another location, or any background person. Preserve his exact established face, topknot, waist pouch and unchanged gray-beige clothing. All exposed manuscript surfaces are blank and unmarked. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "皇甫谧"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "家贫须自耕，他不曾放下学业。",
+      "dialogue": [],
+      "visual": "In the same narrow cultivated field, Huangfu Mi works the soil with a plain wooden-handled iron hoe held naturally in both hands, his lean body inclined into the effort. A carefully tied bundle of manuscript rolls rests safely on a folded plain cloth on the dry grassy bank, well away from the hoe and loose soil. Show the physical labor honestly, without simultaneous reading or an impossible pose. Only Huangfu Mi is present, with his established face, unchanged hairstyle and identical clothing and accessories. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "皇甫谧"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "耕作稍歇，便展卷苦读，勤力不怠。",
+      "dialogue": [],
+      "visual": "At the grassy edge of the same field, Huangfu Mi sits during a brief break from farming, holding an open manuscript scroll with both hands and studying it intently. Present the scroll from behind and at an oblique angle so that only its blank outer surface is visible. His plain iron hoe lies securely on the ground beside him, with freshly worked furrows leading into the distance. Emphasize his calm, sustained concentration and the quiet dignity of learning amid poverty. Only Huangfu Mi appears; preserve his exact established face, fixed topknot, waist pouch and unchanged clothing. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "皇甫谧"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting. Favor historically grounded Cao Wei rural architecture, farming tools, plain hemp clothing and manuscript rolls; do not introduce fantasy effects, luxurious furnishings or modern objects. Maintain the exact approved character faces, hairstyles, clothing, accessories and colors throughout all six panels. Depict only the named characters listed for each panel, never more than two people; no background crowds, portraits, reflected people or implied teacher silhouettes. Reuse only the two established environments. Environment concept images must contain no people. Manuscript surfaces must remain blank, turned away or unreadable through their physical orientation, with no pseudo-writing. Render each panel as a single uninterrupted image; all narration and dialogue are external HTML overlays. No seals, calligraphy or graphic emblems. no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为皇甫谧早年贪玩不学、叔母任氏含泪劝诫、感悟后从乡人席坦受书，以及家贫躬耕而勤学。采果情节依据本传早年叙事；具体动作、居室陈设、任氏视觉年龄及对白均为连环画文学化设计，对白不是史料逐字引文。为满足最多两名新建角色的限制，席坦仅由旁白实名交代，第四格表现皇甫谧受书归来的结果，不绘制席坦，也不以其他角色替代。田边展卷表现劳作间隙读书，不将一边耕作一边读书画成不合实际的同时动作。本故事取自《晋书》，不归入《三国演义》情节。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q02",
+  "episode": 7,
+  "story_bank_no": 17,
+  "_generation": {
+    "written_at": "2026-11-11T22:06:08+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 4658,
+      "completion_tokens": 4096,
+      "total_tokens": 8754,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 4655,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 319,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "d37f17a6c280a285ded9a00f36685e56936cfe231448badd9b702c25c56ff462",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

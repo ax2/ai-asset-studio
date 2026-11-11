@@ -1,0 +1,215 @@
+{
+  "id": "comic-sanguo-tales-q02-e03-tale-013",
+  "title": "流水驱动木偶",
+  "subtitle": "马钧借流水之力，让静止的百戏模型动了起来",
+  "story_source": "《三国志》卷二十九·魏书·方技传·杜夔传裴松之注引《马先生传》。原文摘录：“潜以水发焉。”本事记魏明帝得到百戏模型，原本只能陈设，马钧改设机关，以水力驱动模型表演。",
+  "why_not_in_romance": "【演义归属：演义未载】通行毛本120回未叙马钧以水力驱动百戏模型的故事。本集依据《三国志》裴松之注所引《马先生传》，不是《三国演义》情节。",
+  "synopsis": "魏明帝得到一套百戏模型，却只能静置观赏。马钧接下改造之事，察看模型、安设机关，引水驱动。再度呈示时，木偶随机关起落旋转，舞者挥袖，杂技偶翻腾，静物终于化作一场流动的百戏。",
+  "characters": [
+    {
+      "name": "马钧",
+      "slug": "ma-jun",
+      "existing": true,
+      "role": "曹魏机械巧匠，改造百戏模型者",
+      "profile": {
+        "age": "约四十岁，属本集视觉设定",
+        "gender": "男",
+        "role": "曹魏机械巧匠马钧，字德衡",
+        "era": "三国曹魏明帝时期",
+        "face": "长方脸，颧骨略显，下颌结实，短须整齐",
+        "eyes": "深褐眼睛，目光沉静，观察器物时专注",
+        "skin": "暖麦色，手掌略粗糙",
+        "build": "中等身量，肩背结实，动作稳健",
+        "hair": "黑发束成紧实发髻，以深灰布巾包束，全篇不变",
+        "marks": "无醒目疤痕或纹身，指腹有长期劳作形成的薄茧",
+        "outfit": "灰青色粗绢交领窄袖长袍，深褐布带，炭灰长裤，黑色布履；袖口与衣摆保持相同形制，全篇不换装",
+        "accessories": "腰侧悬一只小型素面工具皮囊，无文字与印记",
+        "weapon": "无武器",
+        "palette": "灰青、深褐、炭灰、木色、暖麦色",
+        "temperament": "寡言笃定，不逞口舌，以制作验证判断",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "No modern clothing, no ornate fantasy armour, no hairstyle changes, no costume changes, no weapon, no written symbols."
+      },
+      "pose": "Reuse the existing Ma Jun character asset without redesign; standing beside a low workbench, one hand examining a small wooden linkage, the other resting beside the mechanism; preserve the established face, hairstyle, clothing and accessories.",
+      "tags": [
+        "三国",
+        "曹魏",
+        "巧匠",
+        "水力机关",
+        "复用角色"
+      ],
+      "character_id": "char-20261111-094150-13cef2"
+    },
+    {
+      "name": "曹叡",
+      "slug": "cao-rui",
+      "existing": false,
+      "role": "魏明帝，百戏模型的持有者与观看者",
+      "profile": {
+        "age": "二十余至三十岁，作为本集统一视觉设定",
+        "gender": "男",
+        "role": "曹魏皇帝，即魏明帝",
+        "era": "三国时期曹魏",
+        "face": "面形修长，鼻梁端正，下颌清晰，唇上留短须；属于创作性视觉设定",
+        "eyes": "深褐色眼睛，目光敏锐，观看机关时略显好奇",
+        "skin": "浅暖麦色",
+        "build": "身形修长，肩背端正，体态不夸张",
+        "hair": "黑发整齐束髻，固定戴低调黑色冠，六格不更换发式",
+        "marks": "无伤疤，无纹身，无额外面部标记",
+        "outfit": "固定穿玄黑色交领宽袖长袍，米白内领，衣缘饰低对比暗赭几何织纹，腰束深褐革带，下着深灰下裳与黑色布履；全篇不换装",
+        "accessories": "黑色冠、素玉带饰，不佩夸张珠宝",
+        "weapon": "无，不携兵器",
+        "palette": "玄黑、暗赭、米白、深褐、素玉白",
+        "temperament": "端肃而好奇，惊喜主要通过眼神和微微前倾表现",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "No modern clothing, no Qing dynasty hairstyle, no exaggerated dragon armour, no costume changes, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body standing character reference, hands loosely gathered before the waist, head slightly inclined toward an unseen mechanical display; restrained imperial bearing, fixed clothing and hairstyle; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "曹魏",
+        "魏明帝",
+        "新建角色"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "魏宫陈设厅",
+      "description": "无人独立环境概念图。曹魏宫室内厅，木柱、素壁、石地，侧窗透入均匀天光。中央放置空的低矮木制展台，展台底部预留暗藏机关的空间，侧面留有摆放供水器具的位置。没有人物、木偶或人形装饰。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a restrained Cao Wei palace display hall, timber columns, plain plaster walls, stone floor, a low empty wooden display platform with a concealed mechanism compartment, clear space beside it for portable water vessels, soft even daylight through side windows, three-quarter wide view, no people, no puppets, no humanoid ornaments, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "白昼",
+      "mood": "端肃、清静、留有展示空间"
+    },
+    {
+      "id": "scene-02",
+      "name": "宫中机关作坊",
+      "description": "无人独立环境概念图。朴素木工作坊内设低案、木架、木料和无字工具，案旁有抬高的木制水槽，细水道通向下方接水盆；地面干净，窗光均匀。没有人物、木偶或人形装饰。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a modest Cao Wei woodworking workshop, low workbench, timber shelves, plain hand tools, wooden stock, an elevated wooden water trough feeding a narrow channel into a lower catch basin, empty central assembly space, clean practical layout, soft even window light, three-quarter wide view, no people, no puppets, no humanoid ornaments, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "白昼",
+      "mood": "安静、专注、质朴"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "魏明帝所得百戏模型，只能静置。",
+      "dialogue": [
+        {
+          "speaker": "曹叡",
+          "line": "百戏俱全，可惜不能动。"
+        }
+      ],
+      "visual": "Inside scene-01, Cao Rui stands on the right of the low display platform while Ma Jun stands on the left, both using their fixed character designs. Between them sits a miniature wooden performance stage containing clearly toy-sized jointed wooden dancers, a balancing puppet and tiny wooden drums, all motionless. Their carved joints and small scale unmistakably identify them as objects rather than living performers. Cao Rui gestures toward the still display; Ma Jun leans slightly forward to inspect its base. Only these two living people are present. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "马钧",
+        "曹叡"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-02",
+      "caption": "马钧接下模型，细察关节与底座。",
+      "dialogue": [],
+      "visual": "Inside scene-02, Ma Jun alone kneels beside the low workbench, wearing his unchanged existing costume and hairstyle. The same miniature stage rests on the bench with its lower wooden cover removed and placed beside it. He gently lifts one tiny wooden dancer's articulated arm while studying the space beneath the stage. Plain hand tools lie nearby, and the raised water trough is visible in the background. Emphasize his careful observation and the visibly inert wooden toy. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "马钧"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "他改设机关，将木偶连入传动。",
+      "dialogue": [],
+      "visual": "Inside scene-02, a close view of Ma Jun's hands fitting a wooden connecting rod beneath the miniature performance stage, with his focused face visible above the work. Keep his established appearance and clothing unchanged. The opened base contains a simple illustrative arrangement of wooden shafts and linkages, with a small paddle wheel positioned beside the narrow water channel. The wheel is still dry and stationary. Tiny wooden puppet feet remain visible along the upper edge of the stage. Show one coherent physical assembly, not an exploded diagram or an instructional chart. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "马钧"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "水流一放，轮转偶动。",
+      "dialogue": [],
+      "visual": "Inside scene-02, Ma Jun alone lifts a small wooden sluice gate beside the workbench. A visible stream descends from the elevated trough onto the small paddle wheel and drains into the catch basin below. The wheel drives the connected shaft beneath the miniature stage; one tiny wooden dancer now raises both articulated arms while a balancing puppet tilts upward. Use water droplets, changed puppet poses and subtle painterly motion blur to convey movement without graphic arrows or motion symbols. Ma Jun watches closely in his unchanged existing character design. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "马钧"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-01",
+      "caption": "模型再呈殿中，百戏随水而作。",
+      "dialogue": [
+        {
+          "speaker": "曹叡",
+          "line": "竟都动起来了！"
+        }
+      ],
+      "visual": "Return to scene-01 with the completed miniature performance stage on the same low platform. A portable elevated water trough and a lower catch vessel stand beside it, with flowing water powering a partly concealed wheel beneath the platform. Toy-sized wooden dancers spread their sleeves, a tiny articulated acrobat pitches over a horizontal support, and a small wooden drummer lifts its sticks. Cao Rui leans forward slightly in delighted surprise while Ma Jun stands calmly beside the mechanism. Preserve both character designs, clothing and hairstyles. No attendants or life-size performers. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "马钧",
+        "曹叡"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-01",
+      "caption": "水藏台下，巧思显于百戏之间。",
+      "dialogue": [
+        {
+          "speaker": "马钧",
+          "line": "借流水之力，带动机关。"
+        }
+      ],
+      "visual": "Inside scene-01, Ma Jun is the only living person visible, framed beside the working miniature stage with his unchanged existing face, hairstyle and costume. He holds open a small lower access flap and indicates the water-driven wheel in the naturally visible compartment beneath the stage. Above his hand, miniature wooden dancers and the tiny acrobat continue moving in distinct articulated poses. The composition links the real flowing water below with the lively wooden performance above in one continuous physical view, without a cutaway diagram, inset or split image. End on Ma Jun's restrained satisfaction and the functioning device. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "马钧"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting. Reuse the established Ma Jun character asset without redesigning his appearance. Keep Cao Rui consistent with his supplied profile. Never change either character's face, clothing, hairstyle, accessories or weapon status between panels. Show no more than two living human characters per panel. All performers on the miniature stage must be unmistakably small carved wooden mechanical puppets with visible articulated joints, never additional human performers. Scene assets must be independent unoccupied environments without people or humanoid decorations. Use only scene-01 and scene-02. Depict water as the sole external motive power; no electricity, steam engine, modern motors, magic or self-propelling robots. Keep the illustrative mechanism simple and materially plausible rather than presenting it as an authenticated reconstruction. Render every image as one continuous composition. All narration and dialogue are external HTML overlays only; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为魏明帝所得百戏模型原不能动，马钧改设机关，以水力发动。原文“潜以水发焉”是本集核心依据。分镜中的察看、装配、试水、再呈殿中及全部对白属于串联情节的文学化扩写；作坊布局、供水槽、叶轮与连杆形制均为便于理解而作的示意性视觉设计，不宣称史料记载了这些具体结构。木偶歌舞与杂技表现为机械动作，不把模型描写成能自行发声歌唱的现代机器人。曹叡外貌与便服为统一美术设定。马钧直接复用已有角色资产，故不重造其外貌档案。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q02",
+  "episode": 3,
+  "story_bank_no": 13,
+  "_generation": {
+    "written_at": "2026-11-11T22:04:44+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 4666,
+      "completion_tokens": 3630,
+      "total_tokens": 8296,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 4663,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 225,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "95be49ace722d6167229401f8f0ecf75f4f5f0dd78414e64b047c86258dfc06f",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "id": "comic-sanguo-tales-q02-e08-tale-018",
+  "title": "梁上君子受绢",
+  "subtitle": "一句劝善，两匹绢帛，给困途之人一条归路",
+  "story_source": "《后汉书》卷六十二·荀韩钟陈列传·陈寔。原文摘录：“时岁荒民俭，有盗夜入其室，止于梁上。寔阴见，乃起自整拂，呼命子孙，正色训之曰：‘夫人不可不自勉。不善之人未必本恶，习以性成，遂至于此。梁上君子者是矣！’盗大惊，自投于地，稽颡归罪。寔徐譬之曰：‘视君状貌，不似恶人，宜深克己反善。然此当由贫困。’令遗绢二匹。”",
+  "why_not_in_romance": "通行毛本未叙陈寔发现梁上窃贼、劝诫赠绢的故事，此条取自本传。【演义归属：演义未载】本集依据《后汉书》陈寔本传改编，不以《三国演义》情节补缀。",
+  "synopsis": "荒年之夜，窃贼潜入陈寔家中，藏身屋梁。陈寔察觉后不动声色，借训诫子孙劝人自勉，点出“梁上君子”。窃贼惊惧下地叩头谢罪，陈寔温言劝其改过，又体谅其贫困，赠绢二匹。",
+  "characters": [
+    {
+      "name": "陈寔",
+      "slug": "chen-shi",
+      "existing": false,
+      "role": "东汉颍川名士，以德行教化乡里",
+      "profile": {
+        "age": "约六十五岁，故事发生年份不详，年龄为视觉设定",
+        "gender": "男",
+        "role": "东汉士人、家中长者",
+        "era": "东汉后期",
+        "face": "清瘦长方脸，额纹清晰，颧骨略高，灰白短须整齐",
+        "eyes": "深褐色眼睛，目光沉静，严正而不凌厉",
+        "skin": "暖麦色肤色，带自然老年纹理",
+        "build": "中等身量，清瘦端正，肩背略显年迈而不佝偻",
+        "hair": "灰白头发束成整齐发髻，固定覆深褐色素帻",
+        "marks": "眉间两道浅竖纹，无伤疤与刺青",
+        "outfit": "固定穿灰青色素麻交领宽袖长袍，米白内领，深褐布腰带，深灰下裳与黑褐布履；六格衣装不变",
+        "accessories": "仅有素木束发簪与布帻，无玉佩和华贵饰物",
+        "weapon": "无武器",
+        "palette": "灰青、米白、深褐、深灰、灰白",
+        "temperament": "端方沉静，明察而宽厚，劝诫时庄重，待人时温和",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "不穿帝王礼服，不披甲，不佩剑，不作仙人装束，不使用明清服饰，不改变服装与发型"
+      },
+      "pose": "Full-body standing portrait, upright elderly scholar with one hand resting near his cloth belt and the other held open in a restrained gesture of counsel, calm expression, fixed costume and hairstyle, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "东汉",
+        "陈寔",
+        "名士",
+        "宽厚",
+        "新建角色"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "梁上窃贼",
+      "slug": "liang-shang-qie-zei",
+      "existing": false,
+      "role": "荒年夜入陈寔家中的无名窃贼",
+      "profile": {
+        "age": "约三十岁，史料未载年龄，为视觉设定",
+        "gender": "男",
+        "role": "贫困中的无名窃贼",
+        "era": "东汉后期",
+        "face": "瘦削椭圆脸，双颊略凹，下颌有稀疏短须",
+        "eyes": "深褐色眼睛，初时警惕闪避，受劝后羞惭含泪",
+        "skin": "偏深麦色肤色，面颊与手背略粗糙",
+        "build": "身材偏瘦，四肢修长，动作紧缩谨慎",
+        "hair": "黑发束成低髻，固定用褪色灰褐布巾包束",
+        "marks": "右侧袖肘有一块深褐色补丁，无伤疤与刺青",
+        "outfit": "固定穿土褐色粗麻交领窄袖短袍，灰米色内领，深褐窄布腰带，灰褐长裤与磨旧草履；六格衣装不变",
+        "accessories": "仅有束发布巾与布腰带，不携赃物袋",
+        "weapon": "无武器",
+        "palette": "土褐、灰米、深褐、灰褐、麦色",
+        "temperament": "因贫困行窃，内心惶惧，受劝后羞愧悔过；不作凶恶脸谱",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "不蒙面，不穿夜行紧身衣，不戴斗笠，不持刀，不作滑稽丑角，不使用明清服饰，不改变服装与发型"
+      },
+      "pose": "Full-body standing portrait, lean impoverished man with slightly drawn-in shoulders and lowered empty hands, apprehensive but human expression, fixed patched clothing and wrapped hairstyle, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "东汉",
+        "无名人物",
+        "窃贼",
+        "改过",
+        "新建角色"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "陈宅正堂下层",
+      "description": "不含人物的东汉朴素家宅正堂。夯土墙、木柱、铺席地面与低矮木案，案旁置陶灯。上方可见粗木横梁，侧墙有便于攀附的木构节点。案侧木架上平放两匹米白素绢，无字画、匾额或印章。",
+      "prompt_extra": "Standalone empty environment concept art of the lower main hall of a modest Eastern Han household, rammed-earth walls, plain timber columns, woven floor mats, a low wooden table, a small ceramic oil lamp, exposed overhead beams and reachable wooden structural joints along the side wall, exactly two bolts of plain ivory silk on a low side shelf, restrained warm lamplight with soft cool night fill and even readable illumination, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture, no people, no silhouettes, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "夜间",
+      "mood": "清简、安静，由紧张转向温厚"
+    },
+    {
+      "id": "scene-02",
+      "name": "陈宅梁架上层",
+      "description": "不含人物的同宅屋梁上层空间。厚重横梁与榫卯木构交错，梁面宽阔可供伏身；上接暗色椽木，下方透出正堂陶灯的暖光，侧边可见相连木构节点。无独立阁楼、无现代楼梯。",
+      "prompt_extra": "Standalone empty environment concept art of the upper timber structure above the same modest Eastern Han hall, thick exposed crossbeam broad enough for a crouching adult, visible mortise-and-tenon joints, dark rafters overhead, connected wooden structural joints at the side, an open drop toward the hall below, warm oil-lamp light rising from below mixed with faint cool night light, spatially consistent with scene-01, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine aged wood texture, even readable lighting, no people, no silhouettes, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "夜间",
+      "mood": "逼仄、隐蔽、悬心"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-02",
+      "caption": "荒年夜深，窃贼潜入陈宅，藏上屋梁。",
+      "dialogue": [],
+      "visual": "One character only: Liangshang Qiezei, matching his character card exactly, crouches lengthwise on the broad timber crossbeam in scene-02, gripping the wood with empty hands and peering down toward the unseen hall floor, his patched right elbow visible, warm lamplight reaching his anxious face from below, no stolen objects and no weapons, diagonal rafters emphasize his precarious hiding place, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and wood texture, even readable lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "梁上窃贼"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "陈寔暗中看见，却不声张。",
+      "dialogue": [],
+      "visual": "Exactly two characters in scene-01: Chen Shi stands beside the low table, calmly straightening his unchanged robe while lifting his eyes toward the rafters; Liangshang Qiezei remains visibly crouched on the overhead beam in the upper background, frozen in hiding. Both match their character cards exactly. Use a low oblique view linking the scholar's restrained upward glance to the concealed intruder, no additional people, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "陈寔",
+        "梁上窃贼"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-01",
+      "caption": "他召来子孙，正色讲起为人之道。",
+      "dialogue": [
+        {
+          "speaker": "陈寔",
+          "line": "人不可不自勉。不善之人，未必本来就恶。"
+        }
+      ],
+      "visual": "One visible character only: a close portrait of Chen Shi in scene-01, matching his character card exactly, seated upright and speaking gravely toward an audience entirely outside the image, one open hand lifted in measured instruction, warm ceramic-lamp illumination across his lined face, crop tightly enough to exclude the roof beam and all listeners, no extra faces, bodies, silhouettes or reflections, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "陈寔"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-01",
+      "caption": "话锋一转，梁上的人骤然惊住。",
+      "dialogue": [
+        {
+          "speaker": "陈寔",
+          "line": "习以性成，遂至于此。梁上君子者是矣！"
+        }
+      ],
+      "visual": "Exactly two characters in scene-01: Chen Shi in the lower foreground turns his calm gaze upward and raises one open hand toward the beam, while Liangshang Qiezei above recoils in startled recognition, gripping the timber with widened eyes. Maintain both fixed character designs and costumes. Frame their faces along one rising diagonal; the implied family audience remains completely outside the image, no other people or silhouettes, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and wood texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "陈寔",
+        "梁上窃贼"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-01",
+      "caption": "窃贼慌忙下梁，伏地叩头谢罪。",
+      "dialogue": [
+        {
+          "speaker": "梁上窃贼",
+          "line": "我错了！愿听教诲，改过自新。"
+        },
+        {
+          "speaker": "陈寔",
+          "line": "看你相貌，不似恶人，当克己向善。"
+        }
+      ],
+      "visual": "Exactly two characters on the floor of scene-01: Liangshang Qiezei has descended from the beam and kneels in a deep apologetic bow with his forehead near the woven mat and empty hands placed before him; Chen Shi sits nearby with a composed compassionate expression, offering a restrained open-handed gesture of counsel without touching him. Preserve both character cards, hairstyles and clothing exactly, show no injury and no physical punishment, keep all other people outside the image, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "陈寔",
+        "梁上窃贼"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-01",
+      "caption": "陈寔体谅其贫困，赠绢二匹。",
+      "dialogue": [
+        {
+          "speaker": "陈寔",
+          "line": "想来是贫困所迫。这两匹绢，你拿去吧。"
+        },
+        {
+          "speaker": "梁上窃贼",
+          "line": "承蒙宽恕，定当记取今日教诲。"
+        }
+      ],
+      "visual": "Exactly two characters in scene-01: Chen Shi presents exactly two separate bolts of plain ivory silk, stacked horizontally, to the kneeling Liangshang Qiezei, who raises both hands to receive them with lowered eyes and a deeply ashamed, grateful expression. The low side shelf is now empty. Make the two distinct silk bolts clearly countable, center the exchange of hands and fabric, preserve both fixed character cards and outfits, no attendants or family members visible, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine woven silk texture, even gentle lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "陈寔",
+        "梁上窃贼"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture where appropriate, and even lighting. This episode is set in the late Eastern Han, before the Three Kingdoms state period; depict a modest civilian household, not an imperial palace. Only Chen Shi and Liangshang Qiezei may appear, with no more than two visible people in any panel. Preserve each character card's face, hairstyle, clothing, accessories and lack of weapons in every appearance. Family members exist only in narration and as an entirely off-image audience; never render their bodies, hands, shadows, reflections or silhouettes. The two scene assets must be standalone unoccupied environment images and spatially consistent parts of one house. Use exactly two plain ivory silk bolts in the final exchange. No calligraphy, readable scrolls, plaques, seals, logos or decorative writing anywhere. All dialogue and narration are supplied separately for HTML overlay, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为荒年夜盗藏梁、陈寔暗见、召集子孙训诫、点出梁上君子、窃贼下地叩头、劝其向善及赠绢二匹。人物年龄、容貌、衣着、宅内陈设与镜头动作属视觉补设；除保留关键原句外，对白为据原意整理的文学化表达。子孙仅由旁白交代并作为画外听众，不新增人物资产、不出现在画面中。末格将“令遗绢二匹”压缩表现为陈寔亲手递绢，不据此断言史实中的实际递送者。未增写窃贼姓名、伤人行径或后来事迹。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q02",
+  "episode": 8,
+  "story_bank_no": 18,
+  "_generation": {
+    "written_at": "2026-11-11T22:06:15+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 4650,
+      "completion_tokens": 4563,
+      "total_tokens": 9213,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 4647,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 512,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "f846ec2abeed14cbaf5cf0e85507212ed2ae9e3ac350bd6df848b3a57448d933",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

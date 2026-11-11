@@ -1,7 +1,7 @@
 {
   "id": "story-bank-01",
   "title": "三国小故事候选库",
-  "built_at": "2026-11-11T15:29:28+08:00",
+  "built_at": "2026-11-11T22:01:56+08:00",
   "constraint": "汉末三国小故事；《三国演义》写过的同样收录，按 romance_group 标注",
   "text_model": "gpt-6.1-sol",
   "sources": {
@@ -188,10 +188,10 @@
   },
   "stats": {
     "total": 87,
-    "candidate": 80,
+    "candidate": 70,
     "needs_review": 0,
-    "used": 7,
-    "grade_a": 17,
+    "used": 17,
+    "grade_a": 7,
     "grade_b": 63,
     "grade_c": 0,
     "not_in_romance": 63,
@@ -275,6 +275,56 @@
       "title": "诸葛恪得驴",
       "id": "comic-s10-zhuge-ke-adds-the-donkey",
       "source": "《三国志·吴书·诸葛恪传》裴松之注引《江表传》：恪父瑾面长似驴，孙权大会群臣，使人牵一驴入，长检其面，题曰『诸葛子瑜』；恪跪曰『乞请笔益两字』，因听与笔，恪续其下曰『之驴』，举坐欢笑，乃以驴赐恪。"
+    },
+    {
+      "title": "伊籍使吴",
+      "id": "comic-sanguo-tales-q01-e01-tale-001",
+      "source": "《三国志·蜀书·伊籍传》。原文摘录：“籍适入拜，权曰：‘劳事无道之君乎？’籍应声对曰：‘一拜一起，未足为劳。’”传文记孙权闻伊籍才辩，欲当面折其锋，最后却对他的机捷甚为惊异。"
+    },
+    {
+      "title": "元龙百尺楼",
+      "id": "comic-sanguo-tales-q01-e02-tale-002",
+      "source": "《三国志·魏书·吕布张邈臧洪传》载：许汜与刘备共在荆州牧刘表坐，论及陈登。许汜说陈登“无客主之意”，又说：“久不相与语，自上大床卧，使客卧下床。”刘备责其只知求田问舍，随后说：“如小人，欲卧百尺楼上，卧君于地，何但上下床之间邪？”"
+    },
+    {
+      "title": "刘巴不与张飞共宿",
+      "id": "comic-sanguo-tales-q01-e03-tale-003",
+      "source": "《三国志·蜀书·刘巴传》裴松之注引《零陵先贤传》：“张飞尝就巴宿，巴不与语，飞遂忿恚。诸葛亮谓巴曰：‘张飞虽实武人，敬慕足下。主公今方收合文武，以定大事；足下虽天素高亮，宜少降意也。’巴曰：‘大丈夫处世，当交四海英雄，如何与兵子共语乎？’”"
+    },
+    {
+      "title": "士别三日",
+      "id": "comic-sanguo-tales-q01-e04-tale-004",
+      "source": "《三国志·吴书·吕蒙传》裴松之注引《江表传》。原文摘录：“肃拊蒙背曰：‘吾谓大弟但有武略耳，至于今者，学识英博，非复吴下阿蒙。’蒙曰：‘士别三日，即更刮目相待。’”故事前因是孙权劝吕蒙读书，吕蒙起初以军务繁多推辞，后来笃志学习。"
+    },
+    {
+      "title": "孙权庱亭射虎",
+      "id": "comic-sanguo-tales-q01-e05-tale-005",
+      "source": "《三国志·吴主传》：权亲乘马射虎于庱亭，马为虎所伤，权投以双戟，虎却废。"
+    },
+    {
+      "title": "床头捉刀人",
+      "id": "comic-sanguo-tales-q01-e06-tale-006",
+      "source": "《世说新语·容止》：魏武将见匈奴使，自以形陋，不足雄远国，使崔季珪代，帝自捉刀立床头。既毕，令间谍问曰：“魏王何如？”匈奴使答曰：“魏王雅望非常，然床头捉刀人，此乃英雄也。”魏武闻之，追杀此使。"
+    },
+    {
+      "title": "文姬归汉",
+      "id": "comic-sanguo-tales-q01-e07-tale-007",
+      "source": "《后汉书·列女传·董祀妻》：操素与邕善，痛其无嗣，乃遣使者以金璧赎之，而重嫁于祀。传中又载：后感伤乱离，追怀悲愤，作诗二章。"
+    },
+    {
+      "title": "曲有误周郎顾",
+      "id": "comic-sanguo-tales-q01-e08-tale-008",
+      "source": "《三国志·吴书·周瑜传》：“瑜少精意于音乐，虽三爵之后，其有阙误，瑜必知之，知之必顾。故时人谣曰：‘曲有误，周郎顾。’”"
+    },
+    {
+      "title": "曹冲称象",
+      "id": "comic-sanguo-tales-q01-e09-tale-009",
+      "source": "《三国志·魏书·邓哀王冲传》记曹冲幼时聪察，孙权曾致巨象，曹操欲知其重量，群下未能得法。曹冲曰：『置象大船之上，而刻其水痕所至，称物以载之，则校可知矣。』太祖大悦，即施行焉。"
+    },
+    {
+      "title": "望梅止渴",
+      "id": "comic-sanguo-tales-q01-e10-tale-010",
+      "source": "《世说新语·假谲》。原文摘录：魏武行役，失汲道，军皆渴，乃令曰：“前有大梅林，饶子，甘酸可以解渴。”后文记士卒闻言生津，借此继续前行，终于抵达水源。"
     }
   ],
   "duplicates_dropped": [
@@ -285,350 +335,6 @@
     }
   ],
   "stories": [
-    {
-      "title": "伊籍使吴",
-      "source": "《三国志·蜀书·伊籍传》",
-      "quote": "籍应声对曰：“一拜一起，未足为劳。”",
-      "synopsis": "孙权问『劳事无道之君乎』，籍答『一拜一起，未足为劳』。",
-      "characters": [
-        "伊籍",
-        "孙权"
-      ],
-      "region": "蜀",
-      "mood": "机智",
-      "romance_check": "not_in_romance",
-      "romance_note": "演义有伊籍而未写『一拜一起，未足为劳』的应对。",
-      "visual_hook": "拜起之间从容答『未足为劳』",
-      "confidence": "high",
-      "origin": "curated",
-      "batch": "curated",
-      "reviewed": true,
-      "quote_status": "attested",
-      "verification": "补出伊籍应答的原文，并区分伊籍使吴与演义所写赵咨使魏两事。",
-      "verdict_source": "manual",
-      "romance_group": "演义未载",
-      "data_complete": true,
-      "status": "candidate",
-      "grade": "A",
-      "no": 1,
-      "id": "tale-001",
-      "toc_hits": [
-        "第四十四回",
-        "第六十一回",
-        "第八十二回"
-      ]
-    },
-    {
-      "title": "元龙百尺楼",
-      "source": "《三国志·魏书·吕布张邈臧洪传》",
-      "quote": "如小人，欲卧百尺楼上，卧君于地，何但上下床之间邪？",
-      "synopsis": "许汜论陈登无客主之礼，备曰『欲卧百尺楼上，卧君于地』。",
-      "characters": [
-        "刘备",
-        "许汜",
-        "陈登"
-      ],
-      "region": "魏",
-      "mood": "诙谐",
-      "romance_check": "not_in_romance",
-      "romance_note": "演义写陈登助曹操破吕布，未写刘备『欲卧百尺楼上』之评。",
-      "visual_hook": "百尺楼上卧客，客卧于地",
-      "confidence": "high",
-      "origin": "curated",
-      "batch": "curated",
-      "reviewed": true,
-      "quote_status": "attested",
-      "verification": "纠正《三国志》没有独立《陈登传》的出处问题，并补出附见于吕布传中的刘备原话。",
-      "verdict_source": "manual",
-      "romance_group": "演义未载",
-      "data_complete": true,
-      "status": "candidate",
-      "grade": "A",
-      "no": 2,
-      "id": "tale-002",
-      "toc_hits": [
-        "第六十五回"
-      ]
-    },
-    {
-      "title": "刘巴不与张飞共宿",
-      "source": "《三国志·蜀书·刘巴传》裴注引《零陵先贤传》",
-      "quote": "张飞尝就巴宿，巴不与语，飞遂忿恚。",
-      "synopsis": "巴不与武人共语，诸葛亮为解。",
-      "characters": [
-        "刘巴",
-        "张飞",
-        "诸葛亮"
-      ],
-      "region": "蜀",
-      "mood": "诙谐",
-      "romance_check": "not_in_romance",
-      "romance_note": "演义未写刘巴轻武人、诸葛亮为其排解一事。",
-      "visual_hook": "同榻不语，一纸书信解围",
-      "confidence": "high",
-      "origin": "curated",
-      "batch": "curated",
-      "reviewed": true,
-      "quote_status": "attested",
-      "verification": "补出裴注所引原文，并指出标题中的“不与共宿”与原文“不与语”并不等同。",
-      "verdict_source": "manual",
-      "romance_group": "演义未载",
-      "data_complete": true,
-      "status": "candidate",
-      "grade": "A",
-      "no": 3,
-      "id": "tale-003",
-      "toc_hits": [
-        "第四十回",
-        "第四十三回",
-        "第五十回",
-        "第五十二回",
-        "第六十三回",
-        "第七十回"
-      ]
-    },
-    {
-      "title": "士别三日",
-      "source": "《三国志·吴书·吕蒙传》裴注引《江表传》",
-      "quote": "士别三日，即更刮目相待。",
-      "synopsis": "权劝蒙学，鲁肃叹『非复吴下阿蒙』。",
-      "characters": [
-        "吕蒙",
-        "孙权",
-        "鲁肃"
-      ],
-      "region": "吴",
-      "mood": "考据",
-      "romance_check": "uncertain",
-      "romance_note": "孙权劝学见《三国志·吴书·吕蒙传》裴注引《江表传》与《资治通鉴》；演义是否正面叙写待复核。",
-      "visual_hook": "鲁肃过寻阳与吕蒙论议惊叹",
-      "confidence": "medium",
-      "origin": "curated",
-      "batch": "curated",
-      "reviewed": true,
-      "quote_status": "attested",
-      "verification": "补出《江表传》所载吕蒙答鲁肃的原话，保留演义归属未定的判断。",
-      "verdict_source": "manual",
-      "romance_group": "演义归属待考",
-      "data_complete": true,
-      "status": "candidate",
-      "grade": "A",
-      "no": 4,
-      "id": "tale-004",
-      "toc_hits": [
-        "第四十四回",
-        "第五十二回",
-        "第六十一回",
-        "第八十二回"
-      ]
-    },
-    {
-      "title": "孙权庱亭射虎",
-      "source": "《三国志·吴主传》",
-      "quote": "权亲乘马射虎于庱亭，马为虎所伤，权投以双戟，虎却废。",
-      "synopsis": "权亲乘马射虎，马为虎伤，投双戟却之。",
-      "characters": [
-        "孙权"
-      ],
-      "region": "吴",
-      "mood": "勇毅",
-      "romance_check": "not_in_romance",
-      "romance_note": "演义未写孙权亲射虎、投双戟却虎之事。",
-      "visual_hook": "虎伤其马，孙权投双戟退虎",
-      "confidence": "high",
-      "origin": "curated",
-      "batch": "curated",
-      "reviewed": true,
-      "quote_status": "attested",
-      "verification": "补出庱亭射虎原文，并将演义归属由未载改为第六十一回已写。",
-      "verdict_source": "manual",
-      "romance_group": "演义未载",
-      "data_complete": true,
-      "status": "candidate",
-      "grade": "A",
-      "no": 5,
-      "id": "tale-005",
-      "toc_hits": [
-        "第四十四回",
-        "第六十一回",
-        "第八十二回"
-      ]
-    },
-    {
-      "title": "床头捉刀人",
-      "source": "《世说新语·容止》",
-      "quote": "魏王雅望非常，然床头捉刀人，此乃英雄也。",
-      "synopsis": "崔琰代曹操见匈奴使，魏武追杀此使。",
-      "characters": [
-        "曹操",
-        "崔琰",
-        "匈奴使者"
-      ],
-      "region": "魏",
-      "mood": "机智",
-      "romance_check": "not_in_romance",
-      "romance_note": "演义写匈奴使者来朝未用此《世说新语·容止》轶事。",
-      "visual_hook": "床侧捉刀立者与案前代坐者",
-      "confidence": "high",
-      "origin": "curated",
-      "batch": "curated",
-      "reviewed": true,
-      "quote_status": "attested",
-      "verification": "补出匈奴使者评论捉刀人的原话，保留其属于《世说新语》轶事而非演义情节的判定。",
-      "verdict_source": "manual",
-      "romance_group": "演义未载",
-      "data_complete": true,
-      "status": "candidate",
-      "grade": "A",
-      "no": 6,
-      "id": "tale-006",
-      "toc_hits": [
-        "第十回",
-        "第十一回",
-        "第十九回",
-        "第二十一回",
-        "第二十五回",
-        "第三十一回"
-      ]
-    },
-    {
-      "title": "文姬归汉",
-      "source": "《后汉书·列女传·董祀妻》",
-      "quote": "操素与邕善，痛其无嗣，乃遣使者以金璧赎之，而重嫁于祀。",
-      "synopsis": "曹操以金璧赎蔡琰归，琰作《悲愤诗》。",
-      "characters": [
-        "蔡琰",
-        "曹操"
-      ],
-      "region": "汉末",
-      "mood": "悲悯",
-      "romance_check": "not_in_romance",
-      "romance_note": "演义第九回写蔡邕哭董卓，未写曹操以金璧赎蔡琰归汉。",
-      "visual_hook": "金璧赎归，车卷与诗简",
-      "confidence": "high",
-      "origin": "curated",
-      "batch": "curated",
-      "reviewed": true,
-      "quote_status": "attested",
-      "verification": "补出《后汉书》赎归原文，并将演义归属改为第七十一回叙述者追叙提及。",
-      "verdict_source": "manual",
-      "romance_group": "演义未载",
-      "data_complete": true,
-      "status": "candidate",
-      "grade": "A",
-      "no": 7,
-      "id": "tale-007",
-      "toc_hits": [
-        "第十回",
-        "第十一回",
-        "第十九回",
-        "第二十一回",
-        "第二十五回",
-        "第三十一回"
-      ]
-    },
-    {
-      "title": "曲有误周郎顾",
-      "source": "《三国志·吴书·周瑜传》",
-      "quote": "故时人谣曰：“曲有误，周郎顾。”",
-      "synopsis": "瑜少精意于音乐，虽三爵之后，其有阙误必知之。",
-      "characters": [
-        "周瑜"
-      ],
-      "region": "吴",
-      "mood": "巧艺",
-      "romance_check": "not_in_romance",
-      "romance_note": "演义写周瑜而未及其醉后听曲必顾的细节。",
-      "visual_hook": "三爵之后闻曲误而回顾",
-      "confidence": "medium",
-      "origin": "curated",
-      "batch": "curated",
-      "reviewed": true,
-      "quote_status": "attested",
-      "verification": "确认史料出处并补入传中歌谣；演义是否引用或追述本事尚不能确证，撤回原先确定的未载判断。",
-      "verdict_source": "manual",
-      "romance_group": "演义未载",
-      "data_complete": true,
-      "status": "candidate",
-      "grade": "A",
-      "no": 8,
-      "id": "tale-008",
-      "toc_hits": [
-        "第四十四回",
-        "第四十九回"
-      ]
-    },
-    {
-      "title": "曹冲称象",
-      "source": "《三国志·魏书·邓哀王冲传》",
-      "quote": "置象大船之上，而刻其水痕所至，称物以载之，则校可知矣。",
-      "synopsis": "置象大船之上，刻其水痕，称物以载之。",
-      "characters": [
-        "曹冲",
-        "曹操"
-      ],
-      "region": "魏",
-      "mood": "机智",
-      "romance_check": "not_in_romance",
-      "romance_note": "演义未写曹冲称象；同传『鼠啮马鞍』亦未写，已拍成单集。",
-      "visual_hook": "大船刻水痕，换装货物到同一刻线",
-      "confidence": "high",
-      "origin": "curated",
-      "batch": "curated",
-      "reviewed": true,
-      "quote_status": "attested",
-      "verification": "补入曹冲所陈称象方法的原文，保留演义未载的判断，删除无关的改编信息。",
-      "verdict_source": "manual",
-      "romance_group": "演义未载",
-      "data_complete": true,
-      "status": "candidate",
-      "grade": "A",
-      "no": 9,
-      "id": "tale-009",
-      "toc_hits": [
-        "第十回",
-        "第十一回",
-        "第十九回",
-        "第二十一回",
-        "第二十五回",
-        "第三十一回"
-      ]
-    },
-    {
-      "title": "望梅止渴",
-      "source": "《世说新语·假谲》",
-      "quote": "魏武行役，失汲道，军皆渴，乃令曰：“前有大梅林，饶子，甘酸可以解渴。”",
-      "synopsis": "魏武行役失汲道，乃令曰『前有大梅林，饶子，甘酸可以解渴』。",
-      "characters": [
-        "曹操"
-      ],
-      "region": "魏",
-      "mood": "机智",
-      "romance_check": "in_romance",
-      "romance_note": "第二十一回「曹操煮酒论英雄」中曹操亲口追述征张绣时『以鞭虚指曰：前面有梅林』。",
-      "visual_hook": "以鞭虚指前方梅林，士卒口生唾",
-      "confidence": "high",
-      "origin": "curated",
-      "batch": "curated",
-      "reviewed": true,
-      "quote_status": "attested",
-      "verification": "补入《世说新语》原文，并按演义中由曹操亲口追述的呈现方式，将归属细分为 mentioned。",
-      "verdict_source": "manual",
-      "romance_group": "演义亦载",
-      "data_complete": true,
-      "status": "candidate",
-      "grade": "A",
-      "no": 10,
-      "id": "tale-010",
-      "toc_hits": [
-        "第十回",
-        "第十一回",
-        "第十九回",
-        "第二十一回",
-        "第二十五回",
-        "第三十一回"
-      ]
-    },
     {
       "title": "枣祗建屯田",
       "source": "《三国志·武帝纪》裴注引《魏武故事》",
@@ -654,8 +360,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "A",
-      "no": 11,
-      "id": "tale-011",
+      "no": 1,
+      "id": "tale-001",
       "toc_hits": [
         "第十回",
         "第十一回",
@@ -690,8 +396,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "A",
-      "no": 12,
-      "id": "tale-012",
+      "no": 2,
+      "id": "tale-002",
       "toc_hits": [
         "第八十六回"
       ]
@@ -721,8 +427,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "A",
-      "no": 13,
-      "id": "tale-013",
+      "no": 3,
+      "id": "tale-003",
       "toc_hits": [
         "第六十五回"
       ]
@@ -752,8 +458,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "A",
-      "no": 14,
-      "id": "tale-014",
+      "no": 4,
+      "id": "tale-004",
       "toc_hits": []
     },
     {
@@ -780,8 +486,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "A",
-      "no": 15,
-      "id": "tale-015",
+      "no": 5,
+      "id": "tale-005",
       "toc_hits": []
     },
     {
@@ -809,8 +515,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "A",
-      "no": 16,
-      "id": "tale-016",
+      "no": 6,
+      "id": "tale-006",
       "toc_hits": [
         "第十回",
         "第十一回",
@@ -845,8 +551,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "A",
-      "no": 17,
-      "id": "tale-017",
+      "no": 7,
+      "id": "tale-007",
       "toc_hits": []
     },
     {
@@ -874,8 +580,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 18,
-      "id": "tale-018",
+      "no": 8,
+      "id": "tale-008",
       "toc_hits": []
     },
     {
@@ -902,8 +608,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 19,
-      "id": "tale-019",
+      "no": 9,
+      "id": "tale-009",
       "toc_hits": []
     },
     {
@@ -929,8 +635,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 20,
-      "id": "tale-020",
+      "no": 10,
+      "id": "tale-010",
       "toc_hits": []
     },
     {
@@ -958,8 +664,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 21,
-      "id": "tale-021",
+      "no": 11,
+      "id": "tale-011",
       "toc_hits": [
         "第十回",
         "第十一回",
@@ -992,8 +698,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 22,
-      "id": "tale-022",
+      "no": 12,
+      "id": "tale-012",
       "toc_hits": []
     },
     {
@@ -1020,8 +726,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 23,
-      "id": "tale-023",
+      "no": 13,
+      "id": "tale-013",
       "toc_hits": []
     },
     {
@@ -1048,8 +754,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 24,
-      "id": "tale-024",
+      "no": 14,
+      "id": "tale-014",
       "toc_hits": []
     },
     {
@@ -1077,8 +783,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 25,
-      "id": "tale-025",
+      "no": 15,
+      "id": "tale-015",
       "toc_hits": []
     },
     {
@@ -1105,8 +811,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 26,
-      "id": "tale-026",
+      "no": 16,
+      "id": "tale-016",
       "toc_hits": []
     },
     {
@@ -1134,8 +840,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 27,
-      "id": "tale-027",
+      "no": 17,
+      "id": "tale-017",
       "toc_hits": []
     },
     {
@@ -1161,8 +867,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 28,
-      "id": "tale-028",
+      "no": 18,
+      "id": "tale-018",
       "toc_hits": []
     },
     {
@@ -1188,8 +894,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 29,
-      "id": "tale-029",
+      "no": 19,
+      "id": "tale-019",
       "toc_hits": []
     },
     {
@@ -1215,8 +921,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 30,
-      "id": "tale-030",
+      "no": 20,
+      "id": "tale-020",
       "toc_hits": []
     },
     {
@@ -1243,8 +949,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 31,
-      "id": "tale-031",
+      "no": 21,
+      "id": "tale-021",
       "toc_hits": []
     },
     {
@@ -1270,8 +976,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 32,
-      "id": "tale-032",
+      "no": 22,
+      "id": "tale-022",
       "toc_hits": []
     },
     {
@@ -1297,8 +1003,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 33,
-      "id": "tale-033",
+      "no": 23,
+      "id": "tale-023",
       "toc_hits": []
     },
     {
@@ -1325,8 +1031,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 34,
-      "id": "tale-034",
+      "no": 24,
+      "id": "tale-024",
       "toc_hits": [
         "第九十三回"
       ]
@@ -1355,8 +1061,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 35,
-      "id": "tale-035",
+      "no": 25,
+      "id": "tale-025",
       "toc_hits": [
         "第六十三回",
         "第七十回",
@@ -1388,8 +1094,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 36,
-      "id": "tale-036",
+      "no": 26,
+      "id": "tale-026",
       "toc_hits": []
     },
     {
@@ -1415,8 +1121,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 37,
-      "id": "tale-037",
+      "no": 27,
+      "id": "tale-027",
       "toc_hits": []
     },
     {
@@ -1443,8 +1149,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 38,
-      "id": "tale-038",
+      "no": 28,
+      "id": "tale-028",
       "toc_hits": []
     },
     {
@@ -1472,8 +1178,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 39,
-      "id": "tale-039",
+      "no": 29,
+      "id": "tale-029",
       "toc_hits": [
         "第十回",
         "第十一回",
@@ -1508,8 +1214,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 40,
-      "id": "tale-040",
+      "no": 30,
+      "id": "tale-030",
       "toc_hits": [
         "第三十三回",
         "第四十四回",
@@ -1543,8 +1249,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 41,
-      "id": "tale-041",
+      "no": 31,
+      "id": "tale-031",
       "toc_hits": []
     },
     {
@@ -1572,8 +1278,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 42,
-      "id": "tale-042",
+      "no": 32,
+      "id": "tale-032",
       "toc_hits": [
         "第十回",
         "第十一回",
@@ -1608,8 +1314,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 43,
-      "id": "tale-043",
+      "no": 33,
+      "id": "tale-033",
       "toc_hits": [
         "第十一回",
         "第十五回",
@@ -1642,8 +1348,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 44,
-      "id": "tale-044",
+      "no": 34,
+      "id": "tale-034",
       "toc_hits": [
         "第五十九回",
         "第六十四回",
@@ -1674,8 +1380,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 45,
-      "id": "tale-045",
+      "no": 35,
+      "id": "tale-035",
       "toc_hits": [
         "第十一回"
       ]
@@ -1706,8 +1412,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 46,
-      "id": "tale-046",
+      "no": 36,
+      "id": "tale-036",
       "toc_hits": []
     },
     {
@@ -1735,8 +1441,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 47,
-      "id": "tale-047",
+      "no": 37,
+      "id": "tale-037",
       "toc_hits": [
         "第四十七回",
         "第六十三回",
@@ -1768,8 +1474,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 48,
-      "id": "tale-048",
+      "no": 38,
+      "id": "tale-038",
       "toc_hits": [
         "第十回",
         "第十一回",
@@ -1802,8 +1508,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 49,
-      "id": "tale-049",
+      "no": 39,
+      "id": "tale-039",
       "toc_hits": [
         "第五十九回"
       ]
@@ -1832,8 +1538,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 50,
-      "id": "tale-050",
+      "no": 40,
+      "id": "tale-040",
       "toc_hits": []
     },
     {
@@ -1860,8 +1566,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 51,
-      "id": "tale-051",
+      "no": 41,
+      "id": "tale-041",
       "toc_hits": []
     },
     {
@@ -1888,8 +1594,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 52,
-      "id": "tale-052",
+      "no": 42,
+      "id": "tale-042",
       "toc_hits": [
         "第九十三回"
       ]
@@ -1919,8 +1625,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 53,
-      "id": "tale-053",
+      "no": 43,
+      "id": "tale-043",
       "toc_hits": [
         "第十一回"
       ]
@@ -1948,8 +1654,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 54,
-      "id": "tale-054",
+      "no": 44,
+      "id": "tale-044",
       "toc_hits": []
     },
     {
@@ -1976,8 +1682,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 55,
-      "id": "tale-055",
+      "no": 45,
+      "id": "tale-045",
       "toc_hits": []
     },
     {
@@ -2006,8 +1712,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 56,
-      "id": "tale-056",
+      "no": 46,
+      "id": "tale-046",
       "toc_hits": [
         "第三十三回",
         "第八十回",
@@ -2039,8 +1745,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 57,
-      "id": "tale-057",
+      "no": 47,
+      "id": "tale-047",
       "toc_hits": []
     },
     {
@@ -2066,8 +1772,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 58,
-      "id": "tale-058",
+      "no": 48,
+      "id": "tale-048",
       "toc_hits": []
     },
     {
@@ -2095,8 +1801,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 59,
-      "id": "tale-059",
+      "no": 49,
+      "id": "tale-049",
       "toc_hits": [
         "第四十四回",
         "第六十一回",
@@ -2126,8 +1832,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 60,
-      "id": "tale-060",
+      "no": 50,
+      "id": "tale-050",
       "toc_hits": []
     },
     {
@@ -2155,8 +1861,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 61,
-      "id": "tale-061",
+      "no": 51,
+      "id": "tale-051",
       "toc_hits": [
         "第六十五回"
       ]
@@ -2184,8 +1890,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 62,
-      "id": "tale-062",
+      "no": 52,
+      "id": "tale-052",
       "toc_hits": []
     },
     {
@@ -2214,8 +1920,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 63,
-      "id": "tale-063",
+      "no": 53,
+      "id": "tale-053",
       "toc_hits": []
     },
     {
@@ -2241,8 +1947,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 64,
-      "id": "tale-064",
+      "no": 54,
+      "id": "tale-054",
       "toc_hits": []
     },
     {
@@ -2269,8 +1975,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 65,
-      "id": "tale-065",
+      "no": 55,
+      "id": "tale-055",
       "toc_hits": []
     },
     {
@@ -2297,8 +2003,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 66,
-      "id": "tale-066",
+      "no": 56,
+      "id": "tale-056",
       "toc_hits": [
         "第十回",
         "第十一回",
@@ -2334,8 +2040,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 67,
-      "id": "tale-067",
+      "no": 57,
+      "id": "tale-057",
       "toc_hits": [
         "第十回",
         "第十一回",
@@ -2369,8 +2075,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 68,
-      "id": "tale-068",
+      "no": 58,
+      "id": "tale-058",
       "toc_hits": []
     },
     {
@@ -2397,8 +2103,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 69,
-      "id": "tale-069",
+      "no": 59,
+      "id": "tale-059",
       "toc_hits": []
     },
     {
@@ -2425,8 +2131,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 70,
-      "id": "tale-070",
+      "no": 60,
+      "id": "tale-060",
       "toc_hits": []
     },
     {
@@ -2452,8 +2158,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 71,
-      "id": "tale-071",
+      "no": 61,
+      "id": "tale-061",
       "toc_hits": []
     },
     {
@@ -2479,8 +2185,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 72,
-      "id": "tale-072",
+      "no": 62,
+      "id": "tale-062",
       "toc_hits": []
     },
     {
@@ -2506,8 +2212,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 73,
-      "id": "tale-073",
+      "no": 63,
+      "id": "tale-063",
       "toc_hits": [
         "第一百零八回",
         "第一百一十三回"
@@ -2537,8 +2243,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 74,
-      "id": "tale-074",
+      "no": 64,
+      "id": "tale-064",
       "toc_hits": [
         "第四十四回",
         "第六十一回",
@@ -2569,8 +2275,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 75,
-      "id": "tale-075",
+      "no": 65,
+      "id": "tale-065",
       "toc_hits": []
     },
     {
@@ -2598,8 +2304,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 76,
-      "id": "tale-076",
+      "no": 66,
+      "id": "tale-066",
       "toc_hits": [
         "第四十四回",
         "第六十一回",
@@ -2630,8 +2336,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 77,
-      "id": "tale-077",
+      "no": 67,
+      "id": "tale-067",
       "toc_hits": []
     },
     {
@@ -2661,8 +2367,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 78,
-      "id": "tale-078",
+      "no": 68,
+      "id": "tale-068",
       "toc_hits": []
     },
     {
@@ -2689,8 +2395,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 79,
-      "id": "tale-079",
+      "no": 69,
+      "id": "tale-069",
       "toc_hits": [
         "第四十四回",
         "第六十一回",
@@ -2722,9 +2428,363 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
+      "no": 70,
+      "id": "tale-070",
+      "toc_hits": []
+    },
+    {
+      "title": "伊籍使吴",
+      "source": "《三国志·蜀书·伊籍传》",
+      "quote": "籍应声对曰：“一拜一起，未足为劳。”",
+      "synopsis": "孙权问『劳事无道之君乎』，籍答『一拜一起，未足为劳』。",
+      "characters": [
+        "伊籍",
+        "孙权"
+      ],
+      "region": "蜀",
+      "mood": "机智",
+      "romance_check": "not_in_romance",
+      "romance_note": "演义有伊籍而未写『一拜一起，未足为劳』的应对。",
+      "visual_hook": "拜起之间从容答『未足为劳』",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "reviewed": true,
+      "quote_status": "attested",
+      "verification": "补出伊籍应答的原文，并区分伊籍使吴与演义所写赵咨使魏两事。",
+      "verdict_source": "manual",
+      "romance_group": "演义未载",
+      "data_complete": true,
+      "status": "used",
+      "used_as": "伊籍使吴",
+      "grade": "U",
+      "no": 71,
+      "id": "tale-071",
+      "toc_hits": [
+        "第四十四回",
+        "第六十一回",
+        "第八十二回"
+      ]
+    },
+    {
+      "title": "元龙百尺楼",
+      "source": "《三国志·魏书·吕布张邈臧洪传》",
+      "quote": "如小人，欲卧百尺楼上，卧君于地，何但上下床之间邪？",
+      "synopsis": "许汜论陈登无客主之礼，备曰『欲卧百尺楼上，卧君于地』。",
+      "characters": [
+        "刘备",
+        "许汜",
+        "陈登"
+      ],
+      "region": "魏",
+      "mood": "诙谐",
+      "romance_check": "not_in_romance",
+      "romance_note": "演义写陈登助曹操破吕布，未写刘备『欲卧百尺楼上』之评。",
+      "visual_hook": "百尺楼上卧客，客卧于地",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "reviewed": true,
+      "quote_status": "attested",
+      "verification": "纠正《三国志》没有独立《陈登传》的出处问题，并补出附见于吕布传中的刘备原话。",
+      "verdict_source": "manual",
+      "romance_group": "演义未载",
+      "data_complete": true,
+      "status": "used",
+      "used_as": "元龙百尺楼",
+      "grade": "U",
+      "no": 72,
+      "id": "tale-072",
+      "toc_hits": [
+        "第六十五回"
+      ]
+    },
+    {
+      "title": "刘巴不与张飞共宿",
+      "source": "《三国志·蜀书·刘巴传》裴注引《零陵先贤传》",
+      "quote": "张飞尝就巴宿，巴不与语，飞遂忿恚。",
+      "synopsis": "巴不与武人共语，诸葛亮为解。",
+      "characters": [
+        "刘巴",
+        "张飞",
+        "诸葛亮"
+      ],
+      "region": "蜀",
+      "mood": "诙谐",
+      "romance_check": "not_in_romance",
+      "romance_note": "演义未写刘巴轻武人、诸葛亮为其排解一事。",
+      "visual_hook": "同榻不语，一纸书信解围",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "reviewed": true,
+      "quote_status": "attested",
+      "verification": "补出裴注所引原文，并指出标题中的“不与共宿”与原文“不与语”并不等同。",
+      "verdict_source": "manual",
+      "romance_group": "演义未载",
+      "data_complete": true,
+      "status": "used",
+      "used_as": "刘巴不与张飞共宿",
+      "grade": "U",
+      "no": 73,
+      "id": "tale-073",
+      "toc_hits": [
+        "第四十回",
+        "第四十三回",
+        "第五十回",
+        "第五十二回",
+        "第六十三回",
+        "第七十回"
+      ]
+    },
+    {
+      "title": "士别三日",
+      "source": "《三国志·吴书·吕蒙传》裴注引《江表传》",
+      "quote": "士别三日，即更刮目相待。",
+      "synopsis": "权劝蒙学，鲁肃叹『非复吴下阿蒙』。",
+      "characters": [
+        "吕蒙",
+        "孙权",
+        "鲁肃"
+      ],
+      "region": "吴",
+      "mood": "考据",
+      "romance_check": "uncertain",
+      "romance_note": "孙权劝学见《三国志·吴书·吕蒙传》裴注引《江表传》与《资治通鉴》；演义是否正面叙写待复核。",
+      "visual_hook": "鲁肃过寻阳与吕蒙论议惊叹",
+      "confidence": "medium",
+      "origin": "curated",
+      "batch": "curated",
+      "reviewed": true,
+      "quote_status": "attested",
+      "verification": "补出《江表传》所载吕蒙答鲁肃的原话，保留演义归属未定的判断。",
+      "verdict_source": "manual",
+      "romance_group": "演义归属待考",
+      "data_complete": true,
+      "status": "used",
+      "used_as": "士别三日",
+      "grade": "U",
+      "no": 74,
+      "id": "tale-074",
+      "toc_hits": [
+        "第四十四回",
+        "第五十二回",
+        "第六十一回",
+        "第八十二回"
+      ]
+    },
+    {
+      "title": "孙权庱亭射虎",
+      "source": "《三国志·吴主传》",
+      "quote": "权亲乘马射虎于庱亭，马为虎所伤，权投以双戟，虎却废。",
+      "synopsis": "权亲乘马射虎，马为虎伤，投双戟却之。",
+      "characters": [
+        "孙权"
+      ],
+      "region": "吴",
+      "mood": "勇毅",
+      "romance_check": "not_in_romance",
+      "romance_note": "演义未写孙权亲射虎、投双戟却虎之事。",
+      "visual_hook": "虎伤其马，孙权投双戟退虎",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "reviewed": true,
+      "quote_status": "attested",
+      "verification": "补出庱亭射虎原文，并将演义归属由未载改为第六十一回已写。",
+      "verdict_source": "manual",
+      "romance_group": "演义未载",
+      "data_complete": true,
+      "status": "used",
+      "used_as": "孙权庱亭射虎",
+      "grade": "U",
+      "no": 75,
+      "id": "tale-075",
+      "toc_hits": [
+        "第四十四回",
+        "第六十一回",
+        "第八十二回"
+      ]
+    },
+    {
+      "title": "床头捉刀人",
+      "source": "《世说新语·容止》",
+      "quote": "魏王雅望非常，然床头捉刀人，此乃英雄也。",
+      "synopsis": "崔琰代曹操见匈奴使，魏武追杀此使。",
+      "characters": [
+        "曹操",
+        "崔琰",
+        "匈奴使者"
+      ],
+      "region": "魏",
+      "mood": "机智",
+      "romance_check": "not_in_romance",
+      "romance_note": "演义写匈奴使者来朝未用此《世说新语·容止》轶事。",
+      "visual_hook": "床侧捉刀立者与案前代坐者",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "reviewed": true,
+      "quote_status": "attested",
+      "verification": "补出匈奴使者评论捉刀人的原话，保留其属于《世说新语》轶事而非演义情节的判定。",
+      "verdict_source": "manual",
+      "romance_group": "演义未载",
+      "data_complete": true,
+      "status": "used",
+      "used_as": "床头捉刀人",
+      "grade": "U",
+      "no": 76,
+      "id": "tale-076",
+      "toc_hits": [
+        "第十回",
+        "第十一回",
+        "第十九回",
+        "第二十一回",
+        "第二十五回",
+        "第三十一回"
+      ]
+    },
+    {
+      "title": "文姬归汉",
+      "source": "《后汉书·列女传·董祀妻》",
+      "quote": "操素与邕善，痛其无嗣，乃遣使者以金璧赎之，而重嫁于祀。",
+      "synopsis": "曹操以金璧赎蔡琰归，琰作《悲愤诗》。",
+      "characters": [
+        "蔡琰",
+        "曹操"
+      ],
+      "region": "汉末",
+      "mood": "悲悯",
+      "romance_check": "not_in_romance",
+      "romance_note": "演义第九回写蔡邕哭董卓，未写曹操以金璧赎蔡琰归汉。",
+      "visual_hook": "金璧赎归，车卷与诗简",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "reviewed": true,
+      "quote_status": "attested",
+      "verification": "补出《后汉书》赎归原文，并将演义归属改为第七十一回叙述者追叙提及。",
+      "verdict_source": "manual",
+      "romance_group": "演义未载",
+      "data_complete": true,
+      "status": "used",
+      "used_as": "文姬归汉",
+      "grade": "U",
+      "no": 77,
+      "id": "tale-077",
+      "toc_hits": [
+        "第十回",
+        "第十一回",
+        "第十九回",
+        "第二十一回",
+        "第二十五回",
+        "第三十一回"
+      ]
+    },
+    {
+      "title": "曲有误周郎顾",
+      "source": "《三国志·吴书·周瑜传》",
+      "quote": "故时人谣曰：“曲有误，周郎顾。”",
+      "synopsis": "瑜少精意于音乐，虽三爵之后，其有阙误必知之。",
+      "characters": [
+        "周瑜"
+      ],
+      "region": "吴",
+      "mood": "巧艺",
+      "romance_check": "not_in_romance",
+      "romance_note": "演义写周瑜而未及其醉后听曲必顾的细节。",
+      "visual_hook": "三爵之后闻曲误而回顾",
+      "confidence": "medium",
+      "origin": "curated",
+      "batch": "curated",
+      "reviewed": true,
+      "quote_status": "attested",
+      "verification": "确认史料出处并补入传中歌谣；演义是否引用或追述本事尚不能确证，撤回原先确定的未载判断。",
+      "verdict_source": "manual",
+      "romance_group": "演义未载",
+      "data_complete": true,
+      "status": "used",
+      "used_as": "曲有误周郎顾",
+      "grade": "U",
+      "no": 78,
+      "id": "tale-078",
+      "toc_hits": [
+        "第四十四回",
+        "第四十九回"
+      ]
+    },
+    {
+      "title": "曹冲称象",
+      "source": "《三国志·魏书·邓哀王冲传》",
+      "quote": "置象大船之上，而刻其水痕所至，称物以载之，则校可知矣。",
+      "synopsis": "置象大船之上，刻其水痕，称物以载之。",
+      "characters": [
+        "曹冲",
+        "曹操"
+      ],
+      "region": "魏",
+      "mood": "机智",
+      "romance_check": "not_in_romance",
+      "romance_note": "演义未写曹冲称象；同传『鼠啮马鞍』亦未写，已拍成单集。",
+      "visual_hook": "大船刻水痕，换装货物到同一刻线",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "reviewed": true,
+      "quote_status": "attested",
+      "verification": "补入曹冲所陈称象方法的原文，保留演义未载的判断，删除无关的改编信息。",
+      "verdict_source": "manual",
+      "romance_group": "演义未载",
+      "data_complete": true,
+      "status": "used",
+      "used_as": "曹冲称象",
+      "grade": "U",
+      "no": 79,
+      "id": "tale-079",
+      "toc_hits": [
+        "第十回",
+        "第十一回",
+        "第十九回",
+        "第二十一回",
+        "第二十五回",
+        "第三十一回"
+      ]
+    },
+    {
+      "title": "望梅止渴",
+      "source": "《世说新语·假谲》",
+      "quote": "魏武行役，失汲道，军皆渴，乃令曰：“前有大梅林，饶子，甘酸可以解渴。”",
+      "synopsis": "魏武行役失汲道，乃令曰『前有大梅林，饶子，甘酸可以解渴』。",
+      "characters": [
+        "曹操"
+      ],
+      "region": "魏",
+      "mood": "机智",
+      "romance_check": "in_romance",
+      "romance_note": "第二十一回「曹操煮酒论英雄」中曹操亲口追述征张绣时『以鞭虚指曰：前面有梅林』。",
+      "visual_hook": "以鞭虚指前方梅林，士卒口生唾",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "reviewed": true,
+      "quote_status": "attested",
+      "verification": "补入《世说新语》原文，并按演义中由曹操亲口追述的呈现方式，将归属细分为 mentioned。",
+      "verdict_source": "manual",
+      "romance_group": "演义亦载",
+      "data_complete": true,
+      "status": "used",
+      "used_as": "望梅止渴",
+      "grade": "U",
       "no": 80,
       "id": "tale-080",
-      "toc_hits": []
+      "toc_hits": [
+        "第十回",
+        "第十一回",
+        "第十九回",
+        "第二十一回",
+        "第二十五回",
+        "第三十一回"
+      ]
     },
     {
       "title": "王粲驴鸣",

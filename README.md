@@ -212,6 +212,19 @@ python tools/run_story_queue.py --all --workers 3 --attempts 3 --child-watchdog 
 
 **人工恢复流程**：若队列长时间无输出，`python tools/run_story_queue.py --status` 看状态；确认僵死后终止 `run_story_queue` / `generate_comic_series` / `generate_comic` 进程树，再用上面「中断后重启」命令重跑即可。已入库图片全部跳过。
 
+### 重做某个角色的形象
+
+改 `batches/sanguo-heroes.json` 里该角色的 `pose` 与 `profile`（视觉设定的唯一来源），再执行：
+
+```bash
+python tools/redo_character.py --character 诸葛亮 --dry-run   # 先看会归档哪些资产
+python tools/redo_character.py --character 诸葛亮
+```
+
+脚本会：① 把旧立绘 / 四视图 / 相关分镜**移动**到 `data/raw/_superseded/<slug>-<时间戳>/`（不删除，可回滚）并从索引移除；② 清空 `ref_asset_id`、按新 profile 重建角色锚点并升版；③ `--force` 重出立绘与四视图；④ 重做受影响的整部连环画（已有场景概念图仍复用）；⑤ 重建系列索引、ZIP 并同步云盘；⑥ 校验 12 格分镜全部带参考图、0 降级。
+
+要调整受影响剧集清单，改 `tools/redo_character.py` 顶部的 `PLANS` / `SERIES`。**注意**：`sanguo-heroes.json` 的 `novel_excerpt` 是原文摘录，不做改动；只改视觉设定。重做后旧图在云盘解压目录里可能仍有残留（覆盖式同步不删旧文件），但 `comic.html` / manifest 只引用新图。
+
 ## 目录
 
 ```

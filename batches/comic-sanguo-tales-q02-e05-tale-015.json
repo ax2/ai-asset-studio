@@ -1,0 +1,211 @@
+{
+  "id": "comic-sanguo-tales-q02-e05-tale-015",
+  "title": "陈登食脍生疾",
+  "subtitle": "一剂汤药解急病，一言预告三年忧",
+  "story_source": "《三国志》卷二十九·魏书·方技传·华佗传。原文摘录：“广陵太守陈登得病，胸中烦懑，面赤不食。佗脉之，曰：‘府君胃中有虫数升，欲成内疽，食腥物所为也。’佗乃作汤二升，先服一升，斯须尽服之。食顷，吐出三升许虫，赤头皆动，半身是生鱼脍也，所苦便愈。佗曰：‘此病后三期当发，遇良医乃可济救。’至期果发动，时佗不在，遂死。”",
+  "why_not_in_romance": "【演义归属：演义归属待考】史传确载陈登服药吐虫、华佗预告三年后复发之事；尚未完成毛本第七十八回医案段的逐字核对，不能仅凭该回写到华佗便断言陈登这一医案也已收入。目前也不能明确断言《三国演义》未收录，须待逐字核对后确定。",
+  "synopsis": "陈登胸中烦闷，面赤不食。华佗诊脉，认为其食腥致病，遂制汤药二升，嘱其分次服尽。陈登服药后吐虫，病苦顿解。华佗却告诫，三年后此病将再发，须遇良医方可救治，痊愈的欣喜中由此添了一层忧意。",
+  "characters": [
+    {
+      "name": "陈登",
+      "slug": "chen-deng",
+      "existing": true,
+      "role": "广陵太守，本集患病求医者",
+      "pose": "Use the existing Chen Deng character asset without redesign; a restrained seated pose with one hand resting near the chest, preserving the established face, hairstyle, costume and equipment.",
+      "tags": [
+        "三国",
+        "陈登",
+        "广陵太守",
+        "复用角色"
+      ],
+      "profile": {
+        "age": "约三十余岁，属视觉设定，具体年龄不作史实断言",
+        "gender": "男",
+        "role": "汉末广陵士人陈登，字元龙",
+        "era": "东汉末年",
+        "face": "面形清瘦而棱角分明，眉骨端正，留短髭与短颌须",
+        "eyes": "深棕色眼睛，目光明锐，神情冷淡而不轻佻",
+        "skin": "自然浅麦色",
+        "build": "身形修长，肩背挺拔",
+        "hair": "黑发束髻，戴墨青色素帻，全篇不变",
+        "marks": "无明显伤疤，无刺青，须形固定",
+        "outfit": "深青色交领宽袖长袍，灰白内领，墨黑窄缘，深褐布带，深灰长裤，黑色布履；衣料朴素，全篇不换装",
+        "accessories": "仅用深褐布腰带，无额外玉饰",
+        "weapon": "无",
+        "palette": "深青、灰白、墨黑、深褐、深灰",
+        "temperament": "沉毅有志，不愿与只谈私产的来客亲近",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "No imperial regalia, no armour, no modern objects, no costume changes, no hairstyle changes, no weapon, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "character_id": "char-20261111-154629-efeade"
+    },
+    {
+      "name": "华佗",
+      "slug": "hua-tuo",
+      "existing": false,
+      "role": "汉末医者，为陈登诊脉、制药并预告复发",
+      "profile": {
+        "age": "约五十余岁，属美术设定，不作为史实断言",
+        "gender": "男",
+        "role": "往来行医的医者",
+        "era": "东汉末年",
+        "face": "清瘦长脸，颧骨略显，短须夹灰，额上有浅纹",
+        "eyes": "深褐眼睛，目光沉静而专注",
+        "skin": "略带风霜感的暖麦色肤色",
+        "build": "中等身高，清瘦结实，动作稳健",
+        "hair": "黑发夹灰，束成朴素发髻，以深褐布巾固定，全篇不变",
+        "marks": "无显著伤疤、刺青或神异标记",
+        "outfit": "固定穿灰米色粗绢交领窄袖长袍，内衬素白中衣，腰束深褐布带，下着灰褐长裤，足穿旧黑布履；全篇不换装",
+        "accessories": "素面深褐布药囊置于腰侧，无文字、符箓或装饰性徽记",
+        "weapon": "无武器",
+        "palette": "灰米、素白、深褐、灰褐、墨黑",
+        "temperament": "审慎沉着，诊察细致，言辞简明而郑重",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "No supernatural aura, no modern medical equipment, no white laboratory coat, no ornate official costume, no costume changes, no hairstyle changes."
+      },
+      "pose": "Full-length standing three-quarter view, one hand poised gently for pulse examination and the other resting beside a plain medicine pouch, calm and attentive, fixed costume and hairstyle.",
+      "tags": [
+        "三国",
+        "华佗",
+        "医者",
+        "新建角色"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "陈登府中病室",
+      "description": "无人独立环境概念图。汉末府邸内一间朴素病室，木榻靠墙，榻前放矮案，案上有未动的粟饭与陶盏；地面铺席，侧置浅陶盆。素屏风、木柱与纸绢质感的透光窗面构成背景，不设匾额、书卷或题字。",
+      "prompt_extra": "Unoccupied independent environment concept art of a restrained late Eastern Han official residence sickroom, low wooden couch against the rear wall, woven floor mats, low table with untouched millet food and plain pottery cups, a shallow earthenware basin beside the couch, blank folding screen, timber pillars, soft daylight through translucent window panels, clear spatial continuity and open foreground for later character placement, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture, even lighting, no people, no human silhouettes, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "白昼",
+      "mood": "安静、压抑，便于后续转为舒缓"
+    },
+    {
+      "id": "scene-02",
+      "name": "府中煎药间",
+      "description": "无人独立环境概念图。府内一间小型煎药间，土灶上置素面陶药罐，木架摆放无标记陶罐与竹篮，案面置木勺、陶量器及两只药盏。侧窗采光，地面洁净，无药名签条或任何文字。",
+      "prompt_extra": "Unoccupied independent environment concept art of a small late Eastern Han medicine preparation room inside the same residence, plain earthen stove with an unmarked pottery decoction pot, gentle steam, wooden shelves with unlabeled ceramic jars and woven baskets, worktable holding a wooden ladle, a plain ceramic measuring vessel and two pottery cups, side window daylight, uncluttered composition with accessible working space, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine ceramic and wood texture, even lighting, no people, no human silhouettes, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "白昼",
+      "mood": "沉静、专注"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "陈登胸中烦懑，面赤不食。",
+      "dialogue": [],
+      "visual": "Medium view inside scene-01. Chen Deng sits uneasily on the edge of the low couch, his face noticeably flushed, one hand held near his chest and his gaze lowered toward an untouched meal on the low table. His discomfort is conveyed through posture rather than exaggerated distortion. Use the existing Chen Deng asset exactly, preserving his established face, hairstyle, clothing and equipment; no other person appears. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "陈登"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "华佗诊脉，指出食腥致病。",
+      "dialogue": [
+        {
+          "speaker": "华佗",
+          "line": "府君胃中有虫数升，欲成内疽，食腥物所为也。"
+        }
+      ],
+      "visual": "Medium two-person view in scene-01. Hua Tuo sits beside the couch and gently examines Chen Deng's wrist with focused fingers, looking thoughtful and grave. Chen Deng remains seated with a flushed face, listening closely. Keep the untouched meal visible at the edge of the low table. Preserve the existing Chen Deng asset exactly and Hua Tuo's defined character profile, with unchanged hairstyles and costumes. No anatomical cutaway, no imagined parasites inside the body, no additional people. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "陈登",
+        "华佗"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "华佗制成汤药二升。",
+      "dialogue": [],
+      "visual": "Medium view in scene-02. Hua Tuo alone attends a plain pottery decoction pot on the earthen stove, lifting the lid slightly with one hand while holding a wooden ladle in the other. Gentle steam rises naturally; a plain ceramic measuring vessel and two empty cups wait on the adjacent worktable. The medicine ingredients are indistinct and not identifiable as a usable recipe. Preserve Hua Tuo's fixed face, hairstyle, clothing and medicine pouch. No assistants or background figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and ceramic texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "华佗"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-01",
+      "caption": "先服一升，片刻后尽服余药。",
+      "dialogue": [],
+      "visual": "Medium view in scene-01 showing one continuous moment. Chen Deng drinks the remaining medicine from a plain pottery vessel with both hands while seated on the couch; an already emptied vessel rests on the low table, suggesting the earlier dose without any inset or repeated figure. Hua Tuo watches attentively beside him. The shallow basin remains close to the couch. Preserve both character assets, costumes and hairstyles exactly. No modern measuring marks and no extra people. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "陈登",
+        "华佗"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-01",
+      "caption": "食顷，陈登吐虫，所苦便愈。",
+      "dialogue": [],
+      "visual": "Medium view in scene-01. Chen Deng leans forward over the shallow earthenware basin after vomiting, one hand braced on the couch, his expression beginning to relax. Hua Tuo supports his upper back with a steady hand. Show only a small, partially obscured cluster of fine reddish-headed wormlike strands already inside the basin, without a close-up, blood, exposed organs or a visible stream of vomit. Keep the medical event restrained and non-graphic. Preserve both characters' established faces, hairstyles, outfits and accessories exactly. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "陈登",
+        "华佗"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-01",
+      "caption": "病苦虽解，三年后仍有隐忧。",
+      "dialogue": [
+        {
+          "speaker": "华佗",
+          "line": "此病三年后当再发，遇良医才可救治。"
+        }
+      ],
+      "visual": "Medium two-person closing view in scene-01. Chen Deng now sits upright on the same couch, his facial flushing reduced and his posture relieved, but his attentive expression grows sober as Hua Tuo raises one hand in a restrained gesture of warning. Hua Tuo's expression is calm and serious, not triumphant. The emptied medicine vessels remain on the low table; the basin is out of frame. Preserve Chen Deng's existing character asset and Hua Tuo's fixed design without changing clothing, hairstyle or equipment. No prophetic imagery, no ghosts and no additional figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "陈登",
+        "华佗"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture where applicable, and even lighting throughout. Reuse the existing Chen Deng character asset exactly; Hua Tuo must match his newly defined profile in every appearance. Never change faces, hairstyles, costumes, accessories or weapons between panels. Use only scene-01 and scene-02, with consistent architecture and prop placement. Each panel is a single continuous image with at most two named characters and no background people. Scene concept images must be completely unoccupied. Use plausible late Eastern Han furniture, pottery and woven materials; no modern medical instruments, supernatural effects or anatomical diagrams. Keep vomiting and worms non-graphic and visually restrained. All narration and dialogue belong only in JSON fields for later HTML overlay. No visible writing, calligraphy, seals, labels or symbols resembling lettering anywhere in the artwork; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+  "notes": "史料骨架为陈登面赤不食、华佗诊脉归因食腥、制汤二升并分次服用、吐虫病愈及预告后三期复发。末格将“后三期”译写为“三年后”，对白为原意转述。史传另载到期复发、华佗不在而陈登遂死，本集止于预告，不另画死亡场面。病室陈设、煎药间、华佗亲自照看药罐与扶背动作均属连环画的合理场面补写；华佗年龄外貌属于美术设定。吐虫画面作非血腥节制呈现，不据此推定现代病名，也不提供可照用的药方。演义归属维持待考，不以华佗出现在毛本第七十八回作为本医案已收录或未收录的证据。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q02",
+  "episode": 5,
+  "story_bank_no": 15,
+  "_generation": {
+    "written_at": "2026-11-11T22:04:44+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 4692,
+      "completion_tokens": 3976,
+      "total_tokens": 8668,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 4689,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 455,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "a846b1041f8ee4392719aa8ab33a44477f6525b157d83964ac1ff560c6c8c843",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

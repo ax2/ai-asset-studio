@@ -1,0 +1,200 @@
+{
+  "id": "comic-sanguo-tales-q02-e04-tale-014",
+  "title": "童转翻车灌园",
+  "subtitle": "儿童转动木柄，流水接续入园",
+  "story_source": "《三国志》卷二十九·魏书·方技传·杜夔传裴松之注引《马先生传》。原文摘录：“乃作翻车，令儿童转之。”本事记马钧在京都有园地，苦于缺水，遂制翻车提水灌园。",
+  "why_not_in_romance": "【演义归属：演义未载】通行毛本120回未叙马钧制翻车灌园；它也不是演义中的木牛流马故事。此事出自《三国志》裴松之注所引《马先生传》，不可归作《三国演义》情节。",
+  "synopsis": "马钧在京都有一片园地，却苦于无水灌溉。他制作翻车，以木制传动部件连续提水。儿童转动木柄，水便沿槽而上，流入园畦。原先难办的灌园之事，因巧思而变得轻省。",
+  "characters": [
+    {
+      "name": "马钧",
+      "slug": "ma-jun",
+      "existing": true,
+      "role": "曹魏机械巧匠，字德衡，翻车制作者",
+      "pose": "Use the existing Ma Jun character asset unchanged, standing beside a wooden irrigation mechanism with one hand indicating its working parts.",
+      "tags": [
+        "三国",
+        "曹魏",
+        "巧匠",
+        "复用角色"
+      ],
+      "profile": {
+        "age": "约四十岁，属本集视觉设定",
+        "gender": "男",
+        "role": "曹魏机械巧匠马钧，字德衡",
+        "era": "三国曹魏明帝时期",
+        "face": "长方脸，颧骨略显，下颌结实，短须整齐",
+        "eyes": "深褐眼睛，目光沉静，观察器物时专注",
+        "skin": "暖麦色，手掌略粗糙",
+        "build": "中等身量，肩背结实，动作稳健",
+        "hair": "黑发束成紧实发髻，以深灰布巾包束，全篇不变",
+        "marks": "无醒目疤痕或纹身，指腹有长期劳作形成的薄茧",
+        "outfit": "灰青色粗绢交领窄袖长袍，深褐布带，炭灰长裤，黑色布履；袖口与衣摆保持相同形制，全篇不换装",
+        "accessories": "腰侧悬一只小型素面工具皮囊，无文字与印记",
+        "weapon": "无武器",
+        "palette": "灰青、深褐、炭灰、木色、暖麦色",
+        "temperament": "寡言笃定，不逞口舌，以制作验证判断",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "No modern clothing, no ornate fantasy armour, no hairstyle changes, no costume changes, no weapon, no written symbols."
+      },
+      "character_id": "char-20261111-094150-13cef2"
+    },
+    {
+      "name": "转车儿童",
+      "slug": "zhuanche-ertong",
+      "existing": false,
+      "role": "史料中转动翻车的儿童之单人代表，姓名未载",
+      "profile": {
+        "age": "约十岁，具体年龄为画面设定",
+        "gender": "男，性别为画面设定",
+        "role": "帮助转动翻车的无名儿童",
+        "era": "三国曹魏",
+        "face": "圆脸，鼻梁小巧，面颊略丰",
+        "eyes": "深褐色眼睛，目光专注",
+        "skin": "暖麦色皮肤",
+        "build": "身形瘦小，四肢匀称",
+        "hair": "黑发束成单个小髻，以深褐布绳固定，全篇不变",
+        "marks": "无疤痕，无纹身，无特殊面部标记",
+        "outfit": "固定土黄色粗麻交领窄袖短衣，米灰内领，深褐布腰带，灰褐长裤，深褐旧布履；六格不换装",
+        "accessories": "仅有束发布绳与布腰带，无首饰",
+        "weapon": "无",
+        "palette": "土黄、米灰、深褐、灰褐、暖麦色",
+        "temperament": "好奇、认真，操作时专注稳当",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "no text, no letters, no captions, no watermark, no panel borders, no split lines; no seals, no modern clothing, no armor, no weapons, no hairstyle changes, no costume changes"
+      },
+      "pose": "Full-body three-quarter standing pose, both hands held forward as if gently turning a waist-height wooden crank, feet steady, attentive expression; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "tags": [
+        "三国",
+        "曹魏",
+        "儿童",
+        "无名人物",
+        "翻车"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "京都园畦",
+      "description": "独立无人环境概念图。低矮土墙围住园地，菜畦排列整齐，近处土面干燥，几株菜叶略垂；一条浅灌渠从画面左侧通入园中，远处仅见朴素屋顶。后续可通过水流与土色变化表现灌溉前后。",
+      "prompt_extra": "Standalone uninhabited environment concept art of a modest vegetable garden in the Cao Wei capital, low earthen walls, orderly raised beds, dry soil, slightly drooping vegetables, a shallow irrigation channel entering from the left, simple distant tiled roofs, open foreground, even daylight, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette; no people, no silhouettes, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "日间",
+      "mood": "朴实、待灌"
+    },
+    {
+      "id": "scene-02",
+      "name": "园外水渠与翻车",
+      "description": "独立无人环境概念图。园外低处水渠紧邻较高的园岸，一架木制翻车斜架其间：下端浸水，连续木链带着刮板穿过狭长木槽，上端设木轴与手摇柄，出水槽接往园内浅渠。岸边只放少量木料与木槌。",
+      "prompt_extra": "Standalone uninhabited environment concept art of a low water channel beside a raised garden bank, a plausible reconstructed wooden chain-pallet irrigation pump on an incline, lower intake submerged, linked wooden pallets fitted inside a narrow trough, upper wooden drive shaft with a child-height hand crank on a dry stable bank, outlet feeding a shallow garden channel, a few timber pieces and a wooden mallet nearby, clear readable construction, even daylight, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette; no people, no silhouettes, no waterwheel, no animal drive, no modern machinery, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "日间",
+      "mood": "清朗、精巧"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "京都有园，马钧却苦于缺水。",
+      "dialogue": [],
+      "visual": "Wide view of scene-01 before irrigation. Ma Jun, using his existing character asset unchanged, crouches beside a dry vegetable bed and lightly touches the parched soil. Drooping leaves and the empty shallow channel establish the problem. Only Ma Jun is present. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "马钧"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-02",
+      "caption": "他制成翻车，要把低水引上园岸。",
+      "dialogue": [],
+      "visual": "Medium view of scene-02. Ma Jun, identical to his existing character asset, kneels on the dry bank and seats the final wooden pallet into the linked chain of the nearly completed inclined irrigation pump. Clearly show the lower submerged intake, fitted wooden trough, upper shaft and hand crank, and outlet toward the garden. Tools lie neatly beside him. Only Ma Jun is present. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "马钧"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "翻车既成，便让儿童转动。",
+      "dialogue": [],
+      "visual": "Medium view of the same completed pump in scene-02. The named child character Zhuanche Ertong stands securely on the dry bank and begins turning the waist-height wooden crank with both hands. Ma Jun stands beside the child, indicating the handle while keeping his hands clear of moving parts. Preserve Ma Jun's existing asset and the child's fixed clothing and single topknot. Exactly two people. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "马钧",
+        "转车儿童"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "木链回转，流水沿槽接续而上。",
+      "dialogue": [],
+      "visual": "Close view of the same wooden chain-pallet pump in scene-02, using an open oblique angle rather than a cutaway. Show wet wooden pallets advancing within the inclined trough and water spilling from the upper outlet. At the side, the same child in unchanged clothing steadily turns the crank; include enough of the child's face and torso for clear identity. Convey motion through natural water ripples and subtle physical motion blur, without drawn arrows or diagram marks. Only the child is present. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "转车儿童"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-01",
+      "caption": "清水入畦，干土渐渐润湿。",
+      "dialogue": [],
+      "visual": "Medium low-angle view inside scene-01. Fresh water enters from the established left-side irrigation channel and spreads into a vegetable furrow, visibly darkening the dry soil. Ma Jun, unchanged from his existing asset, crouches beside the furrow and watches the water reach the roots. Keep the same garden layout and the same plants without instant new growth. Only Ma Jun is present. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "马钧"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-01",
+      "caption": "童力转车，园地得灌。",
+      "dialogue": [],
+      "visual": "Wide concluding view of scene-01 after the irrigation demonstration. The same vegetable beds now have damp dark soil and shallow water remaining in their furrows, with no exaggerated plant growth. Ma Jun and the same child stand together on a dry path, quietly looking over the watered garden; Ma Jun gives a restrained satisfied smile and the child looks pleased. Preserve both established character designs, clothing and hairstyles. Exactly two people, no background figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "马钧",
+        "转车儿童"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture where applicable, and even lighting. Ma Jun must use his existing character asset without redesign. Preserve every character's face, hairstyle, outfit, accessories and weapon status across all appearances. No added armor or weapons. Maximum two people per panel and no background crowds. Use only the two established environments. Keep the pump's inclined trough, wooden chain-pallet mechanism, intake, crank and outlet consistent; it is a manually driven irrigation device, not a waterwheel, not a wooden ox or flowing horse. Show no modern machinery, no instantaneous crop growth, no diagrams, no arrows, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+  "notes": "史料骨架为马钧在京都园地苦于缺水、制作翻车、令儿童转动而灌园。儿童用一名无名代表呈现，不赋予史载姓名；其性别、年龄、衣貌以及装配、观察、灌后同看园地等动作均为连环画扩写。木链刮板、手摇柄、水渠和园岸布局属于便于理解工作原理的示意性复原，不声称原文详载具体构造。全篇不设对白，不引入木牛流马情节；旁白仅存于字段，交由HTML叠加，生成画面不含文字。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q02",
+  "episode": 4,
+  "story_bank_no": 14,
+  "_generation": {
+    "written_at": "2026-11-11T22:04:18+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 4648,
+      "completion_tokens": 3170,
+      "total_tokens": 7818,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 4645,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 195,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "b8505d76288fff030a0ce00116eb86713d288e6028c39ee762d0f3ef537ef442",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

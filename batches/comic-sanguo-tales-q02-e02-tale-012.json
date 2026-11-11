@@ -1,0 +1,214 @@
+{
+  "id": "comic-sanguo-tales-q02-e02-tale-012",
+  "title": "樊阿深针疗疾",
+  "subtitle": "一段深针治病的记载，见证华佗弟子的针术",
+  "story_source": "《三国志》卷二十九·魏书·方技传·华佗传；原文：阿针背入一二寸，巨阙胸上五六寸，而病皆瘳。",
+  "why_not_in_romance": "【演义归属：演义未载】通行毛本120回未叙樊阿深针治病这一独立医案；不与华佗其他针灸情节混同。本集依据《三国志》华佗传所附樊阿事迹编写，不以《三国演义》中的华佗医案替代。",
+  "synopsis": "华佗弟子樊阿擅长针术。面对当时对背部、胸腹进针深度的拘限，他的施针方式显得不同寻常，传中称其治疗有效。脚本以一位无名病者串联问诊、候治与病后恢复，呈现史料记载，不将古代针刺尺度作为现代医疗示范。",
+  "characters": [
+    {
+      "name": "樊阿",
+      "slug": "fan-a",
+      "existing": false,
+      "role": "华佗弟子，擅长针术的医者",
+      "profile": {
+        "age": "约三十五岁，属于视觉设定，史料未载本事发生时年龄",
+        "gender": "男",
+        "role": "华佗弟子，针术医者",
+        "era": "东汉末年",
+        "face": "清瘦长方脸，颧骨略显，下颌留短而整齐的黑须",
+        "eyes": "深褐眼睛，目光专注平和",
+        "skin": "浅麦色，具有自然皮肤纹理",
+        "build": "中等身量，偏瘦，肩背端正，双手修长",
+        "hair": "黑发束成紧实小髻，以深褐布巾固定，全篇不改变",
+        "marks": "无伤疤、刺青或夸张异相",
+        "outfit": "固定穿灰青色粗绢交领窄袖长袍，米白内领，深褐布腰带，炭灰长裤与旧黑布履；六格不换装",
+        "accessories": "腰侧素面布囊，使用无纹木质针匣与素麻布",
+        "weapon": "无武器；医针仅作医者身份道具，不展示操作参数",
+        "palette": "灰青、米白、深褐、炭灰、暗铜",
+        "temperament": "沉静审慎，待人温和，不作神异姿态",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "no imperial regalia, no armour, no magical aura, no modern medical equipment, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body standing portrait, calmly holding a closed plain wooden needle case at waist height, relaxed shoulders, both hands visible, fixed costume and hairstyle, neutral empty background; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "东汉末年",
+        "樊阿",
+        "医者",
+        "新建角色"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "病者",
+      "slug": "bing-zhe",
+      "existing": false,
+      "role": "串联诊疗过程的无名病者，文学化合成人物",
+      "profile": {
+        "age": "约四十岁，属于视觉设定",
+        "gender": "男",
+        "role": "接受樊阿诊治的无名平民病者",
+        "era": "东汉末年",
+        "face": "略宽的椭圆脸，眉骨平缓，短须稀疏",
+        "eyes": "深褐眼睛，初时疲惫，恢复后目光舒展",
+        "skin": "偏黄的麦色皮肤，不以夸张肤色表现病症",
+        "build": "中等身量，略显单薄，初时躯干微蜷",
+        "hair": "黑发夹少量灰发，束小髻，以灰褐布巾固定，全篇不改变",
+        "marks": "无固定伤口、疤痕或特定疾病标识",
+        "outfit": "固定穿土褐色粗麻交领短袍，灰米内领，深灰布腰带，灰褐长裤与旧褐布履；六格不换装，卧榻时仅加盖素色薄毯",
+        "accessories": "无首饰，无随身贵重物品",
+        "weapon": "无",
+        "palette": "土褐、灰米、深灰、灰褐、旧褐",
+        "temperament": "朴实克制，由忧惧逐渐转为安心",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "no luxury clothing, no armour, no graphic symptoms, no exposed treatment sites, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body standing portrait, slightly stooped with one hand resting loosely against the robe at the waist, tired but composed expression, fixed costume and hairstyle, neutral empty background; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "东汉末年",
+        "无名病者",
+        "合成人物",
+        "新建角色"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "医舍前间",
+      "description": "不含人物的独立环境概念图。汉末朴素医舍前间，夯土墙、木梁、竹帘、低案与两张坐席；案上摆素陶水碗，墙边置无铭木柜，不悬挂匾额或药名牌。",
+      "prompt_extra": "Empty late Eastern Han consultation room environment concept art, absolutely no people or human silhouettes, rammed-earth walls, exposed timber beams, bamboo curtain, low wooden table, two woven sitting mats, plain ceramic water bowl, unmarked wooden cabinet, balanced wide composition, soft daylight and even lighting, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "朴素、安静、可信"
+    },
+    {
+      "id": "scene-02",
+      "name": "医舍内间",
+      "description": "不含人物的独立环境概念图。与前间相连的诊疗内室，木榻上铺素麻褥与浅米薄毯，旁置矮凳、素面木匣和陶盆；高窗透入柔光，无人体图、文字卷轴或现代器具。",
+      "prompt_extra": "Empty late Eastern Han treatment chamber environment concept art, absolutely no people or human silhouettes, plain wooden couch with linen bedding and a pale beige blanket, low stool, closed unmarked wooden case, ceramic basin, small high lattice window, uncluttered layout, soft daylight and even lighting, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "肃静、专注、温和"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "华佗弟子樊阿，尤善针术。",
+      "dialogue": [],
+      "visual": "Wide establishing view inside the established consultation room. Fan A sits upright beside the low table, his closed plain wooden needle case resting nearby. The unnamed patient sits opposite with slightly rounded shoulders and a weary expression. Exactly two people, using their fixed character designs and unchanged clothing. Emphasize a quiet encounter rather than a miraculous healer entrance. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "樊阿",
+        "病者"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "旧说畏深，背与胸腹尤有拘限。",
+      "dialogue": [
+        {
+          "speaker": "病者",
+          "line": "听说这些地方施针，最须谨慎？"
+        }
+      ],
+      "visual": "Medium two-person view in the same consultation room. The patient looks toward Fan A with restrained apprehension, hands gathered loosely over his clothed lap. Fan A listens with a serious, attentive expression, hands resting calmly beside the closed needle case. Show the patient's hesitation through faces and posture only, with no anatomical diagram or treatment demonstration. Keep both costumes and hairstyles identical to their character cards. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "樊阿",
+        "病者"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "樊阿临治，不拘旧有浅深之限。",
+      "dialogue": [],
+      "visual": "Medium view inside the established treatment chamber. The patient lies on his side on the wooden couch, fully clothed beneath a pale beige blanket, his tense face visible. Fan A sits beside him, opening the plain wooden needle case on the low stool, his expression focused and sober. The case interior is partly concealed by folded linen; do not display needle lengths, insertion sites, angles, or procedural steps. Exactly two people with unchanged costumes and hairstyles. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "樊阿",
+        "病者"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "传中所述深针，远出当时常法。",
+      "dialogue": [],
+      "visual": "Close portrait of Fan A during an implied treatment interval in the same chamber, showing only his face, shoulders, and upper chest. His gaze is lowered toward an entirely off-frame patient, expression concentrated and restrained. Keep both hands, all instruments, the patient, and every treatment site outside the image. Softly blurred timber and the high window identify the established room. No supernatural effects or triumphant expression. Fan A retains his exact fixed hairstyle and robe. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "樊阿"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "治疗过后，病者渐露舒缓之色。",
+      "dialogue": [],
+      "visual": "Medium two-person view after an unspecified interval in the same treatment chamber. The patient rests against folded bedding on the couch, still in his original clothing with the same pale blanket over his legs, his brow now relaxed. Fan A observes quietly from the low stool, hands at rest. The wooden needle case is closed, and no instruments or treatment sites are visible. Convey recovery gently without instant transformation, glowing effects, or celebration. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "樊阿",
+        "病者"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-01",
+      "caption": "传称疗效：“而病皆瘳。”",
+      "dialogue": [
+        {
+          "speaker": "病者",
+          "line": "如今身上舒坦多了。"
+        }
+      ],
+      "visual": "Wide closing view back in the established consultation room at a later visit. The same patient stands upright beside his original sitting mat and offers Fan A a modest clasped-hands gesture of thanks. Fan A stands near the low table and returns a restrained courteous gesture. Both wear exactly the same garments and hairstyles as before. The closed needle case rests unobtrusively on the table. Balanced quiet composition, no additional people, no supernatural healing imagery. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "樊阿",
+        "病者"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture where applicable, and even lighting. This episode depicts civilians without armour. Maintain exact character-card faces, hairstyles, clothing, accessories, and palettes throughout. Use only the two established environments and no more than two visible people per panel. Environment concept images must contain no people. Render each panel as one continuous image without inset pictures. Do not render writing, calligraphy, labels, seals, diagrams, interface elements, or speech balloons; narration and dialogue are external HTML overlays only. Depict medical activity through preparation, facial concentration, and later recovery, never through exposed puncture sites, insertion depths, angles, anatomical targeting, or step-by-step technique. No blood, modern medical devices, magical healing effects, or invented witnesses. All containers and furnishings must remain unmarked; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为樊阿师从华佗、善针、施针深度异于当时常见拘限，以及传中称病愈；原文深度数字仅保留于出处，不换算成现代尺度，也不作操作图解。原传并未提供此处单一病者的姓名、病种、问答、具体疗程与复诊场面，故以一位无名合成病者承接叙事；其神态、对白、问诊、医舍及前后时间安排均属文学化扩写，不应视为原文实录。“而病皆瘳”是对史料疗效记述的引用，不是现代疗效保证；古代深针记载不构成医疗建议，切勿自行模仿。华佗只在旁白中交代师承，不作为画中人物出现。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q02",
+  "episode": 2,
+  "story_bank_no": 12,
+  "_generation": {
+    "written_at": "2026-11-11T22:03:12+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 4659,
+      "completion_tokens": 3844,
+      "total_tokens": 8503,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 4656,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 199,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "7ea11e9de2d06ffe4d70d9bb6d5c17fcae69ce2ff955d14a50fc7c60ec694e39",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

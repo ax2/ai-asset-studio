@@ -1,0 +1,227 @@
+{
+  "id": "comic-sanguo-tales-q02-e06-tale-016",
+  "title": "华佗授五禽戏",
+  "subtitle": "效法禽兽之动，贵在习练不辍",
+  "story_source": "《后汉书》卷八十二下·方术列传下·华佗。原文摘录：“吾有一术，名五禽之戏。”又记吴普习练之效：“普施行之，年九十余，耳目聪明，齿牙完坚。”传中所列五禽为虎、鹿、熊、猨、鸟。",
+  "why_not_in_romance": "【演义归属：演义未载】通行毛本《三国演义》第七十八回集中叙写华佗医术及遇害，但未展开其教授吴普五禽戏的故事，也未叙写吴普依此习练、年九十余仍耳目聪明的后续。本集据《后汉书》相关记载改编，不取小说中的医术情节替代。",
+  "synopsis": "华佗向弟子吴普传授五禽戏，借虎、鹿、熊、猿、鸟的形态讲解导引之意。吴普逐一观察、模仿，领会身体宜常活动而不宜过劳的道理，此后坚持习练。传中记载，他年九十余仍耳目聪明、齿牙完坚。",
+  "characters": [
+    {
+      "name": "华佗",
+      "slug": "hua-tuo",
+      "existing": false,
+      "role": "汉末医者，五禽戏的传授者",
+      "profile": {
+        "age": "年长医者形象；具体授业年龄不作史实断言",
+        "gender": "男",
+        "role": "医者、吴普之师",
+        "era": "东汉末年",
+        "face": "清瘦长脸，颧骨微显，短而整齐的灰白须髯",
+        "eyes": "目光清明温和，眼角有细纹",
+        "skin": "浅麦色，带日常行走乡野的自然风霜感",
+        "build": "清瘦而挺拔，肩背舒展，动作沉稳",
+        "hair": "灰白头发束成低髻，以深褐素布巾固定，全篇不变",
+        "marks": "无伤疤、无刺青，以清瘦面容与短须识别",
+        "outfit": "固定穿浅灰褐色粗绢交领窄袖及膝袍，米白内领，深褐布腰带，炭灰长裤与黑褐布履；六格不换装",
+        "accessories": "腰侧固定一只无纹小布囊，无可见文字和符号",
+        "weapon": "无",
+        "palette": "浅灰褐、米白、深褐、炭灰、灰白",
+        "temperament": "平和耐心，重视身体实践，不作神异姿态",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "No imperial attire, no ornate armor, no magical aura, no modern medical tools, no animal costume; no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body standing reference, relaxed upright posture, one open hand gently indicating a teaching gesture, both feet visible, plain neutral background; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "东汉",
+        "医者",
+        "五禽戏",
+        "新建角色"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "吴普",
+      "slug": "wu-pu",
+      "existing": false,
+      "role": "华佗弟子，五禽戏的习练者",
+      "profile": {
+        "age": "统一采用长者造型；授业时年龄无载，末格以旁白交代年九十余",
+        "gender": "男",
+        "role": "医者弟子、导引习练者",
+        "era": "东汉末年至三国时期",
+        "face": "窄方脸，眉骨平直，面颊有浅皱纹，灰白短须",
+        "eyes": "双目明亮，观察动作时专注",
+        "skin": "暖麦色，质感朴实",
+        "build": "中等身量，清健匀称，四肢灵活",
+        "hair": "黑灰相间的头发束成小髻，以灰青素布巾固定，六格保持同一发型",
+        "marks": "无特殊伤痕，以窄方脸、灰白短须及灰青衣装识别",
+        "outfit": "固定穿灰青色粗麻交领窄袖及膝袍，浅米色内领，灰褐布腰带，深灰长裤与深褐布履；六格不换装",
+        "accessories": "无首饰，无额外手持器物",
+        "weapon": "无",
+        "palette": "灰青、浅米、灰褐、深灰、深褐",
+        "temperament": "恭谨专注，肯于反复练习，神情朴实",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "No youthful redesign, no hairstyle changes, no costume changes, no ornate armor, no magical healing effects, no modern sportswear; no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body standing reference, attentive expression, balanced stance with loosely bent elbows and relaxed hands, both feet visible, plain neutral background; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "吴普",
+        "华佗弟子",
+        "导引",
+        "新建角色"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "药庐前庭",
+      "description": "不含人物的汉末乡居庭院。夯土地面平整开阔，低矮土墙围合，木柱茅顶药庐居于后侧，檐下放无字陶罐、竹筐与晒药竹匾，留出完整习练空间。",
+      "prompt_extra": "Independent environment concept art, an empty late Eastern Han rural healer's courtyard, flat packed-earth exercise space, low earthen walls, modest timber and thatch cottage, unmarked ceramic jars, bamboo baskets and herb-drying trays beneath the eaves, balanced wide composition, soft morning daylight, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and earthen texture, even lighting, no people, no human silhouettes, no animals; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "清晨",
+      "mood": "清静、朴素、适宜授业"
+    },
+    {
+      "id": "scene-02",
+      "name": "林边习练空地",
+      "description": "不含人物的林边空地。疏林与低矮灌木环绕平缓土坡，中央地面宽平，远处可见浅溪与田畴，几块天然石头散落边缘，无建筑题字。",
+      "prompt_extra": "Independent environment concept art, an empty level clearing beside sparse woodland in rural late Han China, low shrubs, gently sloping earth, a shallow stream and distant cultivated fields, a few natural stones confined to the edges, unobstructed central practice area, soft clear daylight, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine foliage and soil texture, even lighting, no people, no human silhouettes, no animals; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "舒展、安宁、富有生机"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "华佗向弟子吴普传授导引之法。",
+      "dialogue": [
+        {
+          "speaker": "华佗",
+          "line": "吾有一术，名五禽之戏。"
+        },
+        {
+          "speaker": "吴普",
+          "line": "请先生指教。"
+        }
+      ],
+      "visual": "Wide establishing view in the healer's courtyard of scene-01. Hua Tuo stands on the left with a gentle open-handed teaching gesture, while Wu Pu stands on the right listening attentively with relaxed arms. Keep the empty packed-earth practice area clearly visible between them. Use their exact character profiles, fixed hairstyles and unchanged clothing. Modest herb-drying equipment remains beneath the distant eaves, with no additional people or animals. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "华佗",
+        "吴普"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "先学虎势，舒展四肢而不逞强。",
+      "dialogue": [
+        {
+          "speaker": "华佗",
+          "line": "身体当常活动，却不可过劳。"
+        }
+      ],
+      "visual": "Medium full-body view in the same courtyard of scene-01. Hua Tuo demonstrates an imagined gentle tiger-inspired guiding exercise: knees slightly flexed, torso leaning forward only a little, arms reaching forward with softly curved fingers rather than aggressive claws. Wu Pu stands beside him copying the movement with careful attention. Both maintain stable, anatomically plausible balance. Preserve their exact faces, hairstyles, accessories and fixed clothing. This is calm physical cultivation, not martial combat, with no literal tiger or spirit projection. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "华佗",
+        "吴普"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-01",
+      "caption": "又学鹿的舒展、熊的沉稳。",
+      "dialogue": [
+        {
+          "speaker": "吴普",
+          "line": "形态虽异，都须从容习练。"
+        }
+      ],
+      "visual": "Wide full-body view in the courtyard of scene-01, one continuous space with no montage. Hua Tuo on the left demonstrates an imagined deer-inspired stretch, gently turning his torso while extending one arm diagonally upward. Wu Pu on the right practices an imagined bear-inspired grounded stance, knees softly bent and hands relaxed near his waist. Their contrasting movements remain slow and physically plausible. Keep a clear gap between the two figures and preserve their established faces, fixed hair and unchanged clothing. No literal animals, no motion duplicates, no supernatural effects. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "华佗",
+        "吴普"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "再取猿的灵活、鸟的轻舒。",
+      "dialogue": [
+        {
+          "speaker": "华佗",
+          "line": "虎、鹿、熊、猿、鸟，合为五禽。"
+        }
+      ],
+      "visual": "Wide full-body view in the woodland clearing of scene-02. Hua Tuo on the left demonstrates a restrained imagined ape-inspired movement, slightly bending his knees and lifting one forearm in a compact reaching gesture. Wu Pu on the right practices an imagined bird-inspired movement, opening both arms softly at shoulder height with one heel lightly raised and his supporting foot firmly grounded. Both figures remain recognizably human, calm and balanced. Preserve exact character profiles, fixed hairstyles and unchanged clothes. A shallow stream and fields are visible beyond the sparse trees. No literal animals, no duplicated limbs, no flying figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "华佗",
+        "吴普"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "吴普领会其意，此后坚持习练。",
+      "dialogue": [],
+      "visual": "Medium full-body portrait of Wu Pu practicing alone in the woodland clearing of scene-02. He performs a relaxed bird-inspired opening movement with both arms gently spread below shoulder height, feet planted securely and expression concentrated but unstrained. A faint sheen of perspiration suggests moderate exertion rather than exhaustion. Keep the same long-lived elder character design, face, hairstyle, cloth headwrap and fixed gray-blue clothing used in all previous panels. Show only one figure and one instant, with no seasonal montage or ghosted movement. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "吴普"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "传载吴普年九十余，仍耳目聪明。",
+      "dialogue": [],
+      "visual": "Close portrait of Wu Pu in the same woodland clearing of scene-02 after finishing gentle practice, framed from the chest upward. His shoulders are relaxed, his wrinkled face serene, and his eyes alert and clear as he looks toward the softly lit trees. Preserve the exact established elder facial design, gray-black topknot, gray-blue cloth headwrap, gray-white short beard and unchanged garment collar; do not redesign or exaggerate his age. The distant stream and foliage form a quiet painterly background. No other people, no animals, no miraculous glow or visual claim of rejuvenation. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "吴普"
+      ],
+      "composition": "close"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and environmental texture, and even lighting throughout. Ground all architecture, clothing and utensils in modest late Eastern Han material culture. Use only the two supplied environments and the two named characters. Every panel may contain at most two people. Preserve each character's established face, hairstyle, accessories and clothing without changes. Wu Pu uses a consistent elder design throughout; convey the later-life time jump through the external caption, not a visual redesign. The five-animal movements are restrained illustrative interpretations, not authenticated surviving choreography. Show anatomically plausible gentle movement, never combat, animal transformation, supernatural healing, duplicate bodies or motion trails. Scene concept images must contain no people. Keep every image free of writing, calligraphy, seals, signage, decorative glyphs and embedded dialogue; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为华佗向吴普传授五禽戏、所列五禽种类，以及传载吴普施行后年九十余仍耳目聪明、齿牙完坚。第1格首句对白为原文；其余对白、授课顺序、庭院与林地均属文学化安排。原文未详载各式动作，画面只作温和导引的示意，不冒充汉代动作复原，也不套用后世成套功法。为满足角色资产一致性，吴普始终采用同一长者造型，授业时年龄不作断言，末格由旁白完成时间推进。长寿与身体状况按传文叙述，不据此宣称五禽戏必然延寿或包治疾病。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q02",
+  "episode": 6,
+  "story_bank_no": 16,
+  "_generation": {
+    "written_at": "2026-11-11T22:05:46+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 4649,
+      "completion_tokens": 4358,
+      "total_tokens": 9007,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 4646,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 458,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "bf9f5b295cced12f88fd39bab1a35c8c31807d879c4203aefe765d2d98fed4eb",
+    "source_of_story": "batches/story-bank.json"
+  }
+}
