@@ -9,6 +9,7 @@ import base64
 import html
 import json
 import os
+import time
 import urllib.error
 import urllib.request
 import uuid
@@ -185,7 +186,7 @@ def call_openai(cfg: dict, prompt: str, model: str, quality: str,
     )
     opener = _opener(cfg)
     body = None
-    for attempt in range(2):
+    for attempt in range(3):
         try:
             with opener.open(req, timeout=600) as resp:
                 body = json.loads(resp.read().decode("utf-8"))
@@ -197,12 +198,14 @@ def call_openai(cfg: dict, prompt: str, model: str, quality: str,
                     "HTTP 401: API key 无效或已撤销，请到「连接设置」更新会话密钥。") from None
             raise RuntimeError(f"OpenAI API returned HTTP {exc.code}: {detail}") from None
         except urllib.error.URLError as exc:
-            if attempt == 0:
-                continue  # transient proxy reset; the request never reached the API
+            if attempt < 2:
+                time.sleep(2 * (attempt + 1))  # local proxies drop long TLS tunnels
+                continue
             raise RuntimeError(
                 f"无法连接 OpenAI API：{exc.reason}。请检查 config.json 里的 api_proxy。") from None
         except OSError as exc:
-            if attempt == 0:
+            if attempt < 2:
+                time.sleep(2 * (attempt + 1))
                 continue
             raise RuntimeError(f"图像生成请求超时或连接中断：{exc}。可重跑批量脚本，已完成的图会自动跳过。") from None
     if body is None:
@@ -314,7 +317,7 @@ def call_openai_edit(cfg: dict, prompt: str, images: list[bytes], *,
     # repeated `image`. Start with the array syntax and negotiate on HTTP 400.
     array_mode = len(raw_files) > 1
     array_fallback_done = False
-    for _attempt in range(len(optional) + 5):
+    for _attempt in range(len(optional) + 8):
         image_field = "image[]" if array_mode else "image"
         files = [(image_field, name, data) for name, data in raw_files]
         body, ctype = _multipart(current, files)
@@ -351,13 +354,15 @@ def call_openai_edit(cfg: dict, prompt: str, images: list[bytes], *,
                 raise RuntimeError("HTTP 401: API key 无效或已撤销。") from None
             raise RuntimeError(f"参考图生成失败 HTTP {exc.code}: {detail}") from None
         except urllib.error.URLError as exc:
-            if network_retries < 1:
+            if network_retries < 2:
                 network_retries += 1
+                time.sleep(2 * network_retries)
                 continue  # transient proxy reset before the API answered
             raise RuntimeError(f"无法连接参考图接口：{exc.reason}。检查 api_proxy。") from None
         except OSError as exc:
-            if network_retries < 1:
+            if network_retries < 2:
                 network_retries += 1
+                time.sleep(2 * network_retries)
                 continue
             raise RuntimeError(f"参考图生成超时或连接中断：{exc}") from None
     if payload is None:
