@@ -457,11 +457,13 @@ def main() -> None:
         "why_not_in_romance": plan["why_not_in_romance"],
         "pricing_note": "gpt-image-2.6-sunburst 的官方单价未由 /v1/models 公开，"
                         "成本按上一代同档估算值记账，见 studio/pricing.py 的 ESTIMATED_MODELS。",
-        "cost_note": "total_cost_usd 只统计最终入库资产；若曾用 --redo-panels 重做分镜，"
-                     "被替换的旧图已产生额外 API 费用，未计入此处。",
+        "cost_note": "total_cost_usd 只统计最终入库资产；若曾用 --redo-panels 或 "
+                     "--redo-degraded-panels 重做分镜，被替换的旧图已产生额外 API 费用，未计入此处。",
         "regenerate_command": "python tools/generate_comic.py",
-        "reproduce_note": "角色卡 anchor 逐字置于提示词最前，分镜走 /images/edits 并"
-                          "以该角色立绘作参考图；场景卡保存了完整 prompt 与环境描述。",
+        "reproduce_note": "角色卡 anchor 逐字置于提示词最前；分镜走 /images/edits 并以该角色立绘作参考图，"
+                          "多人物分镜一次传入 2-3 张立绘且 multipart 字段必须用 image[] 数组语法；"
+                          "模型不支持的可选参数（input_fidelity / background / output_format）按 400 报错逐个移除。"
+                          "场景卡保存了完整 prompt 与环境描述。",
         "asset_count": len(rows),
         "total_cost_usd": round(sum(float(r.get("cost_usd") or 0) for r in rows), 4),
     }
@@ -495,6 +497,7 @@ def main() -> None:
             "复现\n----\n"
             "python tools/generate_comic.py            # 幂等，已生成图自动跳过\n"
             "python tools/generate_comic.py --export-only  # 只重新打包，不调用 API\n"
+            "python tools/generate_comic.py --redo-degraded-panels  # 只补生成降级为纯文本的分镜\n"
             "python tools/write_comic.py              # 用文本模型重写剧本\n\n"
             "注意：画风沿用「三国英雄立绘」；锚点版本变化意味着人物设定改过，"
             "旧图与新图不要混用。图片可能含平台 AIGC 标识，请按发布平台要求标注。\n"),
