@@ -141,13 +141,22 @@ def prepare_portraits(cfg: dict, entries: dict, workers: int) -> list[str]:
 
 # ------------------------------------------------------------------ phase B: episodes
 
-def run_episodes(cfg: dict, items, workers: int, extra: list[str]) -> list[dict]:
+def run_episodes(cfg: dict, items, workers: int, extra: list[str],
+                 watchdog: int = 900) -> list[dict]:
+    """Run episode workers, killing any whose log goes silent for too long.
+
+    A half-open TLS connection through a local proxy can leave one worker
+    blocked far past its socket timeout while the other workers finish. The
+    silent-log watchdog turns that into a normal failure, so the scheduler
+    keeps dispatching and --fix-degraded retries the episode afterwards.
+    """
     logdir = cfg["local"] / "series-logs"
     logdir.mkdir(parents=True, exist_ok=True)
     queue = list(items)
     running = {}
     results = []
-    log(f"启动 {len(queue)} 集生成 · {workers} 进程并发 · 日志 {logdir}")
+    log(f"启动 {len(queue)} 集生成 · {workers} 进程并发 · 日志 {logdir}"
+        + (f" · 静默看门狗 {watchdog}s" if watchdog else ""))
     while queue or running:
         while queue and len(running) < workers:
             no, plan, rel = queue.pop(0)
@@ -165,7 +174,22 @@ def run_episodes(cfg: dict, items, workers: int, extra: list[str]) -> list[dict]
         for proc, (no, plan, rel, fh, lf, t0) in list(running.items()):
             rc = proc.poll()
             if rc is None:
-                continue
+                try:
+                    silent = time.time() - lf.stat().st_mtime
+                except OSError:
+                    silent = 0.0
+                if not (watchdog and silent > watchdog):
+                    continue
+                log(f"  !! 第 {no:>2} 集日志静默 {silent:.0f}s，"
+                    "判定长连接僵死，终止并留给补跑阶段重试")
+                try:
+                    proc.terminate()
+                    proc.wait(timeout=10)
+                except Exception:
+                    proc.kill()
+                rc = proc.poll()
+                if rc is None:
+                    rc = -9
             fh.close()
             tail = ""
             try:
@@ -388,6 +412,8 @@ def main() -> None:
     ap.add_argument("--episodes", default="", help="只跑指定集，逗号分隔，如 1,2,3")
     ap.add_argument("--fix-degraded", action="store_true",
                     help="生成后自动补跑降级/缺图的分镜")
+    ap.add_argument("--watchdog", type=int, default=900,
+                    help="单集日志静默超过该秒数即判定僵死并终止，0 关闭")
     args = ap.parse_args()
 
     cfg = config.load()
@@ -415,7 +441,8 @@ def main() -> None:
             if failures:
                 log(f"警告：{len(failures)} 张共享立绘失败，相关分镜可能降级")
         if not args.prepare_only:
-            results = run_episodes(cfg, items, max(1, args.workers), [])
+            results = run_episodes(cfg, items, max(1, args.workers), [],
+                                   args.watchdog)
             bad = [r for r in results if not r["ok"]]
             if bad:
                 log(f"{len(bad)} 集进程异常：" + ", ".join(str(r["no"]) for r in bad))
@@ -424,7 +451,7 @@ def main() -> None:
                 if todo:
                     log(f"补跑 {len(todo)} 集的降级/缺失分镜")
                     run_episodes(cfg, todo, max(1, min(2, args.workers)),
-                                 ["--redo-degraded-panels"])
+                                 ["--redo-degraded-panels"], args.watchdog)
     else:
         log("--index-only：跳过生成，只重建索引与同步")
 

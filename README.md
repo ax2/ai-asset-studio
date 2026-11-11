@@ -199,6 +199,8 @@ python tools/run_story_queue.py --all --workers 3  # 依次跑完全部批次
 
 注意：`gpt-image-2.6-sunburst` 单价为估算值，队列里 `budget_spent_usd` 是估算累计，不是账单；`--status` 可随时查看并叫停。
 
+长跑稳定性：`generate_comic_series.py --watchdog 900`（默认开启）会在单集日志静默超过 900 秒时判定为本地代理长连接半开，自动终止该 worker 并把这一集留给 `--fix-degraded` 补跑，避免一个僵死进程拖住整批；`--watchdog 0` 可关闭。已入库的图片永远不会被重复计费。
+
 ## 目录
 
 ```
