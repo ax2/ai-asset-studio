@@ -4,6 +4,8 @@
     python tools/generate_comic.py --list          # plan + estimated cost
     python tools/generate_comic.py                # full batch (idempotent)
     python tools/generate_comic.py --export-only   # re-pack, no API calls
+    python tools/generate_comic.py --redo-degraded-panels  # only panels that
+                                                  # fell back to text-only
 
 Pipeline: script (written by GPT-6.1 Sol) -> scene cards + character cards ->
 new character portraits -> standalone scene concept art -> six comic panels ->
@@ -315,6 +317,8 @@ def main() -> None:
     ap.add_argument("--skip-panels", action="store_true", help="只生成角色与场景")
     ap.add_argument("--redo-panels", action="store_true",
                     help="删除本批已有分镜后重新生成（补齐此前缺失的人物参考图）")
+    ap.add_argument("--redo-degraded-panels", action="store_true",
+                    help="只删除并重新生成降级为纯文本的分镜（reference_used=False）")
     ap.add_argument("--max-cost", type=float, default=0.0, help="覆盖单次成本上限（美元）")
     args = ap.parse_args()
 
@@ -394,18 +398,23 @@ def main() -> None:
         # 3. Six comic panels.
         if not args.skip_panels:
             scene_map = {s["id"]: s for s in plan["scenes"]}
-            if args.redo_panels:
-                removed = 0
+            if args.redo_panels or args.redo_degraded_panels:
+                removed = []
                 for r in list(store.iter_all(cfg)):
                     if (r.get("batch_id") != plan["id"]
                             or r.get("asset_kind") != "comic-panel"):
                         continue
+                    if (not args.redo_panels and r.get("reference_used")
+                            and not r.get("degraded")):
+                        continue  # a good panel with full references; keep it
                     (cfg["local"] / str(r.get("file") or "")).unlink(missing_ok=True)
                     with store.connect(cfg) as con:
                         con.execute("DELETE FROM assets WHERE id=?", (r["id"],))
                         con.execute("DELETE FROM asset_tags WHERE asset_id=?", (r["id"],))
-                    removed += 1
-                log(f"--redo-panels：移除 {removed} 张旧分镜，本轮全部重新生成")
+                    removed.append(int(r.get("panel_no") or 0))
+                what = "全部" if args.redo_panels else "降级的"
+                log(f"--redo-{'' if args.redo_panels else 'degraded-'}panels："
+                    f"移除 {len(removed)} 张{what}分镜（第 {sorted(removed)} 格），本轮仅补生成这些格")
             for p in plan["panels"]:
                 existing = None if args.force else find(
                     cfg, plan["id"], asset_kind="comic-panel", panel_no=p["no"])

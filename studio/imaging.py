@@ -278,15 +278,17 @@ def check_connection(cfg: dict) -> dict:
 def call_openai_edit(cfg: dict, prompt: str, images: list[bytes], *,
                      model: str | None = None, quality: str | None = None,
                      size: str | None = None, background: str = "transparent",
-                     input_fidelity: str = "high") -> bytes:
+                     input_fidelity: str = "high", timeout: int = 600) -> bytes:
     """Generate an image guided by reference images of an existing character.
 
     ``input_fidelity`` is the API's lever for matching facial features and art
     style on models that support it. Several optional knobs (input_fidelity,
     background, output_format) are rejected with HTTP 400 by newer models such
     as gpt-image-2; on such an error we drop exactly the parameter the API
-    names and retry. The reference image still guides the edit. GPT Image
-    models always return b64_json.
+    names and retry. More than one reference image is sent with the ``image[]``
+    array syntax (repeated plain ``image`` fields raise duplicate_parameter on
+    gpt-image-2.6-sunburst); if a model rejects that syntax we fall back to
+    repeated ``image`` fields once. GPT Image models always return b64_json.
     """
     key = config.api_key(cfg)
     if not key:
@@ -301,25 +303,45 @@ def call_openai_edit(cfg: dict, prompt: str, images: list[bytes], *,
         "quality": quality, "background": background,
         "output_format": "png", "input_fidelity": input_fidelity,
     }
-    files = [("image", f"reference_{i}.png", data)
-             for i, data in enumerate(images[:16])]
+    raw_files = [(f"reference_{i}.png", data)
+                 for i, data in enumerate(images[:16])]
     opener = _opener(cfg)
     payload = None
     current = dict(fields)
     optional = ("input_fidelity", "background", "output_format")
     network_retries = 0
-    for _attempt in range(len(optional) + 3):
+    # Newer models require image[] for multiple references; older ones accept
+    # repeated `image`. Start with the array syntax and negotiate on HTTP 400.
+    array_mode = len(raw_files) > 1
+    array_fallback_done = False
+    for _attempt in range(len(optional) + 5):
+        image_field = "image[]" if array_mode else "image"
+        files = [(image_field, name, data) for name, data in raw_files]
         body, ctype = _multipart(current, files)
         req = urllib.request.Request(
             edit_endpoint(cfg), data=body,
             headers={"Authorization": f"Bearer {key}", "Content-Type": ctype},
             method="POST")
         try:
-            with opener.open(req, timeout=600) as resp:
+            with opener.open(req, timeout=timeout) as resp:
                 payload = json.loads(resp.read().decode("utf-8"))
             break
         except urllib.error.HTTPError as exc:
             detail = exc.read().decode("utf-8", "replace")[:500]
+            # duplicate_parameter means repeated `image` fields were sent;
+            # the API itself asks for the image[] array syntax.
+            if exc.code == 400 and "duplicate_parameter" in detail:
+                if not array_mode:
+                    array_mode = True
+                    continue
+            # A model that does not understand image[] gets one plain retry.
+            if (exc.code == 400 and array_mode and not array_fallback_done
+                    and "image[]" in detail
+                    and "duplicate_parameter" not in detail
+                    and "array syntax" not in detail):
+                array_mode = False
+                array_fallback_done = True
+                continue
             drop = next((k for k in optional
                          if k in current and k in detail), "")
             if exc.code == 400 and drop:

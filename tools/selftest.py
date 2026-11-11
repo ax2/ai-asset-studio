@@ -197,6 +197,51 @@ def main() -> None:
           and b"background" in sent[1] and b"background" not in sent[2]
           and out == b"\x00\x00\x00")
 
+    # gpt-image-2.6-sunburst rejects repeated `image` fields for multi-character
+    # panels, so the client must send the image[] array syntax up front and keep
+    # one fallback for models that do not understand it.
+    tiny = png.encode(png.make(8, 8, 4))
+
+    class ArrayOpener:
+        def __init__(self, errors):
+            self.errors = errors
+            self.sent = []
+
+        def open(self, req, timeout=0):
+            self.sent.append(req.data or b"")
+            if len(self.sent) <= len(self.errors):
+                raise urllib.error.HTTPError(
+                    "https://api.openai.com/v1/images/edits", 400, "Bad Request", {},
+                    io.BytesIO(self.errors[len(self.sent) - 1]))
+            return FakeResponse(b'{"data":[{"b64_json":"AAAA"}]}')
+
+    op = ArrayOpener([])
+    with patch.object(imaging, "_opener", return_value=op):
+        imaging.call_openai_edit(cfg, "two characters", [tiny, tiny],
+                                 model="gpt-image-2.6-sunburst")
+    check("multi reference uses image[] array syntax",
+          len(op.sent) == 1
+          and op.sent[0].count(b'name="image[]"') == 2
+          and b'name="image"' not in op.sent[0])
+
+    op = ArrayOpener([])
+    with patch.object(imaging, "_opener", return_value=op):
+        imaging.call_openai_edit(cfg, "one character", [tiny], model="gpt-image-2")
+    check("single reference keeps plain image field",
+          len(op.sent) == 1 and op.sent[0].count(b'name="image"') == 1
+          and b'name="image[]"' not in op.sent[0])
+
+    op = ArrayOpener([
+        b'{"error":{"param":"image[]","message":"Unknown parameter: \'image[]\'."}}',
+    ])
+    with patch.object(imaging, "_opener", return_value=op):
+        imaging.call_openai_edit(cfg, "two characters", [tiny, tiny],
+                                 model="legacy-model")
+    check("array syntax falls back to repeated image fields",
+          len(op.sent) == 2
+          and op.sent[0].count(b'name="image[]"') == 2
+          and op.sent[1].count(b'name="image"') == 2)
+
     # Scene cards are first-class reproducible assets.
     from studio import scenes as scn
     test_scene = {"id": "__selftest_scene__", "name": "自检庭院",
