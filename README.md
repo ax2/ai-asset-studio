@@ -205,7 +205,7 @@ python tools/run_story_queue.py --all --workers 3 --attempts 3 --child-watchdog 
 ### 长跑稳定性（三层防护）
 
 1. **单集看门狗**：`generate_comic_series.py --watchdog 600`（队列自动传入）会在某一集日志静默 600 秒时判定本地代理长连接半开，终止该 worker，把这一集留给 `--fix-degraded` 补跑；`--watchdog 0` 可关闭。
-2. **子进程看门狗**：`run_story_queue.py --child-watchdog 1200` 监控系列总控的 stdout，静默 20 分钟即 `taskkill /T /F` 整棵进程树并重试本批。笔记本休眠、整机挂起导致所有 worker 同时僵死时，这一层能兜住（单集看门狗对「父进程一起冻结」无能为力）。
+2. **子进程看门狗**：`run_story_queue.py --child-watchdog 1200` 同时监控系列总控的 stdout 与本批各集日志的最新写入时间，静默 20 分钟即 `taskkill /T /F` 整棵进程树并重试本批。笔记本休眠、整机挂起导致所有 worker 同时僵死时，这一层能兜住（单集看门狗对「父进程一起冻结」无能为力）。**必须看日志**：总控只在一集结束时才打印，正常也要 13–30 分钟，只看 stdout 会把健康批次误杀。
 3. **完整性校验 + 重试**：每批生成后逐集核对分镜数量与 `reference_used` / `degraded` 标记，只有 10 集全部 6 格合格且子进程 rc=0 才标记 `done`；否则最多重试 `--attempts` 次，每次只补缺口，绝不重复计费。失败会写 `error` 字段并停下队列，不会假装完成。
 
 剧本阶段也是断点安全的：只要 `series-*.json` 指向的 10 个剧本文件都在，就自动跳过文本模型阶段，无需手动加 `--skip-scripts`。
