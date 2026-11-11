@@ -281,7 +281,8 @@ def series_html(sm: dict, plans, stats: dict) -> str:
         parts.append(f"<p class='why'>演义未收录："
                      f"{html.escape(plan['why_not_in_romance'][:120])}</p>")
         parts.append(f"<div class='meta'>{len(s['panels'])} 格分镜 · "
-                     f"{s['scenes']} 场景 · {s['portraits']} 立绘 · "
+                     f"{s['scenes']} 场景 · {s['portraits']} 本集新增立绘 · "
+                     f"{len(s['rows'])} 张资产 · "
                      f"${s['cost']:.3f} · {html.escape(', '.join(s['metadata']))} · "
                      f"{badge}</div>")
         parts.append("<div class='acts'>")
@@ -294,8 +295,8 @@ def series_html(sm: dict, plans, stats: dict) -> str:
         f"<footer>共 {len(plans)} 集 · {total_assets} 张入库资产 · "
         f"估算成本 ${total_cost:.3f}（gpt-image-2.6-sunburst 官方单价未公开，"
         "按上一代同档估算，见 studio/pricing.py）<br>"
-        "人物立绘为全系列共享资产；场景卡与角色卡保存在 SQLite，"
-        "完整参数见各集 recipe.json / manifest.json。</footer>")
+        "人物立绘为全系列共享资产；每集 ZIP 的 shared-portraits/ 附本集用到的共享立绘副本，"
+        "场景卡与角色卡保存在 SQLite，完整参数见各集 recipe.json / manifest.json。</footer>")
     parts.append("</div></body></html>")
     return "\n".join(parts)
 

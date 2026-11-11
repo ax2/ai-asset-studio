@@ -18,9 +18,9 @@ def export_zip(cfg: dict, rows: list, name: str | None = None,
                extra_files: dict | None = None) -> dict:
     """Bundle images + a full reproducibility manifest.
 
-    extra_files maps arcname -> str content, used for character cards, the
-    style bible and the batch recipe so a pack can be regenerated later
-    without access to the original database.
+    extra_files maps arcname -> str / bytes / JSON-serialisable content, used
+    for character cards, shared portraits, the style bible and the batch recipe
+    so a pack can be regenerated later without access to the original database.
     """
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
     safe = "".join(c for c in (name or f"asset-pack-{stamp}")
@@ -54,8 +54,12 @@ def export_zip(cfg: dict, rows: list, name: str | None = None,
                                 "assets": manifest}, ensure_ascii=False, indent=2))
         zf.writestr("prompts.txt", "\n".join(lines))
         for arcname, content in (extra_files or {}).items():
-            zf.writestr(arcname, content if isinstance(content, str)
-                        else json.dumps(content, ensure_ascii=False, indent=2))
+            if isinstance(content, (bytes, bytearray)):
+                zf.writestr(arcname, bytes(content))
+            elif isinstance(content, str):
+                zf.writestr(arcname, content)
+            else:
+                zf.writestr(arcname, json.dumps(content, ensure_ascii=False, indent=2))
     return {"ok": True, "path": str(out), "count": copied, "filename": out.name}
 
 

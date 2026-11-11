@@ -515,6 +515,7 @@ def main() -> None:
             f"史料 {plan['story_source'][:120]}\n\n"
             "comic.html        可直接双击阅读的连环画（图片不含文字，旁白/对白由页面叠加）\n"
             "images/           人物立绘、场景概念图、6 格分镜原图，保留来源元数据\n"
+            "shared-portraits/ 本集用到、但归在全系列共享资产下的角色立绘副本\n"
             "script.json       完整剧本：6 格旁白、对白、画面描述、场景与人物设定\n"
             "manifest.json     每张图的 prompt / model / quality / size / cost / metadata /\n"
             "                  character_id / anchor_version / scene_id / panel_no\n"
@@ -530,6 +531,29 @@ def main() -> None:
             "注意：画风沿用「三国英雄立绘」；锚点版本变化意味着人物设定改过，"
             "旧图与新图不要混用。图片可能含平台 AIGC 标识，请按发布平台要求标注。\n"),
     }
+    # A series episode may reuse a portrait owned by another batch. Ship a copy
+    # so every ZIP is self-contained, without inflating this batch's manifest.
+    owned = {r["id"] for r in rows}
+    by_name = {c["name"]: c for c in characters.list_cards(cfg)}
+    shared = []
+    for spec in plan["characters"]:
+        card = by_name.get(spec["name"]) or {}
+        ref = card.get("ref_asset_id")
+        if not ref or ref in owned:
+            continue
+        asset = store.get(cfg, ref)
+        if not asset or asset.get("demo"):
+            continue
+        src = cfg["local"] / str(asset.get("file") or "")
+        if not src.is_file():
+            continue
+        name = "shared-portraits/" + str(asset.get("filename") or src.name)
+        extra[name] = src.read_bytes()
+        shared.append({"character": spec["name"], "asset_id": asset["id"],
+                       "file": name, "origin_batch": asset.get("batch_id"),
+                       "anchor_version": card.get("anchor_version")})
+        owned.add(ref)
+    extra["shared-portraits.json"] = shared
     out = exporter.export_zip(cfg, rows, plan["id"], extra)
     log(f"导出 {out['count']} 张 → {out['path']}")
 
