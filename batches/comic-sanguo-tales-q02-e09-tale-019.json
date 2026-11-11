@@ -1,0 +1,227 @@
+{
+  "id": "comic-sanguo-tales-q02-e09-tale-019",
+  "title": "王戎识道旁李",
+  "subtitle": "满树累累，何以无人先摘？",
+  "story_source": "《晋书》卷四十三·王戎传；原文摘录：“夫李树在道而多子，必苦李也。”本传记王戎七岁时与群儿游玩，见道旁李树多实，同伴争相采摘，王戎独不往；取果尝验，果然是苦李。",
+  "why_not_in_romance": "通行毛本未叙王戎幼年观察道旁李树、判断苦李的故事，此条取自《晋书》本传。【演义归属：演义未载】",
+  "synopsis": "七岁的王戎与同伴在路旁游玩，发现一株果实累累的李树。同伴急着摘取，王戎却站着不动。他认为，李树生在人人经过的道旁，果实仍如此多，必是苦李。同伴摘下一尝，果然苦涩，这才佩服他的观察。",
+  "characters": [
+    {
+      "name": "王戎",
+      "slug": "wang-rong",
+      "existing": false,
+      "role": "曹魏时期的七岁士族儿童，本故事主角",
+      "profile": {
+        "age": "Seven years old",
+        "gender": "Male",
+        "role": "Young Wang Rong, an observant child from a scholarly family",
+        "era": "Cao Wei period of the Three Kingdoms, third century CE",
+        "face": "Small oval child face, softly rounded cheeks, straight delicate brows, small nose",
+        "eyes": "Dark brown eyes with a calm, attentive gaze",
+        "skin": "Light warm beige skin",
+        "build": "Short and slender child proportions, narrow shoulders",
+        "hair": "Black hair gathered into one small crown knot with a plain dark brown cloth tie, no adult cap",
+        "marks": "No scars, tattoos, facial hair, or distinctive birthmarks",
+        "outfit": "Fixed pale blue-gray plain cross-collar narrow-sleeved knee-length robe, off-white inner collar, gray-brown cloth sash, dark gray trousers, dark brown cloth shoes; identical clothing throughout",
+        "accessories": "Only the plain cloth hair tie and cloth sash; no jewelry or writing implements",
+        "weapon": "None",
+        "palette": "Pale blue-gray, off-white, gray-brown, dark gray, dark brown",
+        "temperament": "Quiet, observant, thoughtful, confident without arrogance",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, natural child anatomy",
+        "negative": "No adult proportions, no beard, no crown, no armor, no weapons, no modern objects, no costume changes, no hairstyle changes, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body standing child reference, relaxed upright posture, hands resting naturally at his sides, head slightly turned as if studying a nearby tree; show the complete fixed outfit and both shoes against a plain neutral background; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "曹魏",
+        "王戎",
+        "儿童",
+        "善于观察"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "同游童子",
+      "slug": "tong-you-tong-zi",
+      "existing": false,
+      "role": "与王戎同游的无名儿童，作为群儿的单人代表",
+      "profile": {
+        "age": "Approximately seven to eight years old",
+        "gender": "Male",
+        "role": "Unnamed playmate representing the children in the historical account",
+        "era": "Cao Wei period of the Three Kingdoms, third century CE",
+        "face": "Round child face, full cheeks, short nose, expressive curved brows",
+        "eyes": "Dark brown eyes, lively and readily widened with curiosity",
+        "skin": "Warm lightly sun-tanned skin",
+        "build": "Short child stature, slightly stockier than Wang Rong, natural child proportions",
+        "hair": "Black hair gathered into one small crown knot with a plain gray-brown cloth tie",
+        "marks": "No scars, tattoos, facial hair, or distinctive birthmarks",
+        "outfit": "Fixed ochre-brown plain hemp cross-collar narrow-sleeved knee-length robe, light beige inner collar, dark brown cloth sash, gray-brown trousers, worn dark cloth shoes; identical clothing throughout",
+        "accessories": "Only the plain cloth hair tie and cloth sash; a freshly picked plum appears only when required by the action",
+        "weapon": "None",
+        "palette": "Ochre-brown, light beige, dark brown, gray-brown, charcoal",
+        "temperament": "Energetic, impulsive, curious, candid when proven wrong",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, natural child anatomy",
+        "negative": "No adult proportions, no beard, no crown, no armor, no weapons, no modern objects, no costume changes, no hairstyle changes, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body standing child reference, slightly forward-leaning lively posture, one hand loosely raised in curiosity, both feet visible, complete fixed outfit against a plain neutral background; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "曹魏",
+        "无名儿童",
+        "群儿代表"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "乡间道路远景",
+      "description": "无人乡间土路概念图。浅色道路从前景延伸至远处田畦，右侧立着一株枝条低垂、果实累累的李树，树下有稀疏野草。道路敞露，清楚显示李树处于行人容易经过的位置。",
+      "prompt_extra": "Standalone uninhabited environment concept art of a third-century northern Chinese rural dirt road, pale dusty path receding between modest cultivated fields, one mature plum tree on the right roadside with abundant small dusky red-purple plums and low reachable branches, sparse grass, soft summer daylight, even lighting, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette; no people, no human silhouettes, no animals, no buildings with signs, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "夏日白昼",
+      "mood": "明净、闲适"
+    },
+    {
+      "id": "scene-02",
+      "name": "道旁李树近景",
+      "description": "无人李树下环境概念图，与远景为同一地点。树干位于右侧，低枝向左伸展，青叶间结着密集的红紫李子；树下平整土路与远处田畦可见，便于呈现摘果、问答和尝果。",
+      "prompt_extra": "Standalone uninhabited closer environment concept art beneath the same roadside plum tree, trunk on the right, low fruit-laden branches extending left at a child's reaching height, abundant small dusky red-purple plums among green leaves, clear dusty ground, the same open road visible behind the tree and fields beyond, soft summer daylight, even lighting, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette; no people, no human silhouettes, no animals, no signs, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "夏日白昼",
+      "mood": "清幽、便于观察"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "七岁王戎，与同伴游于道旁。",
+      "dialogue": [],
+      "visual": "Wide view of Wang Rong and 同游童子 playing beside the rural road, exactly two children visible. The playmate pauses mid-step and notices the heavily laden plum tree on the right; Wang Rong turns his attentive gaze toward it. Keep the open road and low reachable fruit clearly visible. Both children exactly match their character profiles, with unchanged clothing and hair. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no additional people, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "王戎",
+        "同游童子"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-02",
+      "caption": "道旁李实累累，同伴急忙伸手。",
+      "dialogue": [
+        {
+          "speaker": "同游童子",
+          "line": "这么多李子！"
+        }
+      ],
+      "visual": "Medium view beneath the plum tree. 同游童子 stands on tiptoe and reaches toward one low-hanging plum, eager and animated. Wang Rong stands a short distance to the left with both hands relaxed, making no attempt to pick fruit. Show abundant fruit remaining within easy reach and the public road behind them. Exactly two children, matching their fixed profiles and outfits. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no additional people, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "王戎",
+        "同游童子"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "王戎独不往，同伴回头问他。",
+      "dialogue": [
+        {
+          "speaker": "同游童子",
+          "line": "你怎么不摘？"
+        }
+      ],
+      "visual": "Medium two-child view beneath the same plum tree. 同游童子 has just detached one small dusky red-purple plum and holds it at chest height, turning toward Wang Rong with a questioning expression. Wang Rong remains still and looks thoughtfully between the exposed road and the fruit-laden branch. Preserve the same tree layout, costumes, hairstyles, and daylight. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no additional people, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "王戎",
+        "同游童子"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-01",
+      "caption": "他看的是李树，也看树旁的路。",
+      "dialogue": [
+        {
+          "speaker": "王戎",
+          "line": "夫李树在道而多子，必苦李也。"
+        }
+      ],
+      "visual": "Medium view of Wang Rong alone at the roadside, framed with the open dirt road receding behind one shoulder and the heavily laden low plum branches beside the other. He makes a small open-handed gesture toward the road while calmly explaining his judgment. His expression is thoughtful rather than smug. No imagined passersby or explanatory inset. Match his established child anatomy, unchanged pale blue-gray robe, and fixed hair knot. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no additional people, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "王戎"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "摘下一尝，果然苦涩。",
+      "dialogue": [
+        {
+          "speaker": "同游童子",
+          "line": "呀，真苦！"
+        }
+      ],
+      "visual": "Close view of 同游童子 alone beneath the tree, holding the same plum with one fresh bite missing. His brows pinch, eyes narrow, and lips purse at the bitter taste; keep the reaction natural and gently humorous, without exaggerated visual symbols. Softly blurred fruit-laden leaves and the same dusty roadside form the background. Preserve his fixed ochre-brown robe and crown knot. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no additional people, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "同游童子"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-01",
+      "caption": "取之信然，同伴这才信服。",
+      "dialogue": [
+        {
+          "speaker": "同游童子",
+          "line": "原来你早看明白了。"
+        }
+      ],
+      "visual": "Wide closing view of exactly two children beside the same open country road. 同游童子 has lowered the bitten plum and looks at Wang Rong with sincere newfound respect. Wang Rong returns a quiet modest smile, hands relaxed, while the still heavily laden plum tree remains on the right and the road extends into the distance. Keep every costume, hairstyle, tree feature, and lighting condition consistent with earlier panels. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no additional people, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "王戎",
+        "同游童子"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture where applicable, and even lighting. This episode depicts unarmored children in the Cao Wei period, not adult Western Jin officials. Maintain natural seven-year-old proportions and exactly the established faces, hairstyles, clothing, footwear, and palettes throughout. Only Wang Rong and the single named playmate may appear; never add background children, passersby, silhouettes, crowds, or duplicate figures. Scene assets must be entirely uninhabited. The two environments depict the same roadside plum tree from different distances; preserve its right-side trunk, low branches, abundant dusky red-purple fruit, road alignment, season, and daylight. Do not use modern objects, magical effects, speech bubbles, thought bubbles, inset diagrams, calligraphy, seals, or signage. Render each panel as one uninterrupted image; all dialogue and narration are external HTML overlays; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为王戎七岁、与群儿游玩、道旁李树多实、同伴争摘而王戎不往、判断必苦、尝验果然。为满足每格最多两人及新建角色上限，以“同游童子”一人代表群儿，不把史料改说成仅有两人出游。王戎所说“夫李树在道而多子，必苦李也”保留原文；其余对白、动作、服饰、景物及表情为连环画扩写，不冒充史料记载。此为特定情境下的观察判断，不引申为所有道旁果实必苦的普遍规律。故事发生于王戎童年所在的曹魏时期，不因出处为《晋书》而画成西晋官场。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q02",
+  "episode": 9,
+  "story_bank_no": 19,
+  "_generation": {
+    "written_at": "2026-11-11T22:36:22+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 4658,
+      "completion_tokens": 3883,
+      "total_tokens": 8541,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 4655,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 252,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "0dd8025267847c0f401dbf49a18cdf186690629fc5dd8d6addd8af8c0b8e90ed",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

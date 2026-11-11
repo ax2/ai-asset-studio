@@ -1,0 +1,134 @@
+{
+  "id": "sanguo-tales-q02",
+  "title": "三国小故事 · Q02 批（10 集）",
+  "planned_at": "2026-11-11T22:36:31+08:00",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "constraint": "候选库故事；《三国演义》写过的亦收录，逐条标注演义归属",
+  "source": "batches/story-bank.json",
+  "episodes": [
+    {
+      "no": 1,
+      "id": "comic-sanguo-tales-q02-e01-tale-011",
+      "title": "杜夔校钟辨音",
+      "file": "comic-sanguo-tales-q02-e01-tale-011.json",
+      "reused": true,
+      "characters": [
+        "曹操",
+        "杜夔",
+        "柴玉"
+      ],
+      "source": "《三国志》卷二十九·魏书·方技传·杜夔传；原文：太祖使玉与夔各作声韵，仪较是非，然后知夔为精，而玉之妄。文中“太祖”指曹操，“玉”指铸钟工柴玉。"
+    },
+    {
+      "no": 2,
+      "id": "comic-sanguo-tales-q02-e02-tale-012",
+      "title": "樊阿深针疗疾",
+      "file": "comic-sanguo-tales-q02-e02-tale-012.json",
+      "reused": true,
+      "characters": [
+        "樊阿",
+        "病者"
+      ],
+      "source": "《三国志》卷二十九·魏书·方技传·华佗传；原文：阿针背入一二寸，巨阙胸上五六寸，而病皆瘳。"
+    },
+    {
+      "no": 3,
+      "id": "comic-sanguo-tales-q02-e03-tale-013",
+      "title": "流水驱动木偶",
+      "file": "comic-sanguo-tales-q02-e03-tale-013.json",
+      "reused": true,
+      "characters": [
+        "马钧",
+        "曹叡"
+      ],
+      "source": "《三国志》卷二十九·魏书·方技传·杜夔传裴松之注引《马先生传》。原文摘录：“潜以水发焉。”本事记魏明帝得到百戏模型，原本只能陈设，马钧改设机关，以水力驱动模型表演。"
+    },
+    {
+      "no": 4,
+      "id": "comic-sanguo-tales-q02-e04-tale-014",
+      "title": "童转翻车灌园",
+      "file": "comic-sanguo-tales-q02-e04-tale-014.json",
+      "reused": true,
+      "characters": [
+        "马钧",
+        "转车儿童"
+      ],
+      "source": "《三国志》卷二十九·魏书·方技传·杜夔传裴松之注引《马先生传》。原文摘录：“乃作翻车，令儿童转之。”本事记马钧在京都有园地，苦于缺水，遂制翻车提水灌园。"
+    },
+    {
+      "no": 5,
+      "id": "comic-sanguo-tales-q02-e05-tale-015",
+      "title": "陈登食脍生疾",
+      "file": "comic-sanguo-tales-q02-e05-tale-015.json",
+      "reused": true,
+      "characters": [
+        "陈登",
+        "华佗"
+      ],
+      "source": "《三国志》卷二十九·魏书·方技传·华佗传。原文摘录：“广陵太守陈登得病，胸中烦懑，面赤不食。佗脉之，曰：‘府君胃中有虫数升，欲成内疽，食腥物所为也。’佗乃作汤二升，先服一升，斯须尽服之。食顷，吐出三升许虫，赤头皆动，半身是生鱼脍也，所苦便愈。佗曰：‘此病后三期当发，遇良医乃可济救。’至期果发动，时佗不在，遂死。”"
+    },
+    {
+      "no": 6,
+      "id": "comic-sanguo-tales-q02-e06-tale-016",
+      "title": "华佗授五禽戏",
+      "file": "comic-sanguo-tales-q02-e06-tale-016.json",
+      "reused": true,
+      "characters": [
+        "华佗",
+        "吴普"
+      ],
+      "source": "《后汉书》卷八十二下·方术列传下·华佗。原文摘录：“吾有一术，名五禽之戏。”又记吴普习练之效：“普施行之，年九十余，耳目聪明，齿牙完坚。”传中所列五禽为虎、鹿、熊、猨、鸟。"
+    },
+    {
+      "no": 7,
+      "id": "comic-sanguo-tales-q02-e07-tale-017",
+      "title": "叔母劝谧向学",
+      "file": "comic-sanguo-tales-q02-e07-tale-017.json",
+      "reused": true,
+      "characters": [
+        "皇甫谧",
+        "任氏"
+      ],
+      "source": "《晋书》卷五十一·皇甫谧传；原文：谧乃感激，就乡人席坦受书，勤力不怠。"
+    },
+    {
+      "no": 8,
+      "id": "comic-sanguo-tales-q02-e08-tale-018",
+      "title": "梁上君子受绢",
+      "file": "comic-sanguo-tales-q02-e08-tale-018.json",
+      "reused": true,
+      "characters": [
+        "陈寔",
+        "梁上窃贼"
+      ],
+      "source": "《后汉书》卷六十二·荀韩钟陈列传·陈寔。原文摘录：“时岁荒民俭，有盗夜入其室，止于梁上。寔阴见，乃起自整拂，呼命子孙，正色训之曰：‘夫人不可不自勉。不善之人未必本恶，习以性成，遂至于此。梁上君子者是矣！’盗大惊，自投于地，稽颡归罪。寔徐譬之曰：‘视君状貌，不似恶人，宜深克己反善。然此当由贫困。’令遗绢二匹。”"
+    },
+    {
+      "no": 9,
+      "id": "comic-sanguo-tales-q02-e09-tale-019",
+      "title": "王戎识道旁李",
+      "file": "comic-sanguo-tales-q02-e09-tale-019.json",
+      "source": "《晋书》卷四十三·王戎传；原文摘录：“夫李树在道而多子，必苦李也。”本传记王戎七岁时与群儿游玩，见道旁李树多实，同伴争相采摘，王戎独不往；取果尝验，果然是苦李。",
+      "characters": [
+        "王戎",
+        "同游童子"
+      ],
+      "reused": false
+    },
+    {
+      "no": 10,
+      "id": "comic-sanguo-tales-q02-e10-tale-020",
+      "title": "羊祜桑中寻环",
+      "file": "comic-sanguo-tales-q02-e10-tale-020.json",
+      "source": "《晋书》卷三十四·羊祜传；原文摘录：“祜年五岁，令乳母取所弄金环。”本传继记：乳母说他从未有过此物，羊祜遂到邻人李氏东垣的桑树中探得金环，邻家认出这是亡儿遗失之物，惊异悲惋。",
+      "characters": [
+        "羊祜",
+        "李氏邻母"
+      ],
+      "reused": false
+    }
+  ]
+}

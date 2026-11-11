@@ -1,0 +1,211 @@
+{
+  "id": "comic-sanguo-tales-q02-e10-tale-020",
+  "title": "羊祜桑中寻环",
+  "subtitle": "一枚桑中旧环，牵出本传所记的童年异闻",
+  "story_source": "《晋书》卷三十四·羊祜传；原文摘录：“祜年五岁，令乳母取所弄金环。”本传继记：乳母说他从未有过此物，羊祜遂到邻人李氏东垣的桑树中探得金环，邻家认出这是亡儿遗失之物，惊异悲惋。",
+  "why_not_in_romance": "【演义归属：演义未载】通行毛本《三国演义》末回写羊祜参与晋吴关系及举荐杜预等事，未写幼年寻环。这是《晋书·羊祜传》所载异闻，不作为轮回事实确认。",
+  "synopsis": "《晋书》记载，五岁的羊祜向乳母索取金环，乳母却说他从未有过。他来到邻家东墙边，从桑树中取出一枚金环。邻母认出那是亡儿失物，惊异而悲伤。本集呈现传中异闻，不将其解释为轮回的证据。",
+  "characters": [
+    {
+      "name": "羊祜",
+      "slug": "yang-hu",
+      "existing": false,
+      "role": "五岁的羊祜，本集寻环的幼童",
+      "profile": {
+        "age": "五岁",
+        "gender": "男",
+        "role": "曹魏初年士族家庭幼童，尚非成年将领",
+        "era": "曹魏初年",
+        "face": "幼童圆脸，额头饱满，鼻口小巧，面部轮廓柔和",
+        "eyes": "深褐色眼睛，目光专注清澈，不作神异发光处理",
+        "skin": "自然浅麦色，肤质细嫩",
+        "build": "身材矮小，四肢具有五岁幼童比例，不采用成人缩小体型",
+        "hair": "黑发，头顶束一小髻，额前留少量整齐短发，全篇发式不变",
+        "marks": "无胡须，无疤痕，无神异胎记",
+        "outfit": "固定穿浅米黄色素面交领及膝小袍，米白内领，灰褐窄布腰带，灰褐长裤，深褐软布履；衣料为朴素细麻，六格不换装",
+        "accessories": "无身份冠饰和佩玉；金环仅为第四格取出后手持的剧情道具，不作为固定佩饰",
+        "weapon": "无",
+        "palette": "浅米黄、米白、灰褐、深褐、墨黑",
+        "temperament": "认真、自然、略带执拗，寻环时不故作玄秘",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "No adult proportions, no armor, no crown, no glowing eyes, no supernatural aura, no modern clothing, no costume or hairstyle changes."
+      },
+      "pose": "Full-body standing reference of a five-year-old boy, one hand gently extended as if asking for a familiar object, the other resting beside his robe; natural child proportions and a calm, attentive expression.",
+      "tags": [
+        "三国",
+        "曹魏",
+        "羊祜",
+        "幼童",
+        "寻环"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "李氏邻母",
+      "slug": "li-shi-lin-mu",
+      "existing": false,
+      "role": "邻家亡儿之母，认出旧金环的人",
+      "profile": {
+        "age": "约三十五至四十五岁，属视觉设定",
+        "gender": "女",
+        "role": "邻家李氏家中的母亲，史料未载个人姓名",
+        "era": "曹魏初年",
+        "face": "略长的鹅蛋脸，颧骨柔和，眉间有浅纹，面容朴素",
+        "eyes": "深褐色眼睛，眼角略有细纹，辨认金环时由惊疑转为悲伤",
+        "skin": "自然暖麦色，有日常劳作形成的轻微风霜感",
+        "build": "中等身高，体态偏瘦，肩背略收",
+        "hair": "黑发梳成低髻，以素木簪固定，全篇发式不变",
+        "marks": "无醒目疤痕，无夸张妆容",
+        "outfit": "固定穿灰青色素面交领长襦，米灰内领，深褐长裙，灰褐布腰带，深褐布履；粗绢与麻布质感，六格不换装",
+        "accessories": "一支素木簪，无耳饰，无珠玉首饰",
+        "weapon": "无",
+        "palette": "灰青、米灰、深褐、灰褐、墨黑",
+        "temperament": "朴实克制，面对亡儿旧物先惊愕，继而流露哀伤",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "No court dress, no elaborate jewelry, no mourning costume added without evidence, no ghostly effects, no modern clothing, no costume or hairstyle changes."
+      },
+      "pose": "Full-body standing reference of a modestly dressed middle-aged woman, shoulders slightly drawn inward, hands held gently before her waist, restrained concern in her face.",
+      "tags": [
+        "三国",
+        "曹魏",
+        "邻母",
+        "李氏",
+        "亡儿旧物"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "羊家内室",
+      "description": "无人物的曹魏初年家居内室。夯土墙、木柱、素帘与低矮木榻构成朴素空间，地铺席子，侧窗透入柔和日光。陈设无铭文，室内没有金环。",
+      "prompt_extra": "Independent empty environment concept art of a modest early Cao Wei household interior, plastered earthen walls, timber posts, plain hanging curtain, low wooden couch and woven floor mat, soft daylight from a side lattice window, uncluttered domestic composition, no gold ring present, no people, no human silhouettes, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "安静、日常"
+    },
+    {
+      "id": "scene-02",
+      "name": "邻家东垣桑树",
+      "description": "无人物的邻家院落环境。东侧夯土墙旁生着一株老桑树，树干在幼童可触及的高度留有天然孔隙；树根旁是压实泥地，院门位于画面左后方。孔隙内部不可见，不预先展示金环。",
+      "prompt_extra": "Independent empty environment concept art of a neighboring early Cao Wei courtyard, an old mulberry tree beside the eastern rammed-earth wall, a natural recess in its trunk within reach of a five-year-old child, compacted earth around exposed roots, a simple wooden gate in the left background, the inside of the recess concealed by its angle, no visible ring, soft filtered daytime light, no people, no human silhouettes, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine bark and earth texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "朴素、静谧，渐生疑问"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "据《晋书》，羊祜五岁时索要金环。",
+      "dialogue": [
+        {
+          "speaker": "羊祜",
+          "line": "把我玩的金环拿来吧。"
+        }
+      ],
+      "visual": "Medium view inside scene-01. Yang Hu, exactly five years old and matching his character profile, stands beside the woven mat and extends an empty hand toward the open space beside the camera, asking naturally for a familiar toy. He wears his fixed pale cream-yellow robe, gray-brown trousers and dark brown cloth shoes, with the same small topknot. Show only Yang Hu; no nurse, no additional body parts, no gold ring. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "羊祜"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "乳母却说，他从未有过金环。",
+      "dialogue": [],
+      "visual": "Close view inside scene-01 of Yang Hu listening, his extended empty hand now lowered, his brows drawing together slightly in quiet puzzlement. Keep the same five-year-old face, small black topknot, pale cream-yellow crossed collar and off-white inner collar. The woven mat and timber post remain softly visible behind him. Only Yang Hu is visible, with no nurse, no extra hands and no imagined ring or memory image. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "羊祜"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "他来到邻家东墙边的桑树下。",
+      "dialogue": [],
+      "visual": "Wide view of scene-02, preserving the eastern earthen wall, old mulberry tree and left-background gate from the environment reference. Yang Hu has approached the tree and looks directly at the low natural recess in its trunk, one empty hand beginning to lift toward it. He is small relative to the tree and keeps his exact established clothing and hairstyle. Show only Yang Hu, with no neighbor, no nurse and no visible ring yet. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine bark and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "羊祜"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "伸手一探，竟取出一枚金环。",
+      "dialogue": [],
+      "visual": "Close view at the mulberry trunk in scene-02, showing Yang Hu's concentrated face and his small hand just withdrawing a plain small gold ring from the natural recess. The recess is at his comfortable reaching height. The ring is a simple solid circular gold object with modest natural reflections, no engraving and no magical light. Preserve his established face, topknot and pale cream-yellow sleeve. No other person or detached extra hand appears. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine bark and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "羊祜"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "邻母认出了亡儿遗失的旧物。",
+      "dialogue": [
+        {
+          "speaker": "李氏邻母",
+          "line": "这是我亡儿遗失的金环，怎会在你手里？"
+        }
+      ],
+      "visual": "Medium two-person view beside the mulberry tree in scene-02. Yang Hu holds the same plain gold ring on his open palm at chest height. Li Shi's neighboring mother leans forward slightly to inspect it, her eyes widening and one hand stopping near her own chest in startled recognition. Match both character profiles exactly, with unchanged garments and hairstyles. Keep the child's hand and the ring clearly visible between them; no third person, no deceased child, no apparition and no flashback. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and bark texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "羊祜",
+        "李氏邻母"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "本传所记异闻，不作轮回事实确认。",
+      "dialogue": [],
+      "visual": "Medium quiet concluding view in scene-02. Li Shi's neighboring mother looks down at the plain gold ring still resting in Yang Hu's open palm, her startled expression softened into restrained grief, with moist eyes but no theatrical gesture. Yang Hu stands calmly beside her, looking from the object to her face. Preserve their exact established outfits and hairstyles, the same tree and eastern wall, and ordinary daylight. Present only an observed human encounter, with no ghost, no reincarnation imagery, no supernatural aura, no extra people and no inset scene. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "羊祜",
+        "李氏邻母"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture where applicable, and even lighting. This domestic story contains no armor or weapons. Match all faces, child proportions, clothing, hairstyles and accessories to the supplied character profiles without changes. Use only scene-01 and scene-02, preserving their spatial landmarks. Environment concept images must contain no people. Each narrative image contains only its listed characters, never more than two; the nurse and deceased child must never be depicted, including as silhouettes, reflections, portraits or ghosts. Keep one consistent plain gold ring, appearing only from panel 4 onward. Do not visualize reincarnation as fact. Render each image as one continuous composition, without speech balloons or decorative frames; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架保留五岁索环、乳母否认、赴邻家东垣桑树中取环、邻家认出亡儿失物及惊异悲惋。乳母仅由旁白转述，不设立绘、不在画面出现，因此实际出镜人物仅两名。依题目梗概将认物者表现为邻母，“李氏邻母”为角色标识，非史载个人姓名。桑树孔隙的具体形态、人物服色、动作与表情属于可视化补足，不冒充原文细节；对白为据记载改写。未呈现亡儿形象，也不将本传及当时人的神异解释确认为轮回事实。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q02",
+  "episode": 10,
+  "story_bank_no": 20,
+  "_generation": {
+    "written_at": "2026-11-11T22:36:31+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 4670,
+      "completion_tokens": 4181,
+      "total_tokens": 8851,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 4667,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 510,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "ea56fdb9cb515dfc1640bc374c44cf648e5f5fd2cb814ba4965005a1bd031093",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

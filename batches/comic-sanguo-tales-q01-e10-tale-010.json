@@ -7,37 +7,36 @@
   "synopsis": "曹操行军途中失去取水路径，士卒干渴难行。他声称前方有结满果实的大梅林，梅子甘酸，可以解渴。士卒想到梅味，口中生津，重新振作，继续赶路，终于抵达水源。",
   "characters": [
     {
-      "name": "曹操",
-      "slug": "cao-cao",
-      "existing": true,
-      "role": "行军统帅，史料称“魏武”",
+      "name": "曹操·行军",
+      "slug": "cao-cao-marching",
+      "existing": false,
+      "role": "行军统帅，史料称魏武（本集戎装）",
       "profile": {
-        "age": "沿用已有角色卡",
-        "gender": "沿用已有角色卡",
-        "role": "本集行军统帅",
+        "age": "四十至五十岁的成年男性统帅",
+        "gender": "男",
+        "role": "魏武 · 行军途中的统帅",
         "era": "东汉末年",
-        "face": "沿用已有角色卡",
-        "eyes": "沿用已有角色卡",
-        "skin": "沿用已有角色卡",
-        "build": "沿用已有角色卡",
-        "hair": "沿用已有角色卡",
-        "marks": "沿用已有角色卡",
-        "outfit": "严格沿用资产库曹操既有服装，不重新设计",
-        "accessories": "沿用已有角色卡",
-        "weapon": "沿用已有角色卡，不新增或更换",
-        "palette": "沿用已有角色卡",
-        "temperament": "临困审势，镇定机敏",
-        "art_style": "Reuse the existing Cao Cao character asset without redesign.",
-        "negative": "Do not redesign the existing character or change his clothing, hairstyle, accessories, or weapons."
+        "face": "方正硬朗的脸型，颧骨与下颌线清晰，沿用曹操既有的浓眉与整齐长须",
+        "eyes": "深褐色细长眼，目光沉鸷镇定，不怒自威",
+        "skin": "久经风沙日晒的偏深麦褐肤色",
+        "build": "肩背宽厚、体格结实的成年男性，写实成人头身比 1:7（头高约为全身七分之一）",
+        "hair": "乌发整齐束起，戴玄色武弁（军中便冠，非朝会高冠），颌下蓄整齐长须",
+        "marks": "浓眉、整齐长须；无高冠、无龙纹、无毛皮大氅、无拖地宽袍",
+        "outfit": "玄黑窄袖交领战袍，外罩深褐青铜色札甲胸甲与护肩，袍摆及膝便于行军，腰束宽革带，下穿深灰长裤与黑色行军皮靴；无宽袖、无长袍、无毛皮领、无蟒龙纹，六格衣装不变",
+        "accessories": "玄色武弁、宽革带、腰侧一柄带鞘环首短刀、一只卷起的军用地图筒",
+        "weapon": "腰侧带鞘环首短刀，全篇不拔出、不挥舞",
+        "palette": "玄黑、深褐、青铜、暗朱、墨灰",
+        "temperament": "临困审势、镇定机敏、沉毅决断",
+        "art_style": "premium Three Kingdoms historical-fantasy game character concept art, highly detailed painterly digital illustration, fine brushwork on lamellar armour and coarse campaign cloth, muted historical pigments",
+        "negative": "court robe, ceremonial tall crown, dragon pattern, fur cape, wide flowing sleeves, long trailing gown, civilian scholar outfit, feather, feminine face, small head, elongated nine-head-tall proportions, chibi, photograph, 3D render, plastic, modern clothing, anime, text, watermark, cropped body, extra characters, different outfit"
       },
-      "pose": "Reuse the existing Cao Cao asset; standing firmly on a marching road, turning toward the soldier with a restrained directing gesture.",
+      "pose": "standing firmly on a dusty marching road in full campaign armour, dark narrow-sleeved war robe with bronze lamellar cuirass and black military cap, one hand gesturing calmly toward the road ahead, no ceremonial robe, no fur cape, normal 1:7 adult head-to-body proportion",
       "tags": [
         "三国",
         "曹操",
         "已有资产",
         "行军统帅"
-      ],
-      "character_id": "char-20261110-144930-66b9cc"
+      ]
     },
     {
       "name": "行军士卒",
@@ -78,7 +77,7 @@
       "id": "scene-01",
       "name": "干燥山道",
       "description": "无人环境概念图。干燥土路绕过低矮山坡，路边是枯草、碎石与稀疏灌木，远处弯道遮住去路；看不到水源或梅林。",
-      "prompt_extra": "Independent environment concept art, an empty late Eastern Han marching road winding around low hills, dusty ochre soil, scattered stones, dry grass and sparse shrubs, a bend concealing the route ahead, no plum grove, no visible water, no people, no animals, soft even daylight; premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "prompt_extra": "Independent environment concept art, an empty late Eastern Han marching road winding around low hills, dusty ochre soil, scattered stones, dry grass and sparse shrubs, a bend concealing the route ahead, no plum grove, no visible water, environment plate only, no foreground figures; the marching column is added in the story panels, soft even daylight; premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
       "time_of_day": "日间",
       "mood": "干燥、迟滞、前路未明"
     },
@@ -86,7 +85,7 @@
       "id": "scene-02",
       "name": "山脚清泉",
       "description": "无人环境概念图。山道尽头的低洼石坡间涌出清泉，浅水汇入小溪，岸边有湿石、苔痕与疏草，无建筑、无梅树。",
-      "prompt_extra": "Independent environment concept art, an empty natural spring at the foot of a low rocky hill, clear shallow water gathering between weathered stones and flowing into a narrow stream, damp rocks, subtle moss and sparse grass, an earth path entering from the left, no plum trees, no buildings, no people, no animals, soft even daylight; premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "prompt_extra": "Independent environment concept art, an empty natural spring at the foot of a low rocky hill, clear shallow water gathering between weathered stones and flowing into a narrow stream, damp rocks, subtle moss and sparse grass, an earth path entering from the left, no plum trees, no buildings, environment plate only, no foreground figures; the marching column is added in the story panels, soft even daylight; premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
       "time_of_day": "日间",
       "mood": "清润、舒缓、困境解除"
     }
@@ -97,9 +96,9 @@
       "scene_id": "scene-01",
       "caption": "行军失了汲水之路，军士皆渴。",
       "dialogue": [],
-      "visual": "Wide view using scene-01, exactly two visible people: Cao Cao and the single recurring infantryman. Cao Cao pauses on the dusty road while the infantryman trudges behind with lowered shoulders and a visibly slack waterskin at his waist. Preserve Cao Cao's existing character asset exactly, including his original clothing, hairstyle and equipment; preserve the infantryman's fixed character design. No background troops or silhouettes. Emphasize the dry road and concealed bend, not extreme summer heat. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "visual": "Wide view using scene-01. Cao Cao wears full CAMPAIGN ARMOUR: a dark narrow-sleeved war robe, a bronze lamellar cuirass, a black military cap and marching boots. He never wears a ceremonial court robe, dragon-patterned gown, tall crown or fur cape. In the foreground he pauses on the dusty road and turns toward the concealed bend, while the recurring infantryman trudges behind him with lowered shoulders and a visibly slack waterskin. Behind them show a clearly visible marching column of 5 to 8 additional infantrymen in the middle ground and background, all wearing the same ochre tunic, plain lamellar vest and brown headcloth as the recurring infantryman, walking in a loose single file along the dusty road; they are smaller and less detailed than the foreground figures but must read as a real troop column, not vague silhouettes. Emphasize the dry road, the troop column and the concealed bend, not extreme summer heat. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
       "characters": [
-        "曹操",
+        "曹操·行军",
         "行军士卒"
       ],
       "composition": "wide"
@@ -114,7 +113,7 @@
           "line": "水囊空了……"
         }
       ],
-      "visual": "Close view using scene-01, only the recurring infantryman visible. He holds his limp uncorked waterskin tilted downward with no drops emerging, his dry lips slightly parted and tired eyes lowered. Keep his face, tied hair, brown headcloth, ochre tunic, plain lamellar vest and all accessories identical to his character card. Dusty road and sparse dry grass remain softly visible behind him. No additional people. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "visual": "Close view using scene-01. Only the recurring infantryman is in sharp focus: he holds his limp uncorked waterskin tilted downward with no drops emerging, dry lips slightly parted and tired eyes lowered. Keep his face, tied hair, brown headcloth, ochre tunic, plain lamellar vest and all accessories identical to his character card. Behind him, softly out of focus, a clearly visible marching column of 5 to 8 additional infantrymen in the middle ground and background, all wearing the same ochre tunic, plain lamellar vest and brown headcloth as the recurring infantryman, walking in a loose single file along the dusty road; they are smaller and less detailed than the foreground figures but must read as a real troop column, not vague silhouettes. Dusty road and sparse dry grass remain visible. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
       "characters": [
         "行军士卒"
       ],
@@ -130,9 +129,9 @@
           "line": "前有大梅林，饶子，甘酸可以解渴。"
         }
       ],
-      "visual": "Medium view using scene-01, exactly two visible people: Cao Cao speaking calmly and the recurring infantryman listening. Cao Cao makes a small open-handed gesture toward the concealed road bend, without a whip or any newly introduced prop. The soldier raises his head attentively. Show no actual plum trees, fruit, imaginary orchard or thought bubbles. Reuse Cao Cao's existing appearance and costume exactly; keep the infantryman's established design unchanged. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "visual": "Medium view using scene-01. Cao Cao wears full CAMPAIGN ARMOUR: a dark narrow-sleeved war robe, a bronze lamellar cuirass, a black military cap and marching boots. He never wears a ceremonial court robe, dragon-patterned gown, tall crown or fur cape. He speaks calmly and makes a small open-handed gesture toward the concealed road bend, without a whip or any newly introduced prop; the recurring infantryman raises his head attentively. Behind them, a clearly visible marching column of 5 to 8 additional infantrymen in the middle ground and background, all wearing the same ochre tunic, plain lamellar vest and brown headcloth as the recurring infantryman, walking in a loose single file along the dusty road; they are smaller and less detailed than the foreground figures but must read as a real troop column, not vague silhouettes; several of them turn to listen. Show no actual plum trees, fruit, imaginary orchard or thought bubbles. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
       "characters": [
-        "曹操",
+        "曹操·行军",
         "行军士卒"
       ],
       "composition": "medium"
@@ -142,7 +141,7 @@
       "scene_id": "scene-01",
       "caption": "想到梅子甘酸，口中竟生津液。",
       "dialogue": [],
-      "visual": "Close portrait using scene-01, only the recurring infantryman visible. His eyes regain focus, his lips gently close and his throat makes a subtle swallowing motion as the thought of sour plums stimulates saliva. Convey the change through restrained facial acting, not exaggerated drooling. Keep the same face, hair, headcloth, clothing and armor. The dry roadside remains the background; no visible plums, orchard, fantasy overlay or thought bubbles. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "visual": "Close portrait using scene-01. Only the recurring infantryman is in sharp focus: his eyes regain focus, lips gently close and his throat makes a subtle swallowing motion as the thought of sour plums stimulates saliva. Convey the change through restrained facial acting, not exaggerated drooling. Keep the same face, hair, headcloth, clothing and armor. Behind him, softly out of focus, a clearly visible marching column of 5 to 8 additional infantrymen in the middle ground and background, all wearing the same ochre tunic, plain lamellar vest and brown headcloth as the recurring infantryman, walking in a loose single file along the dusty road; they are smaller and less detailed than the foreground figures but must read as a real troop column, not vague silhouettes. No visible plums, orchard, fantasy overlay or thought bubbles. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
       "characters": [
         "行军士卒"
       ],
@@ -153,9 +152,9 @@
       "scene_id": "scene-01",
       "caption": "渴意稍缓，便又振作前行。",
       "dialogue": [],
-      "visual": "Wide view using scene-01, exactly two visible people: Cao Cao walking toward the road bend and the recurring infantryman following with a steadier, more upright stride. The soldier's empty waterskin is secured at its established position on his belt. Use body posture to contrast with the exhausted opening panel. Preserve both character assets without changing costume, hairstyle or equipment. No additional soldiers, animals, plum trees or visible water. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "visual": "Wide view using scene-01. Cao Cao wears full CAMPAIGN ARMOUR: a dark narrow-sleeved war robe, a bronze lamellar cuirass, a black military cap and marching boots. He never wears a ceremonial court robe, dragon-patterned gown, tall crown or fur cape. He walks toward the road bend and the recurring infantryman follows with a steadier, more upright stride, his empty waterskin secured at its established position on his belt. Behind them, a clearly visible marching column of 5 to 8 additional infantrymen in the middle ground and background, all wearing the same ochre tunic, plain lamellar vest and brown headcloth as the recurring infantryman, walking in a loose single file along the dusty road; they are smaller and less detailed than the foreground figures but must read as a real troop column, not vague silhouettes, their posture straighter than in the opening panel. Use body posture to contrast with the exhausted opening. No animals, plum trees or visible water. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
       "characters": [
-        "曹操",
+        "曹操·行军",
         "行军士卒"
       ],
       "composition": "wide"
@@ -165,15 +164,15 @@
       "scene_id": "scene-02",
       "caption": "借这片刻生津，终于赶到水源。",
       "dialogue": [],
-      "visual": "Medium view using scene-02, exactly two visible people. The recurring infantryman kneels safely beside the shallow spring and drinks from cupped hands, visibly relieved; Cao Cao stands nearby with a composed expression. Keep the clear flowing water prominent as the actual resolution of thirst. Preserve Cao Cao's existing character asset exactly and keep the infantryman's costume, hair and equipment unchanged. No plum grove, additional people, animals or added props. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "visual": "Medium view using scene-02. Cao Cao wears full CAMPAIGN ARMOUR: a dark narrow-sleeved war robe, a bronze lamellar cuirass, a black military cap and marching boots. He never wears a ceremonial court robe, dragon-patterned gown, tall crown or fur cape. The recurring infantryman kneels safely beside the shallow spring and drinks from cupped hands, visibly relieved; Cao Cao stands nearby with a composed expression. Behind them, a clearly visible marching column of 5 to 8 additional infantrymen in the middle ground and background, all wearing the same ochre tunic, plain lamellar vest and brown headcloth as the recurring infantryman, walking in a loose single file along the dusty road; they are smaller and less detailed than the foreground figures but must read as a real troop column, not vague silhouettes; several soldiers reach the water and fill their waterskins. Keep the clear flowing water prominent as the actual resolution of thirst. No plum grove, animals or added props. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
       "characters": [
-        "曹操",
+        "曹操·行军",
         "行军士卒"
       ],
       "composition": "medium"
     }
   ],
-  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting. Reuse the existing Cao Cao asset without redesign; its costume is a series asset convention rather than a reconstruction of this event's historical clothing. Keep every character's face, hairstyle, clothing, accessories and weapons consistent throughout. Each panel contains only its listed characters, never more than two visible people, with no background crowds or silhouettes. The two environment concept images must contain no people or animals. Use only scene-01 and scene-02 for all panels. Never depict an actual plum grove, imagined orchard, thought bubble, whip gesture or a specifically identified campaign. Render each panel as one uninterrupted image. Dialogue and narration exist only in metadata for later HTML layout. Exclude seals and all readable or decorative writing; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting. In this episode Cao Cao wears full CAMPAIGN ARMOUR exactly as defined by his dedicated character card: a dark narrow-sleeved war robe with bronze lamellar cuirass, black military cap and marching boots - never a ceremonial court robe, dragon-patterned gown, tall crown or fur cape. Keep every character's face, hairstyle, clothing, accessories and weapons consistent throughout. Every story panel MUST show a visible MARCHING COLUMN: 5 to 8 additional infantrymen in the middle ground or background, all in the same ochre tunic, plain lamellar vest and brown headcloth as the recurring infantryman, walking in a loose single file along the road. They may be smaller, softer and less detailed than the foreground figures, but must be clearly recognisable as a troop column rather than empty road or vague silhouettes. The two environment concept plates themselves stay empty of people; the column belongs inside the story panels. Use only scene-01 and scene-02 for all panels. Never depict an actual plum grove, imagined orchard, thought bubble, whip gesture or a specifically identified campaign. Render each panel as one uninterrupted image. Dialogue and narration exist only in metadata, never as visible text.",
   "notes": "史料骨架为失汲道、军皆渴、曹操宣称前有梅林、士卒闻言生津、继续前行并抵达水源。无名士卒用于单人代表军士群体；空水囊、简短对白、表情动作及泉边饮水均为可视化扩写，不作为史料原文。史料未在此明确交代具体战役，本集不套入《三国演义》的征张绣背景，也不使用举鞭虚指桥段。梅林只存在于曹操的言辞中，不画成真实到达的地点；生津只是暂缓渴感，最终仍以找到水源收束。曹操服饰直接复用系列资产，不据此推定事件年代或当时服制。",
   "text_model": "gpt-6.1-sol",
   "image_model": "gpt-image-2.6-sunburst",

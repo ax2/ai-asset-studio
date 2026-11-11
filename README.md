@@ -225,6 +225,12 @@ python tools/redo_character.py --character 诸葛亮
 
 要调整受影响剧集清单，改 `tools/redo_character.py` 顶部的 `PLANS` / `SERIES`。**注意**：`sanguo-heroes.json` 的 `novel_excerpt` 是原文摘录，不做改动；只改视觉设定。重做后旧图在云盘解压目录里可能仍有残留（覆盖式同步不删旧文件），但 `comic.html` / manifest 只引用新图。
 
+### 修订单集的画面规则
+
+`tools/revise_wangmei.py` 演示了「望梅止渴」这类的单集返工：原剧本的 `visual_rules` 写了「每格不超过两人、不得有背景人群」并强制沿用曹操既有朝服，导致行军故事里没有队伍、曹操穿朝服。修订脚本会：① 新建一个**本集专用**角色卡「曹操·行军」（戎装），不动全局曹操卡，避免影响其他集；② 改写 `visual_rules` 与 6 格 `visual`，明确要求 5–8 人的同装束行军队列；③ 软化场景 `prompt_extra` 里的 `no people`（否则 `panel_prompt` 的 CONTINUITY 段会压制队伍）；④ 归档旧分镜后不带 `--cards-ready` 重跑 `generate_comic.py`（它会自动建卡 + 出行军立绘，已有士卒立绘与场景图仍跳过）；⑤ 重建系列索引。
+
+`python tools/revise_wangmei.py --dry-run` 可只预览新规则。教训：**人数上限写在 `panel["characters"]`（参考图数量，≤2）没问题，但写进 `visual_rules` 变成「画面里不许有其他人」，就会把该有的群众场面一起禁掉**。
+
 ## 目录
 
 ```
