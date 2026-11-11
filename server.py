@@ -335,6 +335,27 @@ class Handler(BaseHTTPRequestHandler):
             return self._delete_pack(seg[1])
 
         # ---- Comic batches: scene cards and readable comic overview ----
+        if method == "GET" and seg == ["stories"]:
+            bank_file = ROOT / "batches" / "story-bank.json"
+            if not bank_file.is_file():
+                return self._json(200, {"stories": [], "stats": {}, "ready": False})
+            try:
+                bank = json.loads(bank_file.read_text(encoding="utf-8"))
+            except (OSError, ValueError):
+                return self._json(200, {"stories": [], "stats": {}, "ready": False})
+            rows = bank.get("stories") or []
+            q = str(p.get("q") or "").strip().lower()
+            status = str(p.get("status") or "").strip()
+            if q:
+                rows = [r for r in rows
+                        if q in json.dumps(r, ensure_ascii=False).lower()]
+            if status:
+                rows = [r for r in rows if r.get("status") == status]
+            return self._json(200, {
+                "stories": rows, "stats": bank.get("stats") or {},
+                "built_at": bank.get("built_at"), "ready": True,
+                "html": "/pack/story-bank/index.html",
+            })
         if method == "GET" and seg == ["scenes"]:
             rows = scenes.list_cards(CFG)
             batch = str(p.get("batch") or "")

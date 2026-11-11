@@ -22,6 +22,7 @@ const VIEW_META = {
   batch: ["批量生成", "先 Dry run 验证配方，再切换真实生成"],
   game: ["角色与游戏资产", "小说提取角色、锚点复现、多视角与精灵动画切图"],
   comic: ["连环画", "史料故事分镜、人物与场景资产、可阅读的连环画页面"],
+  stories: ["故事库", "候选小故事：出处、演义归属、可信度等级与画面钩子"],
   export: ["导出与同步", "导出素材包、同步精选资产、检查元数据"],
   cost: ["成本看板", "额度、用量与参考单价"],
   settings: ["连接设置", "会话密钥、代理与端点自检"],
@@ -367,6 +368,7 @@ function switchView(name) {
   if (name === "batch") { refreshBatchEstimate(); }
   if (name === "game") { initGame().catch((e) => toast("游戏资产页加载失败：" + e.message, "err")); }
   if (name === "comic") { initComic().catch((e) => toast("连环画页加载失败：" + e.message, "err")); }
+  if (name === "stories") { initStories().catch((e) => toast("故事库加载失败：" + e.message, "err")); }
   if (name === "export") { loadHealth(); loadExports(); renderSyncInfo(); }
   if (name === "settings") { renderSettings(); }
 }
@@ -1329,6 +1331,26 @@ function deleteGamePack(pid) {
     });
 }
 
+async function initStories() {
+  const r = await api("/api/stories");
+  const s = r.stats || {};
+  const pill = (text) => `<span class="pill">${esc(text)}</span>`;
+  $("#storiesStats").innerHTML = `
+    <div class="pack-row">
+      <div class="row">
+        <b>${esc(r.built_at || "故事库尚未生成")}</b>
+        ${pill(`共 ${s.total || 0} 条`)}
+        ${pill(`可用 ${s.candidate || 0}`)}
+        ${pill(`待复核 ${s.needs_review || 0}`)}
+        ${pill(`已拍 ${s.used || 0}`)}
+        ${pill(`演义未载 ${s.not_in_romance || 0}`)}
+        ${pill(`演义亦载 ${s.in_romance || 0}`)}
+      </div>
+      <div class="hint mt">A 级为人工核验基线；B / C 级为文本模型采集，建议抽查出处后再写剧本。已放宽口径：《三国演义》写过的也收录，用下方「演义归属」筛选。</div>
+    </div>`;
+  $("#storiesFrame").src = "/pack/story-bank/index.html?t=" + Date.now();
+}
+
 async function initComic() {
   const [c, s] = await Promise.all([api("/api/comic"), api("/api/scenes")]);
   renderComic(c.comics || [], s.scenes || [], c.series || []);
@@ -1427,6 +1449,7 @@ document.addEventListener("click", async (e) => {
       case "g-sprite": await gameSprite(); break;
       case "g-refresh-packs": await loadGamePacks(); break;
       case "comic-refresh": await initComic(); break;
+      case "stories-refresh": await initStories(); break;
       case "g-delete-pack": deleteGamePack(el.dataset.id); break;
       case "do-export": await doExport(); break;
       case "do-sync": await doSync(); break;

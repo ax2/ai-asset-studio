@@ -1,0 +1,2659 @@
+{
+  "id": "story-bank-01",
+  "title": "三国小故事候选库",
+  "built_at": "2026-11-11T15:16:35+08:00",
+  "constraint": "汉末三国小故事；《三国演义》写过的同样收录，按 romance_group 标注",
+  "text_model": "gpt-6.1-sol",
+  "sources": {
+    "curated": "tools/write_comic_series.py 中 24 条人工核验候选",
+    "model_batches": {
+      "artisans": {
+        "count": 8,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "prompt_tokens": 1311,
+          "completion_tokens": 4528,
+          "total_tokens": 5839,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 1308,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 2560,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        }
+      },
+      "houhanshu": {
+        "count": 8,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "prompt_tokens": 1306,
+          "completion_tokens": 3974,
+          "total_tokens": 5280,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 1303,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 2048,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        }
+      },
+      "mixed": {
+        "count": 8,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "prompt_tokens": 1324,
+          "completion_tokens": 4850,
+          "total_tokens": 6174,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 1321,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 3011,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        }
+      },
+      "romance": {
+        "count": 8,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "prompt_tokens": 1344,
+          "completion_tokens": 4254,
+          "total_tokens": 5598,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 1341,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 2048,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        }
+      },
+      "shishuo": {
+        "count": 8,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "prompt_tokens": 1309,
+          "completion_tokens": 3326,
+          "total_tokens": 4635,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 1306,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1536,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        }
+      },
+      "shu": {
+        "count": 8,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "prompt_tokens": 1294,
+          "completion_tokens": 4716,
+          "total_tokens": 6010,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 1291,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 2824,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        }
+      },
+      "wei": {
+        "count": 8,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "prompt_tokens": 1320,
+          "completion_tokens": 5430,
+          "total_tokens": 6750,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 1317,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 3568,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        }
+      },
+      "wu": {
+        "count": 8,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "prompt_tokens": 1285,
+          "completion_tokens": 5536,
+          "total_tokens": 6821,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 1282,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 3569,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        }
+      }
+    },
+    "romance_toc": {
+      "count": 120,
+      "source": "https://sanguo.5000yan.com/"
+    }
+  },
+  "romance_toc_note": "回目命中仅作参考，不代表该故事被正面叙写；确定归属见每条 romance_check / romance_note，人工复核结论见 ROMANCE_VERDICTS。",
+  "levels": {
+    "A": "人工核验基线，出处可信度最高",
+    "B": "文本模型采集，自评高置信且有原文摘录",
+    "C": "文本模型采集，中置信，建议抽查",
+    "R": "待复核：出处/原文存疑或演义归属不确定",
+    "U": "已拍成连环画"
+  },
+  "stats": {
+    "total": 87,
+    "candidate": 74,
+    "needs_review": 6,
+    "used": 7,
+    "grade_a": 16,
+    "grade_b": 58,
+    "grade_c": 0,
+    "not_in_romance": 64,
+    "in_romance": 18,
+    "curated": 24,
+    "model": 63,
+    "raw_model_rows": 64,
+    "duplicates_dropped": 1,
+    "by_batch": {
+      "artisans": 8,
+      "curated": 24,
+      "houhanshu": 8,
+      "mixed": 8,
+      "romance": 8,
+      "shishuo": 8,
+      "shu": 8,
+      "wei": 7,
+      "wu": 8
+    },
+    "by_group": {
+      "仅被提及": 3,
+      "演义亦载": 15,
+      "演义归属待考": 5,
+      "演义未载": 64
+    }
+  },
+  "used_stories": [
+    {
+      "title": "鼠啮马鞍",
+      "id": "comic-cao-chong-saves-storekeeper",
+      "source": "《三国志》卷二十《魏书·武文世王公传·邓哀王冲传》载：“太祖马鞍在库，而为鼠所啮。库吏惧必死，议欲面缚首罪，犹惧不免。冲谓曰：‘待三日中，然后自归。’冲于是以刀穿单衣，如鼠啮者，谬为失意，貌有愁色。太祖问之，冲对曰：‘世俗以为鼠啮衣者，其主不吉。今单衣见啮，是以忧戚。’太祖曰：‘此妄言耳，无所苦也。’俄而库吏以啮鞍闻，"
+    },
+    {
+      "title": "蔡邕倒屣迎少年",
+      "id": "comic-s01-cai-yong-greets-wang-can",
+      "source": "《三国志·魏书·王粲传》：“时邕才学显著，贵重朝廷，常车骑填巷，宾客盈坐。闻粲在门，倒屣迎之。粲至，年既幼弱，容状短小，一坐尽惊。邕曰：‘此王公孙也，有异才，吾不如也。吾家书籍文章，尽当与之。’”"
+    },
+    {
+      "title": "田豫辞归养母",
+      "id": "comic-s02-tian-yu-returns-home",
+      "source": "《三国志·魏书·田豫传》：“刘备之奔公孙瓒也，豫时年少，自托于备，备甚奇之。及备为豫州刺史，豫以母老求归。备涕泣与别，曰：‘恨不与君共成大事也。’”"
+    },
+    {
+      "title": "孙登验丸释疑",
+      "id": "comic-s03-sun-deng-tests-the-pellet",
+      "source": "《三国志·吴书·孙登传》：“使求过丸，比之非类，乃释之。”"
+    },
+    {
+      "title": "辛毗牵衣直谏",
+      "id": "comic-s04-xin-pi-grasps-the-robe",
+      "source": "《三国志·魏书·辛毗传》记载：曹丕欲迁徙冀州士家十万户，以充实河南，辛毗与朝臣进谏。原文摘录：“帝不答，起入内；毗随而引其裾。”又载：“帝遂奋衣不还，良久乃出，曰：‘佐治，卿持我何太急邪？’”最终“帝遂徙其半”。"
+    },
+    {
+      "title": "一场驴鸣送故人",
+      "id": "comic-s05-donkey-calls-for-wang-can",
+      "source": "《世说新语·伤逝》记王粲身后，曹丕临丧，对同游宾客说：“王好驴鸣，可各作一声以送之。”在场宾客遂各作驴鸣，以送故人。原文中的“文帝”为曹丕后来的帝号，不表示此时他已经称帝。"
+    },
+    {
+      "title": "杜微不闻荣禄",
+      "id": "comic-s06-du-wei-declines-office",
+      "source": "《三国志·蜀书·杜微传》：“微自乞老病求归，亮又与书答曰……”传中记杜微自托耳聋，辞避征召；诸葛亮将其迎来，以书信说明心意，后来授以谏议大夫，使其不必参与具体政务，以顺从其志趣。省略号表示原文节略，后文为史事概述。"
+    },
+    {
+      "title": "胡威千里省父",
+      "id": "comic-s07-hu-wei-visits-his-father",
+      "source": "《三国志·魏书·胡质传》裴松之注引《晋阳秋》：“临辞，赐绢一匹，为道路粮。”故事记胡威家贫，自驱驴单行，前往荆州探望父亲胡质；临别受绢，先问来处，得知是父亲俸禄之余，才收下辞归。"
+    },
+    {
+      "title": "马钧复造指南车",
+      "id": "comic-s08-ma-jun-builds-the-chariot",
+      "source": "《三国志·魏书·杜夔传》裴松之注引傅玄《马先生传》：“于是二子遂共白明帝，诏先生作之，而指南车成。”其中“二子”指参与争论的高堂隆、秦朗，“先生”指马钧，明帝为曹叡。"
+    },
+    {
+      "title": "费祎临军不废棋",
+      "id": "comic-s09-fei-yi-finishes-the-game",
+      "source": "《三国志·蜀书·费祎传》裴松之注引《祎别传》：“敏求共围棋，于时羽檄交驰，人马擐甲。”又载：“祎与敏留意对戏，色无厌倦。”来敏事后说明：“向聊观试君耳！君信可人，必能办贼者也。”故事背景为蜀汉延熙七年（244年），曹爽率魏军进攻汉中，费祎将出军御敌之时。"
+    },
+    {
+      "title": "诸葛恪得驴",
+      "id": "comic-s10-zhuge-ke-adds-the-donkey",
+      "source": "《三国志·吴书·诸葛恪传》裴松之注引《江表传》：恪父瑾面长似驴，孙权大会群臣，使人牵一驴入，长检其面，题曰『诸葛子瑜』；恪跪曰『乞请笔益两字』，因听与笔，恪续其下曰『之驴』，举坐欢笑，乃以驴赐恪。"
+    }
+  ],
+  "duplicates_dropped": [
+    {
+      "title": "许褚倒曳牛尾",
+      "duplicate_of": "许褚倒曳牛尾",
+      "batch": "wei"
+    }
+  ],
+  "stories": [
+    {
+      "title": "伊籍使吴",
+      "source": "《三国志·蜀书·伊籍传》",
+      "quote": "原文见 《三国志·蜀书·伊籍传》",
+      "synopsis": "孙权问『劳事无道之君乎』，籍答『一拜一起，未足为劳』。",
+      "characters": [
+        "伊籍",
+        "孙权"
+      ],
+      "region": "蜀",
+      "mood": "机智",
+      "romance_check": "not_in_romance",
+      "romance_note": "演义有伊籍而未写『一拜一起，未足为劳』的应对。",
+      "visual_hook": "拜起之间从容答『未足为劳』",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "manual",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "A",
+      "no": 1,
+      "id": "tale-001",
+      "toc_hits": [
+        "第四十四回",
+        "第六十一回",
+        "第八十二回"
+      ]
+    },
+    {
+      "title": "元龙百尺楼",
+      "source": "《三国志·魏书·陈登传》",
+      "quote": "原文见 《三国志·魏书·陈登传》",
+      "synopsis": "许汜论陈登无客主之礼，备曰『欲卧百尺楼上，卧君于地』。",
+      "characters": [
+        "刘备",
+        "许汜",
+        "陈登"
+      ],
+      "region": "魏",
+      "mood": "诙谐",
+      "romance_check": "not_in_romance",
+      "romance_note": "演义写陈登助曹操破吕布，未写刘备『欲卧百尺楼上』之评。",
+      "visual_hook": "百尺楼上卧客，客卧于地",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "manual",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "A",
+      "no": 2,
+      "id": "tale-002",
+      "toc_hits": [
+        "第六十五回"
+      ]
+    },
+    {
+      "title": "刘巴不与张飞共宿",
+      "source": "《三国志·蜀书·刘巴传》裴注引《零陵先贤传》",
+      "quote": "原文见 《三国志·蜀书·刘巴传》裴注引《零陵先贤传》",
+      "synopsis": "巴不与武人共语，诸葛亮为解。",
+      "characters": [
+        "刘巴",
+        "张飞",
+        "诸葛亮"
+      ],
+      "region": "蜀",
+      "mood": "诙谐",
+      "romance_check": "not_in_romance",
+      "romance_note": "演义未写刘巴轻武人、诸葛亮为其排解一事。",
+      "visual_hook": "同榻不语，一纸书信解围",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "manual",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "A",
+      "no": 3,
+      "id": "tale-003",
+      "toc_hits": [
+        "第四十回",
+        "第四十三回",
+        "第五十回",
+        "第五十二回",
+        "第六十三回",
+        "第七十回"
+      ]
+    },
+    {
+      "title": "孙权庱亭射虎",
+      "source": "《三国志·吴主传》",
+      "quote": "原文见 《三国志·吴主传》",
+      "synopsis": "权亲乘马射虎，马为虎伤，投双戟却之。",
+      "characters": [
+        "孙权"
+      ],
+      "region": "吴",
+      "mood": "勇毅",
+      "romance_check": "not_in_romance",
+      "romance_note": "演义未写孙权亲射虎、投双戟却虎之事。",
+      "visual_hook": "虎伤其马，孙权投双戟退虎",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "manual",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "A",
+      "no": 4,
+      "id": "tale-004",
+      "toc_hits": [
+        "第四十四回",
+        "第六十一回",
+        "第八十二回"
+      ]
+    },
+    {
+      "title": "床头捉刀人",
+      "source": "《世说新语·容止》",
+      "quote": "原文见 《世说新语·容止》",
+      "synopsis": "崔琰代曹操见匈奴使，魏武追杀此使。",
+      "characters": [
+        "曹操",
+        "崔琰",
+        "匈奴使者"
+      ],
+      "region": "魏",
+      "mood": "机智",
+      "romance_check": "not_in_romance",
+      "romance_note": "演义写匈奴使者来朝未用此《世说新语·容止》轶事。",
+      "visual_hook": "床侧捉刀立者与案前代坐者",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "manual",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "A",
+      "no": 5,
+      "id": "tale-005",
+      "toc_hits": [
+        "第十回",
+        "第十一回",
+        "第十九回",
+        "第二十一回",
+        "第二十五回",
+        "第三十一回"
+      ]
+    },
+    {
+      "title": "文姬归汉",
+      "source": "《后汉书·列女传·董祀妻》",
+      "quote": "原文见 《后汉书·列女传·董祀妻》",
+      "synopsis": "曹操以金璧赎蔡琰归，琰作《悲愤诗》。",
+      "characters": [
+        "蔡琰",
+        "曹操"
+      ],
+      "region": "汉末",
+      "mood": "悲悯",
+      "romance_check": "not_in_romance",
+      "romance_note": "演义第九回写蔡邕哭董卓，未写曹操以金璧赎蔡琰归汉。",
+      "visual_hook": "金璧赎归，车卷与诗简",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "manual",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "A",
+      "no": 6,
+      "id": "tale-006",
+      "toc_hits": [
+        "第十回",
+        "第十一回",
+        "第十九回",
+        "第二十一回",
+        "第二十五回",
+        "第三十一回"
+      ]
+    },
+    {
+      "title": "曲有误周郎顾",
+      "source": "《三国志·吴书·周瑜传》",
+      "quote": "原文见 《三国志·吴书·周瑜传》",
+      "synopsis": "瑜少精意于音乐，虽三爵之后，其有阙误必知之。",
+      "characters": [
+        "周瑜"
+      ],
+      "region": "吴",
+      "mood": "巧艺",
+      "romance_check": "not_in_romance",
+      "romance_note": "演义写周瑜而未及其醉后听曲必顾的细节。",
+      "visual_hook": "三爵之后闻曲误而回顾",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "manual",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "A",
+      "no": 7,
+      "id": "tale-007",
+      "toc_hits": [
+        "第四十四回",
+        "第四十九回"
+      ]
+    },
+    {
+      "title": "曹冲称象",
+      "source": "《三国志·魏书·邓哀王冲传》",
+      "quote": "原文见 《三国志·魏书·邓哀王冲传》",
+      "synopsis": "置象大船之上，刻其水痕，称物以载之。",
+      "characters": [
+        "曹冲",
+        "曹操"
+      ],
+      "region": "魏",
+      "mood": "机智",
+      "romance_check": "not_in_romance",
+      "romance_note": "演义未写曹冲称象；同传『鼠啮马鞍』亦未写，已拍成单集。",
+      "visual_hook": "大船刻水痕，换装货物到同一刻线",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "manual",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "A",
+      "no": 8,
+      "id": "tale-008",
+      "toc_hits": [
+        "第十回",
+        "第十一回",
+        "第十九回",
+        "第二十一回",
+        "第二十五回",
+        "第三十一回"
+      ]
+    },
+    {
+      "title": "望梅止渴",
+      "source": "《世说新语·假谲》",
+      "quote": "原文见 《世说新语·假谲》",
+      "synopsis": "魏武行役失汲道，乃令曰『前有大梅林，饶子，甘酸可以解渴』。",
+      "characters": [
+        "曹操"
+      ],
+      "region": "魏",
+      "mood": "机智",
+      "romance_check": "in_romance",
+      "romance_note": "第二十一回「曹操煮酒论英雄」中曹操亲口追述征张绣时『以鞭虚指曰：前面有梅林』。",
+      "visual_hook": "以鞭虚指前方梅林，士卒口生唾",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "manual",
+      "romance_group": "演义亦载",
+      "status": "candidate",
+      "grade": "A",
+      "no": 9,
+      "id": "tale-009",
+      "toc_hits": [
+        "第十回",
+        "第十一回",
+        "第十九回",
+        "第二十一回",
+        "第二十五回",
+        "第三十一回"
+      ]
+    },
+    {
+      "title": "枣祗建屯田",
+      "source": "《三国志·武帝纪》裴注引《魏武故事》",
+      "quote": "原文见 《三国志·武帝纪》裴注引《魏武故事》",
+      "synopsis": "枣祗建置屯田，许下积谷。",
+      "characters": [
+        "枣祗",
+        "曹操"
+      ],
+      "region": "魏",
+      "mood": "考据",
+      "romance_check": "not_in_romance",
+      "romance_note": "演义写许下屯田之效而未叙枣祗建置之议。",
+      "visual_hook": "许下屯田，谷仓与田垄",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "manual",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "A",
+      "no": 10,
+      "id": "tale-010",
+      "toc_hits": [
+        "第十回",
+        "第十一回",
+        "第十九回",
+        "第二十一回",
+        "第二十五回",
+        "第三十一回"
+      ]
+    },
+    {
+      "title": "秦宓论天",
+      "source": "《三国志·蜀书·秦宓传》",
+      "quote": "原文见 《三国志·蜀书·秦宓传》",
+      "synopsis": "吴使张温问『天有头乎』『有耳乎』『有足乎』，宓随问而答。",
+      "characters": [
+        "秦宓",
+        "张温"
+      ],
+      "region": "蜀",
+      "mood": "机智",
+      "romance_check": "in_romance",
+      "romance_note": "第八十六回回目「难张温秦宓逞天辩」即此事，演义正面写过。",
+      "visual_hook": "使者问天，随问而答",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "manual",
+      "romance_group": "演义亦载",
+      "status": "candidate",
+      "grade": "A",
+      "no": 11,
+      "id": "tale-011",
+      "toc_hits": [
+        "第八十六回"
+      ]
+    },
+    {
+      "title": "简雍讽禁酒具",
+      "source": "《三国志·蜀书·简雍传》",
+      "quote": "原文见 《三国志·蜀书·简雍传》",
+      "synopsis": "天旱禁酒，酿具同罪；雍指道上男女曰『彼有其具』。",
+      "characters": [
+        "简雍",
+        "刘备"
+      ],
+      "region": "蜀",
+      "mood": "诙谐",
+      "romance_check": "not_in_romance",
+      "romance_note": "演义有简雍而无比照酿具讽谏禁酒的插曲。",
+      "visual_hook": "道上男女与酿酒器具并列一指",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "manual",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "A",
+      "no": 12,
+      "id": "tale-012",
+      "toc_hits": [
+        "第六十五回"
+      ]
+    },
+    {
+      "title": "管宁割席",
+      "source": "《世说新语·德行》",
+      "quote": "原文见 《世说新语·德行》",
+      "synopsis": "宁与华歆共园锄菜、同席读书，歆慕轩冕，宁割席分坐。",
+      "characters": [
+        "管宁",
+        "华歆"
+      ],
+      "region": "汉末",
+      "mood": "考据",
+      "romance_check": "not_in_romance",
+      "romance_note": "演义写华歆搜捕伏皇后、逼献帝禅让，未写与管宁锄菜割席。",
+      "visual_hook": "锄菜见金、同席读书后割席分坐",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "manual",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "A",
+      "no": 13,
+      "id": "tale-013",
+      "toc_hits": []
+    },
+    {
+      "title": "罗宪守永安",
+      "source": "《三国志·蜀书·霍峻传》裴注引《汉晋春秋》",
+      "quote": "原文见 《三国志·蜀书·霍峻传》裴注引《汉晋春秋》",
+      "synopsis": "蜀亡，宪守永安拒吴师。",
+      "characters": [
+        "罗宪"
+      ],
+      "region": "蜀",
+      "mood": "勇毅",
+      "romance_check": "not_in_romance",
+      "romance_note": "演义写蜀亡而未写罗宪以孤城拒吴师。",
+      "visual_hook": "蜀亡后孤城拒吴师",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "manual",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "A",
+      "no": 14,
+      "id": "tale-014",
+      "toc_hits": []
+    },
+    {
+      "title": "老牛舐犊",
+      "source": "《后汉书·杨彪传》／《魏氏春秋》",
+      "quote": "原文见 《后汉书·杨彪传》／《魏氏春秋》",
+      "synopsis": "操问彪『何瘦之甚』，彪曰『犹怀老牛舐犊之爱』。",
+      "characters": [
+        "杨彪",
+        "曹操"
+      ],
+      "region": "魏",
+      "mood": "悲悯",
+      "romance_check": "in_romance",
+      "romance_note": "第七十二回杨修被杀后，曹操见杨彪问『公何瘦之甚』，彪答『犹怀老牛舐犊之爱』。",
+      "visual_hook": "丧子后消瘦的老臣与曹操问答",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "manual",
+      "romance_group": "演义亦载",
+      "status": "candidate",
+      "grade": "A",
+      "no": 15,
+      "id": "tale-015",
+      "toc_hits": [
+        "第十回",
+        "第十一回",
+        "第十九回",
+        "第二十一回",
+        "第二十五回",
+        "第三十一回"
+      ]
+    },
+    {
+      "title": "陆绩怀橘",
+      "source": "《三国志·吴书·陆绩传》",
+      "quote": "原文见 《三国志·吴书·陆绩传》",
+      "synopsis": "绩年六岁见袁术，私藏三枚橘子欲归遗母。",
+      "characters": [
+        "陆绩",
+        "袁术"
+      ],
+      "region": "吴",
+      "mood": "孝行",
+      "romance_check": "mentioned",
+      "romance_note": "第四十三回舌战群儒，诸葛亮以『公非袁术座间怀橘之陆郎乎』讥陆绩，属典故提及而非正面叙写。",
+      "visual_hook": "六岁陆绩拜辞时橘子从袖中滚落",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "manual",
+      "romance_group": "仅被提及",
+      "status": "candidate",
+      "grade": "A",
+      "no": 16,
+      "id": "tale-016",
+      "toc_hits": []
+    },
+    {
+      "title": "刍狗三占异验",
+      "source": "《三国志》卷二十九·魏书·方技传·周宣传",
+      "quote": "刍狗者，祭神之物。",
+      "synopsis": "一人三次谎称梦见刍狗试探周宣，传文称占验各异；周宣以祭后分食、车轧、焚烧解释。",
+      "characters": [
+        "周宣",
+        "试占者"
+      ],
+      "region": "魏",
+      "mood": "考据",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本120回未叙周宣三占刍狗之事；演义中的其他占梦、占卜情节不等于本条。",
+      "visual_hook": "以同一只草扎祭犬串联三幅画面：祭席旁、车轮下、柴火中，周宣对来客逐一解释。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "artisans",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 17,
+      "id": "tale-017",
+      "toc_hits": []
+    },
+    {
+      "title": "十二踏板织绫",
+      "source": "《三国志》卷二十九·魏书·方技传·杜夔传裴松之注引《马先生传》",
+      "quote": "乃皆易以十二蹑。",
+      "synopsis": "马钧见旧式织绫机踏板繁多、费工费时，改用十二踏板，使织工操作更便捷。",
+      "characters": [
+        "马钧"
+      ],
+      "region": "魏",
+      "mood": "巧艺",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本120回未叙马钧改造织绫机之事；此条取自裴注所引技术记载。",
+      "visual_hook": "织坊内，密密排列的旧踏板与改造后的十二踏板并置，织工脚踏机杼，彩绫徐徐织出。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "artisans",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 18,
+      "id": "tale-018",
+      "toc_hits": []
+    },
+    {
+      "title": "杜夔校钟辨音",
+      "source": "《三国志》卷二十九·魏书·方技传·杜夔传",
+      "quote": "太祖使玉与夔各作声韵，仪较是非，然后知夔为精，而玉之妄。",
+      "synopsis": "杜夔要求柴玉反复重铸音律不合的铜钟，柴玉不服；曹操让二人比试，确认杜夔辨音准确。",
+      "characters": [
+        "杜夔",
+        "柴玉",
+        "曹操"
+      ],
+      "region": "汉末",
+      "mood": "巧艺",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本120回未叙杜夔与铸钟工柴玉争论、由曹操命其比较声韵的故事。",
+      "visual_hook": "铸钟作坊中，新钟悬架待击，杜夔侧耳辨音，柴玉持锤争辩，曹操居中听验。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "artisans",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 19,
+      "id": "tale-019",
+      "toc_hits": [
+        "第十回",
+        "第十一回",
+        "第十九回",
+        "第二十一回",
+        "第二十五回",
+        "第三十一回"
+      ]
+    },
+    {
+      "title": "樊阿深针疗疾",
+      "source": "《三国志》卷二十九·魏书·方技传·华佗传",
+      "quote": "阿针背入一二寸，巨阙胸上五六寸，而病皆瘳。",
+      "synopsis": "华佗弟子樊阿擅长针术，突破当时对背部、胸腹进针深度的拘限，传中称其治疗有效。",
+      "characters": [
+        "樊阿"
+      ],
+      "region": "汉末",
+      "mood": "巧艺",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本120回未叙樊阿深针治病这一独立医案；不与华佗其他针灸情节混同。",
+      "visual_hook": "诊室内，樊阿凝神持针，旁观者紧张注视，病人伏身于榻，针具整齐排在案上。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "artisans",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 20,
+      "id": "tale-020",
+      "toc_hits": []
+    },
+    {
+      "title": "流水驱动木偶",
+      "source": "《三国志》卷二十九·魏书·方技传·杜夔传裴松之注引《马先生传》",
+      "quote": "潜以水发焉。",
+      "synopsis": "魏明帝得到只能陈设的百戏模型，马钧改设机关，以水力驱动木偶表演歌舞杂技。",
+      "characters": [
+        "马钧",
+        "曹叡"
+      ],
+      "region": "魏",
+      "mood": "巧艺",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本120回未叙马钧以水力驱动百戏模型的故事。",
+      "visual_hook": "台前木人击鼓、吹箫、翻倒，台后剖面显出流水推动的轮轴机关。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "artisans",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 21,
+      "id": "tale-021",
+      "toc_hits": []
+    },
+    {
+      "title": "童转翻车灌园",
+      "source": "《三国志》卷二十九·魏书·方技传·杜夔传裴松之注引《马先生传》",
+      "quote": "乃作翻车，令儿童转之。",
+      "synopsis": "马钧在京都有园地而苦于缺水，制成翻车，让儿童转动，便能连续提水灌园。",
+      "characters": [
+        "马钧",
+        "儿童"
+      ],
+      "region": "魏",
+      "mood": "巧艺",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本120回未叙马钧制翻车灌园；它也不是演义中的木牛流马故事。",
+      "visual_hook": "园边水沟旁，儿童转动翻车，槽中水流接续上升，流入干渴的菜畦。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "artisans",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 22,
+      "id": "tale-022",
+      "toc_hits": []
+    },
+    {
+      "title": "华佗授五禽戏",
+      "source": "《后汉书》卷八十二下·方术列传下·华佗",
+      "quote": "吾有一术，名五禽之戏。",
+      "synopsis": "华佗向弟子吴普传授模仿虎鹿熊猿鸟的导引法。传中记吴普依此锻炼，年老仍耳目聪明。",
+      "characters": [
+        "华佗",
+        "吴普"
+      ],
+      "region": "汉末",
+      "mood": "巧艺",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本第七十八回集中叙写华佗医术及遇害，但未展开其教授吴普五禽戏的故事。",
+      "visual_hook": "庭院中师徒相对，华佗示范禽兽姿态，吴普依次伸臂、俯身、举足。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "houhanshu",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 23,
+      "id": "tale-023",
+      "toc_hits": []
+    },
+    {
+      "title": "叔母劝谧向学",
+      "source": "《晋书》卷五十一·皇甫谧传",
+      "quote": "谧乃感激，就乡人席坦受书，勤力不怠。",
+      "synopsis": "皇甫谧年轻时贪玩不学，叔母任氏流泪劝诫。他感悟求师，家贫仍一边耕作一边读书。",
+      "characters": [
+        "皇甫谧",
+        "任氏",
+        "席坦"
+      ],
+      "region": "魏",
+      "mood": "孝行",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未叙皇甫谧受叔母任氏劝诫、从席坦读书的早年故事，此条取自本传。",
+      "visual_hook": "皇甫谧捧着瓜果归家，叔母含泪劝学；转场田间，农具旁摊开书卷。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "houhanshu",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 24,
+      "id": "tale-024",
+      "toc_hits": []
+    },
+    {
+      "title": "梁上君子受绢",
+      "source": "《后汉书》卷六十二·荀韩钟陈列传·陈寔",
+      "quote": "梁上君子者是矣！",
+      "synopsis": "陈寔发现窃贼藏在梁上，借训诫子孙劝其改过。窃贼下地谢罪，陈寔反赠绢二匹。",
+      "characters": [
+        "陈寔"
+      ],
+      "region": "汉末",
+      "mood": "悲悯",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未叙陈寔发现梁上窃贼、劝诫赠绢的故事，此条取自本传。",
+      "visual_hook": "夜间堂屋，陈寔整衣训诫子孙，窃贼蜷伏梁间，随后伏地受绢。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "houhanshu",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 25,
+      "id": "tale-025",
+      "toc_hits": []
+    },
+    {
+      "title": "王戎识道旁李",
+      "source": "《晋书》卷四十三·王戎传",
+      "quote": "夫李树在道而多子，必苦李也。",
+      "synopsis": "王戎幼时与群儿游玩，众人争摘道旁李子，唯独他不动，判断果实必苦，摘尝后果然如此。",
+      "characters": [
+        "王戎"
+      ],
+      "region": "魏",
+      "mood": "机智",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未叙王戎幼年观察道旁李树、判断苦李的故事，此条取自《晋书》本传。",
+      "visual_hook": "道旁李树果实累累，群童争抢攀摘，王戎站在树外指着满枝果实说明理由。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "houhanshu",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 26,
+      "id": "tale-026",
+      "toc_hits": []
+    },
+    {
+      "title": "羊祜桑中寻环",
+      "source": "《晋书》卷三十四·羊祜传",
+      "quote": "祜年五岁，令乳母取所弄金环。",
+      "synopsis": "传中记五岁羊祜索要金环，乳母说他从未有过。他到邻家桑树中取出亡儿旧物，令邻母惊异。",
+      "characters": [
+        "羊祜"
+      ],
+      "region": "魏",
+      "mood": "考据",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本末回写羊祜参与晋吴关系及举荐杜预等事，未写幼年寻环。这是本传所载异闻，不作为轮回事实确认。",
+      "visual_hook": "幼童领着乳母走到邻家东墙，伸手探入桑树，掌中现出一枚金环。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "houhanshu",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 27,
+      "id": "tale-027",
+      "toc_hits": []
+    },
+    {
+      "title": "茅容杀鸡奉母",
+      "source": "《后汉书》卷六十八·郭符许列传·郭太附茅容事",
+      "quote": "既而以供其母，自以草蔬与客同饭。",
+      "synopsis": "郭太留宿茅容家，以为杀鸡是为待客；见鸡肉奉给老母、宾主同吃蔬食，反而起身拜敬。",
+      "characters": [
+        "茅容",
+        "郭太"
+      ],
+      "region": "汉末",
+      "mood": "孝行",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未叙茅容以鸡奉母、郭太起拜劝学的故事，此条见郭太传附载。",
+      "visual_hook": "农家席前，鸡馔送到母亲面前，客人与主人共对菜蔬，郭太忽然起身作揖。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "houhanshu",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 28,
+      "id": "tale-028",
+      "toc_hits": []
+    },
+    {
+      "title": "蔡邕救木成琴",
+      "source": "《后汉书》卷六十下·蔡邕列传",
+      "quote": "果有美音，而其尾犹焦，故时人名曰“焦尾琴”焉。",
+      "synopsis": "蔡邕听见吴人烧桐木的声音，辨出良材，求取制琴。琴声优美，尾端仍留焦痕。",
+      "characters": [
+        "蔡邕"
+      ],
+      "region": "汉末",
+      "mood": "巧艺",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本虽写蔡邕因董卓之死而获罪等事，未将辨认灶中桐木、制作焦尾琴写成情节。",
+      "visual_hook": "灶火中桐木将燃，蔡邕侧耳止步，伸手救木；成琴尾端保留黑色焦痕。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "houhanshu",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 29,
+      "id": "tale-029",
+      "toc_hits": []
+    },
+    {
+      "title": "雨巾引领时风",
+      "source": "《后汉书》卷六十八·郭符许列传·郭太",
+      "quote": "时人乃故折巾一角，以为“林宗巾”。",
+      "synopsis": "郭太行路遇雨，头巾一角折垂。仰慕他的人故意折起巾角，仿作“林宗巾”。",
+      "characters": [
+        "郭太"
+      ],
+      "region": "汉末",
+      "mood": "诙谐",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未叙郭太雨中折巾及众人仿效衣饰的故事，此条取自本传。",
+      "visual_hook": "雨中行人巾角低垂，转场街市，众人争相折起同一侧的巾角。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "houhanshu",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 30,
+      "id": "tale-030",
+      "toc_hits": []
+    },
+    {
+      "title": "华歆救难不弃",
+      "source": "《世说新语·德行》",
+      "quote": "既已纳其自托，宁可以急相弃邪？",
+      "synopsis": "华歆、王朗乘船避难，收留一人后遇追兵；王朗想弃人，华歆坚持带其脱险。",
+      "characters": [
+        "华歆",
+        "王朗"
+      ],
+      "region": "汉末",
+      "mood": "悲悯",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本虽写华歆、王朗参与政事，却未写二人同舟避难、争论是否弃人的故事。",
+      "visual_hook": "追兵逼近河岸，王朗催船，华歆伸手护住刚登船的避难者。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "mixed",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 31,
+      "id": "tale-031",
+      "toc_hits": [
+        "第九十三回"
+      ]
+    },
+    {
+      "title": "张飞释缚敬严颜",
+      "source": "《三国志·蜀书·张飞传》",
+      "quote": "但有断头将军，无有降将军也。",
+      "synopsis": "严颜被俘仍拒绝投降，张飞敬其胆气，亲为松绑，并引为宾客。",
+      "characters": [
+        "严颜",
+        "张飞"
+      ],
+      "region": "汉末",
+      "mood": "勇毅",
+      "romance_check": "in_romance",
+      "romance_note": "通行毛本第63回“诸葛亮痛哭庞统　张翼德义释严颜”详写擒获、责问与释缚礼待。",
+      "visual_hook": "军帐中，严颜昂首受缚，张飞转怒为敬，起身替他解绳。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "mixed",
+      "verdict_source": "model",
+      "romance_group": "演义亦载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 32,
+      "id": "tale-032",
+      "toc_hits": [
+        "第六十三回",
+        "第七十回",
+        "第八十一回"
+      ]
+    },
+    {
+      "title": "李衡千头木奴",
+      "source": "《三国志·吴书·三嗣主传》裴注引《襄阳记》",
+      "quote": "不责汝衣食，岁上一匹绢，亦可足用耳。",
+      "synopsis": "李衡种下千株柑橘，临终以“木奴”告子；妻子说明真相，后来橘园果然供养家人。",
+      "characters": [
+        "李衡",
+        "习氏",
+        "李厳"
+      ],
+      "region": "吴",
+      "mood": "巧艺",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未载李衡在龙阳种柑橘、临终以千头木奴托付家计的故事。",
+      "visual_hook": "病榻前父亲低声托付，画面转为洲上千株橘树，枝头金果累累。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "mixed",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 33,
+      "id": "tale-033",
+      "toc_hits": []
+    },
+    {
+      "title": "王戎识道边李",
+      "source": "《世说新语·雅量》",
+      "quote": "树在道边而多子，此必苦李。",
+      "synopsis": "七岁的王戎见伙伴争摘路边李子，独自不动；推断果实必苦，摘来验证果然如此。",
+      "characters": [
+        "王戎"
+      ],
+      "region": "魏",
+      "mood": "机智",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未叙王戎七岁辨识苦李的童年故事；此条取自《世说新语》。",
+      "visual_hook": "路旁李树果实压枝，群童争摘，王戎独立树下指着满枝李子。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "mixed",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 34,
+      "id": "tale-034",
+      "toc_hits": []
+    },
+    {
+      "title": "王累倒悬进谏",
+      "source": "《三国志·蜀书·刘二牧传》",
+      "quote": "从事广汉王累自倒县于州门以谏，璋一无所纳。",
+      "synopsis": "刘璋欲迎刘备入蜀，王累倒悬州门苦谏，仍未能使刘璋改变主意。",
+      "characters": [
+        "王累",
+        "刘璋"
+      ],
+      "region": "汉末",
+      "mood": "直谏",
+      "romance_check": "in_romance",
+      "romance_note": "通行毛本第60回写王累倒悬城门劝阻刘璋迎刘备，并增写割绳坠地而死；史传此处未写其死。",
+      "visual_hook": "城门高处，王累倒悬持谏状，刘璋车马正要出城。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "mixed",
+      "verdict_source": "model",
+      "romance_group": "演义亦载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 35,
+      "id": "tale-035",
+      "toc_hits": []
+    },
+    {
+      "title": "许褚瞋目退超",
+      "source": "《三国志·魏书·许褚传》",
+      "quote": "褚瞋目盼之，超不敢动，乃各罢去。",
+      "synopsis": "曹操与马超会谈，马超欲乘机擒曹；见许褚近身持刀怒视，只得放弃。",
+      "characters": [
+        "许褚",
+        "马超",
+        "曹操"
+      ],
+      "region": "汉末",
+      "mood": "勇毅",
+      "romance_check": "in_romance",
+      "romance_note": "通行毛本第59回写曹操与马超相见，许褚按刀怒视，震慑欲擒曹操的马超。",
+      "visual_hook": "两军阵前，许褚紧贴曹操按刀瞋目，马超勒马迟疑。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "mixed",
+      "verdict_source": "model",
+      "romance_group": "演义亦载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 36,
+      "id": "tale-036",
+      "toc_hits": [
+        "第十回",
+        "第十一回",
+        "第十九回",
+        "第二十一回",
+        "第二十五回",
+        "第三十一回"
+      ]
+    },
+    {
+      "title": "赵咨应对魏帝",
+      "source": "《三国志·吴书·吴主传》裴注引《吴书》",
+      "quote": "聪明仁智，雄略之主也。",
+      "synopsis": "赵咨出使曹魏，面对曹丕接连诘问，从容称说孙权才略，维护江东体面。",
+      "characters": [
+        "赵咨",
+        "曹丕",
+        "孙权"
+      ],
+      "region": "跨政权",
+      "mood": "机智",
+      "romance_check": "in_romance",
+      "romance_note": "通行毛本第82回写赵咨使魏，曹丕问孙权是何等君主，赵咨逐项解释其聪明仁智。",
+      "visual_hook": "魏宫殿上，曹丕俯身发问，赵咨持节立于阶前从容作答。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "mixed",
+      "verdict_source": "model",
+      "romance_group": "演义亦载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 37,
+      "id": "tale-037",
+      "toc_hits": [
+        "第三十三回",
+        "第四十四回",
+        "第六十一回",
+        "第八十回",
+        "第八十二回",
+        "第八十六回"
+      ]
+    },
+    {
+      "title": "顾雍忍悲对弈",
+      "source": "《世说新语·雅量》",
+      "quote": "顾雍丧子，坐上宾客不知，方与对围棋。",
+      "synopsis": "顾雍得知儿子去世，仍陪客下棋，掐掌至流血；待宾客散去，才宣泄哀痛。",
+      "characters": [
+        "顾雍",
+        "顾邵"
+      ],
+      "region": "吴",
+      "mood": "悼亡",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本有顾雍参与吴国政事的描写，未载其闻子丧而忍悲对弈的细节。",
+      "visual_hook": "棋盘两侧宾客如常谈笑，顾雍袖下指甲深掐手掌，血滴坐褥。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "mixed",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 38,
+      "id": "tale-038",
+      "toc_hits": []
+    },
+    {
+      "title": "典韦逐虎过涧",
+      "source": "《三国演义》第10回《勤王室马腾举义 报父仇曹操兴师》",
+      "quote": "逐虎过涧",
+      "synopsis": "夏侯惇向曹操推荐典韦，追述自己出猎时见他逐虎过涧，因而将这位壮士招入军中。",
+      "characters": [
+        "典韦",
+        "夏侯惇",
+        "曹操"
+      ],
+      "region": "汉末",
+      "mood": "勇毅",
+      "romance_check": "mentioned",
+      "romance_note": "第10回，夏侯惇引典韦见曹操，在介绍其勇力时追述逐虎过涧之事；属于人物对白带出的旧事。",
+      "visual_hook": "山涧旁猛虎腾跃，典韦徒步紧追，出猎的夏侯惇驻马惊看。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "romance",
+      "verdict_source": "model",
+      "romance_group": "仅被提及",
+      "status": "candidate",
+      "grade": "B",
+      "no": 39,
+      "id": "tale-039",
+      "toc_hits": [
+        "第十回",
+        "第十一回",
+        "第十八回",
+        "第十九回",
+        "第二十一回",
+        "第二十五回"
+      ]
+    },
+    {
+      "title": "太史慈突围求援",
+      "source": "《三国演义》第11回《刘皇叔北海救孔融 吕温侯濮阳破曹操》；《三国志》卷四十九·吴书·刘繇太史慈士燮传",
+      "quote": "北海被围，孤穷无援，危在旦夕。",
+      "synopsis": "孔融被围北海，太史慈自请突围，单骑杀出后赶往平原，请刘备发兵救援。",
+      "characters": [
+        "太史慈",
+        "孔融",
+        "刘备"
+      ],
+      "region": "汉末",
+      "mood": "勇毅",
+      "romance_check": "in_romance",
+      "romance_note": "第11回明确写太史慈出城冲杀、突围见刘备求救。史传另有反复出城射靶以松懈围兵的细节，不宜直接当作演义情节。",
+      "visual_hook": "北海城门骤开，太史慈挺枪跃马冲入围兵，身后箭矢交飞。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "romance",
+      "verdict_source": "model",
+      "romance_group": "演义亦载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 40,
+      "id": "tale-040",
+      "toc_hits": [
+        "第十一回",
+        "第十五回",
+        "第六十五回"
+      ]
+    },
+    {
+      "title": "姜母当面骂超",
+      "source": "《三国演义》第64回《孔明定计捉张任 杨阜借兵破马超》；《三国志》卷二十五·魏书·辛毗杨阜高堂隆传",
+      "quote": "汝背父之逆子，杀君之桀贼，天地岂久容汝，而不早死，敢以面目视人乎！",
+      "synopsis": "姜叙响应杨阜起兵反马超，马超袭击历城；姜叙之母面对马超厉声痛骂，最终遇害。",
+      "characters": [
+        "姜叙之母",
+        "姜叙",
+        "马超",
+        "杨阜"
+      ],
+      "region": "汉末",
+      "mood": "勇毅",
+      "romance_check": "in_romance",
+      "romance_note": "第64回杨阜联合姜叙等反击马超的情节中，写姜母先支持起兵，后在历城陷落时当面斥骂马超而死。",
+      "visual_hook": "历城宅院中，白发姜母指着披甲持兵的马超怒斥，周围军士持刃逼近。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "romance",
+      "verdict_source": "model",
+      "romance_group": "演义亦载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 41,
+      "id": "tale-041",
+      "toc_hits": [
+        "第五十九回",
+        "第六十四回",
+        "第六十五回"
+      ]
+    },
+    {
+      "title": "孔融登门认亲",
+      "source": "《三国演义》第11回《刘皇叔北海救孔融 吕温侯濮阳破曹操》；《后汉书》卷七十·郑孔荀列传",
+      "quote": "昔先君仲尼与君先人伯阳有师资之尊，是仆与君奕世为通好也。",
+      "synopsis": "十岁的孔融为见李膺，自称通家子弟，以孔子问礼老子的旧事攀出两家世交，令满座惊异。",
+      "characters": [
+        "孔融",
+        "李膺"
+      ],
+      "region": "汉末",
+      "mood": "机智",
+      "romance_check": "in_romance",
+      "romance_note": "第11回介绍孔融时，插叙其十岁拜访李膺、自称通家的故事，随后又写他反驳陈炜。",
+      "visual_hook": "李府宾客满座，幼童孔融站在堂前，从容解释两家跨越数百年的交情。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "romance",
+      "verdict_source": "model",
+      "romance_group": "演义亦载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 42,
+      "id": "tale-042",
+      "toc_hits": [
+        "第十一回"
+      ]
+    },
+    {
+      "title": "庞统半日理讼",
+      "source": "《三国演义》第57回《柴桑口卧龙吊丧 耒阳县凤雏理事》；《三国志》卷三十七·蜀书·庞统法正传",
+      "quote": "先主领荆州，统以从事守耒阳令，在县不治，免官。",
+      "synopsis": "庞统在耒阳积压公务，张飞前来查问；他当场集中审理，半日办清百余日事务，使张飞折服。",
+      "characters": [
+        "庞统",
+        "张飞",
+        "孙乾"
+      ],
+      "region": "蜀",
+      "mood": "机智",
+      "romance_check": "in_romance",
+      "romance_note": "第57回详写耒阳理事。所引史文仅载庞统任耒阳令不治而免官；半日断尽积案、张飞服才是演义扩写，不是该史文所载。",
+      "visual_hook": "县衙案牍堆积如山，庞统连声裁断，堂下百姓散去，张飞由怒转惊。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "romance",
+      "verdict_source": "model",
+      "romance_group": "演义亦载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 43,
+      "id": "tale-043",
+      "toc_hits": [
+        "第四十七回",
+        "第六十三回",
+        "第七十回",
+        "第八十一回"
+      ]
+    },
+    {
+      "title": "王垕借头平怨",
+      "source": "《三国演义》第17回《袁公路大起七军 曹孟德会合三将》",
+      "quote": "欲借汝头以示众耳。",
+      "synopsis": "曹操军中缺粮，命王垕用小斛发粮；士卒怨起，又杀王垕并将克扣军粮之罪推给他。",
+      "characters": [
+        "曹操",
+        "王垕"
+      ],
+      "region": "汉末",
+      "mood": "悲悯",
+      "romance_check": "in_romance",
+      "romance_note": "第17回征袁术期间，写管粮官王垕奉命改用小斛，随后被曹操借头安抚军心。",
+      "visual_hook": "军帐中小粮斛置于案上，王垕跪听“借头”之言，帐外饥兵喧哗。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "romance",
+      "verdict_source": "model",
+      "romance_group": "演义亦载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 44,
+      "id": "tale-044",
+      "toc_hits": [
+        "第十回",
+        "第十一回",
+        "第十九回",
+        "第二十一回",
+        "第二十五回",
+        "第三十一回"
+      ]
+    },
+    {
+      "title": "许褚倒曳牛尾",
+      "source": "《三国演义》第12回《陶恭祖三让徐州 曹孟德大战吕布》；《三国志》卷十八·魏书·二李臧文吕许典二庞阎传",
+      "quote": "褚乃出陈前，一手逆曳牛尾，行百余步。",
+      "synopsis": "许褚为乡里抵御贼众，以牛换粮时遇牛奔回，竟倒拖牛尾行走，吓得贼众不敢取牛。",
+      "characters": [
+        "许褚"
+      ],
+      "region": "汉末",
+      "mood": "勇毅",
+      "romance_check": "mentioned",
+      "romance_note": "第12回许褚出场时，叙述其聚众御寇的旧事，写到牛奔回、许褚双手倒拖牛尾；史传则作一手逆曳。",
+      "visual_hook": "寨门前牛奋蹄向前，许褚抓住牛尾倒拖，远处贼众惊退。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "romance",
+      "verdict_source": "model",
+      "romance_group": "仅被提及",
+      "status": "candidate",
+      "grade": "B",
+      "no": 45,
+      "id": "tale-045",
+      "toc_hits": [
+        "第五十九回"
+      ]
+    },
+    {
+      "title": "何晏汤饼验白",
+      "source": "《世说新语·容止第十四》",
+      "quote": "既啖，大汗出，以朱衣自拭，色转皎然。",
+      "synopsis": "魏明帝怀疑何晏脸白是因为敷粉，盛夏赐他热汤饼；何晏吃后拭汗，面色反而更加白皙。",
+      "characters": [
+        "何晏",
+        "曹叡"
+      ],
+      "region": "魏",
+      "mood": "诙谐",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本虽有何晏出场，但未叙魏明帝盛夏赐热汤饼、借出汗检验其是否敷粉的故事。",
+      "visual_hook": "盛夏殿中摆着热汤饼，何晏举起朱衣拭汗，魏明帝凝神观察他的脸。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "shishuo",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 46,
+      "id": "tale-046",
+      "toc_hits": []
+    },
+    {
+      "title": "元方门前责客",
+      "source": "《世说新语·方正第五》",
+      "quote": "日中不至，则是无信；对子骂父，则是无礼。",
+      "synopsis": "陈太丘友人失约后又骂主人，七岁的陈元方当面指出其无信无礼，客人惭愧下车。",
+      "characters": [
+        "陈寔",
+        "陈纪"
+      ],
+      "region": "汉末",
+      "mood": "直谏",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未叙陈太丘约客、陈元方门前责客这一故事。",
+      "visual_hook": "家门前，幼童仰面责问车上来客；客人下车伸手，孩子径直入门。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "shishuo",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 47,
+      "id": "tale-047",
+      "toc_hits": []
+    },
+    {
+      "title": "华歆携客避难",
+      "source": "《世说新语·德行第一》",
+      "quote": "既已纳其自托，宁可以急相弃邪？",
+      "synopsis": "华歆、王朗乘船避难，王朗欲抛下先前收留的同行者，华歆坚持相救，终于携人脱险。",
+      "characters": [
+        "华歆",
+        "王朗"
+      ],
+      "region": "汉末",
+      "mood": "勇毅",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本虽有华歆、王朗出场，但未叙二人乘船避难、争论是否弃客的故事。",
+      "visual_hook": "追兵将近的小船上，王朗催促弃客，华歆挡在获救者身前坚持同行。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "shishuo",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 48,
+      "id": "tale-048",
+      "toc_hits": [
+        "第九十三回"
+      ]
+    },
+    {
+      "title": "孔融反唇答客",
+      "source": "《世说新语·言语第二》",
+      "quote": "想君小时，必当了了。",
+      "synopsis": "孔融十岁拜访李膺，陈韪讥讽幼时聪明未必长成有才，孔融一句反问使其窘迫。",
+      "characters": [
+        "孔融",
+        "李膺",
+        "陈韪"
+      ],
+      "region": "汉末",
+      "mood": "机智",
+      "romance_check": "in_romance",
+      "romance_note": "通行毛本第十一回介绍孔融身世时，写其幼年拜访李膺及反驳陈韪的故事。",
+      "visual_hook": "宾客满座的厅堂里，十岁孔融从容答话，陈韪在众人目光中面露窘色。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "shishuo",
+      "verdict_source": "model",
+      "romance_group": "演义亦载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 49,
+      "id": "tale-049",
+      "toc_hits": [
+        "第十一回"
+      ]
+    },
+    {
+      "title": "王戎识苦李",
+      "source": "《世说新语·雅量第六》",
+      "quote": "树在道边而多子，此必苦李。",
+      "synopsis": "七岁王戎见伙伴争摘路旁李子，独自不动，断定果实必苦；众人一尝，果然如此。",
+      "characters": [
+        "王戎"
+      ],
+      "region": "魏",
+      "mood": "机智",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未叙王戎幼年判断道旁李子苦涩的故事。",
+      "visual_hook": "路旁李树果实压枝，群童争相攀摘，王戎独立树外观察。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "shishuo",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 50,
+      "id": "tale-050",
+      "toc_hits": []
+    },
+    {
+      "title": "王祥风雨护李",
+      "source": "《世说新语·德行第一》",
+      "quote": "时风雨忽至，祥抱树而泣。",
+      "synopsis": "后母命王祥看守结实甚好的李树，风雨突然袭来，王祥担忧果实受损，抱树哭泣。",
+      "characters": [
+        "王祥",
+        "朱夫人"
+      ],
+      "region": "汉末",
+      "mood": "孝行",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未叙王祥奉后母命守李树、风雨中抱树哭泣的故事。",
+      "visual_hook": "骤雨狂风中的庭院，王祥紧抱李树，枝头果实在风中摇荡。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "shishuo",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 51,
+      "id": "tale-051",
+      "toc_hits": []
+    },
+    {
+      "title": "顾雍掐掌忍悲",
+      "source": "《世说新语·雅量第六》",
+      "quote": "以爪掐掌，血流沾褥。",
+      "synopsis": "顾雍与宾客围棋，接信后察知儿子顾邵去世，表面不动声色，暗中掐掌流血，待客散才哀叹。",
+      "characters": [
+        "顾雍",
+        "顾邵"
+      ],
+      "region": "汉末",
+      "mood": "悼亡",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本虽写顾雍参与江东政务，但未叙他围棋时获悉顾邵死讯、掐掌忍悲的场景。",
+      "visual_hook": "棋枰旁顾雍神色如常，镜头转至席下，指甲已将掌心掐出鲜血。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "shishuo",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 52,
+      "id": "tale-052",
+      "toc_hits": []
+    },
+    {
+      "title": "向朗老来校书",
+      "source": "《三国志》卷四十一·蜀书·向朗传",
+      "quote": "年逾八十，犹手自校书，刊定谬误。",
+      "synopsis": "向朗晚年潜心典籍，八十多岁仍亲手校书，还开门接待后进，只谈古义，不干预时事。",
+      "characters": [
+        "向朗"
+      ],
+      "region": "蜀",
+      "mood": "考据",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未写向朗八十余岁仍亲自校书、接引后学的晚年生活。",
+      "visual_hook": "满室书卷间，白发向朗伏案校字，门外年轻学人持卷求教。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "shu",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 53,
+      "id": "tale-053",
+      "toc_hits": []
+    },
+    {
+      "title": "李恢诈言归乡",
+      "source": "《三国志》卷四十三·蜀书·李恢传",
+      "quote": "南人信之，故围守怠缓。于是恢出击，大破之。",
+      "synopsis": "李恢被围昆明，假称官军缺粮，自己想留下与乡人共谋。围军信以为真，他乘隙突击解围。",
+      "characters": [
+        "李恢"
+      ],
+      "region": "蜀",
+      "mood": "机智",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本南征故事集中于诸葛亮、孟获等人，未载李恢在昆明诈称留乡、乘隙破围之事。",
+      "visual_hook": "昆明围营外，使者传递归乡说辞；围兵松懈时，李恢率军冲出营门。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "shu",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 54,
+      "id": "tale-054",
+      "toc_hits": []
+    },
+    {
+      "title": "演戏劝止争书",
+      "source": "《三国志》卷四十二·蜀书·许慈传",
+      "quote": "初以辞义相难，终以刀杖相屈，意以感切之。",
+      "synopsis": "许慈、胡潜争斗且不肯互通典籍。刘备令艺人模仿二人争吵动武，在宴会上演出以作劝诫。",
+      "characters": [
+        "许慈",
+        "胡潜",
+        "刘备"
+      ],
+      "region": "蜀",
+      "mood": "诙谐",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未载许慈、胡潜争学，以及刘备命艺人模仿二人争斗以劝诫的宴会故事。",
+      "visual_hook": "宴席前，艺人扮成两位学者，先抱书争辩，再挥舞刀杖，席间真人面露窘色。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "shu",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 55,
+      "id": "tale-055",
+      "toc_hits": [
+        "第六十五回"
+      ]
+    },
+    {
+      "title": "王平听史",
+      "source": "《三国志》卷四十三·蜀书·王平传",
+      "quote": "平生所识不过十字，而口授作书，皆有意理。",
+      "synopsis": "王平识字极少，却常请人朗读史汉诸传，听懂大义；口授文书也条理分明。",
+      "characters": [
+        "王平"
+      ],
+      "region": "蜀",
+      "mood": "考据",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本虽写王平从军及守街亭等事，未载他请人读史、口授文书的生活细节。",
+      "visual_hook": "军帐灯下，一人捧卷朗读，王平凝神倾听，随后口授文书。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "shu",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 56,
+      "id": "tale-056",
+      "toc_hits": []
+    },
+    {
+      "title": "董允停驾留客",
+      "source": "《三国志》卷三十九·蜀书·董允传",
+      "quote": "乃命解骖，祎等罢驾。",
+      "synopsis": "董允将与费祎、胡济出游，年轻官员董恢恰来拜访。他留下客人，取消原定宴游。",
+      "characters": [
+        "董允",
+        "董恢",
+        "费祎",
+        "胡济"
+      ],
+      "region": "蜀",
+      "mood": "悲悯",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未载董允因接待官微年少的董恢而停驾、取消宴游的故事。",
+      "visual_hook": "府门车马已备，董恢欲退，董允挽留入堂，仆役转身卸下车马。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "shu",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 57,
+      "id": "tale-057",
+      "toc_hits": []
+    },
+    {
+      "title": "董和恶衣蔬食",
+      "source": "《三国志》卷三十九·蜀书·董和传",
+      "quote": "和躬率以俭，恶衣蔬食，防遏踰僭，为之轨制。",
+      "synopsis": "董和任成都令，面对当地奢靡风气，自己穿粗衣、吃蔬食，并制定规范，推动风俗转变。",
+      "characters": [
+        "董和"
+      ],
+      "region": "汉末",
+      "mood": "清廉",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本提及董和参与蜀中政务，但未展开其任成都令时以俭矫奢的故事。",
+      "visual_hook": "成都华服盛宴旁，董和身着粗衣，案上只有一碗蔬食。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "shu",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 58,
+      "id": "tale-058",
+      "toc_hits": []
+    },
+    {
+      "title": "蒋琬容人不答",
+      "source": "《三国志》卷四十四·蜀书·蒋琬传",
+      "quote": "人心不同，各如其面；面从后言，古人之所诫也。",
+      "synopsis": "蒋琬与杨戏谈话，杨戏有时不答。有人指其傲慢，蒋琬却认为他不愿违心附和，予以宽容。",
+      "characters": [
+        "蒋琬",
+        "杨戏"
+      ],
+      "region": "蜀",
+      "mood": "悲悯",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本虽写蒋琬继掌蜀政，未载他替沉默不答的杨戏解释、维护的细节。",
+      "visual_hook": "府署议事，杨戏默坐不语，旁人告状，蒋琬平静摆手解围。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "shu",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 59,
+      "id": "tale-059",
+      "toc_hits": []
+    },
+    {
+      "title": "何夔藏药守节",
+      "source": "《三国志·魏书·何夔传》",
+      "quote": "夔常畜毒药，誓死无辱，是以终不见及。",
+      "synopsis": "曹操治属吏严厉，常施杖责。何夔备下毒药，决意宁死不受辱，最终未遭杖责。",
+      "characters": [
+        "何夔",
+        "曹操"
+      ],
+      "region": "魏",
+      "mood": "勇毅",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未叙何夔因不愿受杖辱而预备毒药、最终未被杖责的故事。",
+      "visual_hook": "官署外传来杖责声，何夔端坐案前，身边藏着盛放毒药的小囊。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "wei",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 60,
+      "id": "tale-060",
+      "toc_hits": [
+        "第十回",
+        "第十一回",
+        "第十九回",
+        "第二十一回",
+        "第二十五回",
+        "第三十一回"
+      ]
+    },
+    {
+      "title": "徐邈醉称圣人",
+      "source": "《三国志·魏书·徐邈传》",
+      "quote": "校事赵达问以曹事，邈曰：“中圣人。”",
+      "synopsis": "禁酒期间徐邈私饮大醉，自称“中圣人”。鲜于辅解释这是酒徒隐语，曹操才息怒。",
+      "characters": [
+        "徐邈",
+        "赵达",
+        "鲜于辅",
+        "曹操"
+      ],
+      "region": "魏",
+      "mood": "诙谐",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未叙徐邈醉称“中圣人”、鲜于辅解释清酒与浊酒隐语的故事。",
+      "visual_hook": "官署里酒气未散，徐邈醉坐答问，赵达惊疑，鲜于辅赶来解释。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "wei",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 61,
+      "id": "tale-061",
+      "toc_hits": [
+        "第十回",
+        "第十一回",
+        "第十九回",
+        "第二十一回",
+        "第二十五回",
+        "第三十一回"
+      ]
+    },
+    {
+      "title": "毛玠选官尚俭",
+      "source": "《三国志·魏书·毛玠传》",
+      "quote": "其所举用，皆清正之士，虽于时有盛名而行不由本者，终莫得进。",
+      "synopsis": "毛玠主持选官，只取清正之士，不徇虚名。士人争相砥砺廉节，权贵也削减车服排场。",
+      "characters": [
+        "毛玠",
+        "崔琰"
+      ],
+      "region": "魏",
+      "mood": "清廉",
+      "romance_check": "not_in_romance",
+      "romance_note": "毛玠虽在通行毛本中出现，但未展开其选官重操行、促使权贵减损车服的故事。",
+      "visual_hook": "选曹案前，毛玠审看荐书；门外赴选官员收起华服，换下奢丽车饰。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "wei",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 62,
+      "id": "tale-062",
+      "toc_hits": []
+    },
+    {
+      "title": "王烈赠布劝善",
+      "source": "《三国志·魏书·管宁传》，裴注引《先贤行状》",
+      "quote": "刑戮是甘，乞不使王彦方知也。",
+      "synopsis": "盗牛者被捕，只求别让王烈知道。王烈得知他尚有羞耻心，赠布劝善，后来此人果然改过。",
+      "characters": [
+        "王烈",
+        "盗牛者"
+      ],
+      "region": "汉末",
+      "mood": "悲悯",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未载王烈向盗牛者赠布、以羞耻心促其改过的故事。",
+      "visual_hook": "牛主牵牛在旁，盗牛者低头求告；转场中王烈派人送来一端布。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "wei",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 63,
+      "id": "tale-063",
+      "toc_hits": []
+    },
+    {
+      "title": "田间相敬如宾",
+      "source": "《三国志·魏书·常林传》",
+      "quote": "其妻常自馈饷之，林虽在田野，其相敬如宾。",
+      "synopsis": "汉末常林带经耕作，妻子亲自送饭。夫妻虽身处田野，仍彼此以礼相待。",
+      "characters": [
+        "常林",
+        "常林妻"
+      ],
+      "region": "汉末",
+      "mood": "清廉",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未叙常林带经耕锄、妻子送饭及夫妻相敬的生活细节。",
+      "visual_hook": "田垄边放着农具与经书，妻子提饭篮而来，常林起身相迎。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "wei",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 64,
+      "id": "tale-064",
+      "toc_hits": []
+    },
+    {
+      "title": "董遇三余读书",
+      "source": "《三国志·魏书·王朗传》附王肃事，裴注引《魏略》",
+      "quote": "冬者岁之余，夜者日之余，阴雨者时之余也。",
+      "synopsis": "有人求学却苦于没有时间，董遇便教他利用冬季、夜晚和阴雨这“三余”读书。",
+      "characters": [
+        "董遇"
+      ],
+      "region": "魏",
+      "mood": "机智",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未载董遇以“三余”回答求学者的故事。",
+      "visual_hook": "以冬雪、孤灯、檐雨三幅画面，串起董遇向求学者解释读书时机。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "wei",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 65,
+      "id": "tale-065",
+      "toc_hits": []
+    },
+    {
+      "title": "邻里为孝罢社",
+      "source": "《三国志·魏书·王修传》",
+      "quote": "母以社日亡，来岁社，修感念悲哀。邻里闻之，为之罢社。",
+      "synopsis": "王修幼年丧母，次年社日触景悲哭。邻里感念他的孝心，特意停止社日活动。",
+      "characters": [
+        "王修"
+      ],
+      "region": "汉末",
+      "mood": "孝行",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本写过王修效忠袁氏，但未叙其幼年丧母、邻里为之罢社的故事。",
+      "visual_hook": "社日聚会正热闹，幼童独自悲哭，邻人闻声收起祭社用具。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "wei",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 66,
+      "id": "tale-066",
+      "toc_hits": []
+    },
+    {
+      "title": "丁奉雪中破敌",
+      "source": "《三国志·吴书·程黄韩蒋周陈董甘凌徐潘丁传·丁奉传》",
+      "quote": "取封侯爵赏，正在今日！",
+      "synopsis": "东兴之战大雪纷飞，丁奉率军轻装持短兵突袭，趁魏军轻敌饮宴，一举攻破前屯。",
+      "characters": [
+        "丁奉"
+      ],
+      "region": "吴",
+      "mood": "勇毅",
+      "romance_check": "in_romance",
+      "romance_note": "通行毛本第一百八回“丁奉雪中奋短兵　孙峻席间施密计”写有此事，并铺写雪中突袭经过。",
+      "visual_hook": "漫天风雪中，吴军脱去重甲、手持短刀，冲向正在宴饮的魏军营屯。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "wu",
+      "verdict_source": "model",
+      "romance_group": "演义亦载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 67,
+      "id": "tale-067",
+      "toc_hits": [
+        "第一百零八回",
+        "第一百一十三回"
+      ]
+    },
+    {
+      "title": "交州异果入贡",
+      "source": "《三国志·吴书·刘繇太史慈士燮传·士燮传》",
+      "quote": "燮每遣使诣权，致杂香细葛，辄以千数。",
+      "synopsis": "士燮从交州遣使向孙权进贡，除香料细葛、珠贝珍物外，还年年送来龙眼等异果，获厚赐。",
+      "characters": [
+        "士燮",
+        "孙权"
+      ],
+      "region": "吴",
+      "mood": "考据",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未铺写士燮逐年向孙权输送香料、细葛及交州异果的具体情景。",
+      "visual_hook": "交州使者打开成箱贡物，香料、细葛、珠贝与成串龙眼摆满庭前。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "wu",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 68,
+      "id": "tale-068",
+      "toc_hits": [
+        "第四十四回",
+        "第六十一回",
+        "第八十二回"
+      ]
+    },
+    {
+      "title": "全琮散米空还",
+      "source": "《三国志·吴书·贺全吕周钟离传·全琮传》",
+      "quote": "皆以赈给士大夫之穷困者，空船而还。",
+      "synopsis": "父亲让全琮载米赴吴交易，全琮却把米全赈给穷困士人；空船归来说明缘由，父亲转怒为奇。",
+      "characters": [
+        "全琮",
+        "全柔"
+      ],
+      "region": "汉末",
+      "mood": "悲悯",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本虽有全琮参与孙吴军政的叙述，未写他散尽贸易用米、空船归见父亲的早年故事。",
+      "visual_hook": "满载米袋的船变成空舱，全琮跪在盛怒的父亲面前，解释为何救急而未做买卖。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "wu",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 69,
+      "id": "tale-069",
+      "toc_hits": []
+    },
+    {
+      "title": "刘基抱权救翻",
+      "source": "《三国志·吴书·虞陆张骆陆吾朱传·虞翻传》",
+      "quote": "惟大司农刘基起抱权谏曰",
+      "synopsis": "虞翻宴上佯醉不接孙权赐酒，事后起坐激怒孙权；刘基抱住拔剑的孙权，劝其赦免虞翻。",
+      "characters": [
+        "刘基",
+        "虞翻",
+        "孙权"
+      ],
+      "region": "吴",
+      "mood": "直谏",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本虽写到虞翻，但未叙此次宴上佯醉、刘基抱住孙权救人的事件。",
+      "visual_hook": "宴席杯盘之间，孙权拔剑欲击伏地的虞翻，刘基冲出席位抱住孙权。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "wu",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 70,
+      "id": "tale-070",
+      "toc_hits": [
+        "第四十四回",
+        "第六十一回",
+        "第八十二回"
+      ]
+    },
+    {
+      "title": "步骘种瓜自给",
+      "source": "《三国志·吴书·张顾诸葛步传·步骘传》",
+      "quote": "俱以种瓜自给。",
+      "synopsis": "步骘避乱江东，贫困无依，与卫旌一起种瓜谋生，在劳作之余仍坚持读书。",
+      "characters": [
+        "步骘",
+        "卫旌"
+      ],
+      "region": "汉末",
+      "mood": "勇毅",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本写到步骘参与孙吴政事，但未叙他与卫旌避乱后种瓜自给的早年经历。",
+      "visual_hook": "江东瓜田里，两位年轻人弯腰劳作；夜晚回到简陋住所，又展开书卷。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "wu",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 71,
+      "id": "tale-071",
+      "toc_hits": []
+    },
+    {
+      "title": "陆瑁分甘养士",
+      "source": "《三国志·吴书·虞陆张骆陆吾朱传·陆瑁传》",
+      "quote": "瑁割少分甘，与同丰约。",
+      "synopsis": "陈融、濮阳逸等贫寒而有志的人投居陆瑁家，陆瑁将有限资财与好食分给他们，同甘共苦。",
+      "characters": [
+        "陆瑁",
+        "陈融",
+        "濮阳逸",
+        "蒋纂",
+        "袁迪"
+      ],
+      "region": "吴",
+      "mood": "悲悯",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未叙陆瑁接纳陈融等贫士居住，并与他们分享衣食、共同度日的故事。",
+      "visual_hook": "简朴屋舍里，陆瑁把盘中佳食分成数份，与寄居的贫士围坐共餐。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "wu",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 72,
+      "id": "tale-072",
+      "toc_hits": []
+    },
+    {
+      "title": "顾雍无言镇席",
+      "source": "《三国志·吴书·张顾诸葛步传·顾雍传》",
+      "quote": "顾公在坐，使人不乐。",
+      "synopsis": "顾雍不饮酒而举止严正，众人宴饮时怕酒后失态被他看见，不敢放纵，孙权也如此打趣。",
+      "characters": [
+        "顾雍",
+        "孙权"
+      ],
+      "region": "吴",
+      "mood": "诙谐",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本虽有顾雍出场，未叙宴客因顾雍在座而不敢纵酒、孙权出言打趣的细节。",
+      "visual_hook": "满堂酒宴中，顾雍端坐不饮，旁人举杯到半空又拘谨放下，孙权笑着指向他。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "wu",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 73,
+      "id": "tale-073",
+      "toc_hits": [
+        "第四十四回",
+        "第六十一回",
+        "第八十二回"
+      ]
+    },
+    {
+      "title": "骆统减食济饥",
+      "source": "《三国志·吴书·虞陆张骆陆吾朱传·骆统传》",
+      "quote": "士大夫糟糠不足，我何心独饱！",
+      "synopsis": "乡里及流寓者遭饥，骆统因此减食；姐姐问明缘由，拿出私粮，又与母亲一起支持赈济。",
+      "characters": [
+        "骆统",
+        "骆统姊",
+        "骆统母"
+      ],
+      "region": "吴",
+      "mood": "悲悯",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未叙骆统早年因饥民而减食、姐姐出粮相助的家庭故事。",
+      "visual_hook": "家中饭案旁，姐姐追问骆统为何少食，随后打开粮囤，将私粮分给饥民。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "wu",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "status": "candidate",
+      "grade": "B",
+      "no": 74,
+      "id": "tale-074",
+      "toc_hits": []
+    },
+    {
+      "title": "五禽导引健身",
+      "source": "《三国志》卷二十九·魏书·方技传·华佗传",
+      "quote": "吾有一术，名五禽之戏，一曰虎，二曰鹿，三曰熊，四曰猿，五曰鸟。",
+      "synopsis": "华佗向吴普传授五禽戏，以模仿动物动作活动身体；吴普坚持练习，九十余岁仍耳目聪明。",
+      "characters": [
+        "华佗",
+        "吴普"
+      ],
+      "region": "汉末",
+      "mood": "巧艺",
+      "romance_check": "uncertain",
+      "romance_note": "毛本第七十八回涉及华佗医术与生平，但本条五禽戏及吴普实践的细节是否完整收入，尚待逐字核对。",
+      "visual_hook": "庭院中，华佗示范虎扑、鹿伸、熊行、猿攀与鸟展，吴普在旁依样练习。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "artisans",
+      "verdict_source": "model",
+      "romance_group": "演义归属待考",
+      "status": "needs_review",
+      "grade": "R",
+      "no": 75,
+      "id": "tale-075",
+      "toc_hits": []
+    },
+    {
+      "title": "陈登食脍生疾",
+      "source": "《三国志》卷二十九·魏书·方技传·华佗传",
+      "quote": "府君胃中有虫数升，欲成内疽，食腥物所为也。",
+      "synopsis": "陈登面赤不食，华佗诊为食腥所致，煎药使其吐虫病愈，并告诫三年后恐会复发。",
+      "characters": [
+        "陈登",
+        "华佗"
+      ],
+      "region": "汉末",
+      "mood": "考据",
+      "romance_check": "uncertain",
+      "romance_note": "毛本第七十八回集中叙述华佗医术；陈登食脍、吐虫这一具体医案是否收入，尚待核对，不作确定判断。",
+      "visual_hook": "陈登卧于榻上，案边尚留鱼脍盘，华佗端来药汤，侍者捧盆守候。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "artisans",
+      "verdict_source": "model",
+      "romance_group": "演义归属待考",
+      "status": "needs_review",
+      "grade": "R",
+      "no": 76,
+      "id": "tale-076",
+      "toc_hits": []
+    },
+    {
+      "title": "士别三日",
+      "source": "《三国志·吴书·吕蒙传》裴注引《江表传》",
+      "quote": "原文见 《三国志·吴书·吕蒙传》裴注引《江表传》",
+      "synopsis": "权劝蒙学，鲁肃叹『非复吴下阿蒙』。",
+      "characters": [
+        "吕蒙",
+        "孙权",
+        "鲁肃"
+      ],
+      "region": "吴",
+      "mood": "考据",
+      "romance_check": "uncertain",
+      "romance_note": "孙权劝学见《三国志·吴书·吕蒙传》裴注引《江表传》与《资治通鉴》；演义是否正面叙写待复核。",
+      "visual_hook": "鲁肃过寻阳与吕蒙论议惊叹",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "manual",
+      "romance_group": "演义归属待考",
+      "status": "needs_review",
+      "grade": "R",
+      "no": 77,
+      "id": "tale-077",
+      "toc_hits": [
+        "第四十四回",
+        "第五十二回",
+        "第六十一回",
+        "第八十二回"
+      ]
+    },
+    {
+      "title": "孙策挟将喝敌",
+      "source": "《三国演义》第15回《太史慈酣斗小霸王 孙伯符大战严白虎》",
+      "quote": "原文待核",
+      "synopsis": "孙策追击刘繇部将，挟住于糜，又回身怒喝樊能；樊能惊坠马，于糜也被挟死。",
+      "characters": [
+        "孙策",
+        "于糜",
+        "樊能"
+      ],
+      "region": "汉末",
+      "mood": "勇毅",
+      "romance_check": "in_romance",
+      "romance_note": "第15回孙策进攻刘繇的战事中，正文写他挟死于糜、喝倒樊能，并以此渲染“小霸王”之勇；不可将这一细节直接认作正史实录。",
+      "visual_hook": "孙策一臂挟着敌将策马奔驰，猛然回头大喝，后方追将翻落马下。",
+      "confidence": "low",
+      "origin": "model",
+      "batch": "romance",
+      "verdict_source": "model",
+      "romance_group": "演义亦载",
+      "status": "needs_review",
+      "grade": "R",
+      "no": 78,
+      "id": "tale-078",
+      "toc_hits": []
+    },
+    {
+      "title": "钟氏兄弟答汗",
+      "source": "《世说新语·言语第二》",
+      "quote": "战战栗栗，汗不敢出。",
+      "synopsis": "钟毓、钟会幼年见魏文帝，兄长因惧出汗，弟弟却无汗；两人各用一句巧答解释。",
+      "characters": [
+        "钟毓",
+        "钟会",
+        "曹丕"
+      ],
+      "region": "魏",
+      "mood": "机智",
+      "romance_check": "uncertain",
+      "romance_note": "通行毛本写到钟毓、钟会，但是否在人物引介中带及这一幼年问答，尚待逐回核对。",
+      "visual_hook": "宫殿中兄弟并立，一人汗流满面，一人面不改色，皇帝俯身发问。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "shishuo",
+      "verdict_source": "model",
+      "romance_group": "演义归属待考",
+      "status": "needs_review",
+      "grade": "R",
+      "no": 79,
+      "id": "tale-079",
+      "toc_hits": [
+        "第三十三回",
+        "第八十回",
+        "第八十六回",
+        "第一百一十六回"
+      ]
+    },
+    {
+      "title": "宗预握手别吴",
+      "source": "《三国志》卷四十五·蜀书·宗预传",
+      "quote": "君每衔命结二国之好，今君年长，孤亦衰老，恐不复相见！",
+      "synopsis": "宗预再次出使东吴，孙权握住他的手流泪惜别，感叹彼此年老，并赠大珠一斛。",
+      "characters": [
+        "宗预",
+        "孙权"
+      ],
+      "region": "跨政权",
+      "mood": "悲悯",
+      "romance_check": "uncertain",
+      "romance_note": "史传明确记载握手、泣别与赠珠；此细节是否写入通行毛本的使吴叙述，尚待逐回核查。",
+      "visual_hook": "吴宫送别处，两位老者握手垂泪，侍从捧出盛满大珠的量器。",
+      "confidence": "medium",
+      "origin": "model",
+      "batch": "shu",
+      "verdict_source": "model",
+      "romance_group": "演义归属待考",
+      "status": "needs_review",
+      "grade": "R",
+      "no": 80,
+      "id": "tale-080",
+      "toc_hits": [
+        "第四十四回",
+        "第六十一回",
+        "第八十二回"
+      ]
+    },
+    {
+      "title": "王粲驴鸣",
+      "source": "《世说新语·伤逝》",
+      "quote": "原文见 《世说新语·伤逝》",
+      "synopsis": "粲好驴鸣，既葬，文帝临其丧，令赴客皆作一驴鸣。",
+      "characters": [
+        "曹丕",
+        "王粲"
+      ],
+      "region": "魏",
+      "mood": "悼亡",
+      "romance_check": "not_in_romance",
+      "romance_note": "人工核验基线：见于史料/古注，演义未见正面叙写；仍建议抽查。",
+      "visual_hook": "灵前宾客各作一声驴鸣",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "curated",
+      "romance_group": "演义未载",
+      "status": "used",
+      "used_as": "一场驴鸣送故人",
+      "grade": "U",
+      "no": 81,
+      "id": "tale-081",
+      "toc_hits": [
+        "第三十三回",
+        "第八十回",
+        "第八十六回"
+      ]
+    },
+    {
+      "title": "胡质父子清慎",
+      "source": "《三国志·魏书·胡质传》裴注引《晋阳秋》",
+      "quote": "原文见 《三国志·魏书·胡质传》裴注引《晋阳秋》",
+      "synopsis": "威省父，父与一匹绢为粮资。",
+      "characters": [
+        "胡质",
+        "胡威"
+      ],
+      "region": "魏",
+      "mood": "清廉",
+      "romance_check": "not_in_romance",
+      "romance_note": "人工核验基线：见于史料/古注，演义未见正面叙写；仍建议抽查。",
+      "visual_hook": "临别一匹绢，追问来处",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "curated",
+      "romance_group": "演义未载",
+      "status": "used",
+      "used_as": "胡威千里省父",
+      "grade": "U",
+      "no": 82,
+      "id": "tale-082",
+      "toc_hits": []
+    },
+    {
+      "title": "蔡邕倒屣迎王粲",
+      "source": "《三国志·魏书·王粲传》",
+      "quote": "原文见 《三国志·魏书·王粲传》",
+      "synopsis": "粲至长安，邕倒屣迎之，尽以书籍文章相付。",
+      "characters": [
+        "蔡邕",
+        "王粲"
+      ],
+      "region": "汉末",
+      "mood": "诙谐",
+      "romance_check": "not_in_romance",
+      "romance_note": "人工核验基线：见于史料/古注，演义未见正面叙写；仍建议抽查。",
+      "visual_hook": "满座宾客中倒穿鞋奔出迎少年",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "curated",
+      "romance_group": "演义未载",
+      "status": "used",
+      "used_as": "蔡邕倒屣迎少年",
+      "grade": "U",
+      "no": 83,
+      "id": "tale-083",
+      "toc_hits": []
+    },
+    {
+      "title": "诸葛恪得驴",
+      "source": "《三国志·吴书·诸葛恪传》裴注引《江表传》",
+      "quote": "原文见 《三国志·吴书·诸葛恪传》裴注引《江表传》",
+      "synopsis": "孙权题驴面『诸葛子瑜』，恪续『之驴』二字。",
+      "characters": [
+        "诸葛恪",
+        "孙权",
+        "诸葛瑾"
+      ],
+      "region": "吴",
+      "mood": "机智",
+      "romance_check": "not_in_romance",
+      "romance_note": "人工核验基线：见于史料/古注，演义未见正面叙写；仍建议抽查。",
+      "visual_hook": "驴脸长牌上续写『之驴』二字",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "curated",
+      "romance_group": "演义未载",
+      "status": "used",
+      "used_as": "诸葛恪得驴",
+      "grade": "U",
+      "no": 84,
+      "id": "tale-084",
+      "toc_hits": [
+        "第三十六回",
+        "第四十回",
+        "第四十三回",
+        "第四十四回",
+        "第四十九回",
+        "第五十回"
+      ]
+    },
+    {
+      "title": "费祎围棋办贼",
+      "source": "《三国志·蜀书·费祎传》裴注引《祎别传》",
+      "quote": "原文见 《三国志·蜀书·费祎传》裴注引《祎别传》",
+      "synopsis": "来敏求共围棋，羽檄交驰而祎从容对局。",
+      "characters": [
+        "费祎",
+        "来敏"
+      ],
+      "region": "蜀",
+      "mood": "考据",
+      "romance_check": "not_in_romance",
+      "romance_note": "人工核验基线：见于史料/古注，演义未见正面叙写；仍建议抽查。",
+      "visual_hook": "羽檄交驰中对局不辍",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "curated",
+      "romance_group": "演义未载",
+      "status": "used",
+      "used_as": "费祎临军不废棋",
+      "grade": "U",
+      "no": 85,
+      "id": "tale-085",
+      "toc_hits": []
+    },
+    {
+      "title": "辛毗引裾",
+      "source": "《三国志·魏书·辛毗传》",
+      "quote": "原文见 《三国志·魏书·辛毗传》",
+      "synopsis": "文帝欲徙冀州士家十万户，毗引帝裾而谏。",
+      "characters": [
+        "辛毗",
+        "曹丕"
+      ],
+      "region": "魏",
+      "mood": "直谏",
+      "romance_check": "not_in_romance",
+      "romance_note": "人工核验基线：见于史料/古注，演义未见正面叙写；仍建议抽查。",
+      "visual_hook": "追入内殿牵住帝王衣裾",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "curated",
+      "romance_group": "演义未载",
+      "status": "used",
+      "used_as": "辛毗牵衣直谏",
+      "grade": "U",
+      "no": 86,
+      "id": "tale-086",
+      "toc_hits": [
+        "第三十三回",
+        "第八十回",
+        "第八十六回"
+      ]
+    },
+    {
+      "title": "马钧复造指南车",
+      "source": "《三国志·魏书·杜夔传》裴注",
+      "quote": "原文见 《三国志·魏书·杜夔传》裴注",
+      "synopsis": "钧与高堂隆、秦朗争指南车，卒成之。",
+      "characters": [
+        "马钧",
+        "高堂隆"
+      ],
+      "region": "魏",
+      "mood": "巧艺",
+      "romance_check": "not_in_romance",
+      "romance_note": "人工核验基线：见于史料/古注，演义未见正面叙写；仍建议抽查。",
+      "visual_hook": "木人始终南指的试车庭",
+      "confidence": "high",
+      "origin": "curated",
+      "batch": "curated",
+      "verdict_source": "curated",
+      "romance_group": "演义未载",
+      "status": "used",
+      "used_as": "马钧复造指南车",
+      "grade": "U",
+      "no": 87,
+      "id": "tale-087",
+      "toc_hits": []
+    }
+  ]
+}

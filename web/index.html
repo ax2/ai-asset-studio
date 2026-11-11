@@ -22,6 +22,7 @@
       <button class="nav-item" data-view="batch">批量生成</button>
       <button class="nav-item" data-view="game">角色与游戏资产</button>
       <button class="nav-item" data-view="comic">连环画</button>
+      <button class="nav-item" data-view="stories">故事库</button>
       <button class="nav-item" data-view="export">导出与同步</button>
       <button class="nav-item" data-view="cost">成本看板</button>
       <button class="nav-item" data-view="settings">连接设置</button>
@@ -249,6 +250,21 @@
           <div class="hint">场景是独立资产：完整 prompt、环境描述、模型参数与图片编号都会保存，可复用于其它故事。</div>
           <div id="comicScenes" class="list mt"></div>
         </div>
+      </div>
+    </section>
+
+    <section class="view hidden" id="view-stories">
+      <div class="panel">
+        <div class="panel-title">三国小故事候选库</div>
+        <div class="hint">史料轶事与《三国演义》写过的情节一并收录，逐条标注出处、演义归属与可信度等级。<code>batches/story-bank.json</code> 是唯一数据源，由 <code>tools/build_story_bank.py</code> 离线生成。</div>
+        <div class="btn-row mt">
+          <button class="btn ghost" data-action="stories-refresh">刷新统计</button>
+          <a class="btn ghost" href="/pack/story-bank/index.html" target="_blank" rel="noopener">新窗口打开可分享版</a>
+        </div>
+        <div id="storiesStats" class="list mt"></div>
+        <iframe id="storiesFrame" class="mt" title="三国小故事候选库"
+          src="/pack/story-bank/index.html"
+          style="width:100%;height:70vh;border:1px solid #e2dbcd;border-radius:8px;background:#fff"></iframe>
       </div>
     </section>
 

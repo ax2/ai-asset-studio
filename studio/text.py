@@ -61,7 +61,8 @@ def chat(cfg: dict, messages: list[dict], *, model: str | None = None,
 
 
 def chat_json(cfg: dict, prompt: str, *, system: str = "",
-              model: str | None = None, max_tokens: int = 8000) -> tuple[Any, dict]:
+              model: str | None = None, max_tokens: int = 8000,
+              timeout: int = 300) -> tuple[Any, dict]:
     """Chat, then parse a JSON object/array out of the reply.
 
     Returns ``(data, meta)`` so the caller can archive model/usage/finish
@@ -71,7 +72,8 @@ def chat_json(cfg: dict, prompt: str, *, system: str = "",
     if system:
         messages.append({"role": "system", "content": system})
     messages.append({"role": "user", "content": prompt})
-    body = chat(cfg, messages, model=model, max_tokens=max_tokens)
+    body = chat(cfg, messages, model=model, max_tokens=max_tokens,
+                timeout=timeout)
     choice = (body.get("choices") or [{}])[0]
     content = str((choice.get("message") or {}).get("content") or "")
     cleaned = re.sub(r"^```(?:json)?\s*|\s*```$", "", content.strip())

@@ -109,6 +109,8 @@ POST   /api/characters/<id>/turnaround               四视图包
 POST   /api/sprites                                  精灵动画包
 GET    /api/packs  /api/packs/<id>/zip  DELETE /api/packs/<id>
 GET    /api/scenes  /api/comic                        场景卡与连环画批次
+GET    /api/stories?q=&status=                         故事候选库（只读）
+GET    /pack/story-bank/index.html                     可分享的离线故事库
 GET    /pack/<id>/<file>                             包内预览与图片
 ```
 
@@ -152,6 +154,26 @@ python tools/generate_comic_series.py --episodes 1,2,3
 ```
 
 `--fix-degraded` 会在全部生成完后自动补跑「降级为纯文本」或缺失的分镜；单集也可 `python tools/generate_comic.py --plan batches/comic-sNN-*.json --redo-degraded-panels`。阅读页在工作台 `http://127.0.0.1:8777/pack/sanguo-tales-10/index.html`。
+
+## 故事候选库（只收集，不出图）
+
+`tools/collect_stories.py` 用文本模型按 8 个来源分批收集候选小故事（魏书 / 蜀书 / 吴书及裴注、《世说新语》、《后汉书》《晋书》、器物制度、演义亦载、跨来源补漏）。每批单独缓存到 `data/story-collect/`，重跑零花费，失败一批不影响其它批。
+
+`tools/build_story_bank.py` 纯离线：合并 `write_comic_series.py` 中 24 条人工核验候选与模型批次，去重、排除已拍故事、套用人工考据结论，产出 `batches/story-bank.json`（唯一数据源）+ 自包含的 `data/packs/story-bank/index.html`，并同步到 `D:\gdrive.photo\ai-assets\all\story-bank\`。
+
+- **口径已放宽**：《三国演义》写过的故事同样收录，用 `romance_group` 标为「演义亦载 / 仅被提及 / 有相似回目 / 演义未载 / 归属待考」。`batches/romance-toc.json` 存了 120 回回目，`toc_hits` 只是参考提示，不代表该故事被正面叙写。
+- **等级**：A 人工核验基线；B 模型采集、高置信且有原文摘录；C 中置信建议抽查；R 待复核（出处/原文存疑或归属不确定）；U 已拍成连环画。
+- 每条保留出处、原文摘录、梗概、人物、地域、情绪、演义归属依据、可视化钩子与回目提示，供后续选题直接挑。
+
+```bash
+python tools/collect_stories.py --show                # 查看已缓存批次
+python tools/collect_stories.py --only romance,mixed   # 只补采某几批
+python tools/collect_stories.py --workers 3            # 全部批次，3 并发
+python tools/build_story_bank.py                      # 合并、渲染 HTML、同步云盘
+python tools/build_story_bank.py --show --no-sync     # 只看统计
+```
+
+工作台「故事库」页也能查看与筛选：`http://127.0.0.1:8777/` → 故事库。
 
 ## 目录
 

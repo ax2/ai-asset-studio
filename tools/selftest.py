@@ -270,6 +270,29 @@ def main() -> None:
     for p in characters.list_packs(cfg):
         check("pack indexed " + p["id"][:16], characters.get_pack(cfg, p["id"]) is not None)
 
+    # Story bank (built offline by tools/build_story_bank.py).
+    bank_file = ROOT / "batches" / "story-bank.json"
+    if bank_file.is_file():
+        bank = json.loads(bank_file.read_text(encoding="utf-8"))
+        rows = bank.get("stories") or []
+        check("story bank stats match", bank["stats"]["total"] == len(rows))
+        check("story bank ids sequential",
+              [r["no"] for r in rows] == list(range(1, len(rows) + 1)))
+        check("story bank required fields",
+              all(all(r.get(k) for k in ("title", "source", "romance_group",
+                                         "status", "grade")) for r in rows))
+        check("story bank marks produced episodes",
+              len([r for r in rows if r["status"] == "used"]) >= 7)
+        verdicts = {r["title"]: r["romance_check"] for r in rows}
+        check("manual Romance verdict: Qin Mi",
+              verdicts.get("秦宓论天") == "in_romance")
+        check("manual Romance verdict: plums",
+              verdicts.get("望梅止渴") == "in_romance")
+        toc = json.loads((ROOT / "batches" / "romance-toc.json").read_text(
+            encoding="utf-8"))
+        check("romance toc has 120 chapters",
+              len(toc.get("chapters") or []) == 120)
+
     print("\nALL CHECKS PASSED (offline, $0 spent)")
 
 
