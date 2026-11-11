@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import base64
 import html
+import http.client
 import json
 import os
 import time
@@ -203,7 +204,7 @@ def call_openai(cfg: dict, prompt: str, model: str, quality: str,
                 continue
             raise RuntimeError(
                 f"无法连接 OpenAI API：{exc.reason}。请检查 config.json 里的 api_proxy。") from None
-        except OSError as exc:
+        except (OSError, http.client.HTTPException) as exc:
             if attempt < 2:
                 time.sleep(2 * (attempt + 1))
                 continue
@@ -359,7 +360,7 @@ def call_openai_edit(cfg: dict, prompt: str, images: list[bytes], *,
                 time.sleep(2 * network_retries)
                 continue  # transient proxy reset before the API answered
             raise RuntimeError(f"无法连接参考图接口：{exc.reason}。检查 api_proxy。") from None
-        except OSError as exc:
+        except (OSError, http.client.HTTPException) as exc:
             if network_retries < 2:
                 network_retries += 1
                 time.sleep(2 * network_retries)
