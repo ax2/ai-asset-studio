@@ -140,7 +140,7 @@ python tools/generate_comic.py --redo-panels           # 重做全部 6 格（�
 
 1. **先共享、后并发**：所有角色卡只建一次，缺立绘的人物统一生成一张全系列共用立绘（线程池），之后才启动各集进程。这样跨集复用同一人物（如曹丕同时出现在第 4、5 集）不会有依赖或重复计费。
 2. 各集用独立进程跑 `generate_comic.py --plan <剧本> --cards-ready`（角色卡只读，SQLite WAL + busy_timeout 保证并发写安全），每集自己导出 ZIP、`comic.html`、场景卡并同步到资产盘。全程幂等，中断重跑自动跳过已入库的图。
-3. 最后生成系列 `index.html`（10 集卡片、缩略图、史料依据、成本、阅读/下载入口）与 `series-manifest.json`，连同 10 个素材包 ZIP 一起写入 `D:\gdrive.photo\ai-assets\all\sanguo-tales-10\` 和工作台 `data/packs/sanguo-tales-10/`。
+3. 最后生成系列 `index.html`（10 集卡片、缩略图、史料依据、成本、阅读/下载入口）与 `series-manifest.json`，连同 10 个素材包 ZIP 一起写入 `D:\gdrive.photo\ai-assets\all\sanguo-tales-10\` 和工作台 `data/packs/sanguo-tales-10/`。每集 ZIP 的 `shared-portraits/` 会附本集用到、但归在全系列共享资产下的角色立绘副本，因此单集包也是自足的。
 
 ```bash
 python tools/write_comic_series.py --show          # 只看 10 集选题
