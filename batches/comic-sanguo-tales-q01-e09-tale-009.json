@@ -1,0 +1,240 @@
+{
+  "id": "comic-sanguo-tales-q01-e09-tale-009",
+  "title": "曹冲称象",
+  "subtitle": "不称巨象，先记一船水痕",
+  "story_source": "《三国志·魏书·邓哀王冲传》记曹冲幼时聪察，孙权曾致巨象，曹操欲知其重量，群下未能得法。曹冲曰：『置象大船之上，而刻其水痕所至，称物以载之，则校可知矣。』太祖大悦，即施行焉。",
+  "why_not_in_romance": "【演义归属：演义未载】《三国演义》未写曹冲称象这一事件。本集取材于《三国志·魏书·邓哀王冲传》，不属于演义情节。同传所载『鼠啮马鞍』也未见于《三国演义》，且已另拍单集，本集不混入该故事。",
+  "synopsis": "曹操想知道巨象有多重，却没有合用的大秤。年幼的曹冲提出借船称量：让象登船，刻下水痕，再让象下船，以货物替代，装至原来的水痕。最后分批称量货物，合计即可推知象重。曹操见办法奏效，欣然赞许。",
+  "characters": [
+    {
+      "name": "曹冲",
+      "slug": "cao-chong",
+      "existing": true,
+      "role": "提出借船称象办法的幼童",
+      "profile": {
+        "age": "史载称象时年五六岁；沿用已有角色卡，不另造年龄版本",
+        "gender": "男",
+        "role": "曹操之子，本集称象办法的提出者",
+        "era": "东汉末年",
+        "face": "严格沿用资产库曹冲角色卡，不重新设计脸型与五官",
+        "eyes": "严格沿用已有角色卡的眼形与瞳色",
+        "skin": "严格沿用已有角色卡的肤色",
+        "build": "沿用已有角色卡的幼童体态与比例",
+        "hair": "严格沿用已有角色卡发型、发色与束发方式",
+        "marks": "不新增伤痕、胎记或其他外貌标记",
+        "outfit": "沿用浅米色交领长衣、素白内衬、浅褐布带、灰褐裤与深褐布履；六格不换装。本集不发生鼠啮马鞍故事中的划袖动作，衣袖保持完整",
+        "accessories": "仅保留已有角色卡配饰，不新增身份饰物",
+        "weapon": "不新增武器；刻水痕所用小刻刀仅为本集操作道具",
+        "palette": "米白、浅褐、灰褐、墨黑",
+        "temperament": "聪敏沉静，善于观察，解释办法时清楚笃定",
+        "art_style": "沿用三国英雄立绘资产的绘制风格与材质表现",
+        "negative": "不重造外貌，不改变发型，不换装，不将划破衣袖情节带入本集，不成人化"
+      },
+      "pose": "Reuse the existing Cao Chong character asset without redesign; a calm explanatory pose with one hand indicating the boat, preserving the established face, hairstyle, complete sleeves and costume.",
+      "tags": [
+        "三国",
+        "已有角色",
+        "曹冲",
+        "幼童",
+        "称象"
+      ],
+      "character_id": "char-20261110-162243-76c4f2"
+    },
+    {
+      "name": "曹操",
+      "slug": "cao-cao",
+      "existing": true,
+      "role": "欲知象重、采纳曹冲办法的父亲",
+      "profile": {
+        "age": "成年，严格沿用已有曹操角色卡的年龄表现",
+        "gender": "男",
+        "role": "曹冲之父，本集称象办法的采纳者",
+        "era": "东汉末年",
+        "face": "严格沿用资产库曹操角色卡，不重新设计脸型与五官",
+        "eyes": "严格沿用已有角色卡的眼形与瞳色",
+        "skin": "严格沿用已有角色卡的肤色",
+        "build": "严格沿用已有角色卡的身形与比例",
+        "hair": "严格沿用已有角色卡发型、发色及须髯",
+        "marks": "不新增伤痕或其他外貌标记",
+        "outfit": "玄色蟒纹深衣，暗金四爪蟒纹满绣，交领缘饰朱红，外披黑貂大氅，貂毛根根分明，腰束玉带镶鎏金兽首；六格不换装",
+        "accessories": "沿用已有角色卡的玉带及鎏金兽首配件，不新增冠服配饰",
+        "weapon": "严格沿用已有资产设定，不新增或更换武器",
+        "palette": "玄黑、墨青、暗金、朱红、玉白",
+        "temperament": "威严而好奇，听取办法时专注，见到结果后欣然赞许",
+        "art_style": "沿用三国英雄立绘资产的绘制风格与材质表现",
+        "negative": "不重造外貌，不改变发型与须髯，不换装，不增加皇帝冠冕，不更换武器"
+      },
+      "pose": "Reuse the existing Cao Cao character asset without redesign; standing attentively with a restrained approving gesture, preserving all established facial features, hair, beard, costume and accessories.",
+      "tags": [
+        "三国",
+        "已有角色",
+        "曹操",
+        "父亲",
+        "纳策"
+      ],
+      "character_id": "char-20261110-144930-66b9cc"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "河岸称量台",
+      "description": "白日河岸上的平整木石码头。岸边设无字木案、可悬挂双盘的木架衡器、无字标准砝码与装有小块石料的素麻袋，侧面留有通向泊船处的宽木跳板。独立环境概念图中无人、无动物。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a late Eastern Han riverside weighing terrace, level timber and stone quay, a plain wooden table, a timber-supported equal-arm balance with two suspended pans, uninscribed counterweights, plain hemp sacks containing small stones, a broad gangplank leading toward the adjacent berth, calm daylight and clear working space. No people, no animals, no human silhouettes. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine timber and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "白日",
+      "mood": "开阔、安静、便于观察"
+    },
+    {
+      "id": "scene-02",
+      "name": "大船泊位",
+      "description": "紧邻称量台的静水泊位，一艘宽底大木船以缆绳固定，船舷外侧木板清晰可见，宽木跳板与岸相接。水面平稳，背景为低矮芦苇与远岸。独立环境概念图中无人、无动物，船身无字无旗。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a calm river berth adjoining the weighing terrace, one broad flat-bottomed wooden cargo boat secured with mooring ropes, clearly visible outer hull planks, a wide reinforced gangplank connecting to the quay, still water, low reeds and a distant bank, ample room on deck for a large elephant. No people, no animals, no flags, no painted symbols, no pre-existing measurement marks. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine timber and rope texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "白日",
+      "mood": "平稳、清晰、适合展示水位变化"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "巨象来到，曹操欲知其重。",
+      "dialogue": [
+        {
+          "speaker": "曹操",
+          "line": "这样大的象，该怎样称量？"
+        }
+      ],
+      "visual": "Wide view of the riverside weighing terrace. Cao Cao and Cao Chong are the only two human figures, both using their exact existing character assets and unchanged costumes. A large calm elephant stands safely on the spacious quay beside them. The ordinary timber-supported balance nearby is visibly too small to weigh the elephant directly. Cao Cao studies the animal while Cao Chong looks toward the adjacent boat berth. No attendants or background crowds. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "曹操",
+        "曹冲"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-02",
+      "caption": "曹冲望见大船，心中有了办法。",
+      "dialogue": [
+        {
+          "speaker": "曹冲",
+          "line": "让象上船，刻下水痕，再用称过的东西替它。"
+        },
+        {
+          "speaker": "曹操",
+          "line": "好，就照你说的试试。"
+        }
+      ],
+      "visual": "Medium view at the calm boat berth. Cao Chong points toward the broad empty cargo boat while explaining his idea to Cao Cao, who listens closely. Show only these two human figures, using their established character assets without any changes to face, hairstyle, clothing or equipment. The secure mooring ropes, broad gangplank and clear outer hull establish the practical setup. Cao Chong's sleeves are intact. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "曹冲",
+        "曹操"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "象立船中，沿水面刻下浅痕。",
+      "dialogue": [
+        {
+          "speaker": "曹冲",
+          "line": "记住这里，便记住了船吃水的深浅。"
+        }
+      ],
+      "visual": "Medium low-angle view from the quay beside the loaded boat. A calm elephant stands centrally on the broad stable deck, making the hull sit lower in the still water. Cao Chong is the sole human figure, kneeling securely on the quay and using a small practical scoring tool to make one short shallow horizontal incision on the outer hull exactly at the water surface. Clearly distinguish this physical scratch from writing: one plain notch only, without numerals, labels or a graduated scale. Preserve Cao Chong's existing appearance, hairstyle and intact costume. No handlers or other people. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and timber texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "曹冲"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "象下船，换载石料至原水痕。",
+      "dialogue": [
+        {
+          "speaker": "曹冲",
+          "line": "水面恰好到刻痕了，不必再添！"
+        }
+      ],
+      "visual": "Medium side view of the same moored boat from the same hull side. The elephant has already left and is outside the frame. A substantial load of plain hemp sacks containing small stones is distributed evenly across the deck; the gangplank remains clear. Cao Chong is the only human figure, standing safely on the quay and checking the hull. The still water surface meets the exact same single shallow horizontal notch established previously, clearly showing that the replacement cargo restores the elephant-loaded draft. Keep boat fittings and loose equipment unchanged. Preserve Cao Chong's existing face, hair and intact clothing. No workers or distant silhouettes. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and timber texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "曹冲"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-01",
+      "caption": "将替载石料分批称量，再合计。",
+      "dialogue": [
+        {
+          "speaker": "曹冲",
+          "line": "把这些石料逐批称过，重量再合在一起。"
+        }
+      ],
+      "visual": "Medium view of the riverside weighing terrace during the later weighing stage. Cao Chong is the sole human figure, closely observing a level equal-arm beam balance supported by a sturdy timber frame. One pan holds a small manageable plain sack of replacement stones and the other holds uninscribed standard counterweights. Several identical cargo sacks stand in clearly separated weighed and unweighed groups on the quay, implying repeated batches over time rather than one enormous lift. A few plain counting rods rest on the table without forming written characters or numerals. Preserve Cao Chong's exact existing appearance and complete costume. No assistants, no elephant, no duplicate figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and wooden instrument texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "曹冲"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-01",
+      "caption": "物重既知，象重亦可推知。",
+      "dialogue": [
+        {
+          "speaker": "曹冲",
+          "line": "同船到了同一水痕，所载便一样重。"
+        },
+        {
+          "speaker": "曹操",
+          "line": "好办法！"
+        }
+      ],
+      "visual": "Medium concluding view on the same weighing terrace. Cao Chong stands beside the balance and the completed group of weighed cargo sacks, explaining the result with a small assured gesture. Cao Cao faces him with an unmistakably pleased, approving expression. These are the only two human figures. Reuse both established character assets exactly, preserving faces, hairstyles, clothing and accessories; Cao Chong's sleeves remain intact. Keep the table free of written records and show no invented numerical result. Quiet river light and the orderly weighing equipment provide a restrained satisfying conclusion. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "曹冲",
+        "曹操"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting throughout. Reuse the existing Cao Chong and Cao Cao character assets exactly; never redesign their faces, hairstyles, costumes, accessories or established weapons. Cao Chong's sleeves remain intact in all six panels; do not import the sleeve-cutting incident from the separate saddle story. Show at most two human characters in any panel, with no attendants, crowds, anonymous hands or background human silhouettes. Environment concept images must contain no people or animals. Use only the two specified scene assets. Keep the same boat, ropes and onboard equipment across the comparison shots. Show the elephant safely centered aboard, and later show replacement cargo reaching the identical calm-water hull notch. The notch is a single physical scratch, never writing or a numbered measuring scale. Elephant removal, cargo handling and repeated weighing may occur between panels; do not introduce extra workers. Treat stones, hemp sacks and the balance as illustrative props rather than quoted historical specifics. Do not invent an exact elephant weight. All narration and dialogue are external HTML overlays only; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+  "notes": "史料骨架为曹操欲知巨象之重、曹冲提出置象大船刻记水痕并以可称之物校知重量、曹操采纳施行。原文未说明替载物必为石料，也未详述码头形制、衡器结构与操作人员；本集用装石麻袋和分批称量将方法视觉化，不将这些细节冒充原文。原句可理解为先称物再装船，本集为清晰展示同一水痕，采用先替载至痕、再分批称量的等效演示次序。对白为文学化转述，不是史料逐字引语；不虚构象重数值。曹冲年龄依据本传『年五六岁』表述，人物外貌仍严格复用已有资产。曹操服饰沿用系列既定角色卡，属于资产风格延续，不作为汉末服制复原依据。全篇仅曹冲、曹操两名人物；大象为动物道具，不另建人物角色。与鼠啮马鞍单集无情节交叉。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q01",
+  "episode": 9,
+  "story_bank_no": 9,
+  "_generation": {
+    "written_at": "2026-11-11T15:45:07+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 3416,
+      "completion_tokens": 4312,
+      "total_tokens": 7728,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 3413,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 276,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "92f3af56c9ec3b2bd2d094454a59e5f80bb84b240b39675768a14bd6fdb79e16",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

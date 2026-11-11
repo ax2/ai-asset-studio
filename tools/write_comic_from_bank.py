@@ -88,7 +88,23 @@ def write_one(cfg: dict, no: int, tale: dict, sid: str, episode: int,
     for attempt in range(3):
         try:
             cand, m = text.chat_json(cfg, prompt, system=wc.SYSTEM,
-                                     max_tokens=12000, timeout=300)
+                                     max_tokens=12000, timeout=420)
+            # The model often emits a partial profile for an EXISTING card.
+            # Fill it from the asset library instead of paying for a retry;
+            # the stored card always wins so the visual anchor stays stable.
+            by_name = {c["name"]: c for c in cards}
+            for spec in cand.get("characters") or []:
+                card = by_name.get(spec.get("name"))
+                if not card:
+                    continue
+                profile = dict(card.get("profile") or {})
+                for k, v in (spec.get("profile") or {}).items():
+                    if v and not str(profile.get(k) or "").strip():
+                        profile[k] = v
+                for field, _label in characters.PROFILE_FIELDS:
+                    if not str(profile.get(field) or "").strip():
+                        profile[field] = "沿用既有角色设定"
+                spec["profile"] = profile
             wcs.validate_series_story(cand, batch_id)
             d, meta = cand, m
             break

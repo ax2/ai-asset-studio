@@ -1,0 +1,211 @@
+{
+  "id": "comic-sanguo-tales-q01-e01-tale-001",
+  "title": "伊籍使吴",
+  "subtitle": "一拜一起之间，化去迎面诘难",
+  "story_source": "《三国志·蜀书·伊籍传》。原文摘录：“籍适入拜，权曰：‘劳事无道之君乎？’籍应声对曰：‘一拜一起，未足为劳。’”传文记孙权闻伊籍才辩，欲当面折其锋，最后却对他的机捷甚为惊异。",
+  "why_not_in_romance": "【演义归属：演义未载】《三国演义》有伊籍其人，却未写孙权以“劳事无道之君乎”相诘、伊籍以“一拜一起，未足为劳”应对的这段出使故事；本集取材于《三国志·蜀书·伊籍传》，不是对演义既有情节的改写。",
+  "synopsis": "伊籍出使东吴。孙权听说他善于言辩，想当面挫其锋芒。伊籍刚入见行礼，孙权便问：“劳事无道之君乎？”伊籍随声答道：“一拜一起，未足为劳。”他将侍奉君主的诘问转作眼前拜见之礼，从容化解，令孙权惊异。",
+  "characters": [
+    {
+      "name": "伊籍",
+      "slug": "yi-ji",
+      "existing": false,
+      "role": "刘备属下士人，奉命出使东吴",
+      "profile": {
+        "age": "中年，视觉设定约四十五岁；史料未载本次出使时确切年龄",
+        "gender": "男",
+        "role": "刘备使者，善于言辩的士人",
+        "era": "汉末三国时期",
+        "face": "清瘦长脸，颧骨略显，鼻梁端正，下颌留整齐短须",
+        "eyes": "深褐色眼睛，目光清醒沉着",
+        "skin": "自然浅麦色肤色，略有旅途风尘感",
+        "build": "中等身高，身形清瘦，仪态端整",
+        "hair": "黑发略杂灰丝，束髻，戴固定的深灰色素帻",
+        "marks": "无显著疤痕，无纹身",
+        "outfit": "固定穿石青色交领宽袖长袍，米白内领，深灰窄缘，腰束深褐布带，下着灰褐裤与黑色布履；六格不换装",
+        "accessories": "仅用素帻与布带，不佩显眼珠玉，不携带带字文书",
+        "weapon": "无",
+        "palette": "石青、米白、深灰、深褐、墨黑",
+        "temperament": "持重敏捷，言辞简练，受诘问而不失礼",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "no modern objects, no imperial crown, no ornate armour, no costume changes, no hairstyle changes, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-length standing envoy, hands respectfully gathered within wide sleeves, composed expression, plain empty background; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "伊籍",
+        "使者",
+        "机辩"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "孙权",
+      "slug": "sun-quan",
+      "existing": true,
+      "role": "统领江东的孙氏之主，接见伊籍",
+      "profile": {
+        "age": "成年；具体年龄与外观严格沿用资产库既有人物卡",
+        "gender": "男",
+        "role": "统领江东的孙氏之主，尚不使用皇帝礼服",
+        "era": "汉末三国时期",
+        "face": "严格沿用资产库孙权角色卡，不重新设计脸型与五官",
+        "eyes": "严格沿用资产库孙权角色卡，不更改眼形与瞳色",
+        "skin": "严格沿用资产库孙权角色卡",
+        "build": "严格沿用资产库孙权角色卡",
+        "hair": "严格沿用资产库孙权角色卡，不更换发型与冠帻",
+        "marks": "严格沿用资产库孙权角色卡，不新增外貌标记",
+        "outfit": "暗赭红交领宽袖锦袍，领缘与袖缘为深褐色，暗金细云纹低调织入衣料，内着米白中衣，腰束黑褐革带，足穿黑色布履；全篇不更换",
+        "accessories": "严格沿用资产库孙权角色卡，不新增皇帝冠冕或仪仗",
+        "weapon": "严格沿用资产库孙权角色卡，不新增或更换武器",
+        "palette": "暗赭红、深褐、暗金、米白、玉白",
+        "temperament": "本集先有意试探，继而惊异于伊籍的敏捷；不改变既有角色气质",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "no character redesign, no costume changes, no hairstyle changes, no weapon changes, no imperial robes, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Use the existing Sun Quan asset without redesign, seated upright with one hand resting near his knee, attentive and authoritative; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "孙权",
+        "江东",
+        "复用角色"
+      ],
+      "character_id": "char-20261111-094150-5d3c01"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "吴地接见厅外廊",
+      "description": "无人环境概念图。木构外廊通向接见厅，素墙、深色木柱、灰瓦与石阶相接，厅门敞开，无匾额、旗帜或题字。",
+      "prompt_extra": "Standalone unoccupied environment concept art of an Eastern Han era Jiangdong reception hall approach, timber veranda, plain plaster walls, dark wooden columns, gray tiled eaves, clean stone steps, open doorway, balanced daylight and clear spatial depth, no people, no silhouettes, no statues, no signs, no seals; premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "白昼",
+      "mood": "肃静、克制，略有外交压力"
+    },
+    {
+      "id": "scene-02",
+      "name": "吴地接见厅内",
+      "description": "无人环境概念图。厅中木柱对称，席地设坐，主位位于低矮木台上，旁置素面矮案；门侧日光照入，陈设无字无印。",
+      "prompt_extra": "Standalone unoccupied environment concept art of the interior of the same Jiangdong reception hall, symmetrical timber columns, woven floor mats, a low wooden dais with a plain seat cushion, an undecorated low table beside it, blank wooden screen, soft daylight entering from the doorway, no throne, no people, no silhouettes, no figurative paintings, no seals; premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "白昼",
+      "mood": "庄重、清朗，适合近距离言语交锋"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "伊籍奉命使吴，来到接见厅前。",
+      "dialogue": [],
+      "visual": "Wide view along the established empty veranda environment, now showing Yi Ji alone approaching the open reception hall doorway with measured steps and hands gathered within his sleeves. Use his fixed stone-blue robe, off-white inner collar, dark gray cloth headwrap and short neat beard. No attendants or background figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "伊籍"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-02",
+      "caption": "孙权闻其善辩，欲当面折其锋。",
+      "dialogue": [],
+      "visual": "Medium two-person view inside the established reception hall. Sun Quan sits upright on the low dais at the right, studying the envoy with a deliberately testing expression. Yi Ji stands at the left and begins a formal respectful bow with joined hands. Reuse the existing Sun Quan asset exactly, including his dark ochre-red robe, and preserve Yi Ji's fixed appearance. No additional people. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孙权",
+        "伊籍"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "伊籍方拜，孙权便发诘问。",
+      "dialogue": [
+        {
+          "speaker": "孙权",
+          "line": "劳事无道之君乎？"
+        }
+      ],
+      "visual": "Medium two-person view from a slight side angle in the same reception hall. Yi Ji is at the lowered point of his single formal bow in the foreground left. Sun Quan remains seated on the low dais at the right, looking directly toward him and speaking with a restrained challenging expression. Keep the established axis and both fixed costumes; no attendants. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "伊籍",
+        "孙权"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "伊籍应声，将诘问转作眼前礼。",
+      "dialogue": [
+        {
+          "speaker": "伊籍",
+          "line": "一拜一起，未足为劳。"
+        }
+      ],
+      "visual": "Medium view focused on Yi Ji as he straightens from the same single bow, hands still respectfully joined, answering immediately with steady eyes and a calm mouth. Sun Quan remains visible seated at the right edge, listening. The envoy must not appear to bow again. Maintain the same hall, daylight, hairstyles and costumes, with exactly two people. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "伊籍",
+        "孙权"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "孙权一怔，惊异于他的机捷。",
+      "dialogue": [],
+      "visual": "Close view of Sun Quan alone against the softly visible blank screen of the established hall. His speaking mouth has closed, his gaze pauses and his expression shifts from testing confidence to restrained surprise and appreciation. Use the existing face, hair and dark ochre-red costume without alteration; no exaggerated laughter and no other figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孙权"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "一拜一起之间，锋芒已被化去。",
+      "dialogue": [],
+      "visual": "Wide concluding two-person view of the same reception hall. Yi Ji stands fully upright at the left after completing his single bow, composed with hands gathered within his sleeves. Sun Quan remains seated at the right, watching him with newly attentive respect. Use balanced negative space to show the eased tension, preserve the low dais, plain furnishings, fixed costumes and screen orientation. No attendants or additional figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "伊籍",
+        "孙权"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting. Reuse the existing Sun Quan character asset without redesign. Keep Yi Ji's new character design identical across all panels. Never change costumes, hairstyles, accessories or weapons. Use only the two specified environments and only the named characters listed for each panel, with no more than two people per image. Environment concept images must contain no people. Depict one continuous bow followed by rising, not repeated bows. Use restrained Han-era furnishings and no imperial regalia. All screens, cloth, walls and objects must remain free of writing, emblems resembling script and seals. Dialogue and narration are added only through HTML outside the generated artwork; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为伊籍使吴、孙权欲折其才辩、入拜时发问、伊籍应声作答及孙权惊异。两句对白保留原文。外廊、厅堂陈设、人物站位、具体行礼动作和细微神态属于连环画视觉化补足，不作为史料事实。将回答理解为借眼前拜见之礼化解诘问，体现其语义机锋；不另编孙权认错、道歉或追加争辩。伊籍年龄与外貌为创作设定，孙权完全复用既有资产。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q01",
+  "episode": 1,
+  "story_bank_no": 1,
+  "_generation": {
+    "written_at": "2026-11-11T15:41:56+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 3427,
+      "completion_tokens": 3715,
+      "total_tokens": 7142,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 3424,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 250,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "84cb93a0b9d9501c1378973c30af607dc091e33b27611fbfb3dc676a796aac6f",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

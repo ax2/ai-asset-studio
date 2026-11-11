@@ -1,0 +1,249 @@
+{
+  "id": "comic-sanguo-tales-q01-e06-tale-006",
+  "title": "床头捉刀人",
+  "subtitle": "座上可借威仪，床头难藏雄气",
+  "story_source": "《世说新语·容止》：魏武将见匈奴使，自以形陋，不足雄远国，使崔季珪代，帝自捉刀立床头。既毕，令间谍问曰：“魏王何如？”匈奴使答曰：“魏王雅望非常，然床头捉刀人，此乃英雄也。”魏武闻之，追杀此使。",
+  "why_not_in_romance": "【演义归属：演义未载】《三国演义》虽写匈奴使者来朝，却未采用《世说新语·容止》中崔琰代曹操接见、曹操捉刀立于床头、使者识出英雄气概以及魏武追杀此使的这则轶事。",
+  "synopsis": "曹操将见匈奴使，自觉容貌不足以威服远国，便让仪容出众的崔琰代坐，自己持刀立于床头。使者离席后受问，称魏王雅望不凡，却认定床头捉刀者才是英雄。曹操得知，遣人追杀使者。",
+  "characters": [
+    {
+      "name": "曹操",
+      "slug": "cao-cao",
+      "existing": true,
+      "role": "魏王，持刀立于床头的真正主人",
+      "profile": {
+        "age": "沿用资产库曹操角色卡的成年年龄设定，不另行改龄",
+        "gender": "男",
+        "role": "东汉丞相、魏王",
+        "era": "汉末",
+        "face": "严格沿用资产库曹操角色卡，不重造面容",
+        "eyes": "严格沿用资产库曹操角色卡",
+        "skin": "严格沿用资产库曹操角色卡",
+        "build": "严格沿用资产库曹操角色卡及身材比例",
+        "hair": "严格沿用资产库曹操角色卡的发式与须髯",
+        "marks": "沿用已有角色卡，不新增疤痕或其他标记",
+        "outfit": "玄色蟒纹深衣，暗金四爪蟒纹满绣，交领缘饰朱红，外披黑貂大氅，貂毛根根分明，腰束玉带镶鎏金兽首；全篇保持不变",
+        "accessories": "沿用资产库玉带及鎏金兽首配件，不新增冠饰",
+        "weapon": "捉刀场面使用资产库既有刀具形制，不另造或更换武器；非持刀镜头不突出刀具",
+        "palette": "玄黑、墨青、暗金、朱红、玉白",
+        "temperament": "沉着敏锐，威势内敛，闻报后骤然冷厉",
+        "art_style": "沿用既有三国英雄立绘资产及其绘制风格",
+        "negative": "不得重设计面容、发型、衣装、配色或武器，不加帝王冕旒，不增加人物"
+      },
+      "pose": "Use the existing Cao Cao character asset without redesign; stand upright with a restrained, watchful posture, keeping his established costume and weapon design unchanged.",
+      "tags": [
+        "三国",
+        "已有角色",
+        "曹操",
+        "捉刀"
+      ],
+      "character_id": "char-20261110-144930-66b9cc"
+    },
+    {
+      "name": "崔琰",
+      "slug": "cui-yan",
+      "existing": false,
+      "role": "字季珪，受命代曹操接见匈奴使的名士",
+      "profile": {
+        "age": "约五十岁",
+        "gender": "男",
+        "role": "汉末名士，曹操属官，本集代坐受见",
+        "era": "汉末",
+        "face": "面形端长，鼻梁挺直，轮廓清正，长须整齐",
+        "eyes": "眉目疏朗，目光清明而庄重",
+        "skin": "自然浅麦色，面部有轻微年龄纹理",
+        "build": "身材修长，肩背端正，坐立均有仪度",
+        "hair": "黑发略杂灰丝，束髻覆以素黑帻，长须自然垂落",
+        "marks": "无显著疤痕，以端正容仪和整齐长须作为辨识特征",
+        "outfit": "固定穿深黛蓝交领宽袖长袍，米白中衣，墨黑窄缘，深褐革带，深灰下裳与黑色布履；六格不换装",
+        "accessories": "素黑帻与一枚无纹浅玉佩，不戴冕旒，不用帝王专属饰物",
+        "weapon": "无",
+        "palette": "深黛蓝、米白、墨黑、深褐、浅玉白",
+        "temperament": "雅正沉静，举止从容，代坐时端肃克制",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不使用明清官服、补子、龙袍或帝王冕旒；不更换发式和服装；不添加兵器"
+      },
+      "pose": "Full-body character reference, standing with a straight back and hands calmly gathered inside wide sleeves, dignified expression, clearly visible fixed costume.",
+      "tags": [
+        "三国",
+        "崔琰",
+        "崔季珪",
+        "名士",
+        "代见使者"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "匈奴使者",
+      "slug": "xiongnu-shizhe",
+      "existing": false,
+      "role": "来见魏王、识出床头捉刀人气概的使者",
+      "profile": {
+        "age": "约四十岁",
+        "gender": "男",
+        "role": "匈奴来使，史料未载姓名",
+        "era": "汉末",
+        "face": "脸形方长，颧骨分明，短须修整，神态持重",
+        "eyes": "深褐色眼睛，观察敏锐，目光沉静",
+        "skin": "受风日的麦褐色皮肤",
+        "build": "中等偏健壮，旅途中的姿态稳健",
+        "hair": "黑发束于素深褐软帽内，短须保持一致",
+        "marks": "眼角有细纹，无夸张刺青或疤痕",
+        "outfit": "固定穿土褐色交领窄袖长袍，领缘饰低调深褐毛边，内衬灰米色，腰束黑褐革带，下着深灰裤与深褐皮靴；六格不换装",
+        "accessories": "素深褐软帽和无纹小皮囊，无夸张金饰",
+        "weapon": "无",
+        "palette": "土褐、深褐、灰米、深灰、黑褐",
+        "temperament": "谨慎而有见识，善察人物，回答坦率",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不使用后世蒙古帝国服饰、角盔或奇幻部族装束；不做怪诞化面容；不换装；不携带兵器"
+      },
+      "pose": "Full-body character reference, standing in a composed diplomatic posture with hands loosely gathered before the waist, observant expression, fixed travel robe and soft cap clearly visible.",
+      "tags": [
+        "三国",
+        "匈奴使者",
+        "无名人物",
+        "识人"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "魏王接见厅",
+      "description": "无人接见厅环境概念图。深木梁柱、素面屏风、低矮坐榻与席垫构成主体，坐榻一端留有可站立的位置。侧窗透入均匀日光，陈设简肃，不设文字、匾额或印章。",
+      "prompt_extra": "Independent environment concept art of an empty late Eastern Han royal reception hall, dark timber columns, plain folding screen, a low wooden sitting couch rather than a modern bed, woven mats, clear standing space at the head of the couch, soft daylight through lattice windows, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no people, no silhouettes, no portraits, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "白昼",
+      "mood": "肃静、威严、暗藏试探"
+    },
+    {
+      "id": "scene-02",
+      "name": "王府外驿道",
+      "description": "无人驿道环境概念图。王府外墙渐远，夯土道路向疏林深处延伸，路边有低矮土坡与枯草。无行人、车马、路牌和旗帜，以开阔道路承接使者离去及追杀结局。",
+      "prompt_extra": "Independent environment concept art of an empty packed-earth road outside a late Eastern Han royal residence, distant plain compound wall, sparse trees, dry roadside grass and low earthen banks, road curving out of sight, subdued afternoon daylight, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no people, no animals, no vehicles, no signs, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "午后",
+      "mood": "空阔、寂静、渐生寒意"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "曹操嫌自己容貌不足以威服远使。",
+      "dialogue": [
+        {
+          "speaker": "曹操",
+          "line": "季珪，你代我接见来使。"
+        }
+      ],
+      "visual": "Medium two-person shot in scene-01 before the audience. Cao Cao gestures toward the empty low sitting couch while Cui Yan listens with composed attention. Use the existing Cao Cao asset exactly, with no changes to face, hair, costume or weapon design; Cui Yan wears his fixed dark blue robe and black headcloth. Only Cao Cao and Cui Yan are visible, with no attendants or background figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹操",
+        "崔琰"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "崔琰代坐，仪容端雅。",
+      "dialogue": [],
+      "visual": "Medium audience shot in scene-01. Cui Yan sits upright on the low wooden couch with dignified bearing, facing the Xiongnu envoy who offers a restrained formal greeting. Frame only Cui Yan and the envoy; the head of the couch where Cao Cao stands is completely outside the crop. Keep both visible characters identical to their fixed profiles. No attendants, guards or other figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "崔琰",
+        "匈奴使者"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-01",
+      "caption": "曹操捉刀立床头，使者暗自留意。",
+      "dialogue": [],
+      "visual": "Medium reverse angle in scene-01 showing only Cao Cao and the Xiongnu envoy. Cao Cao stands motionless at the head of the low sitting couch, holding his established blade quietly downward with no attack gesture; preserve the existing weapon design and full fixed costume. The envoy appears in three-quarter foreground, subtly turning his eyes toward Cao Cao with alert recognition. Show only an empty corner of the couch; Cui Yan is entirely outside the crop. No other people or human reflections. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹操",
+        "匈奴使者"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "事后，密探问使者：魏王何如？",
+      "dialogue": [
+        {
+          "speaker": "匈奴使者",
+          "line": "魏王雅望非常，然床头捉刀人，此乃英雄也。"
+        }
+      ],
+      "visual": "Close shot of the Xiongnu envoy alone on the road in scene-02, paused in three-quarter view with a calm, discerning expression as he gives an answer toward a point outside the image. His fixed brown travel robe, soft cap and short beard remain unchanged. The unseen questioner must not appear, including as a hand, shadow, silhouette or reflection. Softly blurred empty road and sparse trees behind him. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "匈奴使者"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-01",
+      "caption": "这番评语传回，曹操神色骤冷。",
+      "dialogue": [
+        {
+          "speaker": "曹操",
+          "line": "追杀此使。"
+        }
+      ],
+      "visual": "Close shot of Cao Cao alone in scene-01 after receiving the report, his gaze suddenly cold and his jaw set, one hand resting firmly on the plain couch arm. Preserve his existing face, hairstyle, black fur cloak, embroidered robe and jade belt without redesign. No messenger, listener, servant, extra hand or human reflection is visible. Quiet hall architecture remains behind him. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹操"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "魏武闻之，追杀此使。",
+      "dialogue": [],
+      "visual": "Wide closing shot in scene-02. The Xiongnu envoy, still wearing exactly the same brown robe and soft cap, walks away along the curving earth road, small against the empty landscape. Use the bare stretch of road behind him to suggest danger without showing pursuers, weapons, horses, bodies or invented combat. Only the envoy is visible. Maintain even afternoon lighting and a restrained ominous mood. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "匈奴使者"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting throughout. Reuse the existing Cao Cao asset exactly; do not redesign his appearance or correct his established fantasy costume. Keep every character's face, hairstyle, clothing, accessories and weapon design consistent across all panels. Use only the three listed visible characters, with at most two visible characters per panel. Use only scene-01 and scene-02. Environment concept images must contain no people. Interpret the historical couch as a low sitting platform, not a modern bedroom bed. Never add extras, human shadows, portraits or reflected people. Render all narration and dialogue outside the generated artwork through HTML only. Exclude seals, banners with writing and inscribed props. no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "本集据《世说新语·容止》轶事改编，不冒充《三国志》中的确证史实，也不归入《三国演义》。保留代见、捉刀、使者评语及追杀四个史料节点。崔季珪即崔琰。第一、五格对白为依据情节所作的简短文学化转述；神情、动作、厅堂布局及问答发生于驿道的安排均为视觉化补充。史料中的密探只在旁白中交代，不出镜、不建人物资产；追杀执行者同样不出镜。末格不虚构追杀过程、手段或尸体。曹操完全复用既有资产，其服饰不作为汉末服制考证依据。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q01",
+  "episode": 6,
+  "story_bank_no": 6,
+  "_generation": {
+    "written_at": "2026-11-11T15:42:36+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 3397,
+      "completion_tokens": 4481,
+      "total_tokens": 7878,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 3394,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 374,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "26f9d57b2fa3fd723788dd457c763a8e3bdb1d11613cc103856f855eac7186f9",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

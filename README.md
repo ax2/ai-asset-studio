@@ -175,6 +175,30 @@ python tools/build_story_bank.py --show --no-sync     # 只看统计
 
 工作台「故事库」页也能查看与筛选：`http://127.0.0.1:8777/` → 故事库。
 
+### 资料复核（零图像花费）
+
+`tools/review_stories.py` 用文本模型分批复核有缺口的条目：把人工基线的占位原文换成可核查原文摘录，逐条确认出处与演义归属，结果落到 `batches/story-reviews.json`。`build_story_bank.py` 合并复核结果，`reviewed` / `data_complete` / `quote_status` 会写进每条候选；人工考据结论（`ROMANCE_VERDICTS`）优先级最高，永远覆盖模型判定。当前 87 条全部资料完整、0 条待复核。
+
+```bash
+python tools/review_stories.py --show         # 查看复核缓存
+python tools/review_stories.py                # 只复核有缺口的条目
+python tools/build_story_bank.py              # 合并复核结果并同步
+```
+
+### 全量分批队列（80 集）
+
+`tools/run_story_queue.py` 把 `status=candidate` 的候选切成 8 批 × 10 集，逐批复用已验证的系列生产线；`batches/story-queue.json` 记录每批状态、成本、资产数与新角色名，中断后重跑会跳过已写剧本和已入库图片，绝不重复计费。每批独立生成自己的 `series-*.json`、阅读目录与 ZIP，并同步到 `D:\gdrive.photo\ai-assets\all\sanguo-tales-qNN\`。
+
+```bash
+python tools/run_story_queue.py --prepare          # 只生成队列，不调用 API
+python tools/run_story_queue.py --status           # 进度、花费、下一批
+python tools/run_story_queue.py --run-next         # 跑下一个未完成批次
+python tools/run_story_queue.py --batch 3          # 单独重试第 3 批
+python tools/run_story_queue.py --all --workers 3  # 依次跑完全部批次
+```
+
+注意：`gpt-image-2.6-sunburst` 单价为估算值，队列里 `budget_spent_usd` 是估算累计，不是账单；`--status` 可随时查看并叫停。
+
 ## 目录
 
 ```

@@ -1,0 +1,259 @@
+{
+  "id": "comic-sanguo-tales-q01-e04-tale-004",
+  "title": "士别三日",
+  "subtitle": "从吴下阿蒙到令人刮目相待",
+  "story_source": "《三国志·吴书·吕蒙传》裴松之注引《江表传》。原文摘录：“肃拊蒙背曰：‘吾谓大弟但有武略耳，至于今者，学识英博，非复吴下阿蒙。’蒙曰：‘士别三日，即更刮目相待。’”故事前因是孙权劝吕蒙读书，吕蒙起初以军务繁多推辞，后来笃志学习。",
+  "why_not_in_romance": "孙权劝学见《三国志·吴书·吕蒙传》裴注引《江表传》与《资治通鉴》；演义是否正面叙写待复核。【演义归属：演义归属待考】目前不能据此断言《三国演义》未收录，本集按史料故事改编，不作已经证实的“演义未收录”宣传。",
+  "synopsis": "孙权劝吕蒙在军务之余读书，吕蒙起初推说事务繁忙。听过孙权开导，他开始勤学。后来鲁肃与他议论军国之事，发现其见识大进，赞叹已非昔日吴下阿蒙。吕蒙笑言：士别三日，即更刮目相待。",
+  "characters": [
+    {
+      "name": "孙权",
+      "slug": "sun-quan",
+      "existing": true,
+      "role": "统领江东的孙氏之主，劝吕蒙读书",
+      "profile": {
+        "age": "成年青年，具体年龄沿用已有角色卡",
+        "gender": "男",
+        "role": "统领江东的孙氏之主，尚不使用皇帝礼服",
+        "era": "东汉末年",
+        "face": "沿用资产库孙权角色卡，不重新设计",
+        "eyes": "沿用资产库孙权角色卡，不重新设计",
+        "skin": "沿用资产库孙权角色卡，不重新设计",
+        "build": "沿用资产库孙权角色卡，不重新设计",
+        "hair": "沿用资产库孙权角色卡，所有分镜保持一致",
+        "marks": "沿用资产库孙权角色卡，不新增特征",
+        "outfit": "沿用已有服装：暗赭红交领宽袖锦袍，领缘与袖缘为深褐色，暗金细云纹低调织入衣料，内着米白中衣，腰束黑褐革带，足穿黑色布履；全篇不更换",
+        "accessories": "沿用资产库孙权角色卡，不新增冠饰或佩饰",
+        "weapon": "沿用资产库设定，本集不展示武器",
+        "palette": "暗赭红、深褐、暗金、米白、玉白",
+        "temperament": "沉稳而有耐心，重视部下成长",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不得重造外貌，不换服装、发型或武器，不使用皇帝礼服，不出现文字、字母、印章、水印、边框或分格线"
+      },
+      "pose": "Reuse the existing Sun Quan character asset without redesign; seated upright with one open hand gently indicating a closed bamboo manuscript bundle.",
+      "tags": [
+        "三国",
+        "已有资产",
+        "江东",
+        "劝学"
+      ],
+      "character_id": "char-20261111-094150-5d3c01"
+    },
+    {
+      "name": "吕蒙",
+      "slug": "lv-meng",
+      "existing": false,
+      "role": "孙权部将，由勤学增长见识",
+      "profile": {
+        "age": "约三十岁，视觉设定",
+        "gender": "男",
+        "role": "江东将领，故事中的求学者",
+        "era": "东汉末年",
+        "face": "方中带长的脸，颌线清晰，短髭与整齐短须",
+        "eyes": "深褐色眼睛，眉浓而直，目光由拘谨转为沉着",
+        "skin": "暖麦色，带常年军旅生活的日晒质感",
+        "build": "肩背宽厚，体格结实，坐姿挺拔",
+        "hair": "黑发束成紧实高髻，以深褐布巾固定，全篇不变",
+        "marks": "无显著疤痕；固定短髭与短须形制",
+        "outfit": "固定穿深青灰色交领窄袖长袍，内衬米白中衣，袖缘为墨黑色，腰束深褐素革带，下着炭灰长裤，足穿黑褐布履；全篇不换装",
+        "accessories": "仅佩固定深褐素革带，无冠冕与华贵饰物",
+        "weapon": "本集不佩带、不展示武器",
+        "palette": "深青灰、米白、墨黑、深褐、炭灰",
+        "temperament": "务实爽直，接受劝勉后专注勤学，进步后自信而不轻浮",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不使用后世官服、清代发式或现代书籍，不改变服装、发型与胡须，不出现文字、字母、印章、水印、边框或分格线"
+      },
+      "pose": "Full-body three-quarter standing pose, shoulders square, holding a closed bamboo manuscript bundle at waist height, attentive and composed, with the fixed costume and hairstyle.",
+      "tags": [
+        "三国",
+        "江东",
+        "吕蒙",
+        "勤学"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "鲁肃",
+      "slug": "lu-su",
+      "existing": false,
+      "role": "与吕蒙论事并赞叹其长进的江东重臣",
+      "profile": {
+        "age": "约四十岁，视觉设定",
+        "gender": "男",
+        "role": "江东重臣，兼具筹略与统军职责",
+        "era": "东汉末年",
+        "face": "长方脸，额头开阔，颧骨柔和，蓄整齐中短须",
+        "eyes": "深褐色眼睛，目光温厚而敏锐",
+        "skin": "暖米色，面部有轻微日晒感",
+        "build": "身量高大，体态稳重，肩背舒展",
+        "hair": "黑发夹少量灰丝，束髻并戴朴素深灰布冠，全篇不变",
+        "marks": "固定中短须，无显著疤痕",
+        "outfit": "固定穿灰褐色交领宽袖长袍，内衬浅米色中衣，衣缘为深青色窄边，腰束墨褐布带，下着深灰裤，足穿深褐布履；全篇不换装",
+        "accessories": "朴素深灰布冠与墨褐布带，无华贵珠玉",
+        "weapon": "本集不佩带、不展示武器",
+        "palette": "灰褐、浅米、深青、墨褐、深灰",
+        "temperament": "坦诚稳健，善于倾听，见人长进便真诚赞许",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不塑造成滑稽或怯懦人物，不使用后世官服，不改变服装、发型与胡须，不出现文字、字母、印章、水印、边框或分格线"
+      },
+      "pose": "Full-body three-quarter standing pose, one hand resting inside the opposite sleeve, head slightly inclined in attentive consideration, with the fixed costume and hairstyle.",
+      "tags": [
+        "三国",
+        "江东",
+        "鲁肃",
+        "识才"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "江东军府书室",
+      "description": "无人环境概念图。木构书室内设低案、席垫、简册架与陶灯，窗外隐约可见庭竹。简册均收束或背面朝外，不呈现任何书写。此处承载劝学与后来读书的镜头。",
+      "prompt_extra": "Empty Eastern Han Jiangdong military residence study, independent environment concept art, no people, no silhouettes, timber pillars, low wooden desk, woven sitting mats, shelves of tied bamboo manuscript bundles with all writing concealed, plain ceramic oil lamp, bamboo visible beyond a lattice window, soft even daylight, restrained historical pigment palette, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, fine wood and textile texture; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "白昼",
+      "mood": "肃静、务实、适于思考"
+    },
+    {
+      "id": "scene-02",
+      "name": "江边军舍会谈室",
+      "description": "无人环境概念图。临江木构军舍，室内两席相对，低案上放无纹陶杯、木筹与卷起的素绢。敞开的窗外只有江水与芦苇，不出现船工、侍从或旗帜文字。",
+      "prompt_extra": "Empty riverside military residence meeting room in late Eastern Han Jiangdong, independent environment concept art, no people, no silhouettes, two woven mats facing across a low table, plain ceramic cups, unmarked wooden counters, rolled plain silk, open window overlooking river water and reeds, balanced medium-wide environment composition, soft even daylight, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "白昼",
+      "mood": "开阔、从容、便于促膝论事"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "孙权劝吕蒙，军务之外也须读书。",
+      "dialogue": [
+        {
+          "speaker": "孙权",
+          "line": "卿如今担当重任，也该读书自益。"
+        }
+      ],
+      "visual": "Inside scene-01, Sun Quan sits on the left and Lv Meng sits respectfully on the right across a low desk. Sun Quan gently indicates a tied bamboo manuscript bundle, offering earnest advice. Use the existing Sun Quan asset exactly, with no redesign, and Lv Meng's fixed character profile. Only these two people appear. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孙权",
+        "吕蒙"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "吕蒙起初推辞，说军中事务繁多。",
+      "dialogue": [
+        {
+          "speaker": "吕蒙",
+          "line": "军中事务繁多，恐怕没有读书的工夫。"
+        }
+      ],
+      "visual": "Inside scene-01, focus on Lv Meng in a restrained close view, his brows slightly drawn and one open hand gesturing toward several closed manuscript bundles. He looks toward Sun Quan outside the image, with no second person visible. Preserve Lv Meng's exact fixed face, hairstyle, beard and clothing. His expression is concerned rather than dismissive. All manuscript writing remains concealed. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "吕蒙"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-01",
+      "caption": "孙权开导：读书，是为增长见识。",
+      "dialogue": [
+        {
+          "speaker": "孙权",
+          "line": "并非要你专治经学；多读史事，也能增长见识。我也常在忙中读书。"
+        }
+      ],
+      "visual": "Inside scene-01, Sun Quan calmly rests one hand beside a closed bamboo manuscript bundle and speaks with a patient, encouraging expression. Lv Meng faces him, shoulders relaxing as he listens thoughtfully. Reuse the exact existing Sun Quan appearance and costume; preserve Lv Meng's fixed profile without any changes. Only these two people appear, with uncluttered space around their gestures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孙权",
+        "吕蒙"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-01",
+      "caption": "自此，吕蒙在军务之余笃志读书。",
+      "dialogue": [],
+      "visual": "Later in scene-01, Lv Meng studies alone at the same low desk, leaning forward with concentrated eyes while carefully turning a bamboo manuscript. Show only the blank outward backs of the slips, with the written surfaces completely hidden from the viewer. Several neatly tied bundles suggest sustained study without using a montage or duplicate figures. Maintain his exact fixed outfit, hairstyle and beard. Only Lv Meng appears. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "吕蒙"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "后来与鲁肃论事，吕蒙见识大进。",
+      "dialogue": [
+        {
+          "speaker": "鲁肃",
+          "line": "学识英博，非复吴下阿蒙！"
+        }
+      ],
+      "visual": "Inside scene-02, Lv Meng and Lu Su sit across the low table after a thoughtful discussion. A few unmarked wooden counters lie between them, without any map or writing. Lu Su leans forward with delighted surprise and gently pats Lv Meng's upper back, acknowledging his improved understanding. Lv Meng remains composed and receptive. Preserve both fixed character profiles, costumes, hairstyles and beards. Only these two people appear. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "吕蒙",
+        "鲁肃"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "旧日印象，已不足以衡量今日的他。",
+      "dialogue": [
+        {
+          "speaker": "吕蒙",
+          "line": "士别三日，即更刮目相待。"
+        }
+      ],
+      "visual": "Inside scene-02, close view of Lv Meng turning toward Lu Su with a modest but confident smile, one hand resting beside a closed manuscript bundle. Lu Su is visible at the edge in a clearly readable partial profile, smiling with sincere respect. Frame both men naturally in a single continuous image, with soft river light behind them. Preserve their exact fixed costumes, hairstyles and facial hair. No other people appear. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "吕蒙",
+        "鲁肃"
+      ],
+      "composition": "close"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting. Maintain late Eastern Han material culture and restrained military-residence interiors. Reuse Sun Quan's existing asset without redesigning any facial features, hairstyle, costume, accessories or weapons. Lock Lv Meng and Lu Su to their supplied character profiles throughout. Never introduce attendants, guards, crowds, portraits, human silhouettes or additional characters. Each panel contains at most two people and uses only its assigned scene. Both scene concept images must be entirely unpopulated. Keep every manuscript inscription hidden by closed bundles, reverse-facing slips or camera angle; do not render writing, pseudo-writing, seals, labeled maps or decorative glyphs. Dialogue and narration exist only in JSON fields for later HTML overlay. Render each panel as one continuous image, not a montage or a framed page; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为孙权劝学、吕蒙勤学、鲁肃赞叹与吕蒙答语。第一至三格对白为依据史意的口语化改写；第五格节取《江表传》鲁肃赞语，第六格保留指定原文。人物年龄、衣装、动作、室内陈设与谈话调度属于视觉化创作，不作史实考证结论。为压缩为六格，省略其他人物与旁支谈话；第四格沿用书室是场景合并，不表示史料明确记载吕蒙在孙权书室长期读书。“三日”表示分别一段时间，不把读书进步画成恰好三天完成。鲁肃惊叹的措辞采用《江表传》，不将《资治通鉴》的改写混作该书逐字原文。《三国演义》是否正面叙写仍待复核。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q01",
+  "episode": 4,
+  "story_bank_no": 4,
+  "_generation": {
+    "written_at": "2026-11-11T15:38:50+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 3423,
+      "completion_tokens": 4527,
+      "total_tokens": 7950,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 3420,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 262,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "7332535d1450fe5b5d7eb02a6bf3788a7c0f124d350b780618c3bb751a062d4d",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

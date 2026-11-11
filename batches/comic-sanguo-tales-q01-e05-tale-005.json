@@ -1,0 +1,164 @@
+{
+  "id": "comic-sanguo-tales-q01-e05-tale-005",
+  "title": "孙权庱亭射虎",
+  "subtitle": "坐骑遭虎伤，双戟解危局",
+  "story_source": "《三国志·吴主传》：权亲乘马射虎于庱亭，马为虎所伤，权投以双戟，虎却废。",
+  "why_not_in_romance": "【演义归属：演义未载】《三国演义》未写孙权亲自乘马在庱亭射虎、坐骑被虎所伤，以及投掷双戟使虎退却倒地这一事件。",
+  "synopsis": "孙权亲自骑马到庱亭射虎。猛虎反扑，伤了他的坐骑。危急之际，孙权取出双戟投向猛虎，迫使猛虎退却倒地，化解眼前险境。",
+  "characters": [
+    {
+      "name": "孙权",
+      "slug": "sun-quan",
+      "existing": true,
+      "role": "统领江东的孙氏之主，本集亲自乘马射虎",
+      "profile": {
+        "age": "沿用资产库既有孙权角色卡，不重新设定年龄外观",
+        "gender": "男",
+        "role": "统领江东的孙氏之主，尚不使用皇帝礼服",
+        "era": "汉末三国时期",
+        "face": "沿用资产库既有孙权角色卡，不重造面貌",
+        "eyes": "沿用资产库既有孙权角色卡",
+        "skin": "沿用资产库既有孙权角色卡",
+        "build": "沿用资产库既有孙权角色卡",
+        "hair": "沿用资产库既有孙权角色卡，六格不改变发型",
+        "marks": "沿用资产库既有孙权角色卡，不新增外貌标记",
+        "outfit": "沿用资产库固定服装：暗赭红交领宽袖锦袍，领缘与袖缘为深褐色，暗金细云纹低调织入衣料，内着米白中衣，腰束黑褐革带，足穿黑色布履；六格不换装",
+        "accessories": "沿用资产库既有配饰；本集增加弓囊、箭囊和双戟固定套，均属狩猎情节道具",
+        "weapon": "不重设角色固有武器；本集弓箭与两柄短柄戟自首格携带，中途只改变持握状态",
+        "palette": "暗赭红、深褐、暗金、米白、玉白",
+        "temperament": "临险果决，亲自迎击猛虎",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "no redesigned face, no changed hairstyle, no costume changes, no imperial regalia, no modern equipment, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Reuse the existing Sun Quan character asset without redesign. A steady three-quarter standing pose with hands relaxed, preserving the established face, hairstyle, clothing and accessories; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "孙权",
+        "已有角色",
+        "庱亭射虎"
+      ],
+      "character_id": "char-20261111-094150-5d3c01"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "庱亭林缘草径",
+      "description": "庱亭附近的林缘草径，前景为低草和泥土小路，远处有稀疏林木，右侧草径通向林间空地。仅绘制环境，不出现人物、马匹或猛虎。",
+      "prompt_extra": "Standalone environment concept art of a woodland-edge hunting path near Chengting in Jiangdong during the late Eastern Han period. Low grasses, exposed earth, scattered broadleaf trees and a path leading toward a clearing on the right. Soft overcast daylight with even illumination, muted green and earth pigments, generous open foreground. Empty environment only, no people, no animals, no human silhouettes. premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间，薄云遮日",
+      "mood": "开阔中隐伏危险"
+    },
+    {
+      "id": "scene-02",
+      "name": "庱亭林间空地",
+      "description": "与草径相连的林间空地，左侧为来路，右侧为浓密草丛，地面有干叶、裸土和树根。仅绘制环境，不出现人物、马匹或猛虎。",
+      "prompt_extra": "Standalone environment concept art of a compact woodland clearing connected to the Chengting hunting path. The approach enters from the left; dense tall grass and shrubs occupy the right; dry leaves, bare soil and shallow exposed roots cover the ground. Broad unobstructed central action space, matching the same soft overcast daylight and historical earth-and-green palette as scene-01. Empty environment only, no people, no animals, no human silhouettes. premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间，薄云遮日",
+      "mood": "逼仄紧张，适合近距离交锋"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "孙权亲自乘马，来到庱亭射虎。",
+      "dialogue": [],
+      "visual": "Wide establishing view on the woodland-edge path of scene-01. Sun Quan, using his exact existing character asset, rides a chestnut horse slowly from left to right and watches the tall grass ahead. He holds a wooden bow low. A quiver, a bow case and two matching short-shafted iron ji halberds in separate saddle-mounted holders are clearly established as his hunting equipment. Preserve his dark russet-red robe and established hairstyle without alteration. The horse has a simple period saddle and bridle, with no visible stirrups. No other people and no tiger visible yet. premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孙权"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "草间虎现，孙权举弓发箭。",
+      "dialogue": [],
+      "visual": "Medium side view on scene-01, maintaining left-to-right orientation. Mounted Sun Quan has just released a single arrow toward a large orange-and-black tiger emerging from the grass at the right edge. Show the bowstring returning and the arrow in flight, without depicting a confirmed hit. The chestnut horse braces beneath him. The same two short-shafted ji halberds remain secured beside the saddle. Reuse Sun Quan's established face, hair and complete costume exactly. Only one human, one horse and one tiger. premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孙权"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "猛虎扑来，坐骑被虎所伤。",
+      "dialogue": [],
+      "visual": "Dynamic medium view in scene-02. The same tiger lunges from the right and strikes the chestnut horse's near shoulder with a forepaw. Show a small superficial scratch and the horse jolting sideways in pain, with no graphic injury. Sun Quan remains mounted, leaning back to retain balance, his bow lowered in his left hand. Both short-shafted ji halberds are still visible in their saddle holders. Preserve his exact existing robe, face and hairstyle. Keep the approaching path on the left and dense grass on the right. Only one human, one horse and one tiger. premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孙权"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "孙权稳住身形，急取双戟。",
+      "dialogue": [],
+      "visual": "Close action view in scene-02, focused on mounted Sun Quan's torso, hands and saddle. His bow is now secured in the same saddle bow case. He has drawn both previously established short-shafted iron ji halberds, one in each hand, preparing to throw them toward the tiger off-frame to the right. The upper neck of the same chestnut horse enters the lower foreground. Convey controlled urgency through his posture without changing his established facial design, hair or dark russet-red costume. No additional people. premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孙权"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "双戟掷出，直向猛虎。",
+      "dialogue": [],
+      "visual": "Wide action view in scene-02 with clear spatial separation. Mounted Sun Quan is on the left at the end of a forceful throwing motion. Exactly two matching short-shafted ji halberds fly from left to right toward the same tiger, which twists backward defensively on the right. Show both weapons as distinct solid objects, not duplicated motion trails. The injured chestnut horse remains on its feet, with only a small shoulder scratch. Sun Quan's bow stays in its saddle case. Preserve the exact existing character appearance and costume; no additional weapons appear. Only one human, one horse and one tiger. premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孙权"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "猛虎退却倒地，眼前危局暂解。",
+      "dialogue": [],
+      "visual": "Wide concluding view of scene-02 after the attack. The same tiger has recoiled and collapsed low against the grass on the right, head still raised, unable to continue its charge; do not depict it as definitively dead. The two thrown ji halberds lie visibly on the ground immediately in front of it, with no graphic wounds. On the left, Sun Quan remains mounted on the same standing chestnut horse and gathers the reins, keeping a guarded distance. The horse's small shoulder scratch remains consistent. His bow remains in its case. Reuse Sun Quan's exact established face, hairstyle and unchanged clothing. No attendants, no cheering crowd and no trophy display. premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孙权"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting throughout. Reuse the existing Sun Quan asset exactly: no redesigned facial features, no changed hairstyle, no costume replacement and no imperial regalia. Keep the same chestnut horse, orange-and-black tiger, wooden bow, quiver, bow case and exactly two matching short-shafted iron ji halberds throughout; changes in weapon handling are narrative actions, not equipment redesigns. Animals are recurring action subjects, not additional human characters. No extra human figures, attendants, silhouettes or crowds. Use only the two established environments, with consistent overcast daylight and left-to-right action. Both scene concept images must be completely empty of people and animals. Depict the horse injury without gore, and do not assert that the tiger was killed. All narration and dialogue belong exclusively to external HTML layout, never to generated artwork. no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架严格保留为孙权亲自乘马射虎、马被虎伤、投双戟、虎却废。将“虎却废”表现为猛虎退却倒地、不再扑击，不擅自断言虎死。林缘草径、林间空地、马匹毛色、伤在肩部、弓与双戟的收取动作，以及双戟最终落地位置，均为连环画动作衔接所作的视觉化补充，并非原文细节。双戟采用便于表现投掷的短柄形制，不将其宣称为史料明确记载。全篇无新增人类角色，无虚构对白。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q01",
+  "episode": 5,
+  "story_bank_no": 5,
+  "_generation": {
+    "written_at": "2026-11-11T15:39:52+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 3368,
+      "completion_tokens": 3524,
+      "total_tokens": 6892,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 3365,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 334,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "c35760eb212c8a15655910f5d2b11e75e800dabd077866df1bebd675cd1a2249",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

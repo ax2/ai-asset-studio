@@ -37,11 +37,12 @@
         "曹冲称象",
         "望梅止渴"
       ],
-      "status": "pending",
+      "status": "running",
       "cost_usd": 0.0,
       "assets": 0,
       "finished_at": "",
-      "error": ""
+      "error": "",
+      "started_at": "2026-11-11T15:46:27+08:00"
     },
     {
       "no": 2,

@@ -1,0 +1,211 @@
+{
+  "id": "comic-sanguo-tales-q01-e10-tale-010",
+  "title": "望梅止渴",
+  "subtitle": "梅林尚未见，口中已生津",
+  "story_source": "《世说新语·假谲》。原文摘录：魏武行役，失汲道，军皆渴，乃令曰：“前有大梅林，饶子，甘酸可以解渴。”后文记士卒闻言生津，借此继续前行，终于抵达水源。",
+  "why_not_in_romance": "演义亦载，不能归为《三国演义》未收录的故事。第二十一回“曹操煮酒论英雄”中，曹操亲口追述征张绣时军士口渴，自己“以鞭虚指曰：前面有梅林”。本集以《世说新语·假谲》为叙事依据，不把小说中的征张绣背景、举鞭动作当作该史料原文。",
+  "synopsis": "曹操行军途中失去取水路径，士卒干渴难行。他声称前方有结满果实的大梅林，梅子甘酸，可以解渴。士卒想到梅味，口中生津，重新振作，继续赶路，终于抵达水源。",
+  "characters": [
+    {
+      "name": "曹操",
+      "slug": "cao-cao",
+      "existing": true,
+      "role": "行军统帅，史料称“魏武”",
+      "profile": {
+        "age": "沿用已有角色卡",
+        "gender": "沿用已有角色卡",
+        "role": "本集行军统帅",
+        "era": "东汉末年",
+        "face": "沿用已有角色卡",
+        "eyes": "沿用已有角色卡",
+        "skin": "沿用已有角色卡",
+        "build": "沿用已有角色卡",
+        "hair": "沿用已有角色卡",
+        "marks": "沿用已有角色卡",
+        "outfit": "严格沿用资产库曹操既有服装，不重新设计",
+        "accessories": "沿用已有角色卡",
+        "weapon": "沿用已有角色卡，不新增或更换",
+        "palette": "沿用已有角色卡",
+        "temperament": "临困审势，镇定机敏",
+        "art_style": "Reuse the existing Cao Cao character asset without redesign.",
+        "negative": "Do not redesign the existing character or change his clothing, hairstyle, accessories, or weapons."
+      },
+      "pose": "Reuse the existing Cao Cao asset; standing firmly on a marching road, turning toward the soldier with a restrained directing gesture.",
+      "tags": [
+        "三国",
+        "曹操",
+        "已有资产",
+        "行军统帅"
+      ],
+      "character_id": "char-20261110-144930-66b9cc"
+    },
+    {
+      "name": "行军士卒",
+      "slug": "xing-jun-shi-zu",
+      "existing": false,
+      "role": "代表口渴军士的无名步卒",
+      "profile": {
+        "age": "约二十五岁",
+        "gender": "男",
+        "role": "曹操麾下无名步卒，作为军士群体的单人代表",
+        "era": "东汉末年",
+        "face": "偏长方脸，颧骨略高，短而稀疏的胡茬",
+        "eyes": "深褐色眼睛，眼尾略垂，疲惫时目光低落",
+        "skin": "日晒形成的麦褐肤色，面颊有少量尘土",
+        "build": "中等身高，精瘦结实，肩背略显疲态",
+        "hair": "黑发束成紧凑发髻，以深褐布巾固定，无散发",
+        "marks": "嘴唇干燥起皮，无伤疤或刺青",
+        "outfit": "固定穿土黄色粗麻交领窄袖短袍，灰褐内领，外罩深褐色简朴札甲背心，深灰长裤与旧黑布履；六格衣装不变",
+        "accessories": "深褐布腰带，腰侧固定悬挂一只无纹饰的旧褐色小水囊",
+        "weapon": "无，全篇不新增兵器",
+        "palette": "土黄、深褐、灰褐、深灰、墨黑",
+        "temperament": "朴实坚忍，渴乏时迟缓，受到鼓舞后恢复精神",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "No ornate officer armor, no helmet, no cape, no modern objects, no hairstyle changes, no costume changes, no additional weapons."
+      },
+      "pose": "Full-length standing infantryman with slightly slumped shoulders, one hand resting near his empty waterskin, plain background and clear costume visibility.",
+      "tags": [
+        "三国",
+        "无名士卒",
+        "行军",
+        "固定服装"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "干燥山道",
+      "description": "无人环境概念图。干燥土路绕过低矮山坡，路边是枯草、碎石与稀疏灌木，远处弯道遮住去路；看不到水源或梅林。",
+      "prompt_extra": "Independent environment concept art, an empty late Eastern Han marching road winding around low hills, dusty ochre soil, scattered stones, dry grass and sparse shrubs, a bend concealing the route ahead, no plum grove, no visible water, no people, no animals, soft even daylight; premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "干燥、迟滞、前路未明"
+    },
+    {
+      "id": "scene-02",
+      "name": "山脚清泉",
+      "description": "无人环境概念图。山道尽头的低洼石坡间涌出清泉，浅水汇入小溪，岸边有湿石、苔痕与疏草，无建筑、无梅树。",
+      "prompt_extra": "Independent environment concept art, an empty natural spring at the foot of a low rocky hill, clear shallow water gathering between weathered stones and flowing into a narrow stream, damp rocks, subtle moss and sparse grass, an earth path entering from the left, no plum trees, no buildings, no people, no animals, soft even daylight; premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "清润、舒缓、困境解除"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "行军失了汲水之路，军士皆渴。",
+      "dialogue": [],
+      "visual": "Wide view using scene-01, exactly two visible people: Cao Cao and the single recurring infantryman. Cao Cao pauses on the dusty road while the infantryman trudges behind with lowered shoulders and a visibly slack waterskin at his waist. Preserve Cao Cao's existing character asset exactly, including his original clothing, hairstyle and equipment; preserve the infantryman's fixed character design. No background troops or silhouettes. Emphasize the dry road and concealed bend, not extreme summer heat. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹操",
+        "行军士卒"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "水囊已空，脚步越来越沉。",
+      "dialogue": [
+        {
+          "speaker": "行军士卒",
+          "line": "水囊空了……"
+        }
+      ],
+      "visual": "Close view using scene-01, only the recurring infantryman visible. He holds his limp uncorked waterskin tilted downward with no drops emerging, his dry lips slightly parted and tired eyes lowered. Keep his face, tied hair, brown headcloth, ochre tunic, plain lamellar vest and all accessories identical to his character card. Dusty road and sparse dry grass remain softly visible behind him. No additional people. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "行军士卒"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-01",
+      "caption": "曹操忽然向前方传令。",
+      "dialogue": [
+        {
+          "speaker": "曹操",
+          "line": "前有大梅林，饶子，甘酸可以解渴。"
+        }
+      ],
+      "visual": "Medium view using scene-01, exactly two visible people: Cao Cao speaking calmly and the recurring infantryman listening. Cao Cao makes a small open-handed gesture toward the concealed road bend, without a whip or any newly introduced prop. The soldier raises his head attentively. Show no actual plum trees, fruit, imaginary orchard or thought bubbles. Reuse Cao Cao's existing appearance and costume exactly; keep the infantryman's established design unchanged. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹操",
+        "行军士卒"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-01",
+      "caption": "想到梅子甘酸，口中竟生津液。",
+      "dialogue": [],
+      "visual": "Close portrait using scene-01, only the recurring infantryman visible. His eyes regain focus, his lips gently close and his throat makes a subtle swallowing motion as the thought of sour plums stimulates saliva. Convey the change through restrained facial acting, not exaggerated drooling. Keep the same face, hair, headcloth, clothing and armor. The dry roadside remains the background; no visible plums, orchard, fantasy overlay or thought bubbles. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "行军士卒"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-01",
+      "caption": "渴意稍缓，便又振作前行。",
+      "dialogue": [],
+      "visual": "Wide view using scene-01, exactly two visible people: Cao Cao walking toward the road bend and the recurring infantryman following with a steadier, more upright stride. The soldier's empty waterskin is secured at its established position on his belt. Use body posture to contrast with the exhausted opening panel. Preserve both character assets without changing costume, hairstyle or equipment. No additional soldiers, animals, plum trees or visible water. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹操",
+        "行军士卒"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "借这片刻生津，终于赶到水源。",
+      "dialogue": [],
+      "visual": "Medium view using scene-02, exactly two visible people. The recurring infantryman kneels safely beside the shallow spring and drinks from cupped hands, visibly relieved; Cao Cao stands nearby with a composed expression. Keep the clear flowing water prominent as the actual resolution of thirst. Preserve Cao Cao's existing character asset exactly and keep the infantryman's costume, hair and equipment unchanged. No plum grove, additional people, animals or added props. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹操",
+        "行军士卒"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting. Reuse the existing Cao Cao asset without redesign; its costume is a series asset convention rather than a reconstruction of this event's historical clothing. Keep every character's face, hairstyle, clothing, accessories and weapons consistent throughout. Each panel contains only its listed characters, never more than two visible people, with no background crowds or silhouettes. The two environment concept images must contain no people or animals. Use only scene-01 and scene-02 for all panels. Never depict an actual plum grove, imagined orchard, thought bubble, whip gesture or a specifically identified campaign. Render each panel as one uninterrupted image. Dialogue and narration exist only in metadata for later HTML layout. Exclude seals and all readable or decorative writing; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为失汲道、军皆渴、曹操宣称前有梅林、士卒闻言生津、继续前行并抵达水源。无名士卒用于单人代表军士群体；空水囊、简短对白、表情动作及泉边饮水均为可视化扩写，不作为史料原文。史料未在此明确交代具体战役，本集不套入《三国演义》的征张绣背景，也不使用举鞭虚指桥段。梅林只存在于曹操的言辞中，不画成真实到达的地点；生津只是暂缓渴感，最终仍以找到水源收束。曹操服饰直接复用系列资产，不据此推定事件年代或当时服制。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q01",
+  "episode": 10,
+  "story_bank_no": 10,
+  "_generation": {
+    "written_at": "2026-11-11T15:44:49+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 3408,
+      "completion_tokens": 3811,
+      "total_tokens": 7219,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 3405,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 384,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "4b37e91f1b726de967cabb6a477e67aaf968e41e385c255be1ce173c488802f3",
+    "source_of_story": "batches/story-bank.json"
+  }
+}
