@@ -42,9 +42,45 @@
     "王戎",
     "同游童子",
     "羊祜",
-    "李氏邻母"
+    "李氏邻母",
+    "顾雍",
+    "对弈宾客",
+    "夏侯惇",
+    "典韦",
+    "太史慈",
+    "孔融",
+    "姜母",
+    "马超",
+    "李膺",
+    "孙策",
+    "樊能",
+    "庞统",
+    "王垕",
+    "许褚",
+    "贼众代表",
+    "何晏",
+    "许慈",
+    "胡潜",
+    "王平",
+    "书佐",
+    "董允",
+    "董恢",
+    "费祎",
+    "董和",
+    "成都富户",
+    "蒋琬",
+    "杨戏",
+    "何夔",
+    "徐邈",
+    "鲜于辅",
+    "毛玠",
+    "权贵代表",
+    "王烈",
+    "盗牛者",
+    "常林",
+    "常林之妻"
   ],
-  "budget_spent_usd": 40.09,
+  "budget_spent_usd": 98.115,
   "batches": [
     {
       "no": 1,
@@ -148,12 +184,14 @@
         "王戎识道旁李",
         "羊祜桑中寻环"
       ],
-      "status": "running",
-      "cost_usd": 0.0,
-      "assets": 0,
-      "finished_at": "",
+      "status": "done",
+      "cost_usd": 20.256,
+      "assets": 96,
+      "finished_at": "2026-11-12T10:14:13+08:00",
       "error": "",
-      "started_at": "2026-11-12T09:17:44+08:00"
+      "started_at": "2026-11-12T09:17:44+08:00",
+      "series_manifest": "D:\\gdrive.photo\\ai-assets\\all\\sanguo-tales-q03\\series-manifest.json",
+      "read": "http://127.0.0.1:8777/pack/sanguo-tales-q03/index.html"
     },
     {
       "no": 4,
@@ -183,11 +221,14 @@
         "许褚瞋目退超",
         "赵咨应对魏帝"
       ],
-      "status": "pending",
-      "cost_usd": 0.0,
-      "assets": 0,
-      "finished_at": "",
-      "error": ""
+      "status": "done",
+      "cost_usd": 20.889,
+      "assets": 99,
+      "finished_at": "2026-11-12T11:10:42+08:00",
+      "error": "",
+      "started_at": "2026-11-12T10:14:13+08:00",
+      "series_manifest": "D:\\gdrive.photo\\ai-assets\\all\\sanguo-tales-q04\\series-manifest.json",
+      "read": "http://127.0.0.1:8777/pack/sanguo-tales-q04/index.html"
     },
     {
       "no": 5,
@@ -217,11 +258,14 @@
         "许褚倒曳牛尾",
         "何晏汤饼验白"
       ],
-      "status": "pending",
-      "cost_usd": 0.0,
-      "assets": 0,
-      "finished_at": "",
-      "error": ""
+      "status": "done",
+      "cost_usd": 16.88,
+      "assets": 80,
+      "finished_at": "2026-11-12T12:06:05+08:00",
+      "error": "",
+      "started_at": "2026-11-12T11:10:43+08:00",
+      "series_manifest": "D:\\gdrive.photo\\ai-assets\\all\\sanguo-tales-q05\\series-manifest.json",
+      "read": "http://127.0.0.1:8777/pack/sanguo-tales-q05/index.html"
     },
     {
       "no": 6,
@@ -251,11 +295,12 @@
         "宗预握手别吴",
         "李恢诈言归乡"
       ],
-      "status": "pending",
+      "status": "running",
       "cost_usd": 0.0,
       "assets": 0,
       "finished_at": "",
-      "error": ""
+      "error": "",
+      "started_at": "2026-11-12T12:06:06+08:00"
     },
     {
       "no": 7,
@@ -325,5 +370,8 @@
       "finished_at": "",
       "error": ""
     }
-  ]
+  ],
+  "halted": true,
+  "halted_at": "2026-11-12T12:33:39+08:00",
+  "halt_reason": "按用户指示主动停机：账户余额仅剩 $2，累计已花 $98.115（估算），剩余 30 集所需远超余额。非 API 报错，队列可断点续跑。"
 }

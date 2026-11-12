@@ -1,0 +1,206 @@
+{
+  "id": "comic-sanguo-tales-q06-e03-tale-053",
+  "title": "曲有误周郎顾",
+  "subtitle": "三爵之后，仍辨弦中一误",
+  "story_source": "《三国志·吴书·周瑜传》：“瑜少精意于音乐，虽三爵之后，其有阙误，瑜必知之，知之必顾。故时人谣曰：‘曲有误，周郎顾。’”",
+  "why_not_in_romance": "【演义归属：演义未载】演义写周瑜而未及其醉后听曲必顾的细节。本集依据《三国志·吴书·周瑜传》，不取自《三国演义》情节。",
+  "synopsis": "周瑜自少精研音乐。一次听琴饮酒，三爵之后，他虽已有酒意，仍听出琴曲中的一处失误，随即回头望向琴师。琴师停手重奏，他凝神听过，微微颔首。史载他每闻曲误必定回顾，时人遂有“曲有误，周郎顾”的谣语。",
+  "characters": [
+    {
+      "name": "周瑜",
+      "slug": "zhou-yu",
+      "existing": true,
+      "role": "精研音乐、饮酒后仍能辨识曲误的青年周瑜",
+      "pose": "Reuse the existing character asset unchanged; seated upright, holding a low wine cup, head gently turned toward the musician.",
+      "tags": [
+        "三国",
+        "周瑜",
+        "知音",
+        "复用角色"
+      ],
+      "profile": {
+        "age": "二十余岁的青年形象",
+        "gender": "男",
+        "role": "精研音乐的青年周瑜",
+        "era": "东汉末年",
+        "face": "面容俊朗，脸形修长，鼻梁挺直，下颌线清晰，无须",
+        "eyes": "深褐色眼睛，目光沉静敏锐",
+        "skin": "自然浅麦色肤色，饮酒后仅双颊微红",
+        "build": "身量修长，肩背舒展，体态端正",
+        "hair": "墨黑长发整齐束髻，以深青色素帻固定，六格不变",
+        "marks": "无伤疤、刺青或醒目胎记",
+        "outfit": "固定穿深青色交领宽袖绢袍，米白内领，墨青窄缘，腰束深褐素革带，下着深灰裤与黑色布履；全篇不换装",
+        "accessories": "腰侧一枚小型素玉佩，无文字纹饰",
+        "weapon": "无，不佩刀剑",
+        "palette": "深青、墨青、米白、深褐、素玉白",
+        "temperament": "从容儒雅，听乐专注，辨误时敏锐而不严厉",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "No imperial regalia, no armour, no weapons, no hairstyle changes, no costume changes, no exaggerated intoxication, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "character_id": "char-20261111-154629-9c8940"
+    },
+    {
+      "name": "琴师",
+      "slug": "qin-shi",
+      "existing": true,
+      "role": "宴间奏琴的无名琴师，作为史料中奏乐者的单人代表",
+      "pose": "Reuse the existing character asset unchanged; seated behind a low qin table, both hands naturally poised over the strings.",
+      "tags": [
+        "三国",
+        "琴师",
+        "奏乐",
+        "复用角色"
+      ],
+      "profile": {
+        "age": "约三十岁",
+        "gender": "男",
+        "role": "宴间奏琴的无名琴师",
+        "era": "东汉末年",
+        "face": "椭圆脸，眉形平直，鼻翼稍宽，下颌留整齐短须",
+        "eyes": "深褐色眼睛，演奏时目光多落在琴弦上",
+        "skin": "中等麦色肤色",
+        "build": "中等身量，体态清瘦，手指修长",
+        "hair": "黑发束成低髻，戴灰褐色素巾，六格不变",
+        "marks": "无明显伤疤或特殊身体标记",
+        "outfit": "固定穿灰褐色交领窄袖布袍，米灰内领，深褐布腰带，下着炭灰长裤与旧黑布履；全篇不换装",
+        "accessories": "一张深栗色七弦琴，琴面无文字、印记与装饰性铭文",
+        "weapon": "无",
+        "palette": "灰褐、米灰、深褐、炭灰、栗木色",
+        "temperament": "谨慎专注，失误后略显局促，随即收心续奏",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "No theatrical costume, no ornate headdress, no modern instruments, no weapon, no costume changes, no hairstyle changes, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "character_id": "char-20261111-154629-7d3019"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "习乐静室",
+      "description": "无人独立环境概念图。汉末江东宅邸中的习乐静室，木柱、素壁、竹帘与席垫陈设简朴，低琴案上置无纹古琴，窗外竹影映入室内。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a late Eastern Han music study in Jiangdong, timber posts, plain plaster walls, bamboo blinds, woven floor mats, a low wooden table bearing an undecorated seven-string qin, soft daylight and bamboo shadows, clear spatial layout, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture, even lighting; no people, no human silhouettes, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "白日",
+      "mood": "清静、专注"
+    },
+    {
+      "id": "scene-02",
+      "name": "听曲宴室",
+      "description": "无人独立环境概念图。同一宅邸内的宴室，木柱与素屏围合空间，左侧酒案置漆耳杯及酒壶，右后方设琴案，两席相隔数步，铜灯映出温暖光色。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a modest late Eastern Han reception room in the same Jiangdong residence, timber pillars and plain folding screens, a low wine table on the left with an undecorated lacquer ear cup and ceramic wine vessel, a separate low qin table to the right rear, woven seating mats several steps apart, warm bronze oil lamps balanced by soft dusk light, readable consistent floor plan, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture, even lighting; no people, no human silhouettes, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "薄暮",
+      "mood": "温雅、松弛中见敏锐"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "周瑜自少，便精心研习音乐。",
+      "dialogue": [],
+      "visual": "In scene-01, Zhou Yu and 琴师 sit facing each other across the low qin table. The musician demonstrates a short passage while Zhou Yu leans forward slightly, listening with composed concentration, one hand quietly marking the pulse on his knee. Reuse both existing character assets with their established faces, hairstyles and exact unchanged costumes; no age redesign. The qin has seven strings and no movable bridges. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "周瑜",
+        "琴师"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-02",
+      "caption": "听曲饮酒，转眼已过三爵。",
+      "dialogue": [],
+      "visual": "In scene-02, medium view of Zhou Yu finishing his third serving of wine from the same modest lacquer ear cup, with a subtle natural flush and a relaxed but upright posture. 琴师 continues playing at the right-rear qin table. Maintain the established room layout, with Zhou Yu on the left and the musician on the right rear. Reuse the existing faces, hairstyles and exact unchanged costumes. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "周瑜",
+        "琴师"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "忽然，一处弦音出了差错。",
+      "dialogue": [],
+      "visual": "In scene-02, close view of 琴师 at the right-rear qin table, showing the existing character's concentrated face and hands as a finger slips slightly during a pluck. His expression tightens with momentary awareness of an unintended mistake. Show physically plausible hand placement on an undecorated seven-string qin without movable bridges. Do not visualize sound with symbols or written notation. Keep his existing face, hairstyle and exact costume unchanged. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "琴师"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "周瑜立即回首，望向奏琴之人。",
+      "dialogue": [],
+      "visual": "In scene-02, close three-quarter view of Zhou Yu at the left wine table, caught in the precise instant he turns his head toward the musician off camera to his right rear. His cup pauses just above the tabletop, his eyes suddenly attentive despite a faint wine flush. His expression is discerning rather than angry. Preserve the existing character's face, hairstyle and exact unchanged costume. No other person is visible. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "周瑜"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "琴师停手，重新奏过那一段。",
+      "dialogue": [
+        {
+          "speaker": "琴师",
+          "line": "方才失手，容我重奏。"
+        }
+      ],
+      "visual": "In scene-02, medium two-person composition retaining Zhou Yu on the left and 琴师 on the right rear. The musician respectfully inclines his head and resets his hands to repeat the passage; Zhou Yu has placed the cup down and listens calmly without reproach. Emphasize their quiet exchange through eye direction and restrained gestures. Reuse both existing character assets with unchanged faces, hairstyles and costumes. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "周瑜",
+        "琴师"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "时人谣曰：“曲有误，周郎顾。”",
+      "dialogue": [],
+      "visual": "In scene-02, a quiet concluding wide view: 琴师 plays the corrected passage at the right-rear table, while Zhou Yu sits at the left wine table with his head still gently turned toward the music, giving a slight approving nod. The wine cup rests untouched beside his hand, emphasizing that musical attention remains clear after drinking. Only these two people appear; no background guests or servants. Preserve both existing character designs and exact unchanged costumes. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "周瑜",
+        "琴师"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture where applicable, and even lighting. Reuse the existing Zhou Yu and 琴师 character cards exactly; never redesign their faces, hairstyles, clothing, accessories or weapons, and do not add armour or weapons. Use only scene-01 and scene-02, with stable architecture and prop placement. Environment concept images must be entirely unoccupied. Each panel contains only its listed characters, never more than two, with no crowds, servants, reflected people or distant silhouettes. Use late Eastern Han furnishings and a plausible seven-string qin without movable bridges. Render the mistake through hand movement and facial reaction, never through musical notation or graphic symbols. All narration and dialogue are supplied separately for HTML overlay; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+  "notes": "本集为第3集。史料骨架为周瑜少精音乐、三爵后仍知曲误、知误必顾及时人谣语。原传概述其长期习惯，未记某次宴席的日期、地点、乐器与奏者身份；本集将其具象化为一次听琴小宴。习乐静室、琴师失手、停奏重弹、对白及周瑜颔首均为文学化串联，不作史实引文。琴师仅为无名奏乐者的视觉代表；“三爵”表现饮酒已有三巡之意，不据此渲染酩酊失态。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q06",
+  "episode": 3,
+  "story_bank_no": 53,
+  "_generation": {
+    "written_at": "2026-11-12T12:07:10+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 9712,
+      "completion_tokens": 2906,
+      "total_tokens": 12618,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 9709,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 294,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "981833b4efce38ad6b90578e02ceb53a0c17201fe3dc321f8a9076734ce5e75a",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

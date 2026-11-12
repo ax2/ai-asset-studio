@@ -1,0 +1,212 @@
+{
+  "id": "comic-sanguo-tales-q04-e10-tale-040",
+  "title": "田间相敬如宾",
+  "subtitle": "粗衣田饭之间，也有郑重相待的温情。",
+  "story_source": "《三国志·魏书·常林传》；原文：其妻常自馈饷之，林虽在田野，其相敬如宾。",
+  "why_not_in_romance": "通行毛本未叙常林带经耕锄、妻子送饭及夫妻相敬的生活细节。【演义归属：演义未载】",
+  "synopsis": "汉末，常林带经耕作，劳作间隙仍不废读书。妻子亲自送饭到田间，他停下手中事务，整衣相迎；妻子温和致意，他郑重接饭。没有华堂盛宴，夫妻在田野间仍彼此以礼相待。",
+  "characters": [
+    {
+      "name": "常林",
+      "slug": "chang-lin",
+      "existing": false,
+      "role": "汉末带经耕作的士人",
+      "profile": {
+        "age": "约三十岁，作为本集视觉设定，不指认事件确切年龄",
+        "gender": "男",
+        "role": "躬耕而不废学问的汉末士人",
+        "era": "东汉末年",
+        "face": "清瘦长方脸，颧骨略显，下颌留整齐短须",
+        "eyes": "深褐色眼睛，目光沉静专注",
+        "skin": "日晒后的浅麦色肤色",
+        "build": "中等身高，清瘦而结实，具有日常劳作的体态",
+        "hair": "黑发束成紧实发髻，以深褐色素布巾固定，全篇不变",
+        "marks": "双手略粗糙，无醒目疤痕或装饰性面纹",
+        "outfit": "固定穿灰米色粗麻交领窄袖及膝袍，米白内领，深褐布腰带，灰褐长裤，旧深褐布履；袖口收束，衣料洗旧而完整，六格不换装",
+        "accessories": "素布巾、无字素布书套及一卷以细绳编联的竹简；竹简仅显示无字背面或收拢状态",
+        "weapon": "无武器；劳作工具为木柄铁刃锄",
+        "palette": "灰米、米白、深褐、灰褐、浅麦色、竹黄",
+        "temperament": "勤勉好学，温厚自持，待妻郑重而自然",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "No ornate official robes, no armor, no crown, no weapons, no hairstyle changes, no costume changes, no visible writing on bamboo slips."
+      },
+      "pose": "Full-body standing reference pose, holding a wooden-handled iron hoe loosely at one side, a closed bamboo-slip bundle in a plain cloth sleeve secured at the waist, composed and approachable expression.",
+      "tags": [
+        "三国",
+        "常林",
+        "汉末士人",
+        "躬耕",
+        "新建角色"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "常林之妻",
+      "slug": "chang-lin-zhi-qi",
+      "existing": false,
+      "role": "亲自到田间送饭的常林妻子，史料未载姓名",
+      "profile": {
+        "age": "约二十八岁，作为本集视觉设定",
+        "gender": "女",
+        "role": "与常林彼此敬重、亲自送饭的妻子",
+        "era": "东汉末年",
+        "face": "柔和的椭圆脸，眉形平直，嘴角自然舒展",
+        "eyes": "深褐色眼睛，目光温和清明",
+        "skin": "自然暖麦色肤色",
+        "build": "中等身高，身形匀称，步态稳健",
+        "hair": "黑发梳成朴素低髻，以素木簪固定，不留披散长发，全篇不变",
+        "marks": "无醒目疤痕，不施浓妆",
+        "outfit": "固定穿浅赭褐色粗麻交领长襦，灰米内领，深灰长裙，灰褐布腰带与深褐布履；衣缘朴素整洁，六格不换装",
+        "accessories": "素木簪、带提梁的竹编饭篮、无纹素布盖巾、素陶饭碗与木箸",
+        "weapon": "无",
+        "palette": "浅赭褐、灰米、深灰、灰褐、竹黄、暖麦色",
+        "temperament": "温和稳重，体贴而有主见，与丈夫平等相敬",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "No court dress, no jewelry beyond a plain wooden hairpin, no elaborate makeup, no armor, no weapons, no hairstyle changes, no costume changes."
+      },
+      "pose": "Full-body standing reference pose, carrying a covered bamboo food basket at waist height with both hands, shoulders relaxed, head slightly inclined in a calm greeting.",
+      "tags": [
+        "三国",
+        "常林之妻",
+        "田间送饭",
+        "相敬如宾",
+        "新建角色"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "田畦与田埂",
+      "description": "汉末乡野的旱作田地，低矮禾苗沿田畦生长，狭窄土埂通向田边老树。远处仅见缓坡与草木，无人物、牲畜或建筑招牌。",
+      "prompt_extra": "Unoccupied late Eastern Han dry farmland environment concept art, orderly rows of young millet, crumbly brown soil, a narrow earthen footpath leading toward one old broad-canopied tree at the field edge, low grassy hills in the distance, late-morning soft daylight, open horizontal composition, no people, no human silhouettes, no animals, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "近午",
+      "mood": "朴素、安静、勤作"
+    },
+    {
+      "id": "scene-02",
+      "name": "田边树荫",
+      "description": "同一片田地边缘的老树荫下，树根旁有一块低平石头和可供坐歇的干净草地，背景可见田埂与低矮禾苗。概念图为空景，不放人物及随身器物。",
+      "prompt_extra": "Unoccupied shaded resting place beside the same late Eastern Han millet field, one old broad-canopied tree with textured roots, a low flat stone beside the trunk, a clean patch of short dry grass, the earthen field path and young crops visible beyond, soft near-noon light filtered evenly through leaves, intimate ground-level environment composition, no people, no human silhouettes, no animals, no food baskets or personal belongings, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "近午",
+      "mood": "清静、温暖、亲近"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "汉末，常林带经耕作。",
+      "dialogue": [],
+      "visual": "Wide view of Chang Lin alone hoeing between young millet rows in scene-01. Match his character reference exactly: gray-beige narrow-sleeved hemp robe, dark brown cloth belt, gray-brown trousers, worn dark brown cloth shoes, compact black topknot secured by a plain brown headcloth, neat short beard. A closed bamboo-slip bundle in its plain cloth sleeve is secured at his waist. Show his hoe blade entering the soil and his steady working posture, with the empty earthen path and the old tree visible behind him. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and soil texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "常林"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "耕锄稍歇，仍不废读书。",
+      "dialogue": [],
+      "visual": "Medium view of Chang Lin alone pausing on the earthen ridge in scene-01, holding a partly opened bamboo-slip book with both hands and reading its inward-facing surface. Only the blank outer backs of the slips face the camera; no inscriptions are visible. His wooden-handled iron hoe rests flat on bare soil beside him, safely away from the seedlings. Keep his face, short beard, headcloth, hairstyle and complete outfit identical to panel one. Quiet concentration, slight earth stains on his unchanged clothing, soft even late-morning light. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "常林"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-01",
+      "caption": "妻子亲自把饭送到田间。",
+      "dialogue": [],
+      "visual": "Medium view of Chang Lin's wife alone walking steadily along the earthen field path in scene-01 toward the old tree. Match her character reference exactly: plain low black hair bun with one wooden hairpin, light ochre-brown hemp cross-collar upper garment, gray-beige inner collar, dark gray long skirt, gray-brown cloth belt and dark brown cloth shoes. She carries the same bamboo food basket covered with an undecorated plain cloth, looking ahead with a gentle, composed expression. No other people appear in the field or background. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine woven basket and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "常林之妻"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "见妻子到来，常林整衣相迎。",
+      "dialogue": [
+        {
+          "speaker": "常林",
+          "line": "劳你送来。"
+        }
+      ],
+      "visual": "Medium two-person view beneath the old tree in scene-02. Chang Lin has put his closed bamboo-slip bundle in its plain cloth sleeve on the low flat stone and laid the hoe beside the trunk. With empty hands lightly joined before his chest, he inclines his upper body in a modest, natural greeting toward his wife. She stands opposite him carrying the covered bamboo basket, meeting his eyes warmly. Both remain at equal standing height without kneeling or exaggerated ceremony. Preserve both character references, hairstyles and clothing exactly. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even filtered daylight; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "常林",
+        "常林之妻"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "一碗田饭，也郑重递接。",
+      "dialogue": [
+        {
+          "speaker": "常林之妻",
+          "line": "歇一歇，用饭吧。"
+        }
+      ],
+      "visual": "Close two-person view in scene-02, showing both faces and the careful transfer of one plain earthenware food bowl. Chang Lin's wife offers the bowl with both hands, and Chang Lin receives it with both hands; their fingers do not overlap unnaturally. Their small reciprocal inclinations and relaxed expressions convey mutual respect rather than a servant presenting food to a master. The opened bamboo basket and folded plain cover cloth rest on the ground at her side. Match both reference faces, hair and unchanged costumes exactly. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine ceramic and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "常林",
+        "常林之妻"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "虽在田野，夫妻仍相敬如宾。",
+      "dialogue": [],
+      "visual": "Wide closing view in scene-02. Chang Lin and his wife sit comfortably on the clean short grass beneath the old tree, turned slightly toward one another at equal eye level. Chang Lin holds the same plain earthenware bowl and wooden chopsticks, pausing over his meal to exchange a quiet appreciative look with his wife. She rests her hands naturally beside the open bamboo basket. The closed book bundle remains on the flat stone and the hoe stays beside the trunk; millet rows extend into the softly lit background. Only these two people appear. Preserve their reference faces, hairstyles and full outfits without changes. Warm restrained domestic dignity, no courtly spectacle. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "常林",
+        "常林之妻"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture where applicable, and even lighting; this rural episode contains no armour. Keep both characters fully consistent with their reference cards in face, age appearance, hairstyle, clothing, footwear and accessories. Use only scene-01 and scene-02, with consistent crops, tree, path and daylight. Maximum two people per panel, no background crowds or additional human figures. Environment concept images must contain no people. Show modest late Eastern Han rural materials, bamboo slips, hemp clothing, a wooden-handled iron hoe, bamboo basket and plain earthenware. Keep all book surfaces blank or turned away, and show no seals, inscriptions, signage or decorative writing. Depict reciprocal, unforced courtesy rather than hierarchical submission; no deep prostration or theatrical ritual. Narration and dialogue are external HTML overlays only, never painted into the image; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为常林带经耕作、妻子亲自馈饷，以及夫妻虽在田野仍相敬如宾。本集以给定《常林传》原文为核心，不借用《三国演义》情节。停锄读书、整衣相迎、双手递接饭碗、树下坐歇及对白，均为表现原意的文学化动作设计，不冒称史书记载的逐项细节。妻子姓名、双方当时确切年龄及具体服色未见于给定材料，角色卡仅作视觉设定；不套用其他夫妻故事的举案仪式。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q04",
+  "episode": 10,
+  "story_bank_no": 40,
+  "_generation": {
+    "written_at": "2026-11-12T10:19:32+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 7858,
+      "completion_tokens": 3894,
+      "total_tokens": 11752,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 7855,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 233,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "443e06103329c5e8525e2e2157b872efddd055b5b9ac96e85551cd1fb132155a",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

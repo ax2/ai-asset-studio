@@ -41,6 +41,30 @@ def log(msg: str) -> None:
     print(f"[{datetime.now():%H:%M:%S}] {msg}", flush=True)
 
 
+HALT = ROOT / "data" / "queue-halt.flag"
+
+
+def halt_reason() -> str:
+    """Non-empty when a worker tripped the no-credit circuit breaker."""
+    if not HALT.is_file():
+        return ""
+    try:
+        d = json.loads(HALT.read_text(encoding="utf-8"))
+        return f"{d.get('at', '')} {d.get('reason', '')}".strip()[:300]
+    except (OSError, ValueError):
+        return "（存在熔断标记，原因不可读）"
+
+
+def mark_halted(q: dict, reason: str) -> None:
+    q["halted"] = True
+    q["halted_at"] = datetime.now().astimezone().isoformat(timespec="seconds")
+    q["halt_reason"] = reason
+    save(q)
+    log(f"!! 队列已停止：{reason}")
+    log("   充值后执行 python tools/run_story_queue.py --all --resume "
+        "继续（自动跳过已入库图片，不重复计费）")
+
+
 def load() -> dict:
     return json.loads(QUEUE.read_text(encoding="utf-8"))
 
@@ -107,6 +131,8 @@ def status(q: dict) -> None:
         "assets": sum(b.get("assets") or 0 for b in done),
         "next": next((b["no"] for b in q["batches"]
                       if b["status"] in ("pending", "failed", "running")), None),
+        "halted": bool(q.get("halted")),
+        "halt_reason": q.get("halt_reason") or "",
     }, ensure_ascii=False, indent=2))
 
 
@@ -156,6 +182,17 @@ def run(cmd: list[str], what: str, watchdog: int = 0,
             if line.strip():
                 last[0] = time.time()
                 print(line.rstrip(), flush=True)
+                if "INSUFFICIENT_BALANCE" in line:
+                    try:
+                        HALT.parent.mkdir(parents=True, exist_ok=True)
+                        HALT.write_text(json.dumps({
+                            "at": datetime.now().astimezone().isoformat(
+                                timespec="seconds"),
+                            "reason": line.strip()[:400]},
+                            ensure_ascii=False, indent=2) + "\n",
+                            encoding="utf-8")
+                    except OSError:
+                        pass
 
     threading.Thread(target=pump, daemon=True).start()
     killed = False
@@ -224,6 +261,10 @@ def run_batch(q: dict, b: dict, workers: int, skip_scripts: bool,
               attempts: int = 3, child_watchdog: int = 1200) -> bool:
     sid = b["id"]
     no = int(b["no"])
+    reason = halt_reason()
+    if reason:
+        mark_halted(q, "余额不足熔断：" + reason)
+        return False
     b["status"] = "running"
     b["started_at"] = datetime.now().astimezone().isoformat(timespec="seconds")
     save(q)
@@ -252,6 +293,10 @@ def run_batch(q: dict, b: dict, workers: int, skip_scripts: bool,
         rc = run(gen_cmd, "生成资产", watchdog=child_watchdog,
                  watch_globs=[(ROOT / "data" / "series-logs",
                                f"s*-comic-{sid}-*.log")])
+        reason = halt_reason()
+        if reason:
+            mark_halted(q, "余额不足熔断：" + reason)
+            return False
         complete, got, expected, bad = completeness(sid)
         log(f"完整性校验：{got}/{expected} 格合格 · "
             f"{'全部齐备' if complete else '缺口 ' + ', '.join(bad)}")
@@ -313,6 +358,10 @@ def main() -> None:
                     help="单批最多尝试次数（每次跳过已入库图片）")
     ap.add_argument("--child-watchdog", type=int, default=1200,
                     help="子进程输出静默超过该秒数即终止整棵进程树，0 关闭")
+    ap.add_argument("--resume", action="store_true",
+                    help="解除余额/预算熔断标记后继续（充值后使用）")
+    ap.add_argument("--budget-cap", type=float, default=0.0,
+                    help="累计花费上限 USD（估算），下一批会超限时停止；0 = 不限")
     ap.add_argument("--skip-scripts", action="store_true",
                     help="强制跳过写作阶段（默认会在剧本齐备时自动跳过）")
     args = ap.parse_args()
@@ -324,6 +373,12 @@ def main() -> None:
             return
     else:
         q = load()
+    if args.resume:
+        HALT.unlink(missing_ok=True)
+        q["halted"] = False
+        q["halt_reason"] = ""
+        save(q)
+        log("已解除熔断标记，恢复队列")
     if args.status and not (args.run_next or args.all or args.batch):
         status(q)
         return
@@ -348,7 +403,20 @@ def main() -> None:
         status(q)
         return
 
+    if q.get("halted") and not args.resume:
+        raise SystemExit("队列已熔断停止：" + str(q.get("halt_reason") or "") +
+                         "；充值后用 --resume 解除。")
+
     for b in todo:
+        if args.budget_cap > 0:
+            spent = float(q.get("budget_spent_usd") or 0)
+            costs = [float(x.get("cost_usd") or 0) for x in q["batches"]
+                     if x.get("status") == "done" and x.get("cost_usd")]
+            est = sum(costs) / len(costs) if costs else 20.5
+            if spent + est > args.budget_cap:
+                mark_halted(q, f"预算上限 ${args.budget_cap:.2f}：已花 "
+                               f"${spent:.3f}，下一批预估 ${est:.2f}，停止以免超支")
+                break
         ok = run_batch(q, b, args.workers, args.skip_scripts,
                        args.attempts, args.child_watchdog)
         if not ok:

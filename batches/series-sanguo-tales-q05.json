@@ -1,0 +1,136 @@
+{
+  "id": "sanguo-tales-q05",
+  "title": "三国小故事 · Q05 批（10 集）",
+  "planned_at": "2026-11-12T11:15:05+08:00",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "constraint": "候选库故事；《三国演义》写过的亦收录，逐条标注演义归属",
+  "source": "batches/story-bank.json",
+  "episodes": [
+    {
+      "no": 1,
+      "id": "comic-sanguo-tales-q05-e01-tale-041",
+      "title": "杜夔校钟辨音",
+      "file": "comic-sanguo-tales-q05-e01-tale-041.json",
+      "source": "《三国志》卷二十九·魏书·方技传·杜夔传。原文：太祖使玉与夔各作声韵，仪较是非，然后知夔为精，而玉之妄。",
+      "characters": [
+        "杜夔",
+        "柴玉",
+        "曹操"
+      ],
+      "reused": false
+    },
+    {
+      "no": 2,
+      "id": "comic-sanguo-tales-q05-e02-tale-042",
+      "title": "樊阿深针疗疾",
+      "file": "comic-sanguo-tales-q05-e02-tale-042.json",
+      "source": "《三国志》卷二十九·魏书·方技传·华佗传。原文摘录：“阿针背入一二寸，巨阙胸上五六寸，而病皆瘳。”传中记述华佗弟子樊阿善于针术，其施针深度异于当时通常的拘限，并称治疗有效。",
+      "characters": [
+        "樊阿",
+        "病者"
+      ],
+      "reused": false
+    },
+    {
+      "no": 3,
+      "id": "comic-sanguo-tales-q05-e03-tale-043",
+      "title": "流水驱动木偶",
+      "file": "comic-sanguo-tales-q05-e03-tale-043.json",
+      "source": "《三国志》卷二十九·魏书·方技传·杜夔传裴松之注引《马先生传》；原文摘录：“潜以水发焉。”史料记魏明帝得到百戏模型，原本只能陈设，马钧改设机关，暗用水力发动，使木偶演示歌舞杂技。",
+      "characters": [
+        "马钧",
+        "曹叡"
+      ],
+      "reused": false
+    },
+    {
+      "no": 4,
+      "id": "comic-sanguo-tales-q05-e04-tale-044",
+      "title": "童转翻车灌园",
+      "file": "comic-sanguo-tales-q05-e04-tale-044.json",
+      "source": "《三国志》卷二十九·魏书·方技传·杜夔传裴松之注引《马先生传》；原文摘录：“乃作翻车，令儿童转之。”故事记马钧在京都有园地，苦于无水灌溉，遂制翻车，使儿童转动提水灌园。",
+      "characters": [
+        "马钧",
+        "转车儿童"
+      ],
+      "reused": false
+    },
+    {
+      "no": 5,
+      "id": "comic-sanguo-tales-q05-e05-tale-045",
+      "title": "陈登食脍生疾",
+      "file": "comic-sanguo-tales-q05-e05-tale-045.json",
+      "source": "《三国志》卷二十九·魏书·方技传·华佗传。原文摘录：“府君胃中有虫数升，欲成内疽，食腥物所为也。”本传记载陈登胸中烦懑、面赤不食，华佗诊脉后作汤药二升，使其分服，继而吐虫病愈，并预告三年后可能复发。",
+      "characters": [
+        "陈登",
+        "华佗"
+      ],
+      "reused": false
+    },
+    {
+      "no": 6,
+      "id": "comic-sanguo-tales-q05-e06-tale-046",
+      "title": "伊籍使吴",
+      "file": "comic-sanguo-tales-q05-e06-tale-046.json",
+      "source": "《三国志·蜀书·伊籍传》：“孙权闻其才辩，欲逆折以辞。籍适入拜，权曰：‘劳事无道之君乎？’籍应声对曰：‘一拜一起，未足为劳。’”又载：“权甚异之。”",
+      "characters": [
+        "伊籍",
+        "孙权"
+      ],
+      "reused": false
+    },
+    {
+      "no": 7,
+      "id": "comic-sanguo-tales-q05-e07-tale-047",
+      "title": "元龙百尺楼",
+      "file": "comic-sanguo-tales-q05-e07-tale-047.json",
+      "source": "《三国志·魏书·吕布张邈臧洪传》附陈登事迹。许汜与刘备谈论陈登，埋怨陈登没有客主之礼，自卧大床，却使客卧下床。刘备指出许汜只知求田问舍，不能忧国忘家，继而说：『如小人，欲卧百尺楼上，卧君于地，何但上下床之间邪？』",
+      "characters": [
+        "刘备",
+        "许汜",
+        "陈登"
+      ],
+      "reused": false
+    },
+    {
+      "no": 8,
+      "id": "comic-sanguo-tales-q05-e08-tale-048",
+      "title": "刘巴不与张飞共宿",
+      "file": "comic-sanguo-tales-q05-e08-tale-048.json",
+      "source": "《三国志·蜀书·刘巴传》裴松之注引《零陵先贤传》：“张飞尝就巴宿，巴不与语，飞遂忿恚。”下文又记诸葛亮劝刘巴：“张飞虽实武人，敬慕足下。主公今方收合文武，以定大事；足下虽天素高亮，宜少降意也。”刘巴答曰：“大丈夫处世，当交四海英雄，如何与兵子共语乎？”",
+      "characters": [
+        "刘巴",
+        "张飞",
+        "诸葛亮"
+      ],
+      "reused": false
+    },
+    {
+      "no": 9,
+      "id": "comic-sanguo-tales-q05-e09-tale-049",
+      "title": "士别三日",
+      "file": "comic-sanguo-tales-q05-e09-tale-049.json",
+      "source": "《三国志·吴书·吕蒙传》裴松之注引《江表传》。原文摘录：肃拊蒙背曰：“吾谓大弟但有武略耳，至于今者，学识英博，非复吴下阿蒙。”蒙曰：“士别三日，即更刮目相待。”",
+      "characters": [
+        "吕蒙",
+        "孙权",
+        "鲁肃"
+      ],
+      "reused": false
+    },
+    {
+      "no": 10,
+      "id": "comic-sanguo-tales-q05-e10-tale-050",
+      "title": "孙权庱亭射虎",
+      "file": "comic-sanguo-tales-q05-e10-tale-050.json",
+      "source": "《三国志·吴主传》；原文：权亲乘马射虎于庱亭，马为虎所伤，权投以双戟，虎却废。",
+      "characters": [
+        "孙权"
+      ],
+      "reused": false
+    }
+  ]
+}

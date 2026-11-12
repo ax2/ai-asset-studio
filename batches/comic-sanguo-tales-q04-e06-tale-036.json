@@ -1,0 +1,204 @@
+{
+  "id": "comic-sanguo-tales-q04-e06-tale-036",
+  "title": "何夔藏药守节",
+  "subtitle": "严刑之下，何夔以死自誓不受辱",
+  "story_source": "《三国志·魏书·何夔传》；原文：夔常畜毒药，誓死无辱，是以终不见及。",
+  "why_not_in_romance": "通行毛本未叙何夔因不愿受杖辱而预备毒药、最终未被杖责的故事。【演义归属：演义未载】",
+  "synopsis": "曹操治属吏严厉，常施杖责。何夔不愿承受杖辱，暗中备下毒药，决意宁死不辱。他仍照常入署办事，最终未遭杖责。史料留下的是他的决绝与结局，并未详述曹操是否知情。",
+  "characters": [
+    {
+      "name": "曹操",
+      "slug": "cao-cao",
+      "existing": true,
+      "role": "治属吏严厉的曹操，复用系列既有角色资产",
+      "profile": {
+        "age": "五十岁上下的成熟男子",
+        "gender": "男",
+        "role": "东汉丞相 · 魏王 · 枭雄",
+        "era": "东汉末年三国时期",
+        "face": "清瘦而线条凌厉的脸型，颧骨微凸",
+        "eyes": "细眼长髯，目光沉鸷锐利",
+        "skin": "偏白的冷峻肤色",
+        "build": "身长七尺，中等精瘦，姿态矜持",
+        "hair": "黑发整齐束于玄玉冠下，颌下长须修整细致",
+        "marks": "细目长髯，眉间一道浅纹",
+        "outfit": "玄色蟒纹深衣，暗金四爪蟒纹满绣，交领缘饰朱红，外披黑貂大氅，貂毛根根分明，腰束玉带镶鎏金兽首",
+        "accessories": "玄玉冠、玉带、黑貂大氅、朱红印绶",
+        "weapon": "倚天剑，玄鞘嵌金，佩于左腰",
+        "palette": "玄黑、墨青、暗金、朱红、玉白",
+        "temperament": "沉鸷多疑、雄猜果决、不怒自威的枭雄气度",
+        "art_style": "premium Three Kingdoms historical-fantasy game character concept art, highly detailed painterly digital illustration, gold-thread dragon embroidery, dark fur texture, crisp material separation, muted historical pigments",
+        "negative": "photograph, 3D render, plastic, modern clothing, anime chibi, text, watermark, cropped body, extra characters, bright saturated colors, different outfit"
+      },
+      "pose": "Reuse the existing Cao Cao asset, seated upright behind a low administrative desk, one hand resting beside rolled bamboo slips, stern and restrained.",
+      "tags": [
+        "三国",
+        "曹操",
+        "已有资产",
+        "严厉治吏"
+      ],
+      "character_id": "char-20261110-144930-66b9cc"
+    },
+    {
+      "name": "何夔",
+      "slug": "he-kui",
+      "existing": false,
+      "role": "曹操属吏，备药自誓不受杖辱的士人",
+      "profile": {
+        "age": "约四十岁，具体形貌与年龄表现为美术设定",
+        "gender": "男",
+        "role": "曹操属吏、守重名节的士人",
+        "era": "东汉末年",
+        "face": "清瘦长方脸，颧骨略显，下颌端正，短须整齐",
+        "eyes": "深褐色细长眼睛，目光沉静坚定",
+        "skin": "自然浅麦色，面部略有岁月纹理",
+        "build": "中等身高，体形清瘦，肩背挺直",
+        "hair": "黑发夹少量灰丝，束成整齐发髻，固定戴深褐色素帻",
+        "marks": "两眉之间有浅淡竖纹，无伤疤或夸张标记",
+        "outfit": "固定穿灰褐色素绢交领宽袖长袍，米白内领，深褐窄布腰带，深灰下裳与黑色布履；六格不换装",
+        "accessories": "一只无纹深褐色小布囊，内藏始终封闭的素面小陶瓶；不加玉佩或官印",
+        "weapon": "无",
+        "palette": "灰褐、米白、深褐、深灰、墨黑、自然浅麦色",
+        "temperament": "外表克制，重视士人尊严，内心决绝而非激愤",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "No costume or hairstyle changes, no armour, no weapons, no ornate jewelry, no poison preparation, no ingestion, no wounds; no text, no letters, no captions, no watermark, no panel borders, no split lines; no seals."
+      },
+      "pose": "Full-body standing scholar with an upright back and composed expression, one hand lightly holding a small plain cloth pouch at waist level, the other hand resting within his sleeve.",
+      "tags": [
+        "三国",
+        "何夔",
+        "士人",
+        "守节",
+        "新建角色"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "曹操官署厅堂",
+      "description": "无人官署环境概念图。木柱与灰色夯土墙围成厅堂，正中设低案、坐席及卷起的竹简，侧墙木架横置两根素木刑杖。门外仅见空院，不设人物、雕像或人形装饰。",
+      "prompt_extra": "Standalone empty environment concept art of a late Eastern Han administrative hall, timber columns, gray rammed-earth walls, a low wooden desk, woven floor mats, rolled bamboo slips with no visible markings, two plain punishment rods resting horizontally on a side rack, an empty courtyard beyond the doorway, balanced daylight and even lighting, restrained historical pigment palette, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, no people, no silhouettes, no statues, no seals; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "白日",
+      "mood": "肃静、严厉、压抑"
+    },
+    {
+      "id": "scene-02",
+      "name": "何夔私室",
+      "description": "无人私室环境概念图。朴素木案靠近格窗，案上有素面陶灯、无纹小布囊及封闭的小陶瓶，墙边设带盖木匣与竹简架。光线柔和，陈设简洁，无人物与文字。",
+      "prompt_extra": "Standalone empty environment concept art of a modest late Eastern Han scholar's private room, a plain low desk beside a wooden lattice window, a simple ceramic oil lamp, an unmarked dark brown cloth pouch, a small completely closed plain ceramic vial, a lidded wooden storage box and a shelf of rolled bamboo slips without visible markings, soft diffuse daylight and even lighting, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, no people, no silhouettes, no statues, no seals; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "白日",
+      "mood": "清寂、克制、凝重"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "曹操治属吏严厉，常施杖责。",
+      "dialogue": [],
+      "visual": "Wide view inside scene-01. Cao Cao alone sits upright behind the low administrative desk, using his exact existing character asset without redesign. Two unused wooden punishment rods remain clearly visible on the side rack, suggesting severe discipline without depicting a beating. The rest of the hall is empty. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines; no seals, no additional people.",
+      "characters": [
+        "曹操"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "何夔身在其间，不肯轻受折辱。",
+      "dialogue": [],
+      "visual": "Medium view inside scene-01, framed away from the central desk. He Kui alone stands near a timber column, his back straight and his hands held neatly within his sleeves. His gaze rests on the unused punishment rods on the side rack; his expression is grave rather than frightened. Maintain his fixed gray-brown scholar robe, plain headcloth and established hairstyle. No other person is visible. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines; no seals.",
+      "characters": [
+        "何夔"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "他暗中备下毒药，以防受辱。",
+      "dialogue": [],
+      "visual": "Medium view inside scene-02. He Kui sits beside his low desk, quietly placing a completely closed plain ceramic vial into the unmarked dark brown cloth pouch. Show no contents, ingredients, preparation tools or ingestion. His face remains composed, and his costume and hairstyle are unchanged. The modest room emphasizes secrecy and solitude rather than spectacle. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines; no seals, no additional people.",
+      "characters": [
+        "何夔"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "所藏虽小，自誓却重。",
+      "dialogue": [
+        {
+          "speaker": "何夔",
+          "line": "宁死，也不受杖辱。"
+        }
+      ],
+      "visual": "Close portrait of He Kui inside scene-02, with his firmly closed cloth pouch resting beneath one still hand at the lower edge of the image. His steady eyes, closed lips and upright posture convey a private resolve, not an action in progress. The vial is concealed and remains closed. Keep all facial features, hair and clothing consistent with his character card. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines; no seals, no additional people.",
+      "characters": [
+        "何夔"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-01",
+      "caption": "此后入署，他仍照常办事。",
+      "dialogue": [],
+      "visual": "Medium two-person composition inside scene-01. He Kui stands upright at a respectful distance from the low desk, holding a rolled bundle of bamboo slips with no visible markings. Cao Cao sits behind the desk, attending to routine administration with a restrained expression, using his exact existing asset. The punishment rods remain unused on the distant side rack. Do not imply that Cao Cao has discovered the pouch or issued a special pardon. No one kneels in punishment and no other people appear. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines; no seals.",
+      "characters": [
+        "何夔",
+        "曹操"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "史载：何夔最终未遭杖责。",
+      "dialogue": [],
+      "visual": "Medium closing view inside scene-02. He Kui sits upright beside the desk, calm and physically unharmed. His closed dark brown pouch rests inside an open wooden storage box; its ceramic vial is concealed, with no use or disposal depicted. His hand rests quietly on the edge of the box, leaving the ending restrained and reflective. Preserve his exact costume and hairstyle. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines; no seals, no additional people.",
+      "characters": [
+        "何夔"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting. Reuse Cao Cao's existing character asset exactly; do not redesign his appearance. Keep He Kui's face, robe, headcloth, hairstyle and accessories consistent across all six panels. Use only the two registered environments and no more than two visible people in any panel. Environment concept images must contain no people. No background crowds, human silhouettes, portraits or human-shaped statues. Punishment rods remain unused; no beating, wounds, poison preparation or ingestion. The vial is always closed or concealed. All bamboo slips, containers and architectural surfaces must be unmarked. No seals or seal impressions. Narration and dialogue are external HTML overlays only; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+  "notes": "史料骨架为曹操严厉治吏、何夔常备毒药且誓死不辱、最终未遭杖责。场景陈设、药瓶与布囊形制、动作及第四格自誓对白均为连环画文学化处理，不作为史料原话。第五格只以日常办事承接时间，不增写具体政务。原文未详载曹操如何知情、是否明确赦免及何夔如何处置毒药，因此不画发现毒药、当面对抗、特赦或弃药。藏药行为仅作历史叙事呈现，不提供药物名称、制备或使用细节。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q04",
+  "episode": 6,
+  "story_bank_no": 36,
+  "_generation": {
+    "written_at": "2026-11-12T10:17:56+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 7869,
+      "completion_tokens": 3637,
+      "total_tokens": 11506,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 7866,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 287,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "9a3de45db8efb3a543b3f67398fb49a1b055856963086c314fbe8258dd26a686",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

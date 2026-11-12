@@ -1,0 +1,269 @@
+{
+  "id": "comic-sanguo-tales-q05-e09-tale-049",
+  "title": "士别三日",
+  "subtitle": "从军务繁忙到手不释卷，旧日阿蒙令人刮目",
+  "story_source": "《三国志·吴书·吕蒙传》裴松之注引《江表传》。原文摘录：肃拊蒙背曰：“吾谓大弟但有武略耳，至于今者，学识英博，非复吴下阿蒙。”蒙曰：“士别三日，即更刮目相待。”",
+  "why_not_in_romance": "孙权劝学见《三国志·吴书·吕蒙传》裴注引《江表传》与《资治通鉴》；演义是否正面叙写待复核。【演义归属：演义归属待考】目前不能断言《三国演义》未收录，也不能据此编造未收录的原因；本集明确按史料故事改编，不以演义情节为依据。",
+  "synopsis": "孙权劝吕蒙读书，吕蒙起初以军务繁忙推辞。经孙权开导，他开始勤读不辍。后来鲁肃与他议论军国之事，惊叹其学识见解已非昔日可比。吕蒙笑言，士别三日，便该重新看待。",
+  "characters": [
+    {
+      "name": "吕蒙",
+      "slug": "lv-meng",
+      "existing": true,
+      "role": "江东将领，本集受劝勤学者",
+      "profile": {
+        "age": "约三十岁，视觉设定",
+        "gender": "男",
+        "role": "江东将领，故事中的求学者",
+        "era": "东汉末年",
+        "face": "方中带长的脸，颌线清晰，短髭与整齐短须",
+        "eyes": "深褐色眼睛，眉浓而直，目光由拘谨转为沉着",
+        "skin": "暖麦色，带常年军旅生活的日晒质感",
+        "build": "肩背宽厚，体格结实，坐姿挺拔",
+        "hair": "黑发束成紧实高髻，以深褐布巾固定，全篇不变",
+        "marks": "无显著疤痕；固定短髭与短须形制",
+        "outfit": "固定穿深青灰色交领窄袖长袍，内衬米白中衣，袖缘为墨黑色，腰束深褐素革带，下着炭灰长裤，足穿黑褐布履；全篇不换装",
+        "accessories": "仅佩固定深褐素革带，无冠冕与华贵饰物",
+        "weapon": "本集不佩带、不展示武器",
+        "palette": "深青灰、米白、墨黑、深褐、炭灰",
+        "temperament": "务实爽直，接受劝勉后专注勤学，进步后自信而不轻浮",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不使用后世官服、清代发式或现代书籍，不改变服装、发型与胡须，不出现文字、字母、印章、水印、边框或分格线"
+      },
+      "pose": "Reuse the existing character asset unchanged; seated attentively beside a low reading desk, one hand resting on an opened bamboo manuscript.",
+      "tags": [
+        "三国",
+        "江东",
+        "勤学"
+      ],
+      "character_id": "char-20261111-154629-c8abba"
+    },
+    {
+      "name": "孙权",
+      "slug": "sun-quan",
+      "existing": true,
+      "role": "统领江东的孙氏之主，本集劝学者",
+      "profile": {
+        "age": "成年，约三十岁上下的视觉设定，不据此断定轶事年份",
+        "gender": "男",
+        "role": "统领江东的孙氏之主，尚不使用皇帝礼服",
+        "era": "汉末江东",
+        "face": "方颐宽额，鼻梁挺直，短须略带紫褐色",
+        "eyes": "灰绿色眼睛，目光锐利而带笑",
+        "skin": "暖米色肤色",
+        "build": "身形高健，肩背宽阔",
+        "hair": "深褐长发整齐束髻，戴黑色进贤冠",
+        "marks": "紫褐短须与灰绿色眼睛为固定识别特征",
+        "outfit": "暗赭红交领宽袖锦袍，领缘与袖缘为深褐色，暗金细云纹低调织入衣料，内着米白中衣，腰束黑褐革带，足穿黑色布履；全篇不更换",
+        "accessories": "腰间一枚素玉佩，无冠冕垂旒，无印章",
+        "weapon": "无，不佩兵器",
+        "palette": "暗赭红、深褐、暗金、米白、玉白",
+        "temperament": "威仪中带诙谐，欣赏机敏，笑意爽朗",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不使用帝王冕旒，不穿明清龙袍，不增加武器，不改变服装与发式，不出现文字或印章"
+      },
+      "pose": "Reuse the existing character asset unchanged; seated upright, extending one open hand toward a manuscript in a measured gesture of encouragement.",
+      "tags": [
+        "三国",
+        "江东",
+        "劝学"
+      ],
+      "character_id": "char-20261111-094150-5d3c01"
+    },
+    {
+      "name": "鲁肃",
+      "slug": "lu-su",
+      "existing": true,
+      "role": "江东重臣，本集与吕蒙论议者",
+      "profile": {
+        "age": "约四十岁，视觉设定",
+        "gender": "男",
+        "role": "江东重臣，兼具筹略与统军职责",
+        "era": "东汉末年",
+        "face": "长方脸，额头开阔，颧骨柔和，蓄整齐中短须",
+        "eyes": "深褐色眼睛，目光温厚而敏锐",
+        "skin": "暖米色，面部有轻微日晒感",
+        "build": "身量高大，体态稳重，肩背舒展",
+        "hair": "黑发夹少量灰丝，束髻并戴朴素深灰布冠，全篇不变",
+        "marks": "固定中短须，无显著疤痕",
+        "outfit": "固定穿灰褐色交领宽袖长袍，内衬浅米色中衣，衣缘为深青色窄边，腰束墨褐布带，下着深灰裤，足穿深褐布履；全篇不换装",
+        "accessories": "朴素深灰布冠与墨褐布带，无华贵珠玉",
+        "weapon": "本集不佩带、不展示武器",
+        "palette": "灰褐、浅米、深青、墨褐、深灰",
+        "temperament": "坦诚稳健，善于倾听，见人长进便真诚赞许",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不塑造成滑稽或怯懦人物，不使用后世官服，不改变服装、发型与胡须，不出现文字、字母、印章、水印、边框或分格线"
+      },
+      "pose": "Reuse the existing character asset unchanged; leaning slightly forward in conversation, with an open hand raised in appreciative surprise.",
+      "tags": [
+        "三国",
+        "江东",
+        "刮目相看"
+      ],
+      "character_id": "char-20261111-154629-c009d0"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "江东军府议事堂",
+      "description": "无人环境概念图。汉末江东军府内堂，木柱承梁，席地陈设，低案上放置素面卷束与竹简，侧面格窗透入柔光，无匾额、旗号或文字装饰。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a late Eastern Han Jiangdong military administrative hall, timber pillars and exposed beams, woven floor mats, low wooden desks, blank bamboo manuscript bundles and plain rolled silk, soft daylight through lattice windows, balanced spatial composition, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and wood texture, even lighting, no people, no human silhouettes, no writing on props, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "沉稳、恳切"
+    },
+    {
+      "id": "scene-02",
+      "name": "吕蒙寓所书室",
+      "description": "无人环境概念图。朴素书室内设低书案、席垫与木架，架上整齐存放素面竹简卷束。案侧置陶灯和清水盏，格窗外仅见庭竹，可供独读与会谈共用。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a modest late Eastern Han Jiangdong study, a low wooden reading desk, two woven seating mats, wooden shelves holding blank bamboo manuscript bundles, a small ceramic oil lamp and a plain water cup, bamboo foliage visible through a lattice window, intimate coherent layout suitable for both solitary study and a two-person conversation, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and wood texture, even lighting, no people, no human silhouettes, no writing on props, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间，读书格可调整为入夜",
+      "mood": "清静、专注、渐生欣喜"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "孙权劝学，吕蒙却道军务繁忙。",
+      "dialogue": [
+        {
+          "speaker": "孙权",
+          "line": "如今你担着重任，也该读书增益见识。"
+        },
+        {
+          "speaker": "吕蒙",
+          "line": "军中事务繁多，只怕无暇读书。"
+        }
+      ],
+      "visual": "Medium two-person view inside scene-01. 孙权 sits upright beside a low desk and gestures toward a closed blank bamboo manuscript; 吕蒙 sits opposite, making a restrained explanatory gesture toward a small stack of administrative bundles. Their expressions convey patient encouragement and genuine concern about workload. Reuse both existing character cards exactly, with unchanged faces, hairstyles, outfits and equipment. No other people or human images. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no writing on props, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孙权",
+        "吕蒙"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "读书不为做博士，只为开阔见识。",
+      "dialogue": [
+        {
+          "speaker": "孙权",
+          "line": "岂是要你专治经学、做博士？读些史书兵书，自有益处。我也常抽空读书。"
+        },
+        {
+          "speaker": "吕蒙",
+          "line": "蒙愿从今日学起。"
+        }
+      ],
+      "visual": "Medium two-person view in the same scene-01 hall, maintaining the previous desk and window positions. 孙权 gently slides a closed blank bamboo manuscript toward 吕蒙. 吕蒙 leans forward and receives it with both hands, his hesitant expression becoming resolute. Reuse both existing character cards exactly, with unchanged faces, hairstyles, outfits and equipment. No attendants or background people. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no writing on props, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孙权",
+        "吕蒙"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "从此勤读不辍，学识日渐增长。",
+      "dialogue": [],
+      "visual": "Medium single-person view of 吕蒙 studying in scene-02 after nightfall. He sits at the low desk, carefully following the rows of an opened bamboo manuscript with one fingertip; all visible bamboo surfaces remain completely unmarked. Several neatly arranged manuscript bundles suggest sustained study without a montage or duplicated figure. The ceramic lamp provides a restrained warm accent, with soft even fill lighting across the room. Reuse the existing 吕蒙 character card exactly, with unchanged face, hairstyle, outfit and equipment. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, no other people, no writing on props, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "吕蒙"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "后来鲁肃来访，两人谈起军国之事。",
+      "dialogue": [
+        {
+          "speaker": "鲁肃",
+          "line": "若强敌来临，你准备如何应对？"
+        },
+        {
+          "speaker": "吕蒙",
+          "line": "当先审敌情，再分缓急，预备数策。"
+        }
+      ],
+      "visual": "Medium two-person conversational view in scene-02 during daylight. 鲁肃 sits on the visitor's mat opposite 吕蒙 across the low desk. 吕蒙 calmly explains a sequence of strategic considerations with measured hand gestures, while 鲁肃 listens intently, leaning slightly forward. Keep the same shelves, lamp and window layout established for this study. Reuse both existing character cards exactly, with unchanged faces, hairstyles, outfits and equipment. Only these two people appear. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no writing on props, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "吕蒙",
+        "鲁肃"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "一番论议，鲁肃惊叹他的长进。",
+      "dialogue": [
+        {
+          "speaker": "鲁肃",
+          "line": "学识英博，非复吴下阿蒙！"
+        }
+      ],
+      "visual": "Close two-person view in scene-02. 鲁肃 has leaned nearer and warmly pats 吕蒙 on the upper back, his face showing delighted surprise and sincere respect. 吕蒙 turns toward him with a modest, knowing smile. Keep both faces visible and the gesture anatomically natural, with a softly rendered portion of the established bookshelf behind them. Reuse both existing character cards exactly, with unchanged faces, hairstyles, outfits and equipment. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no other people, no writing on props, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "吕蒙",
+        "鲁肃"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "旧日印象，也该随人的长进而改变。",
+      "dialogue": [
+        {
+          "speaker": "吕蒙",
+          "line": "士别三日，即更刮目相待。"
+        }
+      ],
+      "visual": "Medium concluding two-person view in scene-02. 吕蒙 answers with relaxed confidence and a friendly smile, one hand resting beside an opened blank bamboo manuscript. 鲁肃 meets his gaze with newly evident admiration, their equal seated positions expressing mutual respect. The low desk and orderly manuscript shelves remain visible as quiet evidence of learning. Reuse both existing character cards exactly, with unchanged faces, hairstyles, outfits and equipment. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no additional people, no writing on props, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "吕蒙",
+        "鲁肃"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting. Reuse the existing character assets for 吕蒙, 孙权 and 鲁肃 without redesigning their faces, hairstyles, clothing, accessories or weapons; keep each character's established outfit unchanged throughout. Maximum two visible people per panel, with no attendants, crowds, portraits or human silhouettes. Use only scene-01 and scene-02, preserving their spatial layouts. Scene concept images must contain no people. All manuscripts, vessels, furnishings and fabrics must carry no readable writing, decorative letters or seals; show manuscript reading through posture and props rather than visible script. Do not generate dialogue balloons or narration boxes; all dialogue and narration are external HTML overlays. Use one continuous image per panel, no montage, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为孙权劝学、吕蒙勤学、鲁肃与蒙论议而惊叹，以及吕蒙以“士别三日”作答。原记劝学还涉及蒋钦，本集按人物数量限制聚焦吕蒙，不另行表现蒋钦。书室、递简动作及第四格问答为不改变史事走向的文学化呈现，不作为史料原话；第五格对白节引《江表传》，第六格保留所给原文。“三日”不处理为吕蒙仅学习三天，第三至第四格之间为未明示长度的时间流逝。原有角色全部复用，profile 为 null，表示不新建或重写角色外貌。演义归属仍待复核，不将待考结论写成确定的未收录事实。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q05",
+  "episode": 9,
+  "story_bank_no": 49,
+  "_generation": {
+    "written_at": "2026-11-12T11:14:12+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 9744,
+      "completion_tokens": 3479,
+      "total_tokens": 13223,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 9741,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 341,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "dbd096420631a31c6b39ce69f76b9eba3d9505e1182ab8b6e58ec44de8648aa5",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

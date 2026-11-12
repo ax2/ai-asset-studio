@@ -1,0 +1,276 @@
+{
+  "id": "comic-sanguo-tales-q04-e03-tale-033",
+  "title": "董允停驾留客",
+  "subtitle": "宴游可以改日，来客不可轻慢",
+  "story_source": "《三国志》卷三十九·蜀书·董允传。董允原拟与费祎、胡济宴游，适逢官微年少的董恢来访，遂留客畅谈，取消出游。原文摘录：“乃命解骖，祎等罢驾。”",
+  "why_not_in_romance": "【演义归属：演义未载】通行毛本未载董允因接待官微年少的董恢而停驾、取消宴游的故事。本集取材于《三国志·董允传》，不是《三国演义》情节。",
+  "synopsis": "董允准备与费祎、胡济出游，年轻而官位不高的董恢恰来拜访。见车驾已备，董恢惶恐欲退。董允却认为，出游本为与同好畅谈，既有朋友登门，怎能舍近求远？他留下董恢，命人解骖，取消宴游，以平等诚恳之礼接待来客。",
+  "characters": [
+    {
+      "name": "董允",
+      "slug": "dong-yun",
+      "existing": false,
+      "role": "蜀汉重臣，本集停驾留客的主人",
+      "profile": {
+        "age": "中年，约四十岁，属视觉设定，不据此推定事件年份",
+        "gender": "男",
+        "role": "蜀汉文臣，待客诚恳而持重",
+        "era": "三国时期，蜀汉",
+        "face": "长方脸，额头平阔，鼻梁端正，短须整齐",
+        "eyes": "深褐色眼睛，目光沉静而专注",
+        "skin": "自然浅麦色",
+        "build": "中等身量，体态端正，肩背挺直",
+        "hair": "黑发束髻，戴朴素黑色布冠，全篇不变",
+        "marks": "无伤疤、无刺青，唇上短髭与颏下短须为固定识别点",
+        "outfit": "固定穿深栗褐色素绢交领宽袖长袍，米白内领，深褐窄革带，炭灰下裳与黑色布履；无华丽纹样，全篇不换装",
+        "accessories": "仅佩素面小布囊，无印章、无文字饰物",
+        "weapon": "无武器",
+        "palette": "深栗褐、米白、深褐、炭灰、墨黑",
+        "temperament": "严正而不倨傲，重视来客，不以官位高低区别礼数",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "no text, no letters, no captions, no watermark, no panel borders, no split lines, no modern clothing, no imperial regalia, no elaborate armor, no costume changes"
+      },
+      "pose": "Full-length standing portrait, torso turned slightly toward an arriving guest, one open hand extended in a restrained welcoming gesture, the other resting beside the waist; preserve the fixed character design; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "蜀汉",
+        "董允",
+        "文臣",
+        "礼贤"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "董恢",
+      "slug": "dong-hui",
+      "existing": false,
+      "role": "官微年少的蜀汉官员，本集登门来客",
+      "profile": {
+        "age": "青年，约二十余岁，具体年龄为视觉设定",
+        "gender": "男",
+        "role": "年轻低阶官员，登门拜访董允",
+        "era": "三国时期，蜀汉",
+        "face": "清瘦椭圆脸，面部年轻，无须",
+        "eyes": "深褐色眼睛，初见时拘谨，受礼后渐显安定",
+        "skin": "自然浅麦色，略浅于董允",
+        "build": "身形修长偏瘦，动作克制",
+        "hair": "黑发束成整齐发髻，覆灰褐色素布帻，全篇不变",
+        "marks": "无疤痕、无刺青，清瘦无须为固定识别点",
+        "outfit": "固定穿浅灰绿色素麻交领长袍，灰米内领，深褐窄布腰带，灰褐长裤与旧黑布履；衣物整洁而朴素，全篇不换装",
+        "accessories": "无贵重佩饰，无文字饰物",
+        "weapon": "无武器",
+        "palette": "浅灰绿、灰米、深褐、灰褐、墨黑",
+        "temperament": "谦逊知礼，起初担忧妨碍主人行程，随后感念诚意",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "no text, no letters, no captions, no watermark, no panel borders, no split lines, no modern clothing, no luxurious jewelry, no armor, no beard, no costume changes"
+      },
+      "pose": "Full-length standing portrait with hands joined in a respectful greeting, shoulders slightly drawn inward without exaggerated submission, youthful attentive expression; preserve the fixed character design; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "蜀汉",
+        "董恢",
+        "青年官员",
+        "来客"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "费祎",
+      "slug": "fei-yi",
+      "existing": true,
+      "role": "董允原定同游者，沿用资产库角色卡",
+      "pose": "Use the existing Fei Yi character asset without redesign, standing beside the prepared carriage with a calm, receptive posture; keep the established face, hairstyle, clothing and accessories unchanged; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "蜀汉",
+        "费祎",
+        "复用角色",
+        "同游者"
+      ],
+      "profile": {
+        "age": "中年，约四十余岁至五十岁",
+        "gender": "男",
+        "role": "蜀汉大将军，兼具文臣气度与统军职责",
+        "era": "三国蜀汉，延熙七年前后",
+        "face": "清瘦长脸，颧骨平缓，鼻梁端正，下颌线清晰，留整齐短须",
+        "eyes": "细长深褐眼，目光沉静专注，不刻意作凌厉状",
+        "skin": "暖米色肤色，略有风尘感",
+        "build": "中等身量，体态清健，肩背端正",
+        "hair": "黑发整齐束髻，鬓角少量灰发，始终戴同一顶低矮黑色进贤冠",
+        "marks": "两颊略瘦，短须修整齐整，无疤痕或夸张标记",
+        "outfit": "固定穿黛青色交领宽袖长袍，灰白内领，深褐革带，下着深灰裤与黑色布履；衣缘仅饰低对比暗纹，六格不换装",
+        "accessories": "固定佩素玉小佩与深褐革带，不佩印章，不增添其他饰物",
+        "weapon": "无；本集不持武器",
+        "palette": "黛青、灰白、深褐、墨黑、温润玉白",
+        "temperament": "谦和沉稳，临事专注，从容而不怠慢",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不要帝王冠冕、龙蟒纹、现代服装、夸张重甲、羽扇或诸葛亮式鹤氅；不要改变固定发式与衣着"
+      },
+      "character_id": "char-20261111-094150-cc880d"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "董宅门前车庭",
+      "description": "纯环境概念图，不含人物与动物。蜀汉官员宅第门前的小型车庭，灰瓦木门、夯土墙、石阶与平整土地。一辆朴素木制出游车停在门侧，可见车辕及备用挽具，门上不设匾额。",
+      "prompt_extra": "Standalone empty environment concept art of a modest Shu Han official residence entrance, timber gate, gray tiled eaves, rammed-earth walls, shallow stone steps, a plain wooden carriage with visible shafts and spare harness fittings parked to one side, open central courtyard space, soft late-morning daylight, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and masonry texture, even lighting, no people, no animals, no signs, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间，近午",
+      "mood": "整洁安静，出行在即"
+    },
+    {
+      "id": "scene-02",
+      "name": "董宅素雅客堂",
+      "description": "纯环境概念图，不含人物。与门庭相连的朴素客堂，木柱、素壁、低案、两席坐具及无纹陶杯。敞开的木门引入庭院日光，不设书画、屏上文字或匾额。",
+      "prompt_extra": "Standalone empty environment concept art of a modest Shu Han reception hall, timber pillars, plain plaster walls, a low wooden table, two woven sitting mats, undecorated pottery cups, daylight entering through an open doorway, balanced intimate composition with room for two seated guests, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and wood texture, even lighting, no people, no animals, no calligraphy, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间，近午",
+      "mood": "平和亲切，适宜畅谈"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "车驾已备，董允将与友人出游。",
+      "dialogue": [
+        {
+          "speaker": "费祎",
+          "line": "车已备好，可以动身了。"
+        }
+      ],
+      "visual": "Wide view of the established residence forecourt. Dong Yun stands beside Fei Yi near the prepared plain wooden carriage, both facing toward the exit as if about to depart. Show only these two people. Dong Yun wears his fixed chestnut-brown robe; Fei Yi must exactly match the existing character asset without redesign. The carriage and visible harness suggest imminent travel without any driver or attendant in frame. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "董允",
+        "费祎"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "官微年少的董恢，恰在此时登门。",
+      "dialogue": [
+        {
+          "speaker": "董恢",
+          "line": "董恢冒昧来访，拜见董公。"
+        }
+      ],
+      "visual": "Medium view at the same courtyard gate. Dong Hui has just arrived and joins his hands in a respectful greeting. Dong Yun turns away from the carriage toward him with immediate attention. Show only Dong Hui and Dong Yun; Fei Yi is entirely outside the frame. Keep the established gate and a small part of the carriage wheel visible for continuity. Preserve both fixed character designs and clothing. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "董允",
+        "董恢"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-01",
+      "caption": "见主人将行，董恢惶恐欲退。",
+      "dialogue": [
+        {
+          "speaker": "董恢",
+          "line": "不知诸公已有约，容我改日再来。"
+        }
+      ],
+      "visual": "Close view of Dong Hui alone in the same residence forecourt, glancing toward the prepared carriage at the edge of the background, his torso beginning to turn toward the gate while his hands remain politely joined. Convey embarrassment and reluctance to disrupt the outing, not fear of punishment. No other people or human silhouettes. Keep his fixed pale gray-green robe and hairstyle unchanged. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "董恢"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-01",
+      "caption": "董允挽留：相聚何必舍近求远？",
+      "dialogue": [
+        {
+          "speaker": "董允",
+          "line": "出游本为与同好畅谈。你既来了，何必舍此相谈，另赴宴游？"
+        }
+      ],
+      "visual": "Medium two-person view in the same forecourt. Dong Yun gently raises an open hand to invite Dong Hui to stay, without grabbing or restraining him. Dong Hui stops turning away and looks back with surprised attention. Their faces are at an equal visual level, emphasizing sincere respect rather than rank. Show only these two people, with the established wooden gate behind them. Preserve all fixed clothing, faces and hairstyles. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "董允",
+        "董恢"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-01",
+      "caption": "乃命解骖，祎等罢驾。",
+      "dialogue": [
+        {
+          "speaker": "董允",
+          "line": "请解下驾马，今日不出游了。"
+        },
+        {
+          "speaker": "费祎",
+          "line": "好，今日便留在这里相聚。"
+        }
+      ],
+      "visual": "Medium view beside the stationary carriage in the established forecourt. Dong Yun makes a restrained decisive gesture toward the carriage as he announces cancellation of the outing. Fei Yi turns away from boarding and responds with calm agreement. The command is conveyed through their gestures; do not depict anyone physically unharnessing horses. Show only Dong Yun and Fei Yi, no servants, no drivers, and no additional figures. Match Fei Yi exactly to the existing asset and keep Dong Yun unchanged. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "董允",
+        "费祎"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "宴游虽罢，宾主之欢正在眼前。",
+      "dialogue": [
+        {
+          "speaker": "董允",
+          "line": "请坐，今日正好畅谈。"
+        },
+        {
+          "speaker": "董恢",
+          "line": "蒙公厚意，晚辈不再推辞。"
+        }
+      ],
+      "visual": "Medium intimate view inside the established plain reception hall. Dong Yun and Dong Hui sit facing each other on woven mats beside the low table with undecorated pottery cups. Dong Yun listens attentively while Dong Hui has relaxed into a modest grateful smile. Both receive equal compositional weight. Show only these two people; all other companions remain entirely outside the frame. Keep their fixed robes and hairstyles unchanged. Soft courtyard daylight, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "董允",
+        "董恢"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture where applicable, even lighting. Prioritize historically grounded Shu Han civilian architecture and clothing. Reuse the existing Fei Yi asset exactly without redesigning his appearance. Preserve every character's face, hairstyle, outfit and accessories throughout all six images; introduce no weapons. Each panel may contain only its listed characters, never more than two people, with no crowds, attendants, distant human silhouettes or reflected extra figures. Use only the two established environments. Environment concept images must contain no people or animals. Render each panel as one continuous image; all dialogue and narration belong only in external HTML overlays. Do not render plaques, written scrolls, seals or inscribed objects. no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为董允与费祎、胡济原拟宴游，董恢来访后欲退，董允留客并命解骖，费祎等罢驾。为遵守三人角色上限，胡济保留在史料说明与梗概中，不设角色卡、不入画，也不将其事迹移给他人。第四格对白意译史料所载董允留客之意，其余对白、客堂陈设与入席收束为克制的文学化补足，不作原文引用。人物具体年龄与外貌均为美术设定；费祎沿用已有资产，本集不据其资产身份称谓推定事件发生年份。解骖以命令与罢驾表现，不增画仆役。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q04",
+  "episode": 3,
+  "story_bank_no": 33,
+  "_generation": {
+    "written_at": "2026-11-12T10:15:38+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 7857,
+      "completion_tokens": 4260,
+      "total_tokens": 12117,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 7854,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 338,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "80843c3f31af8fc82226ccad70a2aacc172dec912199b9139b8165843bbdece1",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

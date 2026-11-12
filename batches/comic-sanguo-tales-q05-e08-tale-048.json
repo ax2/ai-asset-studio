@@ -1,0 +1,255 @@
+{
+  "id": "comic-sanguo-tales-q05-e08-tale-048",
+  "title": "刘巴不与张飞共宿",
+  "subtitle": "一夜冷遇，照见文武之间的成见",
+  "story_source": "《三国志·蜀书·刘巴传》裴松之注引《零陵先贤传》：“张飞尝就巴宿，巴不与语，飞遂忿恚。”下文又记诸葛亮劝刘巴：“张飞虽实武人，敬慕足下。主公今方收合文武，以定大事；足下虽天素高亮，宜少降意也。”刘巴答曰：“大丈夫处世，当交四海英雄，如何与兵子共语乎？”",
+  "why_not_in_romance": "【演义归属：演义未载】《三国演义》未写张飞就刘巴处留宿、刘巴不与交谈而使张飞忿恚，也未写诸葛亮因此劝刘巴稍降身段、调和文武关系的这段故事。本集依据史传注引材料，不属于《三国演义》情节。",
+  "synopsis": "张飞到刘巴处留宿，本有亲近之意，刘巴却始终不与他说话，张飞因而愤怒。诸葛亮事后劝刘巴：张飞虽是武人，却敬慕他，如今正须收合文武，不妨稍降身段。刘巴仍以不愿与“兵子”共语作答，成见并未消解。",
+  "characters": [
+    {
+      "name": "刘巴",
+      "slug": "liu-ba",
+      "existing": true,
+      "role": "汉末士人，字子初；本集冷待张飞、受诸葛亮劝说者",
+      "pose": "Reuse the existing Liu Ba character asset without redesign; seated upright with reserved hands and a slightly averted gaze.",
+      "tags": [
+        "三国",
+        "刘巴",
+        "既有角色",
+        "士人"
+      ],
+      "profile": {
+        "age": "中年，约四十岁，为视觉设定而非史料确数",
+        "gender": "男",
+        "role": "汉末士人刘巴，字子初",
+        "era": "东汉末年",
+        "face": "清瘦长脸，颧骨略显，鼻梁端直，唇线薄而紧",
+        "eyes": "狭长深褐眼，目光冷静疏离",
+        "skin": "浅麦色，略带清淡灰暖调",
+        "build": "中等身量，体态清瘦，坐立端直",
+        "hair": "黑发束成整齐高髻，以素黑布巾收束；留短髭与修整齐整的短须，全篇不变",
+        "marks": "无显著疤痕；薄唇与清瘦下颌为辨识特征",
+        "outfit": "固定深灰青色素绢交领宽袖长袍，米白内领，墨黑窄缘，灰褐布腰带，深灰下裳，黑色布履；六格不换装",
+        "accessories": "仅用素黑束发布巾与灰褐布腰带，无金玉华饰",
+        "weapon": "无",
+        "palette": "深灰青、米白、墨黑、灰褐、浅麦色",
+        "temperament": "自持清高，重士人交游，对武人抱有偏见，情绪克制而态度坚硬",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "No imperial regalia, no ornate jewelry, no armor, no weapons, no costume changes, no hairstyle changes, no exaggerated villain expression, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "character_id": "char-20261111-154629-4023ae"
+    },
+    {
+      "name": "张飞",
+      "slug": "zhang-fei",
+      "existing": true,
+      "role": "刘备麾下将领；本集前往刘巴处留宿、因受冷遇而愤怒者",
+      "pose": "Reuse the existing Zhang Fei character asset without redesign; standing with a restrained greeting gesture, later tightening one hand in frustration.",
+      "tags": [
+        "三国",
+        "张飞",
+        "既有角色",
+        "武将"
+      ],
+      "profile": {
+        "age": "三十余岁的壮年男子",
+        "gender": "男",
+        "role": "蜀汉车骑将军 · 五虎上将",
+        "era": "东汉末年三国时期",
+        "face": "豹头环眼，燕颔虎须，方阔下颌",
+        "eyes": "铜铃般圆睁的环眼，目光如电",
+        "skin": "黝黑粗糙的肤色",
+        "build": "身长八尺，虎背熊腰，肌肉虬结",
+        "hair": "浓密虬髯蓬张如戟，散发粗硬，束玄色抹额",
+        "marks": "满脸蓬张虬髯，声若巨雷般的阔口",
+        "outfit": "玄色鱼鳞铁甲，甲片密排泛冷光，肩披粗犷兽皮，赤膊露出前臂皮甲护腕，腰缠牛皮宽带，下着深褐战裤与黑铁靴",
+        "accessories": "玄色抹额、兽皮肩披、铁质护腕、酒葫芦",
+        "weapon": "丈八蛇矛，矛头如蜿蜒蛇形，乌金长柄",
+        "palette": "玄黑、铁灰、深褐、暗铜、少量朱红",
+        "temperament": "暴烈豪迈、勇猛粗犷、气势如奔马",
+        "art_style": "premium Three Kingdoms historical-fantasy game character concept art, highly detailed painterly digital illustration, weathered iron scale armour, coarse fur and leather, strong rim light, muted historical pigments",
+        "negative": "photograph, 3D render, plastic, modern clothing, anime chibi, text, watermark, cropped body, extra characters, clean-shaven face, different weapon"
+      },
+      "character_id": "char-20261110-144930-024778"
+    },
+    {
+      "name": "诸葛亮",
+      "slug": "zhuge-liang",
+      "existing": true,
+      "role": "刘备属下谋臣；本集劝刘巴尊重张飞、顾全文武协力者",
+      "pose": "Reuse the existing Zhuge Liang character asset without redesign; standing composed with one open hand extended in measured persuasion.",
+      "tags": [
+        "三国",
+        "诸葛亮",
+        "既有角色",
+        "劝解"
+      ],
+      "profile": {
+        "age": "三十五至四十五岁的成年男性执政重臣",
+        "gender": "男",
+        "role": "蜀汉丞相 · 军师",
+        "era": "东汉末年三国时期",
+        "face": "方正略长的国字脸，颧骨与下颌线清晰有力，眉骨分明，轮廓硬朗，不作柔化处理",
+        "eyes": "浓眉之下目光沉稳锐利，眼形略长但不过细，不画女性化细长凤眼",
+        "skin": "自然健康的小麦偏暖肤色，非白皙透亮",
+        "build": "肩背宽厚、体格结实的成年男性，写实成人头身比 1:7（头高约为全身高度的七分之一），头宽与肩宽协调；禁止小头、九头身或细长身形",
+        "hair": "乌发整齐束起，戴素青布制纶巾（布巾，无羽毛装饰），唇上与颌下蓄整齐短须",
+        "marks": "浓眉、整齐短须、浅淡额纹，无伤疤；全身无任何羽毛、羽纹或羽饰",
+        "outfit": "深青灰交领宽袖直裾深衣，内衬赭色中衣，衣缘仅一道素色暗纹窄边，腰束深褐革带，下穿深褐裤与黑布履；厚织锦与棉麻质感，衣料挺括不透明，无薄纱、无羽纹、无羽毛披肩，全篇不更换",
+        "accessories": "素青布纶巾、深褐革带、竹简一卷；不持扇，不持任何羽毛制品",
+        "weapon": "无兵器，双手自然垂放或持一卷竹简",
+        "palette": "深青灰、墨黑、赭褐、暗朱、素白（仅中衣）",
+        "temperament": "沉静刚毅、威仪自持、思虑深远的执政重臣，不飘逸、不柔媚",
+        "art_style": "premium Three Kingdoms historical-fantasy game character concept art, highly detailed painterly digital illustration, fine brushwork on heavy woven silk and cotton textiles, crisp material separation, muted historical pigments",
+        "negative": "feathers, feather fan, feather cape, feather pattern, plume, white crane cape, feather trim, sheer gauze, translucent fabric, feminine face, delicate soft features, willowy slender body, small head, elongated nine-head-tall proportions, chibi, photograph, 3D render, plastic, modern clothing, anime, text, watermark, cropped body, extra characters, heavy armour, different outfit"
+      },
+      "character_id": "char-20261110-144930-ece773"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "刘巴宅中客舍",
+      "description": "不含人物的独立环境概念图。汉末宅院内的朴素客舍，木柱、灰泥墙、竹帘与低案构成安静室内；案上只有素面陶盏，侧后方设一张铺着素色薄褥的客榻，门口留有进出空间。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a modest late Eastern Han guest room, timber posts, pale plaster walls, bamboo blinds, a low wooden table with plain ceramic cups, one guest couch with an undecorated folded coverlet, clear doorway and open floor space. Dusk outside, an uninscribed bronze oil lamp providing gentle warm illumination, balanced readable lighting throughout. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture, even lighting. No people, no human silhouettes, no writing on objects, no seals; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "傍晚至入夜",
+      "mood": "静谧中渐生冷意"
+    },
+    {
+      "id": "scene-02",
+      "name": "刘巴宅内庭廊",
+      "description": "不含人物的独立环境概念图。灰瓦檐下的木构庭廊临着小院，青灰石地、素面栏杆与疏竹相映，两席分置低案两侧，适合安静交谈；不设匾额、书画或题字。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a quiet late Eastern Han residential veranda overlooking a small courtyard, grey tiled eaves, plain timber columns, blue-grey stone paving, sparse bamboo, two woven sitting mats beside a low undecorated table. Soft daylight, clear spatial separation between the two conversation positions, restrained scholarly atmosphere. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine architectural and textile texture, even lighting. No people, no human silhouettes, no plaques, no calligraphy, no seals; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "日间",
+      "mood": "平静而有隔阂"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "张飞曾到刘巴处留宿。",
+      "dialogue": [
+        {
+          "speaker": "张飞",
+          "line": "子初，今夜叨扰了。"
+        }
+      ],
+      "visual": "Wide view inside scene-01, showing exactly two characters, Zhang Fei and Liu Ba. Zhang Fei stands just inside the doorway and offers a restrained courteous greeting toward Liu Ba, who sits beside the low table. The prepared guest couch is visible behind them, establishing an overnight visit rather than an expulsion. Preserve both existing character assets exactly, including established faces, hairstyles, clothing, armour, accessories and weapon designs; do not introduce new equipment. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting. No additional figures, no seals; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "张飞",
+        "刘巴"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "张飞相就，刘巴却不与语。",
+      "dialogue": [],
+      "visual": "Medium two-shot in scene-01, showing exactly Zhang Fei and Liu Ba seated apart near the low table. Zhang Fei leans forward slightly with an expectant expression and an open hand, waiting for conversation. Liu Ba keeps his hands composed within his sleeves and turns his gaze away without answering. An untouched plain cup and the empty space between them emphasize the uncomfortable silence. Preserve both existing character assets exactly with unchanged faces, hairstyles, outfits, armour, accessories and weapon designs. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting. No additional figures, no seals; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "张飞",
+        "刘巴"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-01",
+      "caption": "冷遇之下，张飞遂生忿恚。",
+      "dialogue": [],
+      "visual": "Close view of Zhang Fei alone within scene-01, his face turned toward the unseen host outside the frame, brows drawn together, jaw tightened, one hand closing firmly against his knee. Convey wounded dignity and contained anger, not drunkenness or a violent outburst. A softly focused plain guest couch and lamplight remain visible behind him. Reuse the exact existing Zhang Fei character asset, preserving his face, hairstyle, black scale armour, beast-fur shoulder covering, bracers, belt and all established equipment without alteration. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting. Only one visible person, no seals; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "张飞"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "事后，诸葛亮劝说刘巴。",
+      "dialogue": [
+        {
+          "speaker": "诸葛亮",
+          "line": "张飞虽实武人，敬慕足下。"
+        }
+      ],
+      "visual": "Medium two-shot in scene-02, showing exactly Zhuge Liang and Liu Ba facing one another beside the low table under the veranda. Zhuge Liang makes a small open-handed gesture of sincere explanation, his expression calm rather than accusatory. Liu Ba listens upright with restrained distance. Zhang Fei is not present. Preserve the two existing character assets exactly, with unchanged faces, hairstyles, clothing, accessories and weapon designs; do not add a fan or any new prop. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting. No additional figures, no seals; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "诸葛亮",
+        "刘巴"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "收合文武，岂可只论门第气类。",
+      "dialogue": [
+        {
+          "speaker": "诸葛亮",
+          "line": "主公今方收合文武，以定大事；足下虽天素高亮，宜少降意也。"
+        }
+      ],
+      "visual": "Closer two-shot within scene-02, showing exactly Zhuge Liang in three-quarter view and Liu Ba opposite him. Zhuge Liang gently lowers his open hand in a conciliatory gesture, emphasizing cooperation and consideration. Liu Ba remains stiff-backed, hands held within his sleeves, his expression not visibly softened. Use the same veranda, table and daylight as the preceding panel. Preserve both existing character assets exactly, with no changes to faces, hairstyles, outfits, accessories or weapon designs. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting. No additional figures, no seals; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "诸葛亮",
+        "刘巴"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "刘巴仍执成见，劝解未能释然。",
+      "dialogue": [
+        {
+          "speaker": "刘巴",
+          "line": "大丈夫处世，当交四海英雄，如何与兵子共语乎？"
+        }
+      ],
+      "visual": "Medium two-shot in scene-02, showing exactly Liu Ba in the foreground and Zhuge Liang opposite him. Liu Ba replies with a slightly raised chin and an unyielding expression, his hands still contained within his sleeves. Zhuge Liang pauses with his hand withdrawn, composed but concerned. Leave a deliberate area of empty floor between them to conclude on unresolved disagreement, with no handshake, reconciliation or approving smile. Preserve both existing character assets exactly, including unchanged faces, hairstyles, clothing, accessories and weapon designs. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting. No additional figures, no seals; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "刘巴",
+        "诸葛亮"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting. Reuse the existing Liu Ba, Zhang Fei and Zhuge Liang character assets exactly; never redesign their faces, hairstyles, clothing, armour, accessories or weapons, and never change outfits between panels. Asset role labels do not establish the historical offices held at the moment depicted. Show only the characters listed for each panel, never more than two people, with no servants, crowds, portraits or background human silhouettes. Use only scene-01 and scene-02. Both scene concept images must be completely unoccupied. Keep all objects undecorated by writing and omit plaques, seals, readable books and inscriptions. All narration and dialogue are external HTML overlays, never rendered into the illustration. Each panel is one continuous image; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+  "notes": "史料骨架为张飞就刘巴处宿、刘巴不与语、张飞忿恚，以及诸葛亮劝说、刘巴以“兵子”作答。标题按任务保留，但“就巴宿”不能解释为刘巴拒绝提供住宿，故画面不表现逐客或拒绝共处一室。诸葛亮是劝刘巴顾全文武关系，不是史载已经成功调停；结尾不虚构和解。首格招呼、客舍陈设、手势及庭廊谈话地点属于连环画文学化补足，史料未载具体时地。第五格旁白为叙事概括，并非史料原句。既有资产中的官爵称谓与幻想化服饰仅作系列视觉沿用，不据此推定事件发生时的官职。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q05",
+  "episode": 8,
+  "story_bank_no": 48,
+  "_generation": {
+    "written_at": "2026-11-12T11:14:05+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 9724,
+      "completion_tokens": 3467,
+      "total_tokens": 13191,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 9721,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 285,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "d9ef8b7b2d67d229b1b1110f715c5842d46ff4e71d3056c6bf2ded4742290376",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

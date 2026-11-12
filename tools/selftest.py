@@ -9,6 +9,7 @@ which is gitignored. Run from the repository root:
 from __future__ import annotations
 
 import json
+import os
 import shutil
 import sys
 import zipfile
@@ -16,6 +17,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+# This suite mocks every network call. A production no-credit halt flag must
+# not break offline regression checks.
+os.environ.setdefault("AI_STUDIO_IGNORE_HALT", "1")
 
 from studio import (characters, config, imaging, png, sprites,  # noqa: E402
                     store, turnaround)
@@ -292,6 +296,17 @@ def main() -> None:
             encoding="utf-8"))
         check("romance toc has 120 chapters",
               len(toc.get("chapters") or []) == 120)
+
+    # No-credit circuit breaker: abort instead of degrading / retrying.
+    check("balance error detected: 402 insufficient_quota",
+          imaging.is_balance_error(402, '{"error":{"code":"insufficient_quota"}}'))
+    check("balance error detected: quota wording",
+          imaging.is_balance_error(429, "You exceeded your current quota"))
+    check("ordinary HTTP 400 is not a balance error",
+          not imaging.is_balance_error(400, "duplicate_parameter: image"))
+    check("halt signal bypasses except Exception",
+          issubclass(imaging.InsufficientBalanceError, BaseException)
+          and not issubclass(imaging.InsufficientBalanceError, Exception))
 
     print("\nALL CHECKS PASSED (offline, $0 spent)")
 

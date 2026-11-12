@@ -1,0 +1,211 @@
+{
+  "id": "comic-sanguo-tales-q06-e06-tale-056",
+  "title": "王粲驴鸣",
+  "subtitle": "以故人所爱的声音，送他最后一程",
+  "story_source": "《世说新语·伤逝》：“王仲宣好驴鸣。既葬，文帝临其丧，顾语同游曰：‘王好驴鸣，可各作一声以送之。’赴客皆一作驴鸣。”王仲宣即王粲，文帝指曹丕。",
+  "why_not_in_romance": "【演义归属：演义未载】通行一百二十回本未叙写王粲葬后曹丕临丧、命同游者作驴鸣送别的场面；第三十三回、第八十回虽有曹丕事迹，也不能据此认定收录本事。",
+  "synopsis": "王粲生前喜爱驴鸣。下葬以后，曹丕前来吊唁，想起故人的爱好，便请同游宾客各学一声驴叫，为他送别。宾客依言作声，平日听来诙谐的驴鸣，此刻成了追念故人的哀音。",
+  "characters": [
+    {
+      "name": "曹丕",
+      "slug": "cao-pi",
+      "existing": true,
+      "role": "前来吊唁王粲的故交；史料以其后来谥号称“文帝”",
+      "profile": {
+        "age": "三十余岁",
+        "gender": "男",
+        "role": "曹魏皇帝",
+        "era": "三国时期，曹魏初年",
+        "face": "长而清瘦的面庞，鼻梁挺直，薄唇，修整齐整的短髭与短颔须",
+        "eyes": "狭长深褐眼，目光锐利而克制",
+        "skin": "浅麦色肤色",
+        "build": "身形修长，肩背端正，体态不显粗壮",
+        "hair": "黑发全部束起，固定于素黑高冠之内，无散发",
+        "marks": "无明显伤疤或面部装饰",
+        "outfit": "玄黑色交领宽袖丝质深衣，衣缘饰窄幅暗金几何织纹，内衬深赭色，长衣下摆垂至足面；黑色布履；全篇不更换服装",
+        "accessories": "素黑高冠，黑色腰带配素白玉带饰，不佩印章",
+        "weapon": "无，不佩剑",
+        "palette": "玄黑、深赭、暗金、素白",
+        "temperament": "威严自持，不悦时动作骤然，听取直言后仍能调整决策",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不使用曹操角色外貌，不穿明清龙袍，不戴冕旒，不披毛皮，不添加武器、文字、印章或现代物品"
+      },
+      "pose": "Reuse the existing Cao Pi asset unchanged, standing with lowered gaze and hands resting quietly before the body; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "tags": [
+        "三国",
+        "曹丕",
+        "临丧",
+        "既有资产"
+      ],
+      "character_id": "char-20261111-094150-da0dc6"
+    },
+    {
+      "name": "吊唁宾客",
+      "slug": "diao-yan-bin-ke",
+      "existing": true,
+      "role": "同游宾客的单人视觉代表",
+      "profile": {
+        "age": "约四十岁",
+        "gender": "男",
+        "role": "士人宾客，作为史料中同游宾客的无名代表",
+        "era": "东汉末年，建安二十二年前后",
+        "face": "长方脸，颧骨略显，下颌留短须，面容清瘦",
+        "eyes": "深褐色细长眼，眼尾微垂，神情审慎",
+        "skin": "自然浅麦色",
+        "build": "中等身高，体形清瘦，肩背略收",
+        "hair": "黑发夹少量灰发，束成整齐发髻，覆深灰布帻",
+        "marks": "右眉尾有一小段自然稀疏，不设伤疤",
+        "outfit": "灰褐色素麻交领长衣，内衬灰白中衣，深褐窄布腰带，深灰长裤，黑色布履；六格服装不变",
+        "accessories": "仅有深灰布帻与素布腰带，无玉佩、无华饰",
+        "weapon": "无",
+        "palette": "灰褐、灰白、深灰、深褐、墨黑",
+        "temperament": "拘谨守礼，最初迟疑，随后以认真而悲伤的态度回应",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "无铠甲，无华丽冠饰，无武器，无现代物品，不做喜剧鬼脸，不出现驴耳或动物化身体"
+      },
+      "pose": "Reuse the existing mourning guest asset unchanged, standing respectfully with hands clasped and head slightly bowed; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "tags": [
+        "三国",
+        "吊唁宾客",
+        "同游者代表",
+        "既有资产"
+      ],
+      "character_id": "char-20261111-094150-5351ec"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "丧所前庭",
+      "description": "不含人物的汉末宅院前庭。夯土地面通向木构厅堂，廊下悬素色麻布，庭角有疏竹。门扇、墙面及布面均无文字。此处为葬后吊唁的丧所，并非墓穴。",
+      "prompt_extra": "Independent empty environment concept art of a late Eastern Han residential mourning courtyard after burial, packed-earth ground, restrained timber architecture, plain undyed hemp hangings, sparse bamboo beside a covered walkway, open hall entrance, soft overcast daylight and even lighting, balanced wide composition, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine timber and textile texture, no people, no human silhouettes, no coffin, no inscribed objects, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "阴天日间",
+      "mood": "清寂、肃穆"
+    },
+    {
+      "id": "scene-02",
+      "name": "葬后丧堂",
+      "description": "不含人物的汉末丧堂内景。素麻帷幔、木柱与空置苇席构成简朴吊唁空间，低案上仅置无纹陶器。王粲已经下葬，堂内不设棺柩，不展示遗体、画像或题字牌位。",
+      "prompt_extra": "Independent empty environment concept art of a modest late Eastern Han mourning hall after burial, plain hemp curtains, dark timber posts, empty reed mats and a low wooden offering table holding undecorated ceramic vessels, soft daylight entering from the courtyard, even lighting, restrained symmetrical composition, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and wood texture, no people, no portraits, no corpse, no coffin, no memorial inscriptions, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "阴天日间",
+      "mood": "沉静、追思"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "王粲既葬，曹丕前来临丧。",
+      "dialogue": [],
+      "visual": "Wide view inside the established mourning courtyard. Cao Pi approaches the open hall with measured steps; the single mourning guest stands respectfully beside the walkway. Use both existing character assets unchanged. Plain hemp hangings and an empty expanse of packed earth emphasize the quiet. Exactly two visible people, no background figures, no imperial procession, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "曹丕",
+        "吊唁宾客"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-02",
+      "caption": "故人已逝，旧日所好犹在心头。",
+      "dialogue": [],
+      "visual": "Medium view of Cao Pi alone in the established mourning hall, standing before the plain low offering table, eyes lowered in restrained grief, one hand resting quietly against the other sleeve. Preserve his existing face, hairstyle, outfit and equipment exactly. Empty reed mats and undecorated hemp curtains occupy the surrounding space. No imagined apparition, no portrait, no corpse, no coffin, no additional people, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "曹丕"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "曹丕回身，向同游者提起旧好。",
+      "dialogue": [
+        {
+          "speaker": "曹丕",
+          "line": "王好驴鸣，可各作一声以送之。"
+        }
+      ],
+      "visual": "Medium two-person composition in the same mourning hall. Cao Pi turns gently toward the single mourning guest and makes a small open-handed invitation, his expression solemn rather than commanding. The guest listens with hands clasped. Preserve both existing assets without costume or hairstyle changes. Plain hemp curtains remain visible behind them. Exactly two people, no humorous staging, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "曹丕",
+        "吊唁宾客"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "宾客微怔，随即垂首应意。",
+      "dialogue": [],
+      "visual": "Close view of the single mourning guest in the established hall, a brief hesitation settling into quiet understanding, gaze lowered and clasped hands gently tightening. Keep the existing guest asset completely unchanged. A softly rendered timber post and plain hemp curtain establish continuity. The expression conveys grief and recognition, never amusement. Only one visible person, no inset memories, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "吊唁宾客"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "赴客皆各作一声驴鸣。",
+      "dialogue": [
+        {
+          "speaker": "吊唁宾客",
+          "line": "啊——呃啊——"
+        }
+      ],
+      "visual": "Medium view in the established mourning hall. The single mourning guest gives one restrained donkey-like vocal imitation, mouth open naturally and chin slightly raised, hands still held respectfully before him. Cao Pi stands nearby listening with lowered eyes and closed mouth. Preserve both existing character assets exactly. Treat the action as sincere mourning, with no smiles, no animal transformation, no visible donkey, no sound symbols and no additional figures. Exactly two people, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "曹丕",
+        "吊唁宾客"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-01",
+      "caption": "声息渐歇，送的是故人。",
+      "dialogue": [],
+      "visual": "Wide concluding view of the same mourning courtyard, looking toward the hall entrance. Cao Pi and the single mourning guest stand quietly beneath the eaves after the farewell, both with lowered heads and closed mouths. Preserve their existing appearance, clothing, hairstyles and equipment unchanged. A large area of empty packed earth and still plain hemp hangings creates a restrained sense of absence. Exactly two people, no ghost, no donkey, no background mourners, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "曹丕",
+        "吊唁宾客"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting. Reuse the existing Cao Pi and mourning guest assets exactly; never redesign faces or change clothing, hairstyles, accessories or weapons. Render only the characters explicitly listed in each panel, at most two people per image, without crowds, reflections containing extra people or background silhouettes. Use only the two established environments. Wang Can is already buried and must not appear as a living figure, corpse, portrait or apparition. Cao Pi is named retrospectively as Emperor Wen in the source; add no imperial crown, throne or imperial procession. Keep the braying farewell solemn and humane, never slapstick. All scene concepts must be unpopulated. All visible surfaces must remain uninscribed; exclude seals, written tablets and graphic sound effects. Dialogue and narration are HTML overlays only, never part of generated art: no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+  "notes": "史料骨架严格保留王粲好驴鸣、既葬、曹丕临丧、顾语同游、赴客各作驴鸣五点。曹丕的话直接采用原文；不画曹丕领头作驴鸣，以免增添史料未载行为。王粲不出镜，避免将既有少年角色卡误用于成年临终或丧葬形象。“文帝”是史料追称，不据此设置登基后的仪仗。丧所的具体建筑、人物站位、宾客短暂迟疑及末格静默属于连环画的文学化调度，并非原文记载。吊唁宾客以一个既有资产代表史料中的多位赴客，旁白保留群体事实，画面不增加人物。驴鸣拟声只作声音排版提示，不宣称史料记载了具体音节。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q06",
+  "episode": 6,
+  "story_bank_no": 56,
+  "_generation": {
+    "written_at": "2026-11-12T12:08:36+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 9763,
+      "completion_tokens": 3572,
+      "total_tokens": 13335,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 9760,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 311,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "f5661533332cc405ff2f3bad2b6851a6989ba3945262e17aab295ea0fcf36c1b",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

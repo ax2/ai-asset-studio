@@ -1,0 +1,259 @@
+{
+  "id": "comic-sanguo-tales-q05-e07-tale-047",
+  "title": "元龙百尺楼",
+  "subtitle": "许汜争的是床榻高低，刘备论的是胸中天下。",
+  "story_source": "《三国志·魏书·吕布张邈臧洪传》附陈登事迹。许汜与刘备谈论陈登，埋怨陈登没有客主之礼，自卧大床，却使客卧下床。刘备指出许汜只知求田问舍，不能忧国忘家，继而说：『如小人，欲卧百尺楼上，卧君于地，何但上下床之间邪？』",
+  "why_not_in_romance": "【演义归属：演义未载】《三国演义》写陈登助曹操破吕布，未写许汜向刘备抱怨陈登无客主之礼，也未写刘备『欲卧百尺楼上，卧君于地』之评。本集取自《三国志》所载谈论，不以演义中的陈登情节替代。",
+  "synopsis": "许汜向刘备抱怨，陈登接待自己时久不交谈，自卧大床，却让客人卧下床。刘备反问：天下大乱，有国士之名的人本该忧国忘家，怎能只谈求田问舍？若换作自己，便要卧百尺楼上，让许汜卧地，岂止床榻高低之别。",
+  "characters": [
+    {
+      "name": "刘备",
+      "slug": "liu-bei",
+      "existing": true,
+      "role": "听许汜论陈登，并以忧国之志衡量士人的刘备",
+      "profile": {
+        "age": "四十余岁的中年男子",
+        "gender": "男",
+        "role": "蜀汉昭烈帝 · 仁德之主",
+        "era": "东汉末年三国时期",
+        "face": "面如冠玉，方正温和的脸型，双耳垂肩",
+        "eyes": "细长温和的眼睛，目光沉稳含笑",
+        "skin": "温润的浅麦色",
+        "build": "身长七尺五寸，双臂过膝，挺拔而不魁梧",
+        "hair": "黑发整齐束于玄色冠下，鬓角修整，颌下长须修剪齐整",
+        "marks": "双手过膝，双耳垂肩，无伤疤",
+        "outfit": "素白与月白交领深衣，宽袖，衣缘绣暗银云雷纹，玄色腰带配玉具剑佩，外罩浅灰鹤纹大氅，丝质光泽与细密织纹",
+        "accessories": "腰间玉佩、素色发冠、绢质披帛",
+        "weapon": "双股剑，剑鞘玄色嵌铜，悬于左腰",
+        "palette": "素白、月白、暗银、玄黑、少量朱红点缀",
+        "temperament": "宽厚仁和、喜怒不形于色、内敛而有威仪",
+        "art_style": "premium Three Kingdoms historical-fantasy game character concept art, highly detailed painterly digital illustration, intricate silk brocade texture, crisp material separation, muted historical pigments",
+        "negative": "photograph, 3D render, plastic, modern clothing, anime chibi, text, watermark, cropped body, extra characters, different outfit"
+      },
+      "pose": "Use the existing Liu Bei character asset unchanged, seated upright with a restrained, authoritative hand gesture; preserve the established appearance, costume, hairstyle and weapon.",
+      "tags": [
+        "三国",
+        "复用角色",
+        "忧国",
+        "评议"
+      ],
+      "character_id": "char-20261110-144930-807358"
+    },
+    {
+      "name": "许汜",
+      "slug": "xu-si",
+      "existing": true,
+      "role": "曾客于陈登，因接待失礼而心怀不满的士人",
+      "profile": {
+        "age": "约四十岁，属视觉设定，史料未详",
+        "gender": "男",
+        "role": "汉末士人，曾客于陈登",
+        "era": "东汉末年",
+        "face": "长方脸，颧骨略显，下颌收窄，留修整齐整的短须",
+        "eyes": "细长眼，眉梢略扬，受责时目光回避",
+        "skin": "浅麦色",
+        "build": "中等身量，体态偏瘦，肩背端直",
+        "hair": "黑发束成整齐发髻，戴深褐色素帻，全篇不变",
+        "marks": "无疤痕，无刺青，短须形状固定",
+        "outfit": "灰紫色交领宽袖长袍，米白中衣，深褐窄缘，灰褐长裤，深褐布履；全篇不换装",
+        "accessories": "深褐素革腰带，无金玉炫饰",
+        "weapon": "无",
+        "palette": "灰紫、米白、深褐、灰褐、墨黑",
+        "temperament": "自重门第与客礼，初时不平，继而窘迫",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "No luxurious crown, no modern objects, no costume changes, no hairstyle changes, no weapon, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Use the existing Xu Si character asset unchanged, seated formally with hands gathered near the lap; preserve the established appearance, costume, hairstyle and accessories.",
+      "tags": [
+        "三国",
+        "复用角色",
+        "士人",
+        "求田问舍"
+      ],
+      "character_id": "char-20261111-154629-9858fc"
+    },
+    {
+      "name": "陈登",
+      "slug": "chen-deng",
+      "existing": true,
+      "role": "字元龙，仅在许汜回忆中出现的汉末士人",
+      "profile": {
+        "age": "约三十余岁，属视觉设定，具体年龄不作史实断言",
+        "gender": "男",
+        "role": "汉末广陵士人陈登，字元龙",
+        "era": "东汉末年",
+        "face": "面形清瘦而棱角分明，眉骨端正，留短髭与短颌须",
+        "eyes": "深棕色眼睛，目光明锐，神情冷淡而不轻佻",
+        "skin": "自然浅麦色",
+        "build": "身形修长，肩背挺拔",
+        "hair": "黑发束髻，戴墨青色素帻，全篇不变",
+        "marks": "无明显伤疤，无刺青，须形固定",
+        "outfit": "深青色交领宽袖长袍，灰白内领，墨黑窄缘，深褐布带，深灰长裤，黑色布履；衣料朴素，全篇不换装",
+        "accessories": "仅用深褐布腰带，无额外玉饰",
+        "weapon": "无",
+        "palette": "深青、灰白、墨黑、深褐、深灰",
+        "temperament": "沉毅有志，不愿与只谈私产的来客亲近",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "No imperial regalia, no armour, no modern objects, no costume changes, no hairstyle changes, no weapon, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Use the existing Chen Deng character asset unchanged, reclining on a raised wooden couch with a reserved expression; preserve the established appearance, costume, hairstyle and accessories.",
+      "tags": [
+        "三国",
+        "复用角色",
+        "陈元龙",
+        "回忆"
+      ],
+      "character_id": "char-20261111-154629-efeade"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "荆州会谈厅",
+      "description": "不含人物的汉末会谈厅独立环境概念图。木柱、素壁、席垫与低案组成疏朗空间，侧窗透入均匀日光。案上仅置无纹陶杯，无书写物、匾额与装饰文字。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a late Eastern Han reception hall in Jingzhou, timber columns, plain plaster walls, woven sitting mats, low wooden tables and undecorated ceramic cups, soft daylight through lattice windows, spacious readable composition, no people or human silhouettes. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "白日",
+      "mood": "清静肃然，适合人物论辩"
+    },
+    {
+      "id": "scene-02",
+      "name": "下邳客舍寝室",
+      "description": "不含人物的汉末寝室独立环境概念图。室内一侧设较高的大木榻，另一侧设较低的客榻，两榻各自独立，并非上下铺。陈设朴素，素色薄被叠放，门窗引入柔和暮光。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a modest late Eastern Han guest chamber in Xiapi, one broad raised wooden sleeping couch and one separate lower guest couch, clearly distinct heights, not bunk beds, plain folded bedding, timber floor and muted plaster walls, soft dusk light, both couches visible in a single coherent room, no people or human silhouettes. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "薄暮",
+      "mood": "疏冷寡言，突出待客落差"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "谈起陈登，许汜先诉不平。",
+      "dialogue": [
+        {
+          "speaker": "许汜",
+          "line": "陈元龙待我，全无客主之礼！"
+        }
+      ],
+      "visual": "Medium two-person view inside scene-01. Xu Si faces Liu Bei across a low table, leaning forward slightly with one open palm expressing offended dignity. Liu Bei sits upright and listens without agreeing. Use both existing character assets exactly, with unchanged clothing, hairstyles, accessories and weapons. No other people. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "许汜",
+        "刘备"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-02",
+      "caption": "他忆起下邳那次冷遇。",
+      "dialogue": [
+        {
+          "speaker": "许汜",
+          "line": "他久久不与我说话，自卧大床，却让我卧下床。"
+        }
+      ],
+      "visual": "Wide recollection view inside scene-02. Chen Deng reclines fully clothed on the broad raised wooden couch, turned slightly away in reserved silence. Xu Si sits stiffly on the separate lower guest couch, looking toward him with restrained displeasure. Make the difference in couch height clear without depicting bunk beds or another floor. Xu Si's dialogue is retrospective voice-over, not an active conversation in this memory. Preserve both existing character assets and all established clothing and hairstyles. Exactly two people. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "陈登",
+        "许汜"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-01",
+      "caption": "刘备却不替他争床榻。",
+      "dialogue": [
+        {
+          "speaker": "刘备",
+          "line": "君有国士之名。天下大乱，本望你忧国忘家，有救世之意。"
+        }
+      ],
+      "visual": "Medium view back inside scene-01, maintaining the established seating positions. Liu Bei looks directly at Xu Si with a grave, controlled expression, one hand resting beside the plain ceramic cup. Xu Si's confident posture begins to stiffen. The low table keeps the exchange intimate and focused. Use the existing Liu Bei and Xu Si assets unchanged, including their established garments, hairstyles, accessories and weapons. Exactly two people. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "刘备",
+        "许汜"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-01",
+      "caption": "一语求田问舍，点破症结。",
+      "dialogue": [
+        {
+          "speaker": "刘备",
+          "line": "你却只知求田问舍，言无可采。这正是元龙所忌，何必与你多谈？"
+        }
+      ],
+      "visual": "Close view of Xu Si in scene-01 as he receives Liu Bei's rebuke from outside the frame. His raised hand has lowered to his knee, his eyes turn downward, and his lips tighten in embarrassment. Show only Xu Si, with no other figures, reflections or silhouettes. Preserve the existing Xu Si character appearance, costume and hairstyle exactly. Keep the same hall lighting and background materials. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "许汜"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-01",
+      "caption": "百尺楼之喻，锋芒尽出。",
+      "dialogue": [
+        {
+          "speaker": "刘备",
+          "line": "如小人，欲卧百尺楼上，卧君于地，何但上下床之间邪？"
+        }
+      ],
+      "visual": "Medium single-person view of Liu Bei seated in scene-01. With composed severity rather than anger, he raises one open hand high while directing the other gently toward the floor, making the contrast of height legible through gesture alone. This is a spoken hypothetical comparison: do not show a tower, a dream, an inset or a second location. Preserve the existing Liu Bei asset exactly, including costume, hairstyle, cloak and sword accessories. No other people. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "刘备"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-01",
+      "caption": "床榻有高下，志向更有高下。",
+      "dialogue": [],
+      "visual": "Wide closing view inside scene-01. Liu Bei has lowered his hands and remains upright and calm. Across the low table, Xu Si sits with lowered eyes and both hands drawn back into his lap. Leave a measured area of empty floor between them to emphasize the moral distance revealed by the conversation. No literal tower and no additional people. Reuse the existing Liu Bei and Xu Si assets with every established costume, hairstyle, accessory and weapon unchanged. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "刘备",
+        "许汜"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting throughout. Reuse the established Liu Bei, Xu Si and Chen Deng character assets without redesigning faces, clothing, hairstyles, accessories or weapons. Show at most two people per panel and no background crowds, servants, reflections or human silhouettes. Use only scene-01 and scene-02. Both scene assets must be independent unoccupied environment concept images. The memory chamber contains two separate couches of different heights, never bunk beds. The hundred-foot tower is only a spoken hypothetical analogy and must not become a third visual environment. Render no speech balloons or graphic overlays; all dialogue and narration are supplied separately for HTML placement. Exclude written scrolls, plaques, seals and decorative writing; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+  "notes": "史料骨架为许汜诉陈登失礼、刘备以忧国忘家对照求田问舍、继以百尺楼之喻作答。原记谈论发生于刘表处，本脚本裁取刘备与许汜的对话，不安排刘表入画。第二格为许汜所述往事的回忆呈现，不新增陈登对白；第三、四格对白为史料语意的节写，第五格保留指定原文。『如小人』是刘备自谦，意为『若换作我』，不是辱骂许汜。百尺楼是设喻，不是实际登楼或命人卧地的事件。人物神情、手势、厅室陈设和末格沉默属于连环画表现性补写，不视为史料新增事实。三名人物均复用既有角色卡，profile 留空表示不重新定义外貌。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q05",
+  "episode": 7,
+  "story_bank_no": 47,
+  "_generation": {
+    "written_at": "2026-11-12T11:13:55+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 9741,
+      "completion_tokens": 3510,
+      "total_tokens": 13251,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 9738,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 442,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "a861f4381a1ffb0a79ddf57786c933bd90d3f80cb915349314090e2c0d91146e",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

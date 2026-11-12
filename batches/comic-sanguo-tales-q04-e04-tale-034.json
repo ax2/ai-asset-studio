@@ -1,0 +1,218 @@
+{
+  "id": "comic-sanguo-tales-q04-e04-tale-034",
+  "title": "董和恶衣蔬食",
+  "subtitle": "先以自身行俭，再以规制矫奢",
+  "story_source": "《三国志》卷三十九·蜀书·董和传；原文：和躬率以俭，恶衣蔬食，防遏踰僭，为之轨制。",
+  "why_not_in_romance": "【演义归属：演义未载】通行毛本提及董和参与蜀中政务，但未展开其任成都令时以俭矫奢的故事。本集所写的粗衣蔬食、以身率下及制定规范，依据《三国志·董和传》，不是《三国演义》中的情节。",
+  "synopsis": "董和任成都令，见当地竞尚奢华，不随俗自奉，而是身穿粗衣、日食蔬菜。他先以自身作表率，再制定规范，遏止逾越礼制的奢侈行为。当地人由观望到有所收敛，俭朴之风渐渐兴起。",
+  "characters": [
+    {
+      "name": "董和",
+      "slug": "dong-he",
+      "existing": false,
+      "role": "汉末成都令，以自身节俭矫正当地奢靡风气",
+      "profile": {
+        "age": "约四十余岁，属视觉设定，不作史实年龄断言",
+        "gender": "男",
+        "role": "成都令，地方行政长官",
+        "era": "东汉末年，刘璋治益州时期",
+        "face": "清瘦长方脸，颧骨略显，短须整齐，唇边留细髭",
+        "eyes": "深褐眼睛，目光沉静而坚定",
+        "skin": "自然浅麦色，带少许日晒痕迹",
+        "build": "中等身量，清瘦挺拔，动作克制",
+        "hair": "黑发略杂灰，束于头顶，固定戴朴素黑色布帻",
+        "marks": "两颊略瘦，眉间有浅纹，无夸张疤痕",
+        "outfit": "固定穿灰褐色粗麻交领长袍，米灰内领，深褐窄布腰带，深灰长裤，旧黑布履；领袖略磨旧但洁净完整，六格不换装",
+        "accessories": "无玉佩、金饰或华丽配件，布帻与腰带全篇固定",
+        "weapon": "无，不佩剑",
+        "palette": "灰褐、米灰、深褐、深灰、墨黑",
+        "temperament": "俭约自持，温和严正，重视以身作则",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine coarse-hemp textile texture, even lighting",
+        "negative": "无华丽锦绣，无铠甲，无披风，无珠玉，无现代物件，无夸张仙侠装束，无文字与印记"
+      },
+      "pose": "Full-body standing reference, shoulders relaxed and back upright, one hand lightly holding the opposite sleeve, both hands visible, calm resolute expression, unchanged coarse-hemp robe and black cloth headwrap, plain background.",
+      "tags": [
+        "三国",
+        "董和",
+        "成都令",
+        "粗衣蔬食",
+        "清俭"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "成都富户",
+      "slug": "chengdu-fuhu",
+      "existing": false,
+      "role": "当地富户的单人代表，为呈现风俗变化设置的无名人物",
+      "profile": {
+        "age": "约四十岁",
+        "gender": "男",
+        "role": "成都当地富户，文学化设置的风俗观察者",
+        "era": "东汉末年，刘璋治益州时期",
+        "face": "圆方脸，面颊丰厚，留短而整齐的胡须",
+        "eyes": "深褐眼睛，起初自得，后来转为思索与敬重",
+        "skin": "自然暖米色",
+        "build": "中等身高，体态丰实但不过度肥胖",
+        "hair": "黑发束髻，固定戴深褐色布帻",
+        "marks": "眉毛较浓，无疤痕，无醒目胎记",
+        "outfit": "固定穿暗栗红色细绢交领宽袖长袍，米白内领，低对比赭金几何暗纹窄缘，深褐布腰带，灰褐下裳，黑褐布履；六格不换装",
+        "accessories": "腰侧固定悬一枚小型素玉佩，不增减首饰",
+        "weapon": "无",
+        "palette": "暗栗红、米白、赭金、深褐、灰褐",
+        "temperament": "看重体面与排场，能因亲见官长自律而反省",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine silk textile texture, even lighting",
+        "negative": "无帝王冠冕，无铠甲，无披风，无夸张金链，无现代物件，不以换装表现风俗变化，无文字与印记"
+      },
+      "pose": "Full-body standing reference, one hand resting near the waist and the other gently presenting an empty open palm, composed prosperous bearing, unchanged dark chestnut-red silk robe and dark brown cloth headwrap, plain background.",
+      "tags": [
+        "三国",
+        "成都",
+        "富户",
+        "无名代表",
+        "文学化人物"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "成都市肆",
+      "description": "空无一人的汉末成都街市一角。木构店面临着夯土街道，灰瓦檐下设有低矮货台、木箱和素陶器。货台上的锦绢与粗麻布形成材质对比，不设招牌、旗号或文字。",
+      "prompt_extra": "Standalone environment concept art of an unoccupied late Eastern Han market corner in Chengdu, timber storefronts, gray tiled eaves, rammed-earth street, low wooden display counter, storage chests, folded patterned silk and coarse hemp bolts, plain pottery, balanced street-level perspective, soft even daylight, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and timber texture, no people, no human silhouettes, no signboards, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "白昼",
+      "mood": "繁富之中暗含攀比，后转为节制"
+    },
+    {
+      "id": "scene-02",
+      "name": "成都县署内堂",
+      "description": "空无一人的县署内堂。灰泥墙、木柱、竹帘和席地陈设简朴整洁；一张低案兼供用膳与处理公务，配有素陶碗、木箸、竹简、砚和笔。竹简仅展示无字背面，无匾额印章。",
+      "prompt_extra": "Standalone environment concept art of an unoccupied late Eastern Han county office interior, restrained gray plaster walls, timber pillars, bamboo blinds, woven floor mats, one low wooden desk used for meals and administration, plain ceramic bowls, wooden chopsticks, bamboo-slip bundles showing only blank reverse surfaces, inkstone and brush without markings, soft even daylight through the open doorway, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and woven textile texture, no people, no human silhouettes, no plaques, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "白昼",
+      "mood": "清简、安静、严整"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "董和任成都令，见当地竞尚奢华。",
+      "dialogue": [],
+      "visual": "Wide street-level view in scene-01, exactly two people: 董和 and 成都富户. The prosperous householder proudly lifts a richly patterned silk bolt above the low market counter, while Dong He pauses beside him and quietly observes the costly display. Keep Dong He in his fixed worn gray-brown coarse-hemp robe and black cloth headwrap; keep the householder in his fixed dark chestnut-red silk robe and dark brown cloth headwrap. Silk and coarse hemp on the counter create a clear visual contrast. No other people or human figures in the background. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "董和",
+        "成都富户"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "他不随俗，先以粗衣自持。",
+      "dialogue": [
+        {
+          "speaker": "董和",
+          "line": "衣能蔽体，何必竞奢？"
+        }
+      ],
+      "visual": "Medium view in scene-01, exactly two people: 董和 and 成都富户. Dong He calmly touches the plain worn cuff of his own coarse-hemp robe, his expression unembarrassed and steady. Opposite him, the householder lowers the patterned silk bolt slightly and studies that humble sleeve with surprise. Emphasize the rough clean weave against the smooth expensive fabric, without changing either character's established clothing, hair or accessories. Keep the same market counter and timber storefront setting, no additional people. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "董和",
+        "成都富户"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "案上不过蔬食，日常亦不求丰。",
+      "dialogue": [],
+      "visual": "Medium intimate view in scene-02, exactly one person: 董和. He sits upright on a woven mat at the low office desk and eats a modest meal with wooden chopsticks. A small plain ceramic bowl of grain and one simple dish of boiled leafy vegetables are the only food, with no meat, wine or lavish serving vessels. His fixed gray-brown coarse-hemp robe and black cloth headwrap remain unchanged. Bamboo-slip bundles rest at the far end of the same desk, showing only their blank backs. Emphasize quiet habitual restraint rather than poverty or theatrical suffering. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine coarse-hemp and pottery texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "董和"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "以身率俭之外，更立规制遏止逾僭。",
+      "dialogue": [
+        {
+          "speaker": "董和",
+          "line": "我自当先行，也须立下规制。"
+        }
+      ],
+      "visual": "Medium administrative scene in scene-02, exactly two people: 董和 and 成都富户. The meal vessels have been cleared from the same low desk. Dong He sits behind it with one hand resting on a tied bundle of bamboo slips, presenting the authority of newly established standards without displaying any readable content. Show only the blank reverse surfaces and edges of the slips. The householder kneels opposite, listening thoughtfully with his hands together. Neither character changes clothing, hairstyle or accessories. Calm measured gestures, no punishment implements, no seals and no extra officials. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and bamboo texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "董和",
+        "成都富户"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-01",
+      "caption": "亲见官长自俭，富户也收敛排场。",
+      "dialogue": [
+        {
+          "speaker": "成都富户",
+          "line": "县令尚且如此，我又何必争夸？"
+        }
+      ],
+      "visual": "Medium view in scene-01, exactly one person: 成都富户. At the same market counter he thoughtfully folds the ornate silk bolt into an open wooden storage chest, choosing to set aside conspicuous display. A modest coarse-hemp bolt lies beside the chest. Keep him in exactly the same dark chestnut-red silk robe, dark brown cloth headwrap, narrow patterned trim and small jade pendant as before; his change is expressed entirely through action and expression, not a costume change. No other people, no merchants or background silhouettes. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and timber texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "成都富户"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-01",
+      "caption": "身教与规制并行，俭风渐起。",
+      "dialogue": [],
+      "visual": "Wide concluding view in scene-01, exactly two people: 董和 and 成都富户. Return to the opening camera angle at the same market counter. The ornate silk is now stored inside the closed wooden chest, while a few plain hemp bolts and simple ceramic vessels remain neatly displayed. The householder gives Dong He a restrained respectful bow; Dong He responds with a small courteous inclination, without triumph or ceremony. Both retain their exact established outfits, hairstyles and accessories. Use the visual echo of the opening to suggest gradual restraint rather than an instantly transformed entire city. No additional people or human silhouettes. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "董和",
+        "成都富户"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture where applicable, and even lighting. Favor historically grounded late Eastern Han civilian clothing and architecture; no fantasy armour is needed. Preserve each character's established face, outfit, hairstyle and accessories in every appearance; neither character carries a weapon. Use only scene-01 and scene-02. Environment concept images must contain no people. Panel images must contain only the named characters, with at most two people and no background crowds, portraits, reflections or silhouettes of additional people. Show all bamboo slips from blank reverse surfaces or edge-on; use no readable documents, seals, plaques, shop signs or inscribed objects. Captions and dialogue are external HTML overlays only and must never be painted into an image. Each panel is a single continuous composition, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为董和任成都令时躬行节俭、恶衣蔬食，并制定规制防遏逾僭。“恶衣”在此指粗劣朴素之衣，不表现为污秽破烂。成都富户是无名合成人物，其展示锦绢、入署听告与收起锦绢，以及全部对白，均为串联史意的文学化扩写，不是史载具体事件或原话。竹简仅象征制定规范，不虚构条文、刑罚或强迫所有人改穿粗衣。结尾以一户收敛排场表现风俗渐变，不宣称六格之内全城立即改俗。人物年龄、容貌与服饰细节为视觉设定。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q04",
+  "episode": 4,
+  "story_bank_no": 34,
+  "_generation": {
+    "written_at": "2026-11-12T10:16:46+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 7874,
+      "completion_tokens": 4032,
+      "total_tokens": 11906,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 7871,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 170,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "5da267b28129bcc3a571065bc998e3cb4e7aac9fa01c2f90d8016b79362db662",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

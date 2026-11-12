@@ -1,0 +1,137 @@
+{
+  "id": "sanguo-tales-q04",
+  "title": "三国小故事 · Q04 批（10 集）",
+  "planned_at": "2026-11-12T10:19:32+08:00",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "constraint": "候选库故事；《三国演义》写过的亦收录，逐条标注演义归属",
+  "source": "batches/story-bank.json",
+  "episodes": [
+    {
+      "no": 1,
+      "id": "comic-sanguo-tales-q04-e01-tale-031",
+      "title": "演戏劝止争书",
+      "file": "comic-sanguo-tales-q04-e01-tale-031.json",
+      "source": "《三国志》卷四十二·蜀书·许慈传。许慈、胡潜互相争竞，不肯互通典籍，刘备遂令艺人模仿二人的争斗，在宴会上演出以作劝诫。原文摘录：“初以辞义相难，终以刀杖相屈，意以感切之。”",
+      "characters": [
+        "刘备",
+        "许慈",
+        "胡潜"
+      ],
+      "reused": false
+    },
+    {
+      "no": 2,
+      "id": "comic-sanguo-tales-q04-e02-tale-032",
+      "title": "王平听史",
+      "file": "comic-sanguo-tales-q04-e02-tale-032.json",
+      "source": "《三国志》卷四十三·蜀书·王平传：“平生所识不过十字，而口授作书，皆有意理。使人读《史》《汉》诸传，听之，备知其大义，往往论说不失其指。”",
+      "characters": [
+        "王平",
+        "书佐"
+      ],
+      "reused": false
+    },
+    {
+      "no": 3,
+      "id": "comic-sanguo-tales-q04-e03-tale-033",
+      "title": "董允停驾留客",
+      "file": "comic-sanguo-tales-q04-e03-tale-033.json",
+      "source": "《三国志》卷三十九·蜀书·董允传。董允原拟与费祎、胡济宴游，适逢官微年少的董恢来访，遂留客畅谈，取消出游。原文摘录：“乃命解骖，祎等罢驾。”",
+      "characters": [
+        "董允",
+        "董恢",
+        "费祎"
+      ],
+      "reused": false
+    },
+    {
+      "no": 4,
+      "id": "comic-sanguo-tales-q04-e04-tale-034",
+      "title": "董和恶衣蔬食",
+      "file": "comic-sanguo-tales-q04-e04-tale-034.json",
+      "source": "《三国志》卷三十九·蜀书·董和传；原文：和躬率以俭，恶衣蔬食，防遏踰僭，为之轨制。",
+      "characters": [
+        "董和",
+        "成都富户"
+      ],
+      "reused": false
+    },
+    {
+      "no": 5,
+      "id": "comic-sanguo-tales-q04-e05-tale-035",
+      "title": "蒋琬容人不答",
+      "file": "comic-sanguo-tales-q04-e05-tale-035.json",
+      "source": "《三国志》卷四十四·蜀书·蒋琬传。原文摘录：“人心不同，各如其面；面从后言，古人之所诫也。”本事记蒋琬与杨戏交谈，杨戏有时不作应答，有人因此指责杨戏傲慢，蒋琬却为其解释、维护。",
+      "characters": [
+        "蒋琬",
+        "杨戏"
+      ],
+      "reused": false
+    },
+    {
+      "no": 6,
+      "id": "comic-sanguo-tales-q04-e06-tale-036",
+      "title": "何夔藏药守节",
+      "file": "comic-sanguo-tales-q04-e06-tale-036.json",
+      "source": "《三国志·魏书·何夔传》；原文：夔常畜毒药，誓死无辱，是以终不见及。",
+      "characters": [
+        "曹操",
+        "何夔"
+      ],
+      "reused": false
+    },
+    {
+      "no": 7,
+      "id": "comic-sanguo-tales-q04-e07-tale-037",
+      "title": "徐邈醉称圣人",
+      "file": "comic-sanguo-tales-q04-e07-tale-037.json",
+      "source": "《三国志·魏书·徐邈传》。原文摘录：“校事赵达问以曹事，邈曰：‘中圣人。’”本传记载，魏国初建，徐邈任尚书郎，禁酒期间私饮至醉；赵达将其醉言报告曹操，曹操大怒，度辽将军鲜于辅解释清酒称圣人、浊酒称贤人的酒徒隐语，徐邈遂得免刑。",
+      "characters": [
+        "曹操",
+        "徐邈",
+        "鲜于辅"
+      ],
+      "reused": false
+    },
+    {
+      "no": 8,
+      "id": "comic-sanguo-tales-q04-e08-tale-038",
+      "title": "毛玠选官尚俭",
+      "file": "comic-sanguo-tales-q04-e08-tale-038.json",
+      "source": "《三国志·魏书·毛玠传》：其所举用，皆清正之士，虽于时有盛名而行不由本者，终莫得进。传中又载：是以天下之士莫不以廉节自励，虽贵宠之臣，舆服不敢过度。",
+      "characters": [
+        "毛玠",
+        "崔琰",
+        "权贵代表"
+      ],
+      "reused": false
+    },
+    {
+      "no": 9,
+      "id": "comic-sanguo-tales-q04-e09-tale-039",
+      "title": "王烈赠布劝善",
+      "file": "comic-sanguo-tales-q04-e09-tale-039.json",
+      "source": "《三国志·魏书·管宁传》，裴松之注引《先贤行状》。原文摘录：“刑戮是甘，乞不使王彦方知也。”故事记载盗牛者畏王烈知其过，王烈因其尚有羞耻之心，赠布劝善；后来守护路旁遗剑者，正是昔日盗牛之人。",
+      "characters": [
+        "王烈",
+        "盗牛者"
+      ],
+      "reused": false
+    },
+    {
+      "no": 10,
+      "id": "comic-sanguo-tales-q04-e10-tale-040",
+      "title": "田间相敬如宾",
+      "file": "comic-sanguo-tales-q04-e10-tale-040.json",
+      "source": "《三国志·魏书·常林传》；原文：其妻常自馈饷之，林虽在田野，其相敬如宾。",
+      "characters": [
+        "常林",
+        "常林之妻"
+      ],
+      "reused": false
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "id": "comic-sanguo-tales-q04-e07-tale-037",
+  "title": "徐邈醉称圣人",
+  "subtitle": "一句酒徒隐语，险些惹来刑罚",
+  "story_source": "《三国志·魏书·徐邈传》。原文摘录：“校事赵达问以曹事，邈曰：‘中圣人。’”本传记载，魏国初建，徐邈任尚书郎，禁酒期间私饮至醉；赵达将其醉言报告曹操，曹操大怒，度辽将军鲜于辅解释清酒称圣人、浊酒称贤人的酒徒隐语，徐邈遂得免刑。",
+  "why_not_in_romance": "通行毛本未叙徐邈醉称“中圣人”、鲜于辅解释清酒与浊酒隐语的故事。【演义归属：演义未载】",
+  "synopsis": "魏国初建，禁酒令下，尚书郎徐邈仍私饮大醉。校事赵达询问官署事务，他竟答“中圣人”。曹操闻报大怒，鲜于辅解释，酒徒把清酒叫作圣人，浊酒叫作贤人，徐邈不过醉后失言。曹操怒意渐消，徐邈终于免刑。",
+  "characters": [
+    {
+      "name": "曹操",
+      "slug": "cao-cao",
+      "existing": true,
+      "role": "魏国之主，听闻徐邈醉言后震怒",
+      "profile": {
+        "age": "五十岁上下的成熟男子",
+        "gender": "男",
+        "role": "东汉丞相 · 魏王 · 枭雄",
+        "era": "东汉末年三国时期",
+        "face": "清瘦而线条凌厉的脸型，颧骨微凸",
+        "eyes": "细眼长髯，目光沉鸷锐利",
+        "skin": "偏白的冷峻肤色",
+        "build": "身长七尺，中等精瘦，姿态矜持",
+        "hair": "黑发整齐束于玄玉冠下，颌下长须修整细致",
+        "marks": "细目长髯，眉间一道浅纹",
+        "outfit": "玄色蟒纹深衣，暗金四爪蟒纹满绣，交领缘饰朱红，外披黑貂大氅，貂毛根根分明，腰束玉带镶鎏金兽首",
+        "accessories": "玄玉冠、玉带、黑貂大氅、朱红印绶",
+        "weapon": "倚天剑，玄鞘嵌金，佩于左腰",
+        "palette": "玄黑、墨青、暗金、朱红、玉白",
+        "temperament": "沉鸷多疑、雄猜果决、不怒自威的枭雄气度",
+        "art_style": "premium Three Kingdoms historical-fantasy game character concept art, highly detailed painterly digital illustration, gold-thread dragon embroidery, dark fur texture, crisp material separation, muted historical pigments",
+        "negative": "photograph, 3D render, plastic, modern clothing, anime chibi, text, watermark, cropped body, extra characters, bright saturated colors, different outfit"
+      },
+      "pose": "Use the existing Cao Cao character asset unchanged; seated upright behind a low desk, one hand resting on the desk, expression transitioning from stern anger to restrained composure.",
+      "tags": [
+        "三国",
+        "已有角色",
+        "曹操",
+        "听奏"
+      ],
+      "character_id": "char-20261110-144930-66b9cc"
+    },
+    {
+      "name": "徐邈",
+      "slug": "xu-miao",
+      "existing": false,
+      "role": "尚书郎，禁酒期间私饮而醉",
+      "profile": {
+        "age": "约四十岁，视觉年龄为创作设定",
+        "gender": "男",
+        "role": "魏国初建时的尚书郎，字景山",
+        "era": "东汉末年，魏国初建时期",
+        "face": "清瘦长方脸，鼻梁端正，短须整齐，平时神态谨慎",
+        "eyes": "细长深褐眼，醉时眼睑低垂，清醒时目光内敛",
+        "skin": "自然浅麦色，醉时仅双颊泛红",
+        "build": "中等身高，偏瘦，文官体态",
+        "hair": "黑发束成整齐发髻，固定戴黑色素帻，不因醉态更换发式",
+        "marks": "右眉尾略向下垂，无伤疤、无纹身",
+        "outfit": "固定穿灰蓝色素绢交领宽袖长袍，米白内领，深褐窄布腰带，炭灰下裳与黑色布履；六格不换装",
+        "accessories": "仅有素面束发帻，不佩华贵饰物；饮酒道具为无纹黑褐陶杯与小陶壶",
+        "weapon": "无",
+        "palette": "灰蓝、米白、深褐、炭灰、墨黑、浅麦色",
+        "temperament": "本性修慎，醉后迟钝失言，清醒后惭愧自持",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "不披甲，不戴冕旒，不加披风，不改发式，不持兵器，不出现现代酒器"
+      },
+      "pose": "Full-body standing reference, slightly unsteady but dignified, one hand loosely holding a plain dark ceramic cup and the other gathering his sleeve; preserve the fixed robe and tied hairstyle.",
+      "tags": [
+        "三国",
+        "新角色",
+        "徐邈",
+        "尚书郎",
+        "醉酒"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "鲜于辅",
+      "slug": "xianyu-fu",
+      "existing": false,
+      "role": "度辽将军，为徐邈解释酒徒隐语",
+      "profile": {
+        "age": "约五十岁，视觉年龄为创作设定",
+        "gender": "男",
+        "role": "度辽将军，曹操属下将领",
+        "era": "东汉末年，魏国初建时期",
+        "face": "宽方脸，颧骨略高，短髭与修整齐的短须",
+        "eyes": "深褐色眼睛，目光沉稳，解释时坦然专注",
+        "skin": "略经风霜的麦色肤色",
+        "build": "中等偏高，肩背宽厚，动作稳重",
+        "hair": "黑发夹少量灰白，束髻，固定戴深褐色素帻",
+        "marks": "额间浅纹，鬓角少量灰白，无显著伤疤",
+        "outfit": "固定穿栗褐色粗绢交领窄袖长袍，米灰内领，深褐素革带，深灰长裤与黑褐皮履；室内不披甲，全篇不换装",
+        "accessories": "素面革带与深褐素帻，无夸张金玉饰物",
+        "weapon": "无，室内陈说不携兵器",
+        "palette": "栗褐、米灰、深褐、深灰、黑褐、麦色",
+        "temperament": "老成持重，熟悉人情，措辞平实而善于解围",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "不披甲，不加披风，不戴帝王冠，不换发式，不持兵器，不作滑稽酒徒形象"
+      },
+      "pose": "Full-body standing reference, torso slightly inclined in respectful address, hands held together at chest level, calm and persuasive expression; retain the fixed robe and hairstyle.",
+      "tags": [
+        "三国",
+        "新角色",
+        "鲜于辅",
+        "度辽将军",
+        "解围"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "尚书官署侧室",
+      "description": "无人环境概念图。朴素木构官署侧室，灰泥墙、木格窗、苇席与低案；案边放无纹陶壶、陶杯和合拢的空白简册，室内陈设克制。",
+      "prompt_extra": "Standalone empty environment concept art of a modest late Eastern Han administrative side room, timber posts, gray plaster walls, lattice window, reed mat, low wooden desk, plain dark ceramic flask and cup, closed unmarked bamboo bundles, soft daylight and even illumination, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, no people, no human silhouettes, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "白昼",
+      "mood": "清冷安静，暗藏酒意与不安"
+    },
+    {
+      "id": "scene-02",
+      "name": "曹操议事内堂",
+      "description": "无人环境概念图。木柱支撑的议事内堂，主位设低案与坐席，侧面留出进言空间；素色屏风、无纹铜灯和闭合简册构成背景，不悬挂匾额。",
+      "prompt_extra": "Standalone empty environment concept art of Cao Cao's late Eastern Han audience chamber, timber columns, a low command desk on a shallow raised platform, woven seating mats, plain folding screen, undecorated bronze lamp, closed unmarked bamboo bundles, generous open floor beside the desk for an adviser, balanced daylight and even lighting, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, no people, no human silhouettes, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "白昼",
+      "mood": "肃穆，先紧张后缓和"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "魏国初建，禁酒令下，徐邈仍私饮。",
+      "dialogue": [],
+      "visual": "Medium view inside scene-01. Xu Miao alone sits on the reed mat beside the low desk, discreetly lifting a plain dark ceramic cup toward his lips, with a small matching flask near his sleeve. His cheeks are faintly flushed and his shoulders have begun to sag. Use his fixed gray-blue robe, black headcloth and tied hairstyle exactly. No other person or reflection. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "徐邈"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "校事赵达问起曹事，徐邈醉答。",
+      "dialogue": [
+        {
+          "speaker": "徐邈",
+          "line": "中圣人。"
+        }
+      ],
+      "visual": "Close view in scene-01 of Xu Miao alone, visibly drunk, eyelids heavy and cheeks flushed, turning toward an unseen questioner beyond the camera with his mouth slightly open in a slow reply. The plain ceramic cup rests near his relaxed hand at the lower edge. Keep his fixed clothing and hairstyle unchanged. The questioner is not depicted: no body fragment, shadow, silhouette or reflection of any other person. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "徐邈"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "赵达上报醉言，曹操闻之大怒。",
+      "dialogue": [],
+      "visual": "Medium view in scene-02. Cao Cao alone sits behind the low desk, brow sharply furrowed, lips compressed, one hand pressing firmly against the desktop in anger after receiving a report. Use the existing Cao Cao character asset exactly, without redesigning his face, hair, clothing or accessories. Leave the foreground empty; the reporter is not shown in any form. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹操"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "鲜于辅进言，解释酒徒隐语。",
+      "dialogue": [
+        {
+          "speaker": "鲜于辅",
+          "line": "酒徒把清酒叫作圣人，浊酒叫作贤人。"
+        }
+      ],
+      "visual": "Medium two-person composition in scene-02. Xianyu Fu stands respectfully beside the low desk, hands joined and torso slightly inclined while calmly explaining. Cao Cao remains seated, sternly watching him. Keep Xianyu Fu in his fixed chestnut-brown robe and dark headcloth; use the existing Cao Cao asset unchanged. Convey a practical explanation through expressions and gestures only, without imaginary sages, inset images or symbolic figures. Exactly two people. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹操",
+        "鲜于辅"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "原是醉后失言，曹操怒意渐消。",
+      "dialogue": [
+        {
+          "speaker": "鲜于辅",
+          "line": "徐邈平日修慎，不过偶然醉后失言罢了。"
+        }
+      ],
+      "visual": "Medium two-person view in the same scene-02, with Cao Cao prominent at the desk and Xianyu Fu in three-quarter profile beside it. Xianyu Fu finishes his respectful appeal; Cao Cao's brow relaxes and his hand opens on the desktop, showing anger subsiding without a broad laugh. Preserve both character assets, outfits and hairstyles exactly. No attendants or background figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹操",
+        "鲜于辅"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-01",
+      "caption": "徐邈终于免刑，一句醉话险酿大祸。",
+      "dialogue": [],
+      "visual": "Medium closing view in scene-01. Xu Miao alone now sits upright beside the same low desk, sober and subdued, eyes lowered with a restrained expression of relief and embarrassment. Both hands rest together on his knees; the plain ceramic cup and closed flask stand untouched at the far edge of the desk. Keep his fixed robe, headcloth and hairstyle unchanged. No messenger, no other person and no new location. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "徐邈"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, and even lighting throughout. Reuse the existing Cao Cao character asset exactly without restyling or replacing it. Keep Xu Miao and Xianyu Fu identical to their defined profiles across all panels, with no costume, hairstyle or weapon changes. Use only scene-01 and scene-02. Scene concept images must be completely unpopulated. Each panel may depict only its listed characters, never more than two people; no crowds, attendants, reflected people, imagined sages or human silhouettes. Zhao Da exists only in historical narration and is never visually depicted. All documents and objects must be unmarked. Render each panel as one continuous image, with all narration and dialogue reserved for external HTML overlay. No speech balloons or embedded graphic labels; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为禁酒私饮、赵达问曹事、徐邈答“中圣人”、曹操震怒、鲜于辅解释清浊酒隐语以及徐邈免刑。“曹事”指官署事务，不改写成询问曹操本人。为遵守三人上限，赵达仅由旁白交代，不设立绘、不出镜；鲜于辅两格对白为史料原意的现代转述。饮酒动作、室内陈设、神情变化及末格醒酒后的反应属于文学化补画，并非史书逐项记载。人物年龄与新角色外貌为视觉设定；曹操沿用既有资产，不据此增添史实主张。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q04",
+  "episode": 7,
+  "story_bank_no": 37,
+  "_generation": {
+    "written_at": "2026-11-12T10:18:14+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 7861,
+      "completion_tokens": 4020,
+      "total_tokens": 11881,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 7858,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 329,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "668f698bcbff1b82b218a7c6aa5631d9b4093f4c186445ddb0d4f61ecd3ec44e",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

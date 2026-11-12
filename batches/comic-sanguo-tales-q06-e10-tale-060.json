@@ -1,0 +1,223 @@
+{
+  "id": "comic-sanguo-tales-q06-e10-tale-060",
+  "title": "费祎围棋办贼",
+  "subtitle": "羽檄交驰，一局试见临事镇定",
+  "story_source": "《三国志·蜀书·费祎传》裴松之注引《祎别传》。原文摘录：“祎与敏留意对戏，色无厌倦。”本事记来敏在费祎北征前登门辞别，求共围棋；当时羽檄交驰、出征准备已毕，费祎仍从容对局。来敏由此称许他临事镇定，能够办贼。",
+  "why_not_in_romance": "通行一百二十回本未叙来敏在费祎出征前求共围棋、借此试其临事镇定的经过；演义中的其他围棋故事不能作为本事的归属。【演义归属：演义未载】",
+  "synopsis": "费祎即将北征，来敏登门辞别，却提出共下一局围棋。军情文书接连送至，出征准备已经就绪，费祎仍专心应对，毫无厌倦。对局后，来敏说明此举是在试探他的临事气度，赞许他沉着可信，必能办贼。",
+  "characters": [
+    {
+      "name": "费祎",
+      "slug": "fei-yi",
+      "existing": true,
+      "role": "蜀汉大将军，即将北征的统军者",
+      "pose": "Reuse the existing character asset without redesign. Seated upright at a low Go table, one hand holding a single stone, expression composed and attentive.",
+      "tags": [
+        "三国",
+        "蜀汉",
+        "大将军",
+        "围棋",
+        "临事镇定"
+      ],
+      "profile": {
+        "age": "中年，约四十余岁至五十岁",
+        "gender": "男",
+        "role": "蜀汉大将军，兼具文臣气度与统军职责",
+        "era": "三国蜀汉，延熙七年前后",
+        "face": "清瘦长脸，颧骨平缓，鼻梁端正，下颌线清晰，留整齐短须",
+        "eyes": "细长深褐眼，目光沉静专注，不刻意作凌厉状",
+        "skin": "暖米色肤色，略有风尘感",
+        "build": "中等身量，体态清健，肩背端正",
+        "hair": "黑发整齐束髻，鬓角少量灰发，始终戴同一顶低矮黑色进贤冠",
+        "marks": "两颊略瘦，短须修整齐整，无疤痕或夸张标记",
+        "outfit": "固定穿黛青色交领宽袖长袍，灰白内领，深褐革带，下着深灰裤与黑色布履；衣缘仅饰低对比暗纹，六格不换装",
+        "accessories": "固定佩素玉小佩与深褐革带，不佩印章，不增添其他饰物",
+        "weapon": "无；本集不持武器",
+        "palette": "黛青、灰白、深褐、墨黑、温润玉白",
+        "temperament": "谦和沉稳，临事专注，从容而不怠慢",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不要帝王冠冕、龙蟒纹、现代服装、夸张重甲、羽扇或诸葛亮式鹤氅；不要改变固定发式与衣着"
+      },
+      "character_id": "char-20261111-094150-cc880d"
+    },
+    {
+      "name": "来敏",
+      "slug": "lai-min",
+      "existing": true,
+      "role": "蜀汉老臣，借对弈观察费祎气度的来访者",
+      "pose": "Reuse the existing character asset without redesign. Seated opposite a Go opponent, hands resting naturally near the table, gaze observant and restrained.",
+      "tags": [
+        "三国",
+        "蜀汉",
+        "老臣",
+        "围棋",
+        "观人"
+      ],
+      "profile": {
+        "age": "约八十岁",
+        "gender": "男",
+        "role": "蜀汉老臣，熟悉礼学的年长士人",
+        "era": "三国蜀汉，延熙七年前后",
+        "face": "修长而略显清癯的老年面容，额纹明显，颧骨突出，蓄疏朗白须",
+        "eyes": "深褐眼，眼尾下垂而目光敏锐，带审察意味",
+        "skin": "浅褐暖肤色，面部有自然老年斑与细纹",
+        "build": "身材清瘦，背部稍弯，仍能稳步行走",
+        "hair": "银白头发束成整齐发髻，固定戴深灰色布帻",
+        "marks": "长而疏的白须及深刻额纹，无人为伤疤",
+        "outfit": "固定穿浅赭色交领宽袖长袍，米白内领，灰褐布带，下着灰褐裤与深褐布履；衣料朴素整洁，六格不换装",
+        "accessories": "无额外佩饰，不持手杖，不携印章",
+        "weapon": "无",
+        "palette": "浅赭、米白、灰褐、深灰、银白",
+        "temperament": "老练审慎，言辞直率，先观察后释然",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不要仙人造型、道士法器、羽扇、华贵冠冕、现代眼镜或夸张驼背；不要改变固定发式与衣着"
+      },
+      "character_id": "char-20261111-094150-ff2a05"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "军府出征前庭",
+      "description": "无人环境概念图。蜀汉军府前庭，木构门廊与夯土庭地相接，廊下整齐放置行装、木箱和无字封缄文书，体现出征前准备就绪的气氛。",
+      "prompt_extra": "Standalone uninhabited environment concept art of a Shu Han military headquarters courtyard, timber portico, rammed-earth ground, neatly arranged travel bundles and wooden chests, blank sealed dispatch packets on a low side table, restrained departure preparations, open central space, soft even morning lighting, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture, no people, no human silhouettes, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "上午",
+      "mood": "整肃待发"
+    },
+    {
+      "id": "scene-02",
+      "name": "军府临庭棋室",
+      "description": "无人环境概念图。临庭木构小室内设低矮棋案、方格围棋盘、黑白棋子与坐席，侧案留有安放羽檄的位置；敞开的门口通向前庭。",
+      "prompt_extra": "Standalone uninhabited environment concept art of a modest Shu Han military study opening toward a courtyard, low wooden Go table with a plain incised grid and black and white stones, two woven sitting mats, a separate low dispatch table, timber pillars and simple lattice windows, stable spatial layout, soft even daylight, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture, no people, no human silhouettes, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "上午",
+      "mood": "静中有急"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "北征在即，军府已备行装。",
+      "dialogue": [],
+      "visual": "Wide view of the established military courtyard. 费祎 stands beside neatly packed travel bundles, calmly surveying the preparations. Blank sealed dispatch packets with small feather markers rest on the side table. Only 费祎 is visible; no attendants or background figures. Reuse his existing character asset exactly, preserving face, hairstyle, costume and accessories. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "费祎"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "来敏登门辞别，却邀他对弈。",
+      "dialogue": [
+        {
+          "speaker": "来敏",
+          "line": "临行之前，可愿共下一局？"
+        },
+        {
+          "speaker": "费祎",
+          "line": "请。"
+        }
+      ],
+      "visual": "Medium two-person view beneath the established courtyard portico. 来敏 offers a courteous greeting and gestures gently toward the adjacent study; 费祎 turns toward him with an open, unhurried expression. Packed travel bundles remain visible behind them. Show only these two named characters. Reuse both existing character assets exactly, preserving faces, hairstyles, costumes and accessories. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "费祎",
+        "来敏"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "两人入座，黑白落定。",
+      "dialogue": [],
+      "visual": "Medium two-person view inside the established study. 费祎 sits on the left and 来敏 on the right across the low Go table, maintaining these screen positions throughout the game. 费祎 places one stone with a steady hand while 来敏 studies the board. A few blank feather-marked dispatch packets lie on the separate side table. The Go grid has no coordinate labels. Only these two characters appear. Reuse both existing character assets exactly without changing faces, hairstyles, costumes or accessories. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "费祎",
+        "来敏"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "羽檄交驰，费祎仍无厌色。",
+      "dialogue": [],
+      "visual": "Close two-person composition in the same study, with 费祎 on the left and 来敏 on the right. More blank sealed dispatch packets with feather markers now occupy the foreground side table, indicating repeated urgent arrivals without depicting messengers. The Go position has advanced naturally. 费祎 remains attentive to the game, neither impatient nor distracted; 来敏 quietly observes his expression. Keep the board and dispatch table separate. Reuse both existing character assets exactly, preserving faces, hairstyles, costumes and accessories. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "费祎",
+        "来敏"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "对局之后，来敏才道出本意。",
+      "dialogue": [
+        {
+          "speaker": "来敏",
+          "line": "方才求弈，不过想试试您临事的气度。"
+        }
+      ],
+      "visual": "Medium two-person view after the game in the established study. 来敏 on the right draws his hands back from the table and addresses 费祎 with a candid, approving expression. 费祎 on the left listens quietly, hands relaxed beside the board. Leave the final game result visually ambiguous, with no victory gesture. Blank dispatch packets remain on the separate side table. Only these two characters appear. Reuse both existing character assets exactly without changing faces, hairstyles, costumes or accessories. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "费祎",
+        "来敏"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-01",
+      "caption": "一局所见，是临事不乱。",
+      "dialogue": [
+        {
+          "speaker": "来敏",
+          "line": "君信可人，必能办贼者也。"
+        }
+      ],
+      "visual": "Wide concluding view in the same established courtyard. 来敏 stands beneath the portico offering a respectful farewell while 费祎 returns the courtesy beside the prepared travel bundles, poised to depart. Their restrained gestures convey confidence rather than celebration. No battle, enemy, servants, riders or additional figures are visible. Reuse both existing character assets exactly, preserving faces, hairstyles, costumes and accessories. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "费祎",
+        "来敏"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, and even lighting throughout. Reuse the existing 费祎 and 来敏 character assets exactly; do not redesign faces or change costumes, hairstyles, weapons or accessories. Depict at most two people in any panel and no anonymous background figures, disembodied extra hands or human silhouettes. Use only the two established environments. Both standalone scene concepts must remain completely uninhabited. Keep the Go table, sitting positions and dispatch table spatially consistent. Go boards may show an incised playing grid but no coordinate labels. All dispatch surfaces and seals must be blank, without writing, stamped symbols or decorative lettering. Feather markers indicate urgent dispatches without adding messengers. Render every panel as one continuous image; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+  "notes": "史料骨架为北征前来敏求弈、羽檄交驰而费祎留意对戏且无厌色、来敏说明试意并称其能办贼。前庭辞别、入室落座、文书在侧案逐渐增多及简短邀弈对白，均为连环画所需的文学化调度，不视为史料原句；末格来敏对白采用本事所载称许语。不虚构棋局胜负，不将镇定写成怠于军务，也不以战场胜利来补写本事。两名人物均复用现有资产，无新增角色。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q06",
+  "episode": 10,
+  "story_bank_no": 60,
+  "_generation": {
+    "written_at": "2026-11-12T12:10:36+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 9759,
+      "completion_tokens": 3011,
+      "total_tokens": 12770,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 9756,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 264,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "24766a523853e6cfe343fdf2378e755390f39c42748dc849803a4dc7ff758caa",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

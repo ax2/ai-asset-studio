@@ -1,0 +1,221 @@
+{
+  "id": "comic-sanguo-tales-q04-e05-tale-035",
+  "title": "蒋琬容人不答",
+  "subtitle": "不以沉默为傲慢，不求违心的附和",
+  "story_source": "《三国志》卷四十四·蜀书·蒋琬传。原文摘录：“人心不同，各如其面；面从后言，古人之所诫也。”本事记蒋琬与杨戏交谈，杨戏有时不作应答，有人因此指责杨戏傲慢，蒋琬却为其解释、维护。",
+  "why_not_in_romance": "【演义归属：演义未载】通行毛本虽写蒋琬继掌蜀政，未载他替沉默不答的杨戏解释、维护的细节。本集依据《三国志·蒋琬传》，不是《三国演义》中蒋琬相关情节的改写。",
+  "synopsis": "蒋琬与杨戏谈话，杨戏有时沉默不答。有人认为杨戏怠慢上官，蒋琬却说人心各不相同：杨戏不愿违心附和，也不愿当面彰显他的不是，所以选择沉默。比起当面顺从、背后议论，蒋琬更能容纳这种不答。",
+  "characters": [
+    {
+      "name": "蒋琬",
+      "slug": "jiang-wan",
+      "existing": false,
+      "role": "蜀汉重臣，宽容杨戏沉默不答的谈话者",
+      "profile": {
+        "age": "约五十岁，属视觉设定，不据此限定事件年份",
+        "gender": "男",
+        "role": "蜀汉重臣，字公琰",
+        "era": "三国时期，蜀汉",
+        "face": "长方脸，额头开阔，颧骨平缓，短须整齐，面容沉静",
+        "eyes": "深褐色眼睛，目光平和而专注",
+        "skin": "自然浅麦色，眼角有细纹",
+        "build": "中等偏高，身形稳健，肩背端正",
+        "hair": "黑发夹少量灰丝，束髻，固定戴朴素黑色布冠",
+        "marks": "下颌短须略含灰色，无伤疤，无夸张面部标记",
+        "outfit": "固定穿深褐青色素绢交领宽袖长袍，米白内领，墨黑窄缘，深褐素革带，深灰下裳与黑色布履；六格不换装",
+        "accessories": "仅用朴素束发簪与素革带，无华丽佩饰",
+        "weapon": "无，不佩剑，不持兵器",
+        "palette": "深褐青、米白、墨黑、深褐、深灰、浅麦色",
+        "temperament": "宽厚沉着，能够容纳异议，不以威势迫人附和",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "no text, no letters, no captions, no watermark, no panel borders, no split lines, no ornate crown, no armor, no weapon, no costume changes, no hairstyle changes"
+      },
+      "pose": "Full-body standing character reference, relaxed upright posture, one hand resting inside the opposite sleeve, a calm attentive expression, plain neutral background; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "tags": [
+        "三国",
+        "蜀汉",
+        "蒋琬",
+        "宽厚",
+        "文臣"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "杨戏",
+      "slug": "yang-xi",
+      "existing": false,
+      "role": "蜀汉官员，与蒋琬谈话时有时不作应答",
+      "profile": {
+        "age": "约三十五岁，属视觉设定，不据此限定事件年份",
+        "gender": "男",
+        "role": "蜀汉官员，字文然",
+        "era": "三国时期，蜀汉",
+        "face": "清瘦长脸，鼻梁端直，唇线清晰，留短髭与少量颏须",
+        "eyes": "深褐色眼睛，目光内敛，沉思时略微垂目",
+        "skin": "自然浅麦色，比蒋琬略浅",
+        "build": "中等身高，体形偏瘦，坐姿端正",
+        "hair": "黑发整齐束髻，固定戴低矮深灰布帻",
+        "marks": "眉间有轻微思索纹，无伤疤，无夸张面部标记",
+        "outfit": "固定穿灰米色素麻交领宽袖长袍，灰白内领，灰褐窄布腰带，炭灰长裤与深褐布履；六格不换装",
+        "accessories": "朴素木簪，无玉佩，无华丽饰物",
+        "weapon": "无，不佩剑，不持兵器",
+        "palette": "灰米、灰白、灰褐、炭灰、深褐、墨黑",
+        "temperament": "内敛持重，不愿违心迎合；沉默并非轻蔑",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "no text, no letters, no captions, no watermark, no panel borders, no split lines, no arrogant sneer, no armor, no weapon, no costume changes, no hairstyle changes"
+      },
+      "pose": "Full-body standing character reference, hands loosely folded before the waist, lips closed, thoughtful reserved expression, plain neutral background; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "tags": [
+        "三国",
+        "蜀汉",
+        "杨戏",
+        "沉默",
+        "文臣"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "官署谈事室",
+      "description": "无人环境概念图。蜀汉官署内的朴素谈事室，木柱、灰白墙面、木格窗，中央设低案，左右各置一张席垫。案上只有素陶水盂与无纹漆盘，不放带字文书。",
+      "prompt_extra": "Independent environment concept art of an empty Shu Han administrative conversation room, timber pillars, pale plaster walls, wooden lattice windows, a low wooden table between two woven sitting mats, a plain ceramic water bowl and an undecorated lacquer tray, soft even daylight, restrained historical pigment palette, highly detailed painterly digital illustration, fine wood and woven textures, wide establishing composition, no people, no human silhouettes, no writing materials, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "日间",
+      "mood": "清静、平实、适合从容交谈"
+    },
+    {
+      "id": "scene-02",
+      "name": "官署临庭廊下",
+      "description": "无人环境概念图。谈事室外的木构廊道，素木栏杆面对小庭，庭中只有青石地面、一株矮树与低矮灰墙。廊下留出宽阔空处，无匾额、题字与旗帜。",
+      "prompt_extra": "Independent environment concept art of an empty covered corridor in a Shu Han administrative compound, plain timber columns and railing, a small courtyard with gray stone paving and one modest tree, low gray plaster enclosure, softly balanced daylight, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, even lighting, deep but uncluttered perspective, no people, no human silhouettes, no plaques, no banners, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "日间",
+      "mood": "舒缓、开阔、平和"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "蒋琬与杨戏谈论事务。",
+      "dialogue": [
+        {
+          "speaker": "蒋琬",
+          "line": "此事，你怎么看？"
+        }
+      ],
+      "visual": "Wide eye-level view inside scene-01. Jiang Wan sits on the left mat beside the low table, speaking with a small open-handed gesture; Yang Xi sits opposite on the right, listening attentively. Show exactly these two men, both in their fixed character-reference clothing and hairstyles. Keep their positions clear and the atmosphere courteous. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "蒋琬",
+        "杨戏"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "谈话间，杨戏有时默然不答。",
+      "dialogue": [],
+      "visual": "Medium two-person view inside scene-01, maintaining the same seated positions. Yang Xi is the focal figure on the right, lips closed, eyes slightly lowered in thought, hands resting together above his knees, neither smirking nor turning away. Jiang Wan remains visible on the left, quietly waiting without anger. Preserve both fixed outfits and hairstyles. Highly detailed painterly illustration, restrained historical colors, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "蒋琬",
+        "杨戏"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "有人因此指责杨戏傲慢。",
+      "dialogue": [],
+      "visual": "Medium view of Jiang Wan alone beneath the timber corridor of scene-02. He has paused beside a column, head gently turned toward the edge of the image as if listening, eyebrows slightly attentive rather than offended, hands relaxed within his sleeves. The courtyard remains empty. Show no accuser, no extra person, no human shadow or reflection. Preserve his fixed clothing and hairstyle. Premium Three Kingdoms painterly concept art, even daylight; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "蒋琬"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "蒋琬却不肯轻易责怪他。",
+      "dialogue": [
+        {
+          "speaker": "蒋琬",
+          "line": "人心不同，各如其面。"
+        }
+      ],
+      "visual": "Close portrait of Jiang Wan in scene-02, softly visible timber and courtyard foliage behind him. He answers with composed eyes and a relaxed brow, a slight understanding expression without a broad smile. Keep his short graying beard, black cloth cap, dark brown-teal robe and off-white inner collar exactly consistent with his character reference. He is the only person shown. Detailed painterly skin and textile textures, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "蒋琬"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "他体谅杨戏不愿违心附和。",
+      "dialogue": [
+        {
+          "speaker": "蒋琬",
+          "line": "杨戏若附和，便违背本心；若直言，又怕显出我的不是，所以沉默罢了。"
+        }
+      ],
+      "visual": "Medium three-quarter view of Jiang Wan alone in scene-02, facing the same direction as before. He makes one restrained open-palm gesture near his waist while explaining calmly, shoulders relaxed and expression sincere. Frame him against the plain corridor railing and empty stone courtyard. No imagined flashbacks, no inset portraits, no additional figures. Preserve his fixed outfit and hairstyle. Historical pigment palette, highly detailed painterly illustration, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "蒋琬"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "蒋琬容其不答，不以为忤。",
+      "dialogue": [
+        {
+          "speaker": "蒋琬",
+          "line": "面从后言，古人之所诫也。"
+        }
+      ],
+      "visual": "Wide concluding view of scene-02 with Jiang Wan standing alone beside the plain wooden railing, hands gently folded again, posture settled and face peaceful after speaking. Let the open empty courtyard occupy generous space beside him, with soft daylight on the stone paving and the modest tree. Preserve his fixed clothing, cap and hairstyle. No other people or silhouettes. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "蒋琬"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture where applicable, and even lighting. This episode depicts civilian officials without armor or weapons. Match Jiang Wan and Yang Xi exactly to their character profiles in every appearance; never change clothing, hairstyle, headwear, beard, accessories or palette. Use only scene-01 and scene-02. Environment concept images must contain no people. Every panel may show at most two named characters; panels 3 through 6 show Jiang Wan alone, with no visible accuser, background extras, human reflections or silhouettes. No speech bubbles or graphic overlays inside the artwork; narration and dialogue are added only by HTML layout. All objects must be undecorated by writing, seals or emblems resembling script. Render each image as one continuous composition; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+  "notes": "史料骨架为杨戏时或不答、有人指其傲慢、蒋琬解释并维护，保留所给原文两句。第五格对白是对传文所述蒋琬解释的白话转述，不冒充逐字引文。第一格问话、人物动作、官署布景及转至廊下的空间衔接属于连环画文学化安排，史料未载确切地点与动作。指责者仅由旁白交代，不命名、不出镜、不另设角色；全篇只需新建蒋琬、杨戏两张人物卡。年龄与容貌为统一视觉资产的创作设定。结尾不增添杨戏认错、蒋琬训斥或惩处等史料没有的情节。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q04",
+  "episode": 5,
+  "story_bank_no": 35,
+  "_generation": {
+    "written_at": "2026-11-12T10:16:57+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 7883,
+      "completion_tokens": 3990,
+      "total_tokens": 11873,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 7880,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 443,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "aa3ba083ebc5dc3873290db2b838e34c8ab62f18f1047592dd531fbe33cfb1ed",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

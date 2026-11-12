@@ -1,0 +1,266 @@
+{
+  "id": "comic-sanguo-tales-q04-e08-tale-038",
+  "title": "毛玠选官尚俭",
+  "subtitle": "取士看操行，不让虚名开门",
+  "story_source": "《三国志·魏书·毛玠传》：其所举用，皆清正之士，虽于时有盛名而行不由本者，终莫得进。传中又载：是以天下之士莫不以廉节自励，虽贵宠之臣，舆服不敢过度。",
+  "why_not_in_romance": "【演义归属：演义未载】毛玠虽在通行毛本《三国演义》中出现，但小说未展开其主持选官、重视清正操行而不徇盛名，以及由此促使士人砥砺廉节、权贵减损车服排场的故事。本集依据《三国志·魏书·毛玠传》，不是对演义既有情节的改写。",
+  "synopsis": "毛玠与崔琰共同主持选官，核察操行，不因盛名放宽标准。清正者获得举用，名盛而失本者仍不得进。选官风向传开，士人争相砥砺廉节，权贵也收起华服、削减车饰。毛玠所重的不是一时装俭，而是立身清正。",
+  "characters": [
+    {
+      "name": "毛玠",
+      "slug": "mao-jie",
+      "existing": false,
+      "role": "曹操属官，与崔琰共同主持选举，重视士人清正操行",
+      "profile": {
+        "age": "约四十五岁",
+        "gender": "男",
+        "role": "汉末曹操属官，参与典选官吏",
+        "era": "东汉末年",
+        "face": "长方脸，额头宽平，颧骨清晰，下颌收束，留修整齐整的短须",
+        "eyes": "深褐色眼睛，目光沉静审慎，不怒自威",
+        "skin": "自然浅麦色，略有岁月纹理",
+        "build": "中等身量，体形清瘦，坐立端直",
+        "hair": "黑发夹少量灰丝，束成整齐发髻，戴朴素黑色布帻",
+        "marks": "眉间浅纹，无伤疤，无夸张面部标记",
+        "outfit": "固定穿灰褐色素麻交领宽袖长袍，米白内领，深褐窄布腰带，深灰下裳与黑色布履；衣料洗旧而整洁，六格不换装",
+        "accessories": "仅配朴素布帻与布腰带，不佩玉饰，不悬装饰性印绶",
+        "weapon": "无",
+        "palette": "灰褐、米白、深褐、深灰、墨黑、浅麦色",
+        "temperament": "清正持重，判断严谨，不徇声名，言辞简洁",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "No luxurious embroidery, no armor, no cloak, no weapon, no hairstyle changes, no costume changes, no modern objects, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body standing reference pose, upright and composed, one hand lightly holding a closed undecorated bamboo dossier at waist height, the other resting naturally inside the sleeve; keep the face and complete fixed costume clearly visible.",
+      "tags": [
+        "三国",
+        "汉末",
+        "毛玠",
+        "选官",
+        "清正"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "崔琰",
+      "slug": "cui-yan",
+      "existing": true,
+      "role": "与毛玠共同主持选举的曹操属官，复用系列既有角色立绘",
+      "pose": "Reuse the established Cui Yan character asset exactly; seated upright beside a low administrative desk, calmly presenting a closed bamboo dossier with both hands.",
+      "tags": [
+        "三国",
+        "汉末",
+        "崔琰",
+        "既有角色",
+        "典选"
+      ],
+      "profile": {
+        "age": "约五十岁",
+        "gender": "男",
+        "role": "汉末名士，曹操属官，本集代坐受见",
+        "era": "汉末",
+        "face": "面形端长，鼻梁挺直，轮廓清正，长须整齐",
+        "eyes": "眉目疏朗，目光清明而庄重",
+        "skin": "自然浅麦色，面部有轻微年龄纹理",
+        "build": "身材修长，肩背端正，坐立均有仪度",
+        "hair": "黑发略杂灰丝，束髻覆以素黑帻，长须自然垂落",
+        "marks": "无显著疤痕，以端正容仪和整齐长须作为辨识特征",
+        "outfit": "固定穿深黛蓝交领宽袖长袍，米白中衣，墨黑窄缘，深褐革带，深灰下裳与黑色布履；六格不换装",
+        "accessories": "素黑帻与一枚无纹浅玉佩，不戴冕旒，不用帝王专属饰物",
+        "weapon": "无",
+        "palette": "深黛蓝、米白、墨黑、深褐、浅玉白",
+        "temperament": "雅正沉静，举止从容，代坐时端肃克制",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不使用明清官服、补子、龙袍或帝王冕旒；不更换发式和服装；不添加兵器"
+      },
+      "character_id": "char-20261111-154629-37baa9"
+    },
+    {
+      "name": "权贵代表",
+      "slug": "quan-gui-dai-biao",
+      "existing": false,
+      "role": "体现贵宠之臣减损车服排场的无名合成人物，不对应具体史实人物",
+      "profile": {
+        "age": "约四十岁",
+        "gender": "男",
+        "role": "汉末受宠显贵的单人代表",
+        "era": "东汉末年",
+        "face": "略圆的方脸，面颊丰润，修整齐齐的短髭与小颌须",
+        "eyes": "深褐色眼睛，起初若有所思，随后神情收敛",
+        "skin": "自然浅米色",
+        "build": "中等身高，体态略丰，动作稳缓",
+        "hair": "黑发整齐束髻，戴低矮黑色布冠，六格保持不变",
+        "marks": "无伤疤，无显著胎记",
+        "outfit": "固定穿栗褐色素绢交领宽袖长袍，米灰内领，深褐素革带，炭灰下裳与黑褐布履；面料细密但无金绣，出场各格不换装",
+        "accessories": "仅有素革带与布冠；另置于箱中的华服及车上饰物属于场景道具，不是随身固定服饰",
+        "weapon": "无",
+        "palette": "栗褐、米灰、深褐、炭灰、墨黑、浅米色",
+        "temperament": "在选官风气影响下收敛排场，重视体面而愿意自省",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "No imperial crown, no dragon robes, no armor, no weapon, no costume changes, no hairstyle changes, no servants, no crowd, no modern objects, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body standing reference pose, slightly inclined head and a restrained thoughtful expression, hands held naturally in front of the waist; show the complete fixed plain silk costume.",
+      "tags": [
+        "三国",
+        "汉末",
+        "无名代表",
+        "权贵",
+        "减损车服"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "典选官署",
+      "description": "不含人物的汉末官署内堂。夯土墙、深色木柱、素木屏风与竹帘围成安静空间，中央设两张低案和席垫，案上陈放闭合简牍、无纹木匣与素陶水器；所有可见物件均无文字及印记。",
+      "prompt_extra": "Standalone empty environment concept art of a late Eastern Han personnel-selection office, rammed-earth walls, dark timber columns, plain wooden screen, bamboo blinds, two low desks and woven mats, closed bamboo dossiers with blank outward surfaces, undecorated wooden document boxes and a plain ceramic water vessel, soft daylight from the side, balanced spacious composition, no people, no human silhouettes, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "白日",
+      "mood": "肃静、清简、审慎"
+    },
+    {
+      "id": "scene-02",
+      "name": "权贵宅院车棚",
+      "description": "不含人物的汉末宅院。灰瓦木廊与夯土地面围出车棚，一辆未套牲畜的木制车舆停在廊旁，车上挂可拆卸的素色绢帷与无纹铜饰；廊下有开启的衣箱、折叠华服与素木收纳匣。无匾额、无题字、无印记。",
+      "prompt_extra": "Standalone empty environment concept art of a late Eastern Han elite residence courtyard and carriage shelter, gray roof tiles, timber veranda, compacted-earth ground, one stationary wooden carriage with no horse and no driver, detachable muted silk drapery and plain bronze fittings, an open clothing chest with folded patterned silk garments under the veranda, an undecorated wooden storage box, clear gentle daylight, coherent courtyard layout, no people, no human silhouettes, no animals, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine bronze and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "白日",
+      "mood": "由华饰转向克制"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "毛玠与崔琰典选，先问操行。",
+      "dialogue": [
+        {
+          "speaker": "毛玠",
+          "line": "举用之人，当以清正为本。"
+        }
+      ],
+      "visual": "Wide establishing view inside scene-01. Mao Jie and Cui Yan sit upright at adjacent low desks, the only two people present. Mao Jie gestures calmly toward several closed bamboo dossiers while Cui Yan listens attentively. Reuse Cui Yan's established appearance and exact fixed costume without redesign; use Mao Jie's specified character profile. Emphasize sober administrative work and plain furnishings. All dossier surfaces remain blank or concealed, with no seals. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "毛玠",
+        "崔琰"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "纵有盛名，失其本也不得进。",
+      "dialogue": [
+        {
+          "speaker": "崔琰",
+          "line": "此人声名虽盛，操行却不足取。"
+        },
+        {
+          "speaker": "毛玠",
+          "line": "不可因名而进。"
+        }
+      ],
+      "visual": "Medium two-person view in scene-01. Cui Yan holds a closed bamboo dossier slightly above the desk as if reporting an assessment. Mao Jie makes a small firm refusing gesture and slides an undecorated document tray away from the selection area. His expression is measured rather than angry. Only Mao Jie and Cui Yan appear; no candidate, attendants, portraits or background figures. Preserve both established fixed costumes and hairstyles. Keep every document surface blank or turned away. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "毛玠",
+        "崔琰"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-01",
+      "caption": "清正之士，才入举用之列。",
+      "dialogue": [
+        {
+          "speaker": "毛玠",
+          "line": "此人操守清正，可举。"
+        }
+      ],
+      "visual": "Medium view in scene-01, continuing the same desk arrangement. Mao Jie deliberately places a different closed bamboo dossier into the plain wooden selection box at the center of the desk. Cui Yan gives a restrained approving nod. The accepted dossier has no decorative distinction from the rejected one, emphasizing moral assessment rather than wealth or packaging. Exactly two people, Mao Jie and Cui Yan, both matching their fixed assets. No writing tools in active use, no readable or implied written marks, no seals. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "毛玠",
+        "崔琰"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "士人争砺廉节，权贵亦知收敛。",
+      "dialogue": [],
+      "visual": "Medium view beneath the veranda of scene-02. The unnamed elite representative is the only person present. Wearing his unchanged plain chestnut-brown silk robe, he carefully folds an unused ornate silk garment and places it deep inside the open clothing chest. The ornate garment is a separate stored prop and is never worn. His thoughtful expression suggests restraint rather than fear. The parked carriage remains visible in the courtyard background with its detachable silk drapery still attached. No servants, no horses, no background figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "权贵代表"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "车服减损，排场不敢逾度。",
+      "dialogue": [
+        {
+          "speaker": "权贵代表",
+          "line": "这些车饰，也收起来。"
+        }
+      ],
+      "visual": "Wide view of the same courtyard in scene-02. The unnamed elite representative, alone and in exactly the same costume and hairstyle, personally unhooks the last loose ornamental silk drape from the stationary carriage. Several plain bronze ornaments and previously removed fabric folds rest in the open wooden storage box nearby. The carriage structure remains intact and visibly simpler, with its essential canopy retained. The clothing chest under the veranda is now closed. No servants, no driver, no horses, no other people. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine bronze and textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "权贵代表"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-01",
+      "caption": "不徇虚名，清正遂成风尚。",
+      "dialogue": [
+        {
+          "speaker": "毛玠",
+          "line": "取士所重，终是操行。"
+        }
+      ],
+      "visual": "Medium concluding view in scene-01. Mao Jie and Cui Yan continue their calm personnel assessment at the same plain desks. The wooden selection box containing closed bamboo dossiers sits in the foreground. Mao Jie looks composed and resolute, while Cui Yan turns his attention toward the next closed dossier. Their unchanged clothing, steady postures and orderly workspace echo the opening composition. Exactly two people, no additional figures, no visible writing or seals. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "毛玠",
+        "崔琰"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture where applicable, and even lighting. Keep architecture, furniture and props grounded in the late Eastern Han period. Reuse the existing Cui Yan asset exactly, without changing his face, costume, hairstyle or accessories. Keep Mao Jie and the unnamed elite representative consistent with their new profiles in every appearance; never change anyone's costume, hairstyle or weapon. Use only the two defined environments. Show no more than two named characters in any panel and no unlisted people, crowds, servants, human silhouettes or portraits. Environment concept images must be entirely unpopulated. Keep bamboo dossiers closed, blank-facing or turned away; omit all seals, plaques, labels, calligraphy and decorative glyphs. Stored ornate clothing is a prop, never a costume change. Narration and dialogue exist only in JSON fields for later HTML overlay, never inside generated artwork. Render every panel as a single continuous image, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为毛玠与崔琰共同典选、举用清正之士、不进盛名而失本者，以及士人自励廉节、贵宠之臣车服不敢过度。递送简牍、分置荐举材料、对白及权贵收衣卸饰的具体动作均为文学化扩写，不是史书记载的逐次事件。权贵代表为无名合成人物，不指认为某位历史人物，也不设定为前文被否决的候选人。第三格以荐举材料表现清正者获用，避免额外增加人物。清俭是操行风气的外在表现，不将衣着朴素等同于品德合格。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q04",
+  "episode": 8,
+  "story_bank_no": 38,
+  "_generation": {
+    "written_at": "2026-11-12T10:18:29+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 7882,
+      "completion_tokens": 4497,
+      "total_tokens": 12379,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 7879,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 445,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "e062cb9e8afed488bbd6b98deaaea8b0d4d86afc7217e9bdb1a475274029e42a",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

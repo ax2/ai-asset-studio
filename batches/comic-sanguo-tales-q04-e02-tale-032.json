@@ -1,0 +1,241 @@
+{
+  "id": "comic-sanguo-tales-q04-e02-tale-032",
+  "title": "王平听史",
+  "subtitle": "识字虽少，听史明理，口授成章",
+  "story_source": "《三国志》卷四十三·蜀书·王平传：“平生所识不过十字，而口授作书，皆有意理。使人读《史》《汉》诸传，听之，备知其大义，往往论说不失其指。”",
+  "why_not_in_romance": "通行毛本虽写王平从军及守街亭等事，未载他请人读史、口授文书的生活细节。【演义归属：演义未载】",
+  "synopsis": "王平识字极少，却不因此疏远学问。他请书佐朗读《史记》《汉书》中的人物传记，凝神听取，并能说出其中大义。处理文书时，他又将事情口授给书佐，层次清楚，意思明白。识字的局限，并未妨碍他求知与明理。",
+  "characters": [
+    {
+      "name": "王平",
+      "slug": "wang-ping",
+      "existing": false,
+      "role": "蜀汉将领，本集听史并口授文书者",
+      "profile": {
+        "age": "约四十余岁，表现为成熟将领，不限定具体年份",
+        "gender": "男",
+        "role": "蜀汉将领王平，字子均",
+        "era": "三国时期，蜀汉",
+        "face": "方长脸，颧骨清晰，下颌坚实，短髭与整齐短须",
+        "eyes": "深褐色眼睛，目光沉静专注",
+        "skin": "日晒形成的暖麦色肤色",
+        "build": "身形结实，肩背宽厚，姿态端正",
+        "hair": "黑发束为紧整发髻，以深褐布巾固定，全篇不变",
+        "marks": "眉间有浅纹，无夸张伤疤或纹身",
+        "outfit": "固定穿暗赭褐色交领窄袖及膝长袍，米灰内领，深褐素革腰带，炭灰长裤，黑褐布履；全篇不披甲、不加披风、不换装",
+        "accessories": "腰侧一只朴素深褐小囊，无华丽金玉饰物",
+        "weapon": "本集不携武器，所有画面保持一致",
+        "palette": "暗赭褐、米灰、深褐、炭灰、黑褐、暖麦色",
+        "temperament": "严谨沉稳，坦然承认不足，听讲专注，论事有条理",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "no text, no letters, no captions, no watermark, no panel borders, no split lines; no modern objects, no ornate crown, no costume changes, no hairstyle changes, no weapons"
+      },
+      "pose": "Full-length standing character reference, hands calmly folded before the waist, upright shoulders and an attentive expression, wearing the fixed unarmoured outfit; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "tags": [
+        "三国",
+        "蜀汉",
+        "王平",
+        "听史",
+        "新建角色"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "书佐",
+      "slug": "shu-zuo",
+      "existing": false,
+      "role": "为王平读史、记录口授的无名辅助人物",
+      "profile": {
+        "age": "约二十五至三十五岁",
+        "gender": "男",
+        "role": "蜀汉军府无名书佐，兼任朗读与执笔者",
+        "era": "三国时期，蜀汉",
+        "face": "清瘦椭圆脸，鼻梁平直，薄唇，面部无须",
+        "eyes": "深褐色眼睛，神情细致恭谨",
+        "skin": "浅麦色肤色",
+        "build": "中等身高，体态清瘦，动作克制",
+        "hair": "黑发束成小髻，包深灰布帻，全篇不变",
+        "marks": "面部无显著疤痕、纹身或特殊标记",
+        "outfit": "固定穿灰青色素麻交领窄袖长袍，米白内领，灰褐窄布腰带，深灰长裤，旧黑布履；衣料洁净朴素，全篇不换装",
+        "accessories": "工作时使用素面卷册、毛笔与砚，器物均无可见文字或印章",
+        "weapon": "无武器",
+        "palette": "灰青、米白、灰褐、深灰、墨黑、浅麦色",
+        "temperament": "耐心认真，朗读清楚，记录谨慎，不以识字多少轻视他人",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "no text, no letters, no captions, no watermark, no panel borders, no split lines; no modern stationery, no spectacles, no costume changes, no hairstyle changes, no weapons"
+      },
+      "pose": "Full-length standing character reference, holding a closed plain scroll at waist height with both hands, respectful and relaxed, wearing the fixed clerk outfit; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "tags": [
+        "三国",
+        "蜀汉",
+        "书佐",
+        "无名人物",
+        "新建角色"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "军府听史小室",
+      "description": "无人环境概念图。朴素木构小室，格窗透入柔和日光，中央低案与两张席垫相对，墙边木架放置无题签卷册，案上陈设素陶水盏。所有书卷仅露素面封背。",
+      "prompt_extra": "Standalone empty environment concept art of a modest Shu Han military residence reading room, timber posts, pale plaster walls, soft daylight through a wooden lattice window, one low wooden table and two woven floor mats facing each other, plain closed scrolls on a small shelf, an unmarked ceramic cup, all scroll exteriors blank, no people, no human silhouettes, no portraits. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "白日",
+      "mood": "安静、专注、朴实"
+    },
+    {
+      "id": "scene-02",
+      "name": "军府文书房",
+      "description": "无人环境概念图。木构文书房内，一张宽低案配两张席垫，侧架整齐摆放素面卷束，案上有砚、笔架及背面朝上的纸卷。侧窗采光均匀，无匾额、题签、印章或人物。",
+      "prompt_extra": "Standalone empty environment concept art of a Shu Han military administrative room, a broad low writing desk with two woven floor mats, orderly bundles of plain scrolls on a side rack, a dark inkstone and bamboo brush rest, a paper roll with its blank reverse facing the viewer, balanced daylight from a side window, restrained wood and earth pigments, no people, no human silhouettes, no seals or inscribed plaques. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "白日",
+      "mood": "整肃、清明、有条不紊"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "王平平生所识，不过十字。",
+      "dialogue": [
+        {
+          "speaker": "王平",
+          "line": "我识字少，劳你读给我听。"
+        }
+      ],
+      "visual": "Medium two-person view in scene-01. Wang Ping sits upright on the left floor mat, calmly gesturing toward a closed plain scroll on the low table; the clerk sits opposite and listens respectfully. Wang Ping is candid and composed, never embarrassed or caricatured. Match both character profiles exactly, including fixed clothing and hair. Show only blank scroll exteriors. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "王平",
+        "书佐"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "他常请人朗读史汉诸传。",
+      "dialogue": [
+        {
+          "speaker": "王平",
+          "line": "今日再听一篇人物传记。"
+        },
+        {
+          "speaker": "书佐",
+          "line": "好，我慢慢读。"
+        }
+      ],
+      "visual": "Medium side view in scene-01. The clerk has lifted and opened a plain scroll and begins reading aloud, with the written inner surface facing only himself and completely hidden from the camera. Wang Ping leans forward slightly, hands resting on his knees, listening closely. Keep the same low table, window, clothes, hairstyles and accessories. Only two people. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "王平",
+        "书佐"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-01",
+      "caption": "听到关键处，他凝神细思。",
+      "dialogue": [],
+      "visual": "Close view of Wang Ping alone in scene-01, his thoughtful eyes directed toward the off-camera reader, brow gently drawn in concentration, mouth relaxed, one hand resting still on his knee. Soft lattice-window light reveals his short beard and the coarse texture of his unchanged dark ochre-brown robe. No imagined historical figures, inset scenes or visible writing. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "王平"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-01",
+      "caption": "论说史事，也能切中大义。",
+      "dialogue": [
+        {
+          "speaker": "王平",
+          "line": "听这一生行事，须看成败的缘由。"
+        },
+        {
+          "speaker": "书佐",
+          "line": "您说到了要处。"
+        }
+      ],
+      "visual": "Medium two-person view in scene-01. Wang Ping explains his understanding with a small deliberate open-hand gesture, expression assured yet modest. Across the low table the clerk lowers the scroll and listens with a slight respectful nod. Keep the scroll interior hidden and all visible surfaces unmarked. Both men retain their exact established appearances and outfits. No additional figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "王平",
+        "书佐"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "办理文书，他口授，书佐执笔。",
+      "dialogue": [
+        {
+          "speaker": "王平",
+          "line": "先说所为何事，再将缘由说明。"
+        }
+      ],
+      "visual": "Medium oblique view in scene-02. Wang Ping sits at the left side of the broad low desk, speaking steadily and marking the order of his points with a restrained hand gesture. The clerk sits at the right holding a brush vertically, recording the dictation on a paper surface fully concealed behind the raised near edge of the desk. No strokes or written marks are visible anywhere. Preserve both fixed character designs, clothing and hairstyles. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "王平",
+        "书佐"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "识字虽少，口授文书皆有意理。",
+      "dialogue": [
+        {
+          "speaker": "书佐",
+          "line": "已记妥，我再读一遍。"
+        },
+        {
+          "speaker": "王平",
+          "line": "好，听听可有遗漏。"
+        }
+      ],
+      "visual": "Medium concluding two-person view in scene-02. The clerk reads back from the completed document held toward himself, with only its blank reverse visible to the viewer. Wang Ping listens attentively across the orderly desk, hands settled and expression calm, continuing the same careful listening seen earlier. The brush rests beside the inkstone. Match the established costumes, hair and accessories exactly; no additional people. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "王平",
+        "书佐"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting. Maintain exact character-profile continuity across all six images: no changes to faces, age, clothing, hairstyle, accessories or weapon status. Use only the two supplied environments and no more than two visible people in any panel. Environment concept images must contain no people. All captions and dialogue are external HTML overlays, never painted into the images. Hide all written document surfaces through camera angle or physical occlusion; show only blank reverses and plain covers. No calligraphy, numerals, seals, labels, maps with marks, decorative pseudo-writing, modern objects, inset illustrations or extra background figures; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+  "notes": "史料骨架为王平识字极少、使人读《史》《汉》诸传、听懂大义并能论说，以及口授文书皆有意理。《史》《汉》分别指《史记》《汉书》。两处军府室内环境、同一书佐兼任朗读与记录、具体动作及全部对白均为生活化串联，不视为史料原话；无名书佐是对史料中辅助者的合并表现。未指定所读传记，亦未虚构具体军令、日期或史事评价。此事不与《三国演义》的街亭情节混写。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q04",
+  "episode": 2,
+  "story_bank_no": 32,
+  "_generation": {
+    "written_at": "2026-11-12T10:15:24+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 7863,
+      "completion_tokens": 3837,
+      "total_tokens": 11700,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 7860,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 176,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "6f126a17a1fde3999290a7ef80f7216c83435b81c89fd896ac107f4a6451ce40",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

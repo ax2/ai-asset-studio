@@ -1,0 +1,234 @@
+{
+  "id": "comic-sanguo-tales-q06-e07-tale-057",
+  "title": "胡质父子清慎",
+  "subtitle": "一匹归途绢，也须问清来处",
+  "story_source": "《三国志·魏书·胡质传》裴注引《晋阳秋》；原文：“临辞，质赐绢一匹，为道路粮。”相关记述还写胡威追问绢的来源，胡质说明是自己俸禄的余资。",
+  "why_not_in_romance": "通行一百二十回本未叙写胡威赴荆州省父、胡质赠绢及胡威追问绢帛来源的故事；史传注文中的这组清廉事迹不能因人物属于三国时期便视为演义情节。【演义归属：演义未载】",
+  "synopsis": "胡威赴荆州探望父亲胡质。临别时，胡质赠他一匹绢，供归途换取粮食。胡威没有立即收下，而是先问绢从何来。得知出自父亲俸禄余资，他才恭敬领受。父亲不取非分之财，儿子不受来历不明之物，清慎家风尽在一次送别之中。",
+  "characters": [
+    {
+      "name": "胡质",
+      "slug": "hu-zhi",
+      "existing": true,
+      "role": "曹魏荆州刺史，胡威之父",
+      "profile": {
+        "age": "中老年，约五十余岁；具体年龄为视觉设定",
+        "gender": "男",
+        "role": "曹魏荆州刺史，以清廉持家",
+        "era": "曹魏时期",
+        "face": "略长的方脸，额纹浅显，短须修整齐整，须中微有灰白",
+        "eyes": "深褐眼睛，目光温厚而端正",
+        "skin": "自然浅麦色，面部有轻微岁月纹理",
+        "build": "中等身高，体形清瘦，肩背端正",
+        "hair": "黑发夹少量灰白，束髻并戴朴素黑色进贤冠",
+        "marks": "无显著疤痕或纹身，固定短须形制",
+        "outfit": "青灰色素面交领宽袖长袍，米白内领，深褐素革带，深灰下裳，黑布履；无金绣、无兽纹，全篇不更换",
+        "accessories": "素黑进贤冠与无装饰革带，不佩华贵玉饰",
+        "weapon": "无武器",
+        "palette": "青灰、深灰、米白、深褐、墨黑",
+        "temperament": "清廉克己，待子温和，对追问坦然不怒",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "无甲胄，无帝王冠冕，无蟒纹，无奢华陈设配饰，无现代用品，不改变服装、发型与面部特征"
+      },
+      "pose": "Use the existing Hu Zhi character asset without redesign; stand composed with both hands gently presenting a single folded bolt of plain silk.",
+      "tags": [
+        "三国",
+        "曹魏",
+        "清廉",
+        "父亲",
+        "复用资产"
+      ],
+      "character_id": "char-20261111-094150-0a61a4"
+    },
+    {
+      "name": "胡威",
+      "slug": "hu-wei",
+      "existing": true,
+      "role": "胡质之子，赴荆州省父者",
+      "profile": {
+        "age": "青年，约二十余岁；具体年龄为视觉设定",
+        "gender": "男",
+        "role": "胡质之子，本集省父者",
+        "era": "曹魏时期",
+        "face": "清瘦长脸，颌线清楚，鼻梁端正，无须",
+        "eyes": "深褐眼睛，目光沉静认真",
+        "skin": "略带风尘的麦色皮肤",
+        "build": "中等身高，身形清瘦结实，适于长途步行",
+        "hair": "黑发束成整齐发髻，固定包覆深褐素布巾",
+        "marks": "无显著疤痕或纹身，面容不随分镜改变",
+        "outfit": "灰米色粗麻交领及膝袍，素白内领，深褐窄布带，灰褐长裤，旧黑布履；衣缘略磨损但无破洞，全篇不更换",
+        "accessories": "素麻小行囊与无装饰竹杖；旅途中使用朴素麻绳牵驴",
+        "weapon": "无武器；竹杖仅作步行支撑",
+        "palette": "灰米、深褐、灰褐、素白、墨黑",
+        "temperament": "孝敬而不盲从，谨慎清介，问绢时恭敬而坚定",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "无甲胄，无华贵首饰，无披风，无现代用品，不改变服装、发型与面部特征"
+      },
+      "pose": "Use the existing Hu Wei character asset without redesign; stand respectfully with hands held before the body, attentive rather than reaching eagerly for a gift.",
+      "tags": [
+        "三国",
+        "曹魏",
+        "省父",
+        "清慎",
+        "复用资产"
+      ],
+      "character_id": "char-20261111-094150-9e7d2c"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "荆州官舍门前",
+      "description": "无人物的独立环境概念图。朴素官舍的木门、灰瓦与夯土院墙，门内一段石板路连向屋舍，门外为平整土路。无匾额、旗帜或题字，可用于抵达与送别。",
+      "prompt_extra": "Standalone environment concept art of a modest Cao Wei official residence entrance in Jingzhou, plain wooden gate, gray roof tiles, rammed-earth walls, a short stone path inside and a quiet earth road outside, restrained vegetation, soft morning daylight and even lighting, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine material texture, empty environment, no people, no human silhouettes, no animals, no signs or plaques, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "朴素、安静、亲切"
+    },
+    {
+      "id": "scene-02",
+      "name": "官舍内堂",
+      "description": "无人物的独立环境概念图。素墙木柱、低案、席垫与木格窗构成简朴内堂，案面留空，无奢华陈设。窗光柔和，可供父子辞别及赠绢问答。",
+      "prompt_extra": "Standalone environment concept art of a modest Cao Wei residence hall, plain plaster walls, timber posts, a low wooden table with an empty surface, woven floor mats, wooden lattice window, restrained uncluttered furnishings, soft daylight and even lighting, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and woven textile texture, empty environment, no people, no human silhouettes, no portraits, no inscribed objects, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "清简、温厚、郑重"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "胡威远赴荆州，探望父亲。",
+      "dialogue": [
+        {
+          "speaker": "胡威",
+          "line": "父亲，孩儿来探望您了。"
+        }
+      ],
+      "visual": "Wide establishing view using scene-01. Hu Wei arrives from the earth road and respectfully greets Hu Zhi at the modest wooden entrance. Show only these two people, with quiet space around them and the unadorned residence clearly visible. Use both existing character assets exactly, with unchanged faces, hairstyles and costumes. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "胡质",
+        "胡威"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-02",
+      "caption": "相聚数日，转眼便要辞归。",
+      "dialogue": [
+        {
+          "speaker": "胡威",
+          "line": "孩儿就此辞归，请父亲保重。"
+        }
+      ],
+      "visual": "Medium view using scene-02. Hu Wei stands before Hu Zhi and makes a respectful farewell bow with clasped hands. Hu Zhi faces him with restrained paternal warmth. Keep the low table empty and the room austere. Only two people. Reuse the exact existing character appearances and unchanged costumes and hairstyles. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "胡质",
+        "胡威"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "胡质取出一匹绢，赠作归途粮资。",
+      "dialogue": [
+        {
+          "speaker": "胡质",
+          "line": "这匹绢带上，供你归途换粮。"
+        }
+      ],
+      "visual": "Medium view in scene-02. Hu Zhi holds out exactly one compact folded bolt of plain ivory silk with both hands, clearly a continuous length of fabric rather than multiple separate bundles. Hu Wei looks down at the offered silk without taking it yet. Only two people. Preserve both existing character assets, costumes and hairstyles exactly. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine silk and hemp texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "胡质",
+        "胡威"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "胡威未即领受，先问绢的来处。",
+      "dialogue": [
+        {
+          "speaker": "胡威",
+          "line": "父亲一向清廉，这匹绢从何而来？"
+        }
+      ],
+      "visual": "Close conversational view in scene-02, emphasizing Hu Wei's respectful but searching expression. His hands remain clasped before him rather than touching the gift. Hu Zhi is visible opposite him, still holding the same single folded silk bolt. The atmosphere is earnest, not accusatory. Exactly two people, unchanged existing faces, hairstyles and costumes. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "胡质",
+        "胡威"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "得知出自俸禄余资，胡威才拜受。",
+      "dialogue": [
+        {
+          "speaker": "胡质",
+          "line": "这是我俸禄的余资，留给你作路粮。"
+        },
+        {
+          "speaker": "胡威",
+          "line": "如此，孩儿谨受。"
+        }
+      ],
+      "visual": "Medium view in scene-02. Hu Zhi calmly explains while transferring the same single folded bolt of ivory silk into Hu Wei's two hands. Hu Wei bows his head slightly as he finally accepts it. Show one continuous gift transfer, not duplicated fabric bundles or repeated figures. Only two people. Maintain exact existing character designs, hairstyles and costumes. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "胡质",
+        "胡威"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-01",
+      "caption": "一匹绢送子，清慎亦相传。",
+      "dialogue": [],
+      "visual": "Wide closing view using the identical scene-01 entrance and road. Hu Wei walks away slowly along the earth road, carrying the same single folded ivory silk bolt securely against his torso and turning his head back toward his father. Hu Zhi remains by the plain gate, quietly watching him leave. Exactly two people, no attendants or crowds. Reuse the exact existing faces, hairstyles and costumes without additions or changes. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "胡质",
+        "胡威"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture where applicable, and even lighting. Reuse the existing Hu Zhi and Hu Wei character assets exactly; never redesign faces, hairstyles, costumes, accessories or weapons, and never add armour. Use only scene-01 and scene-02, preserving their architecture and layout. Each panel contains at most the two named characters, with no background people, human silhouettes or portraits. Keep the single plain ivory silk bolt visually consistent from its introduction through departure. Environment concept images must contain no people. Render each image as one uninterrupted composition. All narration and dialogue are external HTML overlays and must never appear inside the generated image. Omit calligraphy, plaques, seals, symbols resembling writing and decorated document surfaces. no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为胡威赴荆州省父、临辞获赠一匹绢作道路粮资、追问绢的来处，以及胡质说明出自俸禄余资。对白均为依据史意改写，不作为逐字史料引文。官舍空间、行礼动作、赠绢时的停顿与门前回望属于连环画的文学化调度，不冒充史书记载；不扩写其他清廉轶事，不增设第三人物。胡质、胡威均复用资产库既有角色。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q06",
+  "episode": 7,
+  "story_bank_no": 57,
+  "_generation": {
+    "written_at": "2026-11-12T12:09:32+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 9758,
+      "completion_tokens": 3506,
+      "total_tokens": 13264,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 9755,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 256,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "8be6df9f526148b35f005755685f821429c47dfbdaa2854333dadc31f05b337f",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

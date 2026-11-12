@@ -1,0 +1,218 @@
+{
+  "id": "comic-sanguo-tales-q04-e09-tale-039",
+  "title": "王烈赠布劝善",
+  "subtitle": "一端布帛，护住尚未泯灭的羞耻心",
+  "story_source": "《三国志·魏书·管宁传》，裴松之注引《先贤行状》。原文摘录：“刑戮是甘，乞不使王彦方知也。”故事记载盗牛者畏王烈知其过，王烈因其尚有羞耻之心，赠布劝善；后来守护路旁遗剑者，正是昔日盗牛之人。",
+  "why_not_in_romance": "【演义归属：演义未载】通行毛本《三国演义》未载王烈向盗牛者赠布、以羞耻心促其改过的故事。本集依据《三国志》裴注所引史料改编，并非《三国演义》情节。",
+  "synopsis": "盗牛者被牛主捉住，甘愿受罚，只求不要让王烈知道。王烈听说后，认为他尚知羞耻，仍能改过，便赠布劝善。后来有人守着路旁遗剑，等待失主；王烈访知，此人正是当年的盗牛者。",
+  "characters": [
+    {
+      "name": "王烈",
+      "slug": "wang-lie",
+      "existing": false,
+      "role": "东汉末年名士，字彦方，以德行感化乡里",
+      "profile": {
+        "age": "约五十岁，具体年龄为视觉设定",
+        "gender": "男",
+        "role": "乡里敬重的士人，赠布劝善者",
+        "era": "东汉末年",
+        "face": "清瘦长方脸，额头舒展，颧骨略显，短须整齐",
+        "eyes": "深褐色眼睛，目光沉静温厚",
+        "skin": "自然浅麦色，带适度风霜感",
+        "build": "中等身高，清瘦匀称，姿态端正",
+        "hair": "黑发夹少量灰白，束成固定发髻，戴深褐色素布帻",
+        "marks": "眼角有细纹，无伤疤、无华丽面饰",
+        "outfit": "固定穿浅褐灰色素麻交领宽袖长袍，米白内领，深褐窄布腰带，深灰下裳与黑褐布履；全篇不换装",
+        "accessories": "无玉佩、无印绶；赠人的米白色布匹属于情节道具",
+        "weapon": "无",
+        "palette": "浅褐灰、米白、深褐、深灰、黑褐",
+        "temperament": "温厚克制，善察人心，劝善而不羞辱他人",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "no text, no letters, no captions, no watermark, no panel borders, no split lines; no crown, no armor, no ornate jewelry, no modern objects, no costume or hairstyle changes"
+      },
+      "pose": "Full-body standing character reference, relaxed upright posture, one open hand gently extended in reassurance, the other resting near the waist, calm compassionate expression, plain neutral background; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "东汉末年",
+        "王烈",
+        "名士",
+        "赠布劝善"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "盗牛者",
+      "slug": "dao-niu-zhe",
+      "existing": false,
+      "role": "史料未载姓名的盗牛者，后来改过守护遗剑",
+      "profile": {
+        "age": "约三十岁，具体年龄为视觉设定",
+        "gender": "男",
+        "role": "由盗牛而知耻改过的乡人",
+        "era": "东汉末年",
+        "face": "略长的方脸，下颌结实，短而稀疏的胡须",
+        "eyes": "深褐色眼睛，初时躲闪，改过后目光安定",
+        "skin": "日晒麦褐色，手背粗糙",
+        "build": "中等身高，精瘦结实，具有劳作体态",
+        "hair": "黑发束小髻，用旧灰褐布巾固定，全篇保持相同发式",
+        "marks": "眉尾略下垂，无刺青、无显著伤疤",
+        "outfit": "固定穿暗土黄色粗麻交领窄袖及膝短袍，灰米内领，深褐旧布腰带，灰褐长裤与旧草履；衣缘磨损但无夸张破洞，全篇不换装",
+        "accessories": "无首饰；牛绳、受赠布匹和路旁遗剑均为场景道具",
+        "weapon": "无自有武器；第五格的带鞘长剑为他人遗失物，不佩带、不拔出",
+        "palette": "暗土黄、灰米、深褐、灰褐、草黄",
+        "temperament": "起初羞惭畏缩，受善意感召后谨慎守信",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "no text, no letters, no captions, no watermark, no panel borders, no split lines; no bandit mask, no armor, no sinister caricature, no modern objects, no costume or hairstyle changes"
+      },
+      "pose": "Full-body standing character reference, shoulders slightly drawn inward, hands held together near the abdomen, lowered but clearly visible face showing shame rather than menace, plain neutral background; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "东汉末年",
+        "无名乡人",
+        "知耻改过"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "乡间柳荫土路",
+      "description": "东汉乡间土路，路旁一株老柳，低矮夯土院墙、木栅栏与远处田畴构成固定环境。概念图为空景，不含人物、牲畜和情节道具。",
+      "prompt_extra": "Empty Eastern Han rural dirt lane, one old willow beside a low rammed-earth courtyard wall and a simple wooden fence, distant cultivated fields, soft even daylight, muted ochre and gray-green historical pigments, clear open foreground for later staging, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, no people, no animals, no loose story props; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "朴素安静，可承接羞惭与守信两种情绪"
+    },
+    {
+      "id": "scene-02",
+      "name": "王烈居所前庭",
+      "description": "朴素士人居所的前庭，夯土地面，木柱灰瓦，敞开的堂门内仅见素席与低案。概念图为空景，无人物、无布匹、无题字匾额。",
+      "prompt_extra": "Empty modest Eastern Han scholar's courtyard, packed-earth ground, plain timber pillars, gray roof tiles, open doorway revealing a reed mat and a low wooden table, restrained architecture without plaques, soft even daylight, warm gray-brown historical pigments, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, no people, no animals, no cloth gift; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "清简温厚，适合平等劝慰"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "乡里有人盗牛，被牛主捉住。",
+      "dialogue": [],
+      "visual": "Wide view of the established rural lane. Dao-niu-zhe stands beside a quiet brown ox near the wooden fence, an abandoned lead rope on the ground between them. He bows his head with tense shoulders, visibly ashamed after being caught. The owner and the capture remain outside the image; only one human is visible. Preserve his fixed dark ochre hemp outfit and cloth-bound topknot. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "盗牛者"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "他甘愿受罚，却怕王烈知晓。",
+      "dialogue": [
+        {
+          "speaker": "盗牛者",
+          "line": "刑戮是甘，乞不使王彦方知也。"
+        }
+      ],
+      "visual": "Close view of Dao-niu-zhe in the same rural lane, facing slightly toward an unseen listener outside the frame. His rough hands are clasped tightly at chest height, eyes lowered, lips parted in an earnest plea, shame more prominent than fear of punishment. Show only this one human, with the willow and earthen wall softly blurred behind him. Keep his face, hairstyle and clothing identical to his character reference. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "盗牛者"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "王烈听说，反而看见改过的希望。",
+      "dialogue": [
+        {
+          "speaker": "王烈",
+          "line": "他还知道羞耻，便有改过之心。"
+        }
+      ],
+      "visual": "Medium view of Wang Lie alone in his modest courtyard after hearing the incident. He stands beside a low wooden table holding a neatly folded bolt of plain ivory cloth. His thoughtful expression softens with understanding, and one hand rests lightly on the cloth as he decides to encourage the offender. No messenger or additional person appears. Preserve his fixed light brown-gray robe, dark brown cloth headwear and short graying beard. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "王烈"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "一端布帛，不是纵恶，而是劝善。",
+      "dialogue": [
+        {
+          "speaker": "王烈",
+          "line": "愿你记住今日的羞愧，从此向善。"
+        },
+        {
+          "speaker": "盗牛者",
+          "line": "我一定改过。"
+        }
+      ],
+      "visual": "Medium two-person scene in the same courtyard. Wang Lie gently offers the folded ivory cloth with both hands. Dao-niu-zhe receives it with both hands and a respectful bow, visibly moved and ashamed. Their hands and the modest cloth gift form the visual focus; Wang Lie is encouraging rather than commanding. Exactly two humans, neither kneeling nor armed. Keep both characters' established faces, hairstyles and outfits unchanged. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "王烈",
+        "盗牛者"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-01",
+      "caption": "后来，他守着路旁遗剑，等候失主。",
+      "dialogue": [],
+      "visual": "Wide view returning to the exact same willow-lined rural lane at a later time. Dao-niu-zhe sits patiently beside the old willow, watching the empty road for the owner of a lost sword. A plain sheathed Han-period sword lies clearly visible on the ground beside him, untouched and not worn at his waist. His hands rest openly on his knees, his posture steady and trustworthy. Only one human, no ox, no passerby. Preserve his original worn dark ochre clothing and identical hairstyle. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "盗牛者"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "王烈访知，守剑人正是昔日盗牛者。",
+      "dialogue": [],
+      "visual": "Medium closing portrait of Wang Lie alone in the established courtyard after learning the identity of the honest sword guardian. He stands quietly beside the same low table, now without the cloth gift, with a small restrained smile of relief and approval. His open relaxed hand and calm eyes convey trust fulfilled, not triumph. No messenger, imagined flashback, inset image or additional person. Keep his face, short graying beard, headwear and robe exactly consistent. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "王烈"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture where applicable, and even lighting. Depict modest Eastern Han rural material culture without fantasy ornament. Maintain exact character-reference continuity in face, age, hair, clothing, footwear and accessories. Use only the two supplied environments. Show at most two humans per panel and no background crowds. Environment concept images must contain no people or animals. Treat the ox, cloth and lost sheathed sword as story props, never as additional characters. The lost sword is never drawn or worn by Dao-niu-zhe. Keep all narration and dialogue exclusively in JSON fields for external HTML placement, never inside generated images. No plaques, banners, writing slips, engraved characters or seals; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为盗牛被获、请求不让王烈知晓、王烈因其知耻而赠布、后来此人守护遗剑。第二格对白保留所给原文，王彦方即王烈。史料中赠布由使者传送；为将人物控制在两名，第四格将传赠过程压缩为王烈与盗牛者直接交接，属于分镜改编，不作史实断言。其余对白、人物外貌与具体环境均为文学化设计。牛主、传话者与遗剑失主不入画；末格以旁白交代王烈访知结果，不另造会面情节。未表现或推断盗牛者是否免于处罚。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q04",
+  "episode": 9,
+  "story_bank_no": 39,
+  "_generation": {
+    "written_at": "2026-11-12T10:19:18+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 7870,
+      "completion_tokens": 4090,
+      "total_tokens": 11960,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 7867,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 427,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "fe273975208732200c264cf1f7fd4e46fb24101003f7ee60b931335265e0a692",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

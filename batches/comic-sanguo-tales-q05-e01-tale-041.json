@@ -1,0 +1,270 @@
+{
+  "id": "comic-sanguo-tales-q05-e01-tale-041",
+  "title": "杜夔校钟辨音",
+  "subtitle": "钟声有差，岂凭争辩定高低",
+  "story_source": "《三国志》卷二十九·魏书·方技传·杜夔传。原文：太祖使玉与夔各作声韵，仪较是非，然后知夔为精，而玉之妄。",
+  "why_not_in_romance": "【演义归属：演义未载】通行毛本120回未叙杜夔与铸钟工柴玉争论、由曹操命其比较声韵的故事。本集依据《三国志·杜夔传》，并非改写《三国演义》情节。",
+  "synopsis": "杜夔校验铜钟，认为音律不合，要求柴玉反复重铸。柴玉自负铸造本领，不肯服从，争执遂达曹操。曹操不凭口舌裁断，命二人各作声韵、比较是非，最终确认杜夔精于音律，柴玉所言不实。",
+  "characters": [
+    {
+      "name": "杜夔",
+      "slug": "du-kui",
+      "existing": true,
+      "role": "精于声律、负责校钟的汉末乐人",
+      "profile": {
+        "age": "约五十岁，视觉设定",
+        "gender": "男",
+        "role": "汉末乐人，精于声律与校钟",
+        "era": "东汉末年，曹操掌政时期",
+        "face": "清瘦长脸，额头较宽，颧骨略显，短须整齐，下颌留窄长须",
+        "eyes": "深褐眼，目光沉静专注，听音时微垂眼帘",
+        "skin": "浅麦色，眼角与额头有细纹",
+        "build": "中等身高，身形清瘦，站姿端正",
+        "hair": "黑发夹少量灰丝，束成发髻，以深灰素帻收束，全篇不变",
+        "marks": "右眉眉尾略向下垂，无伤疤，无夸张异相",
+        "outfit": "固定穿深青灰色素绢交领宽袖长袍，米白内领，墨灰窄缘，腰束深褐布带，下着深灰裤，足穿黑色布履；六格不换装",
+        "accessories": "仅用素木发簪，无玉佩、无金饰；校钟时可手持同一根短木槌",
+        "weapon": "无兵器；短木槌为校钟工具，不作武器",
+        "palette": "深青灰、米白、墨灰、深褐、木褐",
+        "temperament": "严谨持正，耐心辨音，不因工匠抗辩而失态",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "No modern clothing, no fantasy musical machinery, no imperial regalia, no costume changes, no hairstyle changes, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Reuse the existing Du Kui character asset unchanged; attentive listening pose with one hand held still beside a suspended bell.",
+      "tags": [
+        "三国",
+        "汉末",
+        "乐人",
+        "校钟",
+        "复用角色"
+      ],
+      "character_id": "char-20261111-223632-d99517"
+    },
+    {
+      "name": "柴玉",
+      "slug": "chai-yu",
+      "existing": true,
+      "role": "自负技艺、与杜夔争论的铸钟工匠",
+      "profile": {
+        "age": "约四十岁，视觉设定",
+        "gender": "男",
+        "role": "汉末铸钟工匠",
+        "era": "东汉末年，曹操掌政时期",
+        "face": "方脸，颌骨宽厚，鼻梁平直，唇上有短髭，下巴留短硬胡须",
+        "eyes": "深褐眼，浓眉，争辩时双眼睁大",
+        "skin": "暖褐色，面颊与手背有长期近炉劳作的粗糙质感",
+        "build": "中等身高，肩背厚实，前臂结实",
+        "hair": "黑发束紧髻，以土褐色布巾包束，全篇不变",
+        "marks": "双手有明显茧痕，无纹身，无戏剧性伤疤",
+        "outfit": "固定穿赭褐色粗麻交领窄袖及膝袍，灰米色内领，腰束深褐布带，外系暗褐色素面皮围裙，下着炭灰长裤与旧黑布履；六格不换装",
+        "accessories": "腰侧挂无字小皮工具袋，无首饰；演示时使用与杜夔相同的短木槌",
+        "weapon": "无兵器；工具袋与短木槌均为工匠用具",
+        "palette": "赭褐、灰米、暗褐、炭灰、铜褐",
+        "temperament": "自负手艺，性情倔强，面对实证时神色逐渐迟疑",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and leather texture, even lighting",
+        "negative": "No modern workwear, no goggles, no industrial machinery, no exaggerated barbarian styling, no costume changes, no hairstyle changes, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Reuse the existing Chai Yu character asset unchanged; stand beside a bell with a wooden striker, showing restrained defiance.",
+      "tags": [
+        "三国",
+        "汉末",
+        "铸钟工匠",
+        "声律之争",
+        "复用角色"
+      ],
+      "character_id": "char-20261111-223632-7b22c4"
+    },
+    {
+      "name": "曹操",
+      "slug": "cao-cao",
+      "existing": true,
+      "role": "命杜夔与柴玉比较声韵、裁定是非者",
+      "profile": {
+        "age": "五十岁上下的成熟男子",
+        "gender": "男",
+        "role": "东汉丞相 · 魏王 · 枭雄",
+        "era": "东汉末年三国时期",
+        "face": "清瘦而线条凌厉的脸型，颧骨微凸",
+        "eyes": "细眼长髯，目光沉鸷锐利",
+        "skin": "偏白的冷峻肤色",
+        "build": "身长七尺，中等精瘦，姿态矜持",
+        "hair": "黑发整齐束于玄玉冠下，颌下长须修整细致",
+        "marks": "细目长髯，眉间一道浅纹",
+        "outfit": "玄色蟒纹深衣，暗金四爪蟒纹满绣，交领缘饰朱红，外披黑貂大氅，貂毛根根分明，腰束玉带镶鎏金兽首",
+        "accessories": "玄玉冠、玉带、黑貂大氅、朱红印绶",
+        "weapon": "倚天剑，玄鞘嵌金，佩于左腰",
+        "palette": "玄黑、墨青、暗金、朱红、玉白",
+        "temperament": "沉鸷多疑、雄猜果决、不怒自威的枭雄气度",
+        "art_style": "premium Three Kingdoms historical-fantasy game character concept art, highly detailed painterly digital illustration, gold-thread dragon embroidery, dark fur texture, crisp material separation, muted historical pigments",
+        "negative": "photograph, 3D render, plastic, modern clothing, anime chibi, text, watermark, cropped body, extra characters, bright saturated colors, different outfit"
+      },
+      "pose": "Reuse the existing Cao Cao character asset unchanged; seated upright with one hand extended in a measured judging gesture.",
+      "tags": [
+        "三国",
+        "汉末",
+        "曹操",
+        "比较声韵",
+        "复用角色"
+      ],
+      "character_id": "char-20261110-144930-66b9cc"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "铸钟作坊",
+      "description": "无人环境概念图。汉末官营铸钟作坊，夯土地面、木梁屋架，侧置熔炉、陶范与修整工具；中央木架悬有待校铜钟，窗外日光与炉火形成温和冷暖对照。",
+      "prompt_extra": "Standalone empty environment concept art of a late Eastern Han bronze-bell foundry, rammed-earth floor, heavy timber beams, a side furnace with restrained embers, clay casting molds and bronze-working tools, an uninscribed suspended bronze bell on a sturdy timber rack, clear central working space, soft daylight balanced with subdued furnace warmth, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine material texture, even lighting; no people, no human silhouettes, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "白日",
+      "mood": "沉静中透着工事压力"
+    },
+    {
+      "id": "scene-02",
+      "name": "府中校音堂",
+      "description": "无人环境概念图。曹操府内用于比较声韵的厅堂，木柱、素墙与席地陈设朴素有序；侧前方设铜钟木架与木槌，后方置低案和主座，留出清晰的听音空间。",
+      "prompt_extra": "Standalone empty environment concept art of a late Eastern Han administrative residence hall arranged for comparing musical tones, timber columns, plain plaster walls, woven floor mats, a low desk and principal seat at the rear, a compact rack of uninscribed bronze bells and wooden strikers in the foreground, open acoustic space, balanced daylight through lattice windows, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture, even lighting; no people, no human silhouettes, no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "白日",
+      "mood": "肃静、公正、便于专注听辨"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "新钟初成，杜夔听出音律不合。",
+      "dialogue": [
+        {
+          "speaker": "杜夔",
+          "line": "此钟声律未合，还须重铸。"
+        }
+      ],
+      "visual": "Inside scene-01, exactly two characters, Du Kui and Chai Yu, using their existing character assets with unchanged faces, hair, clothing and equipment. A newly cast bronze bell hangs between them. Chai Yu has just lowered a wooden striker after sounding it; Du Kui listens intently and raises one restrained hand to indicate a fault. Show the bell clearly without inscriptions, foundry tools kept secondary. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and bronze texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "杜夔",
+        "柴玉"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "反复重铸，柴玉渐生不服。",
+      "dialogue": [
+        {
+          "speaker": "柴玉",
+          "line": "已经重铸多次，怎会仍然不合？"
+        },
+        {
+          "speaker": "杜夔",
+          "line": "声律未正，便不能算成。"
+        }
+      ],
+      "visual": "Inside the same scene-01 foundry, exactly two characters, Chai Yu and Du Kui, preserving their existing character assets unchanged. Chai Yu stands beside the bell rack with a tense brow and an open palm directed toward used clay mold fragments on the workbench. Du Kui remains composed and indicates the suspended bell rather than confronting the craftsman physically. The used molds suggest repeated casting attempts, with no additional workers or spectators. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and bronze texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "柴玉",
+        "杜夔"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "争执上达，曹操命比较声韵。",
+      "dialogue": [
+        {
+          "speaker": "曹操",
+          "line": "你二人各作声韵，比较是非。"
+        }
+      ],
+      "visual": "Inside scene-02, Cao Cao is the only visible person, seated at the principal low desk and making a measured outward gesture toward the bell rack in the foreground. Use his existing character asset exactly, without redesigning his face, hairstyle, ornate clothing, cloak or accessories. His expression is attentive and decisive rather than angry. Leave all other floor space empty; Du Kui and Chai Yu are entirely outside the frame. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and bronze texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "曹操"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "柴玉先试，仍坚持自己的判断。",
+      "dialogue": [
+        {
+          "speaker": "柴玉",
+          "line": "依我听来，此声并无差错。"
+        }
+      ],
+      "visual": "Inside scene-02, Chai Yu is the only visible person, using the existing character asset with unchanged face, hair, clothing and apron. He stands beside the same bronze-bell rack, holding a wooden striker just clear of a bell after a controlled strike, his free hand slightly raised as he explains his judgment with lingering confidence. Frame the bell and his concentrated expression together. The principal seat and all other people are outside the image. Do not visualize sound as written symbols or musical notation. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and bronze texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "柴玉"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "杜夔再辨，声韵相较见分明。",
+      "dialogue": [
+        {
+          "speaker": "杜夔",
+          "line": "请细听两声相较，差别正在此处。"
+        }
+      ],
+      "visual": "Inside the unchanged scene-02, Du Kui is the only visible person, reusing his existing character asset without changing face, hair, robe or accessories. He stands at the same bell rack, demonstrating a careful comparison between two neighboring bells with a wooden striker, pausing after a strike to listen closely. His posture is economical and assured, with his free hand indicating the bell being compared. Show the demonstration through gesture and attentive expression only, without invented measuring machines, visible sound waves or musical notation. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and bronze texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "杜夔"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "比较既明，曹操知杜夔精于音律。",
+      "dialogue": [
+        {
+          "speaker": "曹操",
+          "line": "如今可知，杜夔精于声律，柴玉所言不实。"
+        }
+      ],
+      "visual": "Inside scene-02, exactly two visible characters, Cao Cao and Du Kui, using their existing character assets with all established faces, hairstyles, clothing and accessories unchanged. Cao Cao sits at the low desk with a settled expression of recognition and gestures toward Du Kui. Du Kui stands respectfully beside the bronze-bell rack, holding the wooden striker lowered and receiving the judgment without triumphalism. Keep Chai Yu entirely outside the frame and include no attendants or background figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and bronze texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "曹操",
+        "杜夔"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting. Reuse the existing Du Kui, Chai Yu and Cao Cao character cards exactly; never redesign their faces, hairstyles, outfits, accessories or established weapons. Scene references are restricted to scene-01 and scene-02. Each panel may contain only its listed characters, with a maximum of two people and no background crowds, attendants, silhouettes or reflected figures. Both scene assets must remain independent, entirely unpopulated environment concept images. Keep bell shapes, rack construction and room layout consistent within each scene. Bells and objects must be uninscribed. Render each panel as a single uninterrupted illustration; narration and dialogue belong only in external HTML overlays. Avoid modern tools, electronic tuning devices, musical notation and visible written sound effects; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+  "notes": "史料骨架为杜夔认为钟律不合、要求柴玉反复重铸，柴玉不服，曹操命二人各作声韵并比较是非，最终确认杜夔精而柴玉妄。作坊与厅堂的具体陈设、人物对白、先后演示顺序及相邻铜钟对听动作均为便于六格叙事的文学化与视觉化安排；原文未详载比较声韵的具体操作，不将本集演示方式视为史实复原。三名人物均复用已有资产，不新增立绘或改造服饰。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q05",
+  "episode": 1,
+  "story_bank_no": 41,
+  "_generation": {
+    "written_at": "2026-11-12T11:11:44+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 9770,
+      "completion_tokens": 3178,
+      "total_tokens": 12948,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 9767,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 181,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "9a1b3938df78e6ea17824dc12ce006b4312389d081081ccf027638f0feb966b3",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

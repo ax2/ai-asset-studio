@@ -212,6 +212,23 @@ python tools/run_story_queue.py --all --workers 3 --attempts 3 --child-watchdog 
 
 **人工恢复流程**：若队列长时间无输出，`python tools/run_story_queue.py --status` 看状态；确认僵死后终止 `run_story_queue` / `generate_comic_series` / `generate_comic` 进程树，再用上面「中断后重启」命令重跑即可。已入库图片全部跳过。
 
+### 余额不足自动停止（熔断）与预算上限
+
+旧逻辑把 HTTP 402 / 429 当普通失败：`panel_asset` 会降级成纯文本生成继续出图，主循环接着画下一格，队列还要重试 3 次——没钱时反而最容易反复烧钱。现在改成**整条队列立即停**：
+
+- `studio/imaging.py` 识别 `402`、`insufficient_quota`、`quota exceeded`、「余额不足」等错误，写共享哨兵 `data/queue-halt.flag`，并抛出 `InsufficientBalanceError`（继承 `SystemExit`，属 `BaseException`）——所以**降级逻辑的 `except Exception` / `except (RuntimeError, ...)` 都吞不掉它**。
+- 每次付费调用前重查哨兵，同批其它 worker 也会立即停下。
+- 队列捕获 `INSUFFICIENT_BALANCE` 输出或哨兵后，在 `story-queue.json` 写 `halted` / `halt_reason` 并停止后续批次；`halted` 时 `--all` **拒绝启动**，必须显式 `--resume`。
+- 可另设硬上限 `--budget-cap 100`：按已完成批次的平均成本预估下一批，会超限就提前停，不必等接口报错。
+
+```bash
+python tools/run_story_queue.py --status                          # 看 halted / halt_reason
+python tools/run_story_queue.py --all --resume                   # 充值后解除并续跑
+python tools/run_story_queue.py --all --resume --budget-cap 120  # 顺带设硬上限
+```
+
+`--resume` 只清标记、不删任何图片；续跑靠幂等查找跳过已入库资产，不重复计费。哨兵位于 `data/`（已 gitignore，不进仓库）。离线 `selftest.py` 用 `AI_STUDIO_IGNORE_HALT=1` 绕开熔断，停机状态下仍可做零花费回归检查。
+
 ### 重做某个角色的形象
 
 改 `batches/sanguo-heroes.json` 里该角色的 `pose` 与 `profile`（视觉设定的唯一来源），再执行：

@@ -1,0 +1,218 @@
+{
+  "id": "comic-sanguo-tales-q05-e02-tale-042",
+  "title": "樊阿深针疗疾",
+  "subtitle": "一则载于华佗传的弟子针术故事",
+  "story_source": "《三国志》卷二十九·魏书·方技传·华佗传。原文摘录：“阿针背入一二寸，巨阙胸上五六寸，而病皆瘳。”传中记述华佗弟子樊阿善于针术，其施针深度异于当时通常的拘限，并称治疗有效。",
+  "why_not_in_romance": "【演义归属：演义未载】通行毛本120回未叙樊阿深针治病这一独立医案；不与华佗其他针灸情节混同。本集依据《三国志·华佗传》有关樊阿的记载改编，不将《三国演义》中的华佗医疗情节移用于樊阿。",
+  "synopsis": "华佗弟子樊阿擅长针术。病者前来求医，樊阿诊察后施治。时人对背部、胸腹施针深度有所拘限，传中却记樊阿深针而病愈。本集以一位无名病者串联求诊、施治与康复，将传记中的概述化为可见故事。",
+  "characters": [
+    {
+      "name": "樊阿",
+      "slug": "fan-a",
+      "existing": true,
+      "role": "华佗弟子，擅长针术的医者",
+      "pose": "Reuse the existing Fan A character asset without redesign; a composed standing pose with hands resting naturally, preserving the established face, hairstyle, clothing and accessories.",
+      "tags": [
+        "三国",
+        "史料人物",
+        "医者",
+        "复用角色"
+      ],
+      "profile": {
+        "age": "约三十五岁，属于视觉设定，史料未载本事发生时年龄",
+        "gender": "男",
+        "role": "华佗弟子，针术医者",
+        "era": "东汉末年",
+        "face": "清瘦长方脸，颧骨略显，下颌留短而整齐的黑须",
+        "eyes": "深褐眼睛，目光专注平和",
+        "skin": "浅麦色，具有自然皮肤纹理",
+        "build": "中等身量，偏瘦，肩背端正，双手修长",
+        "hair": "黑发束成紧实小髻，以深褐布巾固定，全篇不改变",
+        "marks": "无伤疤、刺青或夸张异相",
+        "outfit": "固定穿灰青色粗绢交领窄袖长袍，米白内领，深褐布腰带，炭灰长裤与旧黑布履；六格不换装",
+        "accessories": "腰侧素面布囊，使用无纹木质针匣与素麻布",
+        "weapon": "无武器；医针仅作医者身份道具，不展示操作参数",
+        "palette": "灰青、米白、深褐、炭灰、暗铜",
+        "temperament": "沉静审慎，待人温和，不作神异姿态",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "no imperial regalia, no armour, no magical aura, no modern medical equipment, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "character_id": "char-20261111-223632-cef09a"
+    },
+    {
+      "name": "病者",
+      "slug": "bing-zhe",
+      "existing": true,
+      "role": "接受樊阿诊治的无名平民病者",
+      "pose": "Reuse the existing Bing Zhe character asset without redesign; a slightly weary standing pose, preserving the established face, hairstyle, clothing and accessories.",
+      "tags": [
+        "三国",
+        "无名平民",
+        "病者",
+        "复用角色"
+      ],
+      "profile": {
+        "age": "约四十岁，属于视觉设定",
+        "gender": "男",
+        "role": "接受樊阿诊治的无名平民病者",
+        "era": "东汉末年",
+        "face": "略宽的椭圆脸，眉骨平缓，短须稀疏",
+        "eyes": "深褐眼睛，初时疲惫，恢复后目光舒展",
+        "skin": "偏黄的麦色皮肤，不以夸张肤色表现病症",
+        "build": "中等身量，略显单薄，初时躯干微蜷",
+        "hair": "黑发夹少量灰发，束小髻，以灰褐布巾固定，全篇不改变",
+        "marks": "无固定伤口、疤痕或特定疾病标识",
+        "outfit": "固定穿土褐色粗麻交领短袍，灰米内领，深灰布腰带，灰褐长裤与旧褐布履；六格不换装，卧榻时仅加盖素色薄毯",
+        "accessories": "无首饰，无随身贵重物品",
+        "weapon": "无",
+        "palette": "土褐、灰米、深灰、灰褐、旧褐",
+        "temperament": "朴实克制，由忧惧逐渐转为安心",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "no luxury clothing, no armour, no graphic symptoms, no exposed treatment sites, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "character_id": "char-20261111-223632-1655b8"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "医舍前庭",
+      "description": "无人环境概念图。汉末乡间医舍的小庭院，夯土院墙、木门、石阶与朴素竹架，竹架上放置无标记的药草浅筐，院中留出通向诊室的空地。",
+      "prompt_extra": "Unoccupied late Eastern Han rural healer's courtyard, rammed-earth walls, a plain wooden doorway, low stone steps, a bamboo rack with unmarked shallow herb baskets, open walking space, soft daylight and even lighting, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and woven-bamboo textures, environment concept art only, no people, no silhouettes, no writing or seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "朴素、安静"
+    },
+    {
+      "id": "scene-02",
+      "name": "医舍诊室",
+      "description": "无人环境概念图。木构诊室内设低矮卧榻、素色薄毯、坐席与小木案，案上置无标记的闭合针具盒及陶碗，侧窗引入柔和日光，无书写物和人体图谱。",
+      "prompt_extra": "Unoccupied late Eastern Han treatment room, timber posts, a low wooden couch with a plain thin blanket, woven sitting mats, a small wooden table holding a closed unmarked needle case and a ceramic bowl, soft side-window daylight with even illumination, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and wood textures, environment concept art only, no people, no silhouettes, no anatomical charts, no writing or seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "沉静、专注"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "华佗弟子樊阿，素善针术。",
+      "dialogue": [],
+      "visual": "Wide establishing view of the established rural healer's courtyard. Fan A stands beside the open doorway as Bing Zhe approaches slowly with a weary posture. Exactly two people, both strictly matching their existing character assets, with unchanged faces, hairstyles, clothing and accessories. Use restrained gestures rather than exaggerated suffering. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no writing or seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "樊阿",
+        "病者"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-02",
+      "caption": "病者求诊，樊阿细察。",
+      "dialogue": [
+        {
+          "speaker": "樊阿",
+          "line": "请坐，容我细察。"
+        }
+      ],
+      "visual": "Medium view inside the established treatment room. Bing Zhe sits on the edge of the low couch, while Fan A sits nearby and attentively observes the patient's expression and posture. A closed needle case rests on the small table. Exactly two people, using their existing character assets without any change to face, hairstyle, clothing or accessories. Quiet eye contact and a measured clinical atmosphere. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no writing or seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "樊阿",
+        "病者"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "当时背腹施针，多有深浅拘限。",
+      "dialogue": [],
+      "visual": "Close view centered on Fan A's thoughtful face and composed hands beside the still-closed needle case, with Bing Zhe seated softly out of focus in the background. Convey deliberation, not bravado. Exactly two people, preserving all established character-asset details and unchanged clothing. Do not show exposed anatomy, needle placement, depth measurements or medical diagrams. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no writing or seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "樊阿",
+        "病者"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "传载樊阿深针，异于时俗。",
+      "dialogue": [],
+      "visual": "Medium side view suggesting treatment without depicting its technique. Bing Zhe lies on the low couch beneath the established plain thin blanket, original clothing retained underneath. Fan A leans forward with a focused expression; the blanket edge and camera angle completely conceal his working hands and the treatment site. Exactly two people, consistent existing faces, hairstyles, outfits and accessories. No visible puncture, exposed torso, blood, insertion angle or procedural detail. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no writing or seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "樊阿",
+        "病者"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "施治之后，病者渐见舒缓。",
+      "dialogue": [
+        {
+          "speaker": "病者",
+          "line": "如今舒坦些了。"
+        }
+      ],
+      "visual": "Medium view of the same treatment room after an implied interval. Bing Zhe is sitting upright on the couch with relaxed shoulders and a calmer expression; the plain blanket rests over the knees. Fan A watches attentively from beside the couch, with the needle case closed on the table. Exactly two people, strictly preserving the existing character assets and original clothing, with no miraculous glow or instant-transformation effects. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no writing or seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "樊阿",
+        "病者"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-01",
+      "caption": "其疗效，传中以“病皆瘳”作结。",
+      "dialogue": [
+        {
+          "speaker": "病者",
+          "line": "多谢先生。"
+        }
+      ],
+      "visual": "Wide closing view of the same established courtyard on a later day. Bing Zhe stands steadily and offers a modest respectful bow to Fan A at the doorway; Fan A returns a restrained courteous gesture. Exactly two people, both retaining their established faces, hairstyles, clothing and accessories. Show recovery through relaxed posture rather than dramatic physical transformation. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no writing or seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "樊阿",
+        "病者"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture where applicable, and even lighting. Historical-fantasy styling must not introduce magical healing effects or anachronistic medical equipment. Reuse only the established Fan A and Bing Zhe character assets; preserve their exact faces, hairstyles, clothing, accessories and any established equipment, with no costume changes or added weapons. Use only the two specified environments. Each panel contains at most two people, with no crowds, background figures, portraits or human silhouettes. Both standalone environment concepts must contain no people. Conceal treatment sites and procedural details; do not depict puncture depth, anatomical targets, blood or instructional diagrams. All narration and dialogue must remain external HTML overlays, never painted into the artwork. No seals, signatures, readable objects, decorative frames or internal dividers; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为樊阿师承华佗、擅长针术、施针深度异于时俗及传载病愈。原文属于传记中的医术概述，并未交代某位病人的具体病名、求诊经过和疗程；本集以既有角色“病者”串联情节，求诊动作、对白、复诊致谢及场景均为文学化补足，不冒充原文细节。史载古代寸数不换算为现代尺度，画面不演示部位、角度或深度。深针具有严重风险，本集仅呈现历史记载，不构成医疗建议，切勿模仿。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q05",
+  "episode": 2,
+  "story_bank_no": 42,
+  "_generation": {
+    "written_at": "2026-11-12T11:11:40+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 9760,
+      "completion_tokens": 2938,
+      "total_tokens": 12698,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 9757,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 256,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "c6e423652019c4633e3d0a2376e4685cbf83b1232345a262fbf23cc0814167d3",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

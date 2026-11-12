@@ -14,11 +14,63 @@ import time
 import urllib.error
 import urllib.request
 import uuid
+from datetime import datetime
 from pathlib import Path
 
 from . import config, pricing, store, thumbs
 
 API_URL = "https://api.openai.com/v1/images/generations"
+
+# A credit error must stop the WHOLE queue, not just this image. SystemExit is
+# a BaseException, so neither the panel generator's
+# `except (RuntimeError, OSError, ValueError)` (which degrades to text-only)
+# nor the series controller's `except Exception` (which continues to the next
+# panel) can swallow it. A shared sentinel also stops sibling workers.
+HALT_FLAG = Path(__file__).resolve().parent.parent / "data" / "queue-halt.flag"
+
+
+class InsufficientBalanceError(SystemExit):
+    """Account credit exhausted - abort generation instead of retrying."""
+
+
+BALANCE_MARKERS = (
+    "insufficient_quota", "insufficient balance", "insufficient credit",
+    "insufficient funds", "out of credit", "out of balance", "no credit",
+    "credit balance", "billing hard limit", "payment required",
+    "exceeded your current quota", "quota exceeded",
+    "余额不足", "余额不够", "欠费", "额度已用尽", "余额为零",
+)
+
+
+def is_balance_error(code: int, detail: str) -> bool:
+    text = (detail or "").lower()
+    return code == 402 or any(m in text for m in BALANCE_MARKERS)
+
+
+def halt_on_no_balance(detail: str) -> None:
+    """Write the shared stop sentinel, then abort this process immediately."""
+    try:
+        HALT_FLAG.parent.mkdir(parents=True, exist_ok=True)
+        HALT_FLAG.write_text(json.dumps({
+            "at": datetime.now().astimezone().isoformat(timespec="seconds"),
+            "reason": detail[:400]}, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8")
+    except OSError:
+        pass
+    raise InsufficientBalanceError("INSUFFICIENT_BALANCE: " + detail[:300])
+
+
+def check_halt_flag() -> None:
+    """Every paid call re-checks the sentinel so sibling workers stop too.
+
+    Offline self-tests mock the network layer; they opt out with
+    AI_STUDIO_IGNORE_HALT=1 so a real credit stop cannot break `selftest.py`.
+    """
+    if os.environ.get("AI_STUDIO_IGNORE_HALT") == "1":
+        return
+    if HALT_FLAG.is_file():
+        raise InsufficientBalanceError(
+            "INSUFFICIENT_BALANCE: 已有余额熔断标记 " + str(HALT_FLAG))
 
 
 def endpoint(cfg: dict) -> str:
@@ -168,6 +220,7 @@ def make_demo_svg(style: dict, prompt: str) -> bytes:
 
 def call_openai(cfg: dict, prompt: str, model: str, quality: str,
                 size: str) -> tuple[bytes, str]:
+    check_halt_flag()
     key = config.api_key(cfg)
     if not key:
         raise RuntimeError(
@@ -194,6 +247,8 @@ def call_openai(cfg: dict, prompt: str, model: str, quality: str,
             break
         except urllib.error.HTTPError as exc:
             detail = exc.read().decode("utf-8", "replace")[:600]
+            if is_balance_error(exc.code, detail):
+                halt_on_no_balance(f"HTTP {exc.code}: {detail}")
             if exc.code == 401:
                 raise RuntimeError(
                     "HTTP 401: API key 无效或已撤销，请到「连接设置」更新会话密钥。") from None
@@ -294,6 +349,7 @@ def call_openai_edit(cfg: dict, prompt: str, images: list[bytes], *,
     gpt-image-2.6-sunburst); if a model rejects that syntax we fall back to
     repeated ``image`` fields once. GPT Image models always return b64_json.
     """
+    check_halt_flag()
     key = config.api_key(cfg)
     if not key:
         raise RuntimeError("尚未设置 API key，无法使用参考图生成。")
@@ -332,6 +388,8 @@ def call_openai_edit(cfg: dict, prompt: str, images: list[bytes], *,
             break
         except urllib.error.HTTPError as exc:
             detail = exc.read().decode("utf-8", "replace")[:500]
+            if is_balance_error(exc.code, detail):
+                halt_on_no_balance(f"HTTP {exc.code}: {detail}")
             # duplicate_parameter means repeated `image` fields were sent;
             # the API itself asks for the image[] array syntax.
             if exc.code == 400 and "duplicate_parameter" in detail:

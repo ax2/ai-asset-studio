@@ -1,0 +1,248 @@
+{
+  "id": "comic-sanguo-tales-q04-e01-tale-031",
+  "title": "演戏劝止争书",
+  "subtitle": "把争学搬上宴席，让当事人照见自己",
+  "story_source": "《三国志》卷四十二·蜀书·许慈传。许慈、胡潜互相争竞，不肯互通典籍，刘备遂令艺人模仿二人的争斗，在宴会上演出以作劝诫。原文摘录：“初以辞义相难，终以刀杖相屈，意以感切之。”",
+  "why_not_in_romance": "【演义归属：演义未载】通行毛本《三国演义》未载许慈、胡潜争学，以及刘备命艺人模仿二人争斗以劝诫的宴会故事。本集依据《三国志》，不属于《三国演义》情节。",
+  "synopsis": "许慈、胡潜争学不休，又不肯互通典籍。刘备没有当面斥责，而令艺人在宴会上模仿二人：先争辞义，再演刀杖相斗。两位学者坐在席间，看着自己的争竞变成一出戏。刘备借此讽劝，意在使他们有所警醒。",
+  "characters": [
+    {
+      "name": "刘备",
+      "slug": "liu-bei",
+      "existing": true,
+      "role": "设宴并命艺人演戏劝诫的主人",
+      "pose": "Seated upright beside a low banquet table, making a restrained directing gesture; preserve the existing character asset without redesign.",
+      "tags": [
+        "三国",
+        "已有角色",
+        "刘备",
+        "宴会劝诫"
+      ],
+      "profile": {
+        "age": "四十余岁的中年男子",
+        "gender": "男",
+        "role": "蜀汉昭烈帝 · 仁德之主",
+        "era": "东汉末年三国时期",
+        "face": "面如冠玉，方正温和的脸型，双耳垂肩",
+        "eyes": "细长温和的眼睛，目光沉稳含笑",
+        "skin": "温润的浅麦色",
+        "build": "身长七尺五寸，双臂过膝，挺拔而不魁梧",
+        "hair": "黑发整齐束于玄色冠下，鬓角修整，颌下长须修剪齐整",
+        "marks": "双手过膝，双耳垂肩，无伤疤",
+        "outfit": "素白与月白交领深衣，宽袖，衣缘绣暗银云雷纹，玄色腰带配玉具剑佩，外罩浅灰鹤纹大氅，丝质光泽与细密织纹",
+        "accessories": "腰间玉佩、素色发冠、绢质披帛",
+        "weapon": "双股剑，剑鞘玄色嵌铜，悬于左腰",
+        "palette": "素白、月白、暗银、玄黑、少量朱红点缀",
+        "temperament": "宽厚仁和、喜怒不形于色、内敛而有威仪",
+        "art_style": "premium Three Kingdoms historical-fantasy game character concept art, highly detailed painterly digital illustration, intricate silk brocade texture, crisp material separation, muted historical pigments",
+        "negative": "photograph, 3D render, plastic, modern clothing, anime chibi, text, watermark, cropped body, extra characters, different outfit"
+      },
+      "character_id": "char-20261110-144930-807358"
+    },
+    {
+      "name": "许慈",
+      "slug": "xu-ci",
+      "existing": false,
+      "role": "与胡潜争学、不肯互通典籍的蜀地学者",
+      "profile": {
+        "age": "中年，约四十五至五十五岁，具体年龄为美术设定",
+        "gender": "男",
+        "role": "刘备治下学者，故事中的争学者之一",
+        "era": "汉末刘备入蜀之后",
+        "face": "清瘦长脸，颧骨略显，下颌留整齐短须",
+        "eyes": "细长眼，眉头容易紧蹙",
+        "skin": "浅麦色，略有岁月纹理",
+        "build": "中等身高，清瘦，站姿略显拘谨",
+        "hair": "黑发夹少量灰丝，束髻，固定戴深褐色素帻",
+        "marks": "右眉末端略向下垂，无伤疤及夸张标记",
+        "outfit": "固定穿灰蓝色素绢交领宽袖长袍，米白内领，深褐窄布腰带，深灰下裳与黑色布履；全篇不换装",
+        "accessories": "无玉饰、无印章；素面卷册仅为场景道具，不固定随身携带",
+        "weapon": "无随身武器",
+        "palette": "灰蓝、米白、深褐、深灰、墨黑",
+        "temperament": "自负所学，争辩时执拗，听到讽劝时神情收敛",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "No modern clothing, no imperial crown, no armor, no costume changes, no hairstyle changes, no readable writing, no seals, no exaggerated caricature."
+      },
+      "pose": "Standing in a restrained three-quarter view, holding a closed plain manuscript roll against his chest, with a guarded scholarly expression.",
+      "tags": [
+        "三国",
+        "新角色",
+        "许慈",
+        "学者"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "胡潜",
+      "slug": "hu-qian",
+      "existing": false,
+      "role": "与许慈争学、不肯互通典籍的蜀地学者",
+      "profile": {
+        "age": "中年，约四十至五十岁，具体年龄为美术设定",
+        "gender": "男",
+        "role": "刘备治下学者，故事中的争学者之一",
+        "era": "汉末刘备入蜀之后",
+        "face": "略宽方脸，唇上短髭，下巴留疏短须",
+        "eyes": "眼形较圆，目光锐利，争辩时常扬眉",
+        "skin": "暖麦色，面颊略有红润",
+        "build": "中等身高，体格比许慈稍厚实",
+        "hair": "黑发束髻，固定戴墨灰色素帻",
+        "marks": "左侧嘴角自然略抿，无伤疤及夸张标记",
+        "outfit": "固定穿浅赭褐色素麻交领宽袖长袍，灰米内领，墨褐布腰带，灰褐下裳与深褐布履；全篇不换装",
+        "accessories": "无玉饰、无印章；素面卷册仅为场景道具，不固定随身携带",
+        "weapon": "无随身武器",
+        "palette": "浅赭褐、灰米、墨褐、灰褐、暖麦色",
+        "temperament": "好胜而不肯相让，受讽时先惊后默",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "No modern clothing, no imperial crown, no armor, no costume changes, no hairstyle changes, no readable writing, no seals, no exaggerated caricature."
+      },
+      "pose": "Standing in a three-quarter view with one hand resting protectively on a closed plain manuscript roll, chin slightly raised.",
+      "tags": [
+        "三国",
+        "新角色",
+        "胡潜",
+        "学者"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "府中藏书室",
+      "description": "无人环境概念图。木构书室内设两张低案，墙边木架收放素面卷册与竹简，窗侧铺席。所有书册闭合或以无字背面朝向镜头，不出现题签、印章。",
+      "prompt_extra": "Independent empty environment concept art of a late Han scholarly room in Shu, timber pillars, two low wooden desks, woven floor mats, shelves of closed plain manuscript rolls and bundled bamboo slips, unmarked covers, soft daylight through wooden lattice windows, balanced wide composition, no people, no silhouettes, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "白日",
+      "mood": "清静而略显拘束"
+    },
+    {
+      "id": "scene-02",
+      "name": "府中宴厅",
+      "description": "无人环境概念图。木构宴厅中陈设低矮食案、席垫、素面漆盘与陶杯，中央留出表演空地，后方设无纹帷幕。无宾客、侍从、艺人或人物影像。",
+      "prompt_extra": "Independent empty environment concept art of a late Han banquet hall in Shu, timber columns, low dining tables, woven seating mats, plain lacquer dishes and ceramic cups, an open floor reserved for a small performance, undecorated fabric curtains, warm diffuse lamplight with even illumination, no raised modern theater stage, no people, no silhouettes, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "入夜",
+      "mood": "表面温和，暗含劝诫"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "许慈、胡潜争学，典籍也不肯互通。",
+      "dialogue": [
+        {
+          "speaker": "许慈",
+          "line": "你的解说，未必胜我。"
+        },
+        {
+          "speaker": "胡潜",
+          "line": "既如此，我的书也不必借你！"
+        }
+      ],
+      "visual": "Medium two-character view inside scene-01. Xu Ci stands on the left holding a closed plain manuscript roll against his chest; Hu Qian stands on the right drawing another closed roll back toward himself. Their free hands make restrained argumentative gestures across a low desk, with an obvious empty gap between them. Preserve both character profiles exactly, with unchanged clothing and hair. Only Xu Ci and Hu Qian are visible. All manuscripts have blank outward-facing surfaces, no seals. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "许慈",
+        "胡潜"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-02",
+      "caption": "刘备设宴，命艺人照着二人演一回。",
+      "dialogue": [
+        {
+          "speaker": "刘备",
+          "line": "将他们争学的模样，演来看看。"
+        }
+      ],
+      "visual": "Medium single-character view of Liu Bei seated at the host's low table in scene-02, turning slightly toward the completely off-camera performance area and giving a quiet directing gesture. Reuse Liu Bei's existing appearance, clothing, hairstyle and sheathed weapon exactly without redesign. Plain ceramic cup and lacquer plate on the table, undecorated curtain behind him. Only Liu Bei is visible; the performers and all guests remain entirely outside the frame, with no human shadows or reflections. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "刘备"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "戏先演辞义相难，语气竟十分耳熟。",
+      "dialogue": [],
+      "visual": "Medium reaction shot of Xu Ci and Hu Qian seated at adjacent low banquet tables in scene-02, both looking toward the same off-camera performance area. Xu Ci pauses with his fingers resting beside his cup; Hu Qian lifts one eyebrow as if recognizing an imitation of his own manner. Their profiles, robes and hair remain unchanged. Exactly two visible people. The performance is conveyed only through their attentive reactions; no performers, audience figures, silhouettes, reflections or inset images appear. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "许慈",
+        "胡潜"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "戏再演刀杖相屈，争学竟成了争斗。",
+      "dialogue": [],
+      "visual": "Close two-character reaction shot in scene-02 at the next moment of the unseen performance. Xu Ci abruptly stiffens, his hand stopping above the table; Hu Qian draws his shoulders back with widened eyes and tightened lips. Both look toward the same entirely off-camera acting space, reacting to the escalation from verbal dispute to mimed fighting. Keep their established clothing, faces and hairstyles identical. Only these two scholars are visible, neither holds a weapon. No performers, weapon-wielding hands, silhouettes, reflections or imagined reenactments are shown. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "许慈",
+        "胡潜"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "刘备不直斥，只借这一场戏劝诫。",
+      "dialogue": [],
+      "visual": "Close single-character portrait of Liu Bei at his banquet table in scene-02, calm and serious, looking toward the scholars outside the frame. His directing hand has lowered beside a plain ceramic cup; his expression carries concern rather than amusement or anger. Preserve his existing character asset exactly, including clothing, hairstyle and accessories. Only Liu Bei is visible, with no background people, reflections or human shadows. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "刘备"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "戏如一面镜，照见争竞的难堪。",
+      "dialogue": [],
+      "visual": "Medium two-character closing shot of Xu Ci and Hu Qian seated quietly in scene-02 after watching the off-camera performance. Xu Ci lowers his gaze toward his resting hands; Hu Qian presses his lips together and looks down at his untouched cup. Their previously confrontational gestures have disappeared, but do not depict a handshake, exchanged books or a confirmed reconciliation. Preserve both character profiles and unchanged costumes. Exactly two visible people, no performers or other guests anywhere in frame, no silhouettes or reflections. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "许慈",
+        "胡潜"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture where applicable, and even lighting throughout. Reuse Liu Bei's existing character asset without redesign. Keep Xu Ci and Hu Qian consistent with their profiles, with no changes to clothing, hairstyles or personal weapons. Use only scene-01 and scene-02. Each scene concept image must be completely unpopulated. Each narrative image may contain at most two visible characters, exactly as listed in its characters field. All performers remain entirely off-camera; convey their performance through the narration and the named characters' reactions, never through extra figures, cropped body parts, silhouettes, shadows, reflections or embedded pictures. No anonymous crowds, servants or musicians. Keep all manuscript surfaces, vessels, curtains and architectural surfaces free of writing, symbols and seals. Render each image as a single continuous composition; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为许慈、胡潜争竞且不肯互通典籍，刘备命艺人模仿，表演由辞义相难发展到刀杖相屈，意在感切劝诫。为满足全篇最多三个人物、每格最多两人的限制，艺人始终在画外，第三、四格以观看者反应承接表演，由旁白明确交代演出内容。对白、手势及席间反应属于文学化扩写；新角色外貌与年龄属于美术设定。末格不宣称二人从此和解或互借典籍，不把劝诫意图写成史料已证实的结果。画面不生成文字，旁白与对白仅供HTML叠加。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q04",
+  "episode": 1,
+  "story_bank_no": 31,
+  "_generation": {
+    "written_at": "2026-11-12T10:17:05+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 7913,
+      "completion_tokens": 4189,
+      "total_tokens": 12102,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 7910,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 456,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "a62b7ccede38224ecfb0601ce10eb22157478be8b057cddc52f28833d8b30c50",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

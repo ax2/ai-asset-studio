@@ -1,0 +1,240 @@
+{
+  "id": "comic-sanguo-tales-q06-e02-tale-052",
+  "title": "文姬归汉",
+  "subtitle": "金璧赎得归路，悲愤落入诗篇",
+  "story_source": "《后汉书·列女传·董祀妻》：操素与邕善，痛其无嗣，乃遣使者以金璧赎之，而重嫁于祀。同传又载：后感伤乱离，追怀悲愤，作诗二章。",
+  "why_not_in_romance": "【演义归属：演义未载】《三国演义》第九回写蔡邕哭董卓，却未叙写曹操遣使以金璧赎蔡琰归汉、使其再嫁董祀的故事，也未展开她归后作悲愤诗篇这一情节。",
+  "synopsis": "曹操念及与蔡邕的旧交，感伤其后嗣凋零，遣使携金璧赎回流落异乡的蔡琰。归路开启，离别之痛却未消散。蔡琰归汉后再嫁董祀，追怀乱离，将悲愤写成诗篇。",
+  "characters": [
+    {
+      "name": "曹操",
+      "slug": "cao-cao",
+      "existing": true,
+      "role": "念及蔡邕旧交、遣使赎回蔡琰者",
+      "profile": {
+        "age": "五十岁上下的成熟男子",
+        "gender": "男",
+        "role": "东汉丞相 · 魏王 · 枭雄",
+        "era": "东汉末年三国时期",
+        "face": "清瘦而线条凌厉的脸型，颧骨微凸",
+        "eyes": "细眼长髯，目光沉鸷锐利",
+        "skin": "偏白的冷峻肤色",
+        "build": "身长七尺，中等精瘦，姿态矜持",
+        "hair": "黑发整齐束于玄玉冠下，颌下长须修整细致",
+        "marks": "细目长髯，眉间一道浅纹",
+        "outfit": "玄色蟒纹深衣，暗金四爪蟒纹满绣，交领缘饰朱红，外披黑貂大氅，貂毛根根分明，腰束玉带镶鎏金兽首",
+        "accessories": "玄玉冠、玉带、黑貂大氅、朱红印绶",
+        "weapon": "倚天剑，玄鞘嵌金，佩于左腰",
+        "palette": "玄黑、墨青、暗金、朱红、玉白",
+        "temperament": "沉鸷多疑、雄猜果决、不怒自威的枭雄气度",
+        "art_style": "premium Three Kingdoms historical-fantasy game character concept art, highly detailed painterly digital illustration, gold-thread dragon embroidery, dark fur texture, crisp material separation, muted historical pigments",
+        "negative": "photograph, 3D render, plastic, modern clothing, anime chibi, text, watermark, cropped body, extra characters, bright saturated colors, different outfit"
+      },
+      "pose": "Reuse the existing Cao Cao character asset unchanged; seated beside a low table, one hand indicating an open ransom casket; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "已有角色",
+        "遣使赎归"
+      ],
+      "character_id": "char-20261110-144930-66b9cc"
+    },
+    {
+      "name": "蔡琰",
+      "slug": "cai-yan",
+      "existing": true,
+      "role": "流离异乡后获赎归汉、追怀乱离的诗人",
+      "profile": {
+        "age": "约三十岁，作为本集视觉设定，不据此断定生年",
+        "gender": "女",
+        "role": "流离异乡、归汉后作悲愤诗篇的士人之女",
+        "era": "东汉末年",
+        "face": "清瘦椭圆脸，眉骨柔和，唇形端正，神情疲惫而有尊严",
+        "eyes": "深褐色杏眼，目光沉静，眼下有轻微倦意",
+        "skin": "自然浅麦色，略有风霜感",
+        "build": "中等身高，身形清瘦，肩背挺直",
+        "hair": "乌黑长发梳成朴素低髻，以深褐布带固定，鬓边少量细发；全篇不变",
+        "marks": "无伤疤、无刺青，以眉间淡淡愁意作为表情特征",
+        "outfit": "固定灰青色素面交领长襦，内衬米白中衣，下着深灰长裙，腰束灰褐布带，外披无纹灰褐薄披帛，足穿深褐布履；六格不换装",
+        "accessories": "素木发簪一支；无金冠、无华丽首饰",
+        "weapon": "无",
+        "palette": "灰青、米白、深灰、灰褐、深褐",
+        "temperament": "坚忍自持，才思深厚，悲伤中保有清醒",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不使用唐宋服饰，不披婚服，不添加异域舞服，不浓妆，不更换发式衣装，不出现文字、印章或现代物品"
+      },
+      "pose": "Reuse the existing Cai Yan character asset unchanged; standing with hands gently gathered at the waist, restrained sorrow in her posture; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "已有角色",
+        "文姬归汉",
+        "悲愤诗"
+      ],
+      "character_id": "char-20261111-154629-f05f8f"
+    },
+    {
+      "name": "赎归使者",
+      "slug": "shu-gui-shi-zhe",
+      "existing": true,
+      "role": "奉命携金璧赎回并引领蔡琰归汉的使者",
+      "profile": {
+        "age": "约三十五至四十五岁",
+        "gender": "男",
+        "role": "携金璧赎回蔡琰的使者",
+        "era": "东汉末年",
+        "face": "长方脸，鼻梁平直，下颌留整齐短须",
+        "eyes": "深褐色眼睛，目光谨慎稳重",
+        "skin": "麦色，带长途行旅的风尘感",
+        "build": "中等身高，体格结实而不魁梧",
+        "hair": "黑发束髻，戴无纹深灰布帻；全篇不变",
+        "marks": "无明显伤疤，无刺青",
+        "outfit": "固定栗褐色粗绢交领窄袖长袍，米灰内领，腰束深褐革带，下着炭灰长裤，足穿黑褐皮履；六格不换装",
+        "accessories": "无字无印的深褐皮质行囊；携带素木匣，内置无铭金块与素面玉璧",
+        "weapon": "无，不佩剑",
+        "palette": "栗褐、米灰、深褐、炭灰、黑褐",
+        "temperament": "寡言可靠，行事郑重，待蔡琰有礼",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "不穿铠甲，不用后世官帽，不佩武器，不添加姓名标牌，不更换服装发型，不出现文字、印章或现代物品"
+      },
+      "pose": "Reuse the existing ransom envoy character asset unchanged; standing respectfully with both hands supporting a plain wooden casket; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "已有角色",
+        "金璧赎归"
+      ],
+      "character_id": "char-20261111-154629-3cbfe4"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "汉地居室",
+      "description": "不含人物的汉末居室通用环境：木柱、素壁、席地矮案、竹帘与陶灯。作为汉地室内环境母版，分别承载曹操遣使和蔡琰归后写诗，不表示两者发生于同一房间。",
+      "prompt_extra": "Standalone unoccupied late Eastern Han residential study environment concept, timber posts, plain plaster walls, woven floor mats, a low wooden desk, bamboo blinds, a small ceramic oil lamp and blank writing silk, adaptable room layout for separate residences, balanced daylight with gentle warm lamp fill, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and wood texture, even lighting; no people, no human silhouettes, no portraits, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "沉静、肃穆"
+    },
+    {
+      "id": "scene-02",
+      "name": "塞地帐外归路",
+      "description": "不含人物的塞地帐外环境：低矮毡帐、疏草、木栅与通向远方的土路。无旗号，无牲畜，留出近景人物站位。",
+      "prompt_extra": "Standalone unoccupied northern frontier encampment exterior concept, a low felt tent on one side, sparse dry grass, a simple wooden fence and an earthen road receding toward distant hills, empty foreground reserved for two figures, soft overcast daylight, restrained ochre and gray-blue palette, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine felt and earth texture, even lighting; no people, no human silhouettes, no animals, no banners, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "苍凉、离情难遣"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "曹操念及蔡邕，痛惜其后嗣凋零。",
+      "dialogue": [],
+      "visual": "Medium view inside the Han residential study. Cao Cao alone sits beside the low desk, his gaze lowered in solemn remembrance, one hand resting beside a closed plain wooden casket. Reuse his existing character asset with identical face, hair, clothing and accessories; do not add a portrait or a remembered figure. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹操"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "遂遣使者，携金璧赎回蔡琰。",
+      "dialogue": [
+        {
+          "speaker": "曹操",
+          "line": "携此金璧，赎蔡琰归来。"
+        }
+      ],
+      "visual": "Medium two-person composition in the same study environment. Cao Cao indicates an open wooden casket on the low table; the ransom envoy respectfully receives it with both hands. Inside are a few plain gold pieces and one pale jade bi disc with a central hole, no coins or inscribed objects. Preserve both existing character assets exactly, including their established outfits, hairstyles and accessories. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹操",
+        "赎归使者"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "使者远至塞地，归期终于有望。",
+      "dialogue": [
+        {
+          "speaker": "赎归使者",
+          "line": "奉命赎您归汉。"
+        }
+      ],
+      "visual": "Medium two-person view outside the frontier felt tent. The ransom envoy stands beside an open casket displaying plain gold pieces and a pale jade bi disc, addressing Cai Yan at a respectful distance. Cai Yan pauses with hands gathered at her waist, surprise and restrained sorrow visible in her expression. The ransom negotiations remain offscreen; show no recipient or additional person. Reuse both existing character assets unchanged. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and felt texture, even lighting; no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "蔡琰",
+        "赎归使者"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "归路已开，回首仍是难舍。",
+      "dialogue": [],
+      "visual": "Wide single-figure composition using the same frontier tent exterior and receding road. Cai Yan stands at the beginning of the road, body turned toward departure while her face looks back toward the empty tent entrance. One hand lightly grips her existing thin shawl; her posture conveys painful separation without melodrama. Do not depict children, memories, silhouettes or any other people. Preserve her existing face, hairstyle, clothing and accessories exactly. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "蔡琰"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-01",
+      "caption": "归汉后，蔡琰又嫁董祀。",
+      "dialogue": [],
+      "visual": "Medium single-figure view in a modest Han residence using the study environment template, now arranged as Cai Yan's later domestic writing space rather than Cao Cao's room. Cai Yan sits alone beside the low desk and slowly unrolls a completely blank sheet of writing silk. The ransom casket is absent. Her reserved expression suggests a quieter life still shadowed by displacement; do not depict a wedding or another person. Preserve her existing character asset and full outfit unchanged. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "蔡琰"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-01",
+      "caption": "追怀乱离，她写下《悲愤诗》。",
+      "dialogue": [],
+      "visual": "Close view of Cai Yan at the same low writing desk, her sorrowful face and brush-holding hand sharing the composition. The brush is suspended just above completely blank writing silk, capturing the instant before a stroke so that no writing is visible. A small ceramic lamp and plain inkstone sit nearby. Her expression is composed yet deeply grieved. Keep the existing face, hairstyle, clothing and accessories identical to previous panels; no additional figures or memory images. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "蔡琰"
+      ],
+      "composition": "close"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting. Reuse the three established character assets without redesigning faces, hairstyles, clothing, accessories or weapons; do not introduce or exchange weapons. Show only the named characters listed for each panel, never more than two; no crowds, background people, portraits, reflections containing extra figures or ghostly memories. Use only the two specified environment templates. Environment concept images must contain no people. Keep all writing materials completely blank and all objects free of inscriptions; render the final writing moment before brush contact. Narration and dialogue exist only as external HTML overlays, never inside generated images. No seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为曹操与蔡邕有旧、遣使以金璧赎蔡琰、蔡琰归后再嫁董祀，以及追怀乱离而作诗二章。此处将诗篇以通行名称《悲愤诗》呈现，不把后世《胡笳十八拍》的归属问题混入。原文“无嗣”不解作蔡邕从无女儿。使者面告、交接动作、回首姿态和曹操对白均为文学化扩写，并非史料原话；赎金具体数额、交涉对象及行程不作虚构断言。第四格以独自回首含蓄表现离别，不增画子女。第五格再嫁仅由旁白交代，董祀不作为出场角色。两处汉地室内借用同一环境母版，不暗示蔡琰在曹操原室写诗；归汉、再嫁与作诗之间存在时间流逝，不设定确切年月。曹操服饰沿用既有美术资产，属于系列统一的历史幻想造型，不作为汉末服制复原。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q06",
+  "episode": 2,
+  "story_bank_no": 52,
+  "_generation": {
+    "written_at": "2026-11-12T12:07:19+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 9742,
+      "completion_tokens": 3242,
+      "total_tokens": 12984,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 9739,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 324,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "d82cac37eae9746f88de2e7589c4e0edc9affabe8b5396c22676d7ae48fd08ff",
+    "source_of_story": "batches/story-bank.json"
+  }
+}
