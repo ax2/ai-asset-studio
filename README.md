@@ -231,6 +231,27 @@ python tools/redo_character.py --character 诸葛亮
 
 `python tools/revise_wangmei.py --dry-run` 可只预览新规则。教训：**人数上限写在 `panel["characters"]`（参考图数量，≤2）没问题，但写进 `visual_rules` 变成「画面里不许有其他人」，就会把该有的群众场面一起禁掉**。
 
+### 群众场面：把场景板与分镜提示词彻底隔离
+
+「望梅止渴」二次返工（`tools/revise_wangmei_v2.py`）把小队行军升级成完整汉末出征阵列：曹操骑马、副将骑兵、10–16 名步兵、2–3 名旗手。这里有个**双向串扰**陷阱：
+
+- `scenes.build_prompt()` 把 `plan["visual_rules"]` 拼进**环境概念图**提示词 —— 阵列描述会让本该无人的场景板画出一支军队；
+- `scenes.panel_prompt()` 把 `scene["prompt_extra"]` 原样放进每一格分镜的 `CONTINUITY` 段 —— 写在 `prompt_extra` 里的「empty environment plate / no foreground figures」反过来会压制分镜里的队伍。
+
+因此 `generate_comic.py` 支持剧本可选字段 `scene_visual_rules`：场景板用它代替 `visual_rules`，分镜仍用 `visual_rules`；**没有该字段的剧本行为完全不变**。配套两条纪律：
+
+1. `scene_visual_rules` 只写环境板画风与「无人、无马、无旗」硬约束，绝不出现阵列或人物描述；
+2. `scene["prompt_extra"]` 只写纯环境外观（道路、山丘、尘土、泉水），绝不写「这张板是空的、人物不画在这里」这类关于画面的元指令 —— 无人约束由 `scenes.NO_PEOPLE` 在 `build_prompt()` 末尾自动追加。
+
+脚本另建本集专用角色「副将」（铁灰鱼鳞甲 + 赭红短披风），`panel["characters"]` 由 ≤2 放宽到 3 张参考图；其余骑兵、步兵、旗手靠 `visual_rules` 与每格 `visual` 描述，不新增参考图，避免多人物拼接畸形。两张特写格只挂士卒一张参考图，阵列在背景虚化。
+
+```bash
+python tools/revise_wangmei_v2.py --dry-run   # 预览规则与待归档资产
+python tools/revise_wangmei_v2.py            # 改剧本 → 归档旧 6 格 + 2 场景板 → 重出 → 重建索引
+```
+
+验证隔离：场景板提示词不得含 `CAVALRY` / `INFANTRYMEN`，分镜提示词不得含 `no people` / `empty environment plate`；`python tools/selftest.py` 可确认改动未影响其它剧本。
+
 ### 只重做某几格
 
 局部瑕疵（手部畸形、左右手画反、道具错误）不必重拍整集。先在剧本里改对应格的 `visual`（必要时在 `visual_rules` 补通用约束），再执行：

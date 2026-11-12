@@ -1,0 +1,238 @@
+{
+  "id": "comic-sanguo-tales-q03-e07-tale-027",
+  "title": "庞统半日理讼",
+  "subtitle": "百余日案牍，半日见凤雏之才",
+  "story_source": "《三国演义》第57回《柴桑口卧龙吊丧 耒阳县凤雏理事》；《三国志》卷三十七·蜀书·庞统法正传。史传原文：先主领荆州，统以从事守耒阳令，在县不治，免官。",
+  "why_not_in_romance": "【演义归属：演义亦载】本故事并非《三国演义》未收录：第57回详写耒阳理事。所引史文仅载庞统任耒阳令不治而免官；半日断尽积案、张飞服才是演义扩写，不是该史文所载。",
+  "synopsis": "庞统任耒阳令，百余日公务积压。张飞前来查问，见他神色自若，更觉不满。庞统当即集中理讼，听辨曲直、处置案牍，半日办清积务。张飞亲自核看，由怒转敬，拱手服才。本集依《三国演义》情节改编，不将半日理讼视作正史记载。",
+  "characters": [
+    {
+      "name": "庞统",
+      "slug": "pang-tong",
+      "existing": false,
+      "role": "耒阳县令，字士元，号凤雏",
+      "profile": {
+        "age": "三十岁上下",
+        "gender": "男",
+        "role": "刘备属下士人，暂任耒阳县令",
+        "era": "东汉末年",
+        "face": "宽额短脸，鼻梁略低，颧骨稍高，短须疏落；相貌朴拙而不作怪诞丑化",
+        "eyes": "细长深褐眼，平日似懒散，专注时目光敏锐",
+        "skin": "暖麦色，略有风尘感",
+        "build": "中等偏瘦，肩背自然微松，坐姿不拘",
+        "hair": "黑发束成低髻，固定以深褐布巾包束，鬓发略疏",
+        "marks": "疏短须与略低鼻梁为固定识别特征，无伤疤或纹身",
+        "outfit": "固定穿灰橄榄色素麻交领宽袖长袍，米灰内领，深褐布腰带，炭灰长裤与旧黑布履；衣缘略旧但完整，六格不换装",
+        "accessories": "腰侧一只无纹深褐布囊；毛笔仅作办公道具，不固定持握",
+        "weapon": "无",
+        "palette": "灰橄榄、米灰、深褐、炭灰、墨黑",
+        "temperament": "疏放自信，临事敏捷，受责时镇定，不作轻浮狂笑",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "No grotesque caricature, no supernatural effects, no imperial regalia, no modern objects, no costume or hairstyle changes, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body standing portrait, relaxed shoulders, one hand resting inside the opposite sleeve and the other lightly indicating a low writing desk outside the portrait crop; quietly confident expression; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "庞统",
+        "凤雏",
+        "耒阳令"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "张飞",
+      "slug": "zhang-fei",
+      "existing": true,
+      "role": "前来查问耒阳县务的将领",
+      "profile": {
+        "age": "三十余岁的壮年男子",
+        "gender": "男",
+        "role": "蜀汉车骑将军 · 五虎上将",
+        "era": "东汉末年三国时期",
+        "face": "豹头环眼，燕颔虎须，方阔下颌",
+        "eyes": "铜铃般圆睁的环眼，目光如电",
+        "skin": "黝黑粗糙的肤色",
+        "build": "身长八尺，虎背熊腰，肌肉虬结",
+        "hair": "浓密虬髯蓬张如戟，散发粗硬，束玄色抹额",
+        "marks": "满脸蓬张虬髯，声若巨雷般的阔口",
+        "outfit": "玄色鱼鳞铁甲，甲片密排泛冷光，肩披粗犷兽皮，赤膊露出前臂皮甲护腕，腰缠牛皮宽带，下着深褐战裤与黑铁靴",
+        "accessories": "玄色抹额、兽皮肩披、铁质护腕、酒葫芦",
+        "weapon": "丈八蛇矛，矛头如蜿蜒蛇形，乌金长柄",
+        "palette": "玄黑、铁灰、深褐、暗铜、少量朱红",
+        "temperament": "暴烈豪迈、勇猛粗犷、气势如奔马",
+        "art_style": "premium Three Kingdoms historical-fantasy game character concept art, highly detailed painterly digital illustration, weathered iron scale armour, coarse fur and leather, strong rim light, muted historical pigments",
+        "negative": "photograph, 3D render, plastic, modern clothing, anime chibi, text, watermark, cropped body, extra characters, clean-shaven face, different weapon"
+      },
+      "pose": "Reuse the established Zhang Fei character asset without redesign; full-body grounded stance, hands held away from the torso for a clear silhouette, retaining the exact existing costume, hairstyle and weapon design; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "张飞",
+        "复用角色",
+        "查问县务"
+      ],
+      "character_id": "char-20261110-144930-024778"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "耒阳县署后堂",
+      "description": "无人县署后堂。木柱、灰泥墙、竹帘与低矮书案构成朴素办公空间，案旁有成束竹简、木牍和收纳筐。竹简木牍均不呈现可辨文字，也无印章。",
+      "prompt_extra": "Standalone uninhabited environment concept art of a modest late Eastern Han county office rear study in Leiyang, timber posts, gray plaster walls, a bamboo blind, a low wooden desk, bundles of completely unmarked bamboo slips and wooden tablets, shallow storage baskets, no seals or seal impressions, soft daylight through lattice windows, three-quarter interior view with clear floor space for later character placement, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture, even lighting, no people, no human silhouettes, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "上午至午后，随分镜微调自然光",
+      "mood": "朴素、积务沉沉"
+    },
+    {
+      "id": "scene-02",
+      "name": "耒阳县署公堂",
+      "description": "无人县署公堂。正面低案、两侧木柱、素墙与敞开的堂门形成纵深，堂外仅见空庭和石阶。案上备砚、笔架与空白木牍，不设文字匾额、印章或装饰文字。",
+      "prompt_extra": "Standalone uninhabited environment concept art of a modest late Eastern Han county hearing hall in Leiyang, low magistrate desk on a shallow timber dais, plain timber columns, undecorated plaster walls, open entrance facing an empty courtyard and stone steps, inkstone, brush rest and completely unmarked wooden tablets on the desk, no plaques, no seals or seal impressions, generous clear space before the desk, frontal three-quarter perspective, soft natural daylight, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine material texture, even lighting, no people, no human silhouettes, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "上午至午后，随分镜微调自然光",
+      "mood": "肃静、由紧张转为明快"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "耒阳县中，百余日公务积压。",
+      "dialogue": [],
+      "visual": "Wide view inside the established rear study. Pang Tong alone sits loosely beside the low desk, calm rather than asleep, with one hand resting on his knee. Numerous bundles of completely unmarked bamboo slips and wooden tablets crowd the desk and nearby baskets, emphasizing neglected county business. Preserve his fixed gray-olive robe and cloth-wrapped hairstyle. Soft morning daylight and evenly readable details; no other people, no seals or seal impressions, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "庞统"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-02",
+      "caption": "张飞来查，见此情形便动了怒。",
+      "dialogue": [
+        {
+          "speaker": "张飞",
+          "line": "百余日的公务，为何堆着不办？"
+        },
+        {
+          "speaker": "庞统",
+          "line": "将军稍坐，容我今日料理。"
+        }
+      ],
+      "visual": "Medium two-character view in the established hearing hall. Zhang Fei stands beside the low magistrate desk, pointing firmly toward a basket of unmarked case tablets, his stern posture showing controlled anger. Pang Tong faces him with relaxed shoulders and steady eyes, neither bowing in fear nor mocking him. Reuse Zhang Fei's established character appearance exactly; preserve Pang Tong's fixed design. No additional people, no visible writing on any prop, no seals or seal impressions, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "张飞",
+        "庞统"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "庞统升堂，先把积案分门归类。",
+      "dialogue": [
+        {
+          "speaker": "庞统",
+          "line": "将积案取齐，依次听理。"
+        }
+      ],
+      "visual": "Medium view in the same hearing hall. Pang Tong now sits upright behind the low desk, decisively separating bundles of completely unmarked case tablets into orderly groups. Zhang Fei sits to one side with folded arms, watching skeptically. Contrast Pang Tong's newly focused posture with his earlier ease, without changing any costume, hairstyle or character asset details. Only these two characters are visible; no background figures, no seals or seal impressions, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "庞统",
+        "张飞"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "听诉辨理，落笔处置，毫不迟滞。",
+      "dialogue": [
+        {
+          "speaker": "庞统",
+          "line": "前后缘由，我已明白。"
+        }
+      ],
+      "visual": "Close view of Pang Tong at the same magistrate desk, turned attentively toward the hearing area beyond the camera, one hand raised in a precise questioning gesture while the other holds a brush just above an unmarked wooden tablet. His alert eyes and controlled expression convey rapid but careful judgment. A growing orderly stack of completed-case bundles contrasts with a shrinking unsorted stack. The shot excludes every litigant and observer; Pang Tong is the only visible person. No actual ink marks, no seals or seal impressions, no supernatural effects, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "庞统"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-01",
+      "caption": "不过半日，百余日积务已清。",
+      "dialogue": [
+        {
+          "speaker": "张飞",
+          "line": "这些案牍，竟都料理明白了？"
+        },
+        {
+          "speaker": "庞统",
+          "line": "已尽数处置，请将军查验。"
+        }
+      ],
+      "visual": "Medium two-character view back in the established rear study, now in early afternoon with soft even daylight. The former clutter is replaced by neatly tied bundles arranged in baskets. Zhang Fei leans over the low desk, lifting an unmarked wooden tablet and comparing the organized bundles, his brows rising in surprise. Pang Tong stands beside the desk with an open hand indicating the completed work, composed and unboastful. Keep both established character designs unchanged. Only two people, all document surfaces completely unmarked, no seals or seal impressions, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "张飞",
+        "庞统"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "张飞由怒转敬，方知凤雏之才。",
+      "dialogue": [
+        {
+          "speaker": "张飞",
+          "line": "先生大才，是张飞失敬了！"
+        },
+        {
+          "speaker": "庞统",
+          "line": "将军过誉。"
+        }
+      ],
+      "visual": "Medium two-character closing view in the established hearing hall. Zhang Fei offers a sincere clasped-hands salute with a slight forward inclination, his expression openly respectful. Pang Tong returns a modest clasped-hands greeting with a restrained smile. The orderly magistrate desk sits behind them, and soft early-afternoon daylight fills the empty hall. Preserve the exact existing Zhang Fei asset and Pang Tong's fixed robe, hairstyle and accessories, with no weapon redesign or costume changes. No additional people, no seals or seal impressions, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "张飞",
+        "庞统"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting throughout. Reuse the established Zhang Fei character asset exactly without redesigning his face, costume, hairstyle or weapons. Keep Pang Tong's new character design identical in every appearance. Use only the two supplied environments and at most two visible characters per panel. Environment concept images must contain no people, human silhouettes or portraits. All bamboo slips, wooden tablets and document props must remain completely unmarked; the narrative meaning of written casework is supplied only by external captions. No seals, seal impressions, readable plaques, modern objects, crowds, montage divisions or inset images. Captions and dialogue are metadata for HTML overlay only and must never be painted into the artwork. No text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "本集明确属于《三国演义》亦载的故事，不冒称正史逸闻。《三国志》所引原文仅能支持庞统曾任耒阳令、在县不治而被免官，不能证明他故意积务以显才，也不能证明半日断尽积案或张飞服才。六格采用《三国演义》第57回的理事情节；对白为压缩改写，并非史料原句。为满足每格至多两人的限制，听讼者置于画外，不另增人物资产；分类案牍、核看与回礼为连环画衔接性处理，不代表逐项复原原著动作。画中空白案牍是禁止生成文字条件下的视觉代用品。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q03",
+  "episode": 7,
+  "story_bank_no": 27,
+  "_generation": {
+    "written_at": "2026-11-12T09:21:21+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 6348,
+      "completion_tokens": 3666,
+      "total_tokens": 10014,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 6345,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 233,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "b72c76e7e061bd98db9ca0e06873e2a022247c4584a12ea3a96a3e142c4ab248",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "id": "comic-sanguo-tales-q03-e01-tale-021",
+  "title": "顾雍忍悲对弈",
+  "subtitle": "棋局未终，掌中已血；宾客散尽，悲声始出。",
+  "story_source": "《世说新语·雅量》；原文摘录：“顾雍丧子，坐上宾客不知，方与对围棋。”本条后续记载他以指掐掌，血流沾褥，待宾客散去才放声号恸。",
+  "why_not_in_romance": "通行毛本有顾雍参与吴国政事的描写，未载其闻子丧而忍悲对弈的细节。【演义归属：演义未载】",
+  "synopsis": "顾雍痛失儿子，座上宾客却不知情。他仍与客人对弈，面上勉力持静，袖下却以指掐掌，血迹渐渐沾染坐褥。直到宾客告辞离去，他才卸下强撑的镇定，独自在空堂放声痛哭。",
+  "characters": [
+    {
+      "name": "顾雍",
+      "slug": "gu-yong",
+      "existing": false,
+      "role": "孙吴重臣，本故事中忍悲待客的父亲",
+      "profile": {
+        "age": "约五十五岁，属视觉设定，不据此确定事发年份",
+        "gender": "男",
+        "role": "孙吴士大夫、失子之父",
+        "era": "汉末三国，孙吴",
+        "face": "长方脸，颧骨平缓，额间浅纹，短须夹有少许灰白",
+        "eyes": "细长深褐眼，目光沉稳，悲痛时眼眶微红",
+        "skin": "浅麦色，面色略显苍白",
+        "build": "中等身量，体态清瘦，肩背端直",
+        "hair": "黑发夹灰，整齐束髻，固定戴素黑帻",
+        "marks": "无醒目疤痕；第四格起左掌有少量掐伤血迹",
+        "outfit": "固定穿深青灰色素绢交领宽袖长袍，米白内领，墨灰窄缘，深褐布腰带，深灰下裳，黑色布履；六格衣装不变",
+        "accessories": "腰侧一枚无纹素玉佩，固定不变",
+        "weapon": "无",
+        "palette": "深青灰、米白、墨灰、深褐、素玉白",
+        "temperament": "平日沉静持重，此刻以礼自持而内心悲恸",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "不得使用帝王冠冕、铠甲、披风、兵器、清代发式、现代服饰；不得夸张美化掌伤或更换服装发型"
+      },
+      "pose": "Full-length standing reference, upright restrained posture, right hand resting lightly before the waist, left hand relaxed inside the sleeve, sorrow held behind a composed expression; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "孙吴",
+        "顾雍",
+        "雅量",
+        "忍悲"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "对弈宾客",
+      "slug": "dui-yi-bin-ke",
+      "existing": false,
+      "role": "与顾雍下棋的无名宾客，代表原文中的座上宾客",
+      "profile": {
+        "age": "约四十岁",
+        "gender": "男",
+        "role": "来访士人、围棋对手",
+        "era": "汉末三国，孙吴",
+        "face": "椭圆脸，面颊略丰，蓄整齐短黑须",
+        "eyes": "深褐眼，神情专注而温和",
+        "skin": "暖米色",
+        "build": "中等身高，身形匀称",
+        "hair": "黑发束髻，固定戴深褐色素帻",
+        "marks": "无显著伤疤或特殊标记",
+        "outfit": "固定穿浅赭褐色素麻交领宽袖长袍，灰白内领，深褐窄布腰带，灰褐长裤，深褐布履；六格衣装不变",
+        "accessories": "无",
+        "weapon": "无",
+        "palette": "浅赭褐、灰白、深褐、灰褐、墨黑",
+        "temperament": "知礼随和，专注棋局，始终不知顾雍丧子",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "不得使用官印、兵器、华丽冠冕、现代服饰；不得表现为前来吊丧或已知丧讯；不得更换服装发型"
+      },
+      "pose": "Full-length standing reference, courteous relaxed posture, hands joined in a modest greeting, attentive neutral expression; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "孙吴",
+        "无名宾客",
+        "围棋"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "顾宅厅堂棋席",
+      "description": "无人环境概念图。孙吴士族宅第厅堂，木柱、灰白墙面、素木屏风与竹帘；中央低矮棋案摆放无文字的围棋盘及黑白棋子，两侧铺素色坐褥。陈设朴素，无丧仪布置。",
+      "prompt_extra": "Standalone unoccupied environment concept art of an Eastern Wu aristocratic reception hall, timber pillars, pale plaster walls, plain wooden screen, bamboo blinds, low wooden Go table, unlabelled grid-only Go board with black and white stones, two plain woven sitting mats with pale cushions, restrained furnishings, soft evenly diffused daylight, historical pigment palette, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, fine wood and textile texture, no people, no silhouettes, no mourning decorations, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "表面宁静，留有空寂感"
+    },
+    {
+      "id": "scene-02",
+      "name": "顾宅厅外门廊",
+      "description": "无人环境概念图。与厅堂相接的木构门廊，敞开的素木门、灰砖地面与浅石门槛，外接小庭院。门内可见竹帘边缘，布局简洁，不设文字匾额。",
+      "prompt_extra": "Standalone unoccupied environment concept art of the timber entrance veranda adjoining the same Eastern Wu reception hall, open plain wooden doors, gray brick paving, low pale stone threshold, a quiet small courtyard beyond, edge of a bamboo blind visible inside, empty uncluttered architecture, soft evenly diffused daylight, historical pigment palette, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, fine wood and masonry texture, no people, no silhouettes, no plaques, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "清静疏淡，带有告别的距离感"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "顾雍痛失爱子，仍在座上待客。",
+      "dialogue": [],
+      "visual": "Medium view of Gu Yong seated upright at the low Go table in the reception hall, matching his character reference exactly. His gaze lowers briefly, lips pressed together, a trace of pallor beneath his controlled expression. His left hand remains hidden within his sleeve on his lap. Show only Gu Yong, with the opposite cushion outside the crop; no messenger, no letter, no funeral objects. Quiet restrained grief, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "顾雍"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "宾客不知丧讯，仍与他对弈。",
+      "dialogue": [],
+      "visual": "Wide view of Gu Yong and Duiyi Binke seated opposite each other at the same low Go table. Both exactly match their character references. The guest studies the board with ordinary calm concentration while Gu Yong places a stone with his right hand, his left sleeve resting across his lap. A plain grid-only Go board and stone bowls separate them. No other people, no signs that the guest knows of the bereavement. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "顾雍",
+        "对弈宾客"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-01",
+      "caption": "面上强持平静，心中悲痛难抑。",
+      "dialogue": [],
+      "visual": "Close view of Gu Yong's face and upper torso, exactly matching his reference, with the Go board softly blurred at the lower edge. His eyes remain lowered toward the game, eyelids slightly reddened, jaw subtly tightened, shoulders held deliberately still. Convey grief restrained rather than indifference, no smile and no theatrical grimace. The guest stays entirely outside the crop. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "顾雍"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-01",
+      "caption": "指甲深掐掌心，鲜血渐沾坐褥。",
+      "dialogue": [],
+      "visual": "Single close-up from beside Gu Yong's lap beneath the edge of his unchanged deep blue-gray sleeve. His left fingers curl tightly so the fingernails press into his own palm; a small restrained trace of blood runs onto the pale sitting cushion below. Show one anatomically coherent hand, sleeve folds and cushion, with the low Go table edge above shielding the action from the opponent. No face or second person visible, no open wound detail, no excessive gore. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "顾雍"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "待宾客告辞，他仍以礼相送。",
+      "dialogue": [
+        {
+          "speaker": "对弈宾客",
+          "line": "今日叨扰，告辞了。"
+        }
+      ],
+      "visual": "Medium view in the entrance veranda. Duiyi Binke, in his unchanged pale ochre-brown robe and dark brown headcloth, offers a courteous farewell while stepping toward the courtyard. Gu Yong stands just inside the threshold, maintaining a restrained return bow, his injured left hand concealed within his unchanged sleeve. Both exactly match their references. The guest remains unaware and untroubled; leave clear empty space between them and include no attendants. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "顾雍",
+        "对弈宾客"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-01",
+      "caption": "宾客散尽，空堂里终于放声号恸。",
+      "dialogue": [],
+      "visual": "Wide view of the same reception hall after the guest has gone. Gu Yong alone has sunk back beside the low Go table, his upright composure broken, shoulders folded forward, mouth open in an anguished cry and tears visible. His injured left hand rests loosely on his lap with only a small blood trace; the pale cushion retains its earlier stain. The opposite seat is empty and scattered Go stones remain on the board. Keep his clothing, hair and accessories identical to his reference. Use spacious empty architecture to emphasize bereavement without ghosts, imagined children or additional figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "顾雍"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture where applicable, and even lighting. This civilian story contains no armour or weapons. Match both character profiles exactly throughout; never change clothing, hairstyle or accessories. Depict no more than two people per panel and no unlisted background figures. Use only the two supplied environments. Environment concept images must be entirely unoccupied. Go boards may show a plain playing grid but no coordinates, numerals or writing; the grid belongs only to the physical board, never to the image layout. Keep palm bleeding minimal and non-graphic. Do not add funeral banners, written messages, inscriptions, seals, decorative calligraphy or speech balloons. All narration and dialogue are external HTML overlays only. Every generated image must be a single continuous composition; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为顾雍丧子、宾客不知、仍与客对弈、掐掌出血沾褥、客散后放声号恸。原文未交代丧讯如何送达，本脚本不画传讯者，也不虚构书信。无名对弈宾客代表座上宾客，不使用与吊丧有关的角色身份。人物年龄、宅第陈设、表情动作、门廊送客及告辞对白均属连环画衔接性扩写，不视为史料原话；不指定去世儿子的姓名，不据此断定棋局胜负。此事出自《世说新语》，不冒称《三国志》记载，也不作为《三国演义》情节。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q03",
+  "episode": 1,
+  "story_bank_no": 21,
+  "_generation": {
+    "written_at": "2026-11-12T09:18:59+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 6282,
+      "completion_tokens": 3921,
+      "total_tokens": 10203,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 6279,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 394,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "512d580dc4d83a8a67abb48531684a669068c1fb0d2bad669e7d9987c5593b89",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

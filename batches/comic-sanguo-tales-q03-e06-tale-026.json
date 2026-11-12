@@ -1,0 +1,209 @@
+{
+  "id": "comic-sanguo-tales-q03-e06-tale-026",
+  "title": "孙策挟将喝敌",
+  "subtitle": "一声怒喝惊追骑，回首方知挟将亡",
+  "story_source": "《三国演义》第15回《太史慈酣斗小霸王 孙伯符大战严白虎》；原文摘录：“樊能惊骇，倒翻身下马，破头而死。”本回另叙孙策生擒于糜，回头大喝使樊能坠马而死，随后发现于糜已被挟死。本集依据明代小说情节改编，不作为正史记载。",
+  "why_not_in_romance": "见第十五回《太史慈酣斗小霸王 孙伯符大战严白虎》，正文写孙策生擒于糜，回头大喝使樊能坠马而死，随后发现于糜已被挟死。这是小说中的具体情节，不能直接据为正史记载。【演义归属：演义亦载】因此，本故事并非《三国演义》未收录；“演义未收录”的前提不适用于本集。",
+  "synopsis": "孙策追击刘繇部将，探臂生擒于糜，将其挟在肋下。樊能挺矛追来，欲救同伴。孙策闻声回首，一声怒喝，惊得樊能倒翻落马，撞地而死。待孙策停马查看，才发现于糜也已被挟死。",
+  "characters": [
+    {
+      "name": "孙策",
+      "slug": "sun-ce",
+      "existing": false,
+      "role": "江东青年统帅，本集追击并挟将喝敌者",
+      "profile": {
+        "age": "二十岁左右的青年形象",
+        "gender": "男",
+        "role": "汉末江东青年统帅，字伯符",
+        "era": "东汉末年；造型为小说题材的历史幻想美术设计",
+        "face": "脸型俊朗方正，下颌清晰，鼻梁挺直，浓眉，无须",
+        "eyes": "深褐色眼睛，目光锐利，眉眼有强烈英气",
+        "skin": "暖麦色，略带常年征战的日晒感",
+        "build": "身量高挑，肩背宽阔，腰身紧实，手臂有力",
+        "hair": "黑发全部束成高髻，以暗朱色窄巾固定，无散发；全篇不变",
+        "marks": "右眉尾有一道浅淡旧痕，无其他醒目伤疤",
+        "outfit": "固定穿暗朱色交领窄袖及膝战袍，外罩铁灰色札甲胸甲与简洁护肩，腰束黑褐宽革带，下穿炭灰长裤与黑褐皮靴；不披长披风，全篇不换装",
+        "accessories": "暗铜圆形带扣，黑褐皮护腕，素面暗铜髻扣；全篇不变",
+        "weapon": "一柄素面环首刀，始终收入左腰黑褐刀鞘，不拔刀，不换武器",
+        "palette": "暗朱、铁灰、黑褐、炭灰、暗铜",
+        "temperament": "勇猛凌厉，动作果断，临敌有压迫感",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "No imperial crown, no dragon robe, no loose hair, no costume changes, no weapon changes, no modern objects, no exaggerated magical effects, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body standing reference, weight balanced, right forearm bent firmly toward his ribs, left hand relaxed beside his belt, sheathed ring-pommel saber at the left hip, focused forward gaze.",
+      "tags": [
+        "三国",
+        "演义人物",
+        "江东",
+        "青年统帅",
+        "固定战装"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "樊能",
+      "slug": "fan-neng",
+      "existing": false,
+      "role": "刘繇部将，本集追赶孙策并惊坠马者",
+      "profile": {
+        "age": "三十岁左右",
+        "gender": "男",
+        "role": "刘繇麾下将领",
+        "era": "东汉末年；造型为小说题材的历史幻想美术设计",
+        "face": "长方脸，颧骨略高，宽鼻，短黑须沿下颌修整",
+        "eyes": "深褐色眼睛，眼窝较深，紧张时睁大",
+        "skin": "偏深麦色，面颊有风尘感",
+        "build": "中等身高，体格结实，肩颈粗壮",
+        "hair": "黑发束髻，始终藏于铁灰色低盔内，不露散发；全篇不变",
+        "marks": "左颊有一处浅色旧疤，眉毛浓密",
+        "outfit": "固定穿灰褐色交领窄袖战袍，外罩深褐色札甲，戴铁灰色低盔与黑褐系带，下穿深灰长裤、黑褐皮靴；无披风，全篇不换装",
+        "accessories": "黑褐皮护腕，深褐革带，素面铁带扣；全篇不变",
+        "weapon": "一支原木色长杆铁矛，窄叶形铁矛头，无缨；坠马时脱手，形制不变",
+        "palette": "灰褐、深褐、铁灰、深灰、黑褐",
+        "temperament": "追敌时急切，受喝时骤然惊惧",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "No ornate crown, no bright gold armor, no loose hair, no costume changes, no weapon changes, no modern objects, no graphic injury, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body standing reference, gripping a plain wooden-shaft spear upright in his right hand, left hand near his belt, shoulders slightly tense, helmet securely tied.",
+      "tags": [
+        "三国",
+        "演义人物",
+        "刘繇部将",
+        "骑将",
+        "固定战装"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "江东郊野追骑道",
+      "description": "不含人物的独立环境概念图。开阔郊野间一条黄土马道向远处延伸，两侧是低矮枯草与稀疏灌木，地面留有杂乱蹄印，远处仅见模糊低丘，无军队、旗帜或建筑文字。",
+      "prompt_extra": "Standalone environment concept art, an empty late Eastern Han countryside cavalry track in Jiangdong, ochre packed earth with hoof impressions, sparse dry grass and low shrubs, distant muted hills, open central riding corridor, soft airborne dust, even late-afternoon lighting, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine natural material textures, no people, no riders, no horses, no human silhouettes, no banners, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "午后",
+      "mood": "空旷、急迫、风尘未息"
+    },
+    {
+      "id": "scene-02",
+      "name": "马道旁碎石缓坡",
+      "description": "不含人物的独立环境概念图。与黄土马道相邻的低缓路肩，浅灰碎石散落于硬土间，一块平钝石头露出地表，枯草稀疏；远景延续同一片低丘，光线与追骑道一致。",
+      "prompt_extra": "Standalone environment concept art, an empty gravel shoulder directly beside the same ochre countryside riding track, gently sloping hard earth, scattered pale gray stones and one low blunt exposed rock, sparse dry grass, matching distant low hills, unobstructed foreground for a falling-rider composition, even late-afternoon lighting, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine stone and earth textures, no people, no riders, no horses, no bodies, no human silhouettes, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "午后",
+      "mood": "骤静、紧绷、余尘渐落"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "孙策纵马，追击刘繇部将。",
+      "dialogue": [],
+      "visual": "Sun Ce alone rides a dark bay horse at speed along the ochre countryside track, moving from left to right, torso leaning forward and right hand beginning to reach toward an opponent entirely outside the right edge. Show only Sun Ce and his horse, with no distant soldiers or human silhouettes. His fixed dark vermilion narrow-sleeved robe, iron-gray lamellar armor, tied black topknot and sheathed left-hip saber match his character reference exactly. Dust trails low behind the horse. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孙策"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "探臂生擒于糜，紧挟肋下。",
+      "dialogue": [],
+      "visual": "Tight medium shot of Sun Ce mounted, cropped above the horse's saddle and across the lower chest. His right shoulder pulls back and his upper arm presses forcefully against his right ribs, clearly suggesting a captive held below the image boundary. The captive Yu Mi is entirely outside the crop: show none of his body, clothing, limbs, shadow or reflection. Sun Ce's left hand controls the reins; his jaw is set and his torso twists slightly under the strain. Preserve his exact established costume, hair and sheathed weapon. The same empty ochre track is softly visible behind him. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孙策"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-01",
+      "caption": "樊能挺矛追来，要救于糜。",
+      "dialogue": [
+        {
+          "speaker": "樊能",
+          "line": "休走！"
+        }
+      ],
+      "visual": "Fan Neng alone charges on a chestnut horse along the same track from left to right, leaning forward with his plain wooden-shaft iron spear aimed toward an opponent outside the right edge. His expression is urgent rather than frightened yet. His gray-brown robe, dark brown lamellar armor, low iron-gray helmet with tied chin strap, short black beard and cheek scar match his character reference exactly. Keep Sun Ce and Yu Mi completely outside the image, with no other human figures in the background. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "樊能"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-01",
+      "caption": "孙策闻声回首，骤然大喝。",
+      "dialogue": [
+        {
+          "speaker": "孙策",
+          "line": "喝！"
+        }
+      ],
+      "visual": "Close-up of Sun Ce's head and shoulders as he sharply looks back over his left shoulder toward the pursuing rider outside the frame, mouth open in a powerful shout, brows lowered and eyes fierce. His right shoulder remains braced downward, maintaining continuity with the offscreen captive under his right arm. Crop out the entire captive and all other people. Preserve the exact topknot, dark vermilion headcloth, eyebrow mark and iron-gray armor from his reference. A blurred ochre track and suspended dust form the background. Convey force through expression and posture only, without magical shockwaves or graphic sound symbols. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孙策"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "樊能惊骇坠马，撞地而死。",
+      "dialogue": [],
+      "visual": "Fan Neng alone tumbles backward off his chestnut horse onto the gravel shoulder, eyes wide with sudden terror, torso inverted diagonally and his helmeted head descending toward a low blunt stone. His plain spear has slipped from his hand and falls separately beside him. The horse continues forward at the edge of the frame. Depict the instant immediately before impact, communicating the fatal fall without exposed wounds, blood spray or graphic injury. Keep his exact established helmet, armor, robe and spear design unchanged. No other people, bodies or silhouettes appear. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "樊能"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "停马察看，方知于糜已被挟死。",
+      "dialogue": [],
+      "visual": "Tight medium closing shot of Sun Ce after halting his dark bay horse beside the gravel shoulder. He looks down toward his right side with a brief, sober realization, his right shoulder lowering and elbow beginning to relax below the bottom edge. Crop above the saddle so that the captive Yu Mi remains completely outside the image; show none of the captive's body, clothing, limbs, shadow or reflection. Fan Neng and his horse are also entirely outside the composition. Dust settles against the same pale stones and dry grass. Preserve Sun Ce's exact established costume, hairstyle, accessories and sheathed weapon. End in restrained stillness rather than celebration. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孙策"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting throughout. Only Sun Ce and Fan Neng receive visible character designs; Yu Mi exists in narration and offscreen action only, with absolutely no visible body parts, clothing fragments, shadows or reflections. Never add background soldiers, attendants, crowds or human silhouettes. Use only the two supplied environments. Keep both characters' faces, outfits, hairstyles, accessories and weapon designs identical in every appearance. Sun Ce's saber remains sheathed; Fan Neng's spear retains the same design when dropped. Keep Sun Ce on the same dark bay horse and Fan Neng on the same chestnut horse. Use plain cloth saddle coverings, no ornate later-period tack and no clearly visible stirrups. Represent the shout through acting, not supernatural effects. Avoid graphic wounds and gore. All narration and dialogue are external HTML overlays, never embedded in artwork. No seals, no inscriptions, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "本集明确归属《三国演义》，不是正史轶事。生擒于糜、回首喝敌、樊能惊坠而死、于糜已被挟死为小说情节骨架；对白、具体表情、马匹毛色与路肩碎石为视觉化补写，不声称见于原文。为严格满足最多新建两名角色的限制，仅制作孙策、樊能两张人物卡；于糜只在旁白及画外动作中出现，不生成其外貌、身体局部或独立资产。第二格和第六格以紧裁切表现挟持与察看，保留事件因果。第五格定格撞地前一瞬，死亡结果由旁白交代，避免血腥描绘。两张场景资产均为空景，人物与马匹仅在分镜生成时加入。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q03",
+  "episode": 6,
+  "story_bank_no": 26,
+  "_generation": {
+    "written_at": "2026-11-12T09:21:40+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 6372,
+      "completion_tokens": 4428,
+      "total_tokens": 10800,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 6369,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 337,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "0e486eefa00c4798019f442ab24ade0ab58c7d60ec9fd8b34b6d30c2044f09a3",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

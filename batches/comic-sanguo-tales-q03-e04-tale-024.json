@@ -1,0 +1,215 @@
+{
+  "id": "comic-sanguo-tales-q03-e04-tale-024",
+  "title": "姜母当面骂超",
+  "subtitle": "历城虽破，老母不屈",
+  "story_source": "《三国演义》第64回《孔明定计捉张任 杨阜借兵破马超》；《三国志》卷二十五·魏书·辛毗杨阜高堂隆传。原文摘录：汝背父之逆子，杀君之桀贼，天地岂久容汝，而不早死，敢以面目视人乎！",
+  "why_not_in_romance": "第64回杨阜联合姜叙等反击马超的情节中，写姜母先支持起兵，后在历城陷落时当面斥骂马超而死。【演义归属：演义亦载】因此，本集不能归为《三国演义》未收录的故事；本字段保留用于明确纠正这一分类，不另换故事。",
+  "synopsis": "姜叙响应杨阜，起兵反对马超，得到八旬老母支持。马超袭破历城，姜母独自面对来敌，痛斥他背父杀君，毫不屈服，最终遇害。六格以空宅候变、破门相见与临难斥骂，呈现老母的决绝。",
+  "characters": [
+    {
+      "name": "姜母",
+      "slug": "jiang-mu",
+      "existing": false,
+      "role": "姜叙之母，支持起兵反马超的八旬老妇",
+      "profile": {
+        "age": "八十余岁",
+        "gender": "女",
+        "role": "历城姜氏家中长者，姜叙之母",
+        "era": "东汉末年",
+        "face": "清瘦长脸，颧骨略高，额头与口角皱纹深刻，唇线坚毅",
+        "eyes": "深褐色眼睛，眼窝稍陷，目光清醒锐利",
+        "skin": "浅麦色老年肤色，手背可见筋脉与少量老年斑",
+        "build": "身形瘦小，背部微曲，站立时努力挺直",
+        "hair": "银灰头发整齐梳成低髻，全篇不改变发式",
+        "marks": "额间三道较深横纹，双手关节突出，无虚构伤疤",
+        "outfit": "固定穿灰褐色素麻交领长襦，米灰内领，深灰长裙，深褐布腰带与旧深褐布履；六格不换装",
+        "accessories": "发髻仅用一枚无纹深色木簪，不佩珠玉",
+        "weapon": "无",
+        "palette": "灰褐、米灰、深灰、深褐、银灰",
+        "temperament": "刚烈明断，临难不惧，愤怒中仍保有长者的尊严",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "No youthful face, no luxurious jewelry, no imperial costume, no hairstyle changes, no costume changes, no weapon; no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body standing reference, slightly stooped elderly woman holding herself upright, one empty hand raised in firm admonition, the other resting beside her waist, plain neutral background; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "姜母",
+        "历城",
+        "临难不屈"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "马超",
+      "slug": "ma-chao",
+      "existing": false,
+      "role": "袭击历城的汉末将领",
+      "profile": {
+        "age": "三十余岁",
+        "gender": "男",
+        "role": "汉末凉州武将，本集袭击历城者",
+        "era": "东汉末年",
+        "face": "轮廓鲜明的长方脸，鼻梁挺直，下颌紧实，蓄整齐短髭",
+        "eyes": "深褐色眼睛，眉骨突出，目光锐利",
+        "skin": "常年征战形成的浅麦色肤色",
+        "build": "身材高大，肩背宽阔，体格精悍",
+        "hair": "黑发束于固定铁灰色武弁式战盔内，盔顶饰短暗朱缨，全篇不改变",
+        "marks": "眉间习惯性紧锁，不添加虚构面部伤疤",
+        "outfit": "固定穿灰白色窄袖交领战袍，外罩铁灰色汉式札甲与简洁肩甲，深褐革带，炭灰长裤，黑褐皮靴，肩系及腰灰白短披风；六格不换装",
+        "accessories": "素面铜带扣与黑褐皮革剑鞘，不佩夸张兽首装饰",
+        "weapon": "左腰固定佩一柄汉式环首刀，全篇不更换武器",
+        "palette": "灰白、铁灰、炭灰、深褐、暗朱",
+        "temperament": "强悍自负，受斥时由冷峻转为震怒",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "No dragon robe, no crown, no European armor, no oversized fantasy weapon, no costume changes, no hairstyle changes, no weapon changes; no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body standing reference, feet planted apart, shoulders squared, right hand lowered and empty, ring-pommel dao sheathed at the left hip, stern expression, plain neutral background; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "马超",
+        "凉州武将",
+        "历城"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "历城姜宅内堂",
+      "description": "无人物环境概念图。汉末西北城邑宅院内堂，夯土墙、深色木柱、素面席榻与矮案，侧门通向前院；陈设简朴，不设牌匾、书札或屏风题字。",
+      "prompt_extra": "Independent empty environment concept art of a modest late Eastern Han household hall in Licheng, rammed-earth walls, dark timber pillars, plain woven sitting mat, low wooden table, side doorway opening toward a courtyard, restrained northwestern Chinese architecture, soft even daylight, wide readable layout, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and timber texture, no people, no human silhouettes, no written objects; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "白昼",
+      "mood": "肃静、决绝"
+    },
+    {
+      "id": "scene-02",
+      "name": "历城姜宅门院",
+      "description": "无人物环境概念图。与内堂相通的狭长前院，夯土院墙、石砌门槛、半毁木门与少量散落瓦片；门外只有灰尘与远处烟气，不画军队或人影。",
+      "prompt_extra": "Independent empty environment concept art of the front courtyard connected to a modest late Eastern Han household hall in Licheng, rammed-earth enclosure, stone threshold, damaged plain wooden gate, a few scattered roof tiles, distant dust and thin smoke beyond the entrance, no active flames, diffuse even daylight, clear foreground space for a confrontation, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine masonry and timber texture, no people, no human silhouettes, no flags, no signs; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "白昼",
+      "mood": "城破后的压迫与肃杀"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "姜叙响应杨阜，老母力赞起兵。",
+      "dialogue": [
+        {
+          "speaker": "姜母",
+          "line": "讨贼当行，不必以我为念。"
+        }
+      ],
+      "visual": "Inside scene-01, Jiang Mu sits upright beside the low table, turning toward the empty doorway with one hand raised in firm approval. She is the only person visible; her son is not depicted. Her deeply lined face conveys a deliberate decision rather than distress. Preserve her exact character-card clothing, hair and accessories. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "姜母"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "马超突袭历城，声震门外。",
+      "dialogue": [],
+      "visual": "Inside the same scene-01 hall, Jiang Mu has risen from the sitting mat and stands facing the doorway. A thin veil of dust enters across the threshold; the low table and mat remain in their established positions. Her hands are empty and her expression is alert but unafraid. Only Jiang Mu is visible, with no crowd or silhouettes outside. Preserve her exact character-card appearance. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "姜母"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "历城陷落，马超来到姜母面前。",
+      "dialogue": [],
+      "visual": "In scene-02, Ma Chao stands just inside the damaged courtyard gate, facing Jiang Mu across a short stretch of bare ground. The elderly woman holds herself upright near the hall entrance. Contrast his imposing armored height with her small but unwavering figure. Exactly two people, no troops, no horses, no background figures. His ring-pommel dao remains sheathed at his left hip. Preserve both character cards exactly. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "姜母",
+        "马超"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "姜母直斥其罪，毫无惧色。",
+      "dialogue": [
+        {
+          "speaker": "姜母",
+          "line": "汝背父之逆子，杀君之桀贼！"
+        }
+      ],
+      "visual": "Close view within scene-02 of Jiang Mu confronting Ma Chao, her lined face lifted and one empty hand pointing toward him. Her eyes are fierce and her mouth is open in forceful speech. Only the edge of Ma Chao's armored shoulder and fixed helmet enters the foreground, clearly belonging to the second character rather than an extra person. Preserve both character cards. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "姜母",
+        "马超"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "斥声愈厉，马超面色骤变。",
+      "dialogue": [
+        {
+          "speaker": "姜母",
+          "line": "天地岂久容汝，而不早死，敢以面目视人乎！"
+        }
+      ],
+      "visual": "Medium two-person confrontation in scene-02. Jiang Mu continues her fearless denunciation with her chin raised and feet firmly planted. Ma Chao faces her with tightened jaw, furrowed brows and a clenched empty right hand lowered beside his body; his dao remains sheathed. Keep the damaged gate and courtyard wall in their established positions. No additional people and no attack shown. Preserve both character cards exactly. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "姜母",
+        "马超"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "姜母终遭杀害，临难不曾屈服。",
+      "dialogue": [],
+      "visual": "Quiet aftermath in scene-02, with only Jiang Mu visible. Her motionless fully clothed body lies on its side near the stone threshold, face partly turned away, her silver-gray low bun and plain wooden hairpin unchanged. Her empty hand rests on the ground. The damaged gate and scattered tiles frame a large area of empty courtyard. Ma Chao is entirely absent from the image. No wounds, no blood, no weapon, no depiction of the killing mechanism. Solemn restrained treatment, not sensational. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "姜母"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting throughout. Maintain exact character-card faces, ages, hairstyles, garments, accessories and weapons across every image. Use only the two established environments. Show no more than two named characters in any panel, with no extras, crowds, human silhouettes or portraits. Environment concept images must contain no people. All dialogue and narration are external HTML overlays and must never be rendered into the artwork. Exclude calligraphy, signage, seals, emblems resembling writing, graphic frames and divided compositions. Treat the death non-graphically and do not invent an execution method; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "本事《演义》亦载，不以“演义未收录”宣传。史料骨架为姜叙响应杨阜、姜母支持起兵、马超袭历城、姜母当面斥骂而遇害；斥骂对白采用任务所给原文。“背父”“杀君”为姜母斥语，不扩写成未经交代的具体罪案画面。第一格对白是对支持起兵之意的文学化转述；宅院陈设、候变动作及对峙站位均属视觉补足。末格以非血腥事后画面表达遇害，不虚构凶器、行刑者或具体杀害方式。姜叙、杨阜仅在旁白中出现，不建立角色资产、不进入画面。姜母与马超均为本集新建角色。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q03",
+  "episode": 4,
+  "story_bank_no": 24,
+  "_generation": {
+    "written_at": "2026-11-12T09:20:07+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 6351,
+      "completion_tokens": 3877,
+      "total_tokens": 10228,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 6348,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 189,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "6030efdd23cde62f700bb89fae3d6c82de9f9b31089185d22afb9b0d1666c5ec",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

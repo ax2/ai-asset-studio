@@ -1,0 +1,136 @@
+{
+  "id": "sanguo-tales-q03",
+  "title": "三国小故事 · Q03 批（10 集）",
+  "planned_at": "2026-11-12T09:22:42+08:00",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "constraint": "候选库故事；《三国演义》写过的亦收录，逐条标注演义归属",
+  "source": "batches/story-bank.json",
+  "episodes": [
+    {
+      "no": 1,
+      "id": "comic-sanguo-tales-q03-e01-tale-021",
+      "title": "顾雍忍悲对弈",
+      "file": "comic-sanguo-tales-q03-e01-tale-021.json",
+      "source": "《世说新语·雅量》；原文摘录：“顾雍丧子，坐上宾客不知，方与对围棋。”本条后续记载他以指掐掌，血流沾褥，待宾客散去才放声号恸。",
+      "characters": [
+        "顾雍",
+        "对弈宾客"
+      ],
+      "reused": false
+    },
+    {
+      "no": 2,
+      "id": "comic-sanguo-tales-q03-e02-tale-022",
+      "title": "典韦逐虎过涧",
+      "file": "comic-sanguo-tales-q03-e02-tale-022.json",
+      "source": "《三国演义》第10回《勤王室马腾举义 报父仇曹操兴师》；原文摘录：“逐虎过涧”。本事见夏侯惇引典韦见曹操时，对典韦勇力与入军缘由的追述。此处依据为明代小说《三国演义》，不是《三国志》等史书的记载。",
+      "characters": [
+        "曹操",
+        "夏侯惇",
+        "典韦"
+      ],
+      "reused": false
+    },
+    {
+      "no": 3,
+      "id": "comic-sanguo-tales-q03-e03-tale-023",
+      "title": "太史慈突围求援",
+      "file": "comic-sanguo-tales-q03-e03-tale-023.json",
+      "source": "《三国演义》第11回《刘皇叔北海救孔融 吕温侯濮阳破曹操》；《三国志》卷四十九·吴书·刘繇太史慈士燮传。原文摘录：“北海被围，孤穷无援，危在旦夕。”《演义》第11回亦明确写太史慈出城冲杀、突围见刘备求救；史传另载反复出城射靶、使围兵松懈的经过。",
+      "characters": [
+        "太史慈",
+        "孔融",
+        "刘备"
+      ],
+      "reused": false
+    },
+    {
+      "no": 4,
+      "id": "comic-sanguo-tales-q03-e04-tale-024",
+      "title": "姜母当面骂超",
+      "file": "comic-sanguo-tales-q03-e04-tale-024.json",
+      "source": "《三国演义》第64回《孔明定计捉张任 杨阜借兵破马超》；《三国志》卷二十五·魏书·辛毗杨阜高堂隆传。原文摘录：汝背父之逆子，杀君之桀贼，天地岂久容汝，而不早死，敢以面目视人乎！",
+      "characters": [
+        "姜母",
+        "马超"
+      ],
+      "reused": false
+    },
+    {
+      "no": 5,
+      "id": "comic-sanguo-tales-q03-e05-tale-025",
+      "title": "孔融登门认亲",
+      "file": "comic-sanguo-tales-q03-e05-tale-025.json",
+      "source": "《三国演义》第11回《刘皇叔北海救孔融 吕温侯濮阳破曹操》；《后汉书》卷七十·郑孔荀列传。本题所引原文：“昔先君仲尼与君先人伯阳有师资之尊，是仆与君奕世为通好也。”故事记孔融十岁拜访李膺，以孔子曾向老子问礼的旧事，解释自己何以自称李氏通家。",
+      "characters": [
+        "孔融",
+        "李膺"
+      ],
+      "reused": false
+    },
+    {
+      "no": 6,
+      "id": "comic-sanguo-tales-q03-e06-tale-026",
+      "title": "孙策挟将喝敌",
+      "file": "comic-sanguo-tales-q03-e06-tale-026.json",
+      "source": "《三国演义》第15回《太史慈酣斗小霸王 孙伯符大战严白虎》；原文摘录：“樊能惊骇，倒翻身下马，破头而死。”本回另叙孙策生擒于糜，回头大喝使樊能坠马而死，随后发现于糜已被挟死。本集依据明代小说情节改编，不作为正史记载。",
+      "characters": [
+        "孙策",
+        "樊能"
+      ],
+      "reused": false
+    },
+    {
+      "no": 7,
+      "id": "comic-sanguo-tales-q03-e07-tale-027",
+      "title": "庞统半日理讼",
+      "file": "comic-sanguo-tales-q03-e07-tale-027.json",
+      "source": "《三国演义》第57回《柴桑口卧龙吊丧 耒阳县凤雏理事》；《三国志》卷三十七·蜀书·庞统法正传。史传原文：先主领荆州，统以从事守耒阳令，在县不治，免官。",
+      "characters": [
+        "庞统",
+        "张飞"
+      ],
+      "reused": false
+    },
+    {
+      "no": 8,
+      "id": "comic-sanguo-tales-q03-e08-tale-028",
+      "title": "王垕借头平怨",
+      "file": "comic-sanguo-tales-q03-e08-tale-028.json",
+      "source": "《三国演义》第17回《袁公路大起七军 曹孟德会合三将》。原文摘录：“欲借汝头以示众耳。”本篇依据明代小说情节改编，不将其视为《三国志》等史籍所证实的史实。",
+      "characters": [
+        "曹操",
+        "王垕",
+        "行军士卒"
+      ],
+      "reused": false
+    },
+    {
+      "no": 9,
+      "id": "comic-sanguo-tales-q03-e09-tale-029",
+      "title": "许褚倒曳牛尾",
+      "file": "comic-sanguo-tales-q03-e09-tale-029.json",
+      "source": "《三国演义》第12回《陶恭祖三让徐州 曹孟德大战吕布》；《三国志》卷十八·魏书·二李臧文吕许典二庞阎传。史传原文摘录：“粮乏，伪与贼和，以牛与贼易食。贼来取牛，牛辄奔还。褚乃出陈前，一手逆曳牛尾，行百余步。贼众惊，遂不敢取牛而走。”",
+      "characters": [
+        "许褚",
+        "贼众代表"
+      ],
+      "reused": false
+    },
+    {
+      "no": 10,
+      "id": "comic-sanguo-tales-q03-e10-tale-030",
+      "title": "何晏汤饼验白",
+      "file": "comic-sanguo-tales-q03-e10-tale-030.json",
+      "source": "《世说新语·容止第十四》：“何平叔美姿仪，面至白。魏明帝疑其傅粉，正夏月，与热汤饼。既啖，大汗出，以朱衣自拭，色转皎然。”",
+      "characters": [
+        "曹叡",
+        "何晏"
+      ],
+      "reused": false
+    }
+  ]
+}

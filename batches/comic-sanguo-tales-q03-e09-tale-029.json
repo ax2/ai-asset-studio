@@ -1,0 +1,216 @@
+{
+  "id": "comic-sanguo-tales-q03-e09-tale-029",
+  "title": "许褚倒曳牛尾",
+  "subtitle": "一手曳牛百余步，乡里豪勇退贼众",
+  "story_source": "《三国演义》第12回《陶恭祖三让徐州 曹孟德大战吕布》；《三国志》卷十八·魏书·二李臧文吕许典二庞阎传。史传原文摘录：“粮乏，伪与贼和，以牛与贼易食。贼来取牛，牛辄奔还。褚乃出陈前，一手逆曳牛尾，行百余步。贼众惊，遂不敢取牛而走。”",
+  "why_not_in_romance": "严格说，此事并非《三国演义》完全未收录，而是仅被提及：第12回许褚出场时，叙述其聚众御寇的旧事，写到牛奔回、许褚双手倒拖牛尾；史传则作一手逆曳。本集按《三国志》的一手版本展开为独立故事，不将演义的双手描写混作史传原文。【演义归属：仅被提及】",
+  "synopsis": "汉末，许褚聚众守护乡里，粮食渐乏，便假意与贼议和，以牛换粮。贼人来取牛，牛却奔回。许褚走到阵前，单手抓住牛尾，逆着牛的去向拖行百余步。贼众见其神力，惊惧退走，连牛也不敢取。",
+  "characters": [
+    {
+      "name": "许褚",
+      "slug": "xu-chu",
+      "existing": false,
+      "role": "汉末聚众守护乡里的壮士，尚未归曹",
+      "profile": {
+        "age": "成年，约二十余至三十余岁，具体年龄不作史实断言",
+        "gender": "男",
+        "role": "组织乡里抵御贼众的壮士",
+        "era": "东汉末年",
+        "face": "宽阔方脸，颌骨厚实，短髭与短须整齐而粗硬",
+        "eyes": "深棕眼睛，目光沉稳，眉骨厚重",
+        "skin": "日晒形成的暖麦色皮肤",
+        "build": "身形高大，腰腹厚实，肩背宽阔，手臂强健，非夸张健美体型",
+        "hair": "黑发束成紧实顶髻，以深褐布巾固定，全篇不变",
+        "marks": "双手有劳作形成的粗糙茧痕，无虚构的醒目伤疤",
+        "outfit": "固定穿暗赭色粗麻交领窄袖及膝短袍，灰米内领，深褐宽布腰带，炭灰长裤，深褐布履；不披甲、不加披风，六格不换装",
+        "accessories": "仅有固定束发布巾与布腰带，无金玉饰物",
+        "weapon": "本集不持武器，不另配刀剑",
+        "palette": "暗赭、灰米、深褐、炭灰、暖麦色",
+        "temperament": "寡言镇定，护乡坚决，以行动震慑对手",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "No imperial costume, no ornate armor, no cape, no oversized weapon, no hairstyle or costume changes, no extra limbs, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body standing character reference, feet firmly planted, broad shoulders relaxed, both empty hands clearly visible, calm resolute expression; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "许褚",
+        "乡里壮士",
+        "单手曳牛"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "贼众代表",
+      "slug": "zei-zhong-dai-biao",
+      "existing": false,
+      "role": "前来取牛的无名贼人，作为贼众的单人视觉代表",
+      "profile": {
+        "age": "成年，约三十岁",
+        "gender": "男",
+        "role": "与许褚交涉并前来取牛的贼众代表",
+        "era": "东汉末年",
+        "face": "瘦长脸，颧骨略高，下颌有稀疏短须",
+        "eyes": "深棕眼睛，眼形偏窄，神情由试探转为惊惧",
+        "skin": "风尘中的黄褐肤色",
+        "build": "中等身高，精瘦结实，与许褚形成体格对比",
+        "hair": "黑发束低髻，包旧灰褐头巾，全篇不变",
+        "marks": "左眉尾有自然断眉，无新增伤口",
+        "outfit": "固定穿土灰色粗麻交领窄袖短袍，灰米内领，旧黑褐布带，深灰长裤，旧草履；六格不换装",
+        "accessories": "腰侧固定悬挂小型旧布袋，不佩贵重饰物",
+        "weapon": "本集不持武器，不新增刀枪",
+        "palette": "土灰、灰米、黑褐、深灰、草黄",
+        "temperament": "起初谨慎贪求，见到神力后胆怯退缩",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "No uniform armor, no fantasy villain ornaments, no cape, no weapon changes, no hairstyle or costume changes, no extra limbs, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body standing character reference, lean frame slightly forward, empty hands held near the waist, wary expression, clothing clearly visible; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "无名人物",
+        "贼众代表",
+        "取牛者"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "乡堡内侧",
+      "description": "汉末乡里土堡的内侧空地，夯土矮墙与木栅围护，门洞通向外面的土路。墙边放置少量空粮筐与敞口陶瓮，地面有搬运痕迹。概念图不含人物或动物。",
+      "prompt_extra": "An unoccupied late Eastern Han rural fortified village interior, low rammed-earth walls, rough timber palisade, an open gateway leading to a dirt road, a few visibly empty grain baskets and open pottery jars beside the wall, packed earth and restrained earth pigments, soft even daylight, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, fine wood and earthen textures, environment only, no people, no animals, no silhouettes, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "粮乏而坚守"
+    },
+    {
+      "id": "scene-02",
+      "name": "乡堡外换粮土路",
+      "description": "乡堡外一段宽阔而绵长的土路，画面左侧远处连接乡堡木门，右侧通向旷野。路旁枯草低伏，路面有车辙与蹄印，空旷地带可供交涉和曳牛。概念图不含人物或动物。",
+      "prompt_extra": "An unoccupied broad dirt road outside a late Eastern Han rural stockade, the same timber village gate far to the left, open countryside extending to the right, dry low grass, wheel ruts and hoofprints, a long uninterrupted stretch of firm earth suitable for livestock exchange, clear spatial depth, soft even daylight, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, environment only, no people, no animals, no silhouettes, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "空旷对峙"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "许褚聚众守乡，粮食渐渐告乏。",
+      "dialogue": [],
+      "visual": "Wide view inside the established village stockade. Xu Chu stands alone beside nearly empty grain baskets and an open empty pottery jar, looking toward the timber gateway with a grave but composed expression. His fixed dark ochre narrow-sleeved hemp robe, broad cloth belt, charcoal trousers, brown cloth shoes and bound topknot exactly match his character reference. No other humans or background silhouettes. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "许褚"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-02",
+      "caption": "他假意议和，提出以牛换粮。",
+      "dialogue": [
+        {
+          "speaker": "许褚",
+          "line": "以牛换粮，如何？"
+        }
+      ],
+      "visual": "Medium-wide negotiation on the established dirt road, village gate to screen left and open country to screen right. Xu Chu stands on the left and gestures with an empty open hand toward a single sturdy dark-brown working ox between him and the bandit representative on the right. The ox has short outward-curving horns, a pale muzzle and a black tail tuft; retain this exact animal design throughout. The bandit considers the offer without smiling. Exactly two humans and one ox, no grain delivery shown, no additional figures. Both humans retain their fixed reference clothing and hair. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "许褚",
+        "贼众代表"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "贼人来取牛，牛却掉头奔回。",
+      "dialogue": [
+        {
+          "speaker": "贼众代表",
+          "line": "牛跑回去了！"
+        }
+      ],
+      "visual": "Dynamic wide view on the same road with the village gate still on screen left. The same dark-brown ox bolts leftward toward the village, head pointing left and tail trailing right, kicking up a little dust. The bandit representative on the right recoils with both hands empty after a failed attempt to approach it. Xu Chu stands near the left roadside, turning to move behind the passing animal. Exactly two humans and one ox, no ropes entangling the legs, no additional people. Preserve both character designs and all clothing. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "许褚",
+        "贼众代表"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "许褚走出阵前，一手攥住牛尾。",
+      "dialogue": [],
+      "visual": "Focused medium side view on the same road. The ox occupies the left half with its head toward screen left. Xu Chu has stepped behind its hindquarters on screen right and grips the intact tail firmly with his RIGHT HAND ONLY, clearly away from the tail root. His LEFT HAND is visibly open and held away from the animal. His feet brace on the earth as the tail becomes taut; show anatomically coherent arms, hands and the ox body. His face remains calm, with no signs of cruelty or injury to the ox. Only Xu Chu and the single established ox appear, no other humans. Fixed costume and hairstyle. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "许褚"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "他逆曳牛尾，竟行百余步。",
+      "dialogue": [],
+      "visual": "Wide lateral action view along the same continuous dirt road. The same ox faces screen left toward the distant village but is being drawn backward toward screen right, all four hooves near the ground and making backward scrape marks. Xu Chu is to the RIGHT of its rump, steadily stepping toward screen right while pulling its taut tail with his RIGHT HAND ONLY. His LEFT HAND is clearly empty and extended away for balance. Make the opposing directions unmistakable through the ox posture, Xu Chu's rightward stride and a long dusty trail receding along the road; do not use arrows or motion symbols. The bandit representative stands farther back on the roadside, frozen with widened eyes. Exactly two humans and one ox, no additional silhouettes. Preserve fixed costumes and the ox design. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "许褚",
+        "贼众代表"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "贼众惊惧退走，连牛也不敢取。",
+      "dialogue": [
+        {
+          "speaker": "贼众代表",
+          "line": "这牛不要了！"
+        }
+      ],
+      "visual": "Wide concluding view of the same road. The bandit representative retreats hurriedly toward the open country on screen right, looking back over his shoulder in fear, empty hands raised defensively. On the left Xu Chu stands solidly beside the now stationary dark-brown ox, having released its tail; both his hands are visibly empty. The ox is unharmed, facing the village at screen left. Long hoof scrape marks remain on the road between them. Exactly two humans and one ox, no crowd, no grain sacks changing hands, no pursuing violence. Preserve all character clothing, hairstyles and animal markings. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "许褚",
+        "贼众代表"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture where applicable, and even lighting. Keep the two human character designs, costumes, hairstyles and accessories unchanged in all six images; neither character carries a weapon. Show at most two humans per panel, with no extra crowds, portraits, human silhouettes or reflected people. The single working ox is a consistent animal prop, not an additional human character: dark-brown coat, short outward-curving horns, pale muzzle and black tail tuft. Maintain the village to screen left and the open countryside to screen right in road scenes. During the feat, Xu Chu uses his right hand alone, his left hand remains visibly free, the ox faces left and is pulled backward to the right with its hooves on or near the ground. Never show a two-handed grip, a lifted airborne ox, a severed tail or animal injury. Scene concept images contain environments only, without people or animals. Render narration and dialogue only through external HTML, never inside the artwork. No seals, calligraphy, signage or decorative frames; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架采用《三国志·许褚传》：聚众御寇、粮乏、假意议和、以牛易食、牛奔还、一手逆曳百余步、贼众惊退。对白、交涉动作、空粮器具、衣着和表情为便于连环画呈现的文学化补足，不作史实引文。贼众以一名无名代表呈现，乡人及其他贼人均不入画；牛为动物道具，不另建人物卡。连续距离由第五格的纵深和蹄痕概括，不将百余步解释为精确现代长度。结尾不增写粮食已交付或许褚追杀贼众。明确区分演义提及的双手版本与史传的一手版本。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q03",
+  "episode": 9,
+  "story_bank_no": 29,
+  "_generation": {
+    "written_at": "2026-11-12T09:22:37+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 6342,
+      "completion_tokens": 4234,
+      "total_tokens": 10576,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 6339,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 203,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "88d19abbab31700e3e9cd0b21b2969148ceec982231a79b187433b30f8c9e853",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

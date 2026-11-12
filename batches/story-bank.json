@@ -1,7 +1,7 @@
 {
   "id": "story-bank-01",
   "title": "三国小故事候选库",
-  "built_at": "2026-11-11T22:01:56+08:00",
+  "built_at": "2026-11-12T09:17:44+08:00",
   "constraint": "汉末三国小故事；《三国演义》写过的同样收录，按 romance_group 标注",
   "text_model": "gpt-6.1-sol",
   "sources": {
@@ -188,11 +188,11 @@
   },
   "stats": {
     "total": 87,
-    "candidate": 70,
+    "candidate": 60,
     "needs_review": 0,
-    "used": 17,
+    "used": 27,
     "grade_a": 7,
-    "grade_b": 63,
+    "grade_b": 53,
     "grade_c": 0,
     "not_in_romance": 63,
     "in_romance": 20,
@@ -325,6 +325,56 @@
       "title": "望梅止渴",
       "id": "comic-sanguo-tales-q01-e10-tale-010",
       "source": "《世说新语·假谲》。原文摘录：魏武行役，失汲道，军皆渴，乃令曰：“前有大梅林，饶子，甘酸可以解渴。”后文记士卒闻言生津，借此继续前行，终于抵达水源。"
+    },
+    {
+      "title": "杜夔校钟辨音",
+      "id": "comic-sanguo-tales-q02-e01-tale-011",
+      "source": "《三国志》卷二十九·魏书·方技传·杜夔传；原文：太祖使玉与夔各作声韵，仪较是非，然后知夔为精，而玉之妄。文中“太祖”指曹操，“玉”指铸钟工柴玉。"
+    },
+    {
+      "title": "樊阿深针疗疾",
+      "id": "comic-sanguo-tales-q02-e02-tale-012",
+      "source": "《三国志》卷二十九·魏书·方技传·华佗传；原文：阿针背入一二寸，巨阙胸上五六寸，而病皆瘳。"
+    },
+    {
+      "title": "流水驱动木偶",
+      "id": "comic-sanguo-tales-q02-e03-tale-013",
+      "source": "《三国志》卷二十九·魏书·方技传·杜夔传裴松之注引《马先生传》。原文摘录：“潜以水发焉。”本事记魏明帝得到百戏模型，原本只能陈设，马钧改设机关，以水力驱动模型表演。"
+    },
+    {
+      "title": "童转翻车灌园",
+      "id": "comic-sanguo-tales-q02-e04-tale-014",
+      "source": "《三国志》卷二十九·魏书·方技传·杜夔传裴松之注引《马先生传》。原文摘录：“乃作翻车，令儿童转之。”本事记马钧在京都有园地，苦于缺水，遂制翻车提水灌园。"
+    },
+    {
+      "title": "陈登食脍生疾",
+      "id": "comic-sanguo-tales-q02-e05-tale-015",
+      "source": "《三国志》卷二十九·魏书·方技传·华佗传。原文摘录：“广陵太守陈登得病，胸中烦懑，面赤不食。佗脉之，曰：‘府君胃中有虫数升，欲成内疽，食腥物所为也。’佗乃作汤二升，先服一升，斯须尽服之。食顷，吐出三升许虫，赤头皆动，半身是生鱼脍也，所苦便愈。佗曰：‘此病后三期当发，遇良医乃可济救。’至期果发动，时佗不在，遂死。”"
+    },
+    {
+      "title": "华佗授五禽戏",
+      "id": "comic-sanguo-tales-q02-e06-tale-016",
+      "source": "《后汉书》卷八十二下·方术列传下·华佗。原文摘录：“吾有一术，名五禽之戏。”又记吴普习练之效：“普施行之，年九十余，耳目聪明，齿牙完坚。”传中所列五禽为虎、鹿、熊、猨、鸟。"
+    },
+    {
+      "title": "叔母劝谧向学",
+      "id": "comic-sanguo-tales-q02-e07-tale-017",
+      "source": "《晋书》卷五十一·皇甫谧传；原文：谧乃感激，就乡人席坦受书，勤力不怠。"
+    },
+    {
+      "title": "梁上君子受绢",
+      "id": "comic-sanguo-tales-q02-e08-tale-018",
+      "source": "《后汉书》卷六十二·荀韩钟陈列传·陈寔。原文摘录：“时岁荒民俭，有盗夜入其室，止于梁上。寔阴见，乃起自整拂，呼命子孙，正色训之曰：‘夫人不可不自勉。不善之人未必本恶，习以性成，遂至于此。梁上君子者是矣！’盗大惊，自投于地，稽颡归罪。寔徐譬之曰：‘视君状貌，不似恶人，宜深克己反善。然此当由贫困。’令遗绢二匹。”"
+    },
+    {
+      "title": "王戎识道旁李",
+      "id": "comic-sanguo-tales-q02-e09-tale-019",
+      "source": "《晋书》卷四十三·王戎传；原文摘录：“夫李树在道而多子，必苦李也。”本传记王戎七岁时与群儿游玩，见道旁李树多实，同伴争相采摘，王戎独不往；取果尝验，果然是苦李。"
+    },
+    {
+      "title": "羊祜桑中寻环",
+      "id": "comic-sanguo-tales-q02-e10-tale-020",
+      "source": "《晋书》卷三十四·羊祜传；原文摘录：“祜年五岁，令乳母取所弄金环。”本传继记：乳母说他从未有过此物，羊祜遂到邻人李氏东垣的桑树中探得金环，邻家认出这是亡儿遗失之物，惊异悲惋。"
     }
   ],
   "duplicates_dropped": [
@@ -640,292 +690,6 @@
       "toc_hits": []
     },
     {
-      "title": "杜夔校钟辨音",
-      "source": "《三国志》卷二十九·魏书·方技传·杜夔传",
-      "quote": "太祖使玉与夔各作声韵，仪较是非，然后知夔为精，而玉之妄。",
-      "synopsis": "杜夔要求柴玉反复重铸音律不合的铜钟，柴玉不服；曹操让二人比试，确认杜夔辨音准确。",
-      "characters": [
-        "杜夔",
-        "柴玉",
-        "曹操"
-      ],
-      "region": "汉末",
-      "mood": "巧艺",
-      "romance_check": "not_in_romance",
-      "romance_note": "通行毛本120回未叙杜夔与铸钟工柴玉争论、由曹操命其比较声韵的故事。",
-      "visual_hook": "铸钟作坊中，新钟悬架待击，杜夔侧耳辨音，柴玉持锤争辩，曹操居中听验。",
-      "confidence": "high",
-      "origin": "model",
-      "batch": "artisans",
-      "reviewed": false,
-      "quote_status": "attested",
-      "verdict_source": "model",
-      "romance_group": "演义未载",
-      "data_complete": true,
-      "status": "candidate",
-      "grade": "B",
-      "no": 11,
-      "id": "tale-011",
-      "toc_hits": [
-        "第十回",
-        "第十一回",
-        "第十九回",
-        "第二十一回",
-        "第二十五回",
-        "第三十一回"
-      ]
-    },
-    {
-      "title": "樊阿深针疗疾",
-      "source": "《三国志》卷二十九·魏书·方技传·华佗传",
-      "quote": "阿针背入一二寸，巨阙胸上五六寸，而病皆瘳。",
-      "synopsis": "华佗弟子樊阿擅长针术，突破当时对背部、胸腹进针深度的拘限，传中称其治疗有效。",
-      "characters": [
-        "樊阿"
-      ],
-      "region": "汉末",
-      "mood": "巧艺",
-      "romance_check": "not_in_romance",
-      "romance_note": "通行毛本120回未叙樊阿深针治病这一独立医案；不与华佗其他针灸情节混同。",
-      "visual_hook": "诊室内，樊阿凝神持针，旁观者紧张注视，病人伏身于榻，针具整齐排在案上。",
-      "confidence": "high",
-      "origin": "model",
-      "batch": "artisans",
-      "reviewed": false,
-      "quote_status": "attested",
-      "verdict_source": "model",
-      "romance_group": "演义未载",
-      "data_complete": true,
-      "status": "candidate",
-      "grade": "B",
-      "no": 12,
-      "id": "tale-012",
-      "toc_hits": []
-    },
-    {
-      "title": "流水驱动木偶",
-      "source": "《三国志》卷二十九·魏书·方技传·杜夔传裴松之注引《马先生传》",
-      "quote": "潜以水发焉。",
-      "synopsis": "魏明帝得到只能陈设的百戏模型，马钧改设机关，以水力驱动木偶表演歌舞杂技。",
-      "characters": [
-        "马钧",
-        "曹叡"
-      ],
-      "region": "魏",
-      "mood": "巧艺",
-      "romance_check": "not_in_romance",
-      "romance_note": "通行毛本120回未叙马钧以水力驱动百戏模型的故事。",
-      "visual_hook": "台前木人击鼓、吹箫、翻倒，台后剖面显出流水推动的轮轴机关。",
-      "confidence": "high",
-      "origin": "model",
-      "batch": "artisans",
-      "reviewed": false,
-      "quote_status": "attested",
-      "verdict_source": "model",
-      "romance_group": "演义未载",
-      "data_complete": true,
-      "status": "candidate",
-      "grade": "B",
-      "no": 13,
-      "id": "tale-013",
-      "toc_hits": []
-    },
-    {
-      "title": "童转翻车灌园",
-      "source": "《三国志》卷二十九·魏书·方技传·杜夔传裴松之注引《马先生传》",
-      "quote": "乃作翻车，令儿童转之。",
-      "synopsis": "马钧在京都有园地而苦于缺水，制成翻车，让儿童转动，便能连续提水灌园。",
-      "characters": [
-        "马钧",
-        "儿童"
-      ],
-      "region": "魏",
-      "mood": "巧艺",
-      "romance_check": "not_in_romance",
-      "romance_note": "通行毛本120回未叙马钧制翻车灌园；它也不是演义中的木牛流马故事。",
-      "visual_hook": "园边水沟旁，儿童转动翻车，槽中水流接续上升，流入干渴的菜畦。",
-      "confidence": "high",
-      "origin": "model",
-      "batch": "artisans",
-      "reviewed": false,
-      "quote_status": "attested",
-      "verdict_source": "model",
-      "romance_group": "演义未载",
-      "data_complete": true,
-      "status": "candidate",
-      "grade": "B",
-      "no": 14,
-      "id": "tale-014",
-      "toc_hits": []
-    },
-    {
-      "title": "陈登食脍生疾",
-      "source": "《三国志》卷二十九·魏书·方技传·华佗传",
-      "quote": "府君胃中有虫数升，欲成内疽，食腥物所为也。",
-      "synopsis": "陈登面赤不食，华佗诊为食腥所致，煎药使其吐虫病愈，并告诫三年后恐会复发。",
-      "characters": [
-        "陈登",
-        "华佗"
-      ],
-      "region": "汉末",
-      "mood": "考据",
-      "romance_check": "uncertain",
-      "romance_note": "史传确载陈登服药吐虫、华佗预告三年后复发之事；尚未完成毛本第七十八回医案段的逐字核对，不能仅凭该回写到华佗便断言陈登这一医案也已收入。",
-      "visual_hook": "陈登卧于榻上，案边尚留鱼脍盘，华佗端来药汤，侍者捧盆守候。",
-      "confidence": "medium",
-      "origin": "model",
-      "batch": "artisans",
-      "reviewed": true,
-      "quote_status": "attested",
-      "verification": "确认原摘录为《华佗传》陈登医案原文并原样保留，未把华佗在演义出场等同于此医案入书。",
-      "verdict_source": "review",
-      "romance_group": "演义归属待考",
-      "data_complete": true,
-      "status": "candidate",
-      "grade": "B",
-      "no": 15,
-      "id": "tale-015",
-      "toc_hits": []
-    },
-    {
-      "title": "华佗授五禽戏",
-      "source": "《后汉书》卷八十二下·方术列传下·华佗",
-      "quote": "吾有一术，名五禽之戏。",
-      "synopsis": "华佗向弟子吴普传授模仿虎鹿熊猿鸟的导引法。传中记吴普依此锻炼，年老仍耳目聪明。",
-      "characters": [
-        "华佗",
-        "吴普"
-      ],
-      "region": "汉末",
-      "mood": "巧艺",
-      "romance_check": "not_in_romance",
-      "romance_note": "通行毛本第七十八回集中叙写华佗医术及遇害，但未展开其教授吴普五禽戏的故事。",
-      "visual_hook": "庭院中师徒相对，华佗示范禽兽姿态，吴普依次伸臂、俯身、举足。",
-      "confidence": "high",
-      "origin": "model",
-      "batch": "houhanshu",
-      "reviewed": false,
-      "quote_status": "attested",
-      "verdict_source": "model",
-      "romance_group": "演义未载",
-      "data_complete": true,
-      "status": "candidate",
-      "grade": "B",
-      "no": 16,
-      "id": "tale-016",
-      "toc_hits": []
-    },
-    {
-      "title": "叔母劝谧向学",
-      "source": "《晋书》卷五十一·皇甫谧传",
-      "quote": "谧乃感激，就乡人席坦受书，勤力不怠。",
-      "synopsis": "皇甫谧年轻时贪玩不学，叔母任氏流泪劝诫。他感悟求师，家贫仍一边耕作一边读书。",
-      "characters": [
-        "皇甫谧",
-        "任氏",
-        "席坦"
-      ],
-      "region": "魏",
-      "mood": "孝行",
-      "romance_check": "not_in_romance",
-      "romance_note": "通行毛本未叙皇甫谧受叔母任氏劝诫、从席坦读书的早年故事，此条取自本传。",
-      "visual_hook": "皇甫谧捧着瓜果归家，叔母含泪劝学；转场田间，农具旁摊开书卷。",
-      "confidence": "high",
-      "origin": "model",
-      "batch": "houhanshu",
-      "reviewed": false,
-      "quote_status": "attested",
-      "verdict_source": "model",
-      "romance_group": "演义未载",
-      "data_complete": true,
-      "status": "candidate",
-      "grade": "B",
-      "no": 17,
-      "id": "tale-017",
-      "toc_hits": []
-    },
-    {
-      "title": "梁上君子受绢",
-      "source": "《后汉书》卷六十二·荀韩钟陈列传·陈寔",
-      "quote": "梁上君子者是矣！",
-      "synopsis": "陈寔发现窃贼藏在梁上，借训诫子孙劝其改过。窃贼下地谢罪，陈寔反赠绢二匹。",
-      "characters": [
-        "陈寔"
-      ],
-      "region": "汉末",
-      "mood": "悲悯",
-      "romance_check": "not_in_romance",
-      "romance_note": "通行毛本未叙陈寔发现梁上窃贼、劝诫赠绢的故事，此条取自本传。",
-      "visual_hook": "夜间堂屋，陈寔整衣训诫子孙，窃贼蜷伏梁间，随后伏地受绢。",
-      "confidence": "high",
-      "origin": "model",
-      "batch": "houhanshu",
-      "reviewed": false,
-      "quote_status": "attested",
-      "verdict_source": "model",
-      "romance_group": "演义未载",
-      "data_complete": true,
-      "status": "candidate",
-      "grade": "B",
-      "no": 18,
-      "id": "tale-018",
-      "toc_hits": []
-    },
-    {
-      "title": "王戎识道旁李",
-      "source": "《晋书》卷四十三·王戎传",
-      "quote": "夫李树在道而多子，必苦李也。",
-      "synopsis": "王戎幼时与群儿游玩，众人争摘道旁李子，唯独他不动，判断果实必苦，摘尝后果然如此。",
-      "characters": [
-        "王戎"
-      ],
-      "region": "魏",
-      "mood": "机智",
-      "romance_check": "not_in_romance",
-      "romance_note": "通行毛本未叙王戎幼年观察道旁李树、判断苦李的故事，此条取自《晋书》本传。",
-      "visual_hook": "道旁李树果实累累，群童争抢攀摘，王戎站在树外指着满枝果实说明理由。",
-      "confidence": "high",
-      "origin": "model",
-      "batch": "houhanshu",
-      "reviewed": false,
-      "quote_status": "attested",
-      "verdict_source": "model",
-      "romance_group": "演义未载",
-      "data_complete": true,
-      "status": "candidate",
-      "grade": "B",
-      "no": 19,
-      "id": "tale-019",
-      "toc_hits": []
-    },
-    {
-      "title": "羊祜桑中寻环",
-      "source": "《晋书》卷三十四·羊祜传",
-      "quote": "祜年五岁，令乳母取所弄金环。",
-      "synopsis": "传中记五岁羊祜索要金环，乳母说他从未有过。他到邻家桑树中取出亡儿旧物，令邻母惊异。",
-      "characters": [
-        "羊祜"
-      ],
-      "region": "魏",
-      "mood": "考据",
-      "romance_check": "not_in_romance",
-      "romance_note": "通行毛本末回写羊祜参与晋吴关系及举荐杜预等事，未写幼年寻环。这是本传所载异闻，不作为轮回事实确认。",
-      "visual_hook": "幼童领着乳母走到邻家东墙，伸手探入桑树，掌中现出一枚金环。",
-      "confidence": "high",
-      "origin": "model",
-      "batch": "houhanshu",
-      "reviewed": false,
-      "quote_status": "attested",
-      "verdict_source": "model",
-      "romance_group": "演义未载",
-      "data_complete": true,
-      "status": "candidate",
-      "grade": "B",
-      "no": 20,
-      "id": "tale-020",
-      "toc_hits": []
-    },
-    {
       "title": "茅容杀鸡奉母",
       "source": "《后汉书》卷六十八·郭符许列传·郭太附茅容事",
       "quote": "既而以供其母，自以草蔬与客同饭。",
@@ -949,8 +713,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 21,
-      "id": "tale-021",
+      "no": 11,
+      "id": "tale-011",
       "toc_hits": []
     },
     {
@@ -976,8 +740,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 22,
-      "id": "tale-022",
+      "no": 12,
+      "id": "tale-012",
       "toc_hits": []
     },
     {
@@ -1003,8 +767,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 23,
-      "id": "tale-023",
+      "no": 13,
+      "id": "tale-013",
       "toc_hits": []
     },
     {
@@ -1031,8 +795,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 24,
-      "id": "tale-024",
+      "no": 14,
+      "id": "tale-014",
       "toc_hits": [
         "第九十三回"
       ]
@@ -1061,8 +825,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 25,
-      "id": "tale-025",
+      "no": 15,
+      "id": "tale-015",
       "toc_hits": [
         "第六十三回",
         "第七十回",
@@ -1094,8 +858,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 26,
-      "id": "tale-026",
+      "no": 16,
+      "id": "tale-016",
       "toc_hits": []
     },
     {
@@ -1121,8 +885,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 27,
-      "id": "tale-027",
+      "no": 17,
+      "id": "tale-017",
       "toc_hits": []
     },
     {
@@ -1149,8 +913,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 28,
-      "id": "tale-028",
+      "no": 18,
+      "id": "tale-018",
       "toc_hits": []
     },
     {
@@ -1178,8 +942,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 29,
-      "id": "tale-029",
+      "no": 19,
+      "id": "tale-019",
       "toc_hits": [
         "第十回",
         "第十一回",
@@ -1214,8 +978,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 30,
-      "id": "tale-030",
+      "no": 20,
+      "id": "tale-020",
       "toc_hits": [
         "第三十三回",
         "第四十四回",
@@ -1249,8 +1013,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 31,
-      "id": "tale-031",
+      "no": 21,
+      "id": "tale-021",
       "toc_hits": []
     },
     {
@@ -1278,8 +1042,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 32,
-      "id": "tale-032",
+      "no": 22,
+      "id": "tale-022",
       "toc_hits": [
         "第十回",
         "第十一回",
@@ -1314,8 +1078,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 33,
-      "id": "tale-033",
+      "no": 23,
+      "id": "tale-023",
       "toc_hits": [
         "第十一回",
         "第十五回",
@@ -1348,8 +1112,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 34,
-      "id": "tale-034",
+      "no": 24,
+      "id": "tale-024",
       "toc_hits": [
         "第五十九回",
         "第六十四回",
@@ -1380,8 +1144,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 35,
-      "id": "tale-035",
+      "no": 25,
+      "id": "tale-025",
       "toc_hits": [
         "第十一回"
       ]
@@ -1412,8 +1176,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 36,
-      "id": "tale-036",
+      "no": 26,
+      "id": "tale-026",
       "toc_hits": []
     },
     {
@@ -1441,8 +1205,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 37,
-      "id": "tale-037",
+      "no": 27,
+      "id": "tale-027",
       "toc_hits": [
         "第四十七回",
         "第六十三回",
@@ -1474,8 +1238,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 38,
-      "id": "tale-038",
+      "no": 28,
+      "id": "tale-028",
       "toc_hits": [
         "第十回",
         "第十一回",
@@ -1508,8 +1272,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 39,
-      "id": "tale-039",
+      "no": 29,
+      "id": "tale-029",
       "toc_hits": [
         "第五十九回"
       ]
@@ -1538,8 +1302,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 40,
-      "id": "tale-040",
+      "no": 30,
+      "id": "tale-030",
       "toc_hits": []
     },
     {
@@ -1566,8 +1330,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 41,
-      "id": "tale-041",
+      "no": 31,
+      "id": "tale-031",
       "toc_hits": []
     },
     {
@@ -1594,8 +1358,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 42,
-      "id": "tale-042",
+      "no": 32,
+      "id": "tale-032",
       "toc_hits": [
         "第九十三回"
       ]
@@ -1625,8 +1389,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 43,
-      "id": "tale-043",
+      "no": 33,
+      "id": "tale-033",
       "toc_hits": [
         "第十一回"
       ]
@@ -1654,8 +1418,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 44,
-      "id": "tale-044",
+      "no": 34,
+      "id": "tale-034",
       "toc_hits": []
     },
     {
@@ -1682,8 +1446,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 45,
-      "id": "tale-045",
+      "no": 35,
+      "id": "tale-035",
       "toc_hits": []
     },
     {
@@ -1712,8 +1476,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 46,
-      "id": "tale-046",
+      "no": 36,
+      "id": "tale-036",
       "toc_hits": [
         "第三十三回",
         "第八十回",
@@ -1745,8 +1509,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 47,
-      "id": "tale-047",
+      "no": 37,
+      "id": "tale-037",
       "toc_hits": []
     },
     {
@@ -1772,8 +1536,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 48,
-      "id": "tale-048",
+      "no": 38,
+      "id": "tale-038",
       "toc_hits": []
     },
     {
@@ -1801,8 +1565,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 49,
-      "id": "tale-049",
+      "no": 39,
+      "id": "tale-039",
       "toc_hits": [
         "第四十四回",
         "第六十一回",
@@ -1832,8 +1596,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 50,
-      "id": "tale-050",
+      "no": 40,
+      "id": "tale-040",
       "toc_hits": []
     },
     {
@@ -1861,8 +1625,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 51,
-      "id": "tale-051",
+      "no": 41,
+      "id": "tale-041",
       "toc_hits": [
         "第六十五回"
       ]
@@ -1890,8 +1654,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 52,
-      "id": "tale-052",
+      "no": 42,
+      "id": "tale-042",
       "toc_hits": []
     },
     {
@@ -1920,8 +1684,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 53,
-      "id": "tale-053",
+      "no": 43,
+      "id": "tale-043",
       "toc_hits": []
     },
     {
@@ -1947,8 +1711,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 54,
-      "id": "tale-054",
+      "no": 44,
+      "id": "tale-044",
       "toc_hits": []
     },
     {
@@ -1975,8 +1739,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 55,
-      "id": "tale-055",
+      "no": 45,
+      "id": "tale-045",
       "toc_hits": []
     },
     {
@@ -2003,8 +1767,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 56,
-      "id": "tale-056",
+      "no": 46,
+      "id": "tale-046",
       "toc_hits": [
         "第十回",
         "第十一回",
@@ -2040,8 +1804,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 57,
-      "id": "tale-057",
+      "no": 47,
+      "id": "tale-047",
       "toc_hits": [
         "第十回",
         "第十一回",
@@ -2075,8 +1839,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 58,
-      "id": "tale-058",
+      "no": 48,
+      "id": "tale-048",
       "toc_hits": []
     },
     {
@@ -2103,8 +1867,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 59,
-      "id": "tale-059",
+      "no": 49,
+      "id": "tale-049",
       "toc_hits": []
     },
     {
@@ -2131,8 +1895,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 60,
-      "id": "tale-060",
+      "no": 50,
+      "id": "tale-050",
       "toc_hits": []
     },
     {
@@ -2158,8 +1922,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 61,
-      "id": "tale-061",
+      "no": 51,
+      "id": "tale-051",
       "toc_hits": []
     },
     {
@@ -2185,8 +1949,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 62,
-      "id": "tale-062",
+      "no": 52,
+      "id": "tale-052",
       "toc_hits": []
     },
     {
@@ -2212,8 +1976,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 63,
-      "id": "tale-063",
+      "no": 53,
+      "id": "tale-053",
       "toc_hits": [
         "第一百零八回",
         "第一百一十三回"
@@ -2243,8 +2007,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 64,
-      "id": "tale-064",
+      "no": 54,
+      "id": "tale-054",
       "toc_hits": [
         "第四十四回",
         "第六十一回",
@@ -2275,8 +2039,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 65,
-      "id": "tale-065",
+      "no": 55,
+      "id": "tale-055",
       "toc_hits": []
     },
     {
@@ -2304,8 +2068,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 66,
-      "id": "tale-066",
+      "no": 56,
+      "id": "tale-056",
       "toc_hits": [
         "第四十四回",
         "第六十一回",
@@ -2336,8 +2100,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 67,
-      "id": "tale-067",
+      "no": 57,
+      "id": "tale-057",
       "toc_hits": []
     },
     {
@@ -2367,8 +2131,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 68,
-      "id": "tale-068",
+      "no": 58,
+      "id": "tale-058",
       "toc_hits": []
     },
     {
@@ -2395,8 +2159,8 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 69,
-      "id": "tale-069",
+      "no": 59,
+      "id": "tale-059",
       "toc_hits": [
         "第四十四回",
         "第六十一回",
@@ -2428,8 +2192,161 @@
       "data_complete": true,
       "status": "candidate",
       "grade": "B",
-      "no": 70,
-      "id": "tale-070",
+      "no": 60,
+      "id": "tale-060",
+      "toc_hits": []
+    },
+    {
+      "title": "杜夔校钟辨音",
+      "source": "《三国志》卷二十九·魏书·方技传·杜夔传",
+      "quote": "太祖使玉与夔各作声韵，仪较是非，然后知夔为精，而玉之妄。",
+      "synopsis": "杜夔要求柴玉反复重铸音律不合的铜钟，柴玉不服；曹操让二人比试，确认杜夔辨音准确。",
+      "characters": [
+        "杜夔",
+        "柴玉",
+        "曹操"
+      ],
+      "region": "汉末",
+      "mood": "巧艺",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本120回未叙杜夔与铸钟工柴玉争论、由曹操命其比较声韵的故事。",
+      "visual_hook": "铸钟作坊中，新钟悬架待击，杜夔侧耳辨音，柴玉持锤争辩，曹操居中听验。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "artisans",
+      "reviewed": false,
+      "quote_status": "attested",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "data_complete": true,
+      "status": "used",
+      "used_as": "杜夔校钟辨音",
+      "grade": "U",
+      "no": 61,
+      "id": "tale-061",
+      "toc_hits": [
+        "第十回",
+        "第十一回",
+        "第十九回",
+        "第二十一回",
+        "第二十五回",
+        "第三十一回"
+      ]
+    },
+    {
+      "title": "樊阿深针疗疾",
+      "source": "《三国志》卷二十九·魏书·方技传·华佗传",
+      "quote": "阿针背入一二寸，巨阙胸上五六寸，而病皆瘳。",
+      "synopsis": "华佗弟子樊阿擅长针术，突破当时对背部、胸腹进针深度的拘限，传中称其治疗有效。",
+      "characters": [
+        "樊阿"
+      ],
+      "region": "汉末",
+      "mood": "巧艺",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本120回未叙樊阿深针治病这一独立医案；不与华佗其他针灸情节混同。",
+      "visual_hook": "诊室内，樊阿凝神持针，旁观者紧张注视，病人伏身于榻，针具整齐排在案上。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "artisans",
+      "reviewed": false,
+      "quote_status": "attested",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "data_complete": true,
+      "status": "used",
+      "used_as": "樊阿深针疗疾",
+      "grade": "U",
+      "no": 62,
+      "id": "tale-062",
+      "toc_hits": []
+    },
+    {
+      "title": "流水驱动木偶",
+      "source": "《三国志》卷二十九·魏书·方技传·杜夔传裴松之注引《马先生传》",
+      "quote": "潜以水发焉。",
+      "synopsis": "魏明帝得到只能陈设的百戏模型，马钧改设机关，以水力驱动木偶表演歌舞杂技。",
+      "characters": [
+        "马钧",
+        "曹叡"
+      ],
+      "region": "魏",
+      "mood": "巧艺",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本120回未叙马钧以水力驱动百戏模型的故事。",
+      "visual_hook": "台前木人击鼓、吹箫、翻倒，台后剖面显出流水推动的轮轴机关。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "artisans",
+      "reviewed": false,
+      "quote_status": "attested",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "data_complete": true,
+      "status": "used",
+      "used_as": "流水驱动木偶",
+      "grade": "U",
+      "no": 63,
+      "id": "tale-063",
+      "toc_hits": []
+    },
+    {
+      "title": "童转翻车灌园",
+      "source": "《三国志》卷二十九·魏书·方技传·杜夔传裴松之注引《马先生传》",
+      "quote": "乃作翻车，令儿童转之。",
+      "synopsis": "马钧在京都有园地而苦于缺水，制成翻车，让儿童转动，便能连续提水灌园。",
+      "characters": [
+        "马钧",
+        "儿童"
+      ],
+      "region": "魏",
+      "mood": "巧艺",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本120回未叙马钧制翻车灌园；它也不是演义中的木牛流马故事。",
+      "visual_hook": "园边水沟旁，儿童转动翻车，槽中水流接续上升，流入干渴的菜畦。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "artisans",
+      "reviewed": false,
+      "quote_status": "attested",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "data_complete": true,
+      "status": "used",
+      "used_as": "童转翻车灌园",
+      "grade": "U",
+      "no": 64,
+      "id": "tale-064",
+      "toc_hits": []
+    },
+    {
+      "title": "陈登食脍生疾",
+      "source": "《三国志》卷二十九·魏书·方技传·华佗传",
+      "quote": "府君胃中有虫数升，欲成内疽，食腥物所为也。",
+      "synopsis": "陈登面赤不食，华佗诊为食腥所致，煎药使其吐虫病愈，并告诫三年后恐会复发。",
+      "characters": [
+        "陈登",
+        "华佗"
+      ],
+      "region": "汉末",
+      "mood": "考据",
+      "romance_check": "uncertain",
+      "romance_note": "史传确载陈登服药吐虫、华佗预告三年后复发之事；尚未完成毛本第七十八回医案段的逐字核对，不能仅凭该回写到华佗便断言陈登这一医案也已收入。",
+      "visual_hook": "陈登卧于榻上，案边尚留鱼脍盘，华佗端来药汤，侍者捧盆守候。",
+      "confidence": "medium",
+      "origin": "model",
+      "batch": "artisans",
+      "reviewed": true,
+      "quote_status": "attested",
+      "verification": "确认原摘录为《华佗传》陈登医案原文并原样保留，未把华佗在演义出场等同于此医案入书。",
+      "verdict_source": "review",
+      "romance_group": "演义归属待考",
+      "data_complete": true,
+      "status": "used",
+      "used_as": "陈登食脍生疾",
+      "grade": "U",
+      "no": 65,
+      "id": "tale-065",
       "toc_hits": []
     },
     {
@@ -2458,8 +2375,8 @@
       "status": "used",
       "used_as": "伊籍使吴",
       "grade": "U",
-      "no": 71,
-      "id": "tale-071",
+      "no": 66,
+      "id": "tale-066",
       "toc_hits": [
         "第四十四回",
         "第六十一回",
@@ -2493,8 +2410,8 @@
       "status": "used",
       "used_as": "元龙百尺楼",
       "grade": "U",
-      "no": 72,
-      "id": "tale-072",
+      "no": 67,
+      "id": "tale-067",
       "toc_hits": [
         "第六十五回"
       ]
@@ -2526,8 +2443,8 @@
       "status": "used",
       "used_as": "刘巴不与张飞共宿",
       "grade": "U",
-      "no": 73,
-      "id": "tale-073",
+      "no": 68,
+      "id": "tale-068",
       "toc_hits": [
         "第四十回",
         "第四十三回",
@@ -2564,8 +2481,8 @@
       "status": "used",
       "used_as": "士别三日",
       "grade": "U",
-      "no": 74,
-      "id": "tale-074",
+      "no": 69,
+      "id": "tale-069",
       "toc_hits": [
         "第四十四回",
         "第五十二回",
@@ -2598,8 +2515,8 @@
       "status": "used",
       "used_as": "孙权庱亭射虎",
       "grade": "U",
-      "no": 75,
-      "id": "tale-075",
+      "no": 70,
+      "id": "tale-070",
       "toc_hits": [
         "第四十四回",
         "第六十一回",
@@ -2633,8 +2550,8 @@
       "status": "used",
       "used_as": "床头捉刀人",
       "grade": "U",
-      "no": 76,
-      "id": "tale-076",
+      "no": 71,
+      "id": "tale-071",
       "toc_hits": [
         "第十回",
         "第十一回",
@@ -2670,8 +2587,8 @@
       "status": "used",
       "used_as": "文姬归汉",
       "grade": "U",
-      "no": 77,
-      "id": "tale-077",
+      "no": 72,
+      "id": "tale-072",
       "toc_hits": [
         "第十回",
         "第十一回",
@@ -2706,8 +2623,8 @@
       "status": "used",
       "used_as": "曲有误周郎顾",
       "grade": "U",
-      "no": 78,
-      "id": "tale-078",
+      "no": 73,
+      "id": "tale-073",
       "toc_hits": [
         "第四十四回",
         "第四十九回"
@@ -2739,8 +2656,8 @@
       "status": "used",
       "used_as": "曹冲称象",
       "grade": "U",
-      "no": 79,
-      "id": "tale-079",
+      "no": 74,
+      "id": "tale-074",
       "toc_hits": [
         "第十回",
         "第十一回",
@@ -2775,8 +2692,8 @@
       "status": "used",
       "used_as": "望梅止渴",
       "grade": "U",
-      "no": 80,
-      "id": "tale-080",
+      "no": 75,
+      "id": "tale-075",
       "toc_hits": [
         "第十回",
         "第十一回",
@@ -2812,8 +2729,8 @@
       "status": "used",
       "used_as": "一场驴鸣送故人",
       "grade": "U",
-      "no": 81,
-      "id": "tale-081",
+      "no": 76,
+      "id": "tale-076",
       "toc_hits": [
         "第三十三回",
         "第八十回",
@@ -2846,8 +2763,8 @@
       "status": "used",
       "used_as": "胡威千里省父",
       "grade": "U",
-      "no": 82,
-      "id": "tale-082",
+      "no": 77,
+      "id": "tale-077",
       "toc_hits": []
     },
     {
@@ -2876,8 +2793,8 @@
       "status": "used",
       "used_as": "蔡邕倒屣迎少年",
       "grade": "U",
-      "no": 83,
-      "id": "tale-083",
+      "no": 78,
+      "id": "tale-078",
       "toc_hits": []
     },
     {
@@ -2907,8 +2824,8 @@
       "status": "used",
       "used_as": "诸葛恪得驴",
       "grade": "U",
-      "no": 84,
-      "id": "tale-084",
+      "no": 79,
+      "id": "tale-079",
       "toc_hits": [
         "第三十六回",
         "第四十回",
@@ -2944,8 +2861,8 @@
       "status": "used",
       "used_as": "费祎临军不废棋",
       "grade": "U",
-      "no": 85,
-      "id": "tale-085",
+      "no": 80,
+      "id": "tale-080",
       "toc_hits": []
     },
     {
@@ -2974,8 +2891,8 @@
       "status": "used",
       "used_as": "辛毗牵衣直谏",
       "grade": "U",
-      "no": 86,
-      "id": "tale-086",
+      "no": 81,
+      "id": "tale-081",
       "toc_hits": [
         "第三十三回",
         "第八十回",
@@ -3007,6 +2924,149 @@
       "data_complete": true,
       "status": "used",
       "used_as": "马钧复造指南车",
+      "grade": "U",
+      "no": 82,
+      "id": "tale-082",
+      "toc_hits": []
+    },
+    {
+      "title": "华佗授五禽戏",
+      "source": "《后汉书》卷八十二下·方术列传下·华佗",
+      "quote": "吾有一术，名五禽之戏。",
+      "synopsis": "华佗向弟子吴普传授模仿虎鹿熊猿鸟的导引法。传中记吴普依此锻炼，年老仍耳目聪明。",
+      "characters": [
+        "华佗",
+        "吴普"
+      ],
+      "region": "汉末",
+      "mood": "巧艺",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本第七十八回集中叙写华佗医术及遇害，但未展开其教授吴普五禽戏的故事。",
+      "visual_hook": "庭院中师徒相对，华佗示范禽兽姿态，吴普依次伸臂、俯身、举足。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "houhanshu",
+      "reviewed": false,
+      "quote_status": "attested",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "data_complete": true,
+      "status": "used",
+      "used_as": "华佗授五禽戏",
+      "grade": "U",
+      "no": 83,
+      "id": "tale-083",
+      "toc_hits": []
+    },
+    {
+      "title": "叔母劝谧向学",
+      "source": "《晋书》卷五十一·皇甫谧传",
+      "quote": "谧乃感激，就乡人席坦受书，勤力不怠。",
+      "synopsis": "皇甫谧年轻时贪玩不学，叔母任氏流泪劝诫。他感悟求师，家贫仍一边耕作一边读书。",
+      "characters": [
+        "皇甫谧",
+        "任氏",
+        "席坦"
+      ],
+      "region": "魏",
+      "mood": "孝行",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未叙皇甫谧受叔母任氏劝诫、从席坦读书的早年故事，此条取自本传。",
+      "visual_hook": "皇甫谧捧着瓜果归家，叔母含泪劝学；转场田间，农具旁摊开书卷。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "houhanshu",
+      "reviewed": false,
+      "quote_status": "attested",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "data_complete": true,
+      "status": "used",
+      "used_as": "叔母劝谧向学",
+      "grade": "U",
+      "no": 84,
+      "id": "tale-084",
+      "toc_hits": []
+    },
+    {
+      "title": "梁上君子受绢",
+      "source": "《后汉书》卷六十二·荀韩钟陈列传·陈寔",
+      "quote": "梁上君子者是矣！",
+      "synopsis": "陈寔发现窃贼藏在梁上，借训诫子孙劝其改过。窃贼下地谢罪，陈寔反赠绢二匹。",
+      "characters": [
+        "陈寔"
+      ],
+      "region": "汉末",
+      "mood": "悲悯",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未叙陈寔发现梁上窃贼、劝诫赠绢的故事，此条取自本传。",
+      "visual_hook": "夜间堂屋，陈寔整衣训诫子孙，窃贼蜷伏梁间，随后伏地受绢。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "houhanshu",
+      "reviewed": false,
+      "quote_status": "attested",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "data_complete": true,
+      "status": "used",
+      "used_as": "梁上君子受绢",
+      "grade": "U",
+      "no": 85,
+      "id": "tale-085",
+      "toc_hits": []
+    },
+    {
+      "title": "王戎识道旁李",
+      "source": "《晋书》卷四十三·王戎传",
+      "quote": "夫李树在道而多子，必苦李也。",
+      "synopsis": "王戎幼时与群儿游玩，众人争摘道旁李子，唯独他不动，判断果实必苦，摘尝后果然如此。",
+      "characters": [
+        "王戎"
+      ],
+      "region": "魏",
+      "mood": "机智",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本未叙王戎幼年观察道旁李树、判断苦李的故事，此条取自《晋书》本传。",
+      "visual_hook": "道旁李树果实累累，群童争抢攀摘，王戎站在树外指着满枝果实说明理由。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "houhanshu",
+      "reviewed": false,
+      "quote_status": "attested",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "data_complete": true,
+      "status": "used",
+      "used_as": "王戎识道旁李",
+      "grade": "U",
+      "no": 86,
+      "id": "tale-086",
+      "toc_hits": []
+    },
+    {
+      "title": "羊祜桑中寻环",
+      "source": "《晋书》卷三十四·羊祜传",
+      "quote": "祜年五岁，令乳母取所弄金环。",
+      "synopsis": "传中记五岁羊祜索要金环，乳母说他从未有过。他到邻家桑树中取出亡儿旧物，令邻母惊异。",
+      "characters": [
+        "羊祜"
+      ],
+      "region": "魏",
+      "mood": "考据",
+      "romance_check": "not_in_romance",
+      "romance_note": "通行毛本末回写羊祜参与晋吴关系及举荐杜预等事，未写幼年寻环。这是本传所载异闻，不作为轮回事实确认。",
+      "visual_hook": "幼童领着乳母走到邻家东墙，伸手探入桑树，掌中现出一枚金环。",
+      "confidence": "high",
+      "origin": "model",
+      "batch": "houhanshu",
+      "reviewed": false,
+      "quote_status": "attested",
+      "verdict_source": "model",
+      "romance_group": "演义未载",
+      "data_complete": true,
+      "status": "used",
+      "used_as": "羊祜桑中寻环",
       "grade": "U",
       "no": 87,
       "id": "tale-087",

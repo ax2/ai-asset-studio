@@ -1,0 +1,222 @@
+{
+  "id": "comic-sanguo-tales-q03-e05-tale-025",
+  "title": "孔融登门认亲",
+  "subtitle": "十岁少年借先贤问礼，说出一段两家通好",
+  "story_source": "《三国演义》第11回《刘皇叔北海救孔融 吕温侯濮阳破曹操》；《后汉书》卷七十·郑孔荀列传。本题所引原文：“昔先君仲尼与君先人伯阳有师资之尊，是仆与君奕世为通好也。”故事记孔融十岁拜访李膺，以孔子曾向老子问礼的旧事，解释自己何以自称李氏通家。",
+  "why_not_in_romance": "本故事并非《三国演义》未收录的故事。第11回介绍孔融时，插叙其十岁拜访李膺、自称通家的故事，随后又写他反驳陈炜。【演义归属：演义亦载】本集只呈现登门与解释通家关系，不延伸至反驳陈炜的后续情节。",
+  "synopsis": "十岁的孔融到李膺府上求见，自称是李家的通家子弟，因而获准入内。李膺问两家有何旧交，孔融便以先祖孔子曾向李氏先人老子问礼为据，说两家世代通好。少年应对从容，令李膺与在座宾客惊异。",
+  "characters": [
+    {
+      "name": "孔融",
+      "slug": "kong-rong",
+      "existing": false,
+      "role": "十岁少年，登门拜访李膺的孔氏后人",
+      "profile": {
+        "age": "十岁",
+        "gender": "男",
+        "role": "出身士人家庭的聪敏少年，本集尚非北海相",
+        "era": "东汉桓帝时期",
+        "face": "圆润而清秀的儿童面庞，眉形清晰，鼻梁小巧，面无须",
+        "eyes": "深褐色眼睛，目光明亮，观察敏锐",
+        "skin": "自然浅麦色，面颊略带健康暖色",
+        "build": "儿童身量，体形清瘦，肩窄，比例符合十岁年龄",
+        "hair": "乌黑头发束为整齐童髻，以深褐布带固定，不戴成人冠",
+        "marks": "无伤疤、无面饰，以明亮眼神和镇定神情辨识",
+        "outfit": "固定穿浅青灰色素面交领及膝小袍，米白内领，深褐窄布腰带，灰褐长裤与深褐软布履；细麻与朴素绢料质感，六格不换装",
+        "accessories": "仅有束发布带与布腰带，不佩贵重玉饰",
+        "weapon": "无",
+        "palette": "浅青灰、米白、深褐、灰褐、墨黑",
+        "temperament": "聪敏自信，礼数周全，应答从容而不轻浮",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "No adult proportions, no beard, no adult crown, no armor, no costume changes, no hairstyle changes, no weapons, no modern objects, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body standing character portrait, hands joined in a courteous greeting at chest level, chin gently raised with quiet confidence, both feet visible, plain empty background; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "东汉",
+        "孔融",
+        "少年",
+        "机辩"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "李膺",
+      "slug": "li-ying",
+      "existing": false,
+      "role": "东汉名士，受孔融拜访的主人",
+      "profile": {
+        "age": "约五十岁",
+        "gender": "男",
+        "role": "声望甚高的东汉名士，府邸会客主人",
+        "era": "东汉桓帝时期",
+        "face": "清癯长脸，颧骨适度突出，唇上短须，颏下整齐中长须",
+        "eyes": "深褐色眼睛，眼形细长，目光审慎而有威仪",
+        "skin": "自然浅麦色，额角有轻微岁月纹理",
+        "build": "中等偏高身量，体形清瘦，坐立端正",
+        "hair": "黑发夹少量灰白，整齐束髻，戴朴素黑色汉式进贤冠",
+        "marks": "灰黑相间的整齐胡须与端凝眉目，无伤疤",
+        "outfit": "固定穿深黛青色素绢交领宽袖长袍，米白内领，墨黑窄缘，深褐素革带，深灰下裳与黑色布履；衣料细密而无华丽纹饰，六格不换装",
+        "accessories": "朴素黑色汉式进贤冠与素革腰带，不佩夸张珠玉",
+        "weapon": "无",
+        "palette": "深黛青、米白、墨黑、深褐、灰白",
+        "temperament": "端严持重，重视名望与礼数，见到才思时不掩赞赏",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting",
+        "negative": "No imperial crown, no dragon robes, no armor, no costume changes, no hairstyle changes, no weapons, no modern furniture, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body standing character portrait, upright scholarly bearing, one hand resting lightly over the other within broad sleeves, calm appraising expression, both feet visible, plain empty background; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "tags": [
+        "三国",
+        "东汉",
+        "李膺",
+        "名士",
+        "会客"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "李府门前",
+      "description": "东汉洛阳士人府邸的门前。灰瓦覆顶，夯土院墙，深褐木门半开，石质门槛连接平整土路。门额与门扇均无文字，环境概念图不含人物。",
+      "prompt_extra": "Standalone empty environment concept art of an Eastern Han scholarly residence entrance in Luoyang, gray tiled eaves, rammed-earth walls, half-open dark timber doors, low stone threshold, compacted earth approach, blank unmarked architectural surfaces, soft late-morning daylight, restrained blue-gray and earth-brown pigments, clear entrance geography, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, fine wood and masonry texture, even lighting, no people, no human silhouettes, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "门庭肃静，略显庄严"
+    },
+    {
+      "id": "scene-02",
+      "name": "李府会客堂",
+      "description": "东汉士人宅邸会客堂。木柱与素壁围合空间，主人席后设无纹木屏，低矮漆案旁铺坐席，侧面留空席暗示宾客会集。无人物、画像及带字器物。",
+      "prompt_extra": "Standalone empty environment concept art of an Eastern Han reception hall, timber columns, plain plaster walls, an undecorated wooden screen behind the host position, low dark lacquer table, woven floor mats, additional empty guest mats along the side, soft daylight from the courtyard, no chairs, no portraits, no inscribed objects, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and woven textile texture, even lighting, no people, no human silhouettes, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "清雅端肃，渐转惊喜"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "十岁孔融，登门求见名士李膺。",
+      "dialogue": [],
+      "visual": "Wide establishing view of scene-01, the Eastern Han residence entrance. Kong Rong alone stands before the half-open timber doors, looking toward the doorway with composed curiosity. His small child stature contrasts with the imposing gate. Use his exact character-card face, child topknot and fixed pale blue-gray clothing. No gatekeeper, servants, passersby or background figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孔融"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "他自称通家子弟，请人通报。",
+      "dialogue": [
+        {
+          "speaker": "孔融",
+          "line": "我是李君的通家子弟，请为我通报。"
+        }
+      ],
+      "visual": "Medium view at the same entrance in scene-01. Kong Rong alone faces the open doorway and makes a polite joined-hands greeting, speaking confidently toward an unseen listener beyond the crop. Show no listener, no extra hands, no silhouettes and no reflections of other people. Preserve his exact child proportions, hairstyle and unchanged costume. The dark timber doorway frames his bright, assured expression. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孔融"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "孔融获准入堂，向主人行礼。",
+      "dialogue": [
+        {
+          "speaker": "孔融",
+          "line": "孔融拜见李君。"
+        }
+      ],
+      "visual": "Wide two-person view inside scene-02. Kong Rong stands on the visitor side of the low table and bows with joined hands. Li Ying sits formally on the host mat before the plain wooden screen, watching the child with measured interest. Preserve both character cards exactly, including Li Ying's plain black Han scholar crown and dark indigo robe. Side guest mats remain empty within the visible frame; all other guests are outside the crop and never depicted. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孔融",
+        "李膺"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "李膺不解，问起两家的旧交。",
+      "dialogue": [
+        {
+          "speaker": "李膺",
+          "line": "我与你家，有什么旧交呢？"
+        }
+      ],
+      "visual": "Medium two-person view in scene-02, Li Ying seated at the low table on the right, slightly leaning forward with one open palm in a restrained questioning gesture. Kong Rong stands on the left, hands respectfully joined, looking directly at the host without anxiety. Keep the plain screen and timber column positions consistent. Exactly two people, no visible audience. Preserve all facial traits, hairstyles and clothing from the character cards. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孔融",
+        "李膺"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "他借孔子问礼老子的旧事作答。",
+      "dialogue": [
+        {
+          "speaker": "孔融",
+          "line": "昔先君仲尼与君先人伯阳有师资之尊，是仆与君奕世为通好也。"
+        }
+      ],
+      "visual": "Close view of Kong Rong alone in scene-02, framed from the waist upward against softly resolved plain timber and plaster details. He answers with bright steady eyes, a subtle confident smile and a small courteous hand gesture. Convey agile reasoning without caricature or smugness. Keep his exact ten-year-old face, black child topknot, pale blue-gray robe and off-white inner collar. Do not depict Confucius, Laozi, imagined ancestors, portraits, symbolic figures or flashback scenes. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孔融"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "一席巧答，令李膺与满座宾客惊异。",
+      "dialogue": [],
+      "visual": "Medium two-person concluding view in scene-02. Li Ying sits upright with slightly raised eyebrows and a restrained appreciative smile, visibly surprised by the child's answer. Kong Rong stands opposite him with joined hands, calm and courteous rather than triumphant. Maintain the same host table, plain screen and daylight direction. Show only Kong Rong and Li Ying; the historically present guests remain entirely outside the crop, with no crowd silhouettes, reflections or extra limbs. Preserve both character cards and unchanged costumes. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "孔融",
+        "李膺"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture where applicable, and even lighting. This episode depicts Eastern Han civilian scholars, so do not introduce armor or weapons. Maintain exact character-card facial features, age, body proportions, hairstyles, headwear and clothing throughout all six panels. Show at most the two listed characters, with no additional people, silhouettes, portraits or human reflections. Environment concept images must contain no people. Use only the two established environments, with consistent architecture and props. Keep all architectural surfaces and objects uninscribed; forbid seals, signboards, calligraphy, speech bubbles and drawn sound effects. Narration and dialogue are metadata for HTML overlay only. Do not visualize Confucius or Laozi as additional characters or flashbacks. No modern furniture or objects; no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为孔融十岁访李膺、自称通家、获准入见、以孔子与老子的师资关系解释两家通好，以及宾客惊异。所谓“认亲”是标题化表达，实为借先贤关系申说世交，并非确认两家具有血缘关系。第五格保留题给原文，其余对白为便于阅读的文学化转述。门前行礼、堂内动作、人物外貌与建筑陈设属于视觉补足，不作为史料事实。门者及堂中其他宾客不入画、不设角色卡；满座反应只由旁白交代，画面以李膺的神情承接。本集不展开后续反驳陈炜的故事，也不将《三国演义》误称为汉代史料。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q03",
+  "episode": 5,
+  "story_bank_no": 25,
+  "_generation": {
+    "written_at": "2026-11-12T09:20:18+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 6328,
+      "completion_tokens": 4195,
+      "total_tokens": 10523,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 6325,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 340,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "2458a009ee09251c4713ed2e2267b8d5ee4717debcec1f5b1387fd1ed1686fe6",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

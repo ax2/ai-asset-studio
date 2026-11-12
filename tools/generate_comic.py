@@ -190,8 +190,11 @@ def portrait(cfg: dict, plan: dict, spec: dict, card: dict) -> dict:
 # ---------------------------------------------------------------- scenes
 
 def scene_asset(cfg: dict, plan: dict, scene: dict) -> dict:
+    # A script may supply `scene_visual_rules` to keep crowd/cast instructions
+    # out of the empty environment plates. Other scripts are unaffected.
+    scene_rules = str(plan.get("scene_visual_rules") or plan["visual_rules"])
     prompt = scenes.build_prompt(cfg, scene, style_id=plan["style_id"],
-                                 visual_rules=plan["visual_rules"])
+                                 visual_rules=scene_rules)
     data, _ext = imaging.call_openai(
         cfg, prompt, plan["image_model"], plan["quality"], plan["scene_size"])
     rec = write_png(
@@ -205,7 +208,7 @@ def scene_asset(cfg: dict, plan: dict, scene: dict) -> dict:
     card = dict(scene)
     card["scene_key"] = scene["id"]
     card["id"] = f"{plan['id']}--{scene['id']}"
-    card.update({"style_id": plan["style_id"], "visual_rules": plan["visual_rules"],
+    card.update({"style_id": plan["style_id"], "visual_rules": scene_rules,
                  "prompt": prompt, "model": plan["image_model"],
                  "quality": plan["quality"], "size": plan["scene_size"],
                  "asset_id": rec["id"], "batch_id": plan["id"]})

@@ -25,9 +25,26 @@
     "周瑜",
     "琴师",
     "曹冲",
-    "行军士卒"
+    "行军士卒",
+    "杜夔",
+    "柴玉",
+    "樊阿",
+    "病者",
+    "马钧",
+    "曹叡",
+    "转车儿童",
+    "华佗",
+    "吴普",
+    "皇甫谧",
+    "任氏",
+    "陈寔",
+    "梁上窃贼",
+    "王戎",
+    "同游童子",
+    "羊祜",
+    "李氏邻母"
   ],
-  "budget_spent_usd": 19.623,
+  "budget_spent_usd": 40.09,
   "batches": [
     {
       "no": 1,
@@ -58,8 +75,8 @@
         "望梅止渴"
       ],
       "status": "done",
-      "cost_usd": 19.623,
-      "assets": 93,
+      "cost_usd": 19.834,
+      "assets": 94,
       "finished_at": "2026-11-11T22:01:55+08:00",
       "error": "",
       "started_at": "2026-11-11T21:42:15+08:00",
@@ -94,12 +111,14 @@
         "刍狗三占异验",
         "十二踏板织绫"
       ],
-      "status": "running",
-      "cost_usd": 0.0,
-      "assets": 0,
-      "finished_at": "",
+      "status": "done",
+      "cost_usd": 20.256,
+      "assets": 96,
+      "finished_at": "2026-11-12T09:17:43+08:00",
       "error": "",
-      "started_at": "2026-11-11T22:35:07+08:00"
+      "started_at": "2026-11-12T08:35:23+08:00",
+      "series_manifest": "D:\\gdrive.photo\\ai-assets\\all\\sanguo-tales-q02\\series-manifest.json",
+      "read": "http://127.0.0.1:8777/pack/sanguo-tales-q02/index.html"
     },
     {
       "no": 3,
@@ -129,11 +148,12 @@
         "王戎识道旁李",
         "羊祜桑中寻环"
       ],
-      "status": "pending",
+      "status": "running",
       "cost_usd": 0.0,
       "assets": 0,
       "finished_at": "",
-      "error": ""
+      "error": "",
+      "started_at": "2026-11-12T09:17:44+08:00"
     },
     {
       "no": 4,

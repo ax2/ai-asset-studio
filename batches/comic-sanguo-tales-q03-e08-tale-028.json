@@ -1,0 +1,273 @@
+{
+  "id": "comic-sanguo-tales-q03-e08-tale-028",
+  "title": "王垕借头平怨",
+  "subtitle": "小斛奉命而用，罪名却由一人承担",
+  "story_source": "《三国演义》第17回《袁公路大起七军 曹孟德会合三将》。原文摘录：“欲借汝头以示众耳。”本篇依据明代小说情节改编，不将其视为《三国志》等史籍所证实的史实。",
+  "why_not_in_romance": "本故事并非《三国演义》未收录的故事，而是演义原有情节。第17回征袁术期间，写管粮官王垕奉命改用小斛，随后被曹操借头安抚军心。【演义归属：演义亦载】",
+  "synopsis": "征袁术时，曹军粮少。曹操命管粮官王垕改用小斛发粮，并许诺自有办法应付军怨。士卒发现粮少，怨声渐起。曹操却召回王垕，直言要借其首级示众。王垕虽辩称无罪，仍被处死，克扣军粮的罪名也被推到他身上。",
+  "characters": [
+    {
+      "name": "曹操",
+      "slug": "cao-cao",
+      "existing": true,
+      "role": "征袁术的曹军统帅；调用资产库“曹操·行军”版本，姓名仍使用“曹操”，全篇保持该既有角色卡的外貌与装备",
+      "pose": "Use the existing marching character asset without redesign; stand beside a campaign table, one hand resting on its edge and the other making a restrained commanding gesture.",
+      "tags": [
+        "三国",
+        "演义人物",
+        "既有角色",
+        "行军统帅"
+      ],
+      "profile": {
+        "age": "五十岁上下的成熟男子",
+        "gender": "男",
+        "role": "东汉丞相 · 魏王 · 枭雄",
+        "era": "东汉末年三国时期",
+        "face": "清瘦而线条凌厉的脸型，颧骨微凸",
+        "eyes": "细眼长髯，目光沉鸷锐利",
+        "skin": "偏白的冷峻肤色",
+        "build": "身长七尺，中等精瘦，姿态矜持",
+        "hair": "黑发整齐束于玄玉冠下，颌下长须修整细致",
+        "marks": "细目长髯，眉间一道浅纹",
+        "outfit": "玄色蟒纹深衣，暗金四爪蟒纹满绣，交领缘饰朱红，外披黑貂大氅，貂毛根根分明，腰束玉带镶鎏金兽首",
+        "accessories": "玄玉冠、玉带、黑貂大氅、朱红印绶",
+        "weapon": "倚天剑，玄鞘嵌金，佩于左腰",
+        "palette": "玄黑、墨青、暗金、朱红、玉白",
+        "temperament": "沉鸷多疑、雄猜果决、不怒自威的枭雄气度",
+        "art_style": "premium Three Kingdoms historical-fantasy game character concept art, highly detailed painterly digital illustration, gold-thread dragon embroidery, dark fur texture, crisp material separation, muted historical pigments",
+        "negative": "photograph, 3D render, plastic, modern clothing, anime chibi, text, watermark, cropped body, extra characters, bright saturated colors, different outfit"
+      },
+      "character_id": "char-20261110-144930-66b9cc"
+    },
+    {
+      "name": "王垕",
+      "slug": "wang-hou",
+      "existing": false,
+      "role": "曹军管粮官，奉命以小斛发粮，后被处死承担罪名",
+      "profile": {
+        "age": "Approximately forty years old; an artistic choice rather than a documented age.",
+        "gender": "Male.",
+        "role": "Military grain-distribution official serving in Cao Cao's army in the novel.",
+        "era": "Late Eastern Han, during the campaign against Yuan Shu.",
+        "face": "Long rectangular face, slightly hollow cheeks, a short neat moustache and sparse chin beard.",
+        "eyes": "Dark brown eyes beneath straight brows, watchful and increasingly anxious.",
+        "skin": "Weathered medium tan skin with subtle sun exposure.",
+        "build": "Lean, average height, with slightly stooped shoulders from administrative work.",
+        "hair": "Black hair gathered into a compact topknot beneath a plain dark brown cloth headwrap; unchanged throughout.",
+        "marks": "Fine creases between the brows; no conspicuous scars or tattoos.",
+        "outfit": "Fixed muted olive-brown coarse-hemp cross-collar narrow-sleeved knee-length robe, pale gray inner collar, dark brown cloth belt, charcoal trousers and worn dark brown cloth shoes; identical clothing in all panels.",
+        "accessories": "A small undecorated wooden tally pouch tied to the belt; no visible writing or seals.",
+        "weapon": "None.",
+        "palette": "Muted olive-brown, pale gray, dark brown, charcoal, natural wood.",
+        "temperament": "Conscientious, subordinate and apprehensive; shocked by betrayal rather than secretly guilty.",
+        "art_style": "Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting.",
+        "negative": "No imperial costume, no luxurious embroidery, no modern objects, no hairstyle changes, no costume changes, no text, no letters, no captions, no watermark, no panel borders, no split lines."
+      },
+      "pose": "Full-body three-quarter standing pose, holding a small plain wooden grain measure at waist height with both hands; restrained posture and an apprehensive expression.",
+      "tags": [
+        "三国",
+        "演义人物",
+        "管粮官",
+        "新建角色"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "行军士卒",
+      "slug": "xing-jun-shi-zu",
+      "existing": true,
+      "role": "复用既有行军士卒资产，以单人代表领粮与听闻处置的军士群体，不新增背景士兵",
+      "pose": "Use the existing character asset without redesign; hold a plain ration bowl at waist level, with a tired and guarded posture.",
+      "tags": [
+        "三国",
+        "既有角色",
+        "军粮",
+        "军士代表"
+      ],
+      "profile": {
+        "age": "约二十五岁",
+        "gender": "男",
+        "role": "曹操麾下无名步卒，作为军士群体的单人代表",
+        "era": "东汉末年",
+        "face": "偏长方脸，颧骨略高，短而稀疏的胡茬",
+        "eyes": "深褐色眼睛，眼尾略垂，疲惫时目光低落",
+        "skin": "日晒形成的麦褐肤色，面颊有少量尘土",
+        "build": "中等身高，精瘦结实，肩背略显疲态",
+        "hair": "黑发束成紧凑发髻，以深褐布巾固定，无散发",
+        "marks": "嘴唇干燥起皮，无伤疤或刺青",
+        "outfit": "固定穿土黄色粗麻交领窄袖短袍，灰褐内领，外罩深褐色简朴札甲背心，深灰长裤与旧黑布履；六格衣装不变",
+        "accessories": "深褐布腰带，腰侧固定悬挂一只无纹饰的旧褐色小水囊",
+        "weapon": "无，全篇不新增兵器",
+        "palette": "土黄、深褐、灰褐、深灰、墨黑",
+        "temperament": "朴实坚忍，渴乏时迟缓，受到鼓舞后恢复精神",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "No ornate officer armor, no helmet, no cape, no modern objects, no hairstyle changes, no costume changes, no additional weapons."
+      },
+      "character_id": "char-20261111-154629-7de332"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "曹军中军帐",
+      "description": "独立空景。素色军帐内设低矮木案、空白竹片、无纹陶灯与少量粮袋，帐门透入柔和天光。帐内无人，不设带字旗帜。",
+      "prompt_extra": "Standalone environment concept art of an empty late Eastern Han command tent, low campaign table, blank bamboo slips, an undecorated ceramic lamp, a few grain sacks, muted canvas walls and soft daylight through the entrance. Clear foreground space for later character placement, no people, no silhouettes, no human figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine material texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "日间",
+      "mood": "粮尽事迫，压抑肃静"
+    },
+    {
+      "id": "scene-02",
+      "name": "军营粮棚前",
+      "description": "独立空景。简朴粮棚前堆着瘪粮袋，木台上放大小两只木斛与空碗，侧旁立一座低矮陈示台，远处只有空帐与木栅。所有物件均无文字，场内无人。",
+      "prompt_extra": "Standalone environment concept art of an empty late Eastern Han military grain-distribution yard, a rough timber awning, depleted grain sacks, a wooden counter holding one larger and one smaller plain wooden grain measure, empty bowls, and a separate low display stand at the side. Empty tents and a timber palisade in the distance, no people, no silhouettes, no human figures, no signs or banners. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "日间",
+      "mood": "匮乏冷清，隐含不安"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "征袁术途中，曹军存粮将尽。",
+      "dialogue": [
+        {
+          "speaker": "王垕",
+          "line": "军中粮少，照常发放，恐难支应。"
+        }
+      ],
+      "visual": "Inside scene-01, Wang Hou stands beside the campaign table reporting to Cao Cao, who studies a nearly empty grain sack opened on the table. Only these two characters are visible. Use Cao Cao's existing marching asset unchanged and Wang Hou's fixed character design. Emphasize the scant grain and the unequal positions of commander and subordinate. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "曹操",
+        "王垕"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "曹操命换小斛，王垕不敢违令。",
+      "dialogue": [
+        {
+          "speaker": "曹操",
+          "line": "用小斛散之，权且救一时之急。"
+        },
+        {
+          "speaker": "王垕",
+          "line": "若军士怨起，又当如何？"
+        },
+        {
+          "speaker": "曹操",
+          "line": "吾自有计。"
+        }
+      ],
+      "visual": "Inside scene-01, Cao Cao makes a controlled downward gesture toward a smaller wooden grain measure beside a larger one on the campaign table. Wang Hou holds the smaller measure reluctantly, his brow tightened and shoulders drawn inward. Exactly two visible characters; retain Cao Cao's existing marching asset and Wang Hou's unchanged outfit and hairstyle. Both measures are plain and unmarked. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "曹操",
+        "王垕"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "小斛发粮，军中渐起怨声。",
+      "dialogue": [
+        {
+          "speaker": "行军士卒",
+          "line": "同是一份粮，怎么少了这么多？"
+        }
+      ],
+      "visual": "At the grain counter in scene-02, Wang Hou tips the smaller wooden measure into the marching soldier's plain bowl. The soldier looks down at the meager ration with a clenched jaw and points toward the larger unused measure on the counter. Wang Hou avoids his gaze. Exactly two visible characters, no background soldiers. Preserve the soldier's existing asset exactly and Wang Hou's fixed clothing, face and hair. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "王垕",
+        "行军士卒"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-01",
+      "caption": "怨声传来，曹操再次召见王垕。",
+      "dialogue": [
+        {
+          "speaker": "曹操",
+          "line": "欲借汝头以示众耳。"
+        }
+      ],
+      "visual": "Inside scene-01, an intimate two-character composition shows Cao Cao delivering a cold statement with restrained composure while Wang Hou freezes in disbelief, his hands suddenly empty and slightly raised. Keep both faces visible and use the unchanged existing marching design for Cao Cao. No guards or additional figures. The plain campaign table separates them, emphasizing authority and helplessness. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "曹操",
+        "王垕"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-01",
+      "caption": "明知无罪，仍命王垕以死平怨。",
+      "dialogue": [
+        {
+          "speaker": "王垕",
+          "line": "某实无罪！"
+        },
+        {
+          "speaker": "曹操",
+          "line": "吾亦知汝无罪，但不杀汝，军心变矣。"
+        }
+      ],
+      "visual": "Inside scene-01, Wang Hou kneels beside the campaign table, looking up in desperate protest with open hands. Cao Cao stands rigidly and gestures toward the empty tent entrance, refusing to meet his appeal. Only Cao Cao and Wang Hou appear, with no executioner, guards, extra hands or background figures. Preserve both established designs and all clothing. The impending execution is conveyed through posture and empty space, not depicted violence. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "曹操",
+        "王垕"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "王垕被斩示众，克粮之罪尽归其身。",
+      "dialogue": [],
+      "visual": "Return to scene-02 after the off-screen execution. The existing marching soldier stands alone as the only living visible figure, holding his still-meager ration bowl and staring uneasily at the low display stand. Wang Hou's severed head is represented only by a small head-sized form completely concealed beneath an opaque dark cloth on a shallow wooden tray; no face, wound, blood or exposed anatomy is visible. The smaller grain measure remains prominently on the nearby counter, visually linking the imposed policy to its victim. No crowd, executioner, written notice or extra figures. Preserve the soldier's established appearance and clothing. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "行军士卒",
+        "王垕"
+      ],
+      "composition": "wide"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, and even lighting throughout. Use only scene-01 and scene-02. Scene concept images must contain no people. Never show more than two named characters in any panel, and never add crowds, guards, executioners, silhouettes or unidentified human limbs. Cao Cao must retain the existing Cao Cao marching asset, without redesign or substitution of his ceremonial asset. The marching soldier must retain his existing character card. Wang Hou must retain his defined face, hairstyle, clothing and accessories throughout. Preserve each character's established weapons or lack of weapons. Grain measures, bamboo slips, trays, sacks and architectural surfaces must remain unmarked. All captions and dialogue are external HTML overlays only. Do not depict the execution itself or exposed remains; the final covered remains count as Wang Hou's presence. No speech balloons, decorative frames, seals or written notices; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+  "notes": "本集改编的是《三国演义》第17回，不属于演义未载的史料逸事。缺粮、奉命改用小斛、军士生怨、曹操借头、王垕辩称无罪及被杀示众构成小说原有骨架。第一、三格对白及人物动作、具体陈设属于连环画连接性扩写；王垕年龄与外貌为美术设定。以既有行军士卒单人代表军中怨情，不新增群像。处刑发生于画外，末格以遮覆首级的陈示物表达结果，不表现血腥细节；遮覆方式属于视觉处理，并非原文细节。曹操使用既有行军资产，不采用与本集行军场景不合的礼服版本。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q03",
+  "episode": 8,
+  "story_bank_no": 28,
+  "_generation": {
+    "written_at": "2026-11-12T09:21:32+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 6295,
+      "completion_tokens": 3997,
+      "total_tokens": 10292,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 6292,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 483,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "9d75403aa752c6d4452f740e4a7555bd120f483100848f879ea17e3426a75688",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

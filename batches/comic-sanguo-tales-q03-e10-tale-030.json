@@ -1,0 +1,206 @@
+{
+  "id": "comic-sanguo-tales-q03-e10-tale-030",
+  "title": "何晏汤饼验白",
+  "subtitle": "盛夏一碗热汤饼，拭汗之后色更白",
+  "story_source": "《世说新语·容止第十四》：“何平叔美姿仪，面至白。魏明帝疑其傅粉，正夏月，与热汤饼。既啖，大汗出，以朱衣自拭，色转皎然。”",
+  "why_not_in_romance": "通行毛本虽有何晏出场，但未叙魏明帝盛夏赐热汤饼、借出汗检验其是否敷粉的故事。【演义归属：演义未载】",
+  "synopsis": "盛夏，魏明帝曹叡见何晏面容白皙，怀疑他敷了脂粉，便赐下一碗热汤饼，想借出汗验看。何晏吃后大汗淋漓，举起朱衣擦脸，面色不但未变暗，反而更加皎白。曹叡原先的猜疑，落在这次拭汗之后。",
+  "characters": [
+    {
+      "name": "曹叡",
+      "slug": "cao-rui",
+      "existing": true,
+      "role": "曹魏皇帝，即魏明帝；赐热汤饼以观察何晏面色",
+      "profile": {
+        "age": "二十余至三十岁，作为本集统一视觉设定",
+        "gender": "男",
+        "role": "曹魏皇帝，即魏明帝",
+        "era": "三国时期曹魏",
+        "face": "面形修长，鼻梁端正，下颌清晰，唇上留短须；属于创作性视觉设定",
+        "eyes": "深褐色眼睛，目光敏锐，观看机关时略显好奇",
+        "skin": "浅暖麦色",
+        "build": "身形修长，肩背端正，体态不夸张",
+        "hair": "黑发整齐束髻，固定戴低调黑色冠，六格不更换发式",
+        "marks": "无伤疤，无纹身，无额外面部标记",
+        "outfit": "固定穿玄黑色交领宽袖长袍，米白内领，衣缘饰低对比暗赭几何织纹，腰束深褐革带，下着深灰下裳与黑色布履；全篇不换装",
+        "accessories": "黑色冠、素玉带饰，不佩夸张珠宝",
+        "weapon": "无，不携兵器",
+        "palette": "玄黑、暗赭、米白、深褐、素玉白",
+        "temperament": "端肃而好奇，惊喜主要通过眼神和微微前倾表现",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "No modern clothing, no Qing dynasty hairstyle, no exaggerated dragon armour, no costume changes, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Reuse the existing Cao Rui character asset unchanged; seated upright, with one hand resting beside a low table and the other making a restrained invitation gesture.",
+      "tags": [
+        "三国",
+        "曹魏",
+        "魏明帝",
+        "复用角色"
+      ],
+      "character_id": "char-20261111-223632-c29253"
+    },
+    {
+      "name": "何晏",
+      "slug": "he-yan",
+      "existing": false,
+      "role": "曹魏名士，字平叔；容貌俊美、面色白皙",
+      "profile": {
+        "age": "成年，视觉年龄约三十余岁",
+        "gender": "男",
+        "role": "曹魏名士何晏，字平叔",
+        "era": "三国时期，曹魏明帝在位期间",
+        "face": "面形修长匀称，鼻梁挺直，唇形清晰，下颌秀整，无须",
+        "eyes": "深褐色狭长眼睛，目光平静，眉形修长",
+        "skin": "自然白皙而有真实肌理，不表现粉层、粉屑或现代底妆；拭汗后以清透肤色体现皎然",
+        "build": "身材修长清瘦，肩背端正，动作从容",
+        "hair": "乌黑长发整齐束成高髻，以素黑帻固定，六格发式不变",
+        "marks": "无疤痕、无刺青；以俊美面容和自然白皙肤色作为辨识点",
+        "outfit": "固定穿朱红色素绢交领宽袖长袍，米白内领，深褐窄布腰带，深灰下裳与黑色布履；衣袖宽软，可举袖拭汗，六格不换装",
+        "accessories": "仅用素黑帻与深褐布腰带，不加夸张珠玉或金饰",
+        "weapon": "无武器",
+        "palette": "朱红、米白、深褐、深灰、墨黑、自然瓷白肤色",
+        "temperament": "仪容俊雅，神态自若，受赐进食与举衣拭汗皆不失从容",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine silk textile texture, even lighting",
+        "negative": "不要现代妆容、粉饼、粉刷、粉屑、惨白鬼面、发光皮肤、夸张首饰、盔甲、武器或服装变化"
+      },
+      "pose": "Full-length standing character reference, relaxed upright posture, hands loosely held before the waist, vermilion sleeves hanging naturally, calm expression, clearly visible face and consistent topknot.",
+      "tags": [
+        "三国",
+        "曹魏",
+        "何平叔",
+        "朱衣",
+        "新建角色"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "魏宫夏日便殿",
+      "description": "无人物的曹魏宫廷便殿。深木梁柱、素面漆几、竹席与半卷竹帘构成疏朗空间；庭院白光透入，表现盛夏闷热。器物无题字，无宫人或人影。",
+      "prompt_extra": "Independent environment concept art only, an empty Cao Wei palace side hall in midsummer, dark timber columns, plain lacquered low tables, woven reed mats, half-raised bamboo blinds, a sunlit courtyard beyond, warm summer air, restrained court furnishings, even lighting, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine wood and textile texture, no people, no human silhouettes, no portraits, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "盛夏午间",
+      "mood": "安静、微热，含有审视意味"
+    },
+    {
+      "id": "scene-02",
+      "name": "魏宫临窗食席",
+      "description": "无人物的临窗食席环境。近处设素面漆案、陶碗、木箸与竹席，碗中是冒热气的汤煮面食；侧窗竹帘半卷，窗外庭树浓绿。与便殿使用相同梁柱与陈设风格，不设屏上文字或装饰印章。",
+      "prompt_extra": "Independent environment concept art only, an empty dining alcove beside a window within the same Cao Wei palace, matching dark timber architecture, one plain low lacquered dining table, a ceramic bowl of steaming broth with boiled wheat dough pieces, wooden chopsticks, woven reed seating mats, partially raised bamboo blinds, dense green summer foliage outside, balanced warm daylight, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine ceramic and textile texture, no people, no human silhouettes, no portraits, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "盛夏午间",
+      "mood": "闷热、近距离观察，结尾转为明朗"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "何晏容貌俊美，面色尤其白皙。",
+      "dialogue": [],
+      "visual": "Medium two-person view in scene-01. He Yan stands respectfully beside a plain low table, his naturally fair face clearly visible above his fixed vermilion cross-collar robe. Cao Rui sits opposite, using the existing Cao Rui character asset without any redesign, watching He Yan with quiet attention. Summer daylight filters through bamboo blinds. Exactly two people, no attendants or background figures. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹叡",
+        "何晏"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "魏明帝心疑：莫非脸上敷了粉？",
+      "dialogue": [],
+      "visual": "Close view of Cao Rui alone in scene-01, retaining the exact established character appearance, hairstyle and clothing. His gaze is directed toward He Yan outside the frame, eyebrows subtly drawn together in suspicion, one hand resting thoughtfully against the edge of the low table. Bamboo blinds and dark timber remain softly visible behind him. Do not depict imagined cosmetics, thought bubbles or another person. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹叡"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "正值盛夏，明帝特赐热汤饼。",
+      "dialogue": [
+        {
+          "speaker": "曹叡",
+          "line": "赐你一碗热汤饼。"
+        }
+      ],
+      "visual": "Medium two-person view in scene-02. A ceramic bowl of steaming broth and boiled wheat dough pieces is already placed on the plain low dining table before the seated He Yan. Cao Rui, unchanged from the existing character asset, makes a restrained open-hand invitation toward the bowl while watching He Yan. He Yan wears the same vermilion robe and black headcloth. Visible steam contrasts with the lush summer greenery outside the window. Exactly two people, no serving attendants. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and ceramic texture, even lighting, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹叡",
+        "何晏"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "热汤饼下肚，何晏大汗淋漓。",
+      "dialogue": [],
+      "visual": "Medium close view of He Yan alone at the dining table in scene-02, finishing the hot soup meal and lowering his wooden chopsticks beside the partly emptied ceramic bowl. Clear beads of perspiration cover his forehead, temples and upper cheeks; his expression remains composed. His fixed vermilion robe, off-white inner collar, black headcloth and hairstyle remain identical. Gentle residual steam rises from the bowl. No powder residue or cosmetic props. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine skin and silk texture, even lighting, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "何晏"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "他举起朱衣，擦去满面汗水。",
+      "dialogue": [],
+      "visual": "Close view of He Yan alone in scene-02, lifting the broad sleeve of his own unchanged vermilion robe to wipe sweat from his temple and cheek. The red sleeve touches one side of his face while the other side remains visible, naturally fair and damp. Show the wiping gesture clearly with anatomically correct hands; the cloth carries only subtle dampness, not white powder. Keep his original black headcloth and hairstyle intact. A soft glimpse of the same window and low dining table anchors the location. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine silk and skin texture, even lighting, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "何晏"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "汗去之后，面色反而更加皎白。",
+      "dialogue": [],
+      "visual": "Medium two-person concluding view in scene-02. He Yan has lowered the same vermilion sleeve after wiping his face; his unobstructed complexion looks clean, clear and even fairer against the red silk, achieved through natural skin rendering rather than glow or a change in lighting. Cao Rui sits opposite, his earlier scrutinizing expression easing into restrained surprise. Preserve the existing Cao Rui design exactly and He Yan's established outfit and hairstyle. The partly emptied bowl remains on the same table. Exactly two people. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and skin texture, even lighting, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹叡",
+        "何晏"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture where applicable, and even lighting throughout. Reuse the established Cao Rui asset exactly; do not redesign his face, outfit, hairstyle or accessories. Keep He Yan's face, black headcloth, topknot and vermilion robe identical in every appearance. Never add weapons or change costumes. Show only the characters listed for each panel, at most two people, without crowds, servants, portraits or human reflections. Use only scene-01 and scene-02. Environment concepts must contain no people. Represent tangbing as hot broth with boiled wheat dough pieces, never modern baked flatbread. Show perspiration and a red sleeve wiping the face, without powder clouds, cosmetic tools, supernatural whitening or skin glow. Keep exposure and illumination consistent so the ending is not merely a lighting trick. All narration and dialogue are external HTML overlays, never embedded in the artwork. No seals, no speech balloons, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "史料骨架为：何晏面白，魏明帝疑其傅粉，盛夏赐热汤饼；何晏食后大汗，以朱衣自拭，面色转而皎然。何平叔即何晏，魏明帝即曹叡。此为《世说新语》所记人物轶事，不冒充《三国志》本传记载，也不作为现代医学或化妆检验结论。两处宫内空间、器物位置、赐食对白及曹叡表情属于连环画调度与文学化补足；原文未载何晏自辩，也未载明帝赞语，故不增写。以朱衣衣袖表现“以朱衣自拭”，不另加手帕。汤饼按汤煮面食表现，具体面片形状不作史料断言。曹叡直接复用资产库角色，profile 留空，不重造外貌。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q03",
+  "episode": 10,
+  "story_bank_no": 30,
+  "_generation": {
+    "written_at": "2026-11-12T09:22:42+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 6298,
+      "completion_tokens": 3655,
+      "total_tokens": 9953,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 6295,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 249,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "5682dc7b591c7d806407401ffb169049abc9ee92da30c1690dd2f13a201e7ab0",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

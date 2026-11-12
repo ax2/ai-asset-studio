@@ -1,0 +1,269 @@
+{
+  "id": "comic-sanguo-tales-q03-e02-tale-022",
+  "title": "典韦逐虎过涧",
+  "subtitle": "山涧间的一次相逢，成就帐前的一次荐才。",
+  "story_source": "《三国演义》第10回《勤王室马腾举义 报父仇曹操兴师》；原文摘录：“逐虎过涧”。本事见夏侯惇引典韦见曹操时，对典韦勇力与入军缘由的追述。此处依据为明代小说《三国演义》，不是《三国志》等史书的记载。",
+  "why_not_in_romance": "第10回，夏侯惇引典韦见曹操，在介绍其勇力时追述逐虎过涧之事；属于人物对白带出的旧事。【演义归属：仅被提及】因此不能称其完全未被《三国演义》收录；准确说法是小说提到此事，但没有将出猎、追虎、过涧与招募过程展开为独立场景。",
+  "synopsis": "夏侯惇向曹操推荐典韦，追述自己出猎时的一次奇遇：山林中，一名壮士竟追着猛虎奔至涧边，随虎跃过山涧。夏侯惇惊其勇力，上前相识，将他招入军中。旧事讲罢，典韦来到曹操帐前。",
+  "characters": [
+    {
+      "name": "曹操",
+      "slug": "cao-cao",
+      "existing": true,
+      "role": "听取夏侯惇荐言、接见典韦的统帅；直接复用既有曹操角色卡。",
+      "pose": "Standing beside a low campaign table, listening attentively with one hand relaxed at the waist; preserve the existing character asset without redesign.",
+      "tags": [
+        "三国",
+        "已有角色",
+        "曹操",
+        "荐才"
+      ],
+      "profile": {
+        "age": "五十岁上下的成熟男子",
+        "gender": "男",
+        "role": "东汉丞相 · 魏王 · 枭雄",
+        "era": "东汉末年三国时期",
+        "face": "清瘦而线条凌厉的脸型，颧骨微凸",
+        "eyes": "细眼长髯，目光沉鸷锐利",
+        "skin": "偏白的冷峻肤色",
+        "build": "身长七尺，中等精瘦，姿态矜持",
+        "hair": "黑发整齐束于玄玉冠下，颌下长须修整细致",
+        "marks": "细目长髯，眉间一道浅纹",
+        "outfit": "玄色蟒纹深衣，暗金四爪蟒纹满绣，交领缘饰朱红，外披黑貂大氅，貂毛根根分明，腰束玉带镶鎏金兽首",
+        "accessories": "玄玉冠、玉带、黑貂大氅、朱红印绶",
+        "weapon": "倚天剑，玄鞘嵌金，佩于左腰",
+        "palette": "玄黑、墨青、暗金、朱红、玉白",
+        "temperament": "沉鸷多疑、雄猜果决、不怒自威的枭雄气度",
+        "art_style": "premium Three Kingdoms historical-fantasy game character concept art, highly detailed painterly digital illustration, gold-thread dragon embroidery, dark fur texture, crisp material separation, muted historical pigments",
+        "negative": "photograph, 3D render, plastic, modern clothing, anime chibi, text, watermark, cropped body, extra characters, bright saturated colors, different outfit"
+      },
+      "character_id": "char-20261110-144930-66b9cc"
+    },
+    {
+      "name": "夏侯惇",
+      "slug": "xiahou-dun",
+      "existing": false,
+      "role": "出猎时发现典韦勇力，并向曹操推荐他的将领。",
+      "profile": {
+        "age": "约三十岁",
+        "gender": "男",
+        "role": "曹操麾下将领、典韦的引荐者",
+        "era": "东汉末年；本集处于其失去左眼之前",
+        "face": "长方脸，眉骨分明，下颌宽直，留整齐短须",
+        "eyes": "双眼完整，深褐瞳，目光锐利；不戴眼罩",
+        "skin": "日晒后的麦褐色皮肤",
+        "build": "高大结实，肩背宽阔，体态干练",
+        "hair": "黑发束成紧实高髻，以深褐布巾固定",
+        "marks": "右眉尾略向上挑；面部无伤疤，双眼均无伤",
+        "outfit": "固定穿暗青色交领窄袖及膝战袍，米灰内领，外罩铁灰色朴素札甲，深褐革带，炭灰长裤，黑褐行军皮靴；六格不换装",
+        "accessories": "深褐布巾、素面革带与左腰剑鞘，不佩冠冕及夸张饰物",
+        "weapon": "左腰固定佩一柄素面环首刀，全篇保持入鞘，不增加弓矛",
+        "palette": "暗青、铁灰、深褐、炭灰、米灰",
+        "temperament": "警觉果断，识才惜勇，举止直接",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "No eyepatch, no injured eye, no missing eye, no costume changes, no hairstyle changes, no weapon changes, no modern objects, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body three-quarter standing pose, both eyes intact, right hand making a restrained introductory gesture, left arm relaxed beside the permanently sheathed ring-pommel saber.",
+      "tags": [
+        "三国",
+        "新角色",
+        "夏侯惇",
+        "双眼完整",
+        "引荐者"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "典韦",
+      "slug": "dian-wei",
+      "existing": false,
+      "role": "逐虎过涧的壮士，被夏侯惇招入军中。",
+      "profile": {
+        "age": "约三十岁",
+        "gender": "男",
+        "role": "勇力过人的民间壮士，本集被招入曹操军中",
+        "era": "东汉末年",
+        "face": "宽阔方脸，颧骨厚实，下颌雄健，浓密短髯",
+        "eyes": "深褐色眼睛，眼神专注而沉着",
+        "skin": "深麦色皮肤，手掌粗糙",
+        "build": "身材魁伟，肩胸极宽，手臂与大腿肌肉厚实，比例写实",
+        "hair": "浓黑头发束成低而紧实的发髻，以黑褐布带固定",
+        "marks": "粗浓平眉，宽鼻梁；无纹身，无夸张伤疤",
+        "outfit": "固定穿赭褐色粗麻交领窄袖短袍，灰米内领，袖口收紧，腰束深褐宽布带，下着炭灰长裤，穿深褐厚底布履并扎灰褐绑腿；六格不换装，不在入军时添加铠甲",
+        "accessories": "黑褐束发带、深褐宽布腰带、灰褐绑腿",
+        "weapon": "本集始终不携武器，不添加双戟、刀剑或弓箭",
+        "palette": "赭褐、深褐、炭灰、灰米、深麦色",
+        "temperament": "勇猛强健，质直少言，行动沉稳有力",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "No weapons, no halberds, no armor upgrades, no bare torso, no costume changes, no hairstyle changes, no supernatural anatomy, no modern objects, no text, no letters, no captions, no watermark, no panel borders, no split lines"
+      },
+      "pose": "Full-body grounded standing pose with broad shoulders and relaxed empty hands, conveying immense physical strength without aggression.",
+      "tags": [
+        "三国",
+        "新角色",
+        "典韦",
+        "逐虎过涧",
+        "壮士"
+      ],
+      "character_id": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "军帐议事处",
+      "description": "不含人物的独立环境概念图。素色军帐内部，低矮木案、空白竹简束、席垫与木架陈设简朴；帐门透入柔和日光，地面平整，不设置侍卫或背景人群。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a late Eastern Han campaign command tent, plain canvas walls, low wooden table, tightly bound unmarked bamboo slips, woven mats and a simple wooden rack, soft daylight entering the open tent flap, even lighting, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile and wood texture; no people, no animals, no silhouettes, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "沉静、庄重、重视人才"
+    },
+    {
+      "id": "scene-02",
+      "name": "林间石涧",
+      "description": "不含人物的独立环境概念图。疏林间一条可供壮士跃过的狭窄山涧，清浅水流穿过乱石，两岸落差不大，近岸有奔跑土径，远岸有可站立的平坦石地。",
+      "prompt_extra": "Standalone unoccupied environment concept art of a wooded rocky gully in late Eastern Han countryside, a narrow jumpable stream between low uneven banks, shallow clear water, mossy stones, a dirt running approach on the near bank and a level stone landing on the far bank, sparse trees and muted foliage, soft daylight and even lighting, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine rock and bark texture; no people, no animals, no silhouettes, no buildings, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "time_of_day": "日间",
+      "mood": "野逸、紧张、富有动势"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "夏侯惇向曹操荐一壮士。",
+      "dialogue": [
+        {
+          "speaker": "夏侯惇",
+          "line": "有一壮士典韦，勇力过人。"
+        },
+        {
+          "speaker": "曹操",
+          "line": "你如何识得此人？"
+        }
+      ],
+      "visual": "Inside scene-01, medium two-shot of Xiahou Dun respectfully addressing Cao Cao beside the low campaign table. Xiahou Dun gestures toward the tent entrance while Cao Cao turns toward him with attentive interest. Exactly two people, no background attendants. Cao Cao must use the existing Cao Cao asset unchanged; Xiahou Dun must match his character profile, with both eyes intact and his saber sheathed. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "夏侯惇",
+        "曹操"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-02",
+      "caption": "往日出猎，林间忽见奇景。",
+      "dialogue": [],
+      "visual": "Flashback in scene-02, wide view of the near-bank dirt approach. Xiahou Dun stands on foot at the left edge, stopping in surprise, while Dian Wei runs powerfully from left to right after one natural adult tiger fleeing toward the narrow gully. The tiger is clearly ahead and escaping, never attacking Dian Wei. Exactly two human figures and one non-anthropomorphic tiger, no hunters or horses in the background. Match both character profiles exactly; Xiahou Dun keeps his saber sheathed and Dian Wei remains unarmed. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "夏侯惇",
+        "典韦"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-02",
+      "caption": "猛虎跃涧，典韦紧随而过。",
+      "dialogue": [],
+      "visual": "Dynamic side view within scene-02, showing one continuous moment across the narrow rocky stream. The same tiger has just landed on the far bank at the right and continues fleeing; behind it, Dian Wei is captured mid-leap above the shallow gully, traveling left to right with knees naturally bent and empty hands balancing his powerful body. Show a believable athletic jump across a modest gap, not flight across a giant chasm. Exactly one human figure and one natural tiger. Keep Dian Wei's clothes and hairstyle identical to his profile. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine textile texture, even lighting; no supernatural effects, no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "典韦"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "夏侯惇惊其勇，遂招入军中。",
+      "dialogue": [
+        {
+          "speaker": "夏侯惇",
+          "line": "壮士，可愿随我从军？"
+        },
+        {
+          "speaker": "典韦",
+          "line": "愿往！"
+        }
+      ],
+      "visual": "Later in the same flashback at scene-02, medium two-shot on the level stone area of the far bank. Xiahou Dun has reached Dian Wei after the pursuit and offers an open-handed invitation; Dian Wei has stopped and answers with a restrained respectful salute. The narrow stream remains visible behind them to establish the same location. Exactly two people, no tiger visible, no additional figures. Do not depict capture, killing, trophies or wounds. Preserve their fixed outfits, hair and weapon states. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "夏侯惇",
+        "典韦"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-01",
+      "caption": "旧事说罢，曹操欲见其人。",
+      "dialogue": [
+        {
+          "speaker": "夏侯惇",
+          "line": "我见他逐虎过涧，便收在军中。"
+        },
+        {
+          "speaker": "曹操",
+          "line": "请他进来。"
+        }
+      ],
+      "visual": "Return to the present inside scene-01. Close two-shot with Cao Cao in three-quarter view listening with focused interest, and Xiahou Dun at the side concluding his account. Cao Cao makes a small welcoming gesture toward the offscreen entrance. Exactly two people, Dian Wei remains outside the image. Reuse the existing Cao Cao asset unchanged, and keep Xiahou Dun consistent with his profile and both eyes intact. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹操",
+        "夏侯惇"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-01",
+      "caption": "逐虎壮士，今日立于帐前。",
+      "dialogue": [
+        {
+          "speaker": "典韦",
+          "line": "典韦拜见！"
+        }
+      ],
+      "visual": "Inside scene-01, medium two-shot of Dian Wei standing just within the open tent entrance and saluting Cao Cao, who faces him beside the low wooden table with an appraising, welcoming expression. Xiahou Dun has stepped completely out of frame. Exactly two people, no crowd or background guards. Dian Wei still wears the same plain clothes from the forest and carries no weapons; Cao Cao uses the existing character asset unchanged. Grounded, calm composition concluding the recruitment story. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+      "characters": [
+        "曹操",
+        "典韦"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting throughout. Generate each panel as one single uninterrupted image. All panels must use only scene-01 or scene-02. Scene concept images must be entirely unoccupied. Never show more than two human figures per panel; no anonymous attendants, crowd silhouettes or background faces. Reuse the existing Cao Cao character asset without altering appearance, costume, hairstyle or weapons. Keep both new character designs fixed across the present and flashback. Xiahou Dun has two intact eyes in this episode and his saber stays sheathed. Dian Wei stays unarmed and never changes into armor. The tiger is a natural animal, not a speaking or anthropomorphic character, and appears only in panels 2 and 3. No tiger killing, capture, gore or supernatural jumping. Keep all banners, bamboo slips and surfaces unmarked; no seals, no text, no letters, no captions, no watermark, no panel borders, no split lines",
+  "notes": "本集改编的是《三国演义》人物对白中提及的旧事，不将其包装为正史实录或演义佚事。史料骨架仅取夏侯惇出猎、见典韦逐虎过涧、将其招入军中及向曹操引荐。追逐方向、山涧形态、停步招募的动作和简短对白均为连环画补写，不作为原文引语；不增加搏杀猛虎、救人或降虎情节。第二至第四格是回忆，第一、第五及第六格是荐见现场，以分镜切换控制每格最多两人。曹操按用户指定的既有资产复用，其服饰属于系列美术设定，不据此认定事件时的身份、爵位或实际服制。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q03",
+  "episode": 2,
+  "story_bank_no": 22,
+  "_generation": {
+    "written_at": "2026-11-12T09:19:02+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 6292,
+      "completion_tokens": 4433,
+      "total_tokens": 10725,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 6289,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 335,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "b91dc7873261eba724c15990d4aa48ac645b7e994d8c1dbf95cc5b1cbba26b98",
+    "source_of_story": "batches/story-bank.json"
+  }
+}

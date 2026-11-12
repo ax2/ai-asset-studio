@@ -1,0 +1,257 @@
+{
+  "id": "comic-sanguo-tales-q03-e03-tale-023",
+  "title": "太史慈突围求援",
+  "subtitle": "一骑冲出重围，为北海求来生机",
+  "story_source": "《三国演义》第11回《刘皇叔北海救孔融 吕温侯濮阳破曹操》；《三国志》卷四十九·吴书·刘繇太史慈士燮传。原文摘录：“北海被围，孤穷无援，危在旦夕。”《演义》第11回亦明确写太史慈出城冲杀、突围见刘备求救；史传另载反复出城射靶、使围兵松懈的经过。",
+  "why_not_in_romance": "【演义归属：演义亦载】本故事并非《三国演义》未收录之事，第11回明确写太史慈出城冲杀、突围见刘备求救。史传另有反复出城射靶以松懈围兵的细节，不宜直接当作演义情节。本集采用两书共有的突围求援主线，不加入射靶细节。",
+  "synopsis": "北海被围，孔融忧心无援。太史慈自请出城，领受求援书信，单骑冲过封锁，赶到平原求见刘备。他陈明北海危急，恳请发兵。刘备感念孔融相知，当即答应救援，绝境中的北海终于有了转机。",
+  "characters": [
+    {
+      "name": "太史慈",
+      "slug": "taishi-ci",
+      "existing": false,
+      "role": "受孔融厚待、自请突围求援的勇士",
+      "profile": {
+        "age": "二十余岁",
+        "gender": "男",
+        "role": "汉末勇士，字子义，本集为北海突围求援者",
+        "era": "东汉末年",
+        "face": "方正而略长的面庞，颧骨清晰，鼻梁挺直，短髭与短须修整利落",
+        "eyes": "浓眉下双目锐利，目光坚定而不狂躁",
+        "skin": "常年骑射形成的暖麦色肤色",
+        "build": "高大结实，肩背宽阔，腰腹精悍，适合骑射的体型",
+        "hair": "黑发束成高髻，以深褐色窄帻固定，六格不改变发式",
+        "marks": "无固定疤痕或刺青，以浓眉、短须和挺直鼻梁作为识别特征",
+        "outfit": "固定穿暗赭色交领窄袖及膝战袍，米灰内领，外罩铁灰色简式札甲，腰束深褐革带，下穿炭灰长裤与黑褐皮靴；六格不换装，不加披风",
+        "accessories": "背负木胎复合弓与深褐皮箭囊，均保持同一形制；求援书信为临时剧情道具，外封素净无字",
+        "weapon": "固定使用深色木杆铁刃长枪，弓与箭囊作为固定随身装备，不更换武器形制",
+        "palette": "暗赭、铁灰、深褐、炭灰、暖麦色",
+        "temperament": "勇决沉着，重义守诺，临危不乱",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "no text, no letters, no captions, no watermark, no panel borders, no split lines, no seals, no modern objects, no costume changes, no hairstyle changes, no weapon redesign"
+      },
+      "pose": "Full-body standing character reference, one hand holding the same dark-shafted spear upright, the other resting beside the belt, bow and quiver secured behind the shoulder, resolute expression; premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "tags": [
+        "三国",
+        "太史慈",
+        "新建角色",
+        "突围",
+        "骑射"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "孔融",
+      "slug": "kong-rong",
+      "existing": false,
+      "role": "困守北海、遣太史慈求援的北海相",
+      "profile": {
+        "age": "四十岁左右",
+        "gender": "男",
+        "role": "北海相，汉末名士，字文举",
+        "era": "东汉末年",
+        "face": "面容清瘦端正，额头宽阔，颌下留整齐中长黑须，鬓角略有灰丝",
+        "eyes": "细长双眼，平日温雅，此时因围城而流露忧虑",
+        "skin": "偏浅的暖米色肤色",
+        "build": "中等身高，身形清瘦，站姿端直",
+        "hair": "黑发夹少许灰丝，束髻戴低矮黑色进贤冠，六格不改变发式",
+        "marks": "眉间浅纹与整齐中长须为固定识别特征",
+        "outfit": "固定穿深青灰色素绢交领宽袖长袍，米白内领，墨黑窄缘，腰束深褐革带，下着深灰下裳与黑色布履；全篇不换装",
+        "accessories": "腰侧仅佩小型素玉佩，书信为临时剧情道具，素色封套不显示文字或印记",
+        "weapon": "无",
+        "palette": "深青灰、米白、墨黑、深褐、素玉白",
+        "temperament": "儒雅持重，困境中仍守礼，对义士兼有忧虑与信任",
+        "art_style": "premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting",
+        "negative": "no text, no letters, no captions, no watermark, no panel borders, no split lines, no seals, no imperial regalia, no modern objects, no costume changes, no hairstyle changes"
+      },
+      "pose": "Full-body standing character reference, hands held together within wide sleeves, upright scholarly bearing and a worried but composed expression; premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "tags": [
+        "三国",
+        "孔融",
+        "新建角色",
+        "北海",
+        "名士"
+      ],
+      "character_id": ""
+    },
+    {
+      "name": "刘备",
+      "slug": "liu-bei",
+      "existing": true,
+      "role": "时在平原、接受太史慈求援的刘备",
+      "pose": "Reuse the existing Liu Bei character asset without redesign; standing beside a low administrative desk, turning attentively toward a visitor; preserve the established face, costume, hairstyle and weapon; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "tags": [
+        "三国",
+        "刘备",
+        "复用角色",
+        "平原",
+        "救援"
+      ],
+      "profile": {
+        "age": "四十余岁的中年男子",
+        "gender": "男",
+        "role": "蜀汉昭烈帝 · 仁德之主",
+        "era": "东汉末年三国时期",
+        "face": "面如冠玉，方正温和的脸型，双耳垂肩",
+        "eyes": "细长温和的眼睛，目光沉稳含笑",
+        "skin": "温润的浅麦色",
+        "build": "身长七尺五寸，双臂过膝，挺拔而不魁梧",
+        "hair": "黑发整齐束于玄色冠下，鬓角修整，颌下长须修剪齐整",
+        "marks": "双手过膝，双耳垂肩，无伤疤",
+        "outfit": "素白与月白交领深衣，宽袖，衣缘绣暗银云雷纹，玄色腰带配玉具剑佩，外罩浅灰鹤纹大氅，丝质光泽与细密织纹",
+        "accessories": "腰间玉佩、素色发冠、绢质披帛",
+        "weapon": "双股剑，剑鞘玄色嵌铜，悬于左腰",
+        "palette": "素白、月白、暗银、玄黑、少量朱红点缀",
+        "temperament": "宽厚仁和、喜怒不形于色、内敛而有威仪",
+        "art_style": "premium Three Kingdoms historical-fantasy game character concept art, highly detailed painterly digital illustration, intricate silk brocade texture, crisp material separation, muted historical pigments",
+        "negative": "photograph, 3D render, plastic, modern clothing, anime chibi, text, watermark, cropped body, extra characters, different outfit"
+      },
+      "character_id": "char-20261110-144930-807358"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "北海城门内外",
+      "description": "不含人物的独立环境概念图。东汉北海城门及同一门洞相连的内侧通道、城外道路；夯土城墙、木制厚门、斑驳门柱与散落箭杆构成围城痕迹。城外仅见空置拒马与远处烟尘，不画围兵或人形剪影。",
+      "prompt_extra": "Standalone unpopulated environment concept art of a late Eastern Han Beihai fortified gateway, a continuous space linking the sheltered inner gate passage with the road immediately outside, rammed-earth walls, heavy timber doors, scattered broken arrow shafts, empty wooden barricades beyond the threshold, distant drifting dust, soft overcast daylight, readable architecture and even lighting, no people, no human silhouettes, no animals, no banners bearing symbols, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "阴天日间",
+      "mood": "危急、压迫、蓄势待发"
+    },
+    {
+      "id": "scene-02",
+      "name": "平原官署前堂",
+      "description": "不含人物的独立环境概念图。朴素官署前堂与门前小院连为一体，木柱、灰瓦、低案、坐席和院内拴马木桩清晰可见；入口通向院门，可供远来者入见。案上只放无字卷束，不设匾额。",
+      "prompt_extra": "Standalone unpopulated environment concept art of a modest late Eastern Han administrative reception hall in Pingyuan, open timber frontage continuous with a small courtyard, gray roof tiles, plain wooden pillars, a low desk, woven floor mats, blank rolled documents, an empty horse tethering post beside the entrance, soft daylight reaching evenly into the interior, no people, no human silhouettes, no animals, no plaques, no seals, premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "time_of_day": "日间",
+      "mood": "肃静、恳切、渐生希望"
+    }
+  ],
+  "panels": [
+    {
+      "no": 1,
+      "scene_id": "scene-01",
+      "caption": "北海被围，城中孤穷无援。",
+      "dialogue": [
+        {
+          "speaker": "太史慈",
+          "line": "慈愿突围，往平原求刘备来救！"
+        }
+      ],
+      "visual": "Inside the sheltered passage of the established Beihai gateway, Kong Rong stands anxiously beside a timber gatepost while Taishi Ci faces him and gives a firm martial salute, his unchanged spear held upright beside his body. Broken arrow shafts near the threshold suggest the siege without showing any other people. Exactly two human figures, both matching their character profiles. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "孔融",
+        "太史慈"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 2,
+      "scene_id": "scene-01",
+      "caption": "孔融托付书信，城中生机系于一骑。",
+      "dialogue": [
+        {
+          "speaker": "孔融",
+          "line": "北海危急，求援之事，就托付将军了。"
+        }
+      ],
+      "visual": "Closer view within the same Beihai gate passage, Kong Rong solemnly passes a folded dispatch in a completely blank unmarked wrapper to Taishi Ci. Taishi Ci receives it with his free hand while retaining the same spear in the other, his bow and quiver secured as in his reference. Their concerned and resolute faces remain visible, with the gateway softly receding behind them. Exactly two human figures, unchanged outfits and hairstyles. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "孔融",
+        "太史慈"
+      ],
+      "composition": "close"
+    },
+    {
+      "no": 3,
+      "scene_id": "scene-01",
+      "caption": "太史慈单骑冲出，直奔平原。",
+      "dialogue": [],
+      "visual": "Dynamic wide view from immediately outside the same Beihai gateway: Taishi Ci rides a dark bay horse at full gallop through a gap between empty wooden barricades, sweeping his unchanged spear outward to clear the escape path. Several arrows arriving from entirely off-frame strike the dirt behind the horse, suggesting pursuit without depicting attackers. The gate remains visible through dust behind him; the dispatch is secured inside his robe. Only one human figure, no soldiers, no crowds, no human silhouettes, no gore. Preserve his reference armour, hairstyle, bow and quiver. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "太史慈"
+      ],
+      "composition": "wide"
+    },
+    {
+      "no": 4,
+      "scene_id": "scene-02",
+      "caption": "赶到平原，他顾不得歇息。",
+      "dialogue": [],
+      "visual": "At the courtyard entrance of the established Pingyuan reception hall, Taishi Ci has just dismounted from the same dark bay horse beside the tethering post. He strides toward the open hall with the blank dispatch in one hand and the same spear held vertically in the other, dust lightly coating but not changing his fixed clothing and armour. His expression conveys exhaustion held in check by urgency. Only one human figure; the horse is a nonhuman prop, no attendants or distant people. Preserve the existing courtyard and hall layout. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "太史慈"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 5,
+      "scene_id": "scene-02",
+      "caption": "一封急书，道尽北海危局。",
+      "dialogue": [
+        {
+          "speaker": "太史慈",
+          "line": "北海被围，危在旦夕。恳请使君发兵相救！"
+        }
+      ],
+      "visual": "Inside the same open-front Pingyuan hall, Taishi Ci bows and presents the completely blank dispatch wrapper to Liu Bei with both hands. His same spear rests securely against a nearby timber pillar, while his bow and quiver remain unchanged. Liu Bei leans forward beside the low desk to receive the appeal, attentive and visibly moved. Use the existing Liu Bei asset exactly, with no redesigned facial features, costume, hairstyle or weapon. Exactly two human figures, no attendants, no writing visible on any object. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "太史慈",
+        "刘备"
+      ],
+      "composition": "medium"
+    },
+    {
+      "no": 6,
+      "scene_id": "scene-02",
+      "caption": "刘备慨然应允，北海求援有了着落。",
+      "dialogue": [
+        {
+          "speaker": "刘备",
+          "line": "孔北海竟知世间有刘备！我即发兵相救。"
+        }
+      ],
+      "visual": "In the same Pingyuan reception hall, Liu Bei has risen fully beside the low desk and extends an open hand toward the courtyard in a decisive promise of aid, while Taishi Ci answers with a grateful martial salute. The blank dispatch rests closed on the desk, and Taishi Ci's unchanged spear remains against the same pillar. Show determination replacing anxiety, without depicting marching troops or the later relief battle. Exactly two human figures. Reuse Liu Bei's established appearance without alteration and preserve Taishi Ci's complete fixed design. Premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting; no text, no letters, no captions, no watermark, no panel borders, no split lines.",
+      "characters": [
+        "刘备",
+        "太史慈"
+      ],
+      "composition": "medium"
+    }
+  ],
+  "visual_rules": "Use premium Three Kingdoms historical-fantasy game concept art, highly detailed painterly digital illustration, historical pigment palette, fine armour and textile texture, even lighting throughout. Reuse the existing Liu Bei character asset exactly; do not redesign his face, clothing, hairstyle or weapon. Keep the two new character profiles consistent in every appearance, allowing only superficial travel dust. Use only the two established environments, with camera changes within their continuous architectural spaces. Each panel contains no more than two human figures, including background figures; do not add soldiers, servants, enemies, crowds, reflections of extra people or human silhouettes. The horse is an animal prop and must remain the same dark bay horse. All dispatch wrappers and documents must be blank, with no visible seals or writing. No plaques, emblems resembling writing, embedded speech bubbles, graphic framing or rendered typography. Narrative captions and dialogue exist only as external HTML overlay data. No text, no letters, no captions, no watermark, no panel borders, no split lines.",
+  "notes": "本集为第3集。史料骨架为孔融被围、太史慈自请突围、赴平原求刘备救援、刘备应允；《演义》亦载，不能标作演义未收录。史传中反复出城射靶以松懈围兵的细节不在本集呈现，也不与演义的冲杀过程拼接。为限定三名人物，突围格仅画太史慈，以画外来箭、拒马和尘土暗示封锁，不增设围兵角色。城门交付书信的具体站位、抵达官署的动作及部分对白属连环画压缩与文学化处理；末格止于答应发兵，不把尚未展示的解围战果画成已经发生。刘备沿用系列既有立绘，其服饰为资产连续性处理，不作为平原时期服制考证。",
+  "text_model": "gpt-6.1-sol",
+  "image_model": "gpt-image-2.6-sunburst",
+  "style_id": "sanguo-comic",
+  "quality": "high",
+  "portrait_size": "1024x1536",
+  "scene_size": "1536x1024",
+  "panel_size": "1536x1024",
+  "max_cost_usd": 8.0,
+  "series_id": "sanguo-tales-q03",
+  "episode": 3,
+  "story_bank_no": 23,
+  "_generation": {
+    "written_at": "2026-11-12T09:19:04+08:00",
+    "text_model": "gpt-6.1-sol",
+    "usage": {
+      "prompt_tokens": 6332,
+      "completion_tokens": 4532,
+      "total_tokens": 10864,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 6329,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 281,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "prompt_sha256": "8eeb20956f9322ab66578967dfad872ed8084f7ce01074691e852493dcbc1f79",
+    "source_of_story": "batches/story-bank.json"
+  }
+}
